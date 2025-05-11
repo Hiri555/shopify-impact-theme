@@ -30,14 +30,14 @@
         "discount": {
           "type": "item",
           "settings": {
-            "icon": "picto-coupon",
+            "icon": "picto-plane",
             "mobile_icon_width": 24,
             "icon_width": 24,
             "icon_background_type": "none",
             "icon_background": "",
             "icon_color": "",
-            "title": "Refer a friend",
-            "content": "<p>Tell your customers about your promotional offers.</p>"
+            "title": "LIVRAISON OFFERTE",
+            "content": ""
           }
         },
         "payment": {
