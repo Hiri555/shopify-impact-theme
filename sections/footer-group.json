@@ -27,19 +27,6 @@
             "content": ""
           }
         },
-        "customer-support": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-customer-support",
-            "mobile_icon_width": 24,
-            "icon_width": 24,
-            "icon_background_type": "none",
-            "icon_background": "",
-            "icon_color": "",
-            "title": "Customer service",
-            "content": "<p>Tell your customers how they can reach you.</p>"
-          }
-        },
         "discount": {
           "type": "item",
           "settings": {
@@ -69,7 +56,6 @@
       },
       "block_order": [
         "free-shipping",
-        "customer-support",
         "discount",
         "payment"
       ],
