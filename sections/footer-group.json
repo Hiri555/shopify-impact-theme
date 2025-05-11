@@ -45,12 +45,12 @@
           "settings": {
             "icon": "picto-lock",
             "mobile_icon_width": 24,
-            "icon_width": 24,
-            "icon_background_type": "none",
+            "icon_width": 36,
+            "icon_background_type": "circle",
             "icon_background": "",
             "icon_color": "",
-            "title": "Secure payment",
-            "content": "<p>Tel your customers about your payment methods.</p>"
+            "title": "PAYEZ A LA LIVRAISON",
+            "content": ""
           }
         }
       },
