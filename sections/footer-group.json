@@ -71,106 +71,6 @@
         "text_color": ""
       }
     },
-    "custom_liquid_hXxhEi": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<p style=\"text-align: center\">Write or copy/paste Liquid code</p>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "before_after_image_gKGiRE": {
-      "type": "before-after-image",
-      "name": "Before/after image",
-      "settings": {
-        "full_width": true,
-        "subheading": "",
-        "title": "",
-        "content": "<h1><strong>SOURIEZ EN PUBLIQUE AVEC CONFIANCE</strong></h1><p></p>",
-        "expand_image": false,
-        "text_position": "center",
-        "before_after_text_position": "top",
-        "before_text": "Avant",
-        "after_text": "Après",
-        "drag_initial_position": 51,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "before_text_color": "#ffffff",
-        "after_text_color": "#ffffff",
-        "drag_cursor_background": "#ffffff",
-        "drag_cursor_color": "#000000"
-      }
-    },
-    "text_with_icons_DaWQNB": {
-      "type": "text-with-icons",
-      "blocks": {
-        "item_WftPXT": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-coupon",
-            "custom_icon": "shopify://shop_images/media.png",
-            "mobile_icon_width": 24,
-            "icon_width": 68,
-            "icon_background_type": "circle",
-            "icon_background": "",
-            "icon_color": "",
-            "title": "COMMENT TIENT-ELLE?",
-            "content": "<p><br/>COMMENT TIENT-ELLE?<br/><strong>Leur maintien solide est comparable à celui des gouttières dentaires classiques.</strong></p><p><strong>Grâce à un système de fixation sans colle, ni vis, ni aucun outil, </strong> les prothèse s'adaptent parfaitement à vos dents sans contrainte.</p>"
-          }
-        },
-        "item_nmbTEi": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-coupon",
-            "custom_icon": "shopify://shop_images/media_1.png",
-            "mobile_icon_width": 24,
-            "icon_width": 68,
-            "icon_background_type": "circle",
-            "icon_background": "",
-            "icon_color": "",
-            "title": "QUELLE TAILLE CHOISIR?",
-            "content": "<p><br/>QUELLE TAILLE CHOISIR?<br/><strong>Il n'y a pas de taille à choisir.</strong></p><p>Notre Prothèse comprend un <strong>moule personnalisable, </strong>confortable et flexible, qui s'ajuste délicatement sur vos dents.</p><p>Ces Prothèses sont 100% personnalisable selon votre dentition.</p>"
-          }
-        },
-        "item_gXxkwa": {
-          "type": "item",
-          "settings": {
-            "icon": "picto-coupon",
-            "custom_icon": "shopify://shop_images/media_2.png",
-            "mobile_icon_width": 24,
-            "icon_width": 68,
-            "icon_background_type": "circle",
-            "icon_background": "",
-            "icon_color": "",
-            "title": "EFFET NATUREL OU NON?",
-            "content": "<p><br/>EFFET NATUREL OU NON?<br/><strong>Oui, l'effet est naturel.</strong></p><p>La résine choisie pour notre Prothèse répond à deux critères importants:<strong> une coloration de dent naturellement blanches,</strong> et une <strong>composition 100% saine.</strong></p>"
-          }
-        }
-      },
-      "block_order": [
-        "item_WftPXT",
-        "item_nmbTEi",
-        "item_gXxkwa"
-      ],
-      "name": "Text with icons",
-      "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "title": "",
-        "heading_tag": "h5",
-        "text_alignment": "center",
-        "icon_spacing": "medium",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
     "custom_liquid_NnKBcx": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -229,9 +129,6 @@
   },
   "order": [
     "text-with-icons",
-    "custom_liquid_hXxhEi",
-    "before_after_image_gKGiRE",
-    "text_with_icons_DaWQNB",
     "custom_liquid_NnKBcx",
     "footer"
   ]
