@@ -426,35 +426,107 @@
         "166442457738b23caf-0": {
           "type": "item",
           "settings": {
-            "title": "Do you ship overseas?",
-            "content": "<p>Yes, we ship all over the world. Shipping costs will apply, and will be added at checkout. We run discounts and promotions all year, so stay tuned for exclusive deals.</p>"
+            "title": "Comment fonctionne la culotte absorbante ?",
+            "content": "<p><strong>Notre culotte dispose de 3 couches</strong></p><p><em>une couche douce contre la peau, une couche absorbante qui capte le liquide </em>instantanément, et une barrière imperméable qui empêche les fuites. </p><p>Vous la portez comme une culotte normale.</p>"
+          }
+        },
+        "item_iH7rWJ": {
+          "type": "item",
+          "settings": {
+            "title": "Quelle est la capacité d'absorption ?",
+            "content": "<p>Nos culottes absorbent jusqu'à 60ml, soit l'équivalent de 4 à 6 protections jetables. Elles conviennent à l'incontinence légère à modérée.<br/><br/></p>"
           }
         },
         "166442457738b23caf-1": {
           "type": "item",
           "settings": {
-            "title": "How long will it take to get my orders?",
-            "content": "<p>It depends on where you are. Orders processed here will take 5-7 business days to arrive. Overseas deliveries can take anywhere from 7-16 days. Delivery details will be provided in your confirmation email.</p>"
+            "title": "Combien de temps puis-je la porter ?",
+            "content": "<p>Vous pouvez la porter toute la journée (8-12h) ou toute la nuit en toute sécurité, selon votre niveau de fuites.<br/><br/></p>"
           }
         },
         "166442457738b23caf-2": {
           "type": "item",
           "settings": {
-            "title": "Any question?",
-            "content": "<p>You can contact us through our contact page! We will be happy to assist you.</p>"
+            "title": "Est-ce que ça sent mauvais ?",
+            "content": "<p>Non ! Notre technologie antibactérienne neutralise les odeurs. Vous restez fraîche toute la journée.<br/><br/></p>"
+          }
+        },
+        "item_Kk9yCL": {
+          "type": "item",
+          "settings": {
+            "title": "C'est visible sous les vêtements ?",
+            "content": "<p>Absolument pas. Notre culotte est ultra-fine (3mm) et se porte sous tous types de vêtements : jeans, leggings, robes, sans aucune visibilité.<br/><br/></p>"
+          }
+        },
+        "item_B6m6EJ": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce confortable ?",
+            "content": "<p>Oui ! Le tissu est doux, respirant et se porte exactement comme une culotte classique. Nos clientes oublient même qu'elles la portent.<br/><br/></p>"
+          }
+        },
+        "item_r3ntiC": {
+          "type": "item",
+          "settings": {
+            "title": "Comment choisir ma taille ?",
+            "content": "<p>Consultez notre guide des tailles avec mesures précises (tour de taille et hanches). En cas de doute, prenez la taille supérieure pour plus de confort.<br/><br/></p>"
+          }
+        },
+        "item_9CMcht": {
+          "type": "item",
+          "settings": {
+            "title": "Que faire si ma taille ne convient pas ?",
+            "content": "<p>Nous offrons les échanges gratuits ! Contactez-nous sous 30 jours et nous vous envoyons la bonne taille sans frais.<br/><br/></p>"
+          }
+        },
+        "item_A6inKT": {
+          "type": "item",
+          "settings": {
+            "title": "Ça taille grand ou petit ?",
+            "content": "<p>Notre coupe est fidèle aux tailles françaises standard. Si vous êtes entre deux tailles, nous recommandons la taille supérieure.<br/><br/></p>"
+          }
+        },
+        "item_NxMUYr": {
+          "type": "item",
+          "settings": {
+            "title": "Comment laver la culotte ?",
+            "content": "<p>Rinçage a l'eau froide puis machine 30-40°C !</p><p> Séchage à l'air (4-6h).<br/><br/></p>"
+          }
+        },
+        "item_hkpNMi": {
+          "type": "item",
+          "settings": {
+            "title": "Combien de temps ça dure ?",
+            "content": "<p>Avec un entretien correct, nos culottes durent 2 à 3 ans, soit plus de 100 lavages. Un excellent investissement !<br/><br/><br/></p>"
+          }
+        },
+        "item_pC8RCV": {
+          "type": "item",
+          "settings": {
+            "title": "Combien de culottes dois-je avoir ?",
+            "content": "<p>Nous recommandons 3 à 5 culottes pour tourner confortablement dans la semaine.<br/><br/></p>"
           }
         }
       },
       "block_order": [
         "166442457738b23caf-0",
+        "item_iH7rWJ",
         "166442457738b23caf-1",
-        "166442457738b23caf-2"
+        "166442457738b23caf-2",
+        "item_Kk9yCL",
+        "item_B6m6EJ",
+        "item_r3ntiC",
+        "item_9CMcht",
+        "item_A6inKT",
+        "item_NxMUYr",
+        "item_hkpNMi",
+        "item_pC8RCV"
       ],
       "settings": {
         "full_width": false,
         "subheading": "",
         "title": "FAQ",
-        "content": "<p>Use this text to share information about your product or shipping policies.</p>",
+        "content": "",
         "team_avatar_width": 160,
         "support_hours": "Our customer support is available Monday to Friday: 8am-8:30pm.",
         "answer_time": "Average answer time: 24h",
