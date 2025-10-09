@@ -506,6 +506,69 @@
             "title": "Combien de culottes dois-je avoir ?",
             "content": "<p>Nous recommandons 3 à 5 culottes pour tourner confortablement dans la semaine.<br/><br/></p>"
           }
+        },
+        "item_M4i7Rr": {
+          "type": "item",
+          "settings": {
+            "title": "C'est cher par rapport aux protections jetables ?",
+            "content": "<p>Au contraire ! Les jetables coûtent 50-70€/mois soit 600-840€/an. Une culotte à 39€ qui dure 2 ans = 19,50€/an. Vous économisez plus de 500€ par an !<br/><br/></p>"
+          }
+        },
+        "item_kH96xh": {
+          "type": "item",
+          "settings": {
+            "title": "Proposez-vous des packs économiques ?",
+            "content": "<p>Oui ! Plus vous achetez, plus vous économisez. Consultez nos offres bundles pour bénéficier jusqu'à -40%.<br/><br/></p>"
+          }
+        },
+        "item_9mf7V7": {
+          "type": "item",
+          "settings": {
+            "title": "La livraison est-elle discrète ?",
+            "content": "<p>Oui ! Colis neutre sans mention du contenu pour protéger votre intimité.<br/><br/></p>"
+          }
+        },
+        "item_N7C4ge": {
+          "type": "item",
+          "settings": {
+            "title": "Convient-elle à tous les types d'incontinence ?",
+            "content": "<p>Nos culottes sont idéales pour l'incontinence légère à modérée (gouttes, fuites d'effort, urgences). Pour l'incontinence forte, nous recommandons de consulter un professionnel de santé.<br/><br/></p>"
+          }
+        },
+        "item_ReVPHH": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je la porter après un accouchement ?",
+            "content": "<p>Oui ! Parfaite pour le post-partum (lochies) et bien plus confortable que les protections maternité.<br/><br/></p>"
+          }
+        },
+        "item_d3k8rW": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je faire du sport avec ?",
+            "content": "<p>Oui ! Notre culotte maintient parfaitement pendant l'activité physique (yoga, marche, danse).<br/><br/></p>"
+          }
+        },
+        "item_kzbXqF": {
+          "type": "item",
+          "settings": {
+            "title": "Où sont fabriquées vos culottes ?",
+            "content": "<p>Nos culottes sont conçues en France avec des matériaux certifiés de haute qualité.<br/><br/></p>"
+          }
+        },
+        "item_hCiaBP": {
+          "type": "item",
+          "settings": {
+            "title": "Comment passer commande ?",
+            "content": "<p>Cliquez sur \"Commander maintenant\", choisissez votre taille et quantité, validez votre panier et procédez au paiement sécurisé.<br/><br/></p>"
+          }
+        },
+        "item_WkMKjB": {
+          "type": "item",
+          "settings": {
+            "title": "Puis-je modifier ma commande après validation ?",
+            "content": "<p>Contactez-nous immédiatement à [email]. Si la commande n'est pas encore expédiée, nous pourrons la modifier.</p>"
+          }
         }
       },
       "block_order": [
@@ -520,7 +583,16 @@
         "item_A6inKT",
         "item_NxMUYr",
         "item_hkpNMi",
-        "item_pC8RCV"
+        "item_pC8RCV",
+        "item_M4i7Rr",
+        "item_kH96xh",
+        "item_9mf7V7",
+        "item_N7C4ge",
+        "item_ReVPHH",
+        "item_d3k8rW",
+        "item_kzbXqF",
+        "item_hCiaBP",
+        "item_WkMKjB"
       ],
       "settings": {
         "full_width": false,
