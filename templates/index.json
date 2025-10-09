@@ -43,6 +43,7 @@
         "logo_d8MarD": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/COSMO.svg",
             "logo_width": 120,
             "link": ""
           }
@@ -50,6 +51,7 @@
         "logo_bGpcHp": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/MAG_XSANTE.png",
             "logo_width": 120,
             "link": ""
           }
@@ -57,6 +59,7 @@
         "logo_byQUrH": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/VOGUE.png",
             "logo_width": 120,
             "link": ""
           }
@@ -64,6 +67,7 @@
         "logo_cPbNMY": {
           "type": "logo",
           "settings": {
+            "logo": "shopify://shop_images/MARIE.png",
             "logo_width": 120,
             "link": ""
           }
