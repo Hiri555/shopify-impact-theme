@@ -12,28 +12,38 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "liquid_dkxbrk": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div class=\"trustpilot-rating-container\" id=\"block-trustpilot_rating_kHdNbD\" style=\"display: flex; align-items: center; margin: 10px 0 10px 0; justify-content: flex-start; border: 1px dotted #e0e0e0; border-radius: 4px;\">\n  <div class=\"rating-container\">\n    <h1 class=\"trustpilot-block-rating-text\">\n      <svg class=\"trustpilot-star-five\" height=\"18\" width=\"80\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 96\">\n        <g fill=\"none\">\n          <g fill=\"#00b67a\">\n            <path d=\"M0 0h96v96H0zM104 0h96v96h-96zM208 0h96v96h-96zM312 0h96v96h-96zM416 0h96v96h-96z\"></path>\n          </g>\n          <path d=\"M48 64.7L62.6 61l6.1 18.8zm33.6-24.3H55.9L48 16.2l-7.9 24.2H14.4l20.8 15-7.9 24.2 20.8-15 12.8-9.2zM152 64.7l14.6-3.7 6.1 18.8zm33.6-24.3h-25.7L152 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2zM256 64.7l14.6-3.7 6.1 18.8zm33.6-24.3h-25.7L256 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2zM360 64.7l14.6-3.7 6.1 18.8zm33.6-24.3h-25.7L360 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2zM464 64.7l14.6-3.7 6.1 18.8zm33.6-24.3h-25.7L464 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2z\" fill=\"#fff\"></path>\n        </g>\n      </svg>\n      <span class=\"rating-excellent\">Excellent</span>\n      <span class=\"rating-score\">4.7 sur 5</span>\n    </h1>\n  </div>\n</div>"
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
             "heading_tag": "h2"
           }
         },
-        "badges": {
-          "type": "badges",
-          "settings": {}
-        },
-        "rating": {
-          "type": "rating",
+        "text_cwtLJt": {
+          "type": "text",
           "settings": {
-            "show_empty": false
+            "text": "<p>Fond de teint 4-en-1 vegan qui épouse votre peau au lieu de la recouvrir. Non testé sur les animaux et respectueux de votre peau.<br/><br/></p>"
+          }
+        },
+        "liquid_k3tm9a": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style>\n  .offer-list-container {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: 16px;\n    padding: 0;\n    margin: 20px 0;\n  }\n\n  @media (min-width: 768px) {\n    .offer-list-container {\n      grid-template-columns: repeat(4, 1fr);\n      gap: 20px;\n    }\n  }\n\n  .offer-item {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n  }\n\n  .offer-item img {\n    width: 24px;\n    height: 24px;\n    flex-shrink: 0;\n  }\n\n  .offer-item span {\n    font-size: 14px;\n    font-weight: 600;\n    line-height: 1.3;\n    color: rgb(26, 26, 26);\n  }\n</style>\n\n<div class=\"offer-list-container\">\n  <div class=\"offer-item\">\n    <img src=\"//legacareofficial.com/cdn/shop/files/4_63fd6038-2f30-40ff-ab52-6cc289dae717.png?v=1744383323&width=48\" alt=\"\">\n    <span>Épouse votre carnation naturelle</span>\n  </div>\n\n  <div class=\"offer-item\">\n    <img src=\"//legacareofficial.com/cdn/shop/files/1_58ef5fd8-dd35-4838-96d3-34175031ab0b.png?v=1744383318&width=48\" alt=\"\">\n    <span>Zéro cruauté animale</span>\n  </div>\n\n  <div class=\"offer-item\">\n    <img src=\"//legacareofficial.com/cdn/shop/files/2_d3dc2130-7609-41ec-a085-4f4042cded9f.png?v=1744383309&width=48\" alt=\"\">\n    <span>Protection solaire SPF50</span>\n  </div>\n\n  <div class=\"offer-item\">\n    <img src=\"//legacareofficial.com/cdn/shop/files/3_f6285881-0e4a-4db0-b0d2-eadfef262463.png?v=1744383314&width=48\" alt=\"\">\n    <span>Convient à tous les types de peau</span>\n  </div>\n</div>"
+          }
+        },
+        "liquid_rNwF9j": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<style>\n  @keyframes pulse-inventory {\n    0%, 100% {\n      opacity: 1;\n      transform: scale(1);\n    }\n    50% {\n      opacity: 0;\n      transform: scale(2);\n    }\n  }\n</style>\n\n<div style=\"display: flex; align-items: center; padding: 1px 10px; border-radius: 50px; width: fit-content; margin: -2px 0px -9px;\">\n  \n  <div style=\"position: relative; margin-right: 12px;\">\n    <span style=\"display: block; width: 8px; height: 8px; background-color: #e74c3c; border-radius: 50%; position: relative; z-index: 2;\"></span>\n    <span style=\"display: block; width: 8px; height: 8px; background-color: #e74c3c; border-radius: 50%; position: absolute; top: 0; left: 0; animation: pulse-inventory 2s ease-in-out infinite;\"></span>\n  </div>\n  \n  <span style=\"font-size: 13px; color: #e74c3c;\">\n    <strong>Plus</strong> que 6 unités en stock\n  </span>\n  \n</div>"
           }
         },
         "payment_terms": {
           "type": "payment_terms",
-          "settings": {}
-        },
-        "separator": {
-          "type": "separator",
           "settings": {}
         },
         "variant_picker": {
@@ -59,11 +69,12 @@
         }
       },
       "block_order": [
+        "liquid_dkxbrk",
         "title",
-        "badges",
-        "rating",
+        "text_cwtLJt",
+        "liquid_k3tm9a",
+        "liquid_rNwF9j",
         "payment_terms",
-        "separator",
         "variant_picker",
         "buy_buttons"
       ],
