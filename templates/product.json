@@ -82,6 +82,12 @@
             "alignment": "center",
             "max_width": 400
           }
+        },
+        "liquid_M4KcBN": {
+          "type": "liquid",
+          "settings": {
+            "liquid": "<div id='ss-product-videos'></div>"
+          }
         }
       },
       "block_order": [
@@ -94,7 +100,8 @@
         "variant_picker",
         "buy_buttons",
         "image_qVyMnK",
-        "image_tBqHrz"
+        "image_tBqHrz",
+        "liquid_M4KcBN"
       ],
       "settings": {
         "full_width": true,
