@@ -216,11 +216,104 @@
         "background_gradient": "",
         "text_color": ""
       }
+    },
+    "custom_liquid_Whb9Yr": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_liquid_x7qCT9": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<div class=\"custom-trust-section\">\n  <div class=\"trust-content-wrapper\">\n    \n    <h2>Nos clientes en parlent le mieux</h2>\n\n    <div class=\"trust-rating-text\">\n      <span>Excellent</span>\n      <span class=\"rating-number\">4.8</span>\n      <span>/ 5</span>\n    </div>\n\n    <div class=\"trust-stars\">\n      <svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"32\" height=\"32\" fill=\"#00b67a\"></rect><path d=\"M9.2 27L16 21.8 22.8 27l-2.6-8.4L27 13.4h-8.4L16 5l-2.6 8.4H5l6.8 5.2L9.2 27z\" fill=\"#fff\"></path></svg>\n      <svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"32\" height=\"32\" fill=\"#00b67a\"></rect><path d=\"M9.2 27L16 21.8 22.8 27l-2.6-8.4L27 13.4h-8.4L16 5l-2.6 8.4H5l6.8 5.2L9.2 27z\" fill=\"#fff\"></path></svg>\n      <svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"32\" height=\"32\" fill=\"#00b67a\"></rect><path d=\"M9.2 27L16 21.8 22.8 27l-2.6-8.4L27 13.4h-8.4L16 5l-2.6 8.4H5l6.8 5.2L9.2 27z\" fill=\"#fff\"></path></svg>\n      <svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"32\" height=\"32\" fill=\"#00b67a\"></rect><path d=\"M9.2 27L16 21.8 22.8 27l-2.6-8.4L27 13.4h-8.4L16 5l-2.6 8.4H5l6.8 5.2L9.2 27z\" fill=\"#fff\"></path></svg>\n      <svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"32\" height=\"32\" fill=\"#00b67a\"></rect><path d=\"M9.2 27L16 21.8 22.8 27l-2.6-8.4L27 13.4h-8.4L16 5l-2.6 8.4H5l6.8 5.2L9.2 27z\" fill=\"#fff\"></path></svg>\n    </div>\n\n  </div>\n</div>\n\n<style>\n  /* Conteneur principal */\n  .custom-trust-section {\n    padding: 20px 10px;\n    background-color: transparent; /* Fond transparent */\n    text-align: center;\n    width: 100%;\n  }\n\n  .trust-content-wrapper {\n    max-width: 1200px;\n    margin: 0 auto;\n  }\n\n  /* Style du Titre */\n  .custom-trust-section h2 {\n    font-size: 24px;\n    font-weight: 700;\n    margin: 0 0 10px 0;\n    color: #1a1a1a; /* Couleur du texte (ici noir foncé) */\n    line-height: 1.2;\n    font-family: inherit;\n  }\n\n  /* Style du texte \"Excellent 4.8 / 5\" */\n  .trust-rating-text {\n    font-size: 18px;\n    color: #1a1a1a; /* Couleur du texte */\n    margin-bottom: 12px;\n    font-family: inherit;\n  }\n\n  .trust-rating-text .rating-number {\n    font-weight: bold;\n  }\n\n  /* Conteneur des étoiles */\n  .trust-stars {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 6px;\n  }\n\n  /* Taille des icônes SVG */\n  .trust-stars svg {\n    width: 24px;\n    height: 24px;\n    display: block;\n  }\n  \n  /* Ajustement mobile */\n  @media (max-width: 768px) {\n    .custom-trust-section h2 {\n      font-size: 20px;\n    }\n  }\n</style>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "images_with_text_scrolling_fxGTtX": {
+      "type": "images-with-text-scrolling",
+      "blocks": {
+        "item_LpbAKH": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1762749193__img_0071__original.jpg",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "",
+            "content": "<p><strong>Laurence P. 54 ans</strong> ⭐⭐⭐⭐⭐<br/><br/>Depuis la ménopause, ma peau fait n'importe quoi : rougeurs, sécheresse, taches. Celui-là s'adapte à tout ça. Application facile, couvre bien, et ma peau respire. </p><p>Les femmes de mon âge comprendront : c'est rare de trouver un fond de teint qui nous convient vraiment.<br/><br/>.<br/><br/></p>"
+          }
+        },
+        "item_hMMm9z": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/3_f72bb6f3-8460-464c-a277-e08e8448b9a0.png",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "",
+            "content": "<p><strong>Claire B., 47 ans</strong> ⭐⭐⭐⭐⭐</p><p><br/>J'ai au moins 5 flacons qui prennent la poussière chez moi. Tous ratés. Celui-là, je l'ai terminé en 2 mois. Il tient toute la journée sans retouche, ma peau tire pas, et aucun effet brillant à midi. </p><p>J'en ai déjà racheté deux. À 47 ans, j'ai plus envie de tester : j'ai trouvé le bon.<br/><br/></p>"
+          }
+        },
+        "item_4zaatV": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/1742229740__0__cOjbDcsV__-UO9bAQ-z__original.jpg",
+            "icon": "none",
+            "icon_width": 48,
+            "title": "",
+            "content": "<p><strong>Sylvie G., 58 ans</strong> ⭐⭐⭐⭐⭐<br/><br/>Ma fille m'a surprise hier : 'Maman, ta peau est trop belle, t'as fait quoi ?' Elle savait même pas que j'étais maquillée. Première fois qu'elle me complimente sans que je lui demande.</p><p>Ce fond de teint a changé mes matinées, mais surtout ma confiance devant elle.</p>"
+          }
+        },
+        "item_mH8bUB": {
+          "type": "item",
+          "settings": {
+            "image": "shopify://shop_images/2_9c3e93d9-844b-4a5e-9625-3f08d74235c7.png",
+            "icon": "none",
+            "icon_width": 24,
+            "title": "",
+            "content": "<p><strong>Isabelle R. 60 ans</strong> ⭐⭐⭐⭐⭐</p><p>Franchement, commander un fond de teint en ligne sans l'avoir testé, j'étais sceptique. J'ai toujours galéré à trouver ma teinte même en magasin. </p><p>Mais là... il a fondu dans ma peau comme par magie. Zéro trace au niveau du cou, zéro effet masque.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_LpbAKH",
+        "item_hMMm9z",
+        "item_4zaatV",
+        "item_mH8bUB"
+      ],
+      "name": "Images and text scrolling",
+      "settings": {
+        "full_width": true,
+        "stack_on_mobile": false,
+        "show_counter": false,
+        "desktop_image_effect": "reveal",
+        "image_position": "end",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": ""
+      }
     }
   },
   "order": [
     "main",
     "logo_list_NwHyJ6",
-    "custom_liquid_PQaRy7"
+    "custom_liquid_PQaRy7",
+    "custom_liquid_Whb9Yr",
+    "custom_liquid_x7qCT9",
+    "images_with_text_scrolling_fxGTtX"
   ]
 }
