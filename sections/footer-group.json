@@ -197,7 +197,7 @@
           "type": "text",
           "settings": {
             "title": "A propos",
-            "content": "<p>Utilisez cette zone de texte pour présenter votre marque et votre vision à vos clients. Vous pouvez la modifier dans l'éditeur de thème.</p>",
+            "content": "<p><strong>Evena : Le fond de teint qui comprend votre peau</strong></p><p>Votre peau a changé. Les fonds de teint classiques, non.</p><p>On a créé Evena pour les femmes que l'industrie beauté ignore : celles qui ont des ridules, des rougeurs, une peau qui a vécu.</p><p>Un seul produit. 16 teintes adaptatives. Formule qui hydrate pendant qu'elle camoufle. SPF50 intégré. Zéro effet masque.</p><p><strong>Vous méritez un fond de teint créé pour vous, pas contre vous.</strong>. Vous pouvez la modifier dans l'éditeur de thème.</p>",
             "enable_follow_on_shop": true
           }
         }
