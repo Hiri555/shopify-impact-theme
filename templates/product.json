@@ -66,6 +66,22 @@
             "payment_button_background": "",
             "payment_button_text_color": ""
           }
+        },
+        "image_qVyMnK": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Copie_de_HEAVENLY_WARS_TABLIER_23d094ae-a6c9-4388-8611-e40d3e83a70b.png",
+            "alignment": "center",
+            "max_width": 210
+          }
+        },
+        "image_tBqHrz": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Sans_titre_360_x_55_px_69896922-a3cd-4c44-918c-787dbb71aed9.jpg",
+            "alignment": "center",
+            "max_width": 400
+          }
         }
       },
       "block_order": [
@@ -76,7 +92,9 @@
         "liquid_rNwF9j",
         "payment_terms",
         "variant_picker",
-        "buy_buttons"
+        "buy_buttons",
+        "image_qVyMnK",
+        "image_tBqHrz"
       ],
       "settings": {
         "full_width": true,
