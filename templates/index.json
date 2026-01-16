@@ -11,25 +11,13 @@
   "sections": {
     "image-with-text-overlay": {
       "type": "image-with-text-overlay",
-      "blocks": {
-        "heading_HxJTrd": {
-          "type": "heading",
-          "settings": {
-            "text": "Fini la honte, retrouvez votre liberté",
-            "heading_tag": "h3"
-          }
-        }
-      },
-      "block_order": [
-        "heading_HxJTrd"
-      ],
       "settings": {
         "full_width": true,
         "allow_transparent_header": false,
         "enable_parallax": false,
         "image_size": "auto",
-        "image": "shopify://shop_images/assets_task_01k73rn0k2eh2vembt9pk47q7d_1759989467_img_0.webp",
-        "mobile_image": "shopify://shop_images/assets_task_01k73rn0k2eh2vembt9pk47q7d_1759989467_img_0.webp",
+        "image": "shopify://shop_images/pp.png",
+        "mobile_image": "shopify://shop_images/pp_1.png",
         "mobile_text_position": "place-self-center text-center",
         "desktop_text_position": "sm:place-self-center sm:text-center",
         "text_color": "#ffffff",
@@ -83,9 +71,9 @@
       "settings": {
         "full_width": true,
         "stack_mobile": true,
-        "title": "Logo list",
+        "title": "VU SUR",
         "content": "",
-        "text_alignment": "start",
+        "text_alignment": "center",
         "items_per_row": 5,
         "background": "#f8f6f3",
         "background_gradient": "",
@@ -94,23 +82,6 @@
         "heading_gradient": "",
         "logo_item_background": "",
         "logo_item_border": ""
-      }
-    },
-    "image_with_text_overlay_4cHFff": {
-      "type": "image-with-text-overlay",
-      "name": "Image with text overlay",
-      "settings": {
-        "full_width": true,
-        "allow_transparent_header": false,
-        "enable_parallax": false,
-        "image_size": "auto",
-        "image": "shopify://shop_images/Copie_de_Template_section_benefice_1.png",
-        "mobile_image": "shopify://shop_images/Copie_de_Template_section_benefice_1.png",
-        "mobile_text_position": "place-self-center text-center",
-        "desktop_text_position": "sm:place-self-center sm:text-center",
-        "text_color": "#f8f6f3",
-        "overlay_color": "#f8f6f3",
-        "overlay_opacity": 0
       }
     },
     "multi_column_UWXpfR": {
@@ -129,202 +100,6 @@
         "text_color": ""
       }
     },
-    "testimonials_RtAaXJ": {
-      "type": "testimonials",
-      "blocks": {
-        "slide_DKP8KT": {
-          "type": "slide",
-          "settings": {
-            "media_style": "image",
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "controls": false,
-            "stars_count": 5,
-            "text": "<p>the perfect candle replacement, obsessed with the lamps!</p>",
-            "author": "<p><strong>@tracer</strong></p>"
-          }
-        },
-        "slide_BG6eF8": {
-          "type": "slide",
-          "settings": {
-            "media_style": "image",
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "controls": false,
-            "stars_count": 5,
-            "text": "<p>Our kids bring them everywhere, specially when doing puzzles and drawings</p>",
-            "author": "<p><strong>@theworldisyours</strong></p>"
-          }
-        },
-        "slide_D7NhGQ": {
-          "type": "slide",
-          "settings": {
-            "media_style": "image",
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "controls": false,
-            "stars_count": 5,
-            "text": "<p>This is the brand to go for lamps, love the quality and design, as always you get what you pay</p>",
-            "author": "<p><strong>@niels_homes</strong></p>"
-          }
-        },
-        "slide_gTKHkn": {
-          "type": "slide",
-          "settings": {
-            "media_style": "image",
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "controls": false,
-            "stars_count": 5,
-            "text": "<p>Love them, they give the perfect luxury touch to any room</p>",
-            "author": "<p><strong>@allfinds</strong></p>"
-          }
-        },
-        "slide_DNEWNG": {
-          "type": "slide",
-          "settings": {
-            "media_style": "image",
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "controls": false,
-            "stars_count": 5,
-            "text": "<p>The cordless lamp you've been looking for!</p>",
-            "author": "<p><strong>@lacey</strong></p>"
-          }
-        },
-        "slide_gb9f7a": {
-          "type": "slide",
-          "settings": {
-            "media_style": "image",
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "controls": false,
-            "stars_count": 5,
-            "text": "<p>All my friends want them too now, at least I was the first one to get them..!</p>",
-            "author": "<p><strong>@mcqueen</strong></p>"
-          }
-        },
-        "slide_rHikYa": {
-          "type": "slide",
-          "settings": {
-            "media_style": "image",
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "controls": false,
-            "stars_count": 5,
-            "text": "<p>I use it every day early in the morning and on our dining table, it is do convenient and cool</p>",
-            "author": "<p><strong>@dwithpatty</strong></p>"
-          }
-        }
-      },
-      "block_order": [
-        "slide_DKP8KT",
-        "slide_BG6eF8",
-        "slide_D7NhGQ",
-        "slide_gTKHkn",
-        "slide_DNEWNG",
-        "slide_gb9f7a",
-        "slide_rHikYa"
-      ],
-      "name": "SS - Testimonials #12",
-      "settings": {
-        "heading": "<h2>Loved by everyone, everywhere. Don't miss out.</h2>",
-        "heading_custom": false,
-        "heading_font": "josefin_sans_n4",
-        "heading_size": 30,
-        "heading_size_mobile": 22,
-        "heading_height": 130,
-        "heading_align": "center",
-        "heading_align_mobile": "center",
-        "sub_heading": "",
-        "sub_heading_custom": false,
-        "sub_heading_font": "josefin_sans_n4",
-        "sub_heading_size": 30,
-        "sub_heading_size_mobile": 22,
-        "sub_heading_height": 130,
-        "sub_heading_mt": 12,
-        "sub_heading_align": "center",
-        "sub_heading_align_mobile": "center",
-        "slider_view": 5.4,
-        "slider_view_mobile": 1.5,
-        "slider_gap": 28,
-        "slider_gap_mobile": 20,
-        "slider_mt": 20,
-        "autoplay": false,
-        "autoplay_delay": 5,
-        "card_padding_vertical": 20,
-        "card_padding_vertical_mobile": 16,
-        "card_padding_horizontal": 20,
-        "card_padding_horizontal_mobile": 16,
-        "card_radius": 20,
-        "card_border_thickness": 1,
-        "card_shadow": false,
-        "media_radius": 20,
-        "media_border_thickness": 0,
-        "media_ratio": "square",
-        "media_ratio_mobile": "square",
-        "content_padding_vertical": 0,
-        "content_padding_vertical_mobile": 0,
-        "content_padding_horizontal": 0,
-        "content_padding_horizontal_mobile": 0,
-        "hide_content": false,
-        "stars_size": 16,
-        "stars_mt": 12,
-        "stars_align": "center",
-        "stars_align_mobile": "center",
-        "text_custom": false,
-        "text_font": "josefin_sans_n4",
-        "text_size": 16,
-        "text_size_mobile": 16,
-        "text_height": 130,
-        "text_mt": 12,
-        "text_align": "center",
-        "text_align_mobile": "center",
-        "author_custom": false,
-        "author_font": "josefin_sans_n4",
-        "author_size": 14,
-        "author_size_mobile": 14,
-        "author_height": 130,
-        "author_mt": 12,
-        "author_align": "center",
-        "author_align_mobile": "center",
-        "navigation_mt": 40,
-        "navigation_gap": 20,
-        "navigation_align": "center",
-        "navigation_align_mobile": "center",
-        "arrow_size": 50,
-        "arrow_size_mobile": 50,
-        "arrow_show_desktop": true,
-        "arrow_show_mobile": false,
-        "dots_size": 10,
-        "dots_size_mobile": 10,
-        "dots_show_desktop": false,
-        "dots_show_mobile": true,
-        "btn_icon_size": 50,
-        "btn_icon_size_mobile": 40,
-        "card_bg_color": "#ffffff",
-        "card_bg_gradient": "",
-        "card_border_color": "#dedbc4",
-        "card_shadow_color": "#000000",
-        "media_border_color": "#000000",
-        "stars_color": "#323232",
-        "text_color": "#323232",
-        "author_color": "#323232",
-        "video_icon_bg_color": "#ffffff",
-        "video_icon_color": "#000000",
-        "arrow_color": "#837c5c",
-        "arrow_hover_color": "#837c5c",
-        "dots_color": "#837c5c",
-        "heading_color": "#837c5c",
-        "sub_heading_color": "#837c5c",
-        "background_color": "#f6f5f2",
-        "background_gradient": "",
-        "border_color": "#000000",
-        "margin_top": 0,
-        "margin_bottom": 0,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "padding_horizontal": 0,
-        "padding_horizontal_mobile": 0,
-        "full_width": true,
-        "content_width": 120,
-        "border_thickness": 0,
-        "lazy": true
-      }
-    },
     "custom_liquid_tnMJLj": {
       "type": "custom-liquid",
       "name": "Custom Liquid",
@@ -338,99 +113,17 @@
         "text_color": ""
       }
     },
-    "featured-product": {
-      "type": "featured-product",
-      "blocks": {
-        "vendor": {
-          "type": "vendor",
-          "settings": {}
-        },
-        "title": {
-          "type": "title",
-          "settings": {
-            "heading_tag": "h2"
-          }
-        },
-        "badges": {
-          "type": "badges",
-          "settings": {}
-        },
-        "price": {
-          "type": "price",
-          "settings": {
-            "show_taxes_notice": false
-          }
-        },
-        "rating": {
-          "type": "rating",
-          "settings": {
-            "show_empty": false
-          }
-        },
-        "separator": {
-          "type": "separator",
-          "settings": {}
-        },
-        "description": {
-          "type": "description",
-          "settings": {
-            "collapse_content": false
-          }
-        },
-        "variant-picker": {
-          "type": "variant_picker",
-          "settings": {
-            "hide_sold_out_variants": false,
-            "stack_blocks": true,
-            "selector_mode": "block",
-            "color_mode": "color",
-            "size_chart_page": ""
-          }
-        },
-        "quantity-selector": {
-          "type": "quantity_selector",
-          "settings": {}
-        },
-        "buy-buttons": {
-          "type": "buy_buttons",
-          "settings": {
-            "show_payment_button": true,
-            "show_gift_card_recipient": true,
-            "atc_button_background": "",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
-          }
-        }
-      },
-      "block_order": [
-        "vendor",
-        "title",
-        "badges",
-        "price",
-        "rating",
-        "separator",
-        "description",
-        "variant-picker",
-        "quantity-selector",
-        "buy-buttons"
-      ],
+    "custom_liquid_imxrzM": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
       "settings": {
-        "full_width": false,
-        "product": "",
-        "desktop_media_width": 55,
-        "desktop_media_layout": "carousel_thumbnails_left",
-        "mobile_media_size": "expanded",
-        "mobile_carousel_control": "floating_dots",
-        "enable_video_autoplay": true,
-        "enable_video_looping": false,
-        "enable_image_zoom": true,
-        "max_image_zoom_level": 3,
-        "background": "#ffffff",
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<section class=\"evena-values-section\">\n  <div class=\"values-container\">\n    \n    <div class=\"values-header\">\n      <h2>\n        Chez Evena, la beauté <br>\n        <span class=\"highlight-text\">n'a pas de limite d'âge</span>\n      </h2>\n      <div class=\"values-subtitle\">\n        <p>Formulé pour la peau qui évolue après 45 ans. Hydrate, lisse et révèle votre éclat naturel. Sans jamais s'installer dans vos ridules.</p>\n      </div>\n    </div>\n\n    <div class=\"values-grid\">\n      \n      <div class=\"values-item\">\n        <div class=\"image-wrapper\">\n          <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/c46152d1-ae88-4f08-86bb-c3a72c1f481c\" alt=\"Confiance retrouvée\" loading=\"lazy\">\n        </div>\n        <h3>CONFIANCE RETROUVÉE</h3>\n        <p>Une couvrance qui camoufle vos imperfections sans marquer vos ridules</p>\n      </div>\n\n      <div class=\"values-item\">\n        <div class=\"image-wrapper\">\n          <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/e5e113dc-adac-4ff7-af18-fa73d608c6c1\" alt=\"Formule intelligente\" loading=\"lazy\">\n        </div>\n        <h3>FORMULE INTELLIGENTE</h3>\n        <p>Des actifs qui nourrissent pendant qu'ils perfectionnent</p>\n      </div>\n\n      <div class=\"values-item\">\n        <div class=\"image-wrapper\">\n          <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/470d7cbd-20a3-4fc8-9f83-4dccef956f77\" alt=\"Respectueux de votre peau\" loading=\"lazy\">\n        </div>\n        <h3>RESPECTUEUX DE VOTRE PEAU</h3>\n        <p>Vegan, sans parabènes, jamais testé sur les animaux</p>\n      </div>\n\n    </div>\n  </div>\n</section>\n\n<style>\n  /* --- CONFIGURATION GLOBALE --- */\n  .evena-values-section {\n    width: 100%; /* Prend toute la largeur de l'écran */\n    background: transparent; /* Pas de fond */\n    padding: 60px 0 80px; /* Espacement vertical uniquement */\n    font-family: 'Montserrat', sans-serif;\n    text-align: center;\n    color: #000;\n  }\n\n  .values-container {\n    width: 100%;\n    max-width: 1400px; /* Largeur max du contenu pour rester lisible */\n    margin: 0 auto;\n    padding: 0 20px; /* Marges de sécurité sur les côtés */\n    box-sizing: border-box;\n  }\n\n  /* --- HEADER --- */\n  .values-header {\n    margin-bottom: 50px;\n    max-width: 900px;\n    margin-left: auto;\n    margin-right: auto;\n  }\n\n  .values-header h2 {\n    font-size: 32px;\n    line-height: 1.3;\n    margin-bottom: 20px;\n    color: #000;\n    font-weight: 400;\n  }\n\n  /* Style italique élégant pour la deuxième ligne */\n  .values-header .highlight-text {\n    font-family: 'Playfair Display', Georgia, serif; \n    font-style: italic;\n    color: #d4a574; /* Or Evena */\n    font-size: 38px;\n  }\n\n  .values-subtitle p {\n    font-size: 16px;\n    line-height: 1.6;\n    color: #4a4a4a;\n    margin: 0 auto;\n    max-width: 700px;\n  }\n\n  /* --- GRID --- */\n  .values-grid {\n    display: flex;\n    justify-content: center; /* Centre les éléments */\n    gap: 40px;\n    flex-wrap: wrap;\n    width: 100%;\n  }\n\n  .values-item {\n    flex: 1;\n    min-width: 280px;\n    max-width: 350px;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    padding: 0 10px;\n  }\n\n  /* --- IMAGES (ICONES) --- */\n  .image-wrapper {\n    margin-bottom: 20px;\n    width: 140px; \n    height: auto;\n  }\n\n  .image-wrapper img {\n    width: 100%;\n    height: auto;\n    display: block;\n  }\n\n  /* --- TEXTES --- */\n  .values-item h3 {\n    font-size: 13px;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n    font-weight: 700;\n    margin-bottom: 12px;\n    color: #000;\n    margin-top: 10px;\n  }\n\n  .values-item p {\n    font-size: 15px;\n    line-height: 1.5;\n    color: #555;\n    margin: 0;\n  }\n\n  /* --- RESPONSIVE MOBILE --- */\n  @media (max-width: 768px) {\n    .evena-values-section {\n      padding: 40px 0 60px;\n    }\n\n    .values-container {\n      padding: 0 20px;\n    }\n\n    .values-header h2 {\n      font-size: 26px;\n    }\n    \n    .values-header .highlight-text {\n      font-size: 30px;\n    }\n\n    .values-grid {\n      flex-direction: column;\n      align-items: center;\n      gap: 50px;\n    }\n    \n    .image-wrapper {\n      width: 120px;\n    }\n    \n    .values-item {\n      max-width: 100%;\n    }\n  }\n</style>",
+        "background": "",
         "background_gradient": "",
-        "text_color": "",
-        "input_background": "rgba(0,0,0,0)",
-        "input_text_color": ""
+        "text_color": ""
       }
     },
     "faq": {
@@ -633,11 +326,9 @@
   "order": [
     "image-with-text-overlay",
     "logo_list_XmEhMN",
-    "image_with_text_overlay_4cHFff",
     "multi_column_UWXpfR",
-    "testimonials_RtAaXJ",
     "custom_liquid_tnMJLj",
-    "featured-product",
+    "custom_liquid_imxrzM",
     "faq"
   ]
 }
