@@ -327,10 +327,103 @@
         "full_width": true,
         "remove_vertical_spacing": false,
         "remove_horizontal_spacing": false,
-        "liquid": "<p style=\"text-align: center\">Write or copy/paste Liquid code</p>",
+        "liquid": "<section class=\"ingredients-section\">\n  \n  <div class=\"ingredients-header\">\n    <span class=\"subtitle\">Six Ingrédients</span>\n    <h2 class=\"title\">Que votre peau va adorer</h2>\n  </div>\n\n  <div class=\"ingredients-grid\">\n    \n    <div class=\"ing-col side-col left-align\">\n      \n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/c2c53b58-af83-4267-a82d-96a6e39cdf6a\" loading=\"lazy\" alt=\"Gentiana Scabra\">\n        <div class=\"ing-text\">\n          <h3>Gentiana Scabra</h3>\n          <p>Réveille l'éclat naturel de votre peau.</p>\n        </div>\n      </div>\n\n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/bf5464bd-fcd9-4d80-95d4-9d7f39936fdb\" loading=\"lazy\" alt=\"Acide Hyaluronique\">\n        <div class=\"ing-text\">\n          <h3>Acide Hyaluronique</h3>\n          <p>Maintient votre peau repulpée et hydratée toute la journée.</p>\n        </div>\n      </div>\n\n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/00deb148-a6cb-4451-a35c-12571e969e76\" loading=\"lazy\" alt=\"Vitamine E\">\n        <div class=\"ing-text\">\n          <h3>Vitamine E</h3>\n          <p>Protège votre peau de la pollution et du stress quotidien.</p>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"ing-col center-col\">\n      <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/c64d8665-9937-48e8-9e66-7c7bff3f6e07\" loading=\"lazy\" class=\"main-product-img\" alt=\"Texture fond de teint\">\n    </div>\n\n    <div class=\"ing-col side-col right-align\">\n      \n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/5c75c3cb-6a98-40d7-8046-3f42d9971ff8\" loading=\"lazy\" alt=\"SPF 50+\">\n        <div class=\"ing-text\">\n          <h3>SPF 50+</h3>\n          <p>Bouclier anti-UV intégré pour protéger votre peau chaque jour.</p>\n        </div>\n      </div>\n\n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/fd454942-caf3-4b35-99fe-eeca615ab62a\" loading=\"lazy\" alt=\"Bisabolol\">\n        <div class=\"ing-text\">\n          <h3>Bisabolol</h3>\n          <p>S'adapte à votre carnation exacte.</p>\n        </div>\n      </div>\n\n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/696cd210-61e9-41fd-b5a4-6ad63e09634f\" loading=\"lazy\" alt=\"Racine de Japonicas\">\n        <div class=\"ing-text\">\n          <h3>Racine de Japonicas</h3>\n          <p>Apaise les rougeurs et calme les peaux réactives.</p>\n        </div>\n      </div>\n\n    </div>\n  </div>\n\n</section>\n\n<style>\n  /* --- CONTENEUR GLOBAL --- */\n  .ingredients-section {\n    padding: 60px 20px;\n    /* Image de fond texturée originale */\n    background-image: url(\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/7b034671-2843-4d5b-a4c5-b702f2ea6cab\");\n    background-size: cover;\n    background-position: center;\n    color: #1a1a1a;\n    font-family: inherit;\n    text-align: center;\n  }\n\n  /* --- HEADER --- */\n  .ingredients-header {\n    margin-bottom: 40px;\n  }\n\n  .ingredients-header .subtitle {\n    display: block;\n    font-size: 16px;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    margin-bottom: 10px;\n    color: #4a4a4a;\n  }\n\n  .ingredients-header .title {\n    font-size: 36px;\n    font-weight: 700;\n    margin: 0;\n    line-height: 1.2;\n  }\n\n  /* --- GRILLE (Layout 3 colonnes) --- */\n  .ingredients-grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes égales */\n    gap: 20px;\n    max-width: 1200px;\n    margin: 0 auto; /* Centré, plus de marge bottom excessive */\n    align-items: center;\n  }\n\n  /* Colonnes latérales */\n  .ing-col.side-col {\n    display: flex;\n    flex-direction: column;\n    gap: 30px;\n  }\n\n  /* Style des items ingrédients */\n  .ing-item {\n    display: flex;\n    align-items: center;\n    gap: 15px;\n    background: rgba(255, 255, 255, 0.6); /* Fond blanc léger pour lisibilité */\n    padding: 10px;\n    border-radius: 12px;\n  }\n\n  .ing-item img {\n    width: 60px;\n    height: 60px;\n    object-fit: cover;\n    border-radius: 50%;\n    flex-shrink: 0;\n    border: 1px solid rgba(0,0,0,0.1);\n  }\n\n  .ing-text {\n    text-align: left;\n  }\n\n  .ing-text h3 {\n    font-size: 18px;\n    font-weight: 600;\n    margin: 0 0 5px;\n    font-style: italic;\n  }\n\n  .ing-text p {\n    font-size: 14px;\n    margin: 0;\n    line-height: 1.4;\n    color: #333;\n  }\n\n  /* Image centrale */\n  .ing-col.center-col img.main-product-img {\n    width: 100%;\n    max-width: 350px;\n    height: auto;\n    display: block;\n    margin: 0 auto;\n    border-radius: 20px;\n  }\n\n  /* --- RESPONSIVE MOBILE --- */\n  @media (max-width: 900px) {\n    .ingredients-grid {\n      grid-template-columns: 1fr; /* Une seule colonne */\n      gap: 40px;\n    }\n\n    /* On change l'ordre : Image centrale d'abord, puis ingrédients */\n    .ing-col.center-col {\n      order: -1; \n    }\n\n    .ingredients-header .title {\n      font-size: 28px;\n    }\n\n    .ing-item {\n      background: rgba(255, 255, 255, 0.8);\n    }\n  }\n</style>",
         "background": "",
         "background_gradient": "",
         "text_color": ""
+      }
+    },
+    "faq_NCzUHF": {
+      "type": "faq",
+      "blocks": {
+        "item_PGecqK": {
+          "type": "item",
+          "settings": {
+            "title": "Quelle couvrance offre le fond de teint Evena ?",
+            "content": "<p>Le fond de teint Evena offre une couvrance modulable, légère à moyenne, qui s'adapte sans effort à vos besoins, vous donnant la flexibilité de créer votre look parfait.<br/><br/></p>"
+          }
+        },
+        "item_kaEqWH": {
+          "type": "item",
+          "settings": {
+            "title": "Le produit convient-il aux peaux sensibles ?",
+            "content": "<p>Oui, le fond de teint Evena est formulé pour être doux et sûr pour les peaux sensibles, y compris celles souffrant de vitiligo ou de rosacée. Cependant, nous recommandons toujours de faire un test sur une petite zone d'abord, car les réactions individuelles peuvent varier.<br/><br/></p>"
+          }
+        },
+        "item_wLJPbw": {
+          "type": "item",
+          "settings": {
+            "title": "Le fond de teint Evena convient-il aux peaux avec ridules ou rides ?",
+            "content": "<p><br/>Absolument ! Le fond de teint Evena est une formule légère et hydratante conçue pour hydrater et prendre soin de votre peau, ce qui en fait un excellent choix pour réduire l'apparence des ridules et rides tout en offrant un fini naturel et lumineux.<br/><br/></p>"
+          }
+        },
+        "item_GdXXdY": {
+          "type": "item",
+          "settings": {
+            "title": "Comment le fond de teint Evena adapte-t-il sa couleur ?",
+            "content": "<p>Le fond de teint Evena contient des pigments encapsulés qui commencent blancs. Lors de l'application, ces pigments libèrent de la couleur, permettant au fond de teint de s'adapter aux teintes de peau claires à moyennes.<br/><br/></p>"
+          }
+        },
+        "item_x3QCXX": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce que le fond de teint va s'installer dans mes ridules comme les autres ?",
+            "content": "<p>Non. Contrairement aux fonds de teint classiques qui créent un film rigide qui craque et s'accumule dans les rides, Evena utilise une texture légère enrichie en acide hyaluronique qui fond DANS votre peau au lieu de rester EN SURFACE. Résultat : vos ridules restent souples et le fond de teint glisse sur la peau sans s'y loger.<br/><br/></p>"
+          }
+        },
+        "item_jqVdAi": {
+          "type": "item",
+          "settings": {
+            "title": "Ma peau est très sèche à cause de la ménopause. Est-ce que ce fond de teint va l'aggraver ?",
+            "content": "<p>Au contraire. Evena hydrate votre peau pendant que vous le portez grâce à l'acide hyaluronique, la vitamine E et l'huile de coco. Contrairement aux fonds de teint classiques qui assèchent, celui-ci agit comme un sérum. Votre peau est plus souple le soir qu'au matin.<br/><br/></p>"
+          }
+        },
+        "item_XMHWNp": {
+          "type": "item",
+          "settings": {
+            "title": "J'ai la peau sensible/réactive avec de la rosacée. Est-ce que ça va m'irriter ?",
+            "content": "<p><br/>Non. La formule est enrichie en Ophiopogon Japonicus (racine japonaise) et Bisabolol qui apaisent les rougeurs et calment les irritations. Beaucoup de nos clientes avec rosacée nous disent que c'est le seul fond de teint qui n'aggrave pas leurs rougeurs.<br/><br/></p>"
+          }
+        },
+        "item_4V79JY": {
+          "type": "item",
+          "settings": {
+            "title": "Est-ce que ça va oxyder et virer orange comme tous les autres ?",
+            "content": "<p><br/>Non. Grâce à sa technologie adaptative, Evena s'ajuste à votre carnation exacte au moment de l'application et reste stable toute la journée. Pas de virage orange à 16h.<br/><br/></p>"
+          }
+        }
+      },
+      "block_order": [
+        "item_PGecqK",
+        "item_kaEqWH",
+        "item_wLJPbw",
+        "item_GdXXdY",
+        "item_x3QCXX",
+        "item_jqVdAi",
+        "item_XMHWNp",
+        "item_4V79JY"
+      ],
+      "name": "FAQ",
+      "settings": {
+        "full_width": true,
+        "subheading": "",
+        "title": "FAQ",
+        "content": "",
+        "team_avatar_width": 160,
+        "support_hours": "",
+        "answer_time": "",
+        "button_text": "",
+        "button_url": "",
+        "text_position": "center",
+        "background": "",
+        "background_gradient": "",
+        "text_color": "",
+        "heading_color": "",
+        "heading_gradient": "",
+        "button_background": "",
+        "button_text_color": "",
+        "accordion_background": "",
+        "accordion_text_color": ""
       }
     }
   },
@@ -342,6 +435,7 @@
     "custom_liquid_x7qCT9",
     "images_with_text_scrolling_fxGTtX",
     "custom_liquid_7QJBbx",
-    "custom_liquid_LqazCe"
+    "custom_liquid_LqazCe",
+    "faq_NCzUHF"
   ]
 }
