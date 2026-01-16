@@ -306,6 +306,32 @@
         "heading_color": "",
         "heading_gradient": ""
       }
+    },
+    "custom_liquid_7QJBbx": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<section class=\"silk-benefits-section\">\n  \n  <div class=\"silk-benefits-content\">\n    <h2 class=\"silk-benefits-title\">\n      Un fond de teint qui nourrit pendant qu'il <span class=\"highlight\">camoufle</span>\n    </h2>\n    <div class=\"silk-benefits-description\">\n      <p>Les fonds de teint classiques font juste de la couverture. Comme un pansement sur une plaie : ça cache, mais ça soigne pas.</p>\n      <p>Le nôtre, c'est différent. Il camoufle vos imperfections, oui. Mais en même temps, il hydrate votre peau qui s'assèche à cause de la ménopause.</p>\n      <p>Grâce à sa texture légère, il pénètre au lieu de rester en surface. <strong>Résultat ? Le soir, votre peau est mieux qu'au réveil.</strong></p>\n    </div>\n  </div>\n\n  <div class=\"silk-benefits-media\">\n    <video autoplay loop muted playsinline>\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/0f4fd67e69cb4c7bb598a61045cf1da1.mp4\" type=\"video/mp4\">\n      Votre navigateur ne supporte pas la vidéo.\n    </video>\n  </div>\n\n</section>\n\n<style>\n  /* --- MISE EN PAGE GÉNÉRALE --- */\n  .silk-benefits-section {\n    display: flex;\n    align-items: center; /* Centre verticalement */\n    justify-content: space-between;\n    gap: 60px; /* Espace entre texte et vidéo */\n    padding: 60px 20px;\n    max-width: 1200px;\n    margin: 0 auto;\n    background-color: #fff; /* Fond blanc */\n  }\n\n  /* --- PARTIE TEXTE --- */\n  .silk-benefits-content {\n    flex: 1; /* Prend 50% de l'espace */\n    max-width: 550px;\n  }\n\n  .silk-benefits-title {\n    font-size: 32px;\n    line-height: 1.2;\n    font-weight: 700;\n    margin-bottom: 20px;\n    color: #1a1a1a;\n    font-family: inherit; /* Garde la police de ton thème */\n  }\n\n  /* Effet surligneur gris optionnel (comme sur ta photo) */\n  .silk-benefits-title .highlight {\n    background-color: #e5e7eb; /* Gris clair */\n    padding: 0 5px;\n  }\n\n  .silk-benefits-description p {\n    font-size: 18px;\n    line-height: 1.6;\n    color: #4a4a4a;\n    margin-bottom: 15px;\n    font-family: inherit;\n  }\n\n  .silk-benefits-description strong {\n    color: #000;\n    font-weight: 600;\n  }\n\n  /* --- PARTIE VIDÉO/IMAGE --- */\n  .silk-benefits-media {\n    flex: 1; /* Prend 50% de l'espace */\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .silk-benefits-media video {\n    width: 100%;\n    height: auto;\n    border-radius: 12px; /* Coins arrondis */\n    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Légère ombre pour le relief */\n    display: block;\n  }\n\n  /* --- RESPONSIVE (MOBILE) --- */\n  @media (max-width: 900px) {\n    .silk-benefits-section {\n      flex-direction: column; /* Empile le texte et la vidéo */\n      padding: 40px 20px;\n      gap: 30px;\n      text-align: left;\n    }\n\n    .silk-benefits-content {\n      max-width: 100%;\n    }\n\n    .silk-benefits-title {\n      font-size: 26px;\n    }\n    \n    .silk-benefits-description p {\n      font-size: 16px;\n    }\n  }\n</style>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
+    "custom_liquid_LqazCe": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<p style=\"text-align: center\">Write or copy/paste Liquid code</p>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
     }
   },
   "order": [
@@ -314,6 +340,8 @@
     "custom_liquid_PQaRy7",
     "custom_liquid_Whb9Yr",
     "custom_liquid_x7qCT9",
-    "images_with_text_scrolling_fxGTtX"
+    "images_with_text_scrolling_fxGTtX",
+    "custom_liquid_7QJBbx",
+    "custom_liquid_LqazCe"
   ]
 }
