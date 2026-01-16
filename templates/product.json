@@ -88,6 +88,27 @@
           "settings": {
             "liquid": "<div id='ss-product-videos'></div>"
           }
+        },
+        "collapsible_text_gnfhkY": {
+          "type": "collapsible_text",
+          "settings": {
+            "title": "Ingrédients & Composition",
+            "content": "<p><strong>Ce qui fond dans votre peau, pas sur elle</strong></p><p>Notre formule Evena est pensée pour les peaux matures qui méritent mieux qu'un simple maquillage. Elle nourrit, protège et s'adapte pendant que vous la portez. Résultat : votre peau respire, vos ridules restent souples, et personne ne voit que vous êtes maquillée.</p><p><strong>Les ingrédients qui font la différence :</strong></p><ul><li><strong>Gentiane Scabra</strong> : Adoucit les ridules de l'intérieur</li><li><strong>Acide Hyaluronique</strong> : Gorge votre peau d'hydratation toute la journée</li><li><strong>Vitamine E</strong> : Maintient votre peau souple et résistante</li><li><strong>Racine d'Ophiopogon</strong> : Apaise les rougeurs et répare votre peau</li><li><strong>Protection SPF50</strong> : Bouclier invisible contre le vieillissement</li></ul><p>Liste complète des ingrédients (INCI) : Aqua, Cyclopentasiloxane, Glycerin, CI 77891, C12-15 Alkyl Benzoate, Ethylhexyl Palmitate, Dimethicone, Sorbitol, Propylene Glycol, Caprylic/Capric Triglyceride, Ethylhexyl Methoxycinnamate, Titanium Dioxide, Lauryl PEG-10 Tris(Trimethylsiloxy) Silylethyl Dimethicone, Petrolatum Synthetic Fluorphlogopite, Magnesium Sulfate, Tridecyl Trimellitate, Polyglyceryl-3 Diisostearate, Pentylene Glycol, Tocopherol, Gentiana Scabra Extract, Bisabolol, Opuntia Streptacantha Stem Extract, Trehalose, Sophora Flavescens Root Extract, Sodium Hyaluronate, Ophiopogon Japonicus Root Extract, Hydroxyacetophenone, CI 77492, Magnesium Stearate, Ethoxydiglycol, Quaternium-18 Bentonite, Dimethiconol, Dimethicone Crosspolymer, Mn Sesquioleate, Silica, Stearic Acid, PEG-10 Dimethicone, Polyglyceryl-4 Isostearate, Methicone, BHT.</p>"
+          }
+        },
+        "collapsible_text_VEyJMx": {
+          "type": "collapsible_text",
+          "settings": {
+            "title": "Mode d'emploi",
+            "content": "<p>Déposez quelques gouttes au centre de votre visage. Étalez du bout des doigts, au pinceau ou à l'éponge - comme vous préférez.</p><p>Regardez la magie opérer : le fond de teint change de teinte au contact de votre peau pour s'adapter à VOTRE carnation exacte. Plus vous l'étalez, plus il devient invisible.</p><p>Une première couche légère suffit pour unifier. Besoin de camoufler davantage ? Ajoutez une seconde couche sur les zones concernées. Votre peau respire, vos ridules restent souples, et personne ne voit que vous êtes maquillée</p>"
+          }
+        },
+        "collapsible_text_kwYVze": {
+          "type": "collapsible_text",
+          "settings": {
+            "title": "Livraison et Retours",
+            "content": "<p><strong>📦 EXPÉDITION & LIVRAISON</strong></p><p><strong>Traitement de votre commande</strong><br/><br/>Toutes les commandes sont traitées et expédiées sous 24 à 48 heures ouvrées. Vous recevez une confirmation d'expédition par email avec votre numéro de suivi.</p><p><strong>Délai de livraison</strong><br/><br/>Comptez entre 7 et 11 jours ouvrés à partir de l'expédition, selon votre pays de destination et les services postaux locaux.</p><p><strong>Suivi de commande</strong><br/><br/>Un lien de suivi vous est automatiquement envoyé dès le départ de votre colis pour suivre votre livraison en temps réel.</p><p><strong>🔄 RETOURS & ÉCHANGES</strong></p><p><strong>Politique de satisfaction (30 jours)</strong><br/><br/>Vous disposez de 30 jours calendaires à compter de la réception de votre commande pour retourner ou échanger tout produit qui ne vous convient pas.</p><p><strong>Conditions de retour</strong><br/><br/>Le produit doit être retourné dans son emballage d'origine, non ouvert et non utilisé. Les frais de retour sont à la charge du client.</p>"
+          }
         }
       },
       "block_order": [
@@ -101,7 +122,10 @@
         "buy_buttons",
         "image_qVyMnK",
         "image_tBqHrz",
-        "liquid_M4KcBN"
+        "liquid_M4KcBN",
+        "collapsible_text_gnfhkY",
+        "collapsible_text_VEyJMx",
+        "collapsible_text_kwYVze"
       ],
       "settings": {
         "full_width": true,
@@ -121,31 +145,68 @@
         "input_text_color": ""
       }
     },
-    "related-products": {
-      "type": "related-products",
+    "logo_list_NwHyJ6": {
+      "type": "logo-list",
+      "blocks": {
+        "logo_NnngXg": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/4_83111e8b-e49f-49ae-8c12-6169372184fc.png",
+            "logo_width": 300,
+            "link": ""
+          }
+        },
+        "logo_hUiz8i": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/5_24e49722-ed6a-4ced-8cc0-a66998b78ef2.png",
+            "logo_width": 300,
+            "link": ""
+          }
+        },
+        "logo_NbBJVc": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/image_1_300x300_ab4e7b96-f093-4370-9db2-2d47aca95754.png",
+            "logo_width": 300,
+            "link": ""
+          }
+        },
+        "logo_wNbWFd": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify://shop_images/ELLE_Magazine_Logo_svg.png",
+            "logo_width": 300,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "logo_NnngXg",
+        "logo_hUiz8i",
+        "logo_NbBJVc",
+        "logo_wNbWFd"
+      ],
+      "name": "Logo list",
       "settings": {
-        "recommendations_count": 6,
-        "products": [],
         "full_width": true,
-        "stack_products": true,
-        "show_progress_bar": false,
-        "products_per_row_mobile": "1",
-        "products_per_row_desktop": 3,
-        "subheading": "",
-        "title": "You may also like",
-        "content": "",
+        "stack_mobile": false,
+        "title": "",
+        "content": "<h4>Ils parlent de nous</h4>",
+        "text_alignment": "center",
+        "items_per_row": 4,
         "background": "",
         "background_gradient": "",
         "text_color": "",
         "heading_color": "",
         "heading_gradient": "",
-        "product_card_background": "",
-        "product_card_text_color": ""
+        "logo_item_background": "",
+        "logo_item_border": ""
       }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "logo_list_NwHyJ6"
   ]
 }
