@@ -14,6 +14,13 @@
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
+        "message_cqN8RP": {
+          "type": "message",
+          "settings": {
+            "text": "1 ACHETÉ = 1 OFFERT",
+            "url": ""
+          }
+        },
         "message": {
           "type": "message",
           "settings": {
@@ -37,6 +44,7 @@
         }
       },
       "block_order": [
+        "message_cqN8RP",
         "message",
         "message_VhU9dC",
         "message_yTHGFG"
