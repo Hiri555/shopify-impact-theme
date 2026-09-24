@@ -278,6 +278,7 @@ footer{background:var(--ink);color:#C9C2AC;padding:56px 0 32px;margin-top:64px}
 .r .rv.rv-dark{background:#0f1b2d;aspect-ratio:16/9}
 .r .rv.rv-dark img{object-fit:cover}
 @media(max-width:640px){.r .rv{aspect-ratio:4/3}}
+
 </style>
 
 <div class="freos-lp-body">
@@ -329,7 +330,7 @@ footer{background:var(--ink);color:#C9C2AC;padding:56px 0 32px;margin-top:64px}
   </div>
 
   <!-- REASON 1 · IL POSTO — attaque catégorie + 1er CTA -->
-  <section class="r">
+  <section class="r" id="come-funziona">
     <div class="rv"><img src="{{ 'freos-lp3-02.webp' | asset_url }}" alt="Allo specchio, la mattina: finalmente una spiegazione" loading="lazy"></div>
     <div class="num">1<i>/ 6</i></div>
     <div class="chip">Il posto</div>
@@ -509,7 +510,7 @@ footer{background:var(--ink);color:#C9C2AC;padding:56px 0 32px;margin-top:64px}
   </div>
 
   <!-- OFFER · risk reversal front and center -->
-  <div class="offer">
+  <div class="offer" id="garanzia">
     <p class="k">La prova</p>
     <h3>FREOS · Gel Erbale per l'Alito Fresco</h3>
     <p class="price">29,90 € · 120 g · trenta sere</p>
@@ -664,7 +665,7 @@ footer{background:var(--ink);color:#C9C2AC;padding:56px 0 32px;margin-top:64px}
   <!-- FAQ · première question = promesse du subhead (Cymbiotika move) -->
   <div class="sect">
     <p class="k">Le domande</p>
-    <h3>Le domande <em>che ci fanno davvero.</em></h3>
+    <h3 id="domande">Le domande <em>che ci fanno davvero.</em></h3>
   </div>
 
   <div class="faq">
@@ -725,23 +726,23 @@ footer{background:var(--ink);color:#C9C2AC;padding:56px 0 32px;margin-top:64px}
       </nav>
       <nav class="ft-col">
         <span class="ft-h">Assistenza</span>
-        <a href="#">Contatti</a>
-        <a href="#">Spedizioni e resi</a>
-        <a href="#">Traccia il tuo ordine</a>
-        <a href="#">Rimborso</a>
+        <a href="/policies/contact-information">Contatti</a>
+        <a href="/policies/shipping-policy">Spedizioni e resi</a>
+        <a href="/policies/shipping-policy">Traccia il tuo ordine</a>
+        <a href="/policies/refund-policy">Rimborso</a>
       </nav>
       <nav class="ft-col">
         <span class="ft-h">Legale</span>
-        <a href="#">Privacy</a>
-        <a href="#">Cookie</a>
-        <a href="#">Note legali</a>
-        <a href="#">Termini di vendita</a>
+        <a href="/policies/privacy-policy">Privacy</a>
+        <a href="/policies/privacy-policy">Cookie</a>
+        <a href="/policies/terms-of-service">Note legali</a>
+        <a href="/policies/terms-of-service">Termini di vendita</a>
       </nav>
     </div>
     <div class="ft-bar">
       <p class="ft-legal">Integratore alimentare. Non sostituisce una dieta variata ed equilibrata né uno stile di vita sano. In presenza di dolore, difficoltà a deglutire, febbre, mal d'orecchio o asimmetria delle tonsille, rivolgiti al tuo medico o a un otorinolaringoiatra.</p>
       <div class="ft-foot">
-        <span>© 2026 FREOS · MGS Trade International LLC</span>
+        <span>© 2026 FREOS · DINSO VENTURES LLC</span>
         <div class="ft-pay"><span>Pagamenti sicuri</span></div>
       </div>
     </div>
