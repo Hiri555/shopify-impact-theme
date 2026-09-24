@@ -51,6 +51,9 @@
         {%- when 'paragraph' -%}
           <div class="fr-rt" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
 
+        {%- when 'dek' -%}
+          <p class="dek" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+
         {%- when 'punch' -%}
           <p class="punch" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
 
@@ -291,6 +294,11 @@
       "type": "paragraph",
       "name": "Paragraphe",
       "settings": [{ "type": "richtext", "id": "text", "label": "Texte" }]
+    },
+    {
+      "type": "dek",
+      "name": "Chapeau",
+      "settings": [{ "type": "text", "id": "text", "label": "Texte" }]
     },
     {
       "type": "punch",

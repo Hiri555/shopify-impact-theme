@@ -1,0 +1,262 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "p1_testata": {
+      "type": "freos-editorial",
+      "blocks": {
+        "p1_00_kicker": {
+          "type": "kicker",
+          "settings": {
+            "text": "Salute orale"
+          }
+        },
+        "p1_01_heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Perché torna dopo venti minuti, anche quando l'igiene è impeccabile."
+          }
+        },
+        "p1_02_dek": {
+          "type": "dek",
+          "settings": {
+            "text": "Tre gesti che quasi tutti fanno ogni giorno lasciano fuori la stessa zona della bocca. Non è una questione di quanto ci si lava i denti."
+          }
+        },
+        "p1_03_trust": {
+          "type": "trust",
+          "settings": {
+            "items": "Di [AUTORE] | Lettura: 6 minuti | 5 fonti citate"
+          }
+        }
+      },
+      "block_order": [
+        "p1_00_kicker",
+        "p1_01_heading",
+        "p1_02_dek",
+        "p1_03_trust"
+      ],
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 48,
+        "padding_bottom": 24
+      }
+    },
+    "p2_uno": {
+      "type": "freos-editorial",
+      "blocks": {
+        "p2_00_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>La sequenza è sempre la stessa, e chi la vive la racconta con le stesse parole: ci si lava i denti, per venti minuti va tutto bene, poi qualcosa torna.</p>"
+          }
+        },
+        "p2_01_mirror": {
+          "type": "mirror",
+          "settings": {
+            "quote": "<p>Mi lavo i denti e dopo 20 minuti è di nuovo cattivo, prendo una gomma ma dopo un po' è di nuovo cattivo. Perché e come posso fare?</p>",
+            "source": "Commento pubblico italiano · id 60a1492975d8"
+          }
+        },
+        "p2_02_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>La domanda finale — <em>perché e come posso fare</em> — è la parte interessante. Non è una persona che trascura l'igiene. È una persona che la cura molto, e che non capisce perché non basti.</p>"
+          }
+        },
+        "p2_03_section_header": {
+          "type": "section_header",
+          "settings": {
+            "kicker": "Primo punto",
+            "heading": "I tre gesti abituali lavorano tutti sulla superficie.",
+            "dek": ""
+          }
+        },
+        "p2_04_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Lo spazzolino pulisce i denti e la parte davanti della lingua. Il collutorio risciacqua. La gomma lavora finché la mastichi.</p><p>La zona che conta, però, è più indietro — e più indietro si va, più il riflesso faringeo si chiude. È il motivo per cui quasi nessuno pulisce davvero quella parte: non perché non voglia, ma perché il corpo si oppone.</p>"
+          }
+        },
+        "p2_05_callout": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>In uno studio su 123 persone, anche una gomma <strong>senza principi attivi</strong> abbassava i composti solforati alla fine della masticazione. Un'ora dopo, l'effetto era quasi sparito.</p><p><em>Porciani PF, Grandini S. · J Clin Dent 2012 · PMID 23210417</em></p>"
+          }
+        },
+        "p2_06_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Vale la pena rileggerlo: <strong>senza principi attivi.</strong> Non era il mentolo a lavorare. Era il fatto di masticare — cioè di produrre saliva.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "p2_00_paragraph",
+        "p2_01_mirror",
+        "p2_02_paragraph",
+        "p2_03_section_header",
+        "p2_04_paragraph",
+        "p2_05_callout",
+        "p2_06_paragraph"
+      ],
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 8,
+        "padding_bottom": 40
+      }
+    },
+    "p3_cta": {
+      "type": "freos-editorial",
+      "blocks": {
+        "p3_00_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Da dove arriva, nel tuo caso?</strong> Le origini non sono tutte uguali, e non si trattano allo stesso modo. Due minuti di domande, nessun acquisto.</p>"
+          }
+        },
+        "p3_01_cta": {
+          "type": "cta",
+          "settings": {
+            "label": "Fai il quiz",
+            "pill": "2 minuti",
+            "url": "[QUIZ_URL]",
+            "reassurance": "Gratuito. Nessuna carta richiesta."
+          }
+        }
+      },
+      "block_order": [
+        "p3_00_paragraph",
+        "p3_01_cta"
+      ],
+      "settings": {
+        "surface": "softer",
+        "width": "narrow",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "p4_due_tre": {
+      "type": "freos-editorial",
+      "blocks": {
+        "p4_00_section_header": {
+          "type": "section_header",
+          "settings": {
+            "kicker": "Secondo punto",
+            "heading": "Di notte la saliva rallenta, e la bocca smette di difendersi.",
+            "dek": ""
+          }
+        },
+        "p4_01_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Di giorno la saliva scorre di continuo: passa, risciacqua, rinnova. È la manutenzione di fondo della bocca, e funziona senza che nessuno ci pensi.</p><p>Durante il sonno la sua produzione si riduce fin quasi ad azzerarsi.</p><p><em>Dawes C, Wong DTW · J Dent Res 2019 · PMID 30782091</em></p><p>Le ore in cui la bocca è meno protetta sono quindi quelle in cui nessuno fa niente. È una finestra lunga, e cade sempre nello stesso momento.</p>"
+          }
+        },
+        "p4_02_punch": {
+          "type": "punch",
+          "settings": {
+            "text": "Se c'è un momento che conta, non è la mattina. È la sera, subito prima."
+          }
+        },
+        "p4_03_section_header": {
+          "type": "section_header",
+          "settings": {
+            "kicker": "Terzo punto",
+            "heading": "Nella grande maggioranza dei casi, l'origine è in bocca.",
+            "dek": ""
+          }
+        },
+        "p4_04_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>È una convinzione diffusa che la causa sia lo stomaco. La letteratura dice un'altra cosa: circa otto o nove casi su dieci hanno origine nel cavo orale, e le cause esterne alla bocca riguardano all'incirca il 5-10%.</p><p><em>Quirynen M et al. · J Clin Periodontol 2009 · PMID 19811581 · Tangerman A, Winkel EG · J Breath Res 2010 · PMID 21386205</em></p>"
+          }
+        },
+        "p4_05_note": {
+          "type": "note",
+          "settings": {
+            "text": "<p>Questo articolo non sostituisce un parere medico. In presenza di reflusso, dolore, sanguinamento gengivale o sintomi persistenti, la persona giusta è il medico, il dentista o l'otorino.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "p4_00_section_header",
+        "p4_01_paragraph",
+        "p4_02_punch",
+        "p4_03_section_header",
+        "p4_04_paragraph",
+        "p4_05_note"
+      ],
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "p5_chiusura": {
+      "type": "freos-editorial",
+      "blocks": {
+        "p5_00_section_header": {
+          "type": "section_header",
+          "settings": {
+            "kicker": "Dove porta tutto questo",
+            "heading": "Il passo successivo",
+            "dek": ""
+          }
+        },
+        "p5_01_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>I tre punti messi insieme dicono una cosa sola: il problema non è la quantità di igiene, ma la zona che i gesti abituali non raggiungono e il momento in cui la bocca è più scoperta.</p><p>Le origini però non sono tutte uguali. Prima di cambiare qualcosa, vale la pena capire quale delle situazioni descritte assomiglia di più alla propria.</p>"
+          }
+        },
+        "p5_02_cta": {
+          "type": "cta",
+          "settings": {
+            "label": "Scopri da dove arriva",
+            "pill": "2 minuti",
+            "url": "[QUIZ_URL]",
+            "reassurance": "Gratuito. Nessun acquisto, nessuna carta richiesta."
+          }
+        },
+        "p5_03_sources": {
+          "type": "sources",
+          "settings": {
+            "title": "Fonti",
+            "items": "Porciani PF, Grandini S. J Clin Dent, 2012. PMID 23210417\nDawes C, Wong DTW. J Dent Res, 2019. PMID 30782091\nQuirynen M et al. J Clin Periodontol, 2009. PMID 19811581\nTangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205\nLee YH, Hong JY. Front Oral Health, 2023."
+          }
+        }
+      },
+      "block_order": [
+        "p5_00_section_header",
+        "p5_01_paragraph",
+        "p5_02_cta",
+        "p5_03_sources"
+      ],
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 32,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "p1_testata",
+    "p2_uno",
+    "p3_cta",
+    "p4_due_tre",
+    "p5_chiusura"
+  ]
+}
