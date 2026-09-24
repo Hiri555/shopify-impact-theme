@@ -3,9 +3,14 @@
   FREOS · PDP 05 — FREOS · 05 Numeri
   ----------------------------------------------------------------------------
   Grands chiffres. Chacun porte sa source sous le libelle : un chiffre sans
-  source est une affirmation, un chiffre source est une preuve. L'animation de
-  comptage respecte prefers-reduced-motion et affiche la valeur finale si le
-  JS ne tourne pas -- le chiffre est dans le HTML, pas cree par le script.
+  source est une affirmation, un chiffre source est une preuve.
+
+  PAS de compteur anime, deliberement. Une version precedente comptait de 0
+  vers la valeur ; dans un contexte de rendu bride elle est restee figee en
+  chemin et affichait « 23 % » a la place de « 90 % » -- un chiffre FAUX,
+  juste au-dessus de sa citation PMID. Un chiffre source ne peut pas se
+  permettre d'etre approximatif une seule seconde. La valeur est dans le HTML
+  et rien ne la reecrit.
   Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur
   dans ce fichier. Genere par build_pdp_sections.py -- modifier le generateur,
   pas ce fichier, sinon la prochaine generation ecrase la retouche.
@@ -34,7 +39,7 @@
     <div class="fr-stats">
       {%- for block in section.blocks -%}
         <div class="fr-stat" {{ block.shopify_attributes }}>
-          <p class="fr-stat-v" data-to="{{ block.settings.value }}">
+          <p class="fr-stat-v">
             <span class="fr-stat-n">{{ block.settings.value }}</span>
             {%- if block.settings.unit != blank -%}
               <span class="fr-stat-u">{{ block.settings.unit }}</span>
@@ -52,39 +57,7 @@
 
   </div>
 </div>
-<script>
-(function(){
-  var sec = document.getElementById('shopify-section-{{ section.id }}');
-  if(!sec) return;
-  var reduce = window.matchMedia('(prefers-reduced-motion:reduce)').matches;
-  if(reduce || !('IntersectionObserver' in window)) return;   /* la valeur est deja dans le HTML */
 
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(e){
-      if(!e.isIntersecting) return;
-      io.unobserve(e.target);
-      var span = e.target.querySelector('.fr-stat-n');
-      var raw  = e.target.dataset.to || '';
-      var num  = parseFloat(raw.replace(',', '.').replace(/[^0-9.\-]/g, ''));
-      if(isNaN(num)) return;
-      var dec = (raw.split(/[.,]/)[1] || '').length;
-      var sep = raw.indexOf(',') > -1 ? ',' : '.';
-      var t0 = null, dur = 900;
-      function step(t){
-        if(!t0) t0 = t;
-        var k = Math.min(1, (t - t0)/dur);
-        var v = (num * (1 - Math.pow(1 - k, 3))).toFixed(dec);
-        span.textContent = dec ? v.replace('.', sep) : v;
-        if(k < 1) requestAnimationFrame(step);
-        else span.textContent = raw;
-      }
-      requestAnimationFrame(step);
-    });
-  }, {threshold: .4});
-
-  sec.querySelectorAll('.fr-stat-v').forEach(function(x){ io.observe(x); });
-})();
-</script>
 {% schema %}
 {
   "name": "FREOS · 05 Numeri",
