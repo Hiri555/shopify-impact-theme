@@ -61,8 +61,8 @@
                 </span>
                 {{ block.settings.label }}
               </th>
-              <td data-l="{{ section.settings.col1 | escape }}">{{ block.settings.c1 }}</td>
-              <td data-l="{{ section.settings.col2 | escape }}">{{ block.settings.c2 }}</td>
+              <td{% if section.settings.col1 != blank %} data-l="{{ section.settings.col1 | escape }}"{% endif %}>{{ block.settings.c1 }}</td>
+              <td{% if section.settings.col2 != blank %} data-l="{{ section.settings.col2 | escape }}"{% endif %}>{{ block.settings.c2 }}</td>
             </tr>
           {%- endfor -%}
         </tbody>
