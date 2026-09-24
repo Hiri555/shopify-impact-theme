@@ -758,3 +758,18 @@
   .fr .fr-hhero-h{ font-size:32px; }
 }
 @media (max-width:420px){ .fr .fr-hhero-h{ font-size:28px; } }
+
+/* --------------------------------------------------------------------------
+   CORRECTIF GRILLE — min-width:auto
+   Un enfant de grid refuse par defaut de descendre sous sa largeur mini de
+   contenu. La bande de vignettes (8 x 68px) forcait donc la colonne a 600px
+   et faisait deborder la PDP a 390px. min-width:0 rend la colonne compressible
+   et laisse la bande defiler dans son propre overflow.
+   -------------------------------------------------------------------------- */
+.fr .fr-hero-grid > *,
+.fr .fr-hhero-grid > *,
+.fr .fr-doors > *,
+.fr .fr-reviews-grid > *,
+.fr .fr-bar > *{ min-width:0; }
+.fr .fr-gal-thumbs{ min-width:0; max-width:100%; }
+.fr .fr-gal-main{ max-width:100%; }
