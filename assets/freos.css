@@ -590,8 +590,8 @@
   margin:0 0 12px; line-height:1.35; }
 .fr .fr-reco-opts{ display:flex; flex-wrap:wrap; gap:8px; }
 .fr .fr-reco-o{ font:500 14px Inter,sans-serif; color:var(--ink); background:#fff;
-  border:1px solid var(--rule2); border-radius:2px; padding:9px 14px; cursor:pointer;
-  transition:border-color .15s, background .15s; }
+  border:1px solid var(--rule2); border-radius:2px; padding:11px 14px; cursor:pointer;
+  min-height:44px; transition:border-color .15s, background .15s; }
 .fr .fr-reco-o:hover{ border-color:var(--acc); }
 .fr .fr-reco-o.is-on{ background:var(--acc); color:var(--soft); border-color:var(--acc); }
 .fr .fr-reco-a{ font-size:14px; line-height:1.55; color:var(--ink2); margin:12px 0 0;
@@ -976,7 +976,7 @@
 .fr .fr-cmp-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
 .fr .fr-cmp{ width:100%; min-width:460px; border-collapse:collapse; text-align:left; }
 .fr .fr-cmp th, .fr .fr-cmp td{ padding:14px; border-bottom:1px solid var(--rule);
-  font-size:14.5px; line-height:1.45; vertical-align:top; }
+  font-size:15px; line-height:1.45; vertical-align:top; }
 .fr .fr-cmp thead th{ font:600 11px/1.3 Inter,sans-serif; letter-spacing:.1em;
   text-transform:uppercase; color:var(--ink3); border-bottom-color:var(--rule2); padding-bottom:10px; }
 .fr .fr-cmp tbody th{ font-weight:600; color:var(--ink); white-space:nowrap; }
@@ -993,7 +993,7 @@
 .fr .fr-reviews-src{ font-size:12px; color:var(--ink3); }
 .fr .fr-review-t{ font-family:Fraunces,serif; font-weight:500; font-size:17px; line-height:1.3;
   color:var(--ink); margin:10px 0 7px; }
-.fr .fr-review-b{ font-size:14.5px; line-height:1.6; color:var(--ink2); margin:0 0 14px; }
+.fr .fr-review-b{ font-size:15px; line-height:1.6; color:var(--ink2); margin:0 0 14px; }
 .fr .fr-review-f{ display:flex; align-items:center; flex-wrap:wrap; gap:8px;
   padding-top:12px; border-top:1px solid var(--rule); }
 .fr .fr-review-av{ flex:0 0 28px; width:28px; height:28px; border-radius:50%;
