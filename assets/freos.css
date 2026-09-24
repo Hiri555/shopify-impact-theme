@@ -936,11 +936,13 @@
    donnee ne peut rester cachee si un script ne tourne pas. Une version
    precedente partait de zero et attendait IntersectionObserver -- qui ne s'est
    jamais declenche dans un contexte d'iframe, laissant les barres vides. */
-@media (prefers-reduced-motion:no-preference){
-  .fr .fr-bars .fr-bar-t i{ transform-origin:left center;
-    animation:fr-bar-grow .8s cubic-bezier(.22,1,.36,1) both; }
-}
-@keyframes fr-bar-grow{ from{ transform:scaleX(0) } to{ transform:scaleX(1) } }
+/* PAS d'animation d'entree sur les barres, deliberement.
+   Deux tentatives l'ont prouve dangereux : une largeur qui part de zero et
+   attend IntersectionObserver, puis un scaleX(0) avec fill:both, sont toutes
+   deux restees bloquees a leur image de depart dans un contexte de rendu
+   bride -- barres vides, donnee invisible. Une barre porte une information ;
+   une decoration qui peut l'effacer ne vaut pas son prix. La largeur est un
+   style inline, elle ne depend d'aucun script ni d'aucune animation. */
 
 /* ---------------------------------------------------------- 06 INGREDIENTI */
 .fr .fr-ing-n{ display:block; font-family:Fraunces,serif; font-weight:500; font-size:15px;
