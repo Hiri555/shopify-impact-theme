@@ -928,8 +928,11 @@
 /* La barre part de zero et se remplit quand la section entre dans le champ.
    Sans JS la classe is-in n'arrive jamais : on donne donc la largeur finale
    par defaut et on ne met a zero que pendant l'attente explicite. */
-.fr .fr-bars .fr-bar-v i{ transition:width .8s cubic-bezier(.22,1,.36,1); }
-.fr .fr-bars.is-wait .fr-bar-v i{ width:0; }
+/* Le markup editorial pose une largeur en style inline, qui gagne sur cette
+   regle ; le markup modulaire pose --w et c'est cette regle qui l'applique.
+   Les deux cohabitent sans se marcher dessus. */
+.fr .fr-bars .fr-bar-t i{ width:var(--w,100%); transition:width .8s cubic-bezier(.22,1,.36,1); }
+.fr .fr-bars.is-wait .fr-bar-t i{ width:0; }
 
 /* ---------------------------------------------------------- 06 INGREDIENTI */
 .fr .fr-ing-n{ display:block; font-family:Fraunces,serif; font-weight:500; font-size:15px;

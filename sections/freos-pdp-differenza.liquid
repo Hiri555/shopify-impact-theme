@@ -37,10 +37,10 @@
     {%- if section.blocks.size > 0 -%}
       <div class="fr-bars">
         {%- for block in section.blocks -%}
-          <div class="fr-bar{% if block.settings.accent %} is-acc{% endif %}" {{ block.shopify_attributes }}>
+          <div class="fr-bar{% if block.settings.accent %} is-hi{% endif %}" {{ block.shopify_attributes }}>
             <span class="fr-bar-l">{{ block.settings.label }}</span>
-            <span class="fr-bar-t">{{ block.settings.meta }}</span>
-            <span class="fr-bar-v"><i style="--w:{{ block.settings.value }}%"></i></span>
+            <span class="fr-bar-v">{{ block.settings.meta }}</span>
+            <span class="fr-bar-t"><i style="--w:{{ block.settings.value }}%"></i></span>
           </div>
         {%- endfor -%}
       </div>
@@ -58,8 +58,11 @@
   if(!sec || !('IntersectionObserver' in window)) return;
   if(window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
   var bars = sec.querySelector('.fr-bars'); if(!bars) return;
+  /* is-wait met les barres a zero ; sans JS la classe n'arrive jamais et
+     elles sont deja a leur largeur. On ne cache jamais une donnee. */
+  bars.classList.add('is-wait');
   var io = new IntersectionObserver(function(e){
-    if(e[0].isIntersecting){ bars.classList.add('is-in'); io.disconnect(); }
+    if(e[0].isIntersecting){ bars.classList.remove('is-wait'); io.disconnect(); }
   }, {threshold:.3});
   io.observe(bars);
 })();
