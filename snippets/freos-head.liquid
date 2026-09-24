@@ -1,0 +1,23 @@
+{%- comment -%}
+  ------------------------------------------------------------------------------
+  FREOS · en-tete de marque
+  Charge Fraunces (absent de la bibliotheque de polices Shopify, donc servi par
+  Google Fonts) puis le design system. Inter vient de Shopify, via le reglage
+  text_font : on ne le charge pas deux fois.
+
+  Rendu APRES theme.css pour gagner la cascade sur les variables d'Impact.
+  ------------------------------------------------------------------------------
+{%- endcomment -%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&display=swap"
+  media="print"
+  onload="this.media='all'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500;1,9..144,600&display=swap">
+</noscript>
+
+{{ 'freos.css' | asset_url | stylesheet_tag }}
