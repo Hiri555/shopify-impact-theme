@@ -110,9 +110,13 @@
   var watch = document.querySelector(bar.dataset.watch || '.fr-atc-wrap');
   if(!watch){ bar.classList.add('is-on'); return; }   /* pas de cible : on montre */
 
-  var footer = document.querySelector('.fr-footer, .footer');
+  /* Le pied de page est rendu APRES cette section : le chercher maintenant
+     renverrait null et la barre resterait affichee par-dessus le footer.
+     On le resout donc a la premiere synchro utile, puis on le garde. */
+  var footer = null;
 
   bar.frSync = function(){
+    if(!footer) footer = document.querySelector('.fr-footer, .footer');
     var passe = watch.getBoundingClientRect().bottom < 0;
     var finPage = footer ? footer.getBoundingClientRect().top < window.innerHeight : false;
     bar.classList.toggle('is-on', passe && !finPage);
