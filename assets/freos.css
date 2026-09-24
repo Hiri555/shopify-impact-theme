@@ -1077,3 +1077,24 @@
   .fr .fr-ben-i{ width:36px; height:36px; }
   .fr .fr-ico{ width:19px; height:19px; }
 }
+
+/* --------------------------------------------------- 09 CONFRONTO, MOBILE
+   Sous 640 px le tableau cesse d'etre un tableau. Trois colonnes sur 390 px
+   obligent a balayer lateralement pour lire la fin de chaque ligne : chaque
+   ligne devient donc un bloc empile, et l'intitule de colonne revient en
+   etiquette devant sa valeur (attribut data-l). Le conteneur garde son
+   overflow-x, mais il n'a plus rien a faire defiler. */
+@media (max-width:640px){
+  .fr .fr-cmp{ min-width:0; display:block; }
+  .fr .fr-cmp thead{ position:absolute; width:1px; height:1px; overflow:hidden;
+    clip:rect(0 0 0 0); white-space:nowrap; }
+  .fr .fr-cmp tbody, .fr .fr-cmp tr{ display:block; }
+  .fr .fr-cmp tr{ padding:14px 0; border-bottom:1px solid var(--rule); }
+  .fr .fr-cmp tr:last-child{ border-bottom:0; }
+  .fr .fr-cmp th, .fr .fr-cmp td{ display:block; border-bottom:0; padding:0; }
+  .fr .fr-cmp tbody th{ white-space:normal; font-size:16px; margin-bottom:7px; }
+  .fr .fr-cmp td{ padding-left:26px; margin-top:5px; }
+  .fr .fr-cmp td::before{ content:attr(data-l) " \00b7 "; color:var(--ink3);
+    font-size:12px; letter-spacing:.06em; text-transform:uppercase; }
+  .fr .fr-cmp tr.is-acc{ padding-left:12px; padding-right:12px; border-radius:2px; }
+}

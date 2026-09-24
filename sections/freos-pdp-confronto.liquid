@@ -5,6 +5,11 @@
   Tableau comparatif. La ligne mise en avant se coche, elle ne se marque
   plus par une etoile en debut de texte -- une convention invisible qui se
   perdait au premier copier-coller.
+
+  Sous 640 px le tableau cesse d'etre un tableau : chaque ligne devient un
+  bloc empile, l'intitule de colonne repris en etiquette par cellule (data-l).
+  Un tableau a trois colonnes sur 390 px se balaye lateralement, et 90 % du
+  trafic est mobile.
   Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur
   dans ce fichier. Genere par build_pdp_sections.py -- modifier le generateur,
   pas ce fichier, sinon la prochaine generation ecrase la retouche.
@@ -56,8 +61,8 @@
                 </span>
                 {{ block.settings.label }}
               </th>
-              <td>{{ block.settings.c1 }}</td>
-              <td>{{ block.settings.c2 }}</td>
+              <td data-l="{{ section.settings.col1 | escape }}">{{ block.settings.c1 }}</td>
+              <td data-l="{{ section.settings.col2 | escape }}">{{ block.settings.c2 }}</td>
             </tr>
           {%- endfor -%}
         </tbody>
