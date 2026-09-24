@@ -1,0 +1,79 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · BOUTON D'ACHAT
+  ----------------------------------------------------------------------------
+  Reproduit a la lettre le contrat de snippets/buy-buttons.liquid d'Impact,
+  parce que c'est de ce contrat que depend le tracking -- pas du nom du
+  fichier. Ce qui doit tenir, et qui est verifie sur le rendu :
+
+    1. <form is="product-form" id="..."> ........ ProductForm._onSubmit ne
+       s'attache qu'a un formulaire portant is="product-form".
+    2. <input type="hidden" name="id"> dedans ... lu comme this.id.value pour
+       construire le POST vers /cart/add.js.
+    3. <buy-buttons form="..."> autour ......... fait document.forms[form] ;
+       si l'id ne resout pas, l'element cesse de reagir EN SILENCE.
+    4. <button type="submit"> descendant ....... cible par
+       querySelector('button[type="submit"]').
+    5. aucun addEventListener('submit') a nous . c'est _onSubmit qui POST et
+       qui emet variant:add / cart:change.
+
+  Pourquoi pas le snippet d'Impact tel quel : il tire son libelle de la
+  traduction product.general.add_to_cart_button et non d'un reglage, donc le
+  texte du bouton ne serait pas editable. Ici `label` est un parametre, et
+  s'il est vide on retombe sur la traduction -- qui vaut deja
+  « Aggiungi al carrello » dans locales/it.json.
+
+  L'attribut template="" est obligatoire : _onVariantChanged y lit
+  .includes('pre-order') et leverait une TypeError s'il manquait.
+
+  is="custom-button" enveloppe le contenu dans un <div> a la construction et
+  donne l'animation de chargement a la soumission. Le CSS cible donc
+  .fr-atc > div, pas .fr-atc directement.
+
+  ********************************************
+  Parametres
+  ********************************************
+  * product   : le produit (obligatoire)
+  * form_id   : l'id du formulaire, partage avec la barre collante (obligatoire)
+  * label     : libelle du bouton ; vide = traduction du theme
+  * soldout   : libelle en rupture ; vide = traduction du theme
+  * quantity  : quantite ajoutee, defaut 1
+  ============================================================================
+{%- endcomment -%}
+
+{%- liquid
+  assign fr_variant = product.selected_or_first_available_variant
+
+  comment
+    Pas de `x | default: 'cle' | t` : le filtre t s'appliquerait AUSSI a la
+    valeur fournie et renverrait « translation missing ». On teste blank.
+  endcomment
+  if product.available
+    assign fr_off = false
+    assign fr_label = label
+    if fr_label == blank
+      assign fr_label = 'product.general.add_to_cart_button' | t
+    endif
+  else
+    assign fr_off = true
+    assign fr_label = soldout
+    if fr_label == blank
+      assign fr_label = 'product.general.sold_out_button' | t
+    endif
+  endif
+-%}
+
+{%- form 'product', product, is: 'product-form', id: form_id, class: 'fr-atc-form' -%}
+  <input type="hidden" name="id" value="{{ fr_variant.id }}">
+  <input type="hidden" name="quantity" value="{{ quantity | default: 1 }}">
+
+  <buy-buttons class="buy-buttons fr-atc-bb"
+               template="{{ product.template_suffix | escape }}"
+               form="{{ form_id }}">
+    <button type="submit"
+            is="custom-button"
+            class="button fr-atc{% if fr_off %} fr-atc--off{% endif %}"
+            form="{{ form_id }}"
+            {% if fr_off %}disabled{% endif %}>{{ fr_label }}</button>
+  </buy-buttons>
+{%- endform -%}

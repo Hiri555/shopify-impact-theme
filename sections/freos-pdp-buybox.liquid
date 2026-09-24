@@ -1,0 +1,370 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · PDP 02 — BUYBOX (galerie + achat)
+  ----------------------------------------------------------------------------
+  La seule section de la page qui emet le formulaire produit. La barre
+  collante (section 15) ne fait que pointer dessus par l'attribut HTML
+  form="", exactement comme product-quick-add le fait chez Impact.
+
+  L'identifiant du formulaire doit donc etre calculable a l'identique dans les
+  deux sections : il ne peut PAS contenir section.id, qui differe. D'ou le
+  freos-pdp-form-<produit>-<variante> ci-dessous, reproduit tel quel en 15.
+
+  Tout est bloc : chaque image de la galerie, chaque element de la buybox.
+  Les blocs `slide` partent dans la colonne galerie, tous les autres dans la
+  colonne achat, quel que soit leur ordre d'entremelement dans le customizer.
+  ============================================================================
+{%- endcomment -%}
+
+{%- liquid
+  assign p = product
+  capture form_id
+    echo 'freos-pdp-form-'
+    echo p.id
+    echo '-'
+    echo p.selected_or_first_available_variant.id
+  endcapture
+
+  assign slides = section.blocks | where: 'type', 'slide'
+-%}
+
+<div class="fr fr-hero fr-bx fr-surface--{{ section.settings.surface }}"
+     style="--fr-pt:{{ section.settings.padding_top }}px;--fr-pb:{{ section.settings.padding_bottom }}px">
+  <div class="wide">
+    <div class="fr-hero-grid">
+
+      {%- comment -%}------------------------------------------ GALERIE ---{%- endcomment -%}
+      <div class="fr-gal">
+        {%- if section.settings.flag != blank -%}
+          <span class="fr-gal-flag">{{ section.settings.flag }}</span>
+        {%- endif -%}
+
+        <div class="fr-gal-main">
+          {%- for block in slides -%}
+            {%- liquid
+              assign img = block.settings.image
+              assign fallback = block.settings.file | strip
+            -%}
+            <div class="fr-gal-slide{% if forloop.first %} is-on{% endif %}" data-i="{{ forloop.index0 }}">
+              {%- if img != blank -%}
+                {%- if forloop.first -%}{%- assign ld = 'eager' -%}{%- else -%}{%- assign ld = 'lazy' -%}{%- endif -%}
+                {%- assign slide_alt = block.settings.alt | default: p.title -%}
+                {{ img | image_url: width: 1400 | image_tag:
+                     widths: '480,760,1000,1400',
+                     sizes: '(max-width:860px) 100vw, 46vw',
+                     alt: slide_alt,
+                     loading: ld }}
+              {%- elsif fallback != blank -%}
+                <img src="{{ fallback | asset_url }}"
+                     alt="{{ block.settings.alt | default: p.title | escape }}"
+                     width="1400" height="1400"
+                     {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
+              {%- endif -%}
+            </div>
+          {%- endfor -%}
+        </div>
+
+        {%- if slides.size > 1 -%}
+          <div class="fr-gal-thumbs" role="tablist" aria-label="{{ section.settings.thumbs_label | escape }}">
+            {%- for block in slides -%}
+              {%- liquid
+                assign img = block.settings.image
+                assign fallback = block.settings.file | strip
+              -%}
+              <button class="fr-gal-thumb{% if forloop.first %} is-on{% endif %}" type="button"
+                      role="tab" data-i="{{ forloop.index0 }}"
+                      aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                      aria-label="{{ forloop.index }}">
+                {%- if img != blank -%}
+                  {{ img | image_url: width: 200 | image_tag: widths: '100,200', sizes: '80px', alt: '', loading: 'lazy' }}
+                {%- elsif fallback != blank -%}
+                  <img src="{{ fallback | asset_url }}" alt="" width="160" height="160" loading="lazy">
+                {%- endif -%}
+              </button>
+            {%- endfor -%}
+          </div>
+        {%- endif -%}
+      </div>
+
+      {%- comment -%}------------------------------------------ BUYBOX ---{%- endcomment -%}
+      <div class="fr-buy">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+
+            {%- when 'eyebrow' -%}
+              <p class="chip fr-bx-eyebrow" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+
+            {%- when 'title' -%}
+              <h1 class="fr-buy-title" {{ block.shopify_attributes }}>{{ block.settings.text | default: p.title }}</h1>
+
+            {%- when 'subtitle' -%}
+              <p class="fr-buy-sub" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+
+            {%- when 'rating' -%}
+              <div class="fr-rate" {{ block.shopify_attributes }}>
+                <span class="fr-rate-stars" aria-hidden="true">
+                  {%- for i in (1..5) -%}
+                    <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.6l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.4 4.2 13.4l.7-4.3-3.1-3 4.3-.6z"/></svg>
+                  {%- endfor -%}
+                </span>
+                <span class="fr-rate-n">{{ block.settings.score }}</span>
+                <span class="fr-rate-c">{{ block.settings.count }}</span>
+              </div>
+
+            {%- when 'pills' -%}
+              <div class="fr-pills" {{ block.shopify_attributes }}>
+                {%- assign items = block.settings.items | split: '|' -%}
+                {%- for it in items -%}<span class="fr-pill">{{ it | strip }}</span>{%- endfor -%}
+              </div>
+
+            {%- when 'price' -%}
+              <div class="fr-price" {{ block.shopify_attributes }}>
+                {%- if p -%}
+                  <span class="fr-price-v">{{ p.price | money }}</span>
+                  {%- if p.compare_at_price > p.price -%}
+                    <s class="fr-price-was">{{ p.compare_at_price | money }}</s>
+                    {%- if block.settings.save_label != blank -%}
+                      {%- assign pct = p.compare_at_price | minus: p.price | times: 100 | divided_by: p.compare_at_price -%}
+                      <span class="fr-price-save">{{ block.settings.save_label | replace: '[%]', pct }}</span>
+                    {%- endif -%}
+                  {%- endif -%}
+                {%- else -%}
+                  <span class="fr-price-v">{{ block.settings.fallback }}</span>
+                {%- endif -%}
+                {%- if block.settings.note != blank -%}
+                  <span class="fr-price-n">{{ block.settings.note }}</span>
+                {%- endif -%}
+              </div>
+
+            {%- when 'benefits' -%}
+              <ul class="fr-benefits" {{ block.shopify_attributes }}>
+                {%- assign items = block.settings.items | newline_to_br | split: '<br />' -%}
+                {%- for it in items -%}
+                  {%- assign line = it | strip -%}
+                  {%- if line != blank -%}<li>{{ line }}</li>{%- endif -%}
+                {%- endfor -%}
+              </ul>
+
+            {%- when 'recognition' -%}
+              <div class="fr-reco" {{ block.shopify_attributes }}>
+                <p class="fr-reco-q">{{ block.settings.question }}</p>
+                <div class="fr-reco-opts">
+                  {%- assign items = block.settings.options | newline_to_br | split: '<br />' -%}
+                  {%- for it in items -%}
+                    {%- assign line = it | strip -%}
+                    {%- if line != blank -%}
+                      <button type="button" class="fr-reco-o">{{ line }}</button>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+                <p class="fr-reco-a" hidden>{{ block.settings.answer }}</p>
+              </div>
+
+            {%- when 'quantity' -%}
+              <div class="fr-qty" data-form="{{ form_id }}" {{ block.shopify_attributes }}>
+                {%- if block.settings.label != blank -%}
+                  <p class="fr-qty-l">{{ block.settings.label }}</p>
+                {%- endif -%}
+                <div class="fr-qty-opts">
+                  {%- assign rows = block.settings.rows | newline_to_br | split: '<br />' -%}
+                  {%- for r in rows -%}
+                    {%- assign c = r | strip | split: '|' -%}
+                    {%- if c.size >= 2 -%}
+                      <button type="button" class="fr-qty-o{% if forloop.first %} is-on{% endif %}"
+                              data-q="{{ c[0] | strip }}">
+                        <b>{{ c[1] | strip }}</b>
+                        {%- if c[2] -%}<span>{{ c[2] | strip }}</span>{%- endif -%}
+                      </button>
+                    {%- endif -%}
+                  {%- endfor -%}
+                </div>
+              </div>
+
+            {%- when 'scarcity' -%}
+              <p class="fr-scarce" {{ block.shopify_attributes }}>
+                <span class="fr-scarce-dot" aria-hidden="true"></span>{{ block.settings.text }}
+              </p>
+
+            {%- when 'buy_buttons' -%}
+              <div class="fr-atc-wrap" {{ block.shopify_attributes }}>
+                {%- render 'freos-buy-buttons',
+                      product: p,
+                      form_id: form_id,
+                      label: block.settings.label,
+                      soldout: block.settings.soldout -%}
+                {%- if block.settings.under != blank -%}
+                  <p class="fr-atc-under">{{ block.settings.under }}</p>
+                {%- endif -%}
+              </div>
+
+            {%- when 'payments' -%}
+              <div class="fr-pay" {{ block.shopify_attributes }}>
+                {%- if block.settings.label != blank -%}<span class="fr-pay-l">{{ block.settings.label }}</span>{%- endif -%}
+                <span class="fr-pay-i">
+                  {%- assign marks = block.settings.marks | split: ',' -%}
+                  {%- for m in marks -%}
+                    {%- assign mark = m | strip | downcase -%}
+                    {%- if mark != blank -%}{{ mark | payment_type_svg_tag: class: 'fr-pay-svg' }}{%- endif -%}
+                  {%- endfor -%}
+                </span>
+              </div>
+
+            {%- when 'badges' -%}
+              <div class="fr-tbadges" {{ block.shopify_attributes }}>
+                {%- assign items = block.settings.items | newline_to_br | split: '<br />' -%}
+                {%- for it in items -%}
+                  {%- assign c = it | strip | split: '|' -%}
+                  {%- if c.size >= 1 and c[0] != blank -%}
+                    <div class="fr-tbadge">
+                      <b>{{ c[0] | strip }}</b>
+                      {%- if c[1] -%}<span>{{ c[1] | strip }}</span>{%- endif -%}
+                    </div>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+
+            {%- when 'guarantee' -%}
+              <div class="fr-guar-box" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<style>
+  {%- if section.settings.atc_bg != blank and section.settings.atc_bg != 'rgba(0,0,0,0)' -%}
+    #shopify-section-{{ section.id }} .fr-atc{ --button-background: {{ section.settings.atc_bg.rgb }}; }
+  {%- endif -%}
+  {%- if section.settings.atc_fg != blank and section.settings.atc_fg != 'rgba(0,0,0,0)' -%}
+    #shopify-section-{{ section.id }} .fr-atc{ --button-text-color: {{ section.settings.atc_fg.rgb }}; }
+  {%- endif -%}
+</style>
+
+<script>
+(function(){
+  var sec = document.getElementById('shopify-section-{{ section.id }}');
+  if(!sec) return;
+
+  /* galerie : la vignette pilote la grande image */
+  sec.querySelectorAll('.fr-gal').forEach(function(gal){
+    gal.addEventListener('click', function(e){
+      var t = e.target.closest('.fr-gal-thumb'); if(!t) return;
+      var i = t.dataset.i;
+      gal.querySelectorAll('.fr-gal-thumb').forEach(function(b){
+        var on = b === t;
+        b.classList.toggle('is-on', on);
+        b.setAttribute('aria-selected', on ? 'true' : 'false');
+      });
+      gal.querySelectorAll('.fr-gal-slide').forEach(function(s){ s.classList.toggle('is-on', s.dataset.i === i); });
+    });
+  });
+
+  /* reconnaissance : repondre revele la ligne, ne bloque jamais l'achat */
+  sec.querySelectorAll('.fr-reco').forEach(function(r){
+    r.addEventListener('click', function(e){
+      var b = e.target.closest('.fr-reco-o'); if(!b) return;
+      r.querySelectorAll('.fr-reco-o').forEach(function(x){ x.classList.toggle('is-on', x === b); });
+      var a = r.querySelector('.fr-reco-a'); if(a) a.hidden = false;
+    });
+  });
+
+  /* quantite : on ecrit dans l'input du formulaire natif, on n'intercepte rien */
+  sec.querySelectorAll('.fr-qty').forEach(function(q){
+    q.addEventListener('click', function(e){
+      var b = e.target.closest('.fr-qty-o'); if(!b) return;
+      q.querySelectorAll('.fr-qty-o').forEach(function(x){ x.classList.toggle('is-on', x === b); });
+      var f = document.forms[q.dataset.form];
+      if(f && f.quantity) f.quantity.value = b.dataset.q;
+    });
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "FREOS · 02 Buybox",
+  "tag": "section",
+  "class": "freos-pdp-buybox",
+  "settings": [
+    { "type": "header", "content": "Mise en page" },
+    { "type": "select", "id": "surface", "label": "Fond", "default": "white",
+      "options": [
+        { "value": "white",  "label": "Blanc" },
+        { "value": "soft",   "label": "Sable" },
+        { "value": "softer", "label": "Sable clair" },
+        { "value": "ink",    "label": "Encre" }
+      ] },
+    { "type": "range", "id": "padding_top", "label": "Marge haute", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 24 },
+    { "type": "range", "id": "padding_bottom", "label": "Marge basse", "min": 0, "max": 120, "step": 4, "unit": "px", "default": 48 },
+    { "type": "header", "content": "Galerie" },
+    { "type": "text", "id": "flag", "label": "Pastille sur l'image", "info": "Vide = aucune." },
+    { "type": "text", "id": "thumbs_label", "label": "Libelle des vignettes", "default": "Immagini del prodotto" },
+    { "type": "header", "content": "Bouton d'achat" },
+    { "type": "color", "id": "atc_bg", "label": "Fond du bouton" },
+    { "type": "color", "id": "atc_fg", "label": "Texte du bouton" }
+  ],
+  "blocks": [
+    { "type": "slide", "name": "Image de galerie",
+      "settings": [
+        { "type": "image_picker", "id": "image", "label": "Image" },
+        { "type": "text", "id": "file", "label": "Ou : asset du theme", "info": "Nom de fichier, utilise si aucune image n'est deposee." },
+        { "type": "text", "id": "alt", "label": "Texte alternatif" }
+      ] },
+    { "type": "eyebrow", "name": "Sur-titre", "limit": 1,
+      "settings": [{ "type": "text", "id": "text", "label": "Texte" }] },
+    { "type": "title", "name": "Titre", "limit": 1,
+      "settings": [{ "type": "text", "id": "text", "label": "Titre", "info": "Vide = titre du produit." }] },
+    { "type": "subtitle", "name": "Sous-titre", "limit": 1,
+      "settings": [{ "type": "text", "id": "text", "label": "Texte" }] },
+    { "type": "rating", "name": "Note", "limit": 1,
+      "settings": [
+        { "type": "text", "id": "score", "label": "Note" },
+        { "type": "text", "id": "count", "label": "Nombre d'avis" }
+      ] },
+    { "type": "pills", "name": "Pastilles",
+      "settings": [{ "type": "text", "id": "items", "label": "Elements", "info": "Separes par |" }] },
+    { "type": "price", "name": "Prix", "limit": 1,
+      "settings": [
+        { "type": "text", "id": "fallback", "label": "Prix de repli", "default": "29,90 €" },
+        { "type": "text", "id": "save_label", "label": "Etiquette remise", "info": "[%] est remplace par le pourcentage. Ne s'affiche que s'il y a un prix barre." },
+        { "type": "text", "id": "note", "label": "Note sous le prix" }
+      ] },
+    { "type": "benefits", "name": "Benefices",
+      "settings": [{ "type": "textarea", "id": "items", "label": "Lignes", "info": "Une par ligne." }] },
+    { "type": "recognition", "name": "Reconnaissance", "limit": 1,
+      "settings": [
+        { "type": "text", "id": "question", "label": "Question" },
+        { "type": "textarea", "id": "options", "label": "Reponses", "info": "Une par ligne." },
+        { "type": "text", "id": "answer", "label": "Ligne revelee" }
+      ] },
+    { "type": "quantity", "name": "Quantite", "limit": 1,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Libelle" },
+        { "type": "textarea", "id": "rows", "label": "Options",
+          "info": "Une par ligne : quantite | titre | precision" }
+      ] },
+    { "type": "scarcity", "name": "Ligne de tension", "limit": 1,
+      "settings": [{ "type": "text", "id": "text", "label": "Texte" }] },
+    { "type": "buy_buttons", "name": "Bouton d'achat", "limit": 1,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Libelle", "info": "Vide = traduction du theme." },
+        { "type": "text", "id": "soldout", "label": "Rupture", "info": "Vide = traduction du theme." },
+        { "type": "text", "id": "under", "label": "Ligne sous le bouton" }
+      ] },
+    { "type": "payments", "name": "Moyens de paiement", "limit": 1,
+      "settings": [
+        { "type": "text", "id": "label", "label": "Libelle" },
+        { "type": "text", "id": "marks", "label": "Icones",
+          "info": "Separees par des virgules : visa, master, american_express, paypal, apple_pay, google_pay" }
+      ] },
+    { "type": "badges", "name": "Reassurances",
+      "settings": [{ "type": "textarea", "id": "items", "label": "Lignes", "info": "Une par ligne : Titre | Precision" }] },
+    { "type": "guarantee", "name": "Garantie", "limit": 1,
+      "settings": [{ "type": "richtext", "id": "text", "label": "Texte" }] }
+  ],
+  "presets": [{ "name": "FREOS · 02 Buybox" }]
+}
+{% endschema %}

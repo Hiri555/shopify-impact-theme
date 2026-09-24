@@ -552,9 +552,9 @@
 /* galerie */
 .fr .fr-gal-main{ position:relative; aspect-ratio:1/1; background:var(--soft);
   border:1px solid var(--rule); border-radius:2px; overflow:hidden; }
-.fr .fr-gal-slide{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
-  opacity:0; transition:opacity .18s; }
+.fr .fr-gal-slide{ position:absolute; inset:0; opacity:0; transition:opacity .18s; }
 .fr .fr-gal-slide.is-on{ opacity:1; }
+.fr .fr-gal-slide img{ width:100%; height:100%; object-fit:cover; display:block; }
 .fr .fr-gal-thumbs{ display:flex; gap:8px; margin-top:10px; overflow-x:auto; padding-bottom:4px; }
 .fr .fr-gal-thumb{ flex:0 0 68px; width:68px; height:68px; padding:0; cursor:pointer;
   background:var(--soft); border:1px solid var(--rule); border-radius:2px; overflow:hidden;
@@ -598,11 +598,22 @@
   padding-top:12px; border-top:1px solid var(--accl); }
 
 /* achat */
-.fr .fr-atc{ display:block; width:100%; background:var(--acc); color:var(--soft); border:0;
-  border-radius:3px; padding:19px 24px; font:600 17px Inter,sans-serif; letter-spacing:.01em;
-  cursor:pointer; transition:background .2s; }
-.fr .fr-atc:hover{ background:var(--acc2); }
-.fr .fr-atc.is-off{ background:var(--ink3); cursor:not-allowed; }
+/* Le bouton est un .button natif d'Impact portant is="custom-button" : la
+   couleur doit passer par --button-background, sinon le reglage couleur du
+   customizer n'aurait aucun effet. Et custom-button enveloppe le contenu dans
+   un <div> a la construction : c'est lui qu'on centre, pas le bouton. */
+.fr .fr-atc{ display:block; width:100%;
+  --button-background:44 84 64; --button-text-color:244 241 232;
+  background:rgb(var(--button-background)); color:rgb(var(--button-text-color));
+  border:0; border-radius:3px; padding:19px 24px; font:600 17px Inter,sans-serif;
+  letter-spacing:.01em; cursor:pointer; transition:filter .2s; text-align:center; }
+.fr .fr-atc > div{ display:block; width:100%; text-align:center; }
+.fr .fr-atc:hover:not([disabled]){ filter:brightness(.9); }
+.fr .fr-atc[disabled],
+.fr .fr-atc.fr-atc--off{ --button-background:120 125 114; cursor:not-allowed; }
+/* buy-buttons est un custom element : sans display il reste inline */
+.fr .fr-atc-bb{ display:block; }
+.fr .fr-atc-form{ margin:0; }
 .fr .fr-atc-under{ font-size:12px; color:var(--ink3); text-align:center; margin:10px 0 0;
   letter-spacing:.02em; }
 
@@ -618,9 +629,14 @@
 .fr .fr-guar-box p{ font-size:13.5px; line-height:1.6; color:var(--ink2); margin:0; }
 
 /* barre collante */
+/* Pilotee par .is-on et non par l'attribut hidden : on veut la transition,
+   et hidden ne se transitionne pas. translateY garde la barre hors flux. */
 .fr-sticky{ position:fixed; left:0; right:0; bottom:0; z-index:40; background:#fff;
   border-top:1px solid var(--rule); box-shadow:0 -2px 14px rgba(18,22,15,.08);
-  padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px)); }
+  padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px));
+  opacity:0; visibility:hidden; transform:translateY(100%);
+  transition:opacity .22s ease, transform .22s ease, visibility .22s; }
+.fr-sticky.is-on{ opacity:1; visibility:visible; transform:translateY(0); }
 .fr .fr-sticky-in{ display:flex; align-items:center; gap:14px; }
 .fr .fr-sticky-t{ flex:1 1 auto; font-size:14px; font-weight:600; color:var(--ink);
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
@@ -773,3 +789,68 @@
 .fr .fr-bar > *{ min-width:0; }
 .fr .fr-gal-thumbs{ min-width:0; max-width:100%; }
 .fr .fr-gal-main{ max-width:100%; }
+
+/* ==========================================================================
+   PDP MODULAIRE · socle commun aux sections freos-pdp-*
+   --------------------------------------------------------------------------
+   Chaque section porte ses marges en variables inline (--fr-pt / --fr-pb),
+   reglees depuis le customizer. Rythme de reference : 56-64 px.
+   ========================================================================== */
+.fr[style*="--fr-pt"]{ padding-top:var(--fr-pt,56px); padding-bottom:var(--fr-pb,56px); }
+
+/* --------------------------------------------------------------- 02 BUYBOX */
+.fr-bx.fr-hero{ padding-top:var(--fr-pt,24px); padding-bottom:var(--fr-pb,48px); }
+.fr .fr-bx-eyebrow{ margin-bottom:12px; }
+
+.fr .fr-gal{ position:relative; }
+.fr .fr-gal-flag{ position:absolute; top:12px; left:12px; z-index:2;
+  font:600 11px/1 Inter,sans-serif; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--soft); background:var(--acc); padding:7px 11px; border-radius:2px; }
+
+.fr .fr-price-was{ font-size:17px; color:var(--ink3); text-decoration:line-through; }
+.fr .fr-price-save{ font:600 11px/1 Inter,sans-serif; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--warn); background:#F7EAE3;
+  padding:5px 9px; border-radius:2px; }
+
+/* quantite : des vrais boutons, la valeur part dans l'input du formulaire natif */
+.fr .fr-qty{ margin:0 0 16px; }
+.fr .fr-qty-l{ font:600 12px/1 Inter,sans-serif; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ink3); margin:0 0 9px; }
+.fr .fr-qty-opts{ display:grid; grid-template-columns:repeat(auto-fit,minmax(96px,1fr)); gap:8px; }
+.fr .fr-qty-o{ min-width:0; text-align:left; cursor:pointer; background:#fff;
+  border:1px solid var(--rule2); border-radius:2px; padding:11px 13px;
+  transition:border-color .15s, background .15s; }
+.fr .fr-qty-o b{ display:block; font:600 14px Inter,sans-serif; color:var(--ink); }
+.fr .fr-qty-o span{ display:block; font-size:12px; color:var(--ink3); margin-top:2px; }
+.fr .fr-qty-o.is-on{ border-color:var(--acc); background:var(--acclt); }
+.fr .fr-qty-o.is-on b{ color:var(--acc); }
+
+.fr .fr-scarce{ display:flex; align-items:center; gap:8px; margin:0 0 14px;
+  font:500 13px Inter,sans-serif; color:var(--warn); }
+.fr .fr-scarce-dot{ flex:0 0 7px; width:7px; height:7px; border-radius:50%;
+  background:var(--warn); animation:fr-pulse 1.8s ease-in-out infinite; }
+@keyframes fr-pulse{ 0%,100%{opacity:1} 50%{opacity:.35} }
+
+.fr .fr-pay{ display:flex; align-items:center; justify-content:center; flex-wrap:wrap;
+  gap:8px; margin:14px 0 0; }
+.fr .fr-pay-l{ font-size:11.5px; color:var(--ink3); letter-spacing:.04em; }
+.fr .fr-pay-i{ display:inline-flex; flex-wrap:wrap; gap:5px; }
+.fr .fr-pay-svg{ width:34px; height:22px; display:block; }
+
+/* --------------------------------------------------------------- 15 STICKY */
+.fr .fr-sticky-img{ flex:0 0 46px; width:46px; height:46px; border-radius:2px;
+  overflow:hidden; background:var(--soft); border:1px solid var(--rule); }
+.fr .fr-sticky-img img{ width:100%; height:100%; object-fit:cover; display:block; }
+.fr .fr-sticky-txt{ flex:1 1 auto; min-width:0; display:flex; flex-direction:column; gap:2px; }
+.fr .fr-sticky-rate{ display:flex; align-items:center; gap:6px; }
+.fr .fr-sticky-rate .fr-rate-stars{ color:var(--acc); }
+.fr .fr-sticky-score{ font:600 12px Inter,sans-serif; color:var(--ink2); }
+.fr .fr-sticky-bb{ flex:0 0 auto; }
+.fr .fr-sticky-b{ width:auto; padding:13px 22px; font-size:15px; }
+
+@media (max-width:560px){
+  .fr .fr-sticky-img{ display:none; }
+  .fr .fr-sticky-txt{ display:none; }
+  .fr .fr-sticky-bb{ flex:1 1 auto; }
+  .fr .fr-sticky-b{ width:100%; }
+}
