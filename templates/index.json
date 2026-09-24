@@ -21,7 +21,7 @@
         "points": "Un gesto la sera, dopo i denti. Trenta secondi.\nSette estratti e uno ione, dosi dichiarate in etichetta.\nUn barattolo copre un mese pieno.",
         "cta_label": "Vedi il prodotto",
         "cta_pill": "29,90 €",
-        "cta_url": "/products/[HANDLE_PRODOTTO]",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
         "cta_note": "Trenta sere di prova · il barattolo resta a te"
       }
     },
@@ -54,7 +54,7 @@
         "01_doors": {
           "type": "doors",
           "settings": {
-            "doors": "Non so da dove arriva | Due minuti di domande, nessun acquisto. | Fai il quiz | [QUIZ_URL]\nHo già provato tutto | Perché spazzolino, collutorio e gomme lasciano fuori la stessa zona. | Leggi | [LP_LISTICLE_URL]\nVoglio solo il gesto | Cosa c’è dentro, come si usa, quanto costa. | Vedi il prodotto | /products/[HANDLE_PRODOTTO]"
+            "doors": "Non so da dove arriva | Due minuti di domande, nessun acquisto. | Fai il quiz | [QUIZ_URL]\nHo già provato tutto | Perché spazzolino, collutorio e gomme lasciano fuori la stessa zona. | Leggi | [LP_LISTICLE_URL]\nVoglio solo il gesto | Cosa c’è dentro, come si usa, quanto costa. | Vedi il prodotto | /products/gel-notturno-micro-aderente-allo-zinco"
           }
         }
       },
@@ -215,7 +215,7 @@
           "settings": {
             "label": "Vedi il prodotto",
             "pill": "29,90 €",
-            "url": "/products/[HANDLE_PRODOTTO]",
+            "url": "/products/gel-notturno-micro-aderente-allo-zinco",
             "reassurance": "Garanzia commerciale. Si aggiunge ai tuoi diritti di legge, che restano interi."
           }
         },
