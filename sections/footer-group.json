@@ -18,29 +18,28 @@
           "type": "column",
           "settings": {
             "title": "Prodotto",
-            "links": "Il gesto della sera|/products/[HANDLE_PRODOTTO]\nCome si usa|/pages/il-gesto-della-sera\nIngredienti e sicurezza|/pages/ingredienti-e-sicurezza\nFAQ|/pages/faq\nChi siamo|/pages/chi-siamo"
+            "links": "Il gesto della sera|/products/[HANDLE_PRODOTTO]"
           }
         },
         "col_assistenza": {
           "type": "column",
           "settings": {
             "title": "Assistenza",
-            "links": "Contattaci|/pages/contattaci\nTraccia il tuo ordine|/pages/traccia-ordine\nSpedizioni|/policies/shipping-policy\nRimborsi e recesso|/policies/refund-policy"
+            "links": "Contatti|/policies/contact-information\nSpedizioni|/policies/shipping-policy\nRimborsi e recesso|/policies/refund-policy"
           }
         },
         "col_legale": {
           "type": "column",
           "settings": {
             "title": "Legale",
-            "links": "Informativa privacy|/policies/privacy-policy\nCookie policy|/pages/cookie-policy\nTermini e condizioni|/policies/terms-of-service\nNote legali|/pages/note-legali"
+            "links": "Informativa privacy|/policies/privacy-policy\nTermini e condizioni|/policies/terms-of-service"
           }
         }
       },
       "block_order": ["col_prodotto", "col_assistenza", "col_legale"],
       "settings": {
         "show_newsletter": true,
-        "news_consent": "<p>Iscrivendoti accetti di ricevere le nostre email. Puoi disiscriverti in ogni momento dal link in fondo a ogni messaggio. <a href=\"/policies/privacy-policy\">Informativa privacy</a>.</p>",
-        "ingredienti_url": "/pages/ingredienti-e-sicurezza"
+        "news_consent": "<p>Iscrivendoti accetti di ricevere le nostre email. Puoi disiscriverti in ogni momento dal link in fondo a ogni messaggio. <a href=\"/policies/privacy-policy\">Informativa privacy</a>.</p>"
       }
     }
   },

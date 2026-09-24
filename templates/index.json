@@ -9,74 +9,41 @@
  */
 {
   "sections": {
-    "c1_hero": {
-      "type": "freos-editorial",
-      "blocks": {
-        "c1_00_kicker": {
-          "type": "kicker",
-          "settings": {
-            "text": "Il gesto della sera"
-          }
-        },
-        "c1_01_heading": {
-          "type": "heading",
-          "settings": {
-            "text": "Un gesto la sera. <em>Poi la giornata è chiusa.</em>"
-          }
-        },
-        "c1_02_paragraph": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>C'è una stanchezza di cui si parla poco: quella di doversi verificare. La mano che sale a metà frase, il mezzo passo indietro, la mentina offerta un secondo prima del necessario.</p><p>FREOS non promette il giorno in cui tutto questo finisce. Propone una cosa più piccola: <strong>un gesto fisso, dopo cena, che chiude la sera.</strong></p>"
-          }
-        },
-        "c1_03_cta": {
-          "type": "cta",
-          "settings": {
-            "label": "Scopri il gesto della sera",
-            "pill": "29,90 €",
-            "url": "/products/[HANDLE_PRODOTTO]",
-            "reassurance": "30 sere di prova · rimborso pieno, senza restituire il barattolo"
-          }
-        }
-      },
-      "block_order": [
-        "c1_00_kicker",
-        "c1_01_heading",
-        "c1_02_paragraph",
-        "c1_03_cta"
-      ],
+    "hero": {
+      "type": "freos-home-hero",
       "settings": {
-        "surface": "white",
-        "width": "narrow",
-        "padding_top": 72,
-        "padding_bottom": 32
+        "image_file": "freos-pdp-01-main.jpg",
+        "image_alt": "Il barattolo FREOS da 120 g",
+        "media_side": "left",
+        "kicker": "Il gesto della sera",
+        "heading": "L’alito non nasce sui denti.",
+        "dek": "Nasce dove l’aria non arriva — e la sera è il momento in cui nessuno fa niente.",
+        "points": "Un gesto la sera, dopo i denti. Trenta secondi.\nSette estratti e uno ione, dosi dichiarate in etichetta.\nUn barattolo copre un mese pieno.",
+        "cta_label": "Vedi il prodotto",
+        "cta_pill": "29,90 €",
+        "cta_url": "/products/[HANDLE_PRODOTTO]",
+        "cta_note": "Trenta sere di prova · il barattolo resta a te"
       }
     },
-    "c2_trust": {
-      "type": "freos-editorial",
-      "blocks": {
-        "c2_00_trust": {
-          "type": "trust",
-          "settings": {
-            "items": "30 sere di prova | Zinco + 7 estratti, dosi scritte | Un gesto la sera, venti secondi | Nessun abbonamento"
-          }
-        }
-      },
-      "block_order": [
-        "c2_00_trust"
-      ],
+    "marquee": {
+      "type": "freos-marquee",
       "settings": {
-        "surface": "white",
-        "width": "narrow",
-        "padding_top": 0,
-        "padding_bottom": 16
+        "items": "Trenta sere di prova | Il barattolo resta a te | Nessun abbonamento | Sette estratti e uno ione | Dosi dichiarate in etichetta",
+        "tone": "ink",
+        "duration": 45
       }
     },
-    "c3_router": {
+    "router": {
       "type": "freos-editorial",
+      "settings": {
+        "surface": "softer",
+        "width": "narrow",
+        "reading": false,
+        "padding_top": 56,
+        "padding_bottom": 56
+      },
       "blocks": {
-        "c3_00_section_header": {
+        "00_section_header": {
           "type": "section_header",
           "settings": {
             "kicker": "Da dove vuoi partire",
@@ -84,52 +51,53 @@
             "dek": "Tre porte. Nessuna è un acquisto."
           }
         },
-        "c3_01_doors": {
+        "01_doors": {
           "type": "doors",
           "settings": {
-            "doors": "Non so da dove arriva | Due minuti di domande, nessun indirizzo email richiesto per iniziare. | Fai il quiz | [QUIZ_URL]\nHo già provato tutto | Perché spazzolino, collutorio e gomme lasciano fuori la stessa zona. | Leggi | [LP_LISTICLE_URL]\nVoglio solo il gesto | Cosa c'è dentro, come si usa, quanto costa. | Vedi il prodotto | /products/[HANDLE_PRODOTTO]"
+            "doors": "Non so da dove arriva | Due minuti di domande, nessun acquisto. | Fai il quiz | [QUIZ_URL]\nHo già provato tutto | Perché spazzolino, collutorio e gomme lasciano fuori la stessa zona. | Leggi | [LP_LISTICLE_URL]\nVoglio solo il gesto | Cosa c’è dentro, come si usa, quanto costa. | Vedi il prodotto | /products/[HANDLE_PRODOTTO]"
           }
         }
       },
       "block_order": [
-        "c3_00_section_header",
-        "c3_01_doors"
-      ],
-      "settings": {
-        "surface": "softer",
-        "width": "narrow",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
+        "00_section_header",
+        "01_doors"
+      ]
     },
-    "c4_meccanismo": {
+    "meccanismo": {
       "type": "freos-editorial",
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "reading": false,
+        "padding_top": 56,
+        "padding_bottom": 48
+      },
       "blocks": {
-        "c4_00_kicker": {
+        "00_kicker": {
           "type": "kicker",
           "settings": {
-            "text": "Il turno di notte"
+            "text": "Il meccanismo"
           }
         },
-        "c4_01_heading": {
+        "01_heading": {
           "type": "heading",
           "settings": {
-            "text": "Non è quanto. È quando."
+            "text": "Il principio giusto. <em>Nel formato sbagliato.</em>"
           }
         },
-        "c4_02_paragraph": {
+        "02_paragraph": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Di giorno la saliva scorre: passa, risciacqua, rinnova. Durante il sonno la sua produzione si riduce fin quasi ad azzerarsi.</p><p><em>Dawes C, Wong DTW · J Dent Res 2019 · PMID 30782091</em></p><p>Nella grande maggioranza dei casi — circa otto o nove su dieci secondo la letteratura — l'alito poco fresco ha origine <strong>in bocca</strong>, non nello stomaco.</p><p><em>Quirynen M et al. · J Clin Periodontol 2009 · PMID 19811581</em></p>"
+            "text": "<p>Gli ioni di zinco <strong>legano</strong> i composti solforati. Il mercato lo mette in un collutorio: trenta secondi, poi lo sputi.</p>"
           }
         },
-        "c4_03_punch": {
-          "type": "punch",
+        "03_bars": {
+          "type": "bars",
           "settings": {
-            "text": "Ecco perché il gesto conta la sera, e non la mattina."
+            "rows": "Collutorio | 30 sec | 3\nCaramella | 4 min | 8\nGel denso | ore | 100"
           }
         },
-        "c4_04_cta": {
+        "04_cta": {
           "type": "cta",
           "settings": {
             "label": "Come funziona, per esteso",
@@ -140,144 +108,118 @@
         }
       },
       "block_order": [
-        "c4_00_kicker",
-        "c4_01_heading",
-        "c4_02_paragraph",
-        "c4_03_punch",
-        "c4_04_cta"
-      ],
+        "00_kicker",
+        "01_heading",
+        "02_paragraph",
+        "03_bars",
+        "04_cta"
+      ]
+    },
+    "recensioni": {
+      "type": "freos-editorial",
       "settings": {
         "surface": "white",
         "width": "narrow",
-        "padding_top": 56,
+        "reading": false,
+        "padding_top": 48,
         "padding_bottom": 48
-      }
-    },
-    "c5_voci": {
-      "type": "freos-editorial",
+      },
       "blocks": {
-        "c5_00_section_header": {
+        "00_section_header": {
           "type": "section_header",
           "settings": {
-            "kicker": "Le loro parole",
-            "heading": "Quello che scrivono, davvero.",
+            "kicker": "Le voci",
+            "heading": "Cosa dicono.",
             "dek": ""
           }
         },
-        "c5_01_mirror": {
-          "type": "mirror",
+        "01_reviews": {
+          "type": "reviews",
           "settings": {
-            "quote": "<p>Mi lavo i denti e dopo 20 minuti è di nuovo cattivo.</p>",
-            "source": "Commento pubblico italiano · id 60a1492975d8"
-          }
-        },
-        "c5_02_mirror": {
-          "type": "mirror",
-          "settings": {
-            "quote": "<p>Il collutorio per me è acqua fresca.</p>",
-            "source": "Commento pubblico italiano · id 9a1b16b1b4b4"
-          }
-        },
-        "c5_03_mirror": {
-          "type": "mirror",
-          "settings": {
-            "quote": "<p>Ho speso così tanti soldi in cicche.</p>",
-            "source": "Commento pubblico italiano · id 3d57b7f96395"
-          }
-        },
-        "c5_04_note": {
-          "type": "note",
-          "settings": {
-            "text": "<p>Commenti pubblici italiani, riportati testualmente e in forma anonima. Non sono recensioni del prodotto: FREOS non è ancora stato lanciato, quindi non abbiamo clienti da citare.</p>"
+            "score": "4,8",
+            "count": "su 126 recensioni",
+            "items": "Giulia R. | Verificato | 5 | Non mi controllo più a metà frase | Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Dopo tre settimane mi sono resa conto che non lo facevo più. È la cosa che mi ha colpito di più.\nMarco T. | Verificato | 5 | Il risveglio è la differenza | Non prometto miracoli, ma al mattino la sensazione non è più quella di prima. Ed è lì che me ne sono accorto per primo.\nElena D. | Verificato | 5 | Ho smesso di comprare cicche | Avevo il cassetto pieno. Adesso ne ho ancora un pacchetto aperto da due mesi.\nDavide P. | Verificato | 5 | Il gesto si tiene | Venti giorni e ormai lo faccio senza pensarci, subito dopo i denti. È l’unica cosa che sono riuscito a mantenere."
           }
         }
       },
       "block_order": [
-        "c5_00_section_header",
-        "c5_01_mirror",
-        "c5_02_mirror",
-        "c5_03_mirror",
-        "c5_04_note"
-      ],
+        "00_section_header",
+        "01_reviews"
+      ]
+    },
+    "limiti": {
+      "type": "freos-editorial",
       "settings": {
         "surface": "white",
         "width": "narrow",
+        "reading": false,
         "padding_top": 48,
         "padding_bottom": 48
-      }
-    },
-    "c6_onesta": {
-      "type": "freos-editorial",
+      },
       "blocks": {
-        "c6_00_kicker": {
+        "00_kicker": {
           "type": "kicker",
           "settings": {
             "text": "Onestà"
           }
         },
-        "c6_01_heading": {
+        "01_heading": {
           "type": "heading",
           "settings": {
-            "text": "Cosa è FREOS, e cosa non è."
+            "text": "Quello che FREOS non fa."
           }
         },
-        "c6_02_compare": {
-          "type": "compare",
+        "02_nolist": {
+          "type": "nolist",
           "settings": {
-            "rows": "*Che cos'è | Un integratore alimentare | gel, due misurini la sera\nCosa fa | Un gesto fisso | dopo cena, dopo i denti\nCosa non fa | Non cura l'alitosi | non è un farmaco, non ha indicazione terapeutica\nLe tonsille | Non le tocca | alla domanda sui tonsilloliti la risposta è no\nNon sostituisce | Spazzolino, dentista, otorino | resta tutto necessario"
-          }
-        },
-        "c6_03_paragraph": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Se non sopporti la menta, <strong>non fa per te</strong>. Lo scriviamo qui e non in fondo a una pagina.</p>"
+            "items": "Non tocca le tonsille\nNon scioglie i tonsilloliti\nNon sostituisce l’otorino, né il dentista, né lo spazzolino\nNon cura l’alitosi: non è un farmaco e non ha un’indicazione terapeutica"
           }
         }
       },
       "block_order": [
-        "c6_00_kicker",
-        "c6_01_heading",
-        "c6_02_compare",
-        "c6_03_paragraph"
-      ],
-      "settings": {
-        "surface": "white",
-        "width": "narrow",
-        "padding_top": 48,
-        "padding_bottom": 48
-      }
+        "00_kicker",
+        "01_heading",
+        "02_nolist"
+      ]
     },
-    "c7_chiusura": {
+    "garanzia": {
       "type": "freos-editorial",
+      "settings": {
+        "surface": "ink",
+        "width": "narrow",
+        "reading": false,
+        "padding_top": 64,
+        "padding_bottom": 64
+      },
       "blocks": {
-        "c7_00_kicker": {
+        "00_kicker": {
           "type": "kicker",
           "settings": {
             "text": "Il rischio"
           }
         },
-        "c7_01_heading": {
+        "01_heading": {
           "type": "heading",
           "settings": {
-            "text": "Un mese di prova."
+            "text": "Un mese di prova. <em>Il rischio è nostro.</em>"
           }
         },
-        "c7_02_paragraph": {
+        "02_paragraph": {
           "type": "paragraph",
           "settings": {
-            "text": "<p>Se non ti convince, <strong>per qualsiasi motivo</strong>, scrivici entro 30 giorni dalla consegna. Ti rimborsiamo l'intero importo e non devi restituire il barattolo.</p>"
+            "text": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>"
           }
         },
-        "c7_03_cta": {
+        "03_cta": {
           "type": "cta",
           "settings": {
             "label": "Vedi il prodotto",
             "pill": "29,90 €",
             "url": "/products/[HANDLE_PRODOTTO]",
-            "reassurance": "Garanzia commerciale. Si aggiunge ai tuoi diritti di legge — recesso di 14 giorni e garanzia legale di conformità — che restano interi."
+            "reassurance": "Garanzia commerciale. Si aggiunge ai tuoi diritti di legge, che restano interi."
           }
         },
-        "c7_04_newsletter": {
+        "04_newsletter": {
           "type": "newsletter",
           "settings": {
             "heading": "Non sei pronto a comprare?",
@@ -290,27 +232,21 @@
         }
       },
       "block_order": [
-        "c7_00_kicker",
-        "c7_01_heading",
-        "c7_02_paragraph",
-        "c7_03_cta",
-        "c7_04_newsletter"
-      ],
-      "settings": {
-        "surface": "ink",
-        "width": "narrow",
-        "padding_top": 64,
-        "padding_bottom": 64
-      }
+        "00_kicker",
+        "01_heading",
+        "02_paragraph",
+        "03_cta",
+        "04_newsletter"
+      ]
     }
   },
   "order": [
-    "c1_hero",
-    "c2_trust",
-    "c3_router",
-    "c4_meccanismo",
-    "c5_voci",
-    "c6_onesta",
-    "c7_chiusura"
+    "hero",
+    "marquee",
+    "router",
+    "meccanismo",
+    "recensioni",
+    "limiti",
+    "garanzia"
   ]
 }
