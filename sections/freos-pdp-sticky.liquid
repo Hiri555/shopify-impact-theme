@@ -101,26 +101,27 @@
   if(!bar) return;
 
   /* On n'intercepte RIEN : le bouton est un vrai submit rattache au formulaire
-     de la buybox par form="". Ce script ne fait qu'afficher et masquer. */
-  var watch = document.querySelector(bar.dataset.watch);
-  if(!watch || !('IntersectionObserver' in window)){ bar.classList.add('is-on'); return; }
+     de la buybox par form="". Ce script ne fait qu'afficher et masquer.
+
+     Un ecouteur de defilement plutot qu'un IntersectionObserver : la regle
+     tient en deux comparaisons de geometrie, elle se relit, et elle
+     s'appelle a la main -- ce qui la rend verifiable. La fonction est exposee
+     sur l'element pour pouvoir etre declenchee sans evenement. */
+  var watch = document.querySelector(bar.dataset.watch || '.fr-atc-wrap');
+  if(!watch){ bar.classList.add('is-on'); return; }   /* pas de cible : on montre */
 
   var footer = document.querySelector('.fr-footer, .footer');
-  var passed = false, atEnd = false;
 
-  function sync(){ bar.classList.toggle('is-on', passed && !atEnd); }
+  bar.frSync = function(){
+    var passe = watch.getBoundingClientRect().bottom < 0;
+    var finPage = footer ? footer.getBoundingClientRect().top < window.innerHeight : false;
+    bar.classList.toggle('is-on', passe && !finPage);
+    return {passe: passe, finPage: finPage, visible: bar.classList.contains('is-on')};
+  };
 
-  new IntersectionObserver(function(en){
-    en.forEach(function(e){ passed = e.boundingClientRect.bottom < 0; });
-    sync();
-  }, {rootMargin:'0px 0px -40px 0px'}).observe(watch);
-
-  if(footer){
-    new IntersectionObserver(function(en){
-      en.forEach(function(e){ atEnd = e.isIntersecting; });
-      sync();
-    }).observe(footer);
-  }
+  addEventListener('scroll', bar.frSync, {passive: true});
+  addEventListener('resize', bar.frSync, {passive: true});
+  bar.frSync();
 })();
 </script>
 
