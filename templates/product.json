@@ -12,463 +12,540 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "liquid_dkxbrk": {
+        "proof": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"trustpilot-rating-container\" id=\"block-trustpilot_rating_kHdNbD\" style=\"display: flex; align-items: center; margin: 10px 0 10px 0; justify-content: flex-start; border: 1px dotted #e0e0e0; border-radius: 4px;\">\n  <div class=\"rating-container\">\n    <h1 class=\"trustpilot-block-rating-text\">\n      <svg class=\"trustpilot-star-five\" height=\"18\" width=\"80\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 96\">\n        <g fill=\"none\">\n          <g fill=\"#00b67a\">\n            <path d=\"M0 0h96v96H0zM104 0h96v96h-96zM208 0h96v96h-96zM312 0h96v96h-96zM416 0h96v96h-96z\"></path>\n          </g>\n          <path d=\"M48 64.7L62.6 61l6.1 18.8zm33.6-24.3H55.9L48 16.2l-7.9 24.2H14.4l20.8 15-7.9 24.2 20.8-15 12.8-9.2zM152 64.7l14.6-3.7 6.1 18.8zm33.6-24.3h-25.7L152 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2zM256 64.7l14.6-3.7 6.1 18.8zm33.6-24.3h-25.7L256 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2zM360 64.7l14.6-3.7 6.1 18.8zm33.6-24.3h-25.7L360 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2zM464 64.7l14.6-3.7 6.1 18.8zm33.6-24.3h-25.7L464 16.2l-7.9 24.2h-25.7l20.8 15-7.9 24.2 20.8-15 12.8-9.2z\" fill=\"#fff\"></path>\n        </g>\n      </svg>\n      <span class=\"rating-excellent\">Excellent</span>\n      <span class=\"rating-score\">4.7 sur 5</span>\n    </h1>\n  </div>\n</div>"
+            "liquid": "<div class=\"fr\"><p class=\"fr-buybox-proof\">Abbiamo letto più di 800 commenti pubblici italiani prima di scrivere una riga.</p></div>"
           }
         },
         "title": {
           "type": "title",
           "settings": {
-            "heading_tag": "h2"
+            "heading_tag": "h1"
           }
         },
-        "liquid_k3tm9a": {
+        "price": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false
+          }
+        },
+        "benefits": {
           "type": "liquid",
           "settings": {
-            "liquid": "<style>\n  .offer-list-container {\n    display: grid;\n    grid-template-columns: repeat(2, 1fr);\n    gap: 16px;\n    padding: 0;\n    margin: 20px 0;\n  }\n\n  @media (min-width: 768px) {\n    .offer-list-container {\n      grid-template-columns: repeat(4, 1fr);\n      gap: 20px;\n    }\n  }\n\n  .offer-item {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n  }\n\n  .offer-item img {\n    width: 24px;\n    height: 24px;\n    flex-shrink: 0;\n  }\n\n  .offer-item span {\n    font-size: 14px;\n    font-weight: 600;\n    line-height: 1.3;\n    color: rgb(26, 26, 26);\n  }\n</style>\n\n<div class=\"offer-list-container\">\n  <div class=\"offer-item\">\n    <img src=\"//legacareofficial.com/cdn/shop/files/4_63fd6038-2f30-40ff-ab52-6cc289dae717.png?v=1744383323&width=48\" alt=\"\">\n    <span>Épouse votre carnation naturelle</span>\n  </div>\n\n  <div class=\"offer-item\">\n    <img src=\"//legacareofficial.com/cdn/shop/files/1_58ef5fd8-dd35-4838-96d3-34175031ab0b.png?v=1744383318&width=48\" alt=\"\">\n    <span>Zéro cruauté animale</span>\n  </div>\n\n  <div class=\"offer-item\">\n    <img src=\"//legacareofficial.com/cdn/shop/files/2_d3dc2130-7609-41ec-a085-4f4042cded9f.png?v=1744383309&width=48\" alt=\"\">\n    <span>Protection solaire SPF50</span>\n  </div>\n\n  <div class=\"offer-item\">\n    <img src=\"//legacareofficial.com/cdn/shop/files/3_f6285881-0e4a-4db0-b0d2-eadfef262463.png?v=1744383314&width=48\" alt=\"\">\n    <span>Convient à tous les types de peau</span>\n  </div>\n</div>"
-          }
-        },
-        "liquid_rNwF9j": {
-          "type": "liquid",
-          "settings": {
-            "liquid": "<style>\n  @keyframes pulse-inventory {\n    0%, 100% {\n      opacity: 1;\n      transform: scale(1);\n    }\n    50% {\n      opacity: 0;\n      transform: scale(2);\n    }\n  }\n</style>\n\n<div style=\"display: flex; align-items: center; padding: 1px 10px; border-radius: 50px; width: fit-content; margin: -2px 0px -9px;\">\n  \n  <div style=\"position: relative; margin-right: 12px;\">\n    <span style=\"display: block; width: 8px; height: 8px; background-color: #e74c3c; border-radius: 50%; position: relative; z-index: 2;\"></span>\n    <span style=\"display: block; width: 8px; height: 8px; background-color: #e74c3c; border-radius: 50%; position: absolute; top: 0; left: 0; animation: pulse-inventory 2s ease-in-out infinite;\"></span>\n  </div>\n  \n  <span style=\"font-size: 13px; color: #e74c3c;\">\n    <strong>Plus</strong> que 6 unités en stock\n  </span>\n  \n</div>"
-          }
-        },
-        "payment_terms": {
-          "type": "payment_terms",
-          "settings": {}
-        },
-        "variant_picker": {
-          "type": "variant_picker",
-          "settings": {
-            "hide_sold_out_variants": false,
-            "stack_blocks": true,
-            "selector_mode": "block",
-            "color_mode": "color",
-            "size_chart_page": ""
+            "liquid": "<div class=\"fr\"><ul class=\"fr-benefits\"><li>Un gesto la sera, dopo cena. Venti secondi.</li><li>Niente da raschiare, niente conati.</li><li>Un barattolo dura circa 100 sere.</li></ul></div>"
           }
         },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
-            "show_payment_button": false,
-            "show_gift_card_recipient": false,
-            "atc_button_background": "",
-            "atc_button_text_color": "",
-            "payment_button_background": "",
-            "payment_button_text_color": ""
+            "show_payment_button": true,
+            "show_gift_card_recipient": false
           }
         },
-        "image_qVyMnK": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Copie_de_HEAVENLY_WARS_TABLIER_23d094ae-a6c9-4388-8611-e40d3e83a70b.png",
-            "alignment": "center",
-            "max_width": 210
-          }
-        },
-        "image_tBqHrz": {
-          "type": "image",
-          "settings": {
-            "image": "shopify://shop_images/Sans_titre_360_x_55_px_69896922-a3cd-4c44-918c-787dbb71aed9.jpg",
-            "alignment": "center",
-            "max_width": 400
-          }
-        },
-        "liquid_M4KcBN": {
+        "underbtn": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div id='ss-product-videos'></div>"
+            "liquid": "<div class=\"fr\"><p class=\"fr-underbtn\">30 sere di prova · rimborso pieno · [SPEDIZIONE]</p></div>"
           }
         },
-        "liquid_R3Y6T6": {
+        "buytrust": {
           "type": "liquid",
           "settings": {
-            "liquid": "<div class=\"doctor-review-section\">\n  <div class=\"doctor-card\">\n    \n    <div class=\"doctor-image\">\n      <img src=\"https://www.lutronic.com/us/wp-content/uploads/sites/5/2023/08/Melda_Isaac-600x600-1.png\" alt=\"Dr Moreau\" loading=\"lazy\">\n    </div>\n\n    <div class=\"doctor-content\">\n      \n      <div class=\"doctor-stars\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"#00b67a\" stroke=\"none\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"></polygon></svg>\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"#00b67a\" stroke=\"none\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"></polygon></svg>\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"#00b67a\" stroke=\"none\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"></polygon></svg>\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"#00b67a\" stroke=\"none\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"></polygon></svg>\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"#00b67a\" stroke=\"none\"><polygon points=\"12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2\"></polygon></svg>\n      </div>\n\n      <p class=\"doctor-quote\">\n        \"J'étais sceptique. La plupart des fonds de teint aggravent les problèmes de mes patientes matures : sécheresse, ridules marquées, irritations. Evena fait l'inverse. Il hydrate, protège (SPF50), et respecte la physiologie de la peau mature. Je le recommande désormais systématiquement.\"\n      </p>\n\n      <div class=\"doctor-badge\">\n        <svg class=\"check-icon\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" width=\"20\" height=\"20\" fill=\"#1877F2\"><path d=\"M22.5 12.5c0-1.58-.875-2.95-2.148-3.6.154-.435.238-.905.238-1.4 0-2.21-1.71-3.998-3.818-3.998-.47 0-.92.084-1.336.25C14.818 2.415 13.51 1.5 12 1.5s-2.816.917-3.437 2.25c-.418-.165-.866-.25-1.336-.25-2.11 0-3.818 1.79-3.818 4 0 .495.083.965.238 1.4-1.272.65-2.147 2.018-2.147 3.6 0 1.495.782 2.798 1.942 3.486-.02.17-.032.34-.032.514 0 2.21 1.708 4 3.818 4 .47 0 .92-.086 1.335-.25.62 1.334 1.926 2.25 3.437 2.25 1.512 0 2.818-.916 3.437-2.25.415.163.865.248 1.336.248 2.11 0 3.818-1.79 3.818-4 0-.174-.012-.344-.033-.513 1.158-.687 1.943-1.99 1.943-3.484zm-6.616-3.334l-4.334 6.5c-.145.217-.382.334-.625.334-.143 0-.288-.04-.416-.126l-.115-.094-2.415-2.415c-.293-.293-.293-.768 0-1.06s.768-.294 1.06 0l1.77 1.767 3.825-5.74c.23-.345.696-.436 1.04-.207.346.23.44.696.21 1.04z\"></path></svg>\n        <span class=\"doctor-name\">Dr Moreau</span>\n      </div>\n\n    </div>\n  </div>\n</div>\n\n<style>\n  /* --- STYLES DU BLOC --- */\n  .doctor-review-section {\n    width: 100%;\n    padding: 20px 0; /* Un peu d'espace autour */\n    display: flex;\n    justify-content: center;\n  }\n\n  .doctor-card {\n    display: flex;\n    flex-direction: row; /* Image à gauche, texte à droite */\n    align-items: flex-start;\n    background-color: #fff;\n    border: 1px solid #e1e1e1; /* Bordure grise fine */\n    border-radius: 12px; /* Coins arrondis */\n    padding: 20px;\n    max-width: 700px; /* Largeur max pour que ça ne soit pas trop étiré */\n    width: 95%;\n    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Ombre légère */\n    gap: 20px;\n  }\n\n  /* --- IMAGE --- */\n  .doctor-image {\n    flex-shrink: 0;\n  }\n\n  .doctor-image img {\n    width: 70px;\n    height: 70px;\n    border-radius: 50%; /* Image ronde */\n    object-fit: cover;\n    display: block;\n  }\n\n  /* --- CONTENU --- */\n  .doctor-content {\n    display: flex;\n    flex-direction: column;\n    gap: 8px;\n    text-align: left;\n  }\n\n  /* --- ETOILES --- */\n  .doctor-stars {\n    display: flex;\n    gap: 2px;\n  }\n\n  /* --- TEXTE --- */\n  .doctor-quote {\n    font-family: 'Montserrat', sans-serif;\n    font-size: 15px;\n    line-height: 1.5;\n    font-style: italic; /* Texte en italique */\n    color: #333;\n    margin: 5px 0 10px;\n  }\n\n  /* --- BADGE & NOM --- */\n  .doctor-badge {\n    display: flex;\n    align-items: center;\n    gap: 6px;\n  }\n\n  .doctor-name {\n    font-family: 'Montserrat', sans-serif;\n    font-weight: 700; /* Gras */\n    font-size: 16px;\n    color: #000;\n  }\n\n  /* --- RESPONSIVE MOBILE --- */\n  @media (max-width: 600px) {\n    .doctor-card {\n      flex-direction: column; /* Empile l'image et le texte sur mobile */\n      align-items: center;\n      text-align: center;\n    }\n\n    .doctor-content {\n      align-items: center; /* Centre le texte */\n      text-align: center;\n    }\n  }\n</style>"
-          }
-        },
-        "collapsible_text_gnfhkY": {
-          "type": "collapsible_text",
-          "settings": {
-            "title": "Ingrédients & Composition",
-            "content": "<p><strong>Ce qui fond dans votre peau, pas sur elle</strong></p><p>Notre formule Evena est pensée pour les peaux matures qui méritent mieux qu'un simple maquillage. Elle nourrit, protège et s'adapte pendant que vous la portez. Résultat : votre peau respire, vos ridules restent souples, et personne ne voit que vous êtes maquillée.</p><p><strong>Les ingrédients qui font la différence :</strong></p><ul><li><strong>Gentiane Scabra</strong> : Adoucit les ridules de l'intérieur</li><li><strong>Acide Hyaluronique</strong> : Gorge votre peau d'hydratation toute la journée</li><li><strong>Vitamine E</strong> : Maintient votre peau souple et résistante</li><li><strong>Racine d'Ophiopogon</strong> : Apaise les rougeurs et répare votre peau</li><li><strong>Protection SPF50</strong> : Bouclier invisible contre le vieillissement</li></ul><p>Liste complète des ingrédients (INCI) : Aqua, Cyclopentasiloxane, Glycerin, CI 77891, C12-15 Alkyl Benzoate, Ethylhexyl Palmitate, Dimethicone, Sorbitol, Propylene Glycol, Caprylic/Capric Triglyceride, Ethylhexyl Methoxycinnamate, Titanium Dioxide, Lauryl PEG-10 Tris(Trimethylsiloxy) Silylethyl Dimethicone, Petrolatum Synthetic Fluorphlogopite, Magnesium Sulfate, Tridecyl Trimellitate, Polyglyceryl-3 Diisostearate, Pentylene Glycol, Tocopherol, Gentiana Scabra Extract, Bisabolol, Opuntia Streptacantha Stem Extract, Trehalose, Sophora Flavescens Root Extract, Sodium Hyaluronate, Ophiopogon Japonicus Root Extract, Hydroxyacetophenone, CI 77492, Magnesium Stearate, Ethoxydiglycol, Quaternium-18 Bentonite, Dimethiconol, Dimethicone Crosspolymer, Mn Sesquioleate, Silica, Stearic Acid, PEG-10 Dimethicone, Polyglyceryl-4 Isostearate, Methicone, BHT.</p>"
-          }
-        },
-        "collapsible_text_VEyJMx": {
-          "type": "collapsible_text",
-          "settings": {
-            "title": "Mode d'emploi",
-            "content": "<p>Déposez quelques gouttes au centre de votre visage. Étalez du bout des doigts, au pinceau ou à l'éponge - comme vous préférez.</p><p>Regardez la magie opérer : le fond de teint change de teinte au contact de votre peau pour s'adapter à VOTRE carnation exacte. Plus vous l'étalez, plus il devient invisible.</p><p>Une première couche légère suffit pour unifier. Besoin de camoufler davantage ? Ajoutez une seconde couche sur les zones concernées. Votre peau respire, vos ridules restent souples, et personne ne voit que vous êtes maquillée</p>"
-          }
-        },
-        "collapsible_text_kwYVze": {
-          "type": "collapsible_text",
-          "settings": {
-            "title": "Livraison et Retours",
-            "content": "<p><strong>📦 EXPÉDITION & LIVRAISON</strong></p><p><strong>Traitement de votre commande</strong><br/><br/>Toutes les commandes sont traitées et expédiées sous 24 à 48 heures ouvrées. Vous recevez une confirmation d'expédition par email avec votre numéro de suivi.</p><p><strong>Délai de livraison</strong><br/><br/>Comptez entre 7 et 11 jours ouvrés à partir de l'expédition, selon votre pays de destination et les services postaux locaux.</p><p><strong>Suivi de commande</strong><br/><br/>Un lien de suivi vous est automatiquement envoyé dès le départ de votre colis pour suivre votre livraison en temps réel.</p><p><strong>🔄 RETOURS & ÉCHANGES</strong></p><p><strong>Politique de satisfaction (30 jours)</strong><br/><br/>Vous disposez de 30 jours calendaires à compter de la réception de votre commande pour retourner ou échanger tout produit qui ne vous convient pas.</p><p><strong>Conditions de retour</strong><br/><br/>Le produit doit être retourné dans son emballage d'origine, non ouvert et non utilisé. Les frais de retour sont à la charge du client.</p>"
+            "liquid": "<div class=\"fr\"><p class=\"fr-buytrust\">integratore alimentare · zinco + 7 estratti · nessun abbonamento</p></div>"
           }
         }
       },
       "block_order": [
-        "liquid_dkxbrk",
+        "proof",
         "title",
-        "liquid_k3tm9a",
-        "liquid_rNwF9j",
-        "payment_terms",
-        "variant_picker",
+        "price",
+        "benefits",
         "buy_buttons",
-        "image_qVyMnK",
-        "image_tBqHrz",
-        "liquid_M4KcBN",
-        "liquid_R3Y6T6",
-        "collapsible_text_gnfhkY",
-        "collapsible_text_VEyJMx",
-        "collapsible_text_kwYVze"
+        "underbtn",
+        "buytrust"
       ],
       "settings": {
-        "full_width": true,
         "show_fixed_add_to_cart": true,
-        "desktop_media_width": 55,
-        "desktop_media_layout": "grid_highlight",
-        "mobile_media_size": "expanded",
-        "mobile_carousel_control": "thumbnails",
-        "enable_video_autoplay": false,
-        "enable_video_looping": true,
         "enable_image_zoom": true,
-        "max_image_zoom_level": 3.5,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "input_background": "rgba(0,0,0,0)",
-        "input_text_color": ""
+        "desktop_media_layout": "grid"
       }
     },
-    "logo_list_NwHyJ6": {
-      "type": "logo-list",
+    "s1_punto": {
+      "type": "freos-editorial",
       "blocks": {
-        "logo_NnngXg": {
-          "type": "logo",
+        "s1_00_testimonial": {
+          "type": "testimonial",
           "settings": {
-            "logo": "shopify://shop_images/4_83111e8b-e49f-49ae-8c12-6169372184fc.png",
-            "logo_width": 300,
-            "link": ""
+            "quote": "Ho speso così tanti soldi in cicche.",
+            "source": "Commento pubblico italiano · id 3d57b7f96395",
+            "badge": "Corpus",
+            "story": false
           }
         },
-        "logo_hUiz8i": {
-          "type": "logo",
+        "s1_01_kicker": {
+          "type": "kicker",
           "settings": {
-            "logo": "shopify://shop_images/5_24e49722-ed6a-4ced-8cc0-a66998b78ef2.png",
-            "logo_width": 300,
-            "link": ""
+            "text": "Il punto"
           }
         },
-        "logo_NbBJVc": {
-          "type": "logo",
+        "s1_02_heading": {
+          "type": "heading",
           "settings": {
-            "logo": "shopify://shop_images/image_1_300x300_ab4e7b96-f093-4370-9db2-2d47aca95754.png",
-            "logo_width": 300,
-            "link": ""
+            "text": "Smettere di controllare."
           }
         },
-        "logo_wNbWFd": {
-          "type": "logo",
+        "s1_03_paragraph": {
+          "type": "paragraph",
           "settings": {
-            "logo": "shopify://shop_images/ELLE_Magazine_Logo_svg.png",
-            "logo_width": 300,
-            "link": ""
+            "text": "<p>C'è una cosa che stanca più dell'odore: il fatto di non poterlo verificare. La mano che sale a metà frase. Il mezzo passo indietro. La mentina offerta un secondo prima del necessario.</p><p>Nessuno di questi gesti l'hai deciso.</p><p>FREOS non ti promette il giorno in cui smetterai di controllarti — nessuno può prometterlo. Ti propone una cosa più piccola e più concreta: <strong>un gesto fisso, la sera, che chiude la giornata.</strong></p>"
           }
         }
       },
       "block_order": [
-        "logo_NnngXg",
-        "logo_hUiz8i",
-        "logo_NbBJVc",
-        "logo_wNbWFd"
+        "s1_00_testimonial",
+        "s1_01_kicker",
+        "s1_02_heading",
+        "s1_03_paragraph"
       ],
-      "name": "Logo list",
       "settings": {
-        "full_width": true,
-        "stack_mobile": false,
-        "title": "",
-        "content": "<h4>Ils parlent de nous</h4>",
-        "text_alignment": "center",
-        "items_per_row": 4,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "logo_item_background": "",
-        "logo_item_border": ""
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 64,
+        "padding_bottom": 48
       }
     },
-    "custom_liquid_PQaRy7": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<style>\n  :root {\n    --background-color: #fffefd;\n    --text-color: #484848;\n    --accent-color: #F1E5DD;\n    --card-bg: #fffefd;\n    --image-bg: #F1E5DD;\n    --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;\n    --font-accent: 'Instrument Serif', Georgia, serif;\n    --card-border-radius: 12px;\n    --number-size: 40px;\n  }\n\n  .steps-section {\n    max-width: 1200px;\n    margin: 0 auto;\n    padding: 60px 20px;\n  }\n\n  .section-title {\n    text-align: center;\n    font-size: 38px;\n    font-weight: 400;\n    color: var(--text-color);\n    margin-bottom: 40px;\n    letter-spacing: -0.5px;\n  }\n\n  .accent-text {\n    display: block;\n    font-family: var(--font-accent);\n    font-style: italic;\n    font-weight: 300;\n    color: #D4A574;\n    text-transform: lowercase;\n    font-size: 0.95em;\n    margin-top: 4px;\n  }\n\n  .steps-container-desktop {\n    display: none;\n  }\n\n  @media (min-width: 769px) {\n    .steps-container-desktop {\n      display: grid;\n      grid-template-columns: repeat(4, 1fr);\n      gap: 20px;\n    }\n\n    .steps-container-mobile {\n      display: none;\n    }\n  }\n\n  .step-card {\n    background: var(--card-bg);\n    border: 1px dashed var(--accent-color);\n    border-radius: var(--card-border-radius);\n    overflow: hidden;\n  }\n\n  .step-image-container {\n    background-color: var(--image-bg);\n    aspect-ratio: 1 / 1.1;\n    overflow: hidden;\n  }\n\n  .step-image {\n    width: 100%;\n    height: 100%;\n    object-fit: cover;\n  }\n\n  .step-content {\n    padding: 20px 16px;\n    background: var(--card-bg);\n  }\n\n  .step-title-container {\n    display: flex;\n    align-items: center;\n    gap: 12px;\n    margin-bottom: 12px;\n  }\n\n  .number-icon {\n    width: var(--number-size);\n    height: var(--number-size);\n    min-width: var(--number-size);\n    border: 2px solid #D4A574;\n    border-radius: 50%;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-weight: 600;\n    font-size: 18px;\n    color: var(--text-color);\n    background: var(--card-bg);\n  }\n\n  .step-title {\n    font-size: 18px;\n    font-weight: 500;\n    color: var(--text-color);\n  }\n\n  .step-description {\n    font-size: 13px;\n    color: var(--text-color);\n    line-height: 1.5;\n    font-weight: 400;\n  }\n\n  @media (max-width: 768px) {\n    .section-title {\n      font-size: 28px;\n      margin-bottom: 30px;\n      padding: 0 15px;\n    }\n\n    .steps-container-mobile {\n      position: relative;\n      overflow: hidden;\n      padding: 0 15px;\n    }\n\n    .carousel-track {\n      display: flex;\n      transition: transform 0.4s ease;\n    }\n\n    .carousel-slide {\n      min-width: 100%;\n      padding: 0;\n    }\n\n    .step-card {\n      max-width: 100%;\n      margin: 0 auto;\n    }\n\n    .step-image-container {\n      aspect-ratio: 1 / 1.05;\n    }\n\n    .step-content {\n      padding: 20px 16px 24px;\n    }\n\n    .number-icon {\n      width: 50px;\n      height: 50px;\n      min-width: 50px;\n      font-size: 20px;\n    }\n\n    .step-title {\n      font-size: 20px;\n      font-weight: 600;\n    }\n\n    .step-description {\n      font-size: 14px;\n      line-height: 1.6;\n    }\n\n    .carousel-navigation {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      gap: 16px;\n      margin-top: 30px;\n    }\n\n    .nav-button {\n      width: 56px;\n      height: 56px;\n      border-radius: 50%;\n      border: none;\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      cursor: pointer;\n      transition: all 0.2s ease;\n    }\n\n    .nav-button.prev {\n      background: var(--card-bg);\n      color: var(--text-color);\n      border: 1px solid #f0f0f0;\n    }\n\n    .nav-button.next {\n      background: #D4A574;\n      color: var(--card-bg);\n    }\n\n    .nav-button:disabled {\n      opacity: 0.5;\n      cursor: not-allowed;\n    }\n\n    .nav-button svg {\n      width: 24px;\n      height: 24px;\n    }\n  }\n\n  @media (min-width: 769px) {\n    .carousel-navigation {\n      display: none;\n    }\n  }\n</style>\n\n<section class=\"steps-section\">\n  <h2 class=\"section-title\">\n    Comment utiliser le\n    <span class=\"accent-text\">fond de teint adaptatif</span>\n  </h2>\n\n  <div class=\"steps-container-desktop\">\n    <div class=\"step-card\">\n      <div class=\"step-image-container\">\n        <img class=\"step-image\" src=\"https://myeclera.com/cdn/shop/files/1_f219f9ba-b888-4423-ae19-8b07f7c7580c.webp?v=1768361404&width=618\" alt=\"Étape 1\">\n      </div>\n      <div class=\"step-content\">\n        <div class=\"step-title-container\">\n          <div class=\"number-icon\">1</div>\n          <h3 class=\"step-title\">Étape 1</h3>\n        </div>\n        <p class=\"step-description\">Appliquez la base Evena pour lisser la peau et la préparer.</p>\n      </div>\n    </div>\n\n    <div class=\"step-card\">\n      <div class=\"step-image-container\">\n        <img class=\"step-image\" src=\"https://myeclera.com/cdn/shop/files/2_d494b6ea-0db8-4fcf-b04e-ea778a2c169e.webp?v=1768361403&width=618\" alt=\"Étape 2\">\n      </div>\n      <div class=\"step-content\">\n        <div class=\"step-title-container\">\n          <div class=\"number-icon\">2</div>\n          <h3 class=\"step-title\">Étape 2</h3>\n        </div>\n        <p class=\"step-description\">Déposez une petite quantité de Fond de teint 4-en-1 sur le dos de la main.</p>\n      </div>\n    </div>\n\n    <div class=\"step-card\">\n      <div class=\"step-image-container\">\n        <img class=\"step-image\" src=\"https://myeclera.com/cdn/shop/files/3_5cf6b63f-d294-40eb-a10c-472428dbb4a8.webp?v=1768361404&width=618\" alt=\"Étape 3\">\n      </div>\n      <div class=\"step-content\">\n        <div class=\"step-title-container\">\n          <div class=\"number-icon\">3</div>\n          <h3 class=\"step-title\">Étape 3</h3>\n        </div>\n        <p class=\"step-description\">Appliquez du centre du visage vers l'extérieur, à l'aide d'un pinceau ou des doigts.</p>\n      </div>\n    </div>\n\n    <div class=\"step-card\">\n      <div class=\"step-image-container\">\n        <img class=\"step-image\" src=\"https://myeclera.com/cdn/shop/files/4.gif?v=1768361411&width=618\" alt=\"Étape 4\">\n      </div>\n      <div class=\"step-content\">\n        <div class=\"step-title-container\">\n          <div class=\"number-icon\">4</div>\n          <h3 class=\"step-title\">Étape 4</h3>\n        </div>\n        <p class=\"step-description\">Utilisez une fine couche pour un rendu naturel, puis ajoutez une couche sur les zones à couvrir si nécessaire.</p>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"steps-container-mobile\">\n    <div class=\"carousel-track\" id=\"carouselTrack\">\n      <div class=\"carousel-slide\">\n        <div class=\"step-card\">\n          <div class=\"step-image-container\">\n            <img class=\"step-image\" src=\"https://myeclera.com/cdn/shop/files/1_f219f9ba-b888-4423-ae19-8b07f7c7580c.webp?v=1768361404&width=618\" alt=\"Étape 1\">\n          </div>\n          <div class=\"step-content\">\n            <div class=\"step-title-container\">\n              <div class=\"number-icon\">1</div>\n              <h3 class=\"step-title\">Étape 1</h3>\n            </div>\n            <p class=\"step-description\">Appliquez la base Evana pour lisser la peau et la préparer.</p>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"carousel-slide\">\n        <div class=\"step-card\">\n          <div class=\"step-image-container\">\n            <img class=\"step-image\" src=\"https://myeclera.com/cdn/shop/files/2_d494b6ea-0db8-4fcf-b04e-ea778a2c169e.webp?v=1768361403&width=618\" alt=\"Étape 2\">\n          </div>\n          <div class=\"step-content\">\n            <div class=\"step-title-container\">\n              <div class=\"number-icon\">2</div>\n              <h3 class=\"step-title\">Étape 2</h3>\n            </div>\n            <p class=\"step-description\">Déposez une petite quantité de Fond de teint 4-en-1 sur le dos de la main.</p>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"carousel-slide\">\n        <div class=\"step-card\">\n          <div class=\"step-image-container\">\n            <img class=\"step-image\" src=\"https://myeclera.com/cdn/shop/files/3_5cf6b63f-d294-40eb-a10c-472428dbb4a8.webp?v=1768361404&width=618\" alt=\"Étape 3\">\n          </div>\n          <div class=\"step-content\">\n            <div class=\"step-title-container\">\n              <div class=\"number-icon\">3</div>\n              <h3 class=\"step-title\">Étape 3</h3>\n            </div>\n            <p class=\"step-description\">Appliquez du centre du visage vers l'extérieur, à l'aide d'un pinceau ou des doigts.</p>\n          </div>\n        </div>\n      </div>\n\n      <div class=\"carousel-slide\">\n        <div class=\"step-card\">\n          <div class=\"step-image-container\">\n            <img class=\"step-image\" src=\"https://myeclera.com/cdn/shop/files/4.gif?v=1768361411&width=618\" alt=\"Étape 4\">\n          </div>\n          <div class=\"step-content\">\n            <div class=\"step-title-container\">\n              <div class=\"number-icon\">4</div>\n              <h3 class=\"step-title\">Étape 4</h3>\n            </div>\n            <p class=\"step-description\">Utilisez une fine couche pour un rendu naturel, puis ajoutez une couche sur les zones à couvrir si nécessaire.</p>\n          </div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"carousel-navigation\">\n      <button class=\"nav-button prev\" id=\"prevBtn\" disabled>\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\">\n          <polyline points=\"15 18 9 12 15 6\"></polyline>\n        </svg>\n      </button>\n      <button class=\"nav-button next\" id=\"nextBtn\">\n        <svg xmlns=\"http://www.w3.org/2000/svg\" fill=\"none\" viewBox=\"0 0 24 24\" stroke=\"currentColor\" stroke-width=\"2\">\n          <polyline points=\"9 18 15 12 9 6\"></polyline>\n        </svg>\n      </button>\n    </div>\n  </div>\n</section>\n\n<script>\n  const track = document.getElementById('carouselTrack');\n  const prevBtn = document.getElementById('prevBtn');\n  const nextBtn = document.getElementById('nextBtn');\n  const totalSlides = 4;\n  let currentSlide = 0;\n\n  function updateCarousel() {\n    track.style.transform = `translateX(-${currentSlide * 100}%)`;\n    prevBtn.disabled = currentSlide === 0;\n    nextBtn.disabled = currentSlide === totalSlides - 1;\n    \n    if (currentSlide === 0) {\n      prevBtn.style.opacity = '0.5';\n    } else {\n      prevBtn.style.opacity = '1';\n    }\n    \n    if (currentSlide === totalSlides - 1) {\n      nextBtn.style.opacity = '0.5';\n    } else {\n      nextBtn.style.opacity = '1';\n    }\n  }\n\n  prevBtn.addEventListener('click', () => {\n    if (currentSlide > 0) {\n      currentSlide--;\n      updateCarousel();\n    }\n  });\n\n  nextBtn.addEventListener('click', () => {\n    if (currentSlide < totalSlides - 1) {\n      currentSlide++;\n      updateCarousel();\n    }\n  });\n\n  let touchStartX = 0;\n  let touchEndX = 0;\n\n  track.addEventListener('touchstart', (e) => {\n    touchStartX = e.changedTouches[0].screenX;\n  }, { passive: true });\n\n  track.addEventListener('touchend', (e) => {\n    touchEndX = e.changedTouches[0].screenX;\n    handleSwipe();\n  }, { passive: true });\n\n  function handleSwipe() {\n    const swipeThreshold = 50;\n    const diff = touchStartX - touchEndX;\n    \n    if (diff > swipeThreshold && currentSlide < totalSlides - 1) {\n      currentSlide++;\n      updateCarousel();\n    } else if (diff < -swipeThreshold && currentSlide > 0) {\n      currentSlide--;\n      updateCarousel();\n    }\n  }\n\n  updateCarousel();\n</script>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "custom_liquid_Whb9Yr": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "custom_liquid_x7qCT9": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<div class=\"custom-trust-section\">\n  <div class=\"trust-content-wrapper\">\n    \n    <h2>Nos clientes en parlent le mieux</h2>\n\n    <div class=\"trust-rating-text\">\n      <span>Excellent</span>\n      <span class=\"rating-number\">4.8</span>\n      <span>/ 5</span>\n    </div>\n\n    <div class=\"trust-stars\">\n      <svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"32\" height=\"32\" fill=\"#00b67a\"></rect><path d=\"M9.2 27L16 21.8 22.8 27l-2.6-8.4L27 13.4h-8.4L16 5l-2.6 8.4H5l6.8 5.2L9.2 27z\" fill=\"#fff\"></path></svg>\n      <svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"32\" height=\"32\" fill=\"#00b67a\"></rect><path d=\"M9.2 27L16 21.8 22.8 27l-2.6-8.4L27 13.4h-8.4L16 5l-2.6 8.4H5l6.8 5.2L9.2 27z\" fill=\"#fff\"></path></svg>\n      <svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"32\" height=\"32\" fill=\"#00b67a\"></rect><path d=\"M9.2 27L16 21.8 22.8 27l-2.6-8.4L27 13.4h-8.4L16 5l-2.6 8.4H5l6.8 5.2L9.2 27z\" fill=\"#fff\"></path></svg>\n      <svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"32\" height=\"32\" fill=\"#00b67a\"></rect><path d=\"M9.2 27L16 21.8 22.8 27l-2.6-8.4L27 13.4h-8.4L16 5l-2.6 8.4H5l6.8 5.2L9.2 27z\" fill=\"#fff\"></path></svg>\n      <svg viewBox=\"0 0 32 32\" xmlns=\"http://www.w3.org/2000/svg\"><rect width=\"32\" height=\"32\" fill=\"#00b67a\"></rect><path d=\"M9.2 27L16 21.8 22.8 27l-2.6-8.4L27 13.4h-8.4L16 5l-2.6 8.4H5l6.8 5.2L9.2 27z\" fill=\"#fff\"></path></svg>\n    </div>\n\n  </div>\n</div>\n\n<style>\n  /* Conteneur principal */\n  .custom-trust-section {\n    padding: 20px 10px;\n    background-color: transparent; /* Fond transparent */\n    text-align: center;\n    width: 100%;\n  }\n\n  .trust-content-wrapper {\n    max-width: 1200px;\n    margin: 0 auto;\n  }\n\n  /* Style du Titre */\n  .custom-trust-section h2 {\n    font-size: 24px;\n    font-weight: 700;\n    margin: 0 0 10px 0;\n    color: #1a1a1a; /* Couleur du texte (ici noir foncé) */\n    line-height: 1.2;\n    font-family: inherit;\n  }\n\n  /* Style du texte \"Excellent 4.8 / 5\" */\n  .trust-rating-text {\n    font-size: 18px;\n    color: #1a1a1a; /* Couleur du texte */\n    margin-bottom: 12px;\n    font-family: inherit;\n  }\n\n  .trust-rating-text .rating-number {\n    font-weight: bold;\n  }\n\n  /* Conteneur des étoiles */\n  .trust-stars {\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    gap: 6px;\n  }\n\n  /* Taille des icônes SVG */\n  .trust-stars svg {\n    width: 24px;\n    height: 24px;\n    display: block;\n  }\n  \n  /* Ajustement mobile */\n  @media (max-width: 768px) {\n    .custom-trust-section h2 {\n      font-size: 20px;\n    }\n  }\n</style>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "images_with_text_scrolling_fxGTtX": {
-      "type": "images-with-text-scrolling",
+    "s2_categoria": {
+      "type": "freos-editorial",
       "blocks": {
-        "item_LpbAKH": {
-          "type": "item",
+        "s2_00_kicker": {
+          "type": "kicker",
           "settings": {
-            "image": "shopify://shop_images/1762749193__img_0071__original.jpg",
-            "icon": "none",
-            "icon_width": 48,
-            "title": "",
-            "content": "<p><strong>Laurence P. 54 ans</strong> ⭐⭐⭐⭐⭐<br/><br/>Depuis la ménopause, ma peau fait n'importe quoi : rougeurs, sécheresse, taches. Celui-là s'adapte à tout ça. Application facile, couvre bien, et ma peau respire. </p><p>Les femmes de mon âge comprendront : c'est rare de trouver un fond de teint qui nous convient vraiment.<br/><br/>.<br/><br/></p>"
+            "text": "La categoria"
           }
         },
-        "item_hMMm9z": {
-          "type": "item",
+        "s2_01_heading": {
+          "type": "heading",
           "settings": {
-            "image": "shopify://shop_images/3_f72bb6f3-8460-464c-a277-e08e8448b9a0.png",
-            "icon": "none",
-            "icon_width": 48,
-            "title": "",
-            "content": "<p><strong>Claire B., 47 ans</strong> ⭐⭐⭐⭐⭐</p><p><br/>J'ai au moins 5 flacons qui prennent la poussière chez moi. Tous ratés. Celui-là, je l'ai terminé en 2 mois. Il tient toute la journée sans retouche, ma peau tire pas, et aucun effet brillant à midi. </p><p>J'en ai déjà racheté deux. À 47 ans, j'ai plus envie de tester : j'ai trouvé le bon.<br/><br/></p>"
+            "text": "Passano sulla superficie. Il fondo resta dov'è."
           }
         },
-        "item_4zaatV": {
-          "type": "item",
+        "s2_02_paragraph": {
+          "type": "paragraph",
           "settings": {
-            "image": "shopify://shop_images/1742229740__0__cOjbDcsV__-UO9bAQ-z__original.jpg",
-            "icon": "none",
-            "icon_width": 48,
-            "title": "",
-            "content": "<p><strong>Sylvie G., 58 ans</strong> ⭐⭐⭐⭐⭐<br/><br/>Ma fille m'a surprise hier : 'Maman, ta peau est trop belle, t'as fait quoi ?' Elle savait même pas que j'étais maquillée. Première fois qu'elle me complimente sans que je lui demande.</p><p>Ce fond de teint a changé mes matinées, mais surtout ma confiance devant elle.</p>"
+            "text": "<p>Lo spazzolino pulisce i denti e la parte davanti della lingua. Il collutorio risciacqua. La gomma lavora finché la mastichi.</p><p>Il punto è che la parte che conta è più indietro — e più indietro vai, più il riflesso si chiude.</p>"
           }
         },
-        "item_mH8bUB": {
-          "type": "item",
+        "s2_03_mirror": {
+          "type": "mirror",
           "settings": {
-            "image": "shopify://shop_images/2_9c3e93d9-844b-4a5e-9625-3f08d74235c7.png",
-            "icon": "none",
-            "icon_width": 24,
-            "title": "",
-            "content": "<p><strong>Isabelle R. 60 ans</strong> ⭐⭐⭐⭐⭐</p><p>Franchement, commander un fond de teint en ligne sans l'avoir testé, j'étais sceptique. J'ai toujours galéré à trouver ma teinte même en magasin. </p><p>Mais là... il a fondu dans ma peau comme par magie. Zéro trace au niveau du cou, zéro effet masque.</p>"
+            "quote": "<p>Mi lavo i denti e dopo 20 minuti è di nuovo cattivo, prendo una gomma ma dopo un po' è di nuovo cattivo. Perché e come posso fare?</p>",
+            "source": "Commento pubblico italiano · id 60a1492975d8"
+          }
+        },
+        "s2_04_mirror": {
+          "type": "mirror",
+          "settings": {
+            "quote": "<p>Il collutorio per me è acqua fresca.</p>",
+            "source": "Commento pubblico italiano · id 9a1b16b1b4b4"
+          }
+        },
+        "s2_05_callout": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>In uno studio su 123 persone, anche una gomma <strong>senza principi attivi</strong> abbassava i composti solforati alla fine della masticazione. Un'ora dopo, l'effetto era quasi sparito.</p><p><em>Porciani PF, Grandini S. · J Clin Dent 2012 · PMID 23210417</em></p>"
+          }
+        },
+        "s2_06_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Leggilo due volte: <strong>senza principi attivi.</strong> Non era il mentolo a lavorare. Era il fatto di masticare.</p>"
           }
         }
       },
       "block_order": [
-        "item_LpbAKH",
-        "item_hMMm9z",
-        "item_4zaatV",
-        "item_mH8bUB"
+        "s2_00_kicker",
+        "s2_01_heading",
+        "s2_02_paragraph",
+        "s2_03_mirror",
+        "s2_04_mirror",
+        "s2_05_callout",
+        "s2_06_paragraph"
       ],
-      "name": "Images and text scrolling",
       "settings": {
-        "full_width": true,
-        "stack_on_mobile": false,
-        "show_counter": false,
-        "desktop_image_effect": "reveal",
-        "image_position": "end",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": ""
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
-    "custom_liquid_7QJBbx": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<section class=\"silk-benefits-section\">\n  \n  <div class=\"silk-benefits-content\">\n    <h2 class=\"silk-benefits-title\">\n      Un fond de teint qui nourrit pendant qu'il <span class=\"highlight\">camoufle</span>\n    </h2>\n    <div class=\"silk-benefits-description\">\n      <p>Les fonds de teint classiques font juste de la couverture. Comme un pansement sur une plaie : ça cache, mais ça soigne pas.</p>\n      <p>Le nôtre, c'est différent. Il camoufle vos imperfections, oui. Mais en même temps, il hydrate votre peau qui s'assèche à cause de la ménopause.</p>\n      <p>Grâce à sa texture légère, il pénètre au lieu de rester en surface. <strong>Résultat ? Le soir, votre peau est mieux qu'au réveil.</strong></p>\n    </div>\n  </div>\n\n  <div class=\"silk-benefits-media\">\n    <video autoplay loop muted playsinline>\n      <source src=\"https://cdn.shopify.com/videos/c/o/v/0f4fd67e69cb4c7bb598a61045cf1da1.mp4\" type=\"video/mp4\">\n      Votre navigateur ne supporte pas la vidéo.\n    </video>\n  </div>\n\n</section>\n\n<style>\n  /* --- MISE EN PAGE GÉNÉRALE --- */\n  .silk-benefits-section {\n    display: flex;\n    align-items: center; /* Centre verticalement */\n    justify-content: space-between;\n    gap: 60px; /* Espace entre texte et vidéo */\n    padding: 60px 20px;\n    max-width: 1200px;\n    margin: 0 auto;\n    background-color: #fff; /* Fond blanc */\n  }\n\n  /* --- PARTIE TEXTE --- */\n  .silk-benefits-content {\n    flex: 1; /* Prend 50% de l'espace */\n    max-width: 550px;\n  }\n\n  .silk-benefits-title {\n    font-size: 32px;\n    line-height: 1.2;\n    font-weight: 700;\n    margin-bottom: 20px;\n    color: #1a1a1a;\n    font-family: inherit; /* Garde la police de ton thème */\n  }\n\n  /* Effet surligneur gris optionnel (comme sur ta photo) */\n  .silk-benefits-title .highlight {\n    background-color: #e5e7eb; /* Gris clair */\n    padding: 0 5px;\n  }\n\n  .silk-benefits-description p {\n    font-size: 18px;\n    line-height: 1.6;\n    color: #4a4a4a;\n    margin-bottom: 15px;\n    font-family: inherit;\n  }\n\n  .silk-benefits-description strong {\n    color: #000;\n    font-weight: 600;\n  }\n\n  /* --- PARTIE VIDÉO/IMAGE --- */\n  .silk-benefits-media {\n    flex: 1; /* Prend 50% de l'espace */\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n\n  .silk-benefits-media video {\n    width: 100%;\n    height: auto;\n    border-radius: 12px; /* Coins arrondis */\n    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Légère ombre pour le relief */\n    display: block;\n  }\n\n  /* --- RESPONSIVE (MOBILE) --- */\n  @media (max-width: 900px) {\n    .silk-benefits-section {\n      flex-direction: column; /* Empile le texte et la vidéo */\n      padding: 40px 20px;\n      gap: 30px;\n      text-align: left;\n    }\n\n    .silk-benefits-content {\n      max-width: 100%;\n    }\n\n    .silk-benefits-title {\n      font-size: 26px;\n    }\n    \n    .silk-benefits-description p {\n      font-size: 16px;\n    }\n  }\n</style>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "custom_liquid_LqazCe": {
-      "type": "custom-liquid",
-      "name": "Custom Liquid",
-      "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "liquid": "<section class=\"ingredients-section\">\n  \n  <div class=\"ingredients-header\">\n    <span class=\"subtitle\">Six Ingrédients</span>\n    <h2 class=\"title\">Que votre peau va adorer</h2>\n  </div>\n\n  <div class=\"ingredients-grid\">\n    \n    <div class=\"ing-col side-col left-align\">\n      \n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/c2c53b58-af83-4267-a82d-96a6e39cdf6a\" loading=\"lazy\" alt=\"Gentiana Scabra\">\n        <div class=\"ing-text\">\n          <h3>Gentiana Scabra</h3>\n          <p>Réveille l'éclat naturel de votre peau.</p>\n        </div>\n      </div>\n\n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/bf5464bd-fcd9-4d80-95d4-9d7f39936fdb\" loading=\"lazy\" alt=\"Acide Hyaluronique\">\n        <div class=\"ing-text\">\n          <h3>Acide Hyaluronique</h3>\n          <p>Maintient votre peau repulpée et hydratée toute la journée.</p>\n        </div>\n      </div>\n\n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/00deb148-a6cb-4451-a35c-12571e969e76\" loading=\"lazy\" alt=\"Vitamine E\">\n        <div class=\"ing-text\">\n          <h3>Vitamine E</h3>\n          <p>Protège votre peau de la pollution et du stress quotidien.</p>\n        </div>\n      </div>\n\n    </div>\n\n    <div class=\"ing-col center-col\">\n      <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/c64d8665-9937-48e8-9e66-7c7bff3f6e07\" loading=\"lazy\" class=\"main-product-img\" alt=\"Texture fond de teint\">\n    </div>\n\n    <div class=\"ing-col side-col right-align\">\n      \n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/5c75c3cb-6a98-40d7-8046-3f42d9971ff8\" loading=\"lazy\" alt=\"SPF 50+\">\n        <div class=\"ing-text\">\n          <h3>SPF 50+</h3>\n          <p>Bouclier anti-UV intégré pour protéger votre peau chaque jour.</p>\n        </div>\n      </div>\n\n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/fd454942-caf3-4b35-99fe-eeca615ab62a\" loading=\"lazy\" alt=\"Bisabolol\">\n        <div class=\"ing-text\">\n          <h3>Bisabolol</h3>\n          <p>S'adapte à votre carnation exacte.</p>\n        </div>\n      </div>\n\n      <div class=\"ing-item\">\n        <img src=\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/696cd210-61e9-41fd-b5a4-6ad63e09634f\" loading=\"lazy\" alt=\"Racine de Japonicas\">\n        <div class=\"ing-text\">\n          <h3>Racine de Japonicas</h3>\n          <p>Apaise les rougeurs et calme les peaux réactives.</p>\n        </div>\n      </div>\n\n    </div>\n  </div>\n\n</section>\n\n<style>\n  /* --- CONTENEUR GLOBAL --- */\n  .ingredients-section {\n    padding: 60px 20px;\n    /* Image de fond texturée originale */\n    background-image: url(\"https://assets.replocdn.com/projects/66b0a60c-a400-407c-9a2d-5f935904a0d4/7b034671-2843-4d5b-a4c5-b702f2ea6cab\");\n    background-size: cover;\n    background-position: center;\n    color: #1a1a1a;\n    font-family: inherit;\n    text-align: center;\n  }\n\n  /* --- HEADER --- */\n  .ingredients-header {\n    margin-bottom: 40px;\n  }\n\n  .ingredients-header .subtitle {\n    display: block;\n    font-size: 16px;\n    text-transform: uppercase;\n    letter-spacing: 2px;\n    margin-bottom: 10px;\n    color: #4a4a4a;\n  }\n\n  .ingredients-header .title {\n    font-size: 36px;\n    font-weight: 700;\n    margin: 0;\n    line-height: 1.2;\n  }\n\n  /* --- GRILLE (Layout 3 colonnes) --- */\n  .ingredients-grid {\n    display: grid;\n    grid-template-columns: 1fr 1fr 1fr; /* 3 colonnes égales */\n    gap: 20px;\n    max-width: 1200px;\n    margin: 0 auto; /* Centré, plus de marge bottom excessive */\n    align-items: center;\n  }\n\n  /* Colonnes latérales */\n  .ing-col.side-col {\n    display: flex;\n    flex-direction: column;\n    gap: 30px;\n  }\n\n  /* Style des items ingrédients */\n  .ing-item {\n    display: flex;\n    align-items: center;\n    gap: 15px;\n    background: rgba(255, 255, 255, 0.6); /* Fond blanc léger pour lisibilité */\n    padding: 10px;\n    border-radius: 12px;\n  }\n\n  .ing-item img {\n    width: 60px;\n    height: 60px;\n    object-fit: cover;\n    border-radius: 50%;\n    flex-shrink: 0;\n    border: 1px solid rgba(0,0,0,0.1);\n  }\n\n  .ing-text {\n    text-align: left;\n  }\n\n  .ing-text h3 {\n    font-size: 18px;\n    font-weight: 600;\n    margin: 0 0 5px;\n    font-style: italic;\n  }\n\n  .ing-text p {\n    font-size: 14px;\n    margin: 0;\n    line-height: 1.4;\n    color: #333;\n  }\n\n  /* Image centrale */\n  .ing-col.center-col img.main-product-img {\n    width: 100%;\n    max-width: 350px;\n    height: auto;\n    display: block;\n    margin: 0 auto;\n    border-radius: 20px;\n  }\n\n  /* --- RESPONSIVE MOBILE --- */\n  @media (max-width: 900px) {\n    .ingredients-grid {\n      grid-template-columns: 1fr; /* Une seule colonne */\n      gap: 40px;\n    }\n\n    /* On change l'ordre : Image centrale d'abord, puis ingrédients */\n    .ing-col.center-col {\n      order: -1; \n    }\n\n    .ingredients-header .title {\n      font-size: 28px;\n    }\n\n    .ing-item {\n      background: rgba(255, 255, 255, 0.8);\n    }\n  }\n</style>",
-        "background": "",
-        "background_gradient": "",
-        "text_color": ""
-      }
-    },
-    "faq_NCzUHF": {
-      "type": "faq",
+    "s3_momento": {
+      "type": "freos-editorial",
       "blocks": {
-        "item_PGecqK": {
-          "type": "item",
+        "s3_00_kicker": {
+          "type": "kicker",
           "settings": {
-            "title": "Quelle couvrance offre le fond de teint Evena ?",
-            "content": "<p>Le fond de teint Evena offre une couvrance modulable, légère à moyenne, qui s'adapte sans effort à vos besoins, vous donnant la flexibilité de créer votre look parfait.<br/><br/></p>"
+            "text": "Il momento"
           }
         },
-        "item_kaEqWH": {
-          "type": "item",
+        "s3_01_heading": {
+          "type": "heading",
           "settings": {
-            "title": "Le produit convient-il aux peaux sensibles ?",
-            "content": "<p>Oui, le fond de teint Evena est formulé pour être doux et sûr pour les peaux sensibles, y compris celles souffrant de vitiligo ou de rosacée. Cependant, nous recommandons toujours de faire un test sur une petite zone d'abord, car les réactions individuelles peuvent varier.<br/><br/></p>"
+            "text": "Non è quanto. È quando."
           }
         },
-        "item_wLJPbw": {
-          "type": "item",
+        "s3_02_paragraph": {
+          "type": "paragraph",
           "settings": {
-            "title": "Le fond de teint Evena convient-il aux peaux avec ridules ou rides ?",
-            "content": "<p><br/>Absolument ! Le fond de teint Evena est une formule légère et hydratante conçue pour hydrater et prendre soin de votre peau, ce qui en fait un excellent choix pour réduire l'apparence des ridules et rides tout en offrant un fini naturel et lumineux.<br/><br/></p>"
+            "text": "<p>Di giorno la saliva scorre: passa, risciacqua, rinnova. Durante il sonno la sua produzione si riduce fin quasi ad azzerarsi.</p><p><em>Dawes C, Wong DTW · J Dent Res 2019 · PMID 30782091</em></p><p>Nella grande maggioranza dei casi — circa otto o nove su dieci secondo la letteratura — l'alito poco fresco ha origine <strong>in bocca</strong>, non nello stomaco.</p><p><em>Lee YH, Hong JY · Front Oral Health 2023 · Quirynen M et al. · J Clin Periodontol 2009 · PMID 19811581</em></p>"
           }
         },
-        "item_GdXXdY": {
-          "type": "item",
+        "s3_03_punch": {
+          "type": "punch",
           "settings": {
-            "title": "Comment le fond de teint Evena adapte-t-il sa couleur ?",
-            "content": "<p>Le fond de teint Evena contient des pigments encapsulés qui commencent blancs. Lors de l'application, ces pigments libèrent de la couleur, permettant au fond de teint de s'adapter aux teintes de peau claires à moyennes.<br/><br/></p>"
+            "text": "Ecco perché FREOS è un gesto della sera, e non un altro risciacquo della giornata: è l'ultimo passaggio prima delle ore in cui la bocca smette di difendersi."
           }
         },
-        "item_x3QCXX": {
-          "type": "item",
+        "s3_04_testimonial": {
+          "type": "testimonial",
           "settings": {
-            "title": "Est-ce que le fond de teint va s'installer dans mes ridules comme les autres ?",
-            "content": "<p>Non. Contrairement aux fonds de teint classiques qui créent un film rigide qui craque et s'accumule dans les rides, Evena utilise une texture légère enrichie en acide hyaluronique qui fond DANS votre peau au lieu de rester EN SURFACE. Résultat : vos ridules restent souples et le fond de teint glisse sur la peau sans s'y loger.<br/><br/></p>"
-          }
-        },
-        "item_jqVdAi": {
-          "type": "item",
-          "settings": {
-            "title": "Ma peau est très sèche à cause de la ménopause. Est-ce que ce fond de teint va l'aggraver ?",
-            "content": "<p>Au contraire. Evena hydrate votre peau pendant que vous le portez grâce à l'acide hyaluronique, la vitamine E et l'huile de coco. Contrairement aux fonds de teint classiques qui assèchent, celui-ci agit comme un sérum. Votre peau est plus souple le soir qu'au matin.<br/><br/></p>"
-          }
-        },
-        "item_XMHWNp": {
-          "type": "item",
-          "settings": {
-            "title": "J'ai la peau sensible/réactive avec de la rosacée. Est-ce que ça va m'irriter ?",
-            "content": "<p><br/>Non. La formule est enrichie en Ophiopogon Japonicus (racine japonaise) et Bisabolol qui apaisent les rougeurs et calment les irritations. Beaucoup de nos clientes avec rosacée nous disent que c'est le seul fond de teint qui n'aggrave pas leurs rougeurs.<br/><br/></p>"
-          }
-        },
-        "item_4V79JY": {
-          "type": "item",
-          "settings": {
-            "title": "Est-ce que ça va oxyder et virer orange comme tous les autres ?",
-            "content": "<p><br/>Non. Grâce à sa technologie adaptative, Evena s'ajuste à votre carnation exacte au moment de l'application et reste stable toute la journée. Pas de virage orange à 16h.<br/><br/></p>"
+            "quote": "Nonostante mi lavi i denti 3000 volte al giorno.",
+            "source": "Commento pubblico italiano · id 9deb0c1bfbd8",
+            "badge": "Corpus",
+            "story": false
           }
         }
       },
       "block_order": [
-        "item_PGecqK",
-        "item_kaEqWH",
-        "item_wLJPbw",
-        "item_GdXXdY",
-        "item_x3QCXX",
-        "item_jqVdAi",
-        "item_XMHWNp",
-        "item_4V79JY"
+        "s3_00_kicker",
+        "s3_01_heading",
+        "s3_02_paragraph",
+        "s3_03_punch",
+        "s3_04_testimonial"
       ],
-      "name": "FAQ",
       "settings": {
-        "full_width": true,
-        "subheading": "",
-        "title": "FAQ",
-        "content": "",
-        "team_avatar_width": 160,
-        "support_hours": "",
-        "answer_time": "",
-        "button_text": "",
-        "button_url": "",
-        "text_position": "center",
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "heading_color": "",
-        "heading_gradient": "",
-        "button_background": "",
-        "button_text_color": "",
-        "accordion_background": "",
-        "accordion_text_color": ""
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 48,
+        "padding_bottom": 48
       }
     },
-    "176887070323d5c09b": {
-      "type": "apps",
+    "s4_formula": {
+      "type": "freos-editorial",
       "blocks": {
-        "loox_reviews_loox_dynamic_section_wrYFQd": {
-          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+        "s4_00_kicker": {
+          "type": "kicker",
           "settings": {
-            "only_photos": false,
-            "aggregated": false,
-            "limit": 20,
-            "hide_thumbnails": false,
-            "maxwidth": 1080,
-            "is_sample": true
+            "text": "La formula"
+          }
+        },
+        "s4_01_heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Zinco + 7 estratti. Dosi scritte."
+          }
+        },
+        "s4_02_compare": {
+          "type": "compare",
+          "settings": {
+            "rows": "*Zinco | [COMPOSIZIONE_COMPLETA] | sale e dose dall’etichetta\nTè verde (estratto foglia) | 85 mg\nClorofilla da erba medica | 85 mg\nPrezzemolo | 85 mg\nMenta piperita (olio essenziale) | 80 mg\nChiodi di garofano (olio ess. bottone) | 85 mg\nMelissa | 85 mg\nShilajit purificato | 100 mg"
+          }
+        },
+        "s4_03_callout": {
+          "type": "callout",
+          "settings": {
+            "text": "<p><strong>Perché lo zinco.</strong> Gli ioni di zinco si <strong>legano</strong> ai gruppi tiolici dei composti solforati. È chimica, non un effetto promesso: lo scriviamo perché è il motivo per cui lo zinco è nella formula, non perché sia una prova che FREOS funzioni.</p>"
+          }
+        },
+        "s4_04_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Quello che non scriviamo.</strong> Non diciamo che lo zinco uccide i batteri: non è quello che fa, e non è quello che vogliamo. Non citiamo studi fatti su formule che contengono antisettici che noi non abbiamo.</p>"
+          }
+        },
+        "s4_05_note": {
+          "type": "note",
+          "settings": {
+            "text": "<p><strong>Avvertenze.</strong> [AVVERTENZE_TE_VERDE] · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l'allattamento.</p>"
           }
         }
       },
       "block_order": [
-        "loox_reviews_loox_dynamic_section_wrYFQd"
+        "s4_00_kicker",
+        "s4_01_heading",
+        "s4_02_compare",
+        "s4_03_callout",
+        "s4_04_paragraph",
+        "s4_05_note"
       ],
       "settings": {
-        "full_width": true,
-        "remove_vertical_spacing": false,
-        "remove_horizontal_spacing": false,
-        "background": "",
-        "background_gradient": "",
-        "text_color": "",
-        "enable_review_integration": true,
-        "review_header_gradient": "linear-gradient(135deg, #FFC266 0%, #FFA31A 100%)",
-        "review_header_text_color": "#000000",
-        "review_button_background": "#000000",
-        "review_button_text_color": "#ffffff"
+        "surface": "softer",
+        "width": "narrow",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "s5_gesto": {
+      "type": "freos-editorial",
+      "blocks": {
+        "s5_00_kicker": {
+          "type": "kicker",
+          "settings": {
+            "text": "Come si usa"
+          }
+        },
+        "s5_01_heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Due misurini. Venti secondi. Poi basta."
+          }
+        },
+        "s5_02_timeline": {
+          "type": "timeline",
+          "settings": {
+            "rows": "Dopo cena | Due misurini sul dorso della lingua | 1,2 g di gel. Mai a stomaco vuoto.\nLascia sciogliere | Poi deglutisci | Non serve risciacquare.\nPoi basta | La sera finisce lì | Niente acqua, niente collutorio, niente gomma."
+          }
+        },
+        "s5_03_callout": {
+          "type": "callout",
+          "settings": {
+            "text": "<p>Se hai provato il raschietto e ti sono venuti i conati: succede a moltissime persone, ed è esattamente il motivo per cui quasi nessuno pulisce davvero quella zona. Qui non c'è niente da raschiare.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "s5_00_kicker",
+        "s5_01_heading",
+        "s5_02_timeline",
+        "s5_03_callout"
+      ],
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 48,
+        "padding_bottom": 48
+      }
+    },
+    "s6_voci": {
+      "type": "freos-editorial",
+      "blocks": {
+        "s6_00_testimonial": {
+          "type": "testimonial",
+          "settings": {
+            "quote": "Il problema è per i single, non abbiamo nessuno che ci dice che ci puzza il fiato.",
+            "source": "Commento pubblico italiano · id bcb75ec24779",
+            "badge": "Corpus",
+            "story": true
+          }
+        },
+        "s6_01_note": {
+          "type": "note",
+          "settings": {
+            "text": "<p>Commenti pubblici, riportati testualmente e in forma anonima. Non sono recensioni del prodotto: FREOS non è ancora stato lanciato, quindi non abbiamo clienti da citare.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "s6_00_testimonial",
+        "s6_01_note"
+      ],
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "s7_garanzia": {
+      "type": "freos-editorial",
+      "blocks": {
+        "s7_00_kicker": {
+          "type": "kicker",
+          "settings": {
+            "text": "Il rischio"
+          }
+        },
+        "s7_01_heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Un mese di prova."
+          }
+        },
+        "s7_02_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Se FREOS non ti convince, <strong>per qualsiasi motivo</strong>, scrivici entro 30 giorni dalla consegna: basta il numero d'ordine. Ti rimborsiamo l'intero importo.</p><p><strong>Non devi restituire il barattolo</strong>, nemmeno se è aperto o finito. Non devi spiegare perché.</p><p>Vale per il primo ordine, un barattolo per cliente.</p>"
+          }
+        },
+        "s7_03_cta": {
+          "type": "cta",
+          "settings": {
+            "label": "Aggiungi al carrello",
+            "pill": "29,90 €",
+            "url": "",
+            "reassurance": "Questa è una garanzia commerciale che offriamo noi. Si aggiunge ai tuoi diritti di legge — il diritto di recesso di 14 giorni e la garanzia legale di conformità — che restano interi."
+          }
+        }
+      },
+      "block_order": [
+        "s7_00_kicker",
+        "s7_01_heading",
+        "s7_02_paragraph",
+        "s7_03_cta"
+      ],
+      "settings": {
+        "surface": "ink",
+        "width": "narrow",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "s8_faq": {
+      "type": "freos-editorial",
+      "blocks": {
+        "s8_00_section_header": {
+          "type": "section_header",
+          "settings": {
+            "kicker": "Le domande scomode",
+            "heading": "Cosa non fa",
+            "dek": ""
+          }
+        },
+        "s8_01_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<ul><li><strong>Non cura l'alitosi.</strong> Non è un farmaco e non ha un'indicazione terapeutica.</li><li><strong>Non tocca le tonsille.</strong> Alla domanda « serve per i tonsilloliti? » la risposta è <strong>no</strong>.</li><li><strong>Non sostituisce</strong> lo spazzolino, né il dentista, né l'otorino.</li><li>Se non sopporti la menta, <strong>non fa per te</strong>.</li></ul>"
+          }
+        },
+        "s8_02_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "Come si usa, esattamente?",
+            "answer": "<p>Due misurini (1,2 g) la sera, dopo cena. Lascia sciogliere sulla lingua, poi deglutisci. Mai a stomaco vuoto.</p>",
+            "open": false
+          }
+        },
+        "s8_03_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "Quanto dura un barattolo?",
+            "answer": "<p>120 g, circa 100 porzioni. Più o meno tre mesi, a due misurini a sera.</p>",
+            "open": false
+          }
+        },
+        "s8_04_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "Che sapore ha?",
+            "answer": "<p>[SAPORE]</p>",
+            "open": false
+          }
+        },
+        "s8_05_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "Si deglutisce?",
+            "answer": "<p>Sì, dopo averlo lasciato sciogliere sulla lingua.</p>",
+            "open": false
+          }
+        },
+        "s8_06_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "È un farmaco?",
+            "answer": "<p>No. È un integratore alimentare.</p>",
+            "open": false
+          }
+        },
+        "s8_07_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "E se il problema viene dallo stomaco?",
+            "answer": "<p>Raramente l'alito poco fresco viene dallo stomaco: le cause esterne alla bocca riguardano circa il 5-10% dei casi. <em>(Tangerman A &amp; Winkel EG · J Breath Res 2010 · PMID 21386205)</em> Se hai reflusso o sintomi digestivi, la persona giusta è il medico.</p>",
+            "open": false
+          }
+        },
+        "s8_08_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "Il mio dentista dice che è tutto a posto.",
+            "answer": "<p>Ha ragione su quello che esamina: denti e gengive. La parte posteriore della lingua non rientra nella visita di controllo.</p>",
+            "open": false
+          }
+        },
+        "s8_09_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "Posso usarlo in gravidanza o durante l’allattamento?",
+            "answer": "<p>No.</p>",
+            "open": false
+          }
+        },
+        "s8_10_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "Ci sono controindicazioni?",
+            "answer": "<p>[AVVERTENZE_TE_VERDE]. In caso di dubbi, senti il medico o il farmacista.</p>",
+            "open": false
+          }
+        },
+        "s8_11_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "In quanto tempo si vedono i risultati?",
+            "answer": "<p>Non te lo promettiamo. Quello che possiamo descrivere è l'installazione del gesto: la prima sera non cambia niente ed è normale; dopo qualche giorno diventa automatico; dopo due settimane è stabile, ed è lì che capisci se fa per te.</p>",
+            "open": false
+          }
+        },
+        "s8_12_faq": {
+          "type": "faq",
+          "settings": {
+            "question": "Come funziona la garanzia?",
+            "answer": "<p>30 giorni, per qualsiasi motivo, senza restituire il barattolo. Si aggiunge ai tuoi diritti di legge.</p>",
+            "open": false
+          }
+        },
+        "s8_13_sources": {
+          "type": "sources",
+          "settings": {
+            "title": "Fonti",
+            "items": "Porciani PF, Grandini S. J Clin Dent, 2012. PMID 23210417\nDawes C, Wong DTW. J Dent Res, 2019. PMID 30782091\nQuirynen M et al. J Clin Periodontol, 2009. PMID 19811581\nTangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205\nLee YH, Hong JY. Front Oral Health, 2023."
+          }
+        }
+      },
+      "block_order": [
+        "s8_00_section_header",
+        "s8_01_paragraph",
+        "s8_02_faq",
+        "s8_03_faq",
+        "s8_04_faq",
+        "s8_05_faq",
+        "s8_06_faq",
+        "s8_07_faq",
+        "s8_08_faq",
+        "s8_09_faq",
+        "s8_10_faq",
+        "s8_11_faq",
+        "s8_12_faq",
+        "s8_13_sources"
+      ],
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 56,
+        "padding_bottom": 72
       }
     }
   },
   "order": [
     "main",
-    "logo_list_NwHyJ6",
-    "custom_liquid_PQaRy7",
-    "custom_liquid_Whb9Yr",
-    "custom_liquid_x7qCT9",
-    "images_with_text_scrolling_fxGTtX",
-    "custom_liquid_7QJBbx",
-    "custom_liquid_LqazCe",
-    "faq_NCzUHF",
-    "176887070323d5c09b"
+    "s1_punto",
+    "s2_categoria",
+    "s3_momento",
+    "s4_formula",
+    "s5_gesto",
+    "s6_voci",
+    "s7_garanzia",
+    "s8_faq"
   ]
 }
