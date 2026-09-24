@@ -9,6 +9,25 @@
  */
 {
   "sections": {
+    "promo": {
+      "type": "freos-pdp-promo",
+      "settings": {
+        "text": "Trenta sere di prova · Il barattolo resta a te · [SPEDIZIONE]",
+        "cta_label": "",
+        "cta_url": "",
+        "countdown": false,
+        "mode": "daily",
+        "end": "",
+        "prefix": "Termina tra",
+        "kicker": "",
+        "heading": "",
+        "dek": "",
+        "surface": "softer",
+        "width": "wide",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
     "buybox": {
       "type": "freos-pdp-buybox",
       "blocks": {
@@ -186,407 +205,687 @@
         "duration": 45
       }
     },
-    "meccanismo": {
-      "type": "freos-editorial",
+    "benefici": {
+      "type": "freos-pdp-benefici",
+      "blocks": {
+        "b1": {
+          "type": "item",
+          "settings": {
+            "icon": "luna",
+            "title": "Agisce quando la bocca si ferma",
+            "text": "La sera la bocca smette di difendersi, e nessuno fa niente. È lì che il gel lavora, non mentre parli."
+          }
+        },
+        "b2": {
+          "type": "item",
+          "settings": {
+            "icon": "goccia",
+            "title": "Resta dove lo metti",
+            "text": "Un gel denso, non un liquido da sputare dopo trenta secondi. Il principio è lo stesso; il formato no."
+          }
+        },
+        "b3": {
+          "type": "item",
+          "settings": {
+            "icon": "stop",
+            "title": "Niente da raschiare",
+            "text": "Nessuno strumento da spingere in gola, nessun riflesso da forzare, nessun conato."
+          }
+        },
+        "b4": {
+          "type": "item",
+          "settings": {
+            "icon": "orologio",
+            "title": "Trenta secondi, una volta al giorno",
+            "text": "Dopo i denti, prima di dormire. Un barattolo copre un mese pieno: nessun abbonamento, un ordine e basta."
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4"
+      ],
       "settings": {
+        "kicker": "Perché la sera",
+        "heading": "Quattro cose che cambiano <em>quando il gesto resta.</em>",
+        "dek": "",
         "surface": "white",
         "width": "narrow",
-        "reading": false,
-        "padding_top": 64,
+        "padding_top": 56,
         "padding_bottom": 56
-      },
+      }
+    },
+    "differenza": {
+      "type": "freos-pdp-differenza",
       "blocks": {
-        "00_kicker": {
-          "type": "kicker",
+        "bar1": {
+          "type": "bar",
           "settings": {
-            "text": "Il meccanismo"
+            "label": "Collutorio",
+            "meta": "30 sec",
+            "value": 3,
+            "accent": false
           }
         },
-        "01_heading": {
-          "type": "heading",
+        "bar2": {
+          "type": "bar",
           "settings": {
-            "text": "Il principio giusto. <em>Nel formato sbagliato.</em>"
+            "label": "Caramella",
+            "meta": "4 min",
+            "value": 8,
+            "accent": false
           }
         },
-        "02_paragraph": {
-          "type": "paragraph",
+        "bar3": {
+          "type": "bar",
           "settings": {
+            "label": "Gel denso",
+            "meta": "ore",
+            "value": 100,
+            "accent": true
+          }
+        }
+      },
+      "block_order": [
+        "bar1",
+        "bar2",
+        "bar3"
+      ],
+      "settings": {
+        "body": "<p>Gli ioni di zinco <strong>legano</strong> i composti solforati. Il mercato lo mette in un collutorio: trenta secondi, poi lo sputi.</p>",
+        "punch": "Guarda come cola. Resta dove lo metti.",
+        "kicker": "Il meccanismo",
+        "heading": "Il principio giusto. <em>Nel formato sbagliato.</em>",
+        "dek": "",
+        "surface": "softer",
+        "width": "narrow",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "numeri": {
+      "type": "freos-pdp-stats",
+      "blocks": {
+        "s1": {
+          "type": "stat",
+          "settings": {
+            "value": "90",
+            "unit": "%",
+            "label": "Di quanto crolla la produzione di saliva mentre dormi",
+            "note": "Dawes C, Wong DTW. J Dent Res, 2019 · PMID 30782091"
+          }
+        },
+        "s2": {
+          "type": "stat",
+          "settings": {
+            "value": "8",
+            "unit": "ore",
+            "label": "Le ore in cui la bocca resta senza la sua guardia",
+            "note": "Una notte di sonno media, ogni notte."
+          }
+        },
+        "s3": {
+          "type": "stat",
+          "settings": {
+            "value": "30",
+            "unit": "sere",
+            "label": "Le sere coperte da un barattolo da 120 g",
+            "note": "Due misurini (1,2 g) a sera, misurino incluso."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3"
+      ],
+      "settings": {
+        "kicker": "I numeri",
+        "heading": "Tre cifre che spiegano <em>perché la sera.</em>",
+        "dek": "",
+        "surface": "ink",
+        "width": "narrow",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
+    },
+    "ingredienti": {
+      "type": "freos-pdp-ingredienti",
+      "blocks": {
+        "ing1": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_zinco.jpg",
+            "name": "Zinco",
+            "role": "Lega i composti solforati",
+            "dose": "[DOSE]"
+          }
+        },
+        "ing2": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_menta.jpg",
+            "name": "Menta piperita",
+            "role": "Freschezza immediata",
+            "dose": "[DOSE]"
+          }
+        },
+        "ing3": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_clorofilla.jpg",
+            "name": "Clorofilla",
+            "role": "Uso tradizionale per gli odori",
+            "dose": "[DOSE]"
+          }
+        },
+        "ing4": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_te_verde.jpg",
+            "name": "Tè verde",
+            "role": "Ricco di polifenoli",
+            "dose": "[DOSE]"
+          }
+        },
+        "ing5": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_prezzemolo.jpg",
+            "name": "Prezzemolo",
+            "role": "Uso tradizionale dopo i pasti",
+            "dose": "[DOSE]"
+          }
+        },
+        "ing6": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_melissa.jpg",
+            "name": "Melissa",
+            "role": "Aroma dolce",
+            "dose": "[DOSE]"
+          }
+        },
+        "ing7": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_chiodi.jpg",
+            "name": "Chiodi di garofano",
+            "role": "Aroma intenso",
+            "dose": "[DOSE]"
+          }
+        },
+        "ing8": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_pueraria.jpg",
+            "name": "Pueraria lobata",
+            "role": "Radice della tradizione asiatica",
+            "dose": "[DOSE]"
+          }
+        }
+      },
+      "block_order": [
+        "ing1",
+        "ing2",
+        "ing3",
+        "ing4",
+        "ing5",
+        "ing6",
+        "ing7",
+        "ing8"
+      ],
+      "settings": {
+        "note": "<p><strong>Composizione completa.</strong> [COMPOSIZIONE_COMPLETA]</p><p><strong>Avvertenze.</strong> [AVVERTENZE_TE_VERDE] · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>",
+        "kicker": "La formula",
+        "heading": "Sette estratti e uno ione.",
+        "dek": "Dosi dichiarate in etichetta · Nessuna miscela proprietaria",
+        "surface": "white",
+        "width": "wide",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "percorso": {
+      "type": "freos-pdp-journey",
+      "blocks": {
+        "st1": {
+          "type": "step",
+          "settings": {
+            "badge": "Uno",
+            "title": "Due misurini",
+            "text": "1,2 g di gel sul dorso della lingua. Mai a stomaco vuoto."
+          }
+        },
+        "st2": {
+          "type": "step",
+          "settings": {
+            "badge": "Due",
+            "title": "Lascia sciogliere",
+            "text": "Non serve risciacquare, non serve acqua."
+          }
+        },
+        "st3": {
+          "type": "step",
+          "settings": {
+            "badge": "Tre",
+            "title": "Deglutisci e dormi",
+            "text": "La sera finisce lì."
+          }
+        }
+      },
+      "block_order": [
+        "st1",
+        "st2",
+        "st3"
+      ],
+      "settings": {
+        "foot": "<p>Niente da spingere in gola. <strong>Nessun riflesso da forzare.</strong></p>",
+        "kicker": "Come si usa",
+        "heading": "Trenta secondi. <em>Dopo i denti, prima di dormire.</em>",
+        "dek": "",
+        "surface": "softer",
+        "width": "narrow",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "motivi": {
+      "type": "freos-pdp-motivi",
+      "blocks": {
+        "m1": {
+          "type": "motivo",
+          "settings": {
+            "title": "Il principio è vecchio, il formato no",
             "text": "<p>Gli ioni di zinco <strong>legano</strong> i composti solforati. Il mercato lo mette in un collutorio: trenta secondi, poi lo sputi.</p>"
           }
         },
-        "03_bars": {
-          "type": "bars",
+        "m2": {
+          "type": "motivo",
           "settings": {
-            "rows": "Collutorio | 30 sec | 3\nCaramella | 4 min | 8\nGel denso | ore | 100"
+            "title": "Agisce nell’unica finestra che conta",
+            "text": "<p>La sera la bocca smette di difendersi. È il momento in cui nessuno fa niente.</p>"
           }
         },
-        "04_punch": {
-          "type": "punch",
+        "m3": {
+          "type": "motivo",
           "settings": {
-            "text": "Guarda come cola. Resta dove lo metti."
+            "title": "Un gesto che si tiene",
+            "text": "<p>Trenta secondi dopo i denti. Niente da raschiare, niente riflesso da forzare.</p>"
+          }
+        },
+        "m4": {
+          "type": "motivo",
+          "settings": {
+            "title": "Un ordine, una volta",
+            "text": "<p>Un barattolo copre un mese pieno. <strong>Nessun abbonamento.</strong></p>"
+          }
+        },
+        "m5": {
+          "type": "motivo",
+          "settings": {
+            "title": "Ti diciamo anche cosa non fa",
+            "text": "<p>Non tocca le tonsille, non scioglie i tonsilloliti, non cura l’alitosi. La sezione qui sotto lo scrive per esteso.</p>"
           }
         }
       },
       "block_order": [
-        "00_kicker",
-        "01_heading",
-        "02_paragraph",
-        "03_bars",
-        "04_punch"
-      ]
-    },
-    "ingredienti": {
-      "type": "freos-editorial",
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5"
+      ],
       "settings": {
-        "surface": "softer",
+        "kicker": "In breve",
+        "heading": "Cinque motivi, <em>senza giri di parole.</em>",
+        "dek": "",
+        "surface": "white",
         "width": "narrow",
-        "reading": false,
         "padding_top": 56,
         "padding_bottom": 56
-      },
-      "blocks": {
-        "00_kicker": {
-          "type": "kicker",
-          "settings": {
-            "text": "La formula"
-          }
-        },
-        "01_heading": {
-          "type": "heading",
-          "settings": {
-            "text": "Sette estratti e uno ione."
-          }
-        },
-        "02_ingredients": {
-          "type": "ingredients",
-          "settings": {
-            "items": "Zinco | Lega i composti solforati | freos-ing_zinco.jpg\nMenta piperita | Freschezza immediata | freos-ing_menta.jpg\nClorofilla | Uso tradizionale per gli odori | freos-ing_clorofilla.jpg\nTè verde | Ricco di polifenoli | freos-ing_te_verde.jpg\nPrezzemolo | Uso tradizionale dopo i pasti | freos-ing_prezzemolo.jpg\nMelissa | Aroma dolce | freos-ing_melissa.jpg\nChiodi di garofano | Aroma intenso | freos-ing_chiodi.jpg\nPueraria lobata | Radice della tradizione asiatica | freos-ing_pueraria.jpg",
-            "footnote": "Dosi dichiarate in etichetta · Nessuna miscela proprietaria"
-          }
-        },
-        "03_note": {
-          "type": "note",
-          "settings": {
-            "text": "<p><strong>Composizione completa.</strong> [COMPOSIZIONE_COMPLETA]</p><p><strong>Avvertenze.</strong> [AVVERTENZE_TE_VERDE] · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "00_kicker",
-        "01_heading",
-        "02_ingredients",
-        "03_note"
-      ]
+      }
     },
     "confronto": {
-      "type": "freos-editorial",
-      "settings": {
-        "surface": "white",
-        "width": "narrow",
-        "reading": false,
-        "padding_top": 56,
-        "padding_bottom": 56
-      },
+      "type": "freos-pdp-confronto",
       "blocks": {
-        "00_section_header": {
-          "type": "section_header",
+        "r1": {
+          "type": "row",
           "settings": {
-            "kicker": "Il confronto",
-            "heading": "Dove finiscono gli altri gesti.",
-            "dek": ""
+            "label": "Spazzolino",
+            "c1": "La superficie",
+            "c2": "denti e parte davanti della lingua",
+            "accent": false
           }
         },
-        "01_compare": {
-          "type": "compare",
+        "r2": {
+          "type": "row",
           "settings": {
-            "rows": "Spazzolino | La superficie | denti e parte davanti della lingua\nCollutorio | Trenta secondi | poi lo sputi\nGomma | Finché la mastichi | l’effetto finisce con la masticazione\n*Gel denso, la sera | Ore | resta dove lo metti"
+            "label": "Collutorio",
+            "c1": "Trenta secondi",
+            "c2": "poi lo sputi",
+            "accent": false
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "label": "Gomma",
+            "c1": "Finché la mastichi",
+            "c2": "l’effetto finisce con la masticazione",
+            "accent": false
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "label": "Gel denso, la sera",
+            "c1": "Ore",
+            "c2": "resta dove lo metti",
+            "accent": true
           }
         }
       },
       "block_order": [
-        "00_section_header",
-        "01_compare"
-      ]
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ],
+      "settings": {
+        "col1": "Dove arriva",
+        "col2": "Quanto dura",
+        "kicker": "Il confronto",
+        "heading": "Dove finiscono gli altri gesti.",
+        "dek": "",
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
     },
     "recensioni": {
-      "type": "freos-editorial",
-      "settings": {
-        "surface": "white",
-        "width": "narrow",
-        "reading": false,
-        "padding_top": 48,
-        "padding_bottom": 56
-      },
+      "type": "freos-pdp-recensioni",
       "blocks": {
-        "00_section_header": {
-          "type": "section_header",
+        "rv1": {
+          "type": "review",
           "settings": {
-            "kicker": "Le voci",
-            "heading": "Cosa dicono.",
-            "dek": ""
+            "name": "Giulia R.",
+            "badge": "Verificato",
+            "stars": 5,
+            "title": "Non mi controllo più a metà frase",
+            "body": "Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Dopo tre settimane mi sono resa conto che non lo facevo più. È la cosa che mi ha colpito di più.",
+            "date": ""
           }
         },
-        "01_reviews": {
-          "type": "reviews",
+        "rv2": {
+          "type": "review",
           "settings": {
-            "score": "4,8",
-            "count": "su 126 recensioni",
-            "items": "Giulia R. | Verificato | 5 | Non mi controllo più a metà frase | Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Dopo tre settimane mi sono resa conto che non lo facevo più. È la cosa che mi ha colpito di più.\nMarco T. | Verificato | 5 | Il risveglio è la differenza | Non prometto miracoli, ma al mattino la sensazione non è più quella di prima. Ed è lì che me ne sono accorto per primo.\nElena D. | Verificato | 5 | Ho smesso di comprare cicche | Avevo il cassetto pieno. Adesso ne ho ancora un pacchetto aperto da due mesi.\nDavide P. | Verificato | 5 | Il gesto si tiene | Venti giorni e ormai lo faccio senza pensarci, subito dopo i denti. È l’unica cosa che sono riuscito a mantenere.\nSara M. | Verificato | 4 | Ci ho messo un po’ a fidarmi | Avevo provato di tutto e non ci credevo più. Tolgo una stella perché la prima settimana non ho notato niente, ma poi sì.\nAlessandro V. | Verificato | 5 | Vivo da solo, nessuno me lo diceva | Era esattamente il mio problema: non avevo modo di saperlo. Adesso ho una routine e non ci penso tutto il giorno."
+            "name": "Marco T.",
+            "badge": "Verificato",
+            "stars": 5,
+            "title": "Il risveglio è la differenza",
+            "body": "Non prometto miracoli, ma al mattino la sensazione non è più quella di prima. Ed è lì che me ne sono accorto per primo.",
+            "date": ""
+          }
+        },
+        "rv3": {
+          "type": "review",
+          "settings": {
+            "name": "Elena D.",
+            "badge": "Verificato",
+            "stars": 5,
+            "title": "Ho smesso di comprare cicche",
+            "body": "Avevo il cassetto pieno. Adesso ne ho ancora un pacchetto aperto da due mesi.",
+            "date": ""
+          }
+        },
+        "rv4": {
+          "type": "review",
+          "settings": {
+            "name": "Davide P.",
+            "badge": "Verificato",
+            "stars": 5,
+            "title": "Il gesto si tiene",
+            "body": "Venti giorni e ormai lo faccio senza pensarci, subito dopo i denti. È l’unica cosa che sono riuscito a mantenere.",
+            "date": ""
+          }
+        },
+        "rv5": {
+          "type": "review",
+          "settings": {
+            "name": "Sara M.",
+            "badge": "Verificato",
+            "stars": 4,
+            "title": "Ci ho messo un po’ a fidarmi",
+            "body": "Avevo provato di tutto e non ci credevo più. Tolgo una stella perché la prima settimana non ho notato niente, ma poi sì.",
+            "date": ""
+          }
+        },
+        "rv6": {
+          "type": "review",
+          "settings": {
+            "name": "Alessandro V.",
+            "badge": "Verificato",
+            "stars": 5,
+            "title": "Vivo da solo, nessuno me lo diceva",
+            "body": "Era esattamente il mio problema: non avevo modo di saperlo. Adesso ho una routine e non ci penso tutto il giorno.",
+            "date": ""
           }
         }
       },
       "block_order": [
-        "00_section_header",
-        "01_reviews"
-      ]
-    },
-    "rituale": {
-      "type": "freos-editorial",
+        "rv1",
+        "rv2",
+        "rv3",
+        "rv4",
+        "rv5",
+        "rv6"
+      ],
       "settings": {
-        "surface": "white",
-        "width": "narrow",
-        "reading": false,
-        "padding_top": 48,
+        "score": "4,8",
+        "count": "su 126 recensioni",
+        "source": "",
+        "kicker": "Le voci",
+        "heading": "Cosa dicono.",
+        "dek": "",
+        "surface": "softer",
+        "width": "wide",
+        "padding_top": 56,
         "padding_bottom": 56
-      },
-      "blocks": {
-        "00_kicker": {
-          "type": "kicker",
-          "settings": {
-            "text": "Come si usa"
-          }
-        },
-        "01_heading": {
-          "type": "heading",
-          "settings": {
-            "text": "Trenta secondi. <em>Dopo i denti, prima di dormire.</em>"
-          }
-        },
-        "02_timeline": {
-          "type": "timeline",
-          "settings": {
-            "rows": "Uno | Due misurini | 1,2 g di gel sul dorso della lingua. Mai a stomaco vuoto.\nDue | Lascia sciogliere | Non serve risciacquare, non serve acqua.\nTre | Deglutisci e dormi | La sera finisce lì."
-          }
-        },
-        "03_paragraph": {
-          "type": "paragraph",
-          "settings": {
-            "text": "<p>Niente da spingere in gola. <strong>Nessun riflesso da forzare.</strong></p>"
-          }
-        }
-      },
-      "block_order": [
-        "00_kicker",
-        "01_heading",
-        "02_timeline",
-        "03_paragraph"
-      ]
+      }
     },
     "limiti": {
-      "type": "freos-editorial",
-      "settings": {
-        "surface": "white",
-        "width": "narrow",
-        "reading": false,
-        "padding_top": 48,
-        "padding_bottom": 56
-      },
+      "type": "freos-pdp-limiti",
       "blocks": {
-        "00_kicker": {
-          "type": "kicker",
+        "l1": {
+          "type": "line",
           "settings": {
-            "text": "Onestà"
+            "text": "Non tocca le tonsille"
           }
         },
-        "01_heading": {
-          "type": "heading",
+        "l2": {
+          "type": "line",
           "settings": {
-            "text": "Quello che FREOS non fa."
+            "text": "Non scioglie i tonsilloliti"
           }
         },
-        "02_nolist": {
-          "type": "nolist",
+        "l3": {
+          "type": "line",
           "settings": {
-            "items": "Non tocca le tonsille\nNon scioglie i tonsilloliti\nNon sostituisce l’otorino, né il dentista, né lo spazzolino\nNon cura l’alitosi: non è un farmaco e non ha un’indicazione terapeutica"
+            "text": "Non sostituisce l’otorino, né il dentista, né lo spazzolino"
           }
         },
-        "03_note": {
-          "type": "note",
+        "l4": {
+          "type": "line",
           "settings": {
-            "text": "<p>Dolore, febbre o difficoltà a deglutire? <strong>L’otorino viene prima di qualunque gel.</strong></p>"
-          }
-        },
-        "04_badges": {
-          "type": "badges",
-          "settings": {
-            "items": "30 | Sere di prova | o rimborso\n✓ | Il barattolo | resta a te\n⌀ | Nessun | abbonamento"
+            "text": "Non cura l’alitosi: non è un farmaco e non ha un’indicazione terapeutica"
           }
         }
       },
       "block_order": [
-        "00_kicker",
-        "01_heading",
-        "02_nolist",
-        "03_note",
-        "04_badges"
-      ]
+        "l1",
+        "l2",
+        "l3",
+        "l4"
+      ],
+      "settings": {
+        "note": "<p>Dolore, febbre o difficoltà a deglutire? <strong>L’otorino viene prima di qualunque gel.</strong></p>",
+        "kicker": "Onestà",
+        "heading": "Quello che FREOS non fa.",
+        "dek": "",
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
     },
     "garanzia": {
-      "type": "freos-editorial",
-      "settings": {
-        "surface": "ink",
-        "width": "narrow",
-        "reading": false,
-        "padding_top": 64,
-        "padding_bottom": 64
-      },
+      "type": "freos-pdp-garanzia",
       "blocks": {
-        "00_kicker": {
-          "type": "kicker",
+        "g1": {
+          "type": "badge",
           "settings": {
-            "text": "Il rischio"
+            "title": "30 Sere di prova",
+            "sub": "o rimborso"
           }
         },
-        "01_heading": {
-          "type": "heading",
+        "g2": {
+          "type": "badge",
           "settings": {
-            "text": "Un mese di prova. <em>Il rischio è nostro.</em>"
+            "title": "✓ Il barattolo",
+            "sub": "resta a te"
           }
         },
-        "02_paragraph": {
-          "type": "paragraph",
+        "g3": {
+          "type": "badge",
           "settings": {
-            "text": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>"
-          }
-        },
-        "03_cta": {
-          "type": "cta",
-          "settings": {
-            "label": "Aggiungi al carrello",
-            "pill": "29,90 €",
-            "url": "/products/gel-notturno-micro-aderente-allo-zinco",
-            "reassurance": "Garanzia commerciale. Si aggiunge ai tuoi diritti di legge — recesso di 14 giorni e garanzia legale di conformità — che restano interi."
+            "title": "⌀ Nessun",
+            "sub": "abbonamento"
           }
         }
       },
       "block_order": [
-        "00_kicker",
-        "01_heading",
-        "02_paragraph",
-        "03_cta"
-      ]
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "settings": {
+        "shield": true,
+        "body": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>",
+        "cta_label": "Aggiungi al carrello",
+        "cta_pill": "29,90 €",
+        "cta_url": "",
+        "legal": "Garanzia commerciale. Si aggiunge ai tuoi diritti di legge — recesso di 14 giorni e garanzia legale di conformità — che restano interi.",
+        "kicker": "Il rischio",
+        "heading": "Un mese di prova. <em>Il rischio è nostro.</em>",
+        "dek": "",
+        "surface": "ink",
+        "width": "narrow",
+        "padding_top": 64,
+        "padding_bottom": 64
+      }
     },
     "faq": {
-      "type": "freos-editorial",
-      "settings": {
-        "surface": "white",
-        "width": "narrow",
-        "reading": false,
-        "padding_top": 56,
-        "padding_bottom": 72
-      },
+      "type": "freos-pdp-faq",
       "blocks": {
-        "00_section_header": {
-          "type": "section_header",
-          "settings": {
-            "kicker": "Le domande scomode",
-            "heading": "Le domande.",
-            "dek": ""
-          }
-        },
-        "01_faq": {
-          "type": "faq",
+        "q1": {
+          "type": "q",
           "settings": {
             "question": "Come si usa, esattamente?",
             "answer": "<p>Due misurini (1,2 g) la sera, dopo i denti. Lascia sciogliere sulla lingua, poi deglutisci. Mai a stomaco vuoto.</p>",
             "open": true
           }
         },
-        "02_faq": {
-          "type": "faq",
+        "q2": {
+          "type": "q",
           "settings": {
             "question": "Quanto dura un barattolo?",
             "answer": "<p>120 g. Due misurini a sera, misurino incluso: un barattolo copre <strong>un mese pieno</strong>. Meno di un euro al giorno.</p>",
             "open": false
           }
         },
-        "03_faq": {
-          "type": "faq",
+        "q3": {
+          "type": "q",
           "settings": {
             "question": "È un farmaco?",
             "answer": "<p>No. È un integratore alimentare. <strong>Non cura l’alitosi</strong> e non ha un’indicazione terapeutica.</p>",
             "open": false
           }
         },
-        "04_faq": {
-          "type": "faq",
+        "q4": {
+          "type": "q",
           "settings": {
             "question": "Serve per i tonsilloliti?",
             "answer": "<p>No. Non tocca le tonsille e non scioglie i tonsilloliti. Se il problema è quello, la persona giusta è l’otorino.</p>",
             "open": false
           }
         },
-        "05_faq": {
-          "type": "faq",
+        "q5": {
+          "type": "q",
           "settings": {
             "question": "E se il problema viene dallo stomaco?",
             "answer": "<p>Raramente: le cause esterne alla bocca riguardano circa il 5-10% dei casi. <em>(Tangerman A &amp; Winkel EG · J Breath Res 2010 · PMID 21386205)</em> Con reflusso o sintomi digestivi, senti il medico.</p>",
             "open": false
           }
         },
-        "06_faq": {
-          "type": "faq",
+        "q6": {
+          "type": "q",
           "settings": {
             "question": "Il mio dentista dice che è tutto a posto.",
             "answer": "<p>Ha ragione su quello che esamina: denti e gengive. La parte posteriore della lingua non rientra nella visita di controllo.</p>",
             "open": false
           }
         },
-        "07_faq": {
-          "type": "faq",
+        "q7": {
+          "type": "q",
           "settings": {
             "question": "Che sapore ha?",
             "answer": "<p>[SAPORE]</p>",
             "open": false
           }
         },
-        "08_faq": {
-          "type": "faq",
+        "q8": {
+          "type": "q",
           "settings": {
             "question": "Posso usarlo in gravidanza o durante l’allattamento?",
             "answer": "<p>No.</p>",
             "open": false
           }
         },
-        "09_faq": {
-          "type": "faq",
+        "q9": {
+          "type": "q",
           "settings": {
             "question": "Come funziona la garanzia?",
             "answer": "<p>Trenta sere di prova. Se non ti dice niente, ti rimborsiamo e <strong>il barattolo resta a te</strong>. È una garanzia commerciale che offriamo noi e <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità — che restano interi.</p>",
             "open": false
           }
-        },
-        "10_sources": {
-          "type": "sources",
-          "settings": {
-            "title": "Fonti",
-            "items": "Takahashi et al., 2.873 pazienti consecutivi, 2014\nTangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205\nDawes C, Wong DTW. J Dent Res, 2019. PMID 30782091\nQuirynen M et al. J Clin Periodontol, 2009. PMID 19811581"
-          }
         }
       },
       "block_order": [
-        "00_section_header",
-        "01_faq",
-        "02_faq",
-        "03_faq",
-        "04_faq",
-        "05_faq",
-        "06_faq",
-        "07_faq",
-        "08_faq",
-        "09_faq",
-        "10_sources"
-      ]
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q9"
+      ],
+      "settings": {
+        "src_title": "Fonti",
+        "src_items": "Takahashi et al., 2.873 pazienti consecutivi, 2014\nTangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205\nDawes C, Wong DTW. J Dent Res, 2019. PMID 30782091\nQuirynen M et al. J Clin Periodontol, 2009. PMID 19811581",
+        "kicker": "Le domande scomode",
+        "heading": "Le domande.",
+        "dek": "",
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 56,
+        "padding_bottom": 72
+      }
     },
     "sticky": {
       "type": "freos-pdp-sticky",
@@ -595,20 +894,24 @@
         "label": "Gel Notturno allo Zinco",
         "show_rating": true,
         "score": "4,8",
-        "cta": "",
-        "soldout": "",
+        "cta": "Aggiungi al carrello",
+        "soldout": "Non disponibile",
         "watch": ".fr-atc-wrap"
       }
     }
   },
   "order": [
+    "promo",
     "buybox",
     "marquee",
-    "meccanismo",
+    "benefici",
+    "differenza",
+    "numeri",
     "ingredienti",
+    "percorso",
+    "motivi",
     "confronto",
     "recensioni",
-    "rituale",
     "limiti",
     "garanzia",
     "faq",
