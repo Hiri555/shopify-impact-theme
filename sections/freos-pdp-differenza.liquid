@@ -40,7 +40,7 @@
           <div class="fr-bar{% if block.settings.accent %} is-hi{% endif %}" {{ block.shopify_attributes }}>
             <span class="fr-bar-l">{{ block.settings.label }}</span>
             <span class="fr-bar-v">{{ block.settings.meta }}</span>
-            <span class="fr-bar-t"><i style="--w:{{ block.settings.value }}%"></i></span>
+            <span class="fr-bar-t"><i style="width:{{ block.settings.value }}%"></i></span>
           </div>
         {%- endfor -%}
       </div>

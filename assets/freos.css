@@ -936,11 +936,11 @@
    donnee ne peut rester cachee si un script ne tourne pas. Une version
    precedente partait de zero et attendait IntersectionObserver -- qui ne s'est
    jamais declenche dans un contexte d'iframe, laissant les barres vides. */
-.fr .fr-bars .fr-bar-t i{ width:var(--w,100%); }
 @media (prefers-reduced-motion:no-preference){
-  .fr .fr-bars .fr-bar-t i{ animation:fr-bar-grow .8s cubic-bezier(.22,1,.36,1) both; }
+  .fr .fr-bars .fr-bar-t i{ transform-origin:left center;
+    animation:fr-bar-grow .8s cubic-bezier(.22,1,.36,1) both; }
 }
-@keyframes fr-bar-grow{ from{ width:0 } to{ width:var(--w,100%) } }
+@keyframes fr-bar-grow{ from{ transform:scaleX(0) } to{ transform:scaleX(1) } }
 
 /* ---------------------------------------------------------- 06 INGREDIENTI */
 .fr .fr-ing-n{ display:block; font-family:Fraunces,serif; font-weight:500; font-size:15px;
