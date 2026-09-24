@@ -1,0 +1,607 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP Inchiesta
+  ----------------------------------------------------------------------------
+  Porte depuis la source autonome. La copy est verrouillee et vit inline :
+  seule la cible des CTA est un reglage, sur le modele de l'advertorial Rosalia.
+
+  Les images sont des assets du theme (freos-lp1-NN.webp) : pour en changer
+  une, on remplace le fichier, pas le code.
+
+  Le CSS ci-dessous est celui de la source, inchange. Il porte son propre reset
+  et ses propres tokens — la page ne depend donc d'aucun CSS du theme.
+  ============================================================================
+{%- endcomment -%}
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+
+<style>
+:root {
+  --bg: #F2ECD9;
+  --paper: #FBF6E8;
+  --ink: #17201A;
+  --ink-2: #2E3A2E;
+  --ink-3: #6A7166;
+  --ink-4: #9CA095;
+  --accent: #2D5A3A;
+  --accent-light: #4A7C59;
+  --rule: #C9C1AB;
+  --rule-strong: #A69B7E;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+:root:not([data-theme="light"]) {}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #F2ECD9; --paper: #FBF6E8; --ink: #17201A; --ink-2: #2E3A2E; --ink-3: #6A7166; --ink-4: #9CA095;
+    --accent: #2D5A3A; --accent-light: #4A7C59; --rule: #C9C1AB; --rule-strong: #A69B7E;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: var(--bg); color: var(--ink); }
+body { font-family: 'Source Serif 4', Georgia, serif; font-size: 18px; line-height: 1.68; -webkit-font-smoothing: antialiased; }
+img, svg { max-width: 100%; display: block; }
+p { margin: 0 0 1.2em; }
+
+/* MASTHEAD */
+.masthead { padding: 22px 24px 18px; text-align: center; background: var(--paper); border-bottom: 1px solid var(--rule-strong); }
+.masthead-logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: clamp(24px, 4.5vw, 32px); line-height: 1; color: var(--ink); margin: 0; letter-spacing: -0.018em; }
+.masthead-logo em { font-style: italic; color: var(--accent); }
+.masthead-tagline { margin-top: 6px; font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-3); font-weight: 500; }
+
+/* ARTICLE */
+.article { max-width: 720px; margin: 0 auto; padding: 44px 28px 60px; background: var(--paper); }
+@media (min-width: 900px) { .article { max-width: 760px; padding: 60px 64px 90px; box-shadow: 0 0 0 1px var(--rule); } }
+@media (max-width: 640px) { .article { padding: 28px 22px 44px; } }
+
+.eyebrow { font-family: 'Inter', sans-serif; font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--ink-3); margin-bottom: 22px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.eyebrow .sep { color: var(--rule-strong); }
+
+/* H1 & SUBHEAD */
+.article-h1 { font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(32px, 5.6vw, 50px); line-height: 1.08; color: var(--ink); margin: 0 0 24px; letter-spacing: -0.018em; }
+.article-h1 em { font-style: italic; color: var(--accent); font-weight: 700; }
+.subhead { font-family: 'Source Serif 4', serif; font-size: clamp(20px, 2.7vw, 24px); line-height: 1.42; font-style: italic; color: var(--ink-2); margin: 0 0 32px; font-weight: 400; }
+
+/* BYLINE */
+.byline { display: flex; align-items: center; gap: 14px; padding: 18px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); margin-bottom: 36px; }
+.byline-photo { width: 48px; height: 48px; border-radius: 50%; flex-shrink: 0; overflow: hidden; }
+.byline-photo img { width: 100%; height: 100%; object-fit: cover; }
+.byline-author { font-family: 'Source Serif 4', serif; font-size: 14.5px; color: var(--ink); font-weight: 700; line-height: 1.3; }
+.byline-author em { font-style: italic; font-weight: 400; color: var(--ink-3); }
+.byline-consulenza { font-family: 'Source Serif 4', serif; font-size: 12.5px; color: var(--ink-3); font-style: italic; margin-top: 3px; line-height: 1.4; }
+.byline-consulenza strong { color: var(--ink-2); font-weight: 700; font-style: normal; }
+
+/* FIGURE */
+figure { margin: 34px 0 28px; }
+figure img { width: 100%; height: auto; display: block; }
+figcaption { font-family: 'Source Serif 4', serif; font-size: 13px; font-style: italic; color: var(--ink-3); line-height: 1.5; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--rule); }
+
+/* LEAD */
+.lead-para { font-family: 'Source Serif 4', serif; font-size: clamp(19px, 2.3vw, 22px); line-height: 1.55; color: var(--ink); margin: 26px 0 20px; font-weight: 400; }
+.lead-para .drop { float: left; font-family: 'Playfair Display', serif; font-weight: 900; font-style: italic; font-size: clamp(64px, 9vw, 92px); line-height: 0.82; color: var(--accent); padding: 10px 12px 0 0; }
+.lead-thesis { display: block; margin-top: 26px; font-style: italic; font-weight: 700; color: var(--accent); padding-left: 18px; border-left: 2px solid var(--accent); font-size: clamp(20px, 2.5vw, 24px); line-height: 1.4; }
+
+/* SECTIONS — no more labels. Just rules + whitespace + H2. */
+.section { margin-top: 56px; padding-top: 40px; border-top: 1px solid var(--rule); }
+.section:first-of-type { border-top: none; margin-top: 40px; padding-top: 0; }
+
+h2 { font-family: 'Source Serif 4', serif; font-weight: 700; font-size: clamp(26px, 4vw, 36px); line-height: 1.14; color: var(--ink); margin: 0 0 26px; letter-spacing: -0.012em; }
+h2 em { font-style: italic; color: var(--accent); font-weight: 700; }
+h3 { font-family: 'Source Serif 4', serif; font-weight: 700; font-style: italic; font-size: clamp(20px, 2.7vw, 24px); line-height: 1.25; color: var(--ink); margin: 34px 0 14px; }
+
+.prose { font-family: 'Source Serif 4', serif; font-size: 18px; line-height: 1.68; color: var(--ink); }
+.prose p { margin: 0 0 1.2em; }
+.prose strong { font-weight: 700; color: var(--ink); }
+.prose em { font-style: italic; }
+.prose p.first-of-section::first-letter { font-family: 'Playfair Display', serif; font-weight: 900; font-style: italic; font-size: 4.4em; float: left; line-height: 0.82; padding: 8px 10px 0 0; color: var(--accent); }
+
+/* TESTIMONY — no colored border. Hairline only. */
+.testimony { margin: 32px 0; padding: 22px 0 18px; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); }
+.testimony-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; padding-bottom: 12px; border-bottom: 1px solid var(--rule); }
+.testimony-photo { width: 54px; height: 54px; border-radius: 50%; flex-shrink: 0; overflow: hidden; }
+.testimony-photo img { width: 100%; height: 100%; object-fit: cover; }
+.testimony-name { font-family: 'Source Serif 4', serif; font-size: 15px; font-weight: 700; color: var(--ink); }
+.testimony-role { font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-3); font-weight: 600; margin-top: 3px; }
+.testimony blockquote { margin: 0; font-family: 'Source Serif 4', serif; font-size: 17px; font-style: italic; line-height: 1.55; color: var(--ink-2); }
+
+/* PULL — thin rules only */
+.pull { margin: 40px 0; padding: 24px 0; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); font-family: 'Source Serif 4', serif; font-style: italic; font-weight: 700; font-size: clamp(22px, 3vw, 28px); line-height: 1.32; color: var(--accent); text-align: center; }
+
+/* SIGNALS list — no colored panel. Italic prose list under hairline. */
+.signals { margin: 26px 0; padding: 18px 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+.signals-title { font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); font-weight: 700; margin-bottom: 12px; }
+.signals ul { margin: 0; padding: 0; list-style: none; }
+.signals li { font-family: 'Source Serif 4', serif; font-size: 15.5px; line-height: 1.6; color: var(--ink-2); padding: 5px 0; }
+.signals li::before { content: '— '; color: var(--rule-strong); margin-right: 2px; }
+
+/* STAGES — 4 minimal cards */
+.stages { margin: 30px 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border-top: 1px solid var(--rule-strong); border-bottom: 1px solid var(--rule-strong); }
+@media (max-width: 640px) { .stages { grid-template-columns: 1fr; } }
+.stage { padding: 16px 14px; border-right: 1px solid var(--rule); }
+.stage:last-child { border-right: none; }
+@media (max-width: 640px) { .stage { border-right: none; border-bottom: 1px solid var(--rule); } .stage:last-child { border-bottom: none; } }
+.stage-label { font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin-bottom: 10px; }
+.stage-text { font-family: 'Source Serif 4', serif; font-size: 14.5px; line-height: 1.5; color: var(--ink-2); }
+.stage-text strong { font-weight: 700; color: var(--ink); }
+
+/* FAILURE TABLE — hairlines only, no red */
+.failure-table { margin: 28px 0; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+.failure-row { padding: 16px 0; border-bottom: 1px solid var(--rule); display: grid; grid-template-columns: 1fr; gap: 6px; }
+.failure-row:last-child { border-bottom: none; }
+@media (min-width: 640px) { .failure-row { grid-template-columns: 200px 1fr; gap: 22px; align-items: baseline; } }
+.failure-what { font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 15.5px; color: var(--ink); }
+.failure-why { font-family: 'Source Serif 4', serif; font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+.failure-why em { color: var(--ink); font-style: italic; font-weight: 600; }
+
+/* ANATOMIA — 4-phase minimal grid */
+.phase-anatomia { margin: 34px 0; display: grid; grid-template-columns: 1fr; gap: 24px; }
+@media (min-width: 700px) { .phase-anatomia { grid-template-columns: 1fr 1fr; gap: 20px; } }
+.phase-card { background: transparent; }
+.phase-card img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); }
+.phase-title { font-family: 'Source Serif 4', serif; font-weight: 700; font-style: italic; font-size: 14.5px; color: var(--accent); margin-top: 14px; margin-bottom: 6px; }
+.phase-num { display: inline-block; margin-right: 6px; font-family: 'Playfair Display', serif; font-style: italic; font-weight: 900; font-size: 20px; color: var(--rule-strong); }
+.phase-body p { margin: 0; font-family: 'Source Serif 4', serif; font-size: 14.5px; line-height: 1.55; color: var(--ink-2); }
+.phase-body p strong { font-weight: 700; color: var(--ink); }
+
+/* PRODUCT SECTION — no colored panels */
+.product-photo { margin: 34px auto; max-width: 380px; }
+.product-photo img { width: 100%; height: auto; display: block; border: 1px solid var(--rule); }
+.product-photo figcaption { text-align: center; padding-top: 10px; border-top: 1px solid var(--rule); }
+
+/* PRICE — editorial standfirst */
+.price-block { margin: 40px 0 30px; padding: 30px 0; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); text-align: center; }
+.price-headline { font-family: 'Playfair Display', serif; font-weight: 900; font-style: italic; font-size: clamp(30px, 5vw, 42px); line-height: 1.1; color: var(--ink); margin: 0 0 12px; letter-spacing: -0.01em; }
+.price-body { font-family: 'Source Serif 4', serif; font-size: 16px; line-height: 1.55; color: var(--ink-2); max-width: 480px; margin: 0 auto 20px; }
+.price-body em { font-style: italic; color: var(--accent); font-weight: 600; }
+.price-cta { display: inline-block; padding: 4px 0; font-family: 'Source Serif 4', serif; font-size: 22px; font-weight: 700; font-style: italic; color: var(--accent); text-decoration: none; border-bottom: 2px solid var(--accent); transition: color .15s; }
+.price-cta:hover { color: var(--ink); border-bottom-color: var(--ink); }
+.price-guarantee { margin-top: 14px; font-family: 'Source Serif 4', serif; font-size: 13px; font-style: italic; color: var(--ink-3); }
+
+/* PAIRS */
+.pairs { margin: 24px 0; }
+.pair { display: grid; grid-template-columns: 1fr; gap: 4px; padding: 14px 0; border-bottom: 1px solid var(--rule); }
+.pair:last-child { border-bottom: none; }
+@media (min-width: 640px) { .pair { grid-template-columns: 1fr 24px 1fr; align-items: center; gap: 18px; } }
+.pair-arrow { font-family: 'Playfair Display', serif; font-size: 20px; color: var(--rule-strong); text-align: center; }
+.pair-now { font-family: 'Source Serif 4', serif; font-size: 15px; color: var(--ink-3); font-style: italic; line-height: 1.45; }
+.pair-desire { font-family: 'Source Serif 4', serif; font-size: 15px; color: var(--ink); font-weight: 700; line-height: 1.45; }
+
+/* FAQ */
+.faq { margin: 26px 0; border-top: 1px solid var(--rule-strong); }
+.faq-item { padding: 18px 0; border-bottom: 1px solid var(--rule); }
+.faq-q { font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 16.5px; color: var(--ink); margin-bottom: 8px; line-height: 1.4; }
+.faq-a { font-family: 'Source Serif 4', serif; font-size: 15px; line-height: 1.55; color: var(--ink-2); }
+
+/* FONTI */
+.fonti { margin: 40px 0 0; padding: 22px 0; border-top: 1px solid var(--rule-strong); }
+.fonti-title { font-family: 'Inter', sans-serif; font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); font-weight: 700; margin-bottom: 10px; }
+.fonti ol { margin: 0; padding-left: 20px; font-family: 'Source Serif 4', serif; font-size: 12px; line-height: 1.6; color: var(--ink-3); }
+.fonti li { margin-bottom: 4px; }
+.fonti em { font-style: italic; }
+
+/* COLOPHON */
+.colophon { background: var(--ink); color: var(--paper); padding: 48px 24px 32px; margin-top: 0; }
+.colophon-inner { max-width: 780px; margin: 0 auto; }
+.colophon-masthead { text-align: center; padding-bottom: 28px; border-bottom: 1px solid rgba(251,246,232,0.15); margin-bottom: 30px; }
+.colophon-logo { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 26px; color: var(--paper); line-height: 1; letter-spacing: -0.015em; }
+.colophon-logo em { font-style: italic; color: var(--accent-light); }
+.colophon-tagline { margin-top: 8px; font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.22em; text-transform: uppercase; color: rgba(251,246,232,0.55); font-weight: 500; }
+.colophon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 32px; margin-bottom: 32px; }
+@media (max-width: 640px) { .colophon-grid { grid-template-columns: 1fr; gap: 20px; } }
+.colophon-label { font-family: 'Inter', sans-serif; font-size: 10px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent-light); font-weight: 700; margin-bottom: 8px; padding-bottom: 6px; border-bottom: 1px solid rgba(127,164,138,0.3); }
+.colophon-body { font-family: 'Source Serif 4', serif; font-size: 13px; line-height: 1.55; color: rgba(251,246,232,0.85); }
+.colophon-body strong { color: var(--paper); font-weight: 700; }
+.colophon-legal { padding-top: 24px; border-top: 1px solid rgba(251,246,232,0.15); font-family: 'Source Serif 4', serif; font-size: 11.5px; line-height: 1.55; color: rgba(251,246,232,0.6); }
+.colophon-legal p { margin: 0 0 12px; }
+.colophon-legal p strong { color: rgba(251,246,232,0.85); font-weight: 700; }
+.colophon-copy { margin-top: 18px !important; padding-top: 14px; border-top: 1px solid rgba(251,246,232,0.1); font-size: 10.5px; letter-spacing: 0.02em; color: rgba(251,246,232,0.45); }
+.colophon-copy a { color: rgba(251,246,232,0.6); text-decoration: none; margin: 0 4px; }
+.colophon-copy a:hover { color: var(--accent-light); }
+
+.anc{padding:52px 0;border-top:1px solid #CDC5B0;margin-top:40px}
+.anc h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(23px,5.2vw,34px);line-height:1.14;margin:0 0 10px;max-width:24ch}
+.anc h3 em{font-style:italic;color:#2D5A3A}
+.anc .lead{font-size:16px;color:#6E7268;margin:0 0 24px;max-width:52ch}
+.anc-r{display:grid;grid-template-columns:1fr;gap:3px;padding:15px 0;border-bottom:1px solid #CDC5B0}
+@media(min-width:620px){.anc-r{grid-template-columns:1fr auto;gap:20px;align-items:baseline}}
+.anc-l{font-size:15.5px;color:#333C33;line-height:1.5}
+.anc-l small{display:block;font-size:13px;color:#6E7268;margin-top:3px}
+.anc-v{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:18px;color:#17201A;white-space:nowrap}
+.anc-r.us{background:rgba(45,90,58,.07);padding:20px 18px;margin:8px -18px 0;border-bottom:none}
+@media(min-width:620px){.anc-r.us{margin:8px 0 0;padding:22px}}
+.anc-r.us .anc-l{color:#17201A;font-weight:600}
+.anc-r.us .anc-v{color:#2D5A3A;font-size:clamp(26px,7vw,34px);line-height:1}
+.anc-note{margin-top:22px;padding-left:16px;border-left:2px solid #A89E84;font-size:15px;line-height:1.6;color:#333C33;max-width:54ch}
+.anc-note b{color:#17201A}
+.anc-src{margin-top:16px;font-size:11.5px;color:#6E7268;line-height:1.55}
+.cta-mid{margin:34px 0 0;text-align:center}
+.cta-mid a{display:block;width:100%;background:#17201A;color:#fff;text-decoration:none;padding:17px 20px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+@media(min-width:620px){.cta-mid a{display:inline-block;width:auto;padding:17px 42px}}
+.cta-mid p{margin:11px 0 0;font-size:12.5px;font-style:italic;color:#6E7268}
+.ps{padding:54px 0;border-top:1px solid #CDC5B0}
+.ps h3{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-size:clamp(23px,5.2vw,34px);line-height:1.14;margin:0 0 8px;max-width:24ch}
+.ps h3 em{font-style:italic;color:#2D5A3A}
+.ps .psub{font-size:15.5px;color:#6E7268;margin:0 0 26px;max-width:54ch}
+.slot{border:1px dashed #A89E84;background:repeating-linear-gradient(135deg,transparent,transparent 9px,rgba(45,90,58,.035) 9px,rgba(45,90,58,.035) 18px);padding:22px 20px;margin:0 0 16px}
+.slot-h{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.slot-t{font-family:Inter,sans-serif;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:#fff;background:#2D5A3A;padding:4px 8px;line-height:1}
+.slot-o{font-family:Inter,sans-serif;font-size:11.5px;color:#6E7268;font-style:italic}
+.slot-b{font-size:14.5px;line-height:1.6;color:#333C33;margin:0}
+.slot-b b{color:#17201A}
+.slot ul{margin:10px 0 0;padding:0;list-style:none}
+.slot li{font-size:13.5px;line-height:1.55;color:#6E7268;padding:3px 0 3px 15px;position:relative}
+.slot li::before{content:'›';position:absolute;left:0;color:#2D5A3A;font-weight:700}
+.slot-id{font-family:Inter,sans-serif;font-size:10px;letter-spacing:.1em;color:#A89E84;margin-top:12px;text-transform:uppercase}
+.obj-g{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:800px){.obj-g{grid-template-columns:1fr 1fr}}
+.obj-q{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;font-size:17px;color:#17201A;margin:0 0 10px;line-height:1.34}
+</style>
+
+<div class="freos-lp-body">
+<header class="masthead">
+  <h1 class="masthead-logo">L'Inchiesta<em>Salute</em></h1>
+  <div class="masthead-tagline">Un caso alla volta · Fino in fondo</div>
+</header>
+
+<article class="article">
+
+  <div class="eyebrow">
+    <span>Inchiesta</span><span class="sep">·</span><span>Salute orale</span><span class="sep">·</span><span>8 min di lettura</span>
+  </div>
+
+  <h1 class="article-h1">Nove italiani su dieci hanno un'alitosi che parte in bocca. <em>Non nello stomaco.</em></h1>
+
+  <p class="subhead">Un dato pubblicato dal 2009 che quasi nessuno conosce. E che spiega perché, dopo dieci anni di cotton fioc, gargarismi e mentine, l'alito può ancora tornare.</p>
+
+  <div class="byline">
+    <div class="byline-photo"><img src="{{ 'freos-lp1-01.webp' | asset_url }}" alt="Elena Manzoni" /></div>
+    <div>
+      <div class="byline-author">di <strong>Elena Manzoni</strong> <em>— Redazione Inchieste</em></div>
+      <div class="byline-consulenza">con la consulenza scientifica del <strong>Dott. Marco Serpelloni</strong>, otorinolaringoiatra</div>
+    </div>
+  </div>
+
+  <figure>
+    <img src="{{ 'freos-lp1-02.webp' | asset_url }}" alt="Gli oggetti della sera" />
+    <figcaption>Tutto quello che una persona può accumulare in un cassetto per non farsi sentire. Alle 23, torna sul comodino.</figcaption>
+  </figure>
+
+  <p class="lead-para"><span class="drop">S</span>u 547 persone visitate in un centro specializzato del Nord Italia per un'alitosi persistente, nove su dieci avevano l'origine del problema dentro la bocca. Non nello stomaco. Non nell'intestino. In bocca. E in una grande serie di TAC del collo, i tonsilloliti — quelle palline bianche che a volte escono con un colpo di tosse — comparivano in quasi quattro persone su dieci sopra i quarant'anni, quasi sempre senza che nessuno lo dicesse al paziente.</p>
+  <p class="lead-para">Sono due dati pubblicati. Non sono un segreto. Sono in letteratura scientifica dal 2009 e dal 2020.</p>
+  <p class="lead-para">Eppure quasi nessuna delle persone che abbiamo intervistato per questa inchiesta li conosceva. E quasi nessuna aveva mai sentito, dal proprio dentista o dal proprio otorino, la sola frase che avrebbe cambiato dieci anni delle loro sere:</p>
+  <span class="lead-thesis">L'alitosi persistente ha due metà. La maggior parte delle persone ne sta pulendo una sola.</span>
+
+  <section class="section">
+    <h2>Tutto comincia con qualcosa che <em>non dovrebbe esserci</em>.</h2>
+    <div class="prose">
+      <p class="first-of-section">Per qualcuno comincia con un colpo di tosse, o una sera mentre si lava i denti. Una pallina bianca o gialla, piccola, dura, finisce nel fazzoletto, e quando la schiacci l'odore è nauseante. Pensavi fosse una placca. Nei racconti che abbiamo raccolto per questa inchiesta, la persona ha lavato i denti di continuo, per anni, <em>«perché ero a disagio»</em>, prima di scoprire un nome: tonsille criptiche.</p>
+      <p>Per qualcun altro comincia con una sensazione: qualcosa di fermo in gola quando deglutisci, come un pelo che non va giù. Un sapore cattivo in fondo, che il dentifricio non copre. Hai fatto la pulizia dal dentista, ti lavi i denti tre volte al giorno, e non cambia niente. Dentisti, otorini, gastroenterologi: in tanti ti hanno visitato, e nessuno ha trovato la risposta.</p>
+    </div>
+    <figure>
+      <img src="{{ 'freos-lp1-03.webp' | asset_url }}" alt="Scena dello specchio con la luce del telefono" />
+      <figcaption>Undici anni della stessa luce, dello stesso gesto, della stessa domanda.</figcaption>
+    </figure>
+    <div class="prose">
+      <p>E per chi il nome lo conosce già, comincia ogni sera. La luce del telefono, la bocca aperta, il cotton fioc, il dito, a volte il manico di un cucchiaino. Ne togli uno, e dopo pochi giorni ce ne sono di nuovi. Sono gesti che nessuno racconta a voce, ma che si ripetono dentro migliaia di case italiane con la stessa alzata di spalle: <em>«non riesco sempre a toglierli con il cotton fioc, è fastidioso, poi vomito l'anima.»</em></p>
+      <p>Hai fatto i gargarismi con acqua calda e sale, come si fa da sempre. Il collutorio tutti i giorni. Le mentine in borsa. Qualcuno è andato dall'otorino e si è sentito rispondere la frase che, di volta in volta, torna identica: <em>«lascialo là, non dà fastidio.»</em> Detta con la stessa alzata di spalle. Come se il fastidio, il tuo, non contasse.</p>
+      <p>Intanto, quando parli con qualcuno, tieni quel mezzo metro in più. Non per timidezza. Per paura che si senta.</p>
+    </div>
+    <div class="testimony">
+      <div class="testimony-header">
+        <div class="testimony-photo"><img src="{{ 'freos-lp1-04.webp' | asset_url }}" alt="Chiara" /></div>
+        <div>
+          <div class="testimony-name">Chiara, 42 anni</div>
+          <div class="testimony-role">insegnante · Bologna · intervistata per L'Inchiesta Salute</div>
+        </div>
+      </div>
+      <blockquote>«Undici anni fa ho tossito e mi è uscita una pallina bianca nel palmo. Ho pensato fosse una placca. Da quella sera, prima di dormire, ho cominciato a guardarmi la gola con la luce del telefono. Cotton fioc, dita, la volta buona anche il manico di un cucchiaino. Alla fine ho smesso di baciare mio marito da vicino. Non gliel'ho mai detto perché.»</blockquote>
+    </div>
+    <div class="pull">Non ti stanca il calcolo. Ti stanca cercarlo ogni sera.</div>
+    <div class="prose"><p><em>E se quello che cerchi con la luce del telefono fosse solo metà della risposta?</em></p></div>
+  </section>
+
+  <section class="section">
+    <h2>All'inizio sembra una cosa piccola. Poi diventa <em>un appuntamento fisso</em>.</h2>
+    <div class="stages">
+      <div class="stage"><div class="stage-label">Prima</div><div class="stage-text">Un sapore strano, una sensazione in gola che va e viene.</div></div>
+      <div class="stage"><div class="stage-label">Poi</div><div class="stage-text">La prima pallina bianca, e un nome da cercare di notte sul telefono.</div></div>
+      <div class="stage"><div class="stage-label">Poi</div><div class="stage-text">Le serate davanti allo specchio, e i giorni in cui ne escono di nuovi.</div></div>
+      <div class="stage"><div class="stage-label">Oggi</div><div class="stage-text">Tieni le distanze quando parli, e pensi che <strong>l'unica uscita sia un bisturi</strong>.</div></div>
+    </div>
+    <div class="prose">
+      <p>Alla fine, la frase che ricorre — in ogni forum, sotto ogni video di otorino, in ogni gruppo — è la stessa, con parole minime: <em>«mi sono rotta le scatole, non ne posso più. Nessuno mi vuole togliere le tonsille.»</em> O nella versione più composta di chi ha ancora la pazienza di chiedersi cosa sta sbagliando: <em>«nonostante io esegua una corretta igiene orale, ho sempre l'alitosi.»</em> Due modi diversi di dire la stessa cosa. Che il gesto quotidiano, per quanto perfetto, non basta.</p>
+    </div>
+    <h3>Forse ti riguarda, anche se non li hai mai visti.</h3>
+    <div class="prose">
+      <p>I tonsilloliti sono piccoli depositi che si formano nelle pieghe delle tonsille, e sono molto più comuni di quanto si pensi. Nella maggior parte dei casi sono piccoli, nascosti, e non danno nessun fastidio. Quando si fanno sentire, spesso lo fanno con segnali che nessuno collega alle tonsille.</p>
+    </div>
+    <div class="signals">
+      <div class="signals-title">Segnali da riconoscere</div>
+      <ul>
+        <li>Un sapore cattivo in fondo alla gola, che torna anche dopo lo spazzolino.</li>
+        <li>La sensazione di qualcosa di fermo in gola quando deglutisci.</li>
+        <li>Piccole palline bianche o gialle che escono con un colpo di tosse, spesso per caso.</li>
+        <li>Un alito pesante che nessuno ti ha ancora spiegato, anche con una buona igiene.</li>
+        <li>Una gola spesso irritata, senza febbre e senza un vero mal di gola.</li>
+      </ul>
+    </div>
+    <div class="signals">
+      <div class="signals-title">Quando è meglio andare dal medico</div>
+      <ul>
+        <li>Deglutire è difficile o fa male, o hai dolore all'orecchio.</li>
+        <li>Il fastidio è sempre da un solo lato, o una tonsilla sembra più grande dell'altra.</li>
+        <li>Noti un nodulo o un linfonodo gonfio sul collo.</li>
+        <li>C'è sangue nella saliva, o una ferita in gola che non guarisce.</li>
+        <li>Hai febbre, fatichi ad aprire la bocca o la voce cambia.</li>
+      </ul>
+    </div>
+    <div class="prose"><p><em>E allora, se la parte che vedi è solo una metà, dov'è l'altra?</em></p></div>
+  </section>
+
+  <section class="section">
+    <h2>Il vero vilain <em>non sei tu</em>.</h2>
+    <div class="prose">
+      <p class="first-of-section">Per anni ti sei chiesta cosa avessi sbagliato. Se ti lavavi abbastanza. Se stavi mangiando qualcosa che non dovevi. Se il tuo corpo era, in qualche modo, difettoso. Se avresti dovuto essere più attenta, più pulita, più tutto.</p>
+      <p><strong>Nessuna di queste cose.</strong> La frase che abbiamo trovato ripetuta, con parole quasi identiche, in centinaia di racconti è sempre questa: <em>«ho provato di tutto — collutorio, dentifrici speciali, mentine. Mi sento come se fosse colpa mia, ma non ho mai capito cosa ho fatto di sbagliato.»</em> Non hai fatto niente di sbagliato. Il colpevole ha un nome, un orario, e una biologia precisa che è stata studiata su riviste scientifiche a partire dagli anni 2000.</p>
+      <p>Il vero vilain si chiama <strong>Turno di Notte</strong>. E lavora contro di te per otto ore, ogni notte, mentre tu dormi.</p>
+      <p>Quando ti addormenti, la produzione di saliva crolla di quasi il 90%. La saliva è la guardia principale della tua bocca: la lava, la neutralizza, tiene sotto controllo la flora batterica. Quando smette di scorrere, alcune famiglie di batteri — quelle che preferiscono l'assenza di ossigeno — si moltiplicano indisturbate sul fondo della lingua e dentro le cripte delle tonsille. Producono composti a base di zolfo. Sono loro che, al mattino, senti.</p>
+      <p>Il vilain non è la tua bocca. È un orario, una biologia e una zona: <strong>il fondo della lingua durante le ore in cui la saliva si ferma</strong>. Nessuno lo tratta perché nessuno lo tocca. Lo spazzolino non ci arriva. I gargarismi durano trenta secondi contro otto ore. Le mentine coprono di giorno, quando il vilain nemmeno c'è.</p>
+      <p>Questa è la Metà Invisibile. E non è mai stata colpa tua.</p>
+    </div>
+    <div class="pull">Non hai sbagliato. Stavi guardando la metà sbagliata.</div>
+  </section>
+
+  <section class="section">
+    <h2>Quattro fasi in ventiquattro ore. <em>Solo una è sotto la tua guardia.</em></h2>
+    <div class="prose">
+      <p>Il Turno di Notte non è un'immagine. È una sequenza di quattro fasi, misurabili, ognuna con la sua ora del giorno e la sua zona precisa della bocca. Le abbiamo fatte illustrare dal Dott. L. Bertani, illustratore medico che collabora con la nostra redazione. Sono le stesse fasi che ogni notte, da anni, ti fanno svegliare con quel sapore.</p>
+    </div>
+    <div class="phase-anatomia">
+      <div class="phase-card">
+        <img src="{{ 'freos-lp1-05.webp' | asset_url }}" alt="Fase 1 · Deposit" />
+        <div class="phase-title"><span class="phase-num">I</span>Fase 1 · Deposit</div>
+        <div class="phase-body"><p><strong>Il fondo.</strong> Sul fondo della tua lingua, tra le papille, si deposita una patina sottile dove vivono batteri che ha chiunque. Da lì nascono i composti a base di zolfo. È il punto che vedi allo specchio e che lo spazzolino non raggiunge.</p></div>
+      </div>
+      <div class="phase-card">
+        <img src="{{ 'freos-lp1-06.webp' | asset_url }}" alt="Fase 2 · Stall" />
+        <div class="phase-title"><span class="phase-num">II</span>Fase 2 · Stall</div>
+        <div class="phase-body"><p><strong>La notte.</strong> Quando la saliva diventa scarsissima, gli studi misurano più composti a base di zolfo e più patina. È il cuore del Turno di Notte: ore in cui nessuno è di guardia.</p></div>
+      </div>
+      <div class="phase-card">
+        <img src="{{ 'freos-lp1-07.webp' | asset_url }}" alt="Fase 3 · Peak" />
+        <div class="phase-title"><span class="phase-num">III</span>Fase 3 · Peak</div>
+        <div class="phase-body"><p><strong>Il risveglio.</strong> Il momento in cui la patina è al massimo, e i composti a base di zolfo tornano nella tua bocca. È il sapore del mattino, quello che senti prima ancora di parlare. Non è la fame. Non è lo stomaco. È il turno che finisce.</p></div>
+      </div>
+      <div class="phase-card">
+        <img src="{{ 'freos-lp1-08.webp' | asset_url }}" alt="Fase 4 · Late" />
+        <div class="phase-title"><span class="phase-num">IV</span>Fase 4 · Late</div>
+        <div class="phase-body"><p><strong>Il gesto che arriva dopo.</strong> Lo spazzolino si ferma al centro della lingua: il riflesso a metà. Il fondo — dove il turno lavora — resta scoperto. Ecco perché il gesto di sempre, per quanto accurato, arriva tardi e si ferma prima.</p></div>
+      </div>
+    </div>
+    <div class="prose">
+      <p>Ecco perché, dopo l'ennesima estrazione o dopo anni di collutorio, l'alito può restare. Non perché hai sbagliato qualcosa, ma perché stavi combattendo un turno che comincia quando tu smetti di guardare. È il motivo per cui, dopo un intervento chirurgico che sembrava definitivo, molti ci hanno raccontato di aver sentito l'alito tornare dopo tre mesi. Nessuno gliel'aveva detto che poteva succedere. Perché la biologia della notte, fino ad oggi, non era mai stata spiegata a nessuno.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Ognuno di quei rimedi <em>faceva la sua parte</em>. Ma nessuno faceva quella giusta.</h2>
+    <div class="prose">
+      <p class="first-of-section">Il cassetto lo conosci meglio di chiunque. Ci sono passati dieci prodotti, forse venti. Ognuno prometteva qualcosa. Nessuno ti ha dato quello che cercavi. Non perché tu abbia scelto male. Perché ognuno di questi rimedi era pensato per un momento e una zona che <strong>non sono il vilain</strong>.</p>
+    </div>
+    <div class="failure-table">
+      <div class="failure-row"><div class="failure-what">Il cotton fioc</div><div class="failure-why">Preme dove la gola è delicata. Fa sanguinare. A volte fa venire il conato. E anche quando funziona, la cripta resta lì. <em>Domani sera, un altro.</em></div></div>
+      <div class="failure-row"><div class="failure-what">I gargarismi</div><div class="failure-why">Durano trenta secondi. Il vilain lavora otto ore. Non è una battaglia ad armi pari. <em>Si combatte alle undici di sera un nemico che comincia il turno alle due di notte.</em></div></div>
+      <div class="failure-row"><div class="failure-what">Il collutorio</div><div class="failure-why">Nella maggior parte dei casi passa davanti, non dietro. Il fondo della lingua — dove si deposita la patina — resta scoperto. <em>Copre il davanti, ma il dietro è lì.</em></div></div>
+      <div class="failure-row"><div class="failure-what">Le mentine</div><div class="failure-why">Coprono di giorno, quando parli, quando sei tra la gente. Ma il vilain non lavora di giorno. <em>Ti proteggono nel momento in cui non serve.</em></div></div>
+      <div class="failure-row"><div class="failure-what">Il nettalingua</div><div class="failure-why">Buono strumento, ma la zona che conta è il terzo posteriore. Quello che il riflesso rifiuta. Fermarsi a metà lingua è come lavare metà del pavimento. <em>Il resto continua a lavorare la notte.</em></div></div>
+      <div class="failure-row"><div class="failure-what">La tonsillectomia</div><div class="failure-why">In alcuni casi risolve la parte visibile. In molti altri, dopo qualche mese, l'alito torna. Perché la lingua è ancora lì. Perché la notte continua ad esistere. <em>Hai tolto una metà, e l'altra è rimasta.</em></div></div>
+    </div>
+    <div class="prose">
+      <p>In fondo a questa lista, la frase che abbiamo letto e riletto è sempre nelle stesse parole: <em>«ho provato tutti i rimedi — pulizia dopo ogni pasto, nettalingua, colluttori appositi, probiotici, scovolini, idropulsore. Nulla. Mi sento sempre la fiatella. L'unica cosa che mi fa stare serena in pubblico è consumare chewing gum a raffica.»</em> Non è una resa. È la mappa esatta di dove il vilain non era.</p>
+      <p>Non hai fallito, e nemmeno hai scelto male. Hai combattuto <strong>il vilain sbagliato, nel posto sbagliato, all'ora sbagliata</strong>. Non era colpa tua che nessuno ti avesse detto quale fosse davvero.</p>
+    </div>
+    <div class="pull">La lista di quello che hai provato non è una lista di fallimenti. È la mappa di dove il vilain non era.</div>
+  </section>
+
+  <section class="section">
+    <h2>Ci vorrebbe un gesto pensato per <em>la Metà Invisibile</em>.</h2>
+    <div class="prose">
+      <p class="first-of-section">Nulla, tra le decine di prodotti nel tuo cassetto, era stato progettato per un momento e per una zona precisa: <strong>il fondo della lingua, la sera, prima che la saliva si fermi</strong>. Il collutorio è pensato per la sciacquata generale. Le mentine per il momento sociale. Il nettalingua per il gesto meccanico che il riflesso interrompe. Ognuno è stato costruito per un altro problema, e chiamato a fare un lavoro per cui non era stato pensato.</p>
+      <p>Un gesto vero per la Metà Invisibile dovrebbe rispettare tre condizioni che non si possono negoziare.</p>
+      <p><em>La prima.</em> Deve arrivare fino al fondo della lingua, non solo davanti dove lo spazzolino già passa. Se si ferma dove si ferma il riflesso, non tocca il posto che conta.</p>
+      <p><em>La seconda.</em> Niente da spingere, niente da spremere. Il riflesso a metà lingua fa abbandonare qualsiasi gesto che comporti pressione: chi ci ha provato, dopo tre sere, ha smesso. Deve essere passivo. Deve sciogliersi da solo.</p>
+      <p><em>La terza.</em> Deve essere l'ultima cosa della sera, prima di spegnere la luce. Perché è di notte che il turno comincia, e il gesto delle undici deve tenere per otto ore.</p>
+      <p>Sono le tre condizioni dell'<strong>Ultimo Passaggio</strong>. Se ne manca una, il gesto ricade nel cassetto. E il turno riparte come sempre.</p>
+    </div>
+    <div class="pull">È la Custode della sera: non chi controlla di più, ma chi sa quando fermarsi.</div>
+  </section>
+
+  <section class="section">
+    <h2>Si chiama <em>FREOS</em>.</h2>
+    <div class="prose">
+      <p class="first-of-section">Non è un collutorio, non è uno spray, non è un dentifricio, non è una pastiglia. È un gel erbale, costruito attorno alle tre condizioni. Fino in fondo. Senza cancello. Prima della notte.</p>
+      <p>Il colore è verde intenso — quello della clorofilla, che è dentro. La consistenza è densa, mai appiccicosa. Il sapore è la menta piperita, con un fondo vegetale. Non è dolce. Se non sopporti la menta, FREOS non fa per te: meglio saperlo adesso.</p>
+    </div>
+
+    <figure class="product-photo">
+      <img src="{{ 'freos-lp1-09.webp' | asset_url }}" alt="FREOS · Breath Freshness Herbal Gel" />
+      <figcaption>Un barattolo. Trenta sere. Due misurini dopo cena.</figcaption>
+    </figure>
+
+    <div class="prose">
+      <p>Due misurini la sera, dopo aver lavato i denti. Lo lasci sciogliere sulla lingua, arriva fino in fondo da solo. Deglutisci. Vai a letto. È tutto qui. Nessun gesto in più, nessun riflesso da forzare. È stato pensato per il momento esatto in cui, di solito, accendevi la luce del telefono.</p>
+    </div>
+
+    <h3>Sette ingredienti. Tre da conoscere adesso.</h3>
+    <div class="prose">
+      <p><strong>Pueraria lobata — 100 mg.</strong> È la radice al centro della formula, la dose più alta della lista. In Asia orientale è usata da secoli in erboristeria; qui è la spina dorsale del gel. Nessun altro prodotto per l'alito, sul mercato italiano, la mette in prima linea con questa dose. È la ragione tecnica per cui FREOS non è un altro collutorio riformulato.</p>
+      <p><strong>Clorofilla — 85 mg.</strong> È quello che dà al gel il colore verde intenso. È la ragione per cui, quando lo metti sulla lingua, lo vedi arrivare fino al fondo — dove il turno lavora. Non è magia: è visibile.</p>
+      <p><strong>Menta piperita — 80 mg.</strong> Fa il lavoro sensoriale. Il fresco della sera, quello che chiude il gesto e dice al corpo che il turno è finito. <em>Se non sopporti la menta, FREOS non fa per te.</em></p>
+      <p style="margin-top: 22px; font-size: 15.5px; color: var(--ink-3); font-style: italic;">Gli altri quattro — prezzemolo, tè verde, melissa, chiodi di garofano — sono in etichetta con le loro dosi. La composizione completa e la scheda tecnica sono nella pagina del prodotto.</p>
+    </div>
+
+    <h3>Cosa FREOS non è, e non promette.</h3>
+    <div class="prose">
+      <p>FREOS non tocca le tonsille, non scioglie i tonsilloliti e non sostituisce l'otorino. Non promette niente sul tuo alito. Su FREOS non è stato fatto nessuno studio clinico, e sulle tonsille nessuno di questi ingredienti ha prove sufficientemente forti. Anche per i trattamenti dei tonsilloliti mancano studi di qualità: <strong>diffida di chiunque ti prometta di farli sparire, FREOS compreso</strong>. Una revisione Cochrane del 2019 ha trovato prove deboli per tutti gli interventi contro l'alitosi. Se hai uno dei segnali d'allarme descritti più sopra, la prima cosa da fare è il medico, non un integratore.</p>
+      <p>Non esiste una tabella di marcia dei risultati. Esistono tre cose che puoi osservare tu, con o senza FREOS: <strong>il sapore al risveglio, la patina sul fondo della lingua, e quante sere passi davanti allo specchio con la luce accesa</strong>.</p>
+    </div>
+
+    <div class="price-block">
+      <div class="price-headline">Trentanove euro il primo mese.</div>
+      <div class="price-body">Un barattolo dura trenta sere. Spedizione inclusa in Italia. In abbonamento — un barattolo ogni mese, si annulla quando vuoi — scende a <em>ventinove euro</em>.</div>
+      <a href="{{ section.settings.cta_url }}" class="price-cta">Riprenditi i trenta centimetri · 29,90 €</a>
+      <div class="price-guarantee">Se dopo trenta sere non ti parla, ti restituiamo trentanove euro. Il barattolo resta a te.</div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="ps"><h3>La storia di chi <em>non ci credeva.</em></h3><p class="psub">Spazio riservato al primo racconto completo di un cliente: trenta sere, dall'inizio alla fine, raccolto e verificato. Non lo riempiamo finché non ce l'abbiamo.</p><div class="slot"><div class="slot-h"><span class="slot-t">PROOF STORY</span><span class="slot-o">arco scettico → convinto, prima persona, 350–450 parole</span></div><p class="slot-b"><b>À obtenir dans cet ordre :</b> la scène de départ · pourquoi elle n'y croyait pas en commandant · ce qu'elle a remarqué en premier, et quand · le signal externe si quelqu'un lui a dit quelque chose · ce qu'elle ferait différemment.</p><ul><li>Le scepticisme initial doit être explicite et daté</li><li>Le premier signal doit être observable : le goût au réveil, la bouche moins sèche — jamais « mon haleine était fraîche »</li><li>Nom complet, ville, âge, accord écrit</li><li>Une photo vaut plus que trois paragraphes</li></ul><div class="slot-id">slot_proof_01 · à remplir après le seeding</div></div></div>
+<h2>Non sei l'unica persona <em>con la luce del telefono accesa la sera.</em></h2>
+    <div class="prose">
+      <p class="first-of-section">FREOS è nuovo: recensioni verificate da mostrarti non ce ne sono ancora, e nessuna verrà inventata. Ma per questa inchiesta abbiamo letto centinaia di racconti — nei gruppi Facebook, sotto i video degli otorini, nei forum — di persone che, in forma anonima, dicono quello che a voce non riescono a dire.</p>
+      <p>Sono racconti che si assomigliano tutti. Chi ha scoperto tutto per caso, cantando in macchina, quando una pallina si è staccata da sola. Chi ha comprato un idropulsore apposta, per toglierle due volte alla settimana. Chi non ha più le tonsille da otto anni e continua a chiedersi perché l'alito torna lo stesso. Chi ha girato dentisti, otorini, gastroenterologi, senza mai una risposta chiara. E chi, dopo anni, ha finito per dirsi la frase che diventa, alla fine, il patto silenzioso di questa comunità: <em>«chi ha le tonsille bucate deve pulirle regolarmente, come ci si pulisce il naso. Ma nessuno lo dice. Ce lo raccontiamo tra di noi.»</em></p>
+    </div>
+    <div class="pull">C'è una stanchezza che non si racconta: quella di cercare, ogni sera, qualcosa in fondo alla gola.</div>
+    <div class="prose">
+      <p>Non è una cosa rara. In una grande serie di esami del collo, i tonsilloliti comparivano in quasi quattro persone su dieci, soprattutto dopo i quarant'anni, e quasi sempre senza sintomi. Tutte queste persone stavano facendo la guardia a una metà sola. <em>Come te, forse.</em></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>La cosa più pesante <em>non è mai stata il calcolo</em>.</h2>
+    <div class="prose">
+      <p class="first-of-section">Se ci pensi davvero, non vuoi solo tonsille pulite. Vuoi smettere di pensarci. Non era il mezzo passo indietro quando qualcuno ti parlava vicino. Non era la mano davanti alla bocca quando ridevi. Non era il bagno dopo cena, con la luce del telefono. Non era il formaggio che avevi tolto dal piatto, per sicurezza.</p>
+      <p>Niente di tutto questo eri tu. <em>Era una vita che si stringeva in fondo alla gola, senza fare rumore.</em></p>
+    </div>
+    <div class="pairs">
+      <div class="pair"><div class="pair-now">Il mezzo metro in più quando parli.</div><div class="pair-arrow">→</div><div class="pair-desire">La voglia di parlare vicino, senza pensarci.</div></div>
+      <div class="pair"><div class="pair-now">La risata trattenuta.</div><div class="pair-arrow">→</div><div class="pair-desire">La voglia di ridere con la bocca aperta.</div></div>
+      <div class="pair"><div class="pair-now">Il bacio dato di fretta.</div><div class="pair-arrow">→</div><div class="pair-desire">La voglia di restare.</div></div>
+      <div class="pair"><div class="pair-now">La cena scelta con cautela.</div><div class="pair-arrow">→</div><div class="pair-desire">La voglia di mangiare quello che ti va.</div></div>
+      <div class="pair"><div class="pair-now">La serata davanti allo specchio.</div><div class="pair-arrow">→</div><div class="pair-desire">La voglia di spegnere la luce e basta.</div></div>
+    </div>
+    <div class="prose">
+      <p>Volere tutto questo <strong>non è vanità</strong>. È voler tornare a fidarti di te. Non vuoi controllare meglio la tua gola. <em>Vuoi smettere di doverla controllare.</em></p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="ps"><h3>Le cinque obiezioni <em>che fermano tutti.</em></h3><p class="psub">Une objection par témoignage, un avatar différent à chaque fois. Emplacements prêts, contenus à venir.</p><div class="obj-g"><div><p class="obj-q">«Ho già provato di tutto, perché questo dovrebbe funzionare?»</p><div class="slot"><div class="slot-h"><span class="slot-t">OBIEZIONE 1</span><span class="slot-o">le graveyard — la plus fréquente du corpus</span></div><p class="slot-b">Liste ce qu'il avait déjà essayé <b>avant</b> de dire ce qui a changé. L'ordre compte.</p><ul><li>Avatar : 35–50 ans, dix ans ou plus de problème</li><li>Doit nommer au moins trois produits concurrents</li></ul><div class="slot-id">slot_obj_01</div></div></div><div><p class="obj-q">«Il mio viene dallo stomaco, non dalla bocca.»</p><div class="slot"><div class="slot-h"><span class="slot-t">OBIEZIONE 2</span><span class="slot-o">la croyance que cette page attaque — spécifique à cet angle</span></div><p class="slot-b">Quelqu'un qui était <b>convaincu</b> que ça venait de l'estomac, qui a peut-être fait des examens digestifs, et qui a fini par regarder ailleurs.</p><ul><li>Avatar : a consulté un gastro-entérologue ou pris des produits « gut »</li><li>C'est le témoignage qui valide le titre de la page</li></ul><div class="slot-id">slot_obj_02</div></div></div><div><p class="obj-q">«Il mio dentista dice che va tutto bene.»</p><div class="slot"><div class="slot-h"><span class="slot-t">OBIEZIONE 3</span><span class="slot-o">l'autorité qui a déjà dit non</span></div><p class="slot-b">Doit rester respectueux du praticien : bon site, mauvais étage — pas une erreur du dentiste.</p><ul><li>Avatar : profil analytique</li><li>Jamais de mise en cause d'un professionnel nommé</li></ul><div class="slot-id">slot_obj_03</div></div></div><div><p class="obj-q">«Appena smetto, torna tutto come prima.»</p><div class="slot"><div class="slot-h"><span class="slot-t">OBIEZIONE 4</span><span class="slot-o">la peur de la dépendance au produit</span></div><p class="slot-b">Témoignage à 60–90 jours. Ne peut pas venir du premier lot de seeding.</p><ul><li>Avatar : deuxième ou troisième pot</li><li>À collecter en vague 2</li></ul><div class="slot-id">slot_obj_04</div></div></div><div style="grid-column:1/-1"><p class="obj-q">«Come faccio a sapere se funziona, se non posso sentirmi?»</p><div class="slot"><div class="slot-h"><span class="slot-t">OBIEZIONE 5</span><span class="slot-o">l'objection structurelle de ce marché</span></div><p class="slot-b">La plus importante et la plus dure à obtenir. Il faut <b>le signal externe</b> : quelqu'un qui ne recule plus. Jamais promis dans la copy, seulement rapporté.</p><ul><li>Avatar : métier de contact rapproché</li><li>Seule preuve externe qui existe ici — à prioriser dans les relances</li></ul><div class="slot-id">slot_obj_05</div></div></div></div></div>
+<div class="anc">
+<h3>Quanto stai già <em>spendendo, senza contarlo</em></h3>
+<p class="lead">Non per farti sentire in colpa. Per mettere in fila dei numeri che nessuno ti mette in fila.</p>
+<div class="anc-r"><div class="anc-l">Igiene dentale professionale, due volte l'anno<small>60–84 € a seduta secondo la regione, fino a 150 € se approfondita</small></div><div class="anc-v">≈ 200 € / anno</div></div>
+<div class="anc-r"><div class="anc-l">Spesa odontoiatrica media di un italiano<small>indagine nazionale 2025</small></div><div class="anc-v">430 € / anno</div></div>
+<div class="anc-r"><div class="anc-l">Collutori, mentine, raschietti, chewing gum<small>dieci anni di acquisti che non hai mai sommato</small></div><div class="anc-v">fallo tu il conto</div></div>
+<div class="anc-r us"><div class="anc-l">FREOS · un barattolo, trenta sere<small>meno di un euro al giorno</small></div><div class="anc-v">29,90 €</div></div>
+<div class="anc-note">E la parte onesta: <b>non fanno la stessa cosa.</b> L'igienista lavora sui denti, ed è giusto continuare ad andarci. FREOS lavora su un altro punto e in un'altra ora — non sostituisce né il dentista né l'otorino.<br><br>Se il tuo dentista ti dice che i denti sono a posto e l'alito torna lo stesso, il problema non è dove lo stai cercando.</div>
+<div class="anc-src">Fonti tariffe: detartrasi per regione (Nord 84 €, Centro 70 €, Sud 60 €) · pulizia approfondita 70–150 € · routine preventiva ≈ 200 €/anno · spesa odontoiatrica media 430 € nel 2025, indagine nazionale OmniSalus. Le tariffe variano per struttura e regione.</div>
+<div class="cta-mid"><a href="{{ section.settings.cta_url }}">Riprenditi i trenta centimetri · 29,90 €</a><p>Un barattolo, trenta sere. Un mese di prova, rimborso senza reso.</p></div>
+</div>
+<h2>La fiducia torna da un gesto. <em>Il primo lo scegli tu.</em></h2>
+    <div class="prose">
+      <p class="first-of-section">Stasera, dopo cena, arriverà il momento in cui di solito accendi la luce del telefono. Nessuno può dirti cosa succederà. Ma adesso sai quello che nessuno ti aveva messo in fila: che i calcoli sono la metà che si vede, che hanno già chi se ne occupa, e che c'è la Metà Invisibile, che ogni notte ricomincia. Sai anche che il vilain non sei tu, non è mai stato tu.</p>
+    </div>
+    <div class="faq">
+      <div class="faq-item"><div class="faq-q">FREOS scioglie i tonsilloliti?</div><div class="faq-a">No. Non tocca le tonsille e non scioglie i calcoli: per quelli c'è l'otorino.</div></div>
+      <div class="faq-item"><div class="faq-q">Se ho i tonsilloliti, mi serve comunque l'otorino?</div><div class="faq-a">Se ti danno fastidio, se tornano spesso o se hai uno dei segnali d'allarme, sì: è l'otorino a decidere cosa fare.</div></div>
+      <div class="faq-item"><div class="faq-q">Che sapore ha?</div><div class="faq-a">Un gel denso al sapore di menta, con un fondo leggermente vegetale. Si scioglie sulla lingua in pochi secondi. Non è dolce. Se non sopporti la menta, FREOS non fa per te.</div></div>
+      <div class="faq-item"><div class="faq-q">Si inghiotte?</div><div class="faq-a">Sì: due misurini la sera, lo lasci sciogliere sulla lingua e poi lo deglutisci.</div></div>
+      <div class="faq-item"><div class="faq-q">Quanto dura un barattolo?</div><div class="faq-a">Trenta sere, se lo usi come indicato — due misurini una volta al giorno.</div></div>
+      <div class="faq-item"><div class="faq-q">Se non funziona, posso restituirlo?</div><div class="faq-a">Se dopo un mese non ti parla, c'è un rimborso di trentanove euro, e il barattolo resta a te. I dettagli sono nella pagina del prodotto.</div></div>
+    </div>
+
+    <div class="price-block">
+      <div class="price-headline">Trentanove euro. Trenta sere.</div>
+      <div class="price-body">Se non ti parla, ti rimborsiamo. <em>Il barattolo resta a te.</em></div>
+      <a href="{{ section.settings.cta_url }}" class="price-cta">Riprenditi i trenta centimetri · 29,90 €</a>
+    </div>
+
+    <div class="prose" style="margin-top: 30px;">
+      <p style="text-align: center; font-style: italic; color: var(--ink-3); font-size: 15.5px;">Anche se non scegli niente, stasera spegni la luce dello specchio un minuto prima. È già un gesto tuo.</p>
+    </div>
+    <div class="pull">Tornare a fidarti di te. Basta.</div>
+  </section>
+
+  <div class="fonti">
+    <div class="fonti-title">Fonti scientifiche citate</div>
+    <ol>
+      <li>Ferguson M et al. <em>Otolaryngol Head Neck Surg</em> 2014 · Takahashi A et al. <em>Sci World J</em> 2014.</li>
+      <li>Quirynen M et al. <em>J Clin Periodontol</em> 2009 · Romano F et al. <em>Minerva Stomatologica</em> 2020;69:174-182.</li>
+      <li>Krespi YP et al. <em>Otolaryngol Head Neck Surg</em> 2006;135:671 · Dawes C. <em>JADA</em> 2008.</li>
+      <li>Snel J et al. <em>Arch Oral Biol</em> 2011 · Tsuneishi M et al. <em>Microbes Infect</em> 2006.</li>
+      <li>Galioto NJ. <em>Am Fam Physician</em> 2008;77:199 · NHS, <em>Mouth cancer: symptoms</em>.</li>
+      <li>Kumbargere Nagraj S et al. <em>Cochrane Database Syst Rev</em> 2019;12:CD012213.</li>
+    </ol>
+  </div>
+
+</article>
+
+<footer class="colophon">
+  <div class="colophon-inner">
+    <div class="colophon-masthead">
+      <div class="colophon-logo">L'Inchiesta<em>Salute</em></div>
+      <div class="colophon-tagline">Un caso alla volta · Fino in fondo</div>
+    </div>
+    <div class="colophon-grid">
+      <div>
+        <div class="colophon-label">Redazione</div>
+        <div class="colophon-body">
+          Direttore responsabile · <strong>[nome]</strong><br>
+          Vicedirettrice · <strong>Elena Manzoni</strong><br>
+          Caposervizio inchieste · <strong>[nome]</strong>
+        </div>
+      </div>
+      <div>
+        <div class="colophon-label">Comitato scientifico</div>
+        <div class="colophon-body">
+          <strong>Dott. Marco Serpelloni</strong> — otorinolaringoiatra<br>
+          <strong>Dott.ssa [nome]</strong> — odontoiatra<br>
+          <strong>Prof. [nome]</strong> — microbiologia orale
+        </div>
+      </div>
+      <div>
+        <div class="colophon-label">Sede</div>
+        <div class="colophon-body">
+          Via [indirizzo], 20121 Milano<br>
+          Tel. +39 02 [numero]<br>
+          redazione@linchiestasalute.it
+        </div>
+      </div>
+      <div>
+        <div class="colophon-label">Questo articolo</div>
+        <div class="colophon-body">
+          Chiuso in redazione · <strong>Marzo 2026</strong><br>
+          Illustrazioni · <strong>L. Bertani</strong><br>
+          Fotografia · <strong>[nome]</strong>
+        </div>
+      </div>
+    </div>
+    <div class="colophon-legal">
+      <p>Registrazione Tribunale di Milano n. [numero]/2024 · ISSN [numero-numero] · Direttore responsabile [nome].</p>
+      <p><strong>Nota per il lettore.</strong> Questo articolo è un'inchiesta editoriale con contenuti sponsorizzati dal produttore di FREOS. La linea editoriale, le fonti citate, le riserve scientifiche e i limiti dichiarati del prodotto restano indipendenti. Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di sintomi rivolgersi al proprio medico curante o allo specialista.</p>
+      <p class="colophon-copy">© L'Inchiesta Salute · Tutti i diritti riservati · <a href="#privacy">Privacy</a> · <a href="#cookie">Cookie</a> · <a href="#note-legali">Note legali</a></p>
+    </div>
+  </div>
+</footer>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS · LP Inchiesta",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Destination des CTA"
+    },
+    {
+      "type": "text",
+      "id": "cta_url",
+      "label": "Lien des boutons",
+      "default": "/products/gel-notturno-micro-aderente-allo-zinco",
+      "info": "Tous les boutons de la page pointent ici."
+    }
+  ]
+}
+{% endschema %}

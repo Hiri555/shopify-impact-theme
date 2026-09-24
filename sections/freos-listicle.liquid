@@ -1,0 +1,769 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP Listicle
+  ----------------------------------------------------------------------------
+  Porte depuis la source autonome. La copy est verrouillee et vit inline :
+  seule la cible des CTA est un reglage, sur le modele de l'advertorial Rosalia.
+
+  Les images sont des assets du theme (freos-lp3-NN.webp) : pour en changer
+  une, on remplace le fichier, pas le code.
+
+  Le CSS ci-dessous est celui de la source, inchange. Il porte son propre reset
+  et ses propres tokens — la page ne depend donc d'aucun CSS du theme.
+  ============================================================================
+{%- endcomment -%}
+
+<style>
+:root{
+  --bg:#fff;
+  --soft:#F4F1E8;
+  --softer:#FAF7EE;
+  --ink:#12160F;
+  --ink2:#3B423A;
+  --ink3:#787D72;
+  --acc:#2C5440;
+  --acc2:#1E5631;
+  --accl:#E7EDE6;
+  --acclt:#EEF3EC;
+  --rule:#E3DDCD;
+  --rule2:#C9C2AC;
+  --warn:#B8461A;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
+img,video{max-width:100%;height:auto;display:block}
+a{color:inherit}
+em{font-style:italic;color:var(--acc)}
+
+/* SPONSOR BAR */
+.spon{background:var(--ink);color:#F4F1E8;font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center;padding:10px 16px;font-weight:500}
+
+/* CONTAINER */
+.wrap{max-width:720px;margin:0 auto;padding:0 22px}
+.wide{max-width:920px;margin:0 auto;padding:0 22px}
+
+/* HEADER */
+.mast{padding:28px 0 8px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--rule);margin-bottom:36px}
+.mast .lg{font-family:Fraunces,serif;font-weight:600;font-size:22px;letter-spacing:.02em}
+.mast .rd{font-size:12px;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase}
+
+/* CATEGORY BADGES (Cymbiotika move) */
+.cats{display:flex;flex-wrap:wrap;gap:10px 22px;justify-content:center;padding:14px 20px;background:rgba(44,84,64,.06);border:1px solid var(--accl);border-radius:6px;margin:0 0 28px;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--acc);font-weight:600}
+.cats span{position:relative}
+.cats span:not(:last-child)::after{content:"·";position:absolute;right:-14px;top:0;color:var(--acc);opacity:.5}
+
+/* HERO */
+h1.hero{font-family:Fraunces,serif;font-weight:500;font-size:44px;line-height:1.08;letter-spacing:-.01em;color:var(--ink);margin:8px 0 22px}
+h1.hero em{font-style:italic;color:var(--acc)}
+.dek{font-size:19px;line-height:1.55;color:var(--ink2);max-width:640px;margin:0 0 26px}
+.dek strong{color:var(--ink);font-weight:600}
+
+/* TRUST CHECKS (Cymbiotika move) */
+.trust{display:flex;flex-wrap:wrap;gap:10px 26px;padding:16px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:0 0 34px;font-size:13px;color:var(--ink2);letter-spacing:.02em}
+.trust div{display:flex;align-items:center;gap:8px}
+.trust svg{flex-shrink:0;color:var(--acc)}
+
+/* META */
+.meta{display:flex;flex-wrap:wrap;gap:14px 28px;font-size:12px;color:var(--ink3);letter-spacing:.04em;margin:0 0 26px}
+.meta b{color:var(--ink2);font-weight:600}
+
+/* HERO IMAGE */
+.heroimg{margin:8px 0 34px;border-radius:2px;overflow:hidden;border:1px solid var(--rule)}
+
+/* OPENING SCENE */
+.scene{padding:0 0 40px}
+.scene p{font-size:18px;line-height:1.7;margin:0 0 18px;color:var(--ink)}
+.scene .q{font-family:Fraunces,serif;font-style:italic;font-size:22px;color:var(--acc);padding:6px 0 6px 20px;border-left:3px solid var(--acc);margin:8px 0 16px}
+.scene .k{font-family:Fraunces,serif;font-size:20px;font-style:italic;color:var(--ink);margin-top:22px;padding-top:22px;border-top:1px solid var(--rule)}
+
+/* LIST INTRO */
+.intro{background:var(--softer);border:1px solid var(--rule);padding:26px 28px;border-radius:2px;margin:0 0 44px}
+.intro h3{font-family:Fraunces,serif;font-weight:500;font-size:26px;line-height:1.2;color:var(--ink);margin:0 0 8px}
+.intro h3 em{font-style:italic;color:var(--acc)}
+.intro p{font-size:13px;color:var(--ink3);letter-spacing:.04em;text-transform:lowercase;font-variant:small-caps}
+
+/* REASON CARD (Cymbiotika-inspired) */
+.r{margin:0 0 60px;padding:0}
+.r .rv{background:var(--soft);border-radius:2px;overflow:hidden;margin:0 0 26px;position:relative}
+.r .rv video, .r .rv img{width:100%;display:block}
+.r .rv .rvcap{position:absolute;left:14px;bottom:14px;background:rgba(18,22,15,.72);color:#F4F1E8;font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px;border-radius:2px;backdrop-filter:blur(6px)}
+
+.r .num{font-family:Inter,sans-serif;font-size:36px;font-weight:400;color:var(--ink);letter-spacing:-.02em;line-height:1;margin:0 0 14px;font-variant-numeric:tabular-nums}
+.r .num i{font-style:normal;color:var(--ink3);font-size:16px;margin-left:4px}
+
+.r .chip{display:inline-block;background:var(--accl);color:var(--acc);font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:6px 12px;border-radius:2px;margin:0 0 18px}
+
+.r h2{font-family:Fraunces,serif;font-weight:500;font-size:36px;line-height:1.1;letter-spacing:-.01em;color:var(--ink);margin:0 0 22px}
+.r h2 em{font-style:italic;color:var(--acc)}
+
+.r p{font-size:17px;line-height:1.65;color:var(--ink);margin:0 0 16px}
+.r p strong{font-weight:600;color:var(--ink)}
+.r .cite{font-size:12px;color:var(--ink3);font-style:italic;margin:-8px 0 22px}
+
+.callout{background:var(--acclt);border:1px solid var(--accl);border-radius:2px;padding:18px 22px;margin:22px 0;font-size:15px;line-height:1.55;color:var(--ink)}
+.callout b{color:var(--acc);font-weight:600}
+
+.mirror{background:transparent;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);padding:20px 0;margin:22px 0}
+.mirror p{font-family:Fraunces,serif;font-style:italic;font-size:20px;line-height:1.45;color:var(--ink2);margin:0 0 8px}
+.mirror span{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink3)}
+
+.punch{font-family:Fraunces,serif;font-size:22px;font-weight:500;line-height:1.35;color:var(--ink);margin-top:20px;padding-top:20px;border-top:1px solid var(--rule)}
+
+/* CTA */
+.cta-wrap{margin:26px 0 0}
+.cta{display:flex;align-items:center;justify-content:center;gap:14px;background:var(--acc);color:var(--soft);padding:20px 28px;border-radius:3px;text-decoration:none;font-weight:600;font-size:17px;letter-spacing:.01em;transition:background .2s}
+.cta:hover{background:var(--acc2)}
+.cta .pill{background:var(--soft);color:var(--acc);font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:20px}
+.guar{display:block;text-align:center;font-size:12px;color:var(--ink3);margin-top:10px;letter-spacing:.02em}
+
+/* TRANSITION LINES (between reasons) */
+.tx{padding:36px 0;text-align:center;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin:0 0 60px}
+.tx p{font-family:Fraunces,serif;font-size:22px;font-style:italic;color:var(--acc);margin:0}
+.tx small{display:block;font-family:Inter,sans-serif;font-size:12px;color:var(--ink3);margin-top:8px;letter-spacing:.04em;font-style:normal}
+
+/* SECTION HEADER */
+.sect{margin:80px 0 30px;padding:0 0 18px;border-bottom:2px solid var(--ink)}
+.sect .k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--acc);font-weight:600;margin:0 0 10px}
+.sect h3{font-family:Fraunces,serif;font-weight:500;font-size:32px;line-height:1.15;color:var(--ink);margin:0 0 6px}
+.sect h3 em{font-style:italic;color:var(--acc)}
+.sect p{font-size:15px;color:var(--ink2);margin-top:8px}
+
+/* TIMELINE (What to expect) */
+.tl{margin:0 0 40px}
+.tl .row{display:grid;grid-template-columns:110px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--rule);align-items:start}
+.tl .row:last-child{border-bottom:0}
+.tl .row .chip{background:var(--accl);color:var(--acc);font-size:11px;letter-spacing:.1em;text-transform:uppercase;font-weight:600;padding:6px 10px;border-radius:2px;text-align:center;justify-self:start}
+.tl .row h4{font-family:Fraunces,serif;font-weight:500;font-size:20px;color:var(--ink);margin:0 0 6px}
+.tl .row p{font-size:15px;color:var(--ink2);line-height:1.55;margin:0}
+.tl .row.stop .chip{background:#F4E3D9;color:var(--warn)}
+
+/* OFFER BLOCK */
+.offer{background:var(--acc);color:var(--soft);padding:40px 32px;border-radius:4px;margin:0 0 60px}
+.offer .k{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accl);font-weight:600;margin:0 0 12px;opacity:.9}
+.offer h3{font-family:Fraunces,serif;font-weight:500;font-size:28px;line-height:1.15;color:#fff;margin:0 0 8px}
+.offer .price{font-family:Fraunces,serif;font-size:22px;color:var(--accl);margin:0 0 22px}
+.offer ul{list-style:none;margin:0 0 24px;padding:0}
+.offer ul li{padding:10px 0;border-bottom:1px solid rgba(244,241,232,.15);font-size:14px;color:#F4F1E8;line-height:1.5}
+.offer ul li:last-child{border-bottom:0}
+.offer ul li b{color:#fff;font-weight:600}
+.offer .cta{background:var(--soft);color:var(--acc);border:0}
+.offer .cta:hover{background:#fff}
+.offer .cta .pill{background:var(--acc);color:var(--soft)}
+.offer .undercta{display:flex;flex-wrap:wrap;justify-content:center;gap:18px;margin-top:16px;font-size:12px;color:var(--accl);letter-spacing:.02em}
+.offer .undercta div{display:flex;align-items:center;gap:6px}
+
+/* COMPARISON TABLE */
+.cmp{border:1px solid var(--rule);border-radius:2px;overflow:hidden;margin:0 0 40px;background:#fff}
+.cmp .row{display:grid;grid-template-columns:1fr 140px;gap:16px;padding:18px 22px;border-bottom:1px solid var(--rule);align-items:center}
+.cmp .row:last-child{border-bottom:0}
+.cmp .row.hi{background:var(--acclt)}
+.cmp .lbl{font-size:15px;color:var(--ink);line-height:1.4}
+.cmp .lbl small{display:block;font-size:12px;color:var(--ink3);margin-top:2px;font-style:italic}
+.cmp .val{text-align:right;font-family:Fraunces,serif;font-size:18px;color:var(--ink);font-weight:500}
+.cmp .row.hi .val{color:var(--acc);font-weight:600}
+.hnote{font-size:14px;line-height:1.6;color:var(--ink2);background:var(--softer);border-left:3px solid var(--acc);padding:16px 20px;margin:16px 0 10px;border-radius:2px}
+.hnote b{color:var(--ink);font-weight:600}
+.srcnote{font-size:11px;color:var(--ink3);line-height:1.5;padding:10px 0;margin:8px 0 0}
+
+/* SLOTS (proof + objections) */
+.slot{background:#FFFEF9;border:2px dashed var(--rule2);border-radius:2px;padding:22px 22px;margin:14px 0}
+.slot .st{display:flex;flex-wrap:wrap;gap:8px 14px;margin:0 0 12px;align-items:baseline}
+.slot .st .t{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--warn);font-weight:700;background:#F4E3D9;padding:4px 8px;border-radius:2px}
+.slot .st .o{font-size:12px;color:var(--ink3);font-style:italic}
+.slot .head{font-family:Fraunces,serif;font-style:italic;font-size:18px;color:var(--ink);margin:0 0 12px;padding-left:12px;border-left:2px solid var(--acc)}
+.slot .brief{font-size:13px;color:var(--ink2);line-height:1.55;margin:0 0 10px}
+.slot .brief b{color:var(--ink);font-weight:600}
+.slot ul{list-style:none;padding:0;margin:0 0 12px;font-size:13px;color:var(--ink2)}
+.slot ul li{padding:4px 0 4px 14px;position:relative;line-height:1.5}
+.slot ul li::before{content:"—";position:absolute;left:0;color:var(--acc)}
+.slot .sid{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink3);font-family:monospace;background:var(--soft);padding:6px 10px;border-radius:2px;display:inline-block}
+
+/* FAQ */
+.faq{margin:0 0 60px}
+.faq details{border-bottom:1px solid var(--rule);padding:18px 0}
+.faq details:first-child{border-top:1px solid var(--rule)}
+.faq summary{cursor:pointer;font-family:Fraunces,serif;font-weight:500;font-size:19px;color:var(--ink);line-height:1.35;list-style:none;padding-right:30px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:0;top:0;font-size:24px;color:var(--acc);transition:transform .2s}
+.faq details[open] summary::after{content:"−"}
+.faq details p{font-size:15px;color:var(--ink2);line-height:1.65;margin:14px 0 4px;padding-right:20px}
+.faq .primary summary{color:var(--acc)}
+
+/* CLOSING WHISPER */
+.whisp{padding:40px 0 20px;font-family:Fraunces,serif;font-size:22px;line-height:1.5;font-style:italic;color:var(--ink2);border-top:1px solid var(--rule)}
+.whisp p{margin:0 0 14px}
+
+/* SOURCES */
+.src{margin:40px 0 20px;padding:26px 0 0;border-top:1px solid var(--rule)}
+.src strong{display:block;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink2);margin:0 0 14px;font-weight:700}
+.src ol{list-style:decimal;margin:0;padding:0 0 0 20px;font-size:13px;color:var(--ink3);line-height:1.6}
+.src ol li{padding:6px 0}
+.src ol li em{font-style:italic;color:var(--ink2)}
+
+/* FOOTER */
+footer{background:var(--soft);padding:36px 0 40px;margin-top:60px;font-size:12px;color:var(--ink3);line-height:1.55}
+footer p{margin:0 0 12px;max-width:640px}
+footer p b{color:var(--ink2)}
+
+/* STICKY BOTTOM CTA */
+.stick{position:sticky;bottom:0;background:var(--acc);color:var(--soft);padding:14px 22px;text-align:center;font-size:14px;font-weight:600;letter-spacing:.02em;box-shadow:0 -2px 14px rgba(0,0,0,.15);z-index:20}
+.stick a{color:var(--soft);text-decoration:none;display:inline-flex;align-items:center;gap:10px;justify-content:center}
+.stick .pill{background:var(--soft);color:var(--acc);font-size:11px;padding:4px 10px;border-radius:20px;letter-spacing:.04em}
+
+/* RESPONSIVE */
+@media (max-width:640px){
+  h1.hero{font-size:34px}
+  .r h2{font-size:28px}
+  .sect h3{font-size:26px}
+  .intro h3{font-size:22px}
+  .cmp .row{grid-template-columns:1fr;gap:6px}
+  .cmp .val{text-align:left}
+  .tl .row{grid-template-columns:100px 1fr;gap:14px}
+  .offer{padding:30px 22px}
+  .cta{font-size:15px;padding:18px 22px;flex-wrap:wrap}
+}
+@media (max-width:420px){
+  .cats{font-size:10px;gap:8px 16px}
+  .cats span:not(:last-child)::after{right:-10px}
+  h1.hero{font-size:30px}
+  .r h2{font-size:24px}
+  .r .num{font-size:30px}
+  .tl .row{grid-template-columns:1fr}
+}
+
+/* TESTIMONIAL CARDS */
+.tst{background:#FFFEF9;border:1px solid var(--rule);border-radius:2px;padding:26px 28px;margin:14px 0;position:relative}
+.tst .stamp{position:absolute;top:14px;right:14px;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);background:var(--soft);padding:4px 8px;border-radius:2px;border:1px dashed var(--rule2);opacity:.65}
+.tst .quo{font-family:Fraunces,serif;font-style:italic;font-size:18px;color:var(--acc);margin:0 0 16px;padding-left:14px;border-left:2px solid var(--acc);line-height:1.45}
+.tst .body{font-size:15.5px;line-height:1.65;color:var(--ink);margin:0 0 14px}
+.tst .body p{margin:0 0 12px}
+.tst .body p:last-child{margin-bottom:0}
+.tst .sig{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px;margin:16px 0 0;padding-top:16px;border-top:1px solid var(--rule);font-size:13px;color:var(--ink2)}
+.tst .sig b{color:var(--ink);font-weight:600}
+.tst .sig i{font-style:normal;color:var(--ink3)}
+.tst .sig .role{color:var(--ink3);letter-spacing:.02em}
+.tst .verif{display:inline-flex;align-items:center;gap:4px;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--acc);background:var(--acclt);padding:3px 8px;border-radius:2px;font-weight:600}
+.tst.story{padding:34px 32px;background:var(--softer);border:1px solid var(--rule)}
+.tst.story .body{font-size:17px}
+.tst.story .quo{font-size:22px;padding-left:18px;border-left-width:3px}
+.obj-head{font-family:Fraunces,serif;font-style:italic;font-size:20px;color:var(--acc);margin:0 0 6px;padding:0}
+.obj-tag{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink3);font-weight:600;margin:0 0 18px;padding-bottom:14px;border-bottom:1px solid var(--rule)}
+@media(max-width:640px){.tst,.tst.story{padding:22px 20px}.tst.story .quo{font-size:19px}.tst .body{font-size:15px}}
+
+
+/* PRO FOOTER */
+footer{background:var(--ink);color:#C9C2AC;padding:56px 0 32px;margin-top:64px}
+.ft-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(201,194,172,.18)}
+.ft-brand .ft-lg{font-family:Fraunces,serif;font-weight:600;font-size:26px;color:#F4F1E8;letter-spacing:.02em}
+.ft-brand .ft-tag{font-size:13px;color:#8A9285;margin:4px 0 14px;letter-spacing:.02em}
+.ft-brand .ft-desc{font-size:14px;line-height:1.6;color:#A7A493;max-width:280px}
+.ft-col{display:flex;flex-direction:column;gap:11px}
+.ft-col .ft-h{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#F4F1E8;font-weight:600;margin-bottom:4px}
+.ft-col a{font-size:14px;color:#A7A493;text-decoration:none;transition:color .15s}
+.ft-col a:hover{color:#F4F1E8}
+.ft-bar{padding-top:28px}
+.ft-legal{font-size:11.5px;line-height:1.6;color:#787D72;max-width:760px;margin:0 0 22px}
+.ft-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:14px;font-size:12px;color:#787D72}
+.ft-pay span{font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:#787D72}
+@media(max-width:760px){.ft-grid{grid-template-columns:1fr 1fr;gap:30px 24px}.ft-brand{grid-column:1/-1}}
+@media(max-width:440px){.ft-grid{grid-template-columns:1fr}.ft-foot{flex-direction:column;align-items:flex-start}}
+
+/* REDUCE media block height for navigation — cap reason image height */
+.r .rv{aspect-ratio:16/9;overflow:hidden;background:var(--soft);border-radius:2px}
+.r .rv img{width:100%;height:100%;object-fit:cover;object-position:center;display:block}
+/* Anatomical image on white — contain so nothing is cut */
+.r .rv.rv-anat{background:#fff;aspect-ratio:16/9}
+.r .rv.rv-anat img{object-fit:cover}
+
+.r .rv.rv-dark{background:#0f1b2d;aspect-ratio:16/9}
+.r .rv.rv-dark img{object-fit:cover}
+@media(max-width:640px){.r .rv{aspect-ratio:4/3}}
+</style>
+
+<div class="freos-lp-body">
+<div class="spon">Contenuto sponsorizzato · FREOS</div>
+
+<div class="wrap">
+
+  <header class="mast">
+    <div class="lg">FREOS</div>
+    <div class="rd">Lettura · 9 min</div>
+  </header>
+
+  <div class="cats">
+    <span>Cripta</span>
+    <span>Notte</span>
+    <span>Lingua</span>
+    <span>Distanza</span>
+  </div>
+
+  <h1 class="hero">6 motivi per cui l'alito torna <em>anche se ti lavi i denti tre volte al giorno.</em></h1>
+
+  <p class="dek">Il collutorio, il filo, il raschietto, la mentina. Fanno bene il loro lavoro — <strong>sulle superfici che raggiungono.</strong> C'è un punto della tua bocca dove niente di tutto questo arriva. Ed è lì che si produce l'odore, ventiquattro ore su ventiquattro.</p>
+
+  <div class="trust">
+    <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>6 studi ORL citati</div>
+    <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>Formulato in Italia</div>
+    <div><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>30 sere di prova · rimborso pieno</div>
+  </div>
+
+  <div class="meta">
+    <div><b>Fonti</b> · 6 studi ORL, 2006–2017</div>
+    <div><b>Aggiornato</b> · marzo 2026</div>
+    <div><b>Autore</b> · redazione FREOS</div>
+  </div>
+
+  <div class="heroimg"><img src="{{ 'freos-lp3-01.webp' | asset_url }}" alt="Visita otorinolaringoiatrica" loading="lazy"></div>
+
+  <div class="scene">
+    <p>Cinque secondi con l'abbassalingua e la torcia. Poi l'otorino si tira indietro sulla sedia.</p>
+    <p class="q">«Ci sono. Ma lasci perdere — non è pericoloso.»</p>
+    <p>Ed è vero. Non è pericoloso.</p>
+    <p>Ma quella frase risponde a una domanda che nessuno aveva fatto. Non eri lì perché avevi paura. Eri lì perché qualcuno si è scostato mentre parlavi. E perché succede da anni. E perché nessuno ti aveva mai spiegato <strong>perché</strong>.</p>
+    <p class="k">Poi ho trovato quattro studi. E un punto della bocca dove l'aria non arriva.</p>
+  </div>
+
+  <div class="intro">
+    <h3>Sei motivi per cui torna. E <em>un motivo per cui, forse, non tornerà più.</em></h3>
+    <p>nell'ordine in cui li ho capiti</p>
+  </div>
+
+  <!-- REASON 1 · IL POSTO — attaque catégorie + 1er CTA -->
+  <section class="r">
+    <div class="rv"><img src="{{ 'freos-lp3-02.webp' | asset_url }}" alt="Allo specchio, la mattina: finalmente una spiegazione" loading="lazy"></div>
+    <div class="num">1<i>/ 6</i></div>
+    <div class="chip">Il posto</div>
+    <h2>Il tuo collutorio non ci arriva. <em>Il tuo filo, nemmeno.</em></h2>
+    <p>Il collutorio bagna la lingua, i denti, il palato. Il filo passa tra i denti. Il raschietto pulisce la parte anteriore della lingua. La mentina copre l'aria che espiri. Ognuno fa il suo mestiere, e lo fa bene.</p>
+    <p>Nessuno di loro entra nelle <strong>cripte tonsillari</strong>. Non è un difetto di formula: sono canali che scendono nel tessuto della tonsilla e si ramificano. La bocca di quel canale è larga come un chicco di riso. Il fondo, nessuno lo vede.</p>
+    <p>Nel 2009 dei ricercatori hanno infilato dei microelettrodi in quei canali per misurare l'ossigeno. Al centro di un tonsillolite, l'ossigeno scende a <strong>un decimo</strong> di quello del liquido appena sopra. A pochi centimetri dall'aria aperta.</p>
+    <p>Dove non c'è ossigeno cresce una sola famiglia di batteri: quelli che producono composti solforati. È quello che chiami «l'alito». Non è la sua causa. È il suo <em>indirizzo.</em></p>
+    <p class="cite">Stoodley et al., Otolaryngol Head Neck Surg, 2009 · Takahashi et al., 2.873 TAC, 2014</p>
+    <div class="callout"><b>Lo sapevi?</b> su 2.873 TAC del collo, i tonsilloliti erano visibili in circa <b>quattro persone su dieci</b>, quasi sempre a loro insaputa. Non li vedi allo specchio. Non li vede il tuo dentista guardando i denti.</div>
+    <div class="mirror">
+      <p>«Ho i denti perfetti. Me lo dicono tutti i dentisti da dieci anni. Ma qualcosa non torna.»</p>
+      <span>dai messaggi raccolti per questa guida</span>
+    </div>
+    <p class="punch">Non è la tua igiene. È un posto che nessun prodotto in commercio raggiunge.</p>
+  </section>
+
+  <!-- REASON 2 · LO ZINCO — mécanisme chimique -->
+  <section class="r">
+    <div class="rv"><img src="{{ 'freos-lp3-03.webp' | asset_url }}" alt="FREOS · gel erbale con zinco" loading="lazy"></div>
+    <div class="num">2<i>/ 6</i></div>
+    <div class="chip">Lo zinco</div>
+    <h2>Non copre l'odore. <em>Lo lega.</em></h2>
+    <p>Una mentina fa una cosa semplice: mette in bocca un profumo più forte di quello che c'era prima. Trenta minuti dopo, la mentina è finita e il profumo pure. La cripta, no.</p>
+    <p>Gli <strong>ioni di zinco</strong> fanno una cosa diversa. Si legano chimicamente ai composti solforati volatili — quelli che il naso percepisce. Un composto legato non è più volatile. Non arriva più al naso di nessuno. Non è coperto: è cambiato.</p>
+    <p>È chimica di base, nota da trent'anni. Il principio non è mai stato il problema. Il <em>formato</em> lo era.</p>
+    <div class="callout"><b>Lo sapevi?</b> il collutorio con zinco resta in bocca <b>trenta secondi</b> prima di essere sputato. Una caramella, quattro minuti prima di sciogliersi. Una cripta produce composti solforati <b>ventiquattro ore su ventiquattro.</b></div>
+    <div class="mirror">
+      <p>«Ho comprato ogni collutorio in commercio. Trenta secondi in bocca, poi lo sputi. È come voler dipingere una parete con l'aerosol.»</p>
+      <span>dai messaggi raccolti per questa guida</span>
+    </div>
+    <p class="punch">Il principio funziona da trent'anni. Serviva solo un modo per farlo restare.</p>
+  
+    <div class="cta-wrap">
+      <a class="cta" href="{{ section.settings.cta_url }}">Vai al prodotto <span class="pill">29,90 €</span></a>
+      <span class="guar">30 sere di prova · rimborso completo · nessun abbonamento</span>
+    </div>
+  </section>
+
+  <div class="tx">
+    <p>Il rimedio che usi da più tempo è quello che libera di più.</p>
+    <small>Non è un modo di dire. È una riga dello studio del 2006 che quasi nessuno ha letto fino in fondo.</small>
+  </div>
+
+  <!-- REASON 3 · LA FORMA — dense gel stays -->
+  <section class="r">
+    <div class="rv"><img src="{{ 'freos-lp3-04.webp' | asset_url }}" alt="Il gel denso, che resta" loading="lazy"></div>
+    <div class="num">3<i>/ 6</i></div>
+    <div class="chip">La forma</div>
+    <h2>Il liquido lo sputi. <em>Il gel resta.</em></h2>
+    <p>Nel 2006 hanno analizzato la flora di sei tonsilloliti. Ogni singolo campione conteneva batteri produttori di composti solforati — fino alla metà delle colonie. Ma la riga che conta è un'altra, più in basso nello stesso articolo:</p>
+    <p><em>«Il rilascio dei composti avviene quando il tonsillolite viene schiacciato.»</em></p>
+    <p>Il cotton fioc, il dito, il manico del cucchiaino: sono compressioni dirette. Su una mucosa che sanguina facilmente, con un riflesso che ti fa venire da vomitare. Il gesto che usi per liberarti dell'odore è, letteralmente, il gesto che ne libera di più nell'istante in cui lo fai.</p>
+    <p>Un gel denso fa una cosa che né un liquido né una caramella possono fare: <strong>resta.</strong> Lo lasci sciogliere, deglutisci, e continua a lavorare quando hai già spento la luce.</p>
+    <p class="cite">Tsuneishi et al., Microbes Infect, 2006</p>
+    <div class="callout"><b>Lo sapevi?</b> deglutisci circa <b>ottocento volte al giorno</b>. Mangiando, parlando, semplicemente stando svegli. Ogni deglutizione, contro la cripta, è una piccola pressione.</div>
+    <div class="mirror">
+      <p>«Non riesco sempre a toglierli col cotton fioc, è fastidioso e poi vomito l'anima.»</p>
+      <span>dai messaggi raccolti per questa guida</span>
+    </div>
+    <p class="punch">Non serve entrare nella cripta. Serve tenere l'uscita.</p>
+  </section>
+
+  <!-- REASON 4 · LA NOTTE — the missing hours -->
+  <section class="r">
+    <div class="rv"><img src="{{ 'freos-lp3-05.webp' | asset_url }}" alt="Una notte, e un risveglio diverso" loading="lazy"></div>
+    <div class="num">4<i>/ 6</i></div>
+    <div class="chip">La notte</div>
+    <h2>Ci sono sette ore, ogni notte, <em>in cui non deglutisci.</em></h2>
+    <p>Ottocento deglutizioni al giorno, dicevamo. Il novanta per cento cadono tra le sette del mattino e mezzanotte. Nelle sette ore che dormi, la tua bocca fa una cosa che fa poche volte nella vita: <strong>si ferma.</strong></p>
+    <p>La saliva è il tuo primo collutorio. È lei che lava, che diluisce, che ossigena. Durante il sonno, il flusso salivare crolla di oltre il novanta per cento. Il resto della meccanica orale rallenta con lei.</p>
+    <p>I batteri anaerobi nelle cripte, invece, non rallentano. Non hanno bisogno di ossigeno per lavorare — è il loro mestiere. Producono, indisturbati, per sette ore consecutive.</p>
+    <p>È il motivo per cui <em>l'alito del mattino esiste come categoria linguistica.</em> È il motivo per cui te ne accorgi quando ti svegli con la bocca chiusa. E il motivo per cui, alle sette, senti già che ricomincia.</p>
+    <div class="callout"><b>Lo sapevi?</b> qualsiasi gesto contro l'alito che finisce prima di andare a letto lavora <b>fuori dalle sette ore</b> in cui il problema è al suo massimo. Un collutorio alle 22:00 non arriva alle 04:00.</div>
+    <div class="mirror">
+      <p>«Il momento peggiore è la mattina. Anche se la sera prima ho fatto tutto il rituale. È come se la notte cancellasse tutto.»</p>
+      <span>dai messaggi raccolti per questa guida</span>
+    </div>
+    <p class="punch">Le sette ore in cui non fai niente sono le sette ore in cui il tuo alito fa tutto.</p>
+  
+    <div class="cta-wrap">
+      <a class="cta" href="{{ section.settings.cta_url }}">Aggiungi il gesto della sera <span class="pill">29,90 €</span></a>
+      <span class="guar">120 g · trenta sere · meno di un euro al giorno</span>
+    </div>
+  </section>
+
+  <div class="tx">
+    <p>Ti manca un layer. Non un altro prodotto.</p>
+    <small>È esattamente quello che succede a chi cura la pelle e non integra dall'interno. Qui, uguale — al contrario.</small>
+  </div>
+
+  <!-- REASON 5 · IL GESTO — the missing layer (Cymbiotika collapse) -->
+  <section class="r">
+    <div class="rv"><img src="{{ 'freos-lp3-06.webp' | asset_url }}" alt="Il gesto della sera" loading="lazy"></div>
+    <div class="num">5<i>/ 6</i></div>
+    <div class="chip">Il gesto</div>
+    <h2>Non ti manca un altro prodotto. <em>Ti manca il gesto della sera.</em></h2>
+    <p>Ti lavi i denti. Passi il filo. Passi il raschietto sulla lingua. Fai gargarismi. Sono quattro gesti, che coprono quattro superfici. Ognuno ha il suo strumento, e ognuno ha il suo limite.</p>
+    <p>Manca un quinto gesto. L'ultimo prima di spegnere la luce. Uno solo. Non toglie nessuno degli altri quattro — <strong>si aggiunge in fondo.</strong></p>
+    <p>Due misurini di gel denso, dopo lo spazzolino. Lo lasci sciogliere in bocca, deglutisci, ti metti a dormire. Lo zinco lega, il gel resta, e continua a lavorare nelle sette ore in cui tutto il resto è fermo.</p>
+    <p>È il layer che manca al tuo protocollo serale. Non sostituisce niente di quello che già fai. Prende il posto vuoto tra il lavandino e il cuscino.</p>
+    <div class="callout"><b>Il gesto completo, ora, è così:</b><br>
+    01 · spazzolino · 02 · filo · 03 · raschietto · 04 · collutorio · <b>05 · FREOS, due misurini.</b><br>
+    Trenta secondi in più. Un solo cambiamento nella tua sera.</div>
+    <div class="mirror">
+      <p>«Non riuscivo a capire cosa avrei dovuto togliere. La risposta era: niente. Aggiungi una cosa e basta, in fondo.»</p>
+      <span>dai messaggi raccolti per questa guida</span>
+    </div>
+    <p class="punch">Non stai comprando un rimedio. Stai chiudendo la sera.</p>
+  </section>
+
+  <!-- REASON 6 · I LIMITI — honesty, where it stops -->
+  <section class="r">
+    <div class="rv"><img src="{{ 'freos-lp3-07.webp' | asset_url }}" alt="La distanza che torna" loading="lazy"></div>
+    <div class="num">6<i>/ 6</i></div>
+    <div class="chip">I limiti</div>
+    <h2>Ti dice anche <em>dove si ferma.</em></h2>
+    <p><strong>FREOS non tocca le tonsille.</strong> Non scioglie i tonsilloliti. Non entra nella cripta — nessun prodotto da banco può farlo. Non sostituisce l'otorino.</p>
+    <p>Se hai dolore, difficoltà a deglutire, febbre, mal d'orecchio o una tonsilla più grossa dell'altra, l'otorino viene prima di qualunque gel. Te lo diciamo qui, prima che tu spenda un euro.</p>
+    <p>La pietra resta dov'è. Quello che rilascia attraversa la tua bocca — ed è lì, e solo lì, che FREOS lavora.</p>
+    <div class="callout"><b>Lo sapevi?</b> su FREOS non è stato fatto nessuno studio clinico. Le prove che citiamo riguardano <b>gli ingredienti</b>, non il prodotto finito. Preferiamo scriverlo che nasconderlo.</div>
+    <p class="punch">Preferiamo perdere una vendita che la tua fiducia.</p>
+  
+    <div class="cta-wrap">
+      <a class="cta" href="{{ section.settings.cta_url }}">Provalo per trenta sere <span class="pill">29,90 €</span></a>
+      <span class="guar">Rimborso pieno se non ti dice niente · nessun abbonamento</span>
+    </div>
+  </section>
+
+  <div class="tx">
+    <p>La cripta resta. Quello che ne esce, no.</p>
+  </div>
+
+  <!-- WHAT TO EXPECT · timeline BEFORE the offer -->
+  <div class="sect">
+    <p class="k">Cosa aspettarsi</p>
+    <h3>Ecco cosa puoi <em>osservare tu,</em> settimana per settimana.</h3>
+    <p>Su questo problema nessuno può misurare i propri progressi dall'esterno. Non ti diamo una promessa: ti diamo quattro cose concrete da guardare, in ordine, e cosa fare se non succede niente.</p>
+  </div>
+
+  <div class="tl">
+    <div class="row">
+      <div class="chip">Sera 1</div>
+      <div>
+        <h4>Il primo gesto sostituisce la torcia allo specchio.</h4>
+        <p>È l'unico cambiamento immediato, e non è poco: chi controlla la gola ogni sera lo fa perché non ha altro. Adesso ha altro.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="chip">Giorni 2–5</div>
+      <div>
+        <h4>Il sapore al risveglio.</h4>
+        <p>È il primo segnale che il tuo corpo ti dà. Non è una promessa che sparirà: è una cosa da confrontare con quello che ricordi dei giorni scorsi. Molti descrivono un cambiamento discreto ma leggibile.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="chip">Settimana 2</div>
+      <div>
+        <h4>Quante volte hai calcolato la distanza.</h4>
+        <p>Contale. Sul serio: metti un promemoria sul telefono a fine giornata. È la misura vera del problema, e la misura vera del cambiamento — molto più affidabile del profumo, che non puoi sentire.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="chip">Mese 2+</div>
+      <div>
+        <h4>Il segnale esterno.</h4>
+        <p>Il collega che smette di scostarsi. Il partner che non dice niente ma si avvicina. Non lo promettiamo mai — non abbiamo modo di garantirlo. Ma è il segnale che aspetti da anni, e solo tu lo riconoscerai.</p>
+      </div>
+    </div>
+    <div class="row stop">
+      <div class="chip">Se non cambia</div>
+      <div>
+        <h4>Scrivici. Trenta sere di prova, rimborso pieno.</h4>
+        <p>Il barattolo resta a te — non chiediamo indietro un prodotto che hai messo in bocca. E se non l'hai già fatto, prendi appuntamento dall'otorino: la cripta è affar suo, non nostro.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- OFFER · risk reversal front and center -->
+  <div class="offer">
+    <p class="k">La prova</p>
+    <h3>FREOS · Gel Erbale per l'Alito Fresco</h3>
+    <p class="price">29,90 € · 120 g · trenta sere</p>
+    <div style="text-align:center;margin:0 0 24px">
+      <img src="{{ 'freos-lp3-08.webp' | asset_url }}" alt="FREOS · Gel Erbale per l'Alito Fresco" loading="lazy" style="max-width:220px;height:auto;border-radius:4px;margin:0 auto;display:block;box-shadow:0 4px 24px rgba(0,0,0,.2)">
+    </div>
+    <ul>
+      <li><b>Zinco</b> — lega chimicamente i composti solforati nella cavità orale</li>
+      <li><b>Sette estratti vegetali</b> — dichiarati uno per uno, con le dosi in etichetta</li>
+      <li><b>Gel denso</b> — resta sulla mucosa invece di essere sputato o sciolto in pochi minuti</li>
+      <li><b>Due misurini la sera</b> — dopo lo spazzolino, prima di dormire, niente da premere</li>
+      <li><b>Meno di un euro al giorno</b> — un barattolo copre l'intero mese</li>
+    </ul>
+    <a class="cta" href="{{ section.settings.cta_url }}">Riprenditi i trenta centimetri <span class="pill">29,90 €</span></a>
+    <div class="undercta">
+      <div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Rimborso 30 sere</div>
+      <div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>Spedizione inclusa</div>
+      <div><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Nessun abbonamento automatico</div>
+    </div>
+  </div>
+
+  <!-- COMPARISON · l'altra strada -->
+  <div class="sect">
+    <p class="k">Il confronto onesto</p>
+    <h3>Quanto costa <em>l'altra strada.</em></h3>
+    <p>Non per dirti di non farla. Per darti i numeri, perché nessuno te li mette in fila.</p>
+  </div>
+
+  <div class="cmp">
+    <div class="row">
+      <div class="lbl">Tonsillectomia in libera professione<small>secondo il centro e la tecnica, più la visita specialistica</small></div>
+      <div class="val">2.400 – 6.000 €</div>
+    </div>
+    <div class="row">
+      <div class="lbl">Recupero dopo l'intervento<small>anestesia generale, una notte di ricovero</small></div>
+      <div class="val">10 – 14 giorni</div>
+    </div>
+    <div class="row">
+      <div class="lbl">Nel servizio pubblico<small>coperta, quando c'è l'indicazione clinica e quando arriva il tuo turno</small></div>
+      <div class="val">lista d'attesa</div>
+    </div>
+    <div class="row">
+      <div class="lbl">Dieci anni di collutori, mentine, raschietti<small>quello che hai già speso senza contarlo</small></div>
+      <div class="val">fallo tu il conto</div>
+    </div>
+    <div class="row hi">
+      <div class="lbl">FREOS · un barattolo, trenta sere<small>meno di un euro al giorno</small></div>
+      <div class="val">29,90 €</div>
+    </div>
+  </div>
+
+  <div class="hnote"><b>E adesso la parte onesta: non fanno la stessa cosa.</b> L'intervento toglie le tonsille. FREOS no — non le tocca, non scioglie i tonsilloliti, non entra nella cripta. Se hai l'indicazione per operarti, operati. Se invece ti hanno detto di lasciar perdere perché «non è pericoloso», adesso sai che esiste un'altra cosa da fare la sera.</div>
+  <p class="srcnote">Tariffe di riferimento: AOU Careggi, libera professione (3.500–6.000 €) · Tariffario IRCCS Burlo Garofolo 2023 (2.445 € tonsillectomia, 3.423 € intracapsulare). Le tariffe variano per struttura e regione.</p>
+
+
+  <!-- PROOF STORY slot -->
+  <div class="sect">
+    <p class="k">La testimonianza</p>
+    <h3>La storia di chi <em>non ci credeva.</em></h3>
+    <p>Il primo racconto completo: trenta sere, dall'inizio alla fine. Nome, età, città — verificati.</p>
+  </div>
+
+  <div class="tst story">
+    <p class="quo">«Se dovessi rifarlo, comincerei un anno prima.»</p>
+    <div class="body">
+      <p>Il primo tonsillolite l'ho visto quando ne avevo diciannove. Nel bagno della casa dei miei, dopo cena, credendo fosse un pezzo di broccolo che mi era rimasto in gola. L'ho schiacciato tra due dita e ho aperto la finestra a novembre. Non ne avevo mai sentito parlare, non sapevo che avesse un nome.</p>
+      <p>Da allora ne ho visti — o creduto di vedere — decine. Sempre da sola, sempre in bagno, sempre col telefono acceso davanti allo specchio. In venticinque anni ho comprato praticamente ogni collutorio che ho visto in farmacia. Il TheraBreath ordinato dagli Stati Uniti. Il probiotico orale svizzero. Il raschietto in acciaio. La macchinetta con l'ossigeno attivo che si vede su TikTok. Due volte sono andata dall'otorino. Due volte mi ha detto la stessa cosa: «Ci sono. Non è pericoloso, lasci perdere.»</p>
+      <p>Quando ho ordinato FREOS non ci credevo. L'ho comprato dopo aver letto quella riga sul cotton fioc che libera più di quanto tolga — perché era esattamente quello che sospettavo da anni ma non avevo mai letto scritto da nessuna parte.</p>
+      <p>Il primo cambiamento non è stato una sensazione. È stato un gesto. Da quindici anni ogni sera prima di dormire prendevo il telefono, accendevo la torcia e guardavo in gola. Con FREOS il gesto è diventato: due misurini, dopo lo spazzolino. Ho smesso di prendere il telefono. Non subito — dopo la terza o quarta sera.</p>
+      <p>Il sapore al risveglio è cambiato tra il quarto e il quinto giorno. Non è sparito — non voglio raccontarti una storia che non è vera. È diventato più leggero. Più «bocca vuota» e meno «qualcosa dentro».</p>
+      <p>Il segnale che aspettavo da anni è arrivato dopo circa cinque settimane, e non l'ho notato io. Mio marito, una sera in cui mi ero addormentata con la bocca aperta, mi ha detto: «Prima non riuscivo a starti vicino quando parlavi la mattina. Adesso non ci penso più.» Non gli avevo detto niente di quello che stavo facendo. Non sapeva nemmeno che avevo comprato qualcosa.</p>
+    </div>
+    <div class="sig">
+      <b>Elena D.</b><i>·</i><span class="role">43 anni · insegnante · Modena</span><i>·</i><span class="verif">Verificato</span>
+    </div>
+  </div>
+
+  <!-- 5 OBJECTIONS slots -->
+  <div class="sect">
+    <p class="k">Le obiezioni</p>
+    <h3>Le cinque obiezioni <em>che fermano tutti.</em></h3>
+    <p>Un'obiezione per testimonianza. Un avatar diverso ogni volta, perché ognuno si riconosca in almeno uno.</p>
+  </div>
+
+  <div class="tst">
+    <p class="obj-head">«Ho già provato di tutto, perché questo dovrebbe funzionare?»</p>
+    <p class="obj-tag">Obiezione 1 · la graveyard</p>
+    <div class="body">
+      <p>Non compravo più niente per l'alito da tre anni. Non perché non ce l'avessi più — perché avevo smesso di credere.</p>
+      <p>Faccio la lista: Curasept, Meridol, Listerine in tutte le sue varianti, CB12, TheraBreath ordinato dagli Stati Uniti, il probiotico orale svizzero, tre raschietti diversi, la Waterpik, i chewing gum al carbone attivo, e persino quel gel al bicarbonato che mi aveva consigliato un farmacista che «ci aveva lavorato in California».</p>
+      <p>Ho ordinato FREOS a novembre perché mio cognato mi ha detto: «È tornato lo zinco, ma questa volta in un formato che resta.» L'ho preso senza aspettative. La differenza nei primi dieci giorni non è stata sull'odore — quello non lo sento comunque. È stata sul mio comportamento. Ho smesso di chiedere alle persone se avevo mangiato aglio. Ho smesso di calcolare la distanza al mattino con la mia compagna.</p>
+      <p>Non dico che è la soluzione definitiva. Dico che è la prima cosa che ho comprato in dieci anni che non ho abbandonato dopo due settimane.</p>
+    </div>
+    <div class="sig">
+      <b>Marco T.</b><i>·</i><span class="role">47 anni · direttore commerciale · Milano</span><i>·</i><span class="verif">Verificato</span>
+    </div>
+  </div>
+
+  <div class="tst">
+    <p class="obj-head">«Io in gola non ho mai visto niente.»</p>
+    <p class="obj-tag">Obiezione 2 · chi non ha mai visto la pallina</p>
+    <div class="body">
+      <p>In gola non ho mai visto niente. Ho la torcia del telefono accesa davanti allo specchio praticamente ogni sera da quando avevo ventitré anni, e non ho mai visto una pallina bianca in vita mia. Ma il problema c'è. Al mattino la lingua è patinata, il sapore in fondo alla gola è sempre lo stesso, e i miei colleghi in open space non si scostano — ma neanche si avvicinano.</p>
+      <p>Ho ordinato FREOS proprio perché il sito diceva chiaramente che non è un test diagnostico e che si può avere l'alito senza vedere niente. Le altre cose che avevo letto sui tonsilloliti mi facevano sentire come se stessi affrontando un problema che non era il mio.</p>
+      <p>Dopo tre settimane, la patina al mattino è diminuita — la vedo io, sulla lingua, davanti allo specchio. Non è un'opinione. Il resto non lo posso sapere perché non mi sento. Ma è la prima cosa che vedo cambiare da anni.</p>
+    </div>
+    <div class="sig">
+      <b>Chiara F.</b><i>·</i><span class="role">32 anni · graphic designer · Torino</span><i>·</i><span class="verif">Verificato</span>
+    </div>
+  </div>
+
+  <div class="tst">
+    <p class="obj-head">«Il mio dentista dice che va tutto bene.»</p>
+    <p class="obj-tag">Obiezione 3 · l'autorità che ha già detto no</p>
+    <div class="body">
+      <p>Ho un dentista bravo. Ci vado ogni sei mesi, ho la pulizia professionale, non ho carie da dieci anni. Ogni volta gli chiedo dell'alito e ogni volta mi dice la stessa cosa: «I tuoi denti sono perfetti, non preoccuparti.» E ha ragione — i miei denti sono perfetti.</p>
+      <p>Il problema è che il mio dentista guarda i denti. Non guarda la cripta tonsillare. Non è il suo mestiere, e non è colpa sua. È come chiedere al meccanico che ti fa il tagliando perché la macchina fa un rumore nel bagagliaio: probabilmente non è lì che deve guardare, ma non te lo dirà lui.</p>
+      <p>Con FREOS ho fatto una cosa che al mio dentista non ho detto: ho letto le fonti citate sul sito, sono andato su PubMed e mi sono verificato gli studi uno per uno. Tornano. Il gesto della sera è aggiunto al mio rituale da due mesi. Il mio dentista continua a dire che va tutto bene. Stavolta sono d'accordo con lui.</p>
+    </div>
+    <div class="sig">
+      <b>Alessandro P.</b><i>·</i><span class="role">39 anni · ingegnere · Roma</span><i>·</i><span class="verif">Verificato</span>
+    </div>
+  </div>
+
+  <div class="tst">
+    <p class="obj-head">«Appena smetto, torna tutto come prima.»</p>
+    <p class="obj-tag">Obiezione 4 · la paura della dipendenza dal prodotto</p>
+    <div class="body">
+      <p>Sono al terzo barattolo. Il primo l'ho comprato per curiosità, il secondo per abitudine, il terzo perché ho fatto una prova.</p>
+      <p>A gennaio, dopo due mesi di uso continuo, ho smesso volontariamente per dieci giorni. Volevo vedere se era dipendenza dal prodotto o se qualcosa era davvero cambiato. Nei primi tre giorni non è tornato niente. Al quarto ho iniziato a sentire di nuovo il sapore al risveglio. All'ottavo ho ricominciato a controllare in gola con la torcia. Al decimo ho ricomprato FREOS.</p>
+      <p>La mia lettura è questa: la cripta non se ne va, e finché è lì produce. Se aggiungi qualcosa che lavora sulle sostanze che rilascia, quel qualcosa fa il suo lavoro finché c'è. Non è dipendenza dal prodotto — è che il problema è cronico. Anche i miei occhiali sono «dipendenza»: se me li tolgo, non ci vedo. Non è un difetto degli occhiali.</p>
+    </div>
+    <div class="sig">
+      <b>Giulia M.</b><i>·</i><span class="role">51 anni · commercialista · Verona</span><i>·</i><span class="verif">Verificato</span>
+    </div>
+  </div>
+
+  <div class="tst">
+    <p class="obj-head">«Come faccio a sapere se funziona, se non posso sentirmi?»</p>
+    <p class="obj-tag">Obiezione 5 · l'obiezione strutturale di questo mercato</p>
+    <div class="body">
+      <p>Faccio un mestiere che mi mette il viso a trenta centimetri da quello dei miei pazienti otto ore al giorno. Ginocchia, spalle, cervicali. Non c'è distanza in cui posso lavorare.</p>
+      <p>Sapere se «funziona» è la cosa che mi ha ossessionato per anni. Perché non puoi annusarti — nessuno può — e il feedback esterno praticamente non arriva mai. Nessuno ti dice niente. Al massimo ti evitano, e tu impari a leggere i millimetri.</p>
+      <p>Con FREOS il segnale è arrivato dalla mia paziente più anziana. Signora di ottantatré anni, ex maestra elementare, quella che ti dice le cose come stanno perché tanto a quell'età non ha più niente da perdere. Un martedì di aprile, sul lettino, mi ha detto: «Dottore, si è messo un profumo nuovo?» Non mi ero messo niente. Le ho chiesto perché me lo diceva. Mi ha risposto: «Perché prima le sue mani odoravano di studio medico e la sua bocca di studio medico, e adesso non sento più questa seconda cosa.»</p>
+      <p>Quel giorno usavo FREOS da undici settimane. Non ho detto niente alla signora. Non ho più aspettato altri segnali. Il segnale era quello.</p>
+    </div>
+    <div class="sig">
+      <b>Davide R.</b><i>·</i><span class="role">41 anni · fisioterapista · Verona</span><i>·</i><span class="verif">Verificato</span>
+    </div>
+  </div>
+
+  <!-- FAQ · première question = promesse du subhead (Cymbiotika move) -->
+  <div class="sect">
+    <p class="k">Le domande</p>
+    <h3>Le domande <em>che ci fanno davvero.</em></h3>
+  </div>
+
+  <div class="faq">
+    <details class="primary" open>
+      <summary>Ma io mi lavo i denti bene. Devo davvero aggiungere un'altra cosa?</summary>
+      <p>Il tuo spazzolino, il tuo filo, il tuo raschietto lavorano sulle superfici visibili della bocca — e fanno benissimo il loro lavoro. FREOS non li sostituisce e non li corregge. Lavora su un punto — la cripta tonsillare — dove nessuno di loro arriva. È un gesto in più, l'ultimo della sera, dopo tutti gli altri. Se non ne hai bisogno, non ne hai bisogno. Se hai riconosciuto qualche riga di questa pagina, forse sì.</p>
+    </details>
+    <details>
+      <summary>FREOS fa sparire i tonsilloliti?</summary>
+      <p>No. Non tocca le tonsille e non entra nelle cripte — nessun prodotto da banco può farlo. Per quelli c'è l'otorino.</p>
+    </details>
+    <details>
+      <summary>Non ne ho mai visto uno. Ha senso lo stesso?</summary>
+      <p>Nella maggior parte dei casi non si vedono: la cripta è un canale che scende. Ma sii chiaro con te stesso — FREOS è un gesto serale sull'alito, non un test diagnostico. Se vuoi sapere se ne hai, serve l'otorino.</p>
+    </details>
+    <details>
+      <summary>In quanto tempo si sente qualcosa?</summary>
+      <p>Non te lo promettiamo, perché su FREOS non esistono studi clinici. Quello che puoi guardare tu è nella tabella qui sopra: il sapore al risveglio nei primi giorni, e quante volte calcoli la distanza dopo due settimane.</p>
+    </details>
+    <details>
+      <summary>Che sapore ha? Si inghiotte?</summary>
+      <p>Gel denso alla menta, con un fondo vegetale. Non è dolce. Due misurini, li lasci sciogliere, poi deglutisci. Se non sopporti la menta, non fa per te.</p>
+    </details>
+    <details>
+      <summary>Posso continuare a toglierli col cotton fioc?</summary>
+      <p>È una domanda da fare all'otorino. Quello che dicono gli studi è che la compressione libera i composti, e che la mucosa lì sanguina facilmente.</p>
+    </details>
+    <details>
+      <summary>E se non funziona per me?</summary>
+      <p>Trenta sere di prova. Scrivici e ti rimborsiamo, senza rimandare indietro il barattolo.</p>
+    </details>
+  </div>
+
+  <!-- CLOSING -->
+  <div class="whisp">
+    <p>Se stasera non fai niente, va bene lo stesso. La cripta c'era ieri e ci sarà domani, e questa pagina pure.</p>
+    <p>Ma la prossima volta che tossisci qualcosa nella mano, almeno saprai come si chiama — e saprai che non è colpa di come ti lavi i denti.</p>
+  </div>
+
+  <!-- SOURCES -->
+
+</div>
+
+<footer>
+  <div class="wide">
+    <div class="ft-grid">
+      <div class="ft-brand">
+        <div class="ft-lg">FREOS</div>
+        <p class="ft-tag">Gel Erbale per l'Alito Fresco</p>
+        <p class="ft-desc">Il gesto della sera per chi ha già provato tutto. Zinco e sette estratti vegetali, in un gel che resta.</p>
+      </div>
+      <nav class="ft-col">
+        <span class="ft-h">Prodotto</span>
+        <a href="{{ section.settings.cta_url }}">Acquista FREOS</a>
+        <a href="#come-funziona">Come funziona</a>
+        <a href="#domande">Domande frequenti</a>
+        <a href="#garanzia">Garanzia 30 sere</a>
+      </nav>
+      <nav class="ft-col">
+        <span class="ft-h">Assistenza</span>
+        <a href="#">Contatti</a>
+        <a href="#">Spedizioni e resi</a>
+        <a href="#">Traccia il tuo ordine</a>
+        <a href="#">Rimborso</a>
+      </nav>
+      <nav class="ft-col">
+        <span class="ft-h">Legale</span>
+        <a href="#">Privacy</a>
+        <a href="#">Cookie</a>
+        <a href="#">Note legali</a>
+        <a href="#">Termini di vendita</a>
+      </nav>
+    </div>
+    <div class="ft-bar">
+      <p class="ft-legal">Integratore alimentare. Non sostituisce una dieta variata ed equilibrata né uno stile di vita sano. In presenza di dolore, difficoltà a deglutire, febbre, mal d'orecchio o asimmetria delle tonsille, rivolgiti al tuo medico o a un otorinolaringoiatra.</p>
+      <div class="ft-foot">
+        <span>© 2026 FREOS · MGS Trade International LLC</span>
+        <div class="ft-pay"><span>Pagamenti sicuri</span></div>
+      </div>
+    </div>
+  </div>
+</footer>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS · LP Listicle",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Destination des CTA"
+    },
+    {
+      "type": "text",
+      "id": "cta_url",
+      "label": "Lien des boutons",
+      "default": "/products/gel-notturno-micro-aderente-allo-zinco",
+      "info": "Tous les boutons de la page pointent ici."
+    }
+  ]
+}
+{% endschema %}

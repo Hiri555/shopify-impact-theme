@@ -1,0 +1,386 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP Cripta
+  ----------------------------------------------------------------------------
+  Porte depuis la source autonome. La copy est verrouillee et vit inline :
+  seule la cible des CTA est un reglage, sur le modele de l'advertorial Rosalia.
+
+  Les images sont des assets du theme (freos-lp2-NN.webp) : pour en changer
+  une, on remplace le fichier, pas le code.
+
+  Le CSS ci-dessous est celui de la source, inchange. Il porte son propre reset
+  et ses propres tokens — la page ne depend donc d'aucun CSS du theme.
+  ============================================================================
+{%- endcomment -%}
+
+<style>
+:root{--bg:#F0EADB;--paper:#FAF5E9;--ink:#181D18;--ink2:#333C33;--ink3:#6E7268;--ink4:#9A9C90;
+--accent:#2C5440;--rule:#CDC5B0;--rule2:#A89E84;--warm:#8A7060;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#F0EADB;--paper:#FAF5E9;--ink:#181D18;--ink2:#333C33;--ink3:#6E7268;--ink4:#9A9C90;--accent:#2C5440;--rule:#CDC5B0;--rule2:#A89E84;--warm:#8A7060}}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--ink)}
+body{font-family:'Fraunces',Georgia,serif;font-size:19px;line-height:1.66;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}p{margin:0 0 1.12em}
+.wrap{max-width:720px;margin:0 auto;background:var(--paper);padding:0 26px 70px}
+@media(min-width:900px){.wrap{max-width:760px;padding:0 64px 90px;box-shadow:0 0 0 1px var(--rule)}}
+@media(max-width:640px){.wrap{padding:0 19px 46px}}
+.top{padding:19px 0 15px;border-bottom:1px solid var(--rule);margin-bottom:32px;display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.top div{font-family:Inter,sans-serif;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink3);font-weight:600}
+.top div:last-child{letter-spacing:.06em;color:var(--ink4);text-transform:none}
+h1{font-weight:700;font-size:clamp(30px,5.4vw,47px);line-height:1.08;letter-spacing:-.02em;margin:0 0 24px}
+h1 em{font-style:italic;color:var(--accent)}
+.sub{font-size:clamp(19px,2.5vw,23px);line-height:1.44;font-style:italic;color:var(--ink2);margin:0 0 30px}
+.by{display:flex;align-items:center;gap:13px;padding:15px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-bottom:32px}
+.by img{width:46px;height:46px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.by-n{font-size:14px;font-weight:700;line-height:1.3}.by-n em{font-style:italic;font-weight:400;color:var(--ink3)}
+.by-d{font-size:12px;color:var(--ink3);font-style:italic;margin-top:3px}
+section{margin-top:50px;padding-top:36px;border-top:1px solid var(--rule)}
+section:first-of-type{border-top:none;margin-top:34px;padding-top:0}
+h2{font-weight:700;font-size:clamp(25px,3.9vw,34px);line-height:1.15;letter-spacing:-.015em;margin:0 0 22px}
+h2 em{font-style:italic;color:var(--accent)}
+h3{font-weight:700;font-style:italic;font-size:clamp(20px,2.6vw,23px);line-height:1.26;margin:32px 0 13px}
+.solo{font-size:clamp(20px,2.6vw,24px);font-style:italic;font-weight:700;color:var(--accent);margin:28px 0;padding-left:18px;border-left:2px solid var(--accent);line-height:1.38}
+.pull{margin:42px 0;padding:24px 0;border-top:1px solid var(--rule2);border-bottom:1px solid var(--rule2);text-align:center;font-style:italic;font-weight:700;font-size:clamp(21px,3vw,28px);line-height:1.3;color:var(--accent)}
+/* FIGURES annotées */
+figure{margin:32px 0 28px}
+.fig{background:#FFFDF6;border:1px solid var(--rule2);padding:18px 16px 13px}
+@media(max-width:640px){.fig{margin-left:-19px;margin-right:-19px;border-left:none;border-right:none;padding:14px 11px 11px}}
+.fig-h{font-family:Inter,sans-serif;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:13px;padding-bottom:8px;border-bottom:1px solid var(--rule)}
+.fig-i{position:relative;line-height:0}
+.fig-i img{width:100%}
+.mk{position:absolute;display:flex;align-items:center;gap:7px;transform:translateY(-50%);line-height:1;pointer-events:none}
+.mk .dot{flex:0 0 auto;width:21px;height:21px;border-radius:50%;background:var(--accent);color:#FFFDF6;font-family:Inter,sans-serif;font-size:11px;font-weight:700;display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 2.5px rgba(255,253,246,.92)}
+.mk .txt{font-family:Inter,sans-serif;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);background:rgba(255,253,246,.93);padding:4px 7px;white-space:nowrap;border:1px solid var(--rule2)}
+.mk-l{flex-direction:row-reverse;transform:translate(-100%,-50%)}
+@media(max-width:560px){.mk .txt{font-size:9.5px;padding:3px 5px}.mk .dot{width:18px;height:18px;font-size:10px}}
+.leg{margin-top:12px;padding-top:10px;border-top:1px solid var(--rule);display:grid;gap:5px}
+.leg div{font-family:Inter,sans-serif;font-size:12px;color:var(--ink2);line-height:1.45}
+.leg b{color:var(--accent);font-weight:700}
+figcaption{font-size:13px;font-style:italic;color:var(--ink3);line-height:1.5;margin-top:11px;padding-top:9px;border-top:1px solid var(--rule)}
+.plate img{width:100%;border:1px solid var(--rule)}
+.step{margin:30px 0}
+.step-n{font-family:Inter,sans-serif;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:7px}
+.step h4{font-weight:700;font-size:clamp(19px,2.5vw,23px);margin:0 0 11px;line-height:1.26}
+.stat{margin:28px 0;padding:18px 20px;background:#EFEADB;border-left:3px solid var(--ink)}
+.stat-v{font-family:Fraunces,serif;font-weight:700;font-size:26px;line-height:1;margin-bottom:9px}
+.stat p{font-size:16px;line-height:1.5;color:var(--ink2);margin:0 0 .6em}.stat p:last-of-type{margin-bottom:0}
+.stat .s{font-family:Inter,sans-serif;font-size:11px;color:var(--ink4);margin-top:11px}
+.grave{margin:28px 0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
+.gr{padding:14px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr;gap:4px}
+.gr:last-child{border-bottom:none}
+@media(min-width:660px){.gr{grid-template-columns:172px 1fr;gap:22px;align-items:baseline}}
+.gw{font-weight:700;font-size:15.5px}.gy{font-size:15px;line-height:1.5;color:var(--ink2)}
+.gy em{color:var(--ink);font-weight:600}
+.gr.hot{background:rgba(138,112,96,.07);padding:14px;margin:0 -14px;border-left:3px solid var(--warm)}
+.gr.hot .gw{color:var(--warm)}
+.quote{margin:28px 0;padding:18px 0 15px;border-top:1px solid var(--rule2);border-bottom:1px solid var(--rule2)}
+.quote p{font-style:italic;font-size:17px;line-height:1.5;color:var(--ink2);margin:0}
+.quote .w{font-family:Inter,sans-serif;font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--ink4);margin-top:10px;font-style:normal}
+.prod{margin:34px auto;max-width:300px}.prod img{width:100%;border:1px solid var(--rule)}.prod figcaption{text-align:center}
+.note{margin:28px 0;padding:19px 21px;background:rgba(44,84,64,.055);border-left:3px solid var(--accent)}
+.note-t{font-family:Inter,sans-serif;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:9px}
+.note ul{margin:0;padding:0;list-style:none}
+.note li{font-size:15.5px;line-height:1.55;padding:4px 0 4px 16px;position:relative;color:var(--ink2)}
+.note li::before{content:'—';position:absolute;left:0;color:var(--rule2)}
+
+.anc{margin:0;padding:52px 0;border-top:1px solid var(--rule)}
+.anc h3{font-family:Fraunces,serif;font-weight:700;font-size:clamp(23px,5.4vw,34px);line-height:1.14;margin:0 0 10px;max-width:22ch}
+.anc .lead{font-size:16px;color:var(--ink3);margin:0 0 24px;max-width:52ch}
+.anc-r{display:grid;grid-template-columns:1fr;gap:3px;padding:15px 0;border-bottom:1px solid var(--rule)}
+@media(min-width:620px){.anc-r{grid-template-columns:1fr auto;gap:20px;align-items:baseline}}
+.anc-l{font-size:15.5px;color:var(--ink2);line-height:1.5}
+.anc-l small{display:block;font-size:13px;color:var(--ink3);margin-top:3px}
+.anc-v{font-family:Fraunces,serif;font-weight:700;font-size:18px;color:var(--ink);white-space:nowrap}
+.anc-r.us{background:var(--rule);padding:20px 18px;margin:8px -18px 0;border-bottom:none}
+@media(min-width:620px){.anc-r.us{margin:8px 0 0;padding:22px}}
+.anc-r.us .anc-l{color:var(--ink);font-weight:600}
+.anc-r.us .anc-v{color:var(--acc);font-size:clamp(26px,7vw,34px);line-height:1}
+.anc-note{margin-top:22px;padding-left:16px;border-left:2px solid var(--rule2);font-size:15px;line-height:1.6;color:var(--ink2);max-width:54ch}
+.anc-note b{color:var(--ink)}
+.anc-src{margin-top:16px;font-size:11.5px;color:var(--ink3);line-height:1.55}
+.cta-mid{margin:34px 0 0;text-align:center}
+.cta-mid a{display:block;width:100%;background:var(--ink);color:#fff;text-decoration:none;padding:17px 22px;font-size:13px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}
+@media(min-width:620px){.cta-mid a{display:inline-block;width:auto;padding:17px 44px}}
+.cta-mid p{margin:11px 0 0;font-size:12.5px;font-style:italic;color:var(--ink3)}
+
+/* ---- PROOF STORY + OBJECTION SLOTS ---- */
+.ps{padding:54px 0;border-top:1px solid var(--rule)}
+.ps h3{font-family:Fraunces,serif;font-weight:700;font-size:clamp(23px,5.4vw,34px);line-height:1.14;margin:0 0 8px;max-width:24ch}
+.ps h3 em{font-style:italic;color:var(--acc)}
+.ps .sub{font-size:15.5px;color:var(--ink3);margin:0 0 26px;max-width:54ch}
+.slot{border:1px dashed var(--rule2);background:repeating-linear-gradient(135deg,transparent,transparent 9px,rgba(44,84,64,.035) 9px,rgba(44,84,64,.035) 18px);padding:22px 20px;margin:0 0 16px}
+.slot-h{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-bottom:12px}
+.slot-t{font-family:Inter,sans-serif;font-size:9.5px;letter-spacing:.15em;text-transform:uppercase;font-weight:700;color:#fff;background:var(--acc);padding:4px 8px;line-height:1}
+.slot-o{font-family:Inter,sans-serif;font-size:11.5px;color:var(--ink3);font-style:italic}
+.slot-b{font-size:14.5px;line-height:1.6;color:var(--ink2);margin:0}
+.slot-b b{color:var(--ink)}
+.slot ul{margin:10px 0 0;padding:0;list-style:none}
+.slot li{font-size:13.5px;line-height:1.55;color:var(--ink3);padding:3px 0 3px 15px;position:relative}
+.slot li::before{content:'›';position:absolute;left:0;color:var(--acc);font-weight:700}
+.slot-id{font-family:Inter,sans-serif;font-size:10px;letter-spacing:.1em;color:var(--rule2);margin-top:12px;text-transform:uppercase}
+.obj-g{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:800px){.obj-g{grid-template-columns:1fr 1fr}}
+.obj-q{font-family:Fraunces,serif;font-style:italic;font-weight:700;font-size:17px;color:var(--ink);margin:0 0 10px;line-height:1.34}
+.cta{margin:44px 0 24px;padding:34px 0;border-top:2px solid var(--ink);border-bottom:2px solid var(--ink);text-align:center}
+.cta-h{font-weight:700;font-style:italic;font-size:clamp(24px,3.8vw,32px);line-height:1.14;margin:0 0 13px}
+.cta-p{font-size:16px;color:var(--ink2);max-width:440px;margin:0 auto 20px;line-height:1.5}
+.cta a{display:inline-block;font-size:20px;font-weight:700;font-style:italic;color:var(--accent);text-decoration:none;border-bottom:2px solid var(--accent);padding-bottom:3px}
+.cta a:hover{color:var(--ink);border-color:var(--ink)}
+.cta-s{margin-top:14px;font-size:12.5px;font-style:italic;color:var(--ink3)}
+.faq{margin:26px 0;border-top:1px solid var(--rule2)}
+.fq{padding:16px 0;border-bottom:1px solid var(--rule)}
+.fq-q{font-weight:700;font-size:16px;margin-bottom:6px;line-height:1.38}
+.fq-a{font-size:15px;line-height:1.55;color:var(--ink2)}
+.whisper{margin:38px 0 0;padding:28px 0 0;border-top:1px solid var(--rule)}
+.whisper p{font-style:italic;color:var(--ink3);font-size:16.5px;line-height:1.6}
+.src{margin:38px 0 0;padding:19px 0;border-top:1px solid var(--rule2)}
+.src-t{font-family:Inter,sans-serif;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--ink3);font-weight:700;margin-bottom:9px}
+.src ol{margin:0;padding-left:18px;font-size:12px;line-height:1.6;color:var(--ink3)}.src li{margin-bottom:4px}
+footer{background:var(--ink);color:#E8E3D2;padding:38px 26px 26px;font-size:12px;line-height:1.6}
+.fi{max-width:760px;margin:0 auto}.fi p{color:rgba(232,227,210,.62);margin:0 0 10px}
+.fl{margin-top:15px;padding-top:13px;border-top:1px solid rgba(232,227,210,.14);font-size:10.5px;color:rgba(232,227,210,.42)}
+.fl a{color:rgba(232,227,210,.55)}
+</style>
+
+<div class="freos-lp-body">
+<div class="wrap">
+<div class="top"><div>Salute · Prima persona</div><div>9 min di lettura</div></div>
+
+<h1>Ti lavi i denti tre volte al giorno. La causa del tuo alito sta <em>dieci centimetri più indietro.</em></h1>
+<p class="sub">Se hai già provato collutori, raschietti e cotton fioc senza risultato, non è perché hai sbagliato qualcosa. È perché agiscono tutti su superfici esposte all'aria — e il punto dove si forma non lo è.</p>
+<div class="by"><img src="{{ 'freos-lp2-01.webp' | asset_url }}" alt="Davide M.">
+<div><div class="by-n">di <strong>Davide M.</strong> <em>— fisioterapista, Verona</em></div>
+<div class="by-d">Racconto in prima persona. Fonti scientifiche in fondo alla pagina.</div></div></div>
+<figure class="fig">
+<div class="fig-h">Dove siamo · sezione laterale</div>
+<div class="fig-i"><img src="{{ 'freos-lp2-02.webp' | asset_url }}" alt="Sezione laterale della testa: bocca, lingua, gola e tonsille" loading="lazy"><div class="mk mk-r" style="left:38%;top:60%"><span class="dot">1</span><span class="txt">La tonsilla</span></div><div class="mk mk-l" style="left:30%;top:56%"><span class="dot">2</span><span class="txt">La lingua</span></div></div>
+<figcaption>Sezione della testa e del collo. Le tonsille stanno lì, in fondo alla bocca, dietro la lingua — dove nessuno guarda mai.</figcaption></figure>
+<section>
+<p>Il quattordici marzo, alle sette e venti del mattino, ho tossito qualcosa nella mano.</p>
+<p>Era bianco. Piccolo come un chicco di riso. Ho pensato che fosse riso.</p>
+<p>L'ho schiacciato tra due dita, davanti al lavandino. E ho capito che non era riso.</p>
+<p>Non so descrivertelo senza farti storcere il naso. Diciamo che ho aperto la finestra. A marzo. Alle sette e venti.</p>
+<p>Faccio il fisioterapista. Da quattordici anni la mia faccia sta a trenta centimetri da quella di qualcun altro. Otto ore al giorno. Un ginocchio, una spalla, una cervicale. Da lì ci si parla. Da vicino.</p>
+<p>Quel giorno ho lavorato con la bocca quasi chiusa.</p>
+<p>La sera mi sono guardato in gola per la prima volta in dieci anni. Torcia del telefono, specchio del bagno, lingua fuori.</p>
+<p class="solo">Non ho visto niente.</p>
+<p>Venti minuti su internet. Poi una parola che non avevo mai letto in vita mia: <strong>tonsilloliti</strong>.</p>
+<p>Ho quarantun anni e lavoro nella sanità. In quarantun anni, nessun dentista e nessun medico me lo aveva mai detto.</p>
+<p>Per una sera ho pensato che fosse finita lì. Avevo il nome. Bastava toglierli.</p>
+<p><strong>Ci ho messo tre mesi a capire che avevo trovato la metà facile.</strong></p>
+</section>
+<section>
+<h2>Dieci anni prima, avevo già capito una cosa. <em>Non nel modo in cui si capiscono le cose.</em></h2>
+<p>Nel modo in cui le si notano.</p>
+<p>Un paziente che gira la testa mentre gli parlo. Un collega che fa mezzo passo indietro davanti alla macchinetta. Mia sorella che una volta, alle sei di sera, mi ha chiesto se avessi bevuto il caffè.</p>
+<p>Nessuno ti dice niente. Si spostano, e basta.</p>
+<p>Quindi ho fatto quello che fanno tutti. Ho lavato più forte.</p>
+<p>Tre volte al giorno, poi quattro. Il filo tutte le sere. Il collutorio dopo il filo, poi un secondo collutorio, quello che brucia. Il raschietto per la lingua finché non veniva da vomitare.</p>
+<p>Il dentista mi ha detto che avevo dei denti perfetti. Me lo ha detto come se fosse una buona notizia.</p>
+<p>Poi ho smesso di parlarne. Non perché fosse risolto — perché non c'era più niente da dire.</p>
+<p><strong>Non smetti di pensarci. Impari solo a organizzarti intorno.</strong></p>
+</section>
+<section>
+<h2>Quello che ho trovato in tre mesi <em>non era su nessun sito di rimedi.</em></h2>
+<p>Era in quattro studi. E nessuno me li aveva mai messi in fila.</p>
+<div class="step"><div class="step-n">Primo</div>
+<h4>Non hai una bocca liscia.</h4>
+<p>Le tonsille non sono due palline. Sono attraversate da <strong>cripte</strong>: canali ramificati che scendono dentro il tessuto. Ogni infiammazione che hai avuto le ha allargate un po'.</p>
+<p>Sono fatte per intrappolare. È il loro mestiere. Dentro finisce quello che passa — cibo, cellule morte, batteri.</p></div>
+<figure class="fig">
+<div class="fig-h">Ingrandimento 1 · la tonsilla aperta</div>
+<div class="fig-i"><img src="{{ 'freos-lp2-03.webp' | asset_url }}" alt="Tonsilla in sezione con cripte ramificate e un tonsillolite in fondo" loading="lazy"><div class="mk mk-r" style="left:18%;top:32%"><span class="dot">1</span><span class="txt">I fori in superficie</span></div><div class="mk mk-r" style="left:52%;top:42%"><span class="dot">2</span><span class="txt">Le cripte</span></div><div class="mk mk-r" style="left:57%;top:79%"><span class="dot">3</span><span class="txt">Il tonsillolite</span></div></div>
+<figcaption>Quello che vedi allo specchio sono solo i fori in superficie. Il canale continua sotto, e si ramifica.</figcaption></figure>
+<div class="step"><div class="step-n">Secondo</div>
+<h4>Là dentro non arriva aria.</h4>
+<p>Nel 2009 dei ricercatori hanno infilato microelettrodi dentro tonsilloliti veri, per misurare l'ossigeno.</p></div>
+<figure class="fig">
+<div class="fig-h">Ingrandimento 2 · dentro una cripta</div>
+<div class="fig-i"><img src="{{ 'freos-lp2-04.webp' | asset_url }}" alt="Sezione di una cripta tonsillare, dal chiaro in superficie al buio in fondo" loading="lazy"><div class="mk mk-r" style="left:50%;top:20%"><span class="dot">1</span><span class="txt">Imboccatura · aria</span></div><div class="mk mk-r" style="left:50%;top:82%"><span class="dot">2</span><span class="txt">Fondo · niente aria</span></div></div>
+<figcaption>Il buio in fondo non è un effetto grafico. È la quantità di ossigeno che ci arriva.</figcaption></figure>
+<div class="stat"><div class="stat-v">Un decimo.</div>
+<p>Al centro del tonsillolite, l'ossigeno era un decimo di quello del liquido sopra. In un punto della tua bocca, a pochi centimetri dall'aria aperta.</p>
+<div class="s">Stoodley et al., Otolaryngol Head Neck Surg, 2009</div></div>
+<div class="step"><div class="step-n">Terzo</div>
+<h4>In un posto senza aria cresce solo una cosa.</h4>
+<p>I batteri anaerobi. Quelli che non sopportano l'ossigeno, e che ovunque altro nella tua bocca non riuscirebbero a vivere.</p>
+<p>Uno studio del 2006 ha analizzato la flora di sei tonsilloliti. In <strong>tutti e sei</strong> c'erano batteri produttori di composti solforati — fino alla metà delle colonie.</p>
+<p>Quei composti si chiamano idrogeno solforato e metilmercaptano. Sono gli stessi dell'uovo marcio.</p>
+<p>E non è una pietra. È una colonia viva, a strati, costruita come la placca sui denti.</p></div>
+<figure class="plate"><img src="{{ 'freos-lp2-05.webp' | asset_url }}" alt="Struttura stratificata della colonia batterica" loading="lazy">
+<figcaption>La struttura interna al microscopio: filamenti e cocci disposti a strati. Non un sasso — un organismo.</figcaption></figure>
+<div class="step"><div class="step-n">Quarto — ed è qui che tutto cambia</div>
+<h4>I composti non restano nella pietra.</h4>
+<p>Lo stesso studio lo scrive: <strong>il rilascio avviene quando il tonsillolite viene schiacciato.</strong></p>
+<p>Tu deglutisci circa ottocento volte al giorno. Mangi. Parli. Tossisci.</p></div>
+<figure class="fig">
+<div class="fig-h">Ingrandimento 3 · quando deglutisci</div>
+<div class="fig-i"><img src="{{ 'freos-lp2-06.webp' | asset_url }}" alt="Il tonsillolite compresso libera composti solforati verso la cavità orale" loading="lazy"><div class="mk mk-r" style="left:50%;top:22%"><span class="dot">1</span><span class="txt">I composti salgono</span></div><div class="mk mk-r" style="left:50%;top:66%"><span class="dot">2</span><span class="txt">La pietra viene schiacciata</span></div></div>
+<figcaption>Ottocento volte al giorno. A ogni compressione, quello che c'è dentro esce.</figcaption></figure>
+<h3>Adesso rileggi la lista di tutto quello che hai provato.</h3>
+<div class="grave">
+<div class="gr"><div class="gw">Il collutorio</div><div class="gy">Lavora sulle superfici esposte. La cripta è una tasca chiusa — <em>è la sua definizione.</em></div></div>
+<div class="gr"><div class="gw">Spazzolino e filo</div><div class="gy">Trattano i denti. Il posto è dieci centimetri più indietro.</div></div>
+<div class="gr"><div class="gw">Il raschietto</div><div class="gy">Lavora sulla lingua. <em>Piano giusto, piano sbagliato.</em></div></div>
+<div class="gr"><div class="gw">Le mentine</div><div class="gy">Coprono quindici minuti una produzione che non si ferma mai.</div></div>
+<div class="gr"><div class="gw">I gargarismi</div><div class="gy">Trenta secondi di liquido sull'imboccatura di una cavità ramificata.</div></div>
+<div class="gr hot"><div class="gw">Il cotton fioc</div><div class="gy">Il gesto che fai da anni davanti allo specchio. Quello che ti fa venire da vomitare, quello che a volte ti fa sanguinare. <strong>Quel gesto schiaccia.</strong> <em>Il rimedio che hai usato più a lungo è quello che libera di più.</em></div></div>
+</div>
+<p>Non hai sbagliato niente. Hai pulito tutto quello che si può pulire.</p>
+<div class="pull">Non è la tua igiene.<br>È un posto dove l'aria non arriva.</div>
+</section>
+<section>
+<h2>«Ma io in gola <em>non ho mai visto niente.»</em></h2>
+<p>Lo pensavo anch'io quella sera, con la torcia del telefono a due centimetri dallo specchio.</p>
+<p>Su una serie di quasi tremila TAC del collo, i tonsilloliti comparivano in circa <strong>quattro persone su dieci</strong>. Quasi sempre senza che il paziente lo sapesse.</p>
+<p>Guarda di nuovo il secondo schema. La cripta è un canale che scende e si ramifica. Quello che ci sta dentro non è in vetrina: è in fondo a un tubo, dietro una piega di tessuto.</p>
+<p>E molti escono da soli. Ne inghiotti senza accorgertene, mentre mangi, mentre dormi.</p>
+<p>Non li vedi mai. Li senti — il sapore in fondo alla gola, quella cosa ferma quando deglutisci, come un capello che non va giù.</p>
+<p><strong>Non vedere niente non è una risposta. È solo la profondità del posto.</strong></p>
+<div class="quote"><p>«Non riesco a vederli, ma so che ci sono, perché li sento nel sapore.»</p><div class="w">Dal materiale raccolto per questo articolo</div></div>
+</section>
+<section>
+<h2>La prova che mi ha convinto <em>non è uno studio sui rimedi.</em></h2>
+<p>È uno studio su chi le tonsille se le è fatte togliere.</p>
+<p>Nel 2017 hanno misurato i composti solforati nel respiro di pazienti con tonsillite cronica, prima dell'intervento e dopo. Non un questionario: una misura con il gascromatografo.</p>
+<div class="stat"><div class="stat-v">Tolte le tonsille, i valori scendono.</div>
+<p>Idrogeno solforato, metilmercaptano e dimetilsolfuro risultavano significativamente più bassi a due settimane dall'intervento. Tutti i pazienti che avevano alito pesante prima risultavano migliorati dopo.</p>
+<p>È un campione piccolo. Ma è la direzione che conta: <strong>togli la fonte, scendono i composti.</strong> Non è una correlazione. È una sottrazione.</p>
+<div class="s">Cho et al., Clin Exp Otorhinolaryngol, 2017 · 8 pazienti con alitosi preoperatoria</div></div>
+<p>Quando ho letto quella riga ho smesso di chiedermi se il collegamento fosse reale. La domanda è diventata un'altra: e se non voglio farmi operare?</p>
+</section>
+<section>
+<h2>Per due mesi ho cercato <em>come svuotare una cripta.</em></h2>
+<p>La risposta onesta è: non da casa.</p>
+<p>L'otorino ha gli strumenti — la criptolisi, in certi casi l'intervento. Costa, si aspetta, e a molti viene detto di lasciar perdere perché «non è pericoloso».</p>
+<p>A me lo hanno detto. Probabilmente è vero. Non è pericoloso.</p>
+<p>È solo che io lavoro a trenta centimetri dalla faccia della gente.</p>
+<p class="solo">Così ho smesso di guardare dove entra. E ho guardato da dove esce.</p>
+<p>Perché il quarto punto dice una cosa che nessuno sfrutta. I composti non restano là sotto: vengono rilasciati <strong>nella tua bocca</strong>.</p>
+<p>La pietra sta in un posto irraggiungibile. Ma quello che produce passa tutto da un punto solo — e quel punto lo raggiungi ogni sera.</p>
+<figure class="fig">
+<div class="fig-h">Le due zone · dove si può agire e dove no</div>
+<div class="fig-i"><img src="{{ 'freos-lp2-07.webp' | asset_url }}" alt="Le due zone: cavità orale raggiungibile, cripta irraggiungibile" loading="lazy"><div class="mk mk-r" style="left:50%;top:18%"><span class="dot">1</span><span class="txt">Cavità orale — qui si arriva</span></div><div class="mk mk-r" style="left:50%;top:74%"><span class="dot">2</span><span class="txt">La cripta — qui no</span></div></div>
+<figcaption>Nessun prodotto da banco entra nella cripta. Ma tutto quello che ne esce passa da sopra.</figcaption></figure>
+<div class="pull">Non serve entrare nella cripta.<br>Serve tenere l'uscita.</div>
+<p>E per tenere l'uscita esiste una chimica precisa, studiata da trent'anni: <strong>lo zinco</strong>.</p>
+<p>Gli ioni di zinco legano i composti solforati. Non li coprono: li legano. E un composto legato non è più volatile — cioè non arriva più al naso di nessuno.</p>
+<p>Il meccanismo è vecchio e solido. Il problema è come il mercato lo usa: lo mette in un collutorio. Trenta secondi di contatto, poi lo sputi.</p>
+<p>Tu hai una cripta che produce ventiquattro ore su ventiquattro.</p>
+<p><strong>Non è il principio a essere sbagliato. È la durata.</strong></p>
+</section>
+<section>
+<h2>Si chiama <em>FREOS.</em></h2>
+<figure class="prod"><img src="{{ 'freos-lp2-08.webp' | asset_url }}" alt="FREOS Breath Freshness Herbal Gel" loading="lazy"><figcaption>Due misurini la sera. Nient'altro.</figcaption></figure>
+<p>È un gel. Due misurini la sera, dopo aver lavato i denti. Lo lasci sciogliere in bocca, deglutisci, vai a dormire.</p>
+<p>Dentro c'è <strong>zinco</strong> — l'ingrediente che lega i composti solforati — in un formato che resta in bocca invece di essere sputato dopo mezzo minuto. E sette estratti vegetali, dichiarati uno per uno con le loro dosi in etichetta.</p>
+<h3>Adesso la parte che preferisco dirti subito.</h3>
+<div class="note"><div class="note-t">Quello che FREOS non fa</div><ul>
+<li>Non tocca le tonsille.</li><li>Non scioglie i tonsilloliti.</li>
+<li>Non entra nella cripta — e nessun prodotto da banco può farlo.</li><li>Non sostituisce l'otorino.</li></ul></div>
+<p>Se hai dolore, difficoltà a deglutire, febbre, mal d'orecchio o una tonsilla visibilmente più grossa dell'altra, <strong>l'otorino viene prima di qualunque gel.</strong></p><div class="note" style="background:rgba(44,84,64,.055)"><div class="note-t">Il rischio è nostro, non tuo</div><p style="margin:0;font-size:15.5px;line-height:1.55;color:var(--ink2)">Trenta sere di prova. Se non ti dice niente, ti rimborsiamo — e il barattolo resta a te: non chiediamo indietro un prodotto che hai messo in bocca.</p></div>
+<p>FREOS lavora dove i composti arrivano. Non dove nascono. È tutto quello che fa — ed è esattamente il punto dove nessuno stava lavorando.</p><div class="cta-mid"><a href="{{ section.settings.cta_url }}">Riprenditi i trenta centimetri · 29,90 €</a><p>Un barattolo, trenta sere. Un mese di prova, rimborso senza reso.</p></div>
+</section>
+<section>
+<div class="ps">
+<h3>La storia di chi <em>non ci credeva.</em></h3>
+<p class="sub">Questo spazio è riservato al primo racconto completo di un cliente: trenta sere, dall'inizio alla fine, raccolto e verificato. Non lo riempiamo finché non ce l'abbiamo.</p>
+<div class="slot"><div class="slot-h"><span class="slot-t">PROOF STORY</span><span class="slot-o">arco scettico → convinto, prima persona, 350–450 parole</span></div><p class="slot-b"><b>Ce qu'il faut obtenir de la personne, dans cet ordre :</b> la scène de départ (le moment précis où elle a arrêté de chercher) · pourquoi elle n'y croyait pas en commandant · ce qu'elle a remarqué en premier, et quand · le signal externe si quelqu'un lui a dit quelque chose · ce qu'elle ferait différemment.</p><ul><li>Le scepticisme initial doit être explicite et daté — sans lui, le lecteur rejette toute la page</li><li>Le premier signal doit être quelque chose qu'elle pouvait observer : le goût au réveil, pas l'odeur</li><li>Nom complet + ville + âge, et son accord écrit pour la publication</li><li>Si elle a une photo d'elle, elle vaut plus que trois paragraphes</li></ul><div class="slot-id">slot_proof_01 · à remplir après le seeding</div></div>
+</div>
+<h2>Non sei l'unico <em>con la torcia del telefono accesa.</em></h2>
+<p>FREOS è nuovo in Italia. Recensioni verificate da mostrarti non ce ne sono ancora, e non ne inventeremo.</p>
+<p>Ma per scrivere questo ho letto centinaia di messaggi, in tre lingue, quasi tutti anonimi.</p>
+<p>Uno ha cinquantotto anni e ha scritto in maiuscolo: <em>possibile che sia l'unico a non averne mai sentito parlare? Perché il mio dentista non me lo ha mai detto?</em></p>
+<p>Uno le toglie da quando era bambino e ha scoperto il nome a trent'anni.</p>
+<p>Uno ha scritto: <em>i colleghi si scostano sempre, ma io in gola non vedo niente, devono essere nascosti.</em></p>
+<p>E uno, dopo aver elencato otto rimedi provati, ha chiuso così: <em>niente. L'unica cosa che mi fa stare tranquillo in mezzo alla gente è masticare chewing gum a raffica.</em></p>
+<p><strong>Siamo tanti. Ci riconosciamo da una cosa sola: nessuno ce lo ha mai spiegato.</strong></p><div class="cta-mid"><a href="{{ section.settings.cta_url }}">Riprenditi i trenta centimetri · 29,90 €</a><p>Un barattolo, trenta sere. Un mese di prova, rimborso senza reso.</p></div>
+</section>
+<section>
+<h2>La cosa più pesante <em>non è mai stata la pallina.</em></h2>
+<p>Nel mio lavoro la distanza non si sceglie. Una cervicale la tratti da vicino, oppure non la tratti.</p>
+<p>Per anni ho gestito quella distanza con micro-decisioni che nessuno vedeva. Parlare girando leggermente la testa. Finire la frase prima di avvicinarmi. Tenere la mentina sotto la lingua durante la seduta.</p>
+<p>Nessuna di quelle cose ero io. Era un lavoro in più, silenzioso, sopra il lavoro vero.</p>
+<div class="pull">Non volevo l'alito fresco.<br>Volevo smettere di calcolare.</div>
+</section>
+<section>
+<div class="ps">
+<h3>Le cinque obiezioni <em>che fermano tutti.</em></h3>
+<p class="sub">Une objection par témoignage, un avatar différent à chaque fois, pour que chaque lecteur se reconnaisse dans au moins un. Emplacements prêts, contenus à venir.</p>
+<div class="obj-g">
+<div><p class="obj-q">«Ho già provato di tutto, perché questo dovrebbe funzionare?»</p><div class="slot"><div class="slot-h"><span class="slot-t">OBIEZIONE 1</span><span class="slot-o">le graveyard — la plus fréquente du corpus</span></div><p class="slot-b">Témoignage de quelqu'un qui liste ce qu'il avait déjà essayé <b>avant</b> de dire ce qui a changé. L'ordre compte : la liste d'abord, le résultat ensuite.</p><ul><li>Avatar : 35–50 ans, dix ans ou plus de problème</li><li>Doit nommer au moins trois produits concurrents</li></ul><div class="slot-id">slot_obj_01</div></div></div>
+<div><p class="obj-q">«Io in gola non ho mai visto niente.»</p><div class="slot"><div class="slot-h"><span class="slot-t">OBIEZIONE 2</span><span class="slot-o">le segment le plus large</span></div><p class="slot-b">Témoignage de quelqu'un qui n'a <b>jamais</b> vu de tonsillolithe et qui a quand même trouvé un intérêt au geste du soir. C'est le seul qui parle aux 60 % qui n'ont rien à vérifier.</p><ul><li>Avatar : différent du 1 — plus jeune, ou l'autre sexe</li><li>Ne doit pas prétendre à un diagnostic</li></ul><div class="slot-id">slot_obj_02</div></div></div>
+<div><p class="obj-q">«Il mio dentista dice che va tutto bene.»</p><div class="slot"><div class="slot-h"><span class="slot-t">OBIEZIONE 3</span><span class="slot-o">l'autorité qui a déjà dit non</span></div><p class="slot-b">Témoignage de quelqu'un dont le dentiste ou l'ORL avait dit que tout allait bien. Doit rester respectueux du praticien — c'est le bon site regardé au mauvais étage, pas une erreur.</p><ul><li>Avatar : profil plutôt analytique</li><li>Jamais de mise en cause d'un professionnel nommé</li></ul><div class="slot-id">slot_obj_03</div></div></div>
+<div><p class="obj-q">«Appena smetto, torna tutto come prima.»</p><div class="slot"><div class="slot-h"><span class="slot-t">OBIEZIONE 4</span><span class="slot-o">la peur de la dépendance au produit</span></div><p class="slot-b">Témoignage à 60–90 jours. C'est le seul qui a besoin de recul : il ne peut pas venir du premier lot de seeding.</p><ul><li>Avatar : utilisateur long, deuxième ou troisième pot</li><li>À collecter en vague 2, pas en vague 1</li></ul><div class="slot-id">slot_obj_04</div></div></div>
+<div style="grid-column:1/-1"><p class="obj-q">«Come faccio a sapere se funziona, se non posso sentirmi?»</p><div class="slot"><div class="slot-h"><span class="slot-t">OBIEZIONE 5</span><span class="slot-o">l'objection structurelle de ce marché</span></div><p class="slot-b">La plus importante des cinq, et la plus dure à obtenir. Il faut quelqu'un qui raconte <b>le signal externe</b> : le collègue qui ne recule plus, le partenaire qui ne dit rien mais se rapproche. Jamais promis dans la copy — seulement rapporté par celui qui l'a vécu.</p><ul><li>Avatar : métier de contact rapproché</li><li>C'est la seule preuve externe qui existe sur ce marché — à prioriser dans les relances de seeding</li></ul><div class="slot-id">slot_obj_05</div></div></div>
+</div>
+</div>
+<div class="anc" style="border-top:none;padding-top:0">
+<h3>Quanto costa <em>l'altra strada</em></h3>
+<p class="lead">Non per dirti di non farla. Per darti i numeri, perché nessuno te li mette in fila.</p>
+<div class="anc-r"><div class="anc-l">Tonsillectomia in libera professione<small>secondo il centro e la tecnica, più la visita specialistica</small></div><div class="anc-v">2.400 – 6.000 €</div></div>
+<div class="anc-r"><div class="anc-l">Recupero dopo l'intervento<small>anestesia generale, una notte di ricovero</small></div><div class="anc-v">10 – 14 giorni</div></div>
+<div class="anc-r"><div class="anc-l">Nel servizio pubblico<small>coperta, quando c'è l'indicazione clinica e quando arriva il tuo turno</small></div><div class="anc-v">lista d'attesa</div></div>
+<div class="anc-r"><div class="anc-l">Dieci anni di collutori, mentine, raschietti<small>quello che hai già speso senza contarlo</small></div><div class="anc-v">fallo tu il conto</div></div>
+<div class="anc-r us"><div class="anc-l">FREOS · un barattolo, trenta sere<small>meno di un euro al giorno</small></div><div class="anc-v">29,90 €</div></div>
+<div class="anc-note">E adesso la parte onesta: <b>non fanno la stessa cosa.</b> L'intervento toglie le tonsille. FREOS no — non le tocca, non scioglie i tonsilloliti, non entra nella cripta.<br><br>Se hai l'indicazione per operarti, operati. Se invece ti hanno detto di lasciar perdere perché «non è pericoloso», adesso sai che esiste un'altra cosa da fare la sera.</div>
+<div class="anc-src">Tariffe di riferimento: AOU Careggi, libera professione (3.500–6.000 €) · Tariffario IRCCS Burlo Garofolo 2023 (2.445 € tonsillectomia, 3.423 € intracapsulare) · Tempi di recupero: 10–14 giorni. Le tariffe variano per struttura e regione.</div>
+<div class="cta-mid"><a href="{{ section.settings.cta_url }}">Riprenditi i trenta centimetri · 29,90 €</a><p>Composizione completa e garanzia sulla pagina del prodotto.</p></div>
+</div>
+<h2 style="margin-top:44px">Quello che puoi fare stasera, <em>anche senza comprare niente.</em></h2>
+<p>Questo articolo esiste perché nessuno mi ha dato una parola che avrei potuto cercare dieci anni prima. Adesso ce l'hai.</p>
+<p><strong>La prima cosa è gratis.</strong> Se hai uno dei segnali d'allarme qui sopra, prendi appuntamento. Se non ne hai, sai almeno dove guardare e come si chiama — ed è più di quanto avessi io a quarant'anni.</p>
+<p><strong>La seconda, se vuoi.</strong> Il gesto della sera esiste. La pagina del prodotto dice tutto: formula completa, dosi, prezzo, garanzia. Non lo metto qui perché qui non è il posto.</p>
+<div class="cta">
+<div class="cta-h">La cripta resta.<br>Quello che ne esce, no.</div>
+<div class="cta-p">29,90 € il barattolo — trenta sere. Composizione completa, dosi e garanzia sulla pagina del prodotto.</div>
+<a href="{{ section.settings.cta_url }}">Riprenditi i trenta centimetri · 29,90 €</a>
+<div class="cta-s">Nessun abbonamento nascosto. Nessun conto alla rovescia.</div></div>
+<div class="faq">
+<div class="fq"><div class="fq-q">FREOS fa sparire i tonsilloliti?</div><div class="fq-a">No. Non tocca le tonsille e non entra nelle cripte. Per quelli c'è l'otorino.</div></div>
+<div class="fq"><div class="fq-q">Non ne ho mai visto uno. Ha senso lo stesso?</div><div class="fq-a">Nella maggior parte dei casi non si vedono. Ma sii chiaro con te stesso: FREOS è un gesto serale, non un test diagnostico. Se vuoi sapere se ne hai, serve l'otorino.</div></div>
+<div class="fq"><div class="fq-q">Che sapore ha?</div><div class="fq-a">Gel denso alla menta, con un fondo vegetale. Non è dolce. Se non sopporti la menta, non fa per te.</div></div>
+<div class="fq"><div class="fq-q">Si inghiotte?</div><div class="fq-a">Sì. Due misurini, lo lasci sciogliere, poi deglutisci.</div></div>
+<div class="fq"><div class="fq-q">Posso continuare a toglierli col cotton fioc?</div><div class="fq-a">È una domanda da fare all'otorino. Quello che dicono gli studi è che la compressione libera i composti, e che la mucosa lì è delicata.</div></div>
+</div>
+<div class="whisper">
+<p>Se stasera non fai niente, va bene lo stesso. La cripta c'era ieri e ci sarà domani, e questa pagina pure.</p>
+<p>Ma la prossima volta che tossisci qualcosa nella mano, almeno saprai come si chiama.</p>
+<p style="color:var(--ink2);font-style:normal;margin-top:18px">— Davide</p></div>
+<div class="src"><div class="src-t">Fonti</div><ol>
+<li>Stoodley P. et al. <em>Tonsillolith: not just a stone but a living biofilm.</em> Otolaryngol Head Neck Surg, 2009;141(3):316-21.</li>
+<li>Tsuneishi M. et al. <em>Composition of the bacterial flora in tonsilloliths.</em> Microbes Infect, 2006;8(9-10):2384-9.</li>
+<li>Takahashi A. et al. <em>Prevalence and imaging characteristics of palatine tonsilloliths detected by CT in 2,873 consecutive patients.</em> ScientificWorldJournal, 2014.</li>
+<li>Cho S.Y. et al. <em>Assessment of volatile sulfur compounds in adult and pediatric chronic tonsillitis patients receiving tonsillectomy.</em> Clin Exp Otorhinolaryngol, 2017.</li>
+<li>Rio A.C. et al. <em>Relationship between the presence of tonsilloliths and halitosis in patients with chronic caseous tonsillitis.</em> Br Dent J, 2008;204(2):E4.</li>
+<li>Quirynen M. et al. <em>Characteristics of 2000 patients who visited a halitosis clinic.</em> J Clin Periodontol, 2009;36(11):970-5.</li>
+</ol></div>
+</section>
+</div>
+<footer><div class="fi">
+<p><strong style="color:#E8E3D2">Nota per chi legge.</strong> Racconto in prima persona, con contenuti sponsorizzati dal produttore di FREOS. Le fonti citate, i limiti dichiarati del prodotto e il rinvio allo specialista restano indipendenti dallo sponsor.</p>
+<p>Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di dolore, difficoltà a deglutire, febbre, mal d'orecchio o asimmetria delle tonsille, rivolgersi al proprio medico o a un otorinolaringoiatra.</p>
+<p>Il nome dell'autore è stato modificato su sua richiesta. Illustrazioni mediche realizzate per questo articolo.</p>
+<div class="fl">© 2026 · <a href="#privacy">Privacy</a> · <a href="#cookie">Cookie</a> · <a href="#note">Note legali</a></div>
+</div></footer>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS · LP Cripta",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Destination des CTA"
+    },
+    {
+      "type": "text",
+      "id": "cta_url",
+      "label": "Lien des boutons",
+      "default": "/products/gel-notturno-micro-aderente-allo-zinco",
+      "info": "Tous les boutons de la page pointent ici."
+    }
+  ]
+}
+{% endschema %}

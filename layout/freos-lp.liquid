@@ -1,0 +1,57 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LAYOUT DES LANDING PAGES
+  ----------------------------------------------------------------------------
+  Layout nu, partage par les 3 LP. Reprend le principe de Rosalia, dont
+  l'advertorial notait : « loaded by layout/full-page.liquid ».
+
+  Ce qu'il ne contient PAS, volontairement : le header du site, le footer, le
+  cart drawer, le search drawer, et tout le JS d'Impact. Une advertorial doit
+  se lire comme une page editoriale autonome, pas comme une page de boutique.
+
+  Ce qu'il contient obligatoirement : {{ content_for_header }}, sans quoi
+  Shopify ne peut ni mesurer ni injecter ses scripts.
+
+  Les LP portent leur propre CSS complet (reset compris) dans leur section :
+  on ne charge donc PAS assets/freos.css ici, ce serait 46 Ko inutilises. La
+  congruence DA vient du CSS de la LP elle-meme.
+  ============================================================================
+{%- endcomment -%}
+
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+    <title>{% if page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% endif %}</title>
+
+    {%- if page_description -%}
+      <meta name="description" content="{{ page_description | escape }}">
+    {%- endif -%}
+
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    {%- if settings.favicon -%}
+      <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 96 }}">
+    {%- endif -%}
+
+    <link rel="preconnect" href="https://cdn.shopify.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700&family=Inter:wght@400;500;600;700&display=swap">
+
+    {%- comment -%}
+      Une LP qui a besoin d'autres familles (LP1 tourne sur Playfair Display et
+      Source Serif 4) les declare elle-meme dans sa section.
+    {%- endcomment -%}
+
+    {{ content_for_header }}
+  </head>
+
+  <body class="freos-lp">
+    {{ content_for_layout }}
+  </body>
+</html>
