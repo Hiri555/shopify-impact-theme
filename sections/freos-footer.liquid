@@ -1,0 +1,140 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · FOOTER
+  ----------------------------------------------------------------------------
+  Construit d'apres FREOS_MD-PAGES.md 7.1 (structure) et 7.2 (DA).
+
+  Le layout appelait deja {% sections 'footer-group' %} mais le fichier
+  n'existait pas : le site n'avait aucun footer. Cette section le cree, sans
+  toucher a sections/footer.liquid, qui reste disponible.
+
+  DA imposee par 7.2 : fond creme, filets #E3DDCD, titres de colonne en vert,
+  mentions legales a 12,5px minimum. Un fond sombre plein y est interdit.
+
+  Les identifiants de DINSO VENTURES LLC sont des reglages, pas du code : ils
+  restent visibles en placeholder tant qu'ils ne sont pas connus.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="fr fr-footer">
+  <div class="wide">
+
+    {%- if section.settings.show_newsletter -%}
+      <div class="fr-footer-news">
+        <p class="fr-footer-k">{{ section.settings.news_kicker }}</p>
+        <p class="fr-footer-news-line">{{ section.settings.news_line }}</p>
+        {%- form 'customer', class: 'fr-footer-form' -%}
+          <input type="hidden" name="contact[tags]" value="newsletter">
+          <label class="visually-hidden" for="fr-footer-email">{{ section.settings.news_placeholder }}</label>
+          <div class="fr-news-row">
+            <input id="fr-footer-email" type="email" name="contact[email]"
+                   placeholder="{{ section.settings.news_placeholder }}" required>
+            <button type="submit">{{ section.settings.news_button }}</button>
+          </div>
+          {%- if form.posted_successfully? -%}
+            <p class="fr-news-ok">{{ section.settings.news_success }}</p>
+          {%- endif -%}
+          {%- if form.errors -%}
+            <p class="fr-news-err">{{ form.errors | default_errors }}</p>
+          {%- endif -%}
+        {%- endform -%}
+        <p class="fr-footer-consent">{{ section.settings.news_consent }}</p>
+      </div>
+    {%- endif -%}
+
+    <div class="fr-footer-grid">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'column' -%}
+          <nav class="fr-footer-col" {{ block.shopify_attributes }}>
+            <p class="fr-footer-k">{{ block.settings.title }}</p>
+            {%- assign links = block.settings.links | newline_to_br | split: '<br />' -%}
+            {%- for l in links -%}
+              {%- assign c = l | strip | split: '|' -%}
+              {%- if c.size >= 1 and c[0] != blank -%}
+                <a href="{{ c[1] | default: '#' | strip }}">{{ c[0] | strip }}</a>
+              {%- endif -%}
+            {%- endfor -%}
+          </nav>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
+
+    <div class="fr-footer-legal">
+      <p class="fr-footer-id">
+        <b>{{ section.settings.ragione_sociale }}</b>
+        {%- if section.settings.indirizzo != blank %} &middot; {{ section.settings.indirizzo }}{% endif -%}
+        {%- if section.settings.riferimento_fiscale != blank %} &middot; {{ section.settings.riferimento_fiscale }}{% endif -%}
+        {%- if section.settings.numero_rea != blank %} &middot; REA {{ section.settings.numero_rea }}{% endif -%}
+        {%- if section.settings.email != blank %} &middot; {{ section.settings.email }}{% endif -%}
+      </p>
+
+      <p class="fr-footer-warn">{{ section.settings.avvertenze_integratore }}</p>
+
+      {%- if section.settings.avvertenze_te_verde != blank -%}
+        <p class="fr-footer-warn">
+          {{ section.settings.avvertenze_te_verde }}
+          {%- if section.settings.ingredienti_url != blank %}
+            <a href="{{ section.settings.ingredienti_url }}">{{ section.settings.ingredienti_label }}</a>
+          {%- endif -%}
+        </p>
+      {%- endif -%}
+
+      <p class="fr-footer-odr">
+        {{ section.settings.odr_text }}
+        <a href="{{ section.settings.odr_url }}" rel="noopener" target="_blank">{{ section.settings.odr_url }}</a>
+      </p>
+
+      <p class="fr-footer-copy">{{ section.settings.copyright }}</p>
+    </div>
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS · Footer",
+  "tag": "footer",
+  "class": "freos-footer-section",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "header", "content": "Newsletter" },
+    { "type": "checkbox", "id": "show_newsletter", "label": "Afficher", "default": true },
+    { "type": "text", "id": "news_kicker", "label": "Sur-titre", "default": "Resta aggiornato" },
+    { "type": "text", "id": "news_line", "label": "Phrase", "default": "Ti scriviamo quando c’è qualcosa di utile da leggere. Niente altro." },
+    { "type": "text", "id": "news_placeholder", "label": "Placeholder", "default": "La tua email" },
+    { "type": "text", "id": "news_button", "label": "Bouton", "default": "Iscriviti" },
+    { "type": "text", "id": "news_success", "label": "Succes", "default": "Fatto. Ti abbiamo aggiunto alla lista." },
+    { "type": "richtext", "id": "news_consent", "label": "Consentement" },
+
+    { "type": "header", "content": "Identification du vendeur" },
+    { "type": "text", "id": "ragione_sociale", "label": "Raison sociale", "default": "DINSO VENTURES LLC" },
+    { "type": "text", "id": "indirizzo", "label": "Adresse", "default": "[INDIRIZZO_COMPLETO]" },
+    { "type": "text", "id": "riferimento_fiscale", "label": "Reference fiscale", "default": "[RIFERIMENTO_FISCALE]" },
+    { "type": "text", "id": "numero_rea", "label": "Numero REA", "default": "[NUMERO_REA]" },
+    { "type": "text", "id": "email", "label": "E-mail", "default": "[EMAIL_GENERALE]" },
+
+    { "type": "header", "content": "Mentions obligatoires" },
+    { "type": "textarea", "id": "avvertenze_integratore", "label": "Avertissements complement",
+      "default": "Integratore alimentare. Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano. Non superare la dose giornaliera consigliata. Tenere fuori dalla portata dei bambini al di sotto dei tre anni. Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento." },
+    { "type": "textarea", "id": "avvertenze_te_verde", "label": "Avertissement the vert",
+      "default": "[AVVERTENZE_TE_VERDE]" },
+    { "type": "url", "id": "ingredienti_url", "label": "Lien page Ingredienti" },
+    { "type": "text", "id": "ingredienti_label", "label": "Libelle du lien", "default": "Leggi la pagina Ingredienti e sicurezza" },
+    { "type": "text", "id": "odr_text", "label": "Texte ODR",
+      "default": "Piattaforma europea di risoluzione delle controversie online (ODR):" },
+    { "type": "text", "id": "odr_url", "label": "URL ODR", "default": "https://ec.europa.eu/consumers/odr" },
+    { "type": "text", "id": "copyright", "label": "Copyright", "default": "© FREOS — DINSO VENTURES LLC" }
+  ],
+  "blocks": [
+    {
+      "type": "column",
+      "name": "Colonne de liens",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Titre" },
+        { "type": "textarea", "id": "links", "label": "Liens", "info": "Une par ligne : Libelle | URL" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "FREOS · Footer" }]
+}
+{% endschema %}
