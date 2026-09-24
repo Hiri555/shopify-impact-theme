@@ -22,7 +22,7 @@
 -%}
 
 <div
-  class="fr fr-editorial fr-surface--{{ section.settings.surface }}"
+  class="fr fr-editorial fr-surface--{{ section.settings.surface }}{% if section.settings.reading %} fr-page{% endif %}"
   style="--fr-pad-top:{{ section.settings.padding_top }}px;--fr-pad-bottom:{{ section.settings.padding_bottom }}px;"
 >
   <div class="{{ width_class }}">
@@ -267,6 +267,8 @@
       ],
       "default": "narrow"
     },
+    { "type": "checkbox", "id": "reading", "label": "Page de lecture", "default": false,
+      "info": "Interligne 1,68 et titres en vert fonce — pour les pages secondaires et les policies." },
     { "type": "range", "id": "padding_top", "label": "Espace au-dessus", "min": 0, "max": 140, "step": 4, "unit": "px", "default": 40 },
     { "type": "range", "id": "padding_bottom", "label": "Espace en dessous", "min": 0, "max": 140, "step": 4, "unit": "px", "default": 40 }
   ],
