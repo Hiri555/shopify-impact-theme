@@ -1,0 +1,186 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · PDP 08 — FREOS · 08 Percorso
+  ----------------------------------------------------------------------------
+  Jalons relies par un filet. Sert aussi bien au rituel du soir en trois
+  gestes qu'a un parcours sur trente jours : c'est le meme composant.
+  Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur
+  dans ce fichier. Genere par build_pdp_sections.py -- modifier le generateur,
+  pas ce fichier, sinon la prochaine generation ecrase la retouche.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="fr fr-pdp fr-pdp--journey fr-surface--{{ section.settings.surface }}"
+     style="--fr-pt:{{ section.settings.padding_top }}px;--fr-pb:{{ section.settings.padding_bottom }}px">
+  <div class="{{ section.settings.width }}">
+
+  {%- if section.settings.kicker != blank or section.settings.heading != blank
+        or section.settings.dek != blank -%}
+    <header class="fr-sh">
+      {%- if section.settings.kicker != blank -%}
+        <p class="chip">{{ section.settings.kicker }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="fr-h2">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.dek != blank -%}
+        <p class="fr-dek">{{ section.settings.dek }}</p>
+      {%- endif -%}
+    </header>
+  {%- endif -%}
+
+    <ol class="fr-jrn">
+      {%- for block in section.blocks -%}
+        <li class="fr-jrn-s" {{ block.shopify_attributes }}>
+          <span class="fr-jrn-d" aria-hidden="true"></span>
+          {%- if block.settings.badge != blank -%}
+            <span class="fr-jrn-b">{{ block.settings.badge }}</span>
+          {%- endif -%}
+          {%- if block.settings.title != blank -%}
+            <h3 class="fr-jrn-t">{{ block.settings.title }}</h3>
+          {%- endif -%}
+          {%- if block.settings.text != blank -%}
+            <p class="fr-jrn-x">{{ block.settings.text }}</p>
+          {%- endif -%}
+        </li>
+      {%- endfor -%}
+    </ol>
+
+    {%- if section.settings.foot != blank -%}
+      <div class="fr-rt fr-jrn-foot">{{ section.settings.foot }}</div>
+    {%- endif -%}
+
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS · 08 Percorso",
+  "tag": "section",
+  "class": "freos-pdp-journey",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Bas de section"
+    },
+    {
+      "type": "richtext",
+      "id": "foot",
+      "label": "Note de fin"
+    },
+    {
+      "type": "header",
+      "content": "En-tete"
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Sur-titre"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre",
+      "info": "<em>...</em> met un fragment en italique d'accent."
+    },
+    {
+      "type": "textarea",
+      "id": "dek",
+      "label": "Chapeau"
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "surface",
+      "label": "Fond",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "Blanc"
+        },
+        {
+          "value": "soft",
+          "label": "Sable"
+        },
+        {
+          "value": "softer",
+          "label": "Sable clair"
+        },
+        {
+          "value": "ink",
+          "label": "Encre"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Largeur",
+      "default": "narrow",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "Colonne de lecture"
+        },
+        {
+          "value": "wide",
+          "label": "Large"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Jalon",
+      "settings": [
+        {
+          "type": "text",
+          "id": "badge",
+          "label": "Reperage",
+          "info": "Uno, Giorno 3, Settimana 2..."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Texte"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS · 08 Percorso"
+    }
+  ]
+}
+{% endschema %}

@@ -854,3 +854,213 @@
   .fr .fr-sticky-bb{ flex:1 1 auto; }
   .fr .fr-sticky-b{ width:100%; }
 }
+
+/* ==========================================================================
+   PDP MODULAIRE · les douze sections
+   --------------------------------------------------------------------------
+   Rythme : 56-64 px de respiration verticale. Rayons de 2-3 px, jamais plus :
+   la DA FREOS est editoriale, pas bulleuse. Fraunces titre, Inter lit.
+   Tout enfant de grille porte min-width:0 -- sans quoi il refuse de se
+   reduire sous la largeur de son contenu et fait deborder la page a 390 px.
+   ========================================================================== */
+.fr-pdp{ padding:var(--fr-pt,56px) 0 var(--fr-pb,56px); }
+.fr-pdp .narrow{ max-width:720px; margin:0 auto; padding:0 20px; }
+.fr-pdp .wide{ max-width:1120px; margin:0 auto; padding:0 20px; }
+.fr-pdp--center{ text-align:center; }
+
+/* en-tete de section, partage par les douze */
+.fr .fr-sh{ margin:0 0 26px; }
+.fr .fr-dek{ font-size:16px; line-height:1.6; color:var(--ink2); margin:10px 0 0; max-width:56ch; }
+.fr-pdp--center .fr-sh{ margin-left:auto; margin-right:auto; }
+.fr-pdp--center .fr-dek{ margin-left:auto; margin-right:auto; }
+
+.fr .fr-ico{ width:22px; height:22px; display:block; color:var(--acc); }
+.fr .fr-sr{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+
+/* --------------------------------------------------------------- 01 PROMO */
+.fr-promo{ padding:0; border-bottom:1px solid var(--rule); }
+.fr .fr-promo-in{ display:flex; align-items:center; justify-content:center; flex-wrap:wrap;
+  gap:8px 16px; padding:10px 0; font-size:13px; }
+.fr .fr-promo-t{ color:var(--ink2); letter-spacing:.01em; }
+.fr .fr-promo-c{ display:inline-flex; align-items:center; gap:7px; }
+.fr .fr-promo-p{ color:var(--ink3); font-size:12px; }
+.fr .fr-promo-v{ font-variant-numeric:tabular-nums; font-weight:700; color:var(--acc);
+  background:var(--accl); padding:3px 8px; border-radius:2px; letter-spacing:.04em; }
+.fr .fr-promo-a{ color:var(--acc); font-weight:600; text-underline-offset:3px; }
+.fr.fr-surface--ink .fr-promo-t{ color:var(--soft); }
+.fr.fr-surface--ink .fr-promo-a{ color:#fff; }
+
+/* ------------------------------------------------------------ 03 BENEFICI */
+.fr .fr-bens{ display:grid; gap:20px; }
+.fr .fr-ben{ display:grid; grid-template-columns:44px 1fr; gap:16px; align-items:start; }
+.fr .fr-ben > *{ min-width:0; }
+.fr .fr-ben-i{ display:flex; align-items:center; justify-content:center; width:44px; height:44px;
+  border:1px solid var(--accl); background:var(--acclt); border-radius:2px; }
+.fr .fr-ben-i img{ width:26px; height:26px; object-fit:contain; display:block; }
+.fr .fr-ben-t{ font-family:Fraunces,serif; font-weight:500; font-size:19px; line-height:1.25;
+  color:var(--ink); margin:2px 0 5px; }
+.fr .fr-ben-d{ font-size:15px; line-height:1.6; color:var(--ink2); margin:0; }
+.fr.fr-surface--ink .fr-ben-i{ background:rgba(255,255,255,.06); border-color:rgba(255,255,255,.18); }
+.fr.fr-surface--ink .fr-ico{ color:var(--soft); }
+
+/* --------------------------------------------------------------- 04 STATS */
+.fr .fr-stats{ display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:28px; }
+.fr .fr-stat{ min-width:0; }
+.fr .fr-stat-v{ display:flex; align-items:baseline; gap:2px; margin:0 0 8px;
+  font-family:Fraunces,serif; font-weight:600; line-height:1;
+  font-size:clamp(40px,7vw,56px); letter-spacing:-.02em;
+  background:linear-gradient(135deg,var(--acc) 0%,#4E8060 70%);
+  -webkit-background-clip:text; background-clip:text; color:transparent; }
+.fr .fr-stat-u{ font-size:.55em; font-weight:500; }
+.fr .fr-stat-l{ font-size:15px; line-height:1.45; color:var(--ink); margin:0 0 6px; font-weight:500; }
+.fr .fr-stat-s{ font-size:12px; line-height:1.5; color:var(--ink3); margin:0;
+  padding-top:8px; border-top:1px solid var(--rule); }
+.fr.fr-surface--ink .fr-stat-v{ background:linear-gradient(135deg,#CFE3D2 0%,#8FB89A 70%);
+  -webkit-background-clip:text; background-clip:text; }
+.fr.fr-surface--ink .fr-stat-l{ color:var(--soft); }
+.fr.fr-surface--ink .fr-stat-s{ color:rgba(244,241,232,.62); border-top-color:rgba(255,255,255,.16); }
+
+/* ---------------------------------------------------------- 05 DIFFERENZA */
+.fr .fr-punch{ font-family:Fraunces,serif; font-style:italic; font-size:20px; line-height:1.35;
+  color:var(--acc); margin:26px 0 0; padding-top:18px; border-top:1px solid var(--rule); }
+.fr.fr-surface--ink .fr-punch{ color:#CFE3D2; border-top-color:rgba(255,255,255,.16); }
+
+/* La barre part de zero et se remplit quand la section entre dans le champ.
+   Sans JS la classe is-in n'arrive jamais : on donne donc la largeur finale
+   par defaut et on ne met a zero que pendant l'attente explicite. */
+.fr .fr-bars .fr-bar-v i{ transition:width .8s cubic-bezier(.22,1,.36,1); }
+.fr .fr-bars.is-wait .fr-bar-v i{ width:0; }
+
+/* ---------------------------------------------------------- 06 INGREDIENTI */
+.fr .fr-ing-n{ display:block; font-family:Fraunces,serif; font-weight:500; font-size:15px;
+  color:var(--ink); line-height:1.25; }
+.fr .fr-ing-d{ display:block; font:600 11px/1.3 Inter,sans-serif; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--acc); margin-top:3px; }
+.fr .fr-ing-r{ display:block; font-size:12.5px; line-height:1.45; color:var(--ink3); margin-top:4px; }
+
+/* -------------------------------------------------------------- 07 MOTIVI */
+.fr .fr-motivi{ list-style:none; margin:0; padding:0; display:grid; gap:26px; }
+.fr .fr-motivo{ display:grid; grid-template-columns:auto 1fr; gap:18px; align-items:start; }
+.fr .fr-motivo > *{ min-width:0; }
+.fr .fr-motivo-n{ font-family:Fraunces,serif; font-weight:600; font-size:38px; line-height:.9;
+  color:var(--rule2); letter-spacing:-.03em; font-variant-numeric:tabular-nums;
+  min-width:1.6ch; text-align:right; }
+.fr .fr-motivo-t{ font-family:Fraunces,serif; font-weight:500; font-size:20px; line-height:1.25;
+  color:var(--ink); margin:0 0 7px; }
+.fr .fr-motivo-b .fr-rt p{ margin:0 0 8px; }
+.fr.fr-surface--ink .fr-motivo-n{ color:rgba(244,241,232,.34); }
+.fr.fr-surface--ink .fr-motivo-t{ color:var(--soft); }
+
+/* ------------------------------------------------------------- 08 JOURNEY */
+.fr .fr-jrn{ list-style:none; margin:0; padding:0 0 0 30px; position:relative; }
+.fr .fr-jrn::before{ content:''; position:absolute; left:6px; top:7px; bottom:7px; width:1px;
+  background:var(--rule2); }
+.fr .fr-jrn-s{ position:relative; padding:0 0 26px; }
+.fr .fr-jrn-s:last-child{ padding-bottom:0; }
+.fr .fr-jrn-d{ position:absolute; left:-30px; top:5px; width:13px; height:13px; border-radius:50%;
+  background:#fff; border:2px solid var(--acc); box-sizing:border-box; }
+.fr .fr-jrn-b{ display:inline-block; font:600 11px/1 Inter,sans-serif; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--acc); background:var(--accl);
+  padding:5px 9px; border-radius:2px; margin:0 0 8px; }
+.fr .fr-jrn-t{ font-family:Fraunces,serif; font-weight:500; font-size:19px; line-height:1.25;
+  color:var(--ink); margin:0 0 5px; }
+.fr .fr-jrn-x{ font-size:15px; line-height:1.6; color:var(--ink2); margin:0; }
+.fr .fr-jrn-foot{ margin-top:22px; padding-top:16px; border-top:1px solid var(--rule); }
+.fr.fr-surface--ink .fr-jrn-d{ background:var(--ink); }
+.fr.fr-surface--ink .fr-jrn-t{ color:var(--soft); }
+.fr.fr-surface--ink .fr-jrn-x{ color:rgba(244,241,232,.78); }
+
+/* ----------------------------------------------------------- 09 CONFRONTO */
+/* Le tableau est le seul element autorise a defiler lateralement, et il le
+   fait dans son propre conteneur -- jamais le corps de la page. */
+.fr .fr-cmp-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.fr .fr-cmp{ width:100%; min-width:460px; border-collapse:collapse; text-align:left; }
+.fr .fr-cmp th, .fr .fr-cmp td{ padding:14px; border-bottom:1px solid var(--rule);
+  font-size:14.5px; line-height:1.45; vertical-align:top; }
+.fr .fr-cmp thead th{ font:600 11px/1.3 Inter,sans-serif; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink3); border-bottom-color:var(--rule2); padding-bottom:10px; }
+.fr .fr-cmp tbody th{ font-weight:600; color:var(--ink); white-space:nowrap; }
+.fr .fr-cmp tbody td{ color:var(--ink2); }
+.fr .fr-cmp-m{ display:inline-flex; width:17px; height:17px; margin-right:9px;
+  vertical-align:-3px; color:var(--rule2); }
+.fr .fr-cmp-m svg{ width:100%; height:100%; }
+.fr .fr-cmp tr.is-acc{ background:var(--acclt); }
+.fr .fr-cmp tr.is-acc th{ color:var(--acc); }
+.fr .fr-cmp tr.is-acc td{ color:var(--ink); }
+.fr .fr-cmp tr.is-acc .fr-cmp-m{ color:var(--acc); }
+
+/* ---------------------------------------------------------- 10 RECENSIONI */
+.fr .fr-reviews-src{ font-size:12px; color:var(--ink3); }
+.fr .fr-review-t{ font-family:Fraunces,serif; font-weight:500; font-size:17px; line-height:1.3;
+  color:var(--ink); margin:10px 0 7px; }
+.fr .fr-review-b{ font-size:14.5px; line-height:1.6; color:var(--ink2); margin:0 0 14px; }
+.fr .fr-review-f{ display:flex; align-items:center; flex-wrap:wrap; gap:8px;
+  padding-top:12px; border-top:1px solid var(--rule); }
+.fr .fr-review-av{ flex:0 0 28px; width:28px; height:28px; border-radius:50%;
+  display:inline-flex; align-items:center; justify-content:center;
+  background:var(--accl); color:var(--acc); font:600 13px Inter,sans-serif; text-transform:uppercase; }
+.fr .fr-review-n{ font-size:13px; font-weight:600; color:var(--ink); }
+.fr .fr-review-vb{ display:inline-flex; align-items:center; gap:4px; font-size:11.5px;
+  color:var(--acc); }
+.fr .fr-review-vb svg{ width:12px; height:12px; }
+.fr .fr-review-d{ font-size:11.5px; color:var(--ink3); margin-left:auto; }
+
+/* -------------------------------------------------------------- 12 LIMITI */
+.fr .fr-note{ background:var(--softer); border-left:2px solid var(--warn); border-radius:2px;
+  padding:14px 16px; margin:22px 0 0; }
+.fr .fr-note p{ font-size:14px; line-height:1.6; color:var(--ink2); margin:0; }
+
+/* ------------------------------------------------------------ 13 GARANZIA */
+.fr .fr-shield{ width:44px; height:44px; margin:0 auto 18px; color:var(--acc); }
+.fr .fr-guar-rt{ max-width:58ch; margin-left:auto; margin-right:auto; }
+.fr .fr-guar-cta{ margin:26px 0 0; }
+.fr .fr-cta{ display:inline-flex; align-items:center; gap:12px;
+  background:var(--acc); color:var(--soft); border-radius:3px;
+  padding:16px 26px; font:600 16px Inter,sans-serif; letter-spacing:.01em;
+  text-decoration:none; transition:filter .2s; }
+.fr .fr-cta:hover{ filter:brightness(.9); }
+.fr .fr-cta-pill{ font-family:Fraunces,serif; font-size:16px;
+  background:rgba(255,255,255,.16); padding:4px 10px; border-radius:2px; }
+.fr .fr-guar-legal{ font-size:12px; line-height:1.55; color:var(--ink3);
+  margin:20px auto 0; max-width:60ch; }
+.fr.fr-surface--ink .fr-shield{ color:#CFE3D2; }
+.fr.fr-surface--ink .fr-cta{ background:var(--soft); color:var(--ink); }
+.fr.fr-surface--ink .fr-cta-pill{ background:rgba(18,22,15,.1); }
+.fr.fr-surface--ink .fr-guar-legal{ color:rgba(244,241,232,.6); }
+
+/* ----------------------------------------------------------------- 14 FAQ */
+.fr .fr-faq{ border-top:1px solid var(--rule); }
+.fr .fr-faq-q{ position:relative; display:block; cursor:pointer; list-style:none;
+  padding:17px 34px 17px 0; font-family:Fraunces,serif; font-weight:500; font-size:17px;
+  line-height:1.35; color:var(--ink); }
+.fr .fr-faq-q::-webkit-details-marker{ display:none; }
+.fr .fr-faq-i{ position:absolute; right:0; top:50%; width:13px; height:13px; margin-top:-6px; }
+.fr .fr-faq-i::before, .fr .fr-faq-i::after{ content:''; position:absolute; background:var(--acc);
+  transition:transform .2s, opacity .2s; }
+.fr .fr-faq-i::before{ left:0; right:0; top:6px; height:1.5px; }
+.fr .fr-faq-i::after{ top:0; bottom:0; left:6px; width:1.5px; }
+.fr .fr-faq-item[open] .fr-faq-i::after{ transform:rotate(90deg); opacity:0; }
+.fr .fr-sources{ margin:28px 0 0; padding-top:18px; border-top:1px solid var(--rule); }
+.fr .fr-sources-t{ font:600 11px/1 Inter,sans-serif; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink3); margin:0 0 10px; }
+.fr .fr-sources ul{ list-style:none; margin:0; padding:0; }
+.fr .fr-sources li{ font-size:12px; line-height:1.6; color:var(--ink3);
+  padding-left:14px; position:relative; }
+.fr .fr-sources li::before{ content:'\2014'; position:absolute; left:0; color:var(--rule2); }
+
+/* --------------------------------------------------------- 390 PX D'ABORD */
+@media (max-width:640px){
+  .fr-pdp{ padding:calc(var(--fr-pt,56px) * .78) 0 calc(var(--fr-pb,56px) * .78); }
+  .fr .fr-motivo{ gap:14px; }
+  .fr .fr-motivo-n{ font-size:30px; }
+  .fr .fr-stats{ grid-template-columns:1fr 1fr; gap:22px 18px; }
+  .fr .fr-stat-v{ font-size:clamp(32px,10vw,42px); }
+  .fr .fr-cta{ display:flex; justify-content:center; }
+  .fr .fr-review-d{ margin-left:0; width:100%; }
+}
+@media (max-width:400px){
+  .fr .fr-stats{ grid-template-columns:1fr; }
+  .fr .fr-ben{ grid-template-columns:36px 1fr; gap:12px; }
+  .fr .fr-ben-i{ width:36px; height:36px; }
+  .fr .fr-ico{ width:19px; height:19px; }
+}

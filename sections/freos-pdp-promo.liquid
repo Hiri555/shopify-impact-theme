@@ -1,0 +1,237 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · PDP 01 — FREOS · 01 Promo
+  ----------------------------------------------------------------------------
+  Bandeau fin, en tete de page. Le compte a rebours est LIVRE DESACTIVE :
+  le produit est en stock illimite et aucune date de fin n'a ete donnee, donc
+  l'activer reviendrait a afficher une echeance inventee. Une case a cocher
+  suffit a l'allumer, et deux modes existent : date fixe, ou remise a zero
+  chaque nuit.
+  Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur
+  dans ce fichier. Genere par build_pdp_sections.py -- modifier le generateur,
+  pas ce fichier, sinon la prochaine generation ecrase la retouche.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="fr fr-pdp fr-pdp--promo fr-promo fr-surface--{{ section.settings.surface }}"
+     style="--fr-pt:{{ section.settings.padding_top }}px;--fr-pb:{{ section.settings.padding_bottom }}px">
+  <div class="{{ section.settings.width }}">
+
+  {%- if section.settings.kicker != blank or section.settings.heading != blank
+        or section.settings.dek != blank -%}
+    <header class="fr-sh">
+      {%- if section.settings.kicker != blank -%}
+        <p class="chip">{{ section.settings.kicker }}</p>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h2 class="fr-h2">{{ section.settings.heading }}</h2>
+      {%- endif -%}
+      {%- if section.settings.dek != blank -%}
+        <p class="fr-dek">{{ section.settings.dek }}</p>
+      {%- endif -%}
+    </header>
+  {%- endif -%}
+
+    <div class="fr-promo-in">
+      {%- if section.settings.text != blank -%}
+        <span class="fr-promo-t">{{ section.settings.text }}</span>
+      {%- endif -%}
+
+      {%- if section.settings.countdown -%}
+        <span class="fr-promo-c" data-mode="{{ section.settings.mode }}"
+              data-end="{{ section.settings.end }}">
+          {%- if section.settings.prefix != blank -%}
+            <span class="fr-promo-p">{{ section.settings.prefix }}</span>
+          {%- endif -%}
+          <b class="fr-promo-v" aria-live="off">--:--:--</b>
+        </span>
+      {%- endif -%}
+
+      {%- if section.settings.cta_label != blank -%}
+        <a class="fr-promo-a" href="{{ section.settings.cta_url | default: '#' }}">
+          {{- section.settings.cta_label -}}
+        </a>
+      {%- endif -%}
+    </div>
+
+  </div>
+</div>
+<script>
+(function(){
+  var sec = document.getElementById('shopify-section-{{ section.id }}');
+  var el = sec && sec.querySelector('.fr-promo-c'); if(!el) return;
+  var out = el.querySelector('.fr-promo-v');
+
+  function target(){
+    if(el.dataset.mode === 'date'){
+      var t = Date.parse((el.dataset.end || '').replace(' ', 'T'));
+      return isNaN(t) ? null : t;
+    }
+    var d = new Date(); d.setHours(24,0,0,0); return d.getTime();   /* prochaine minuit */
+  }
+
+  function pad(n){ return (n<10?'0':'') + n; }
+
+  function tick(){
+    var t = target();
+    if(t === null){ el.hidden = true; return; }      /* date illisible : on n'affiche rien */
+    var s = Math.max(0, Math.floor((t - Date.now())/1000));
+    out.textContent = pad(Math.floor(s/3600)) + ':' + pad(Math.floor(s/60)%60) + ':' + pad(s%60);
+  }
+  tick(); setInterval(tick, 1000);
+})();
+</script>
+{% schema %}
+{
+  "name": "FREOS · 01 Promo",
+  "tag": "section",
+  "class": "freos-pdp-promo",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Bandeau"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Texte"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Libelle du lien"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Lien"
+    },
+    {
+      "type": "header",
+      "content": "Compte a rebours"
+    },
+    {
+      "type": "checkbox",
+      "id": "countdown",
+      "label": "Afficher",
+      "default": false
+    },
+    {
+      "type": "select",
+      "id": "mode",
+      "label": "Mode",
+      "default": "daily",
+      "options": [
+        {
+          "value": "daily",
+          "label": "Remise a zero chaque nuit"
+        },
+        {
+          "value": "date",
+          "label": "Date de fin fixe"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "end",
+      "label": "Date de fin",
+      "info": "Format AAAA-MM-JJ HH:MM. Utilise uniquement en mode date fixe."
+    },
+    {
+      "type": "text",
+      "id": "prefix",
+      "label": "Texte avant le chrono"
+    },
+    {
+      "type": "header",
+      "content": "En-tete"
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Sur-titre"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre",
+      "info": "<em>...</em> met un fragment en italique d'accent."
+    },
+    {
+      "type": "textarea",
+      "id": "dek",
+      "label": "Chapeau"
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "surface",
+      "label": "Fond",
+      "default": "white",
+      "options": [
+        {
+          "value": "white",
+          "label": "Blanc"
+        },
+        {
+          "value": "soft",
+          "label": "Sable"
+        },
+        {
+          "value": "softer",
+          "label": "Sable clair"
+        },
+        {
+          "value": "ink",
+          "label": "Encre"
+        }
+      ]
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Largeur",
+      "default": "narrow",
+      "options": [
+        {
+          "value": "narrow",
+          "label": "Colonne de lecture"
+        },
+        {
+          "value": "wide",
+          "label": "Large"
+        }
+      ]
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 56
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS · 01 Promo"
+    }
+  ]
+}
+{% endschema %}

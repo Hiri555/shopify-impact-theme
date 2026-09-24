@@ -350,8 +350,10 @@
       "settings": [{ "type": "text", "id": "text", "label": "Texte" }] },
     { "type": "buy_buttons", "name": "Bouton d'achat", "limit": 1,
       "settings": [
-        { "type": "text", "id": "label", "label": "Libelle", "info": "Vide = traduction du theme." },
-        { "type": "text", "id": "soldout", "label": "Rupture", "info": "Vide = traduction du theme." },
+        { "type": "text", "id": "label", "label": "Libelle", "default": "Aggiungi al carrello",
+          "info": "La locale publiee du store est l'anglais : si ce champ est vide, le bouton sort en anglais." },
+        { "type": "text", "id": "soldout", "label": "Rupture", "default": "Non disponibile",
+          "info": "Meme remarque : ne pas laisser vide." },
         { "type": "text", "id": "under", "label": "Ligne sous le bouton" }
       ] },
     { "type": "payments", "name": "Moyens de paiement", "limit": 1,
