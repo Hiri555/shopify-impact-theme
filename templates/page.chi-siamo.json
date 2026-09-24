@@ -1,0 +1,87 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "a": {
+      "type": "freos-editorial",
+      "blocks": {
+        "a_00_kicker": {
+          "type": "kicker",
+          "settings": {
+            "text": "Chi siamo"
+          }
+        },
+        "a_01_heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Abbiamo cominciato leggendo, non scrivendo."
+          }
+        },
+        "a_02_dek": {
+          "type": "dek",
+          "settings": {
+            "text": "Prima di formulare qualcosa abbiamo letto più di 800 commenti pubblici italiani di persone che raccontavano lo stesso problema."
+          }
+        },
+        "a_03_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Quello che tornava non era l'odore. Era il <strong>controllo</strong>: la mano che sale a metà frase, il mezzo passo indietro, la mentina offerta un secondo prima del necessario. E una frase, ripetuta quasi con le stesse parole da persone diverse: <em>mi lavo i denti e dopo venti minuti è di nuovo cattivo</em>.</p><p>Non erano persone che trascuravano l'igiene. Erano persone che la curavano molto, e che non capivano perché non bastasse.</p>"
+          }
+        },
+        "a_04_section_header": {
+          "type": "section_header",
+          "settings": {
+            "kicker": "Quello che abbiamo deciso",
+            "heading": "Tre scelte che ci costano qualcosa",
+            "dek": ""
+          }
+        },
+        "a_05_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Non promettiamo un risultato.</strong> Nessuno può promettere quel giorno, e chi lo fa sta vendendo una cosa diversa da un integratore. Descriviamo un gesto: quando si fa, come si fa, cosa contiene.</p><p><strong>Non pubblichiamo recensioni che non abbiamo.</strong> FREOS non è ancora stato lanciato. Le voci che leggi sul sito sono commenti pubblici, citati testualmente e in forma anonima, con il loro identificativo. Non sono clienti.</p><p><strong>Scriviamo anche quello che il prodotto non fa.</strong> Non cura l'alitosi, non tocca le tonsille, non sostituisce lo spazzolino né il dentista. Se non sopporti la menta, non fa per te.</p>"
+          }
+        },
+        "a_06_punch": {
+          "type": "punch",
+          "settings": {
+            "text": "Preferiamo perdere un ordine che venderlo dicendo una cosa non vera."
+          }
+        },
+        "a_07_note": {
+          "type": "note",
+          "settings": {
+            "text": "<p>FREOS è un marchio di <strong>DINSO VENTURES LLC</strong> — [INDIRIZZO_COMPLETO] — [RIFERIMENTO_FISCALE]. Per qualsiasi domanda: [EMAIL_GENERALE].</p>"
+          }
+        }
+      },
+      "block_order": [
+        "a_00_kicker",
+        "a_01_heading",
+        "a_02_dek",
+        "a_03_paragraph",
+        "a_04_section_header",
+        "a_05_paragraph",
+        "a_06_punch",
+        "a_07_note"
+      ],
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 56,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "a"
+  ]
+}

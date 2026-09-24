@@ -1,0 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "a": {
+      "type": "freos-editorial",
+      "blocks": {
+        "a_00_kicker": {
+          "type": "kicker",
+          "settings": {
+            "text": "Assistenza"
+          }
+        },
+        "a_01_heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Traccia il tuo ordine."
+          }
+        },
+        "a_02_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>Quando l'ordine parte ti arriva un'email con il numero di tracciamento. Il link porta direttamente al sito del corriere.</p><p>Se non trovi l'email, controlla la cartella spam prima di scriverci: è lì che finisce quasi sempre.</p>"
+          }
+        },
+        "a_03_timeline": {
+          "type": "timeline",
+          "settings": {
+            "rows": "Passo 1 | Cerca l’email di spedizione | Oggetto: il tuo ordine è partito.\nPasso 2 | Apri il link di tracciamento | Porta al sito di [CORRIERE].\n!Passo 3 | Non trovi niente? | Scrivici indicando il numero d’ordine."
+          }
+        },
+        "a_04_note": {
+          "type": "note",
+          "settings": {
+            "text": "<p>Tempi di consegna indicativi: [TEMPI_CONSEGNA]. Corriere: [CORRIERE]. Per qualsiasi problema: [EMAIL_GENERALE] — rispondiamo entro [ORARI_RISPOSTA].</p>"
+          }
+        }
+      },
+      "block_order": [
+        "a_00_kicker",
+        "a_01_heading",
+        "a_02_paragraph",
+        "a_03_timeline",
+        "a_04_note"
+      ],
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 56,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "a"
+  ]
+}

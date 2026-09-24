@@ -1,0 +1,109 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "a": {
+      "type": "freos-editorial",
+      "blocks": {
+        "a_00_custom": {
+          "type": "custom",
+          "settings": {
+            "code": "<p class=\"fr-updated\">Ultimo aggiornamento: [DATA_AGGIORNAMENTO]</p>"
+          }
+        },
+        "a_01_kicker": {
+          "type": "kicker",
+          "settings": {
+            "text": "Ingredienti e sicurezza"
+          }
+        },
+        "a_02_heading": {
+          "type": "heading",
+          "settings": {
+            "text": "Cosa c’è dentro, e a quali dosi."
+          }
+        },
+        "a_03_dek": {
+          "type": "dek",
+          "settings": {
+            "text": "Le dosi sono scritte. Quello che non sappiamo ancora è segnato come tale invece di essere arrotondato."
+          }
+        },
+        "a_04_compare": {
+          "type": "compare",
+          "settings": {
+            "rows": "*Zinco | [COMPOSIZIONE_COMPLETA] | sale e dose dall’etichetta\nTè verde (estratto foglia) | 85 mg\nClorofilla da erba medica | 85 mg\nPrezzemolo | 85 mg\nMenta piperita (olio essenziale) | 80 mg\nChiodi di garofano (olio ess. bottone) | 85 mg\nMelissa | 85 mg\nShilajit purificato | 100 mg"
+          }
+        },
+        "a_05_callout": {
+          "type": "callout",
+          "settings": {
+            "text": "<p><strong>Perché lo zinco.</strong> Gli ioni di zinco si <strong>legano</strong> ai gruppi tiolici dei composti solforati. È una reazione chimica di categoria, non un effetto promesso: lo scriviamo perché è il motivo per cui lo zinco è nella formula, non perché sia una prova che FREOS funzioni.</p>"
+          }
+        },
+        "a_06_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p><strong>Quello che non scriviamo.</strong> Non diciamo che lo zinco uccide i batteri: non è quello che fa. Non citiamo studi condotti su formule che contengono antisettici che noi non abbiamo.</p>"
+          }
+        },
+        "a_07_section_header": {
+          "type": "section_header",
+          "settings": {
+            "kicker": "Sicurezza",
+            "heading": "Avvertenze e controindicazioni",
+            "dek": ""
+          }
+        },
+        "a_08_note": {
+          "type": "note",
+          "settings": {
+            "text": "<p><strong>Tè verde.</strong> [AVVERTENZE_TE_VERDE]</p><p><strong>Integratore alimentare.</strong> Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano. Non superare la dose giornaliera consigliata. Tenere fuori dalla portata dei bambini al di sotto dei tre anni.</p><p><strong>Non indicato</strong> ai minori di 18 anni, in gravidanza e durante l'allattamento.</p><p>In caso di terapie in corso, patologie note o dubbi, senti il medico o il farmacista prima dell'uso.</p>"
+          }
+        },
+        "a_09_paragraph": {
+          "type": "paragraph",
+          "settings": {
+            "text": "<p>FREOS non è un farmaco e non ha un'indicazione terapeutica. <strong>Non cura l'alitosi.</strong> Non sostituisce lo spazzolino, il dentista o l'otorino. Alla domanda se serva per i tonsilloliti, la risposta è no.</p>"
+          }
+        },
+        "a_10_sources": {
+          "type": "sources",
+          "settings": {
+            "title": "Fonti citate sul sito",
+            "items": "Porciani PF, Grandini S. J Clin Dent, 2012. PMID 23210417\nDawes C, Wong DTW. J Dent Res, 2019. PMID 30782091\nQuirynen M et al. J Clin Periodontol, 2009. PMID 19811581\nTangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205\nLee YH, Hong JY. Front Oral Health, 2023."
+          }
+        }
+      },
+      "block_order": [
+        "a_00_custom",
+        "a_01_kicker",
+        "a_02_heading",
+        "a_03_dek",
+        "a_04_compare",
+        "a_05_callout",
+        "a_06_paragraph",
+        "a_07_section_header",
+        "a_08_note",
+        "a_09_paragraph",
+        "a_10_sources"
+      ],
+      "settings": {
+        "surface": "white",
+        "width": "narrow",
+        "padding_top": 56,
+        "padding_bottom": 64
+      }
+    }
+  },
+  "order": [
+    "a"
+  ]
+}
