@@ -9,61 +9,110 @@
  */
 {
   "sections": {
-    "hero": {
-      "type": "freos-pdp-hero",
-      "settings": {
-        "gallery_files": "freos-pdp-01-main.jpg,freos-pdp-03-meccanismo.jpg,freos-pdp-02-ingredienti.jpg,freos-pdp-04-howto.jpg,freos-pdp-05-scala.jpg,freos-pdp-06-obiezione.jpg,freos-pdp-07-limiti.jpg,freos-pdp-08-garanzia.jpg",
-        "gallery_alt": "FREOS — Gel Notturno Micro-Aderente allo Zinco",
-        "sticky_atc": true,
-        "sticky_label": "FREOS · Gel Notturno Micro-Aderente allo Zinco",
-        "sticky_cta": "Aggiungi al carrello"
-      },
+    "buybox": {
+      "type": "freos-pdp-buybox",
       "blocks": {
-        "00_eyebrow": {
+        "slide_01": {
+          "type": "slide",
+          "settings": {
+            "file": "freos-pdp-01-main.jpg",
+            "alt": "FREOS — Gel Notturno Micro-Aderente allo Zinco"
+          }
+        },
+        "slide_02": {
+          "type": "slide",
+          "settings": {
+            "file": "freos-pdp-03-meccanismo.jpg",
+            "alt": "FREOS — Gel Notturno Micro-Aderente allo Zinco"
+          }
+        },
+        "slide_03": {
+          "type": "slide",
+          "settings": {
+            "file": "freos-pdp-02-ingredienti.jpg",
+            "alt": "FREOS — Gel Notturno Micro-Aderente allo Zinco"
+          }
+        },
+        "slide_04": {
+          "type": "slide",
+          "settings": {
+            "file": "freos-pdp-04-howto.jpg",
+            "alt": "FREOS — Gel Notturno Micro-Aderente allo Zinco"
+          }
+        },
+        "slide_05": {
+          "type": "slide",
+          "settings": {
+            "file": "freos-pdp-05-scala.jpg",
+            "alt": "FREOS — Gel Notturno Micro-Aderente allo Zinco"
+          }
+        },
+        "slide_06": {
+          "type": "slide",
+          "settings": {
+            "file": "freos-pdp-06-obiezione.jpg",
+            "alt": "FREOS — Gel Notturno Micro-Aderente allo Zinco"
+          }
+        },
+        "slide_07": {
+          "type": "slide",
+          "settings": {
+            "file": "freos-pdp-07-limiti.jpg",
+            "alt": "FREOS — Gel Notturno Micro-Aderente allo Zinco"
+          }
+        },
+        "slide_08": {
+          "type": "slide",
+          "settings": {
+            "file": "freos-pdp-08-garanzia.jpg",
+            "alt": "FREOS — Gel Notturno Micro-Aderente allo Zinco"
+          }
+        },
+        "eyebrow": {
           "type": "eyebrow",
           "settings": {
             "text": "Il gesto della sera"
           }
         },
-        "01_title": {
-          "type": "title",
-          "settings": {
-            "text": "Gel Notturno Micro-Aderente allo Zinco"
-          }
-        },
-        "02_subtitle": {
-          "type": "subtitle",
-          "settings": {
-            "text": "Sette estratti e uno ione, in un gel denso che resta dove lo metti."
-          }
-        },
-        "03_rating": {
+        "rating": {
           "type": "rating",
           "settings": {
             "score": "4,8",
             "count": "su 126 recensioni"
           }
         },
-        "04_pills": {
+        "title": {
+          "type": "title",
+          "settings": {
+            "text": "Gel Notturno Micro-Aderente allo Zinco"
+          }
+        },
+        "subtitle": {
+          "type": "subtitle",
+          "settings": {
+            "text": "Sette estratti e uno ione, in un gel denso che resta dove lo metti."
+          }
+        },
+        "pills": {
           "type": "pills",
           "settings": {
             "items": "Integratore alimentare | Zinco + 7 estratti | Nessun abbonamento"
           }
         },
-        "05_price": {
+        "benefits": {
+          "type": "benefits",
+          "settings": {
+            "items": "Un gesto la sera, dopo i denti. Trenta secondi.\nNiente da raschiare, niente conati.\nUn barattolo copre un mese pieno."
+          }
+        },
+        "price": {
           "type": "price",
           "settings": {
             "fallback": "29,90 €",
             "note": "120 g · trenta sere · meno di un euro al giorno"
           }
         },
-        "06_benefits": {
-          "type": "benefits",
-          "settings": {
-            "items": "Un gesto la sera, dopo i denti. Trenta secondi.\nNiente da raschiare, niente conati.\nUn barattolo copre un mese pieno."
-          }
-        },
-        "07_recognition": {
+        "recognition": {
           "type": "recognition",
           "settings": {
             "question": "Quale di queste ti somiglia di più?",
@@ -71,7 +120,7 @@
             "answer": "In tutti e tre i casi il momento che conta è la sera: è lì che la bocca smette di difendersi, e nessuno fa niente."
           }
         },
-        "08_buy_buttons": {
+        "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
             "label": "Aggiungi al carrello",
@@ -79,32 +128,55 @@
             "under": "Trenta sere di prova · rimborso pieno · [SPEDIZIONE]"
           }
         },
-        "09_badges": {
+        "badges": {
           "type": "badges",
           "settings": {
             "items": "Trenta sere di prova | o rimborso\nIl barattolo resta a te | anche aperto\nNessun abbonamento | un ordine, una volta"
           }
         },
-        "10_guarantee": {
+        "guarantee": {
           "type": "guarantee",
           "settings": {
             "text": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>"
           }
+        },
+        "payments": {
+          "type": "payments",
+          "settings": {
+            "label": "Pagamento sicuro",
+            "marks": "visa, master, american_express, paypal, apple_pay, google_pay"
+          }
         }
       },
       "block_order": [
-        "00_eyebrow",
-        "01_title",
-        "02_subtitle",
-        "03_rating",
-        "04_pills",
-        "05_price",
-        "06_benefits",
-        "07_recognition",
-        "08_buy_buttons",
-        "09_badges",
-        "10_guarantee"
-      ]
+        "slide_01",
+        "slide_02",
+        "slide_03",
+        "slide_04",
+        "slide_05",
+        "slide_06",
+        "slide_07",
+        "slide_08",
+        "eyebrow",
+        "rating",
+        "title",
+        "subtitle",
+        "pills",
+        "benefits",
+        "price",
+        "recognition",
+        "buy_buttons",
+        "payments",
+        "badges",
+        "guarantee"
+      ],
+      "settings": {
+        "surface": "white",
+        "padding_top": 24,
+        "padding_bottom": 48,
+        "flag": "",
+        "thumbs_label": "Immagini del prodotto"
+      }
     },
     "marquee": {
       "type": "freos-marquee",
@@ -515,10 +587,22 @@
         "09_faq",
         "10_sources"
       ]
+    },
+    "sticky": {
+      "type": "freos-pdp-sticky",
+      "settings": {
+        "file": "freos-pdp-01-main.jpg",
+        "label": "Gel Notturno allo Zinco",
+        "show_rating": true,
+        "score": "4,8",
+        "cta": "",
+        "soldout": "",
+        "watch": ".fr-atc-wrap"
+      }
     }
   },
   "order": [
-    "hero",
+    "buybox",
     "marquee",
     "meccanismo",
     "ingredienti",
@@ -527,6 +611,7 @@
     "rituale",
     "limiti",
     "garanzia",
-    "faq"
+    "faq",
+    "sticky"
   ]
 }
