@@ -930,9 +930,17 @@
    par defaut et on ne met a zero que pendant l'attente explicite. */
 /* Le markup editorial pose une largeur en style inline, qui gagne sur cette
    regle ; le markup modulaire pose --w et c'est cette regle qui l'applique.
-   Les deux cohabitent sans se marcher dessus. */
-.fr .fr-bars .fr-bar-t i{ width:var(--w,100%); transition:width .8s cubic-bezier(.22,1,.36,1); }
-.fr .fr-bars.is-wait .fr-bar-t i{ width:0; }
+   Les deux cohabitent sans se marcher dessus.
+
+   L'animation est purement CSS et se termine TOUJOURS a var(--w) : aucune
+   donnee ne peut rester cachee si un script ne tourne pas. Une version
+   precedente partait de zero et attendait IntersectionObserver -- qui ne s'est
+   jamais declenche dans un contexte d'iframe, laissant les barres vides. */
+.fr .fr-bars .fr-bar-t i{ width:var(--w,100%); }
+@media (prefers-reduced-motion:no-preference){
+  .fr .fr-bars .fr-bar-t i{ animation:fr-bar-grow .8s cubic-bezier(.22,1,.36,1) both; }
+}
+@keyframes fr-bar-grow{ from{ width:0 } to{ width:var(--w,100%) } }
 
 /* ---------------------------------------------------------- 06 INGREDIENTI */
 .fr .fr-ing-n{ display:block; font-family:Fraunces,serif; font-weight:500; font-size:15px;

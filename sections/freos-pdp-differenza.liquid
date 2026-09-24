@@ -52,21 +52,7 @@
 
   </div>
 </div>
-<script>
-(function(){
-  var sec = document.getElementById('shopify-section-{{ section.id }}');
-  if(!sec || !('IntersectionObserver' in window)) return;
-  if(window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
-  var bars = sec.querySelector('.fr-bars'); if(!bars) return;
-  /* is-wait met les barres a zero ; sans JS la classe n'arrive jamais et
-     elles sont deja a leur largeur. On ne cache jamais une donnee. */
-  bars.classList.add('is-wait');
-  var io = new IntersectionObserver(function(e){
-    if(e[0].isIntersecting){ bars.classList.remove('is-wait'); io.disconnect(); }
-  }, {threshold:.3});
-  io.observe(bars);
-})();
-</script>
+
 {% schema %}
 {
   "name": "FREOS · 05 Differenza",
