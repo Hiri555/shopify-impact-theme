@@ -539,3 +539,222 @@
   padding:18px 0; margin:0 0 30px; }
 .fr-page .fr-toc a{ display:block; padding:5px 0; font-size:15px; color:var(--ink); text-decoration:none; }
 .fr-page .fr-toc a:hover{ color:var(--acc2); text-decoration:underline; text-underline-offset:2px; }
+
+/* ==========================================================================
+   PDP — PREMIER ECRAN
+   Galerie a gauche, buy box a droite. L'ordre de la buy box suit la reference
+   marche : note AVANT le prix.
+   ========================================================================== */
+.fr-hero{ padding:34px 0 8px; }
+.fr-hero .wide{ max-width:1120px; }
+.fr .fr-hero-grid{ display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start; }
+
+/* galerie */
+.fr .fr-gal-main{ position:relative; aspect-ratio:1/1; background:var(--soft);
+  border:1px solid var(--rule); border-radius:2px; overflow:hidden; }
+.fr .fr-gal-slide{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover;
+  opacity:0; transition:opacity .18s; }
+.fr .fr-gal-slide.is-on{ opacity:1; }
+.fr .fr-gal-thumbs{ display:flex; gap:8px; margin-top:10px; overflow-x:auto; padding-bottom:4px; }
+.fr .fr-gal-thumb{ flex:0 0 68px; width:68px; height:68px; padding:0; cursor:pointer;
+  background:var(--soft); border:1px solid var(--rule); border-radius:2px; overflow:hidden;
+  transition:border-color .15s; }
+.fr .fr-gal-thumb.is-on{ border-color:var(--acc); }
+.fr .fr-gal-thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
+
+/* buy box */
+.fr .fr-buy{ padding-top:4px; }
+.fr .fr-buy-title{ font-family:Fraunces,serif; font-weight:500; font-size:34px; line-height:1.12;
+  letter-spacing:-.01em; color:var(--ink); margin:0 0 8px; }
+.fr .fr-buy-sub{ font-size:17px; line-height:1.5; color:var(--ink2); margin:0 0 14px; }
+
+.fr .fr-rate{ display:flex; align-items:center; gap:8px; margin:0 0 14px; }
+.fr .fr-rate-stars{ display:inline-flex; gap:1px; color:var(--acc); }
+.fr .fr-rate-n{ font-weight:600; font-size:14px; color:var(--ink); }
+.fr .fr-rate-c{ font-size:13px; color:var(--ink3); }
+
+.fr .fr-pills{ display:flex; flex-wrap:wrap; gap:6px; margin:0 0 16px; }
+.fr .fr-pill{ font-size:11px; letter-spacing:.08em; text-transform:uppercase; font-weight:600;
+  color:var(--acc); background:var(--accl); padding:5px 10px; border-radius:2px; }
+
+.fr .fr-price{ display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;
+  padding:14px 0; border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+  margin:0 0 16px; }
+.fr .fr-price-v{ font-family:Fraunces,serif; font-size:30px; color:var(--ink); line-height:1; }
+.fr .fr-price-n{ font-size:13px; color:var(--ink3); }
+
+/* device de reconnaissance */
+.fr .fr-reco{ background:var(--acclt); border:1px solid var(--accl); border-radius:2px;
+  padding:16px 18px; margin:16px 0; }
+.fr .fr-reco-q{ font-family:Fraunces,serif; font-style:italic; font-size:17px; color:var(--acc);
+  margin:0 0 12px; line-height:1.35; }
+.fr .fr-reco-opts{ display:flex; flex-wrap:wrap; gap:8px; }
+.fr .fr-reco-o{ font:500 14px Inter,sans-serif; color:var(--ink); background:#fff;
+  border:1px solid var(--rule2); border-radius:2px; padding:9px 14px; cursor:pointer;
+  transition:border-color .15s, background .15s; }
+.fr .fr-reco-o:hover{ border-color:var(--acc); }
+.fr .fr-reco-o.is-on{ background:var(--acc); color:var(--soft); border-color:var(--acc); }
+.fr .fr-reco-a{ font-size:14px; line-height:1.55; color:var(--ink2); margin:12px 0 0;
+  padding-top:12px; border-top:1px solid var(--accl); }
+
+/* achat */
+.fr .fr-atc{ display:block; width:100%; background:var(--acc); color:var(--soft); border:0;
+  border-radius:3px; padding:19px 24px; font:600 17px Inter,sans-serif; letter-spacing:.01em;
+  cursor:pointer; transition:background .2s; }
+.fr .fr-atc:hover{ background:var(--acc2); }
+.fr .fr-atc.is-off{ background:var(--ink3); cursor:not-allowed; }
+.fr .fr-atc-under{ font-size:12px; color:var(--ink3); text-align:center; margin:10px 0 0;
+  letter-spacing:.02em; }
+
+.fr .fr-tbadges{ display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin:18px 0 0;
+  padding-top:16px; border-top:1px solid var(--rule); }
+.fr .fr-tbadge{ text-align:center; }
+.fr .fr-tbadge b{ display:block; font-size:12px; font-weight:600; color:var(--ink);
+  letter-spacing:.04em; text-transform:uppercase; line-height:1.3; }
+.fr .fr-tbadge span{ display:block; font-size:11px; color:var(--ink3); margin-top:3px; line-height:1.4; }
+
+.fr .fr-guar-box{ background:var(--softer); border-left:2px solid var(--acc); border-radius:2px;
+  padding:14px 16px; margin:18px 0 0; }
+.fr .fr-guar-box p{ font-size:13.5px; line-height:1.6; color:var(--ink2); margin:0; }
+
+/* barre collante */
+.fr-sticky{ position:fixed; left:0; right:0; bottom:0; z-index:40; background:#fff;
+  border-top:1px solid var(--rule); box-shadow:0 -2px 14px rgba(18,22,15,.08);
+  padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px)); }
+.fr .fr-sticky-in{ display:flex; align-items:center; gap:14px; }
+.fr .fr-sticky-t{ flex:1 1 auto; font-size:14px; font-weight:600; color:var(--ink);
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.fr .fr-sticky-p{ font-family:Fraunces,serif; font-size:18px; color:var(--ink); }
+.fr .fr-sticky-b{ width:auto; flex:0 0 auto; padding:13px 22px; font-size:15px; }
+
+@media (max-width:860px){
+  .fr .fr-hero-grid{ grid-template-columns:1fr; gap:22px; }
+  .fr .fr-buy-title{ font-size:27px; }
+  .fr .fr-sticky-t{ display:none; }
+}
+@media (max-width:420px){
+  .fr .fr-tbadges{ grid-template-columns:1fr; gap:12px; text-align:left; }
+  .fr .fr-tbadge{ text-align:left; }
+}
+
+/* ==========================================================================
+   BANDEAU DEFILANT
+   ========================================================================== */
+.fr-marquee{ overflow:hidden; padding:13px 0; }
+.fr-marquee--ink { background:var(--ink);  color:var(--soft); }
+.fr-marquee--acc { background:var(--acc);  color:var(--soft); }
+.fr-marquee--soft{ background:var(--soft); color:var(--acc);  border-block:1px solid var(--rule); }
+.fr-marquee-track{ display:flex; width:max-content; animation:fr-mq var(--fr-mq-dur,45s) linear infinite; }
+.fr-marquee-run{ display:flex; align-items:center; }
+.fr-marquee-i{ font-size:12px; letter-spacing:.14em; text-transform:uppercase; font-weight:600;
+  white-space:nowrap; }
+.fr-marquee-d{ padding:0 22px; opacity:.45; }
+@keyframes fr-mq{ from{ transform:translateX(0) } to{ transform:translateX(-50%) } }
+@media (prefers-reduced-motion:reduce){
+  .fr-marquee-track{ animation:none; width:100%; justify-content:center; flex-wrap:wrap; }
+  .fr-marquee-run:nth-child(2){ display:none; }
+}
+
+/* ==========================================================================
+   BARRES COMPAREES — « le bon principe dans le mauvais format »
+   ========================================================================== */
+.fr .fr-bars{ margin:22px 0; }
+.fr .fr-bar{ display:grid; grid-template-columns:130px 1fr 68px; align-items:center; gap:14px;
+  padding:13px 0; border-bottom:1px solid var(--rule); }
+.fr .fr-bar:last-child{ border-bottom:0; }
+.fr .fr-bar-l{ font-size:15px; color:var(--ink2); }
+.fr .fr-bar-v{ grid-column:3; text-align:right; font-family:Fraunces,serif; font-size:16px;
+  color:var(--ink3); font-variant-numeric:tabular-nums; }
+.fr .fr-bar-t{ grid-column:2; display:block; height:6px; background:var(--accl); border-radius:3px; }
+.fr .fr-bar-t i{ display:block; height:100%; background:var(--rule2); border-radius:3px; }
+.fr .fr-bar.is-hi .fr-bar-l{ color:var(--ink); font-weight:600; }
+.fr .fr-bar.is-hi .fr-bar-v{ color:var(--acc); font-weight:600; }
+.fr .fr-bar.is-hi .fr-bar-t i{ background:var(--acc); }
+.fr.fr-surface--ink .fr-bar{ border-bottom-color:rgba(244,241,232,.16); }
+.fr.fr-surface--ink .fr-bar-l{ color:#C9C2AC; }
+.fr.fr-surface--ink .fr-bar.is-hi .fr-bar-l{ color:var(--soft); }
+.fr.fr-surface--ink .fr-bar-t{ background:rgba(244,241,232,.14); }
+.fr.fr-surface--ink .fr-bar.is-hi .fr-bar-v{ color:var(--accl); }
+
+/* ==========================================================================
+   INGREDIENTS — medaillons, vraies photos
+   ========================================================================== */
+.fr .fr-ings{ display:grid; grid-template-columns:repeat(4,1fr); gap:26px 18px; margin:26px 0 0; }
+.fr .fr-ing{ margin:0; text-align:center; }
+.fr .fr-ing img,
+.fr .fr-ing-ph{ display:block; width:100%; max-width:118px; aspect-ratio:1/1; margin:0 auto 10px;
+  object-fit:cover; border-radius:50%; background:var(--soft); }
+.fr .fr-ing.is-lead img{ box-shadow:0 0 0 1px var(--acc), 0 0 0 5px var(--acclt); }
+.fr .fr-ing b{ display:block; font-size:14px; font-weight:600; color:var(--ink); line-height:1.3; }
+.fr .fr-ing span{ display:block; font-size:12.5px; color:var(--ink3); line-height:1.45; margin-top:3px; }
+.fr .fr-ings-note{ font-size:12px; color:var(--ink3); text-align:center; margin:22px 0 0;
+  padding-top:16px; border-top:1px solid var(--rule); letter-spacing:.02em; }
+@media (max-width:760px){ .fr .fr-ings{ grid-template-columns:repeat(3,1fr); gap:22px 14px; } }
+@media (max-width:420px){ .fr .fr-ings{ grid-template-columns:repeat(2,1fr); } }
+
+/* ==========================================================================
+   AVIS
+   ========================================================================== */
+.fr .fr-reviews-head{ display:flex; align-items:center; gap:10px; padding:0 0 18px;
+  border-bottom:1px solid var(--rule); margin:0 0 20px; }
+.fr .fr-reviews-head .fr-rate-stars{ display:inline-flex; gap:2px; color:var(--acc); }
+.fr .fr-reviews-head b{ font-size:16px; color:var(--ink); }
+.fr .fr-reviews-head span{ font-size:13px; color:var(--ink3); }
+.fr .fr-reviews-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:16px; }
+.fr .fr-review{ background:#FFFEF9; border:1px solid var(--rule); border-radius:2px; padding:20px 22px; }
+.fr .fr-review .fr-rate-stars{ display:inline-flex; gap:1px; color:var(--acc); margin-bottom:10px; }
+.fr .fr-review h4{ font-family:Fraunces,serif; font-weight:500; font-size:17px; color:var(--ink);
+  margin:0 0 8px; line-height:1.3; }
+.fr .fr-review p{ font-size:14.5px; line-height:1.6; color:var(--ink2); margin:0 0 14px; }
+.fr .fr-review footer{ display:flex; align-items:baseline; gap:8px; padding-top:12px;
+  border-top:1px solid var(--rule); font-size:12.5px; }
+.fr .fr-review footer b{ color:var(--ink); font-weight:600; }
+.fr .fr-review footer span{ color:var(--ink3); }
+@media (max-width:640px){ .fr .fr-reviews-grid{ grid-template-columns:1fr; } }
+
+/* ==========================================================================
+   BADGES DE GARANTIE — seulement des termes reels de l'offre
+   ========================================================================== */
+.fr .fr-badges{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:26px 0 0; }
+.fr .fr-badge{ text-align:center; padding:24px 14px; border:1px solid var(--accl);
+  background:var(--acclt); border-radius:2px; }
+.fr .fr-badge-n{ display:block; font-family:Fraunces,serif; font-size:30px; color:var(--acc);
+  line-height:1; margin-bottom:8px; }
+.fr .fr-badge b{ display:block; font-size:11px; font-weight:600; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--ink); line-height:1.35; }
+.fr .fr-badge-s{ display:block; font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--ink3); margin-top:2px; line-height:1.35; }
+@media (max-width:560px){ .fr .fr-badges{ grid-template-columns:1fr; } }
+
+/* ==========================================================================
+   CE QUE CA NE FAIT PAS
+   ========================================================================== */
+.fr .fr-nolist{ list-style:none; margin:20px 0; padding:0; }
+.fr .fr-nolist li{ display:flex; align-items:flex-start; gap:12px; padding:13px 0;
+  border-bottom:1px solid var(--rule); font-size:16px; line-height:1.5; color:var(--ink); }
+.fr .fr-nolist li:last-child{ border-bottom:0; }
+.fr .fr-nolist svg{ flex:0 0 auto; margin-top:3px; color:var(--warn); }
+
+.fr .fr-asset-img{ width:100%; height:auto; display:block; border:1px solid var(--rule);
+  border-radius:2px; }
+
+/* ==========================================================================
+   HOME — PREMIER ECRAN
+   ========================================================================== */
+.fr-hhero{ padding:44px 0 36px; }
+.fr-hhero .wide{ max-width:1080px; }
+.fr .fr-hhero-grid{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
+.fr-hhero--right .fr-hhero-media{ order:2; }
+.fr .fr-hhero-media img{ width:100%; height:auto; display:block; border:1px solid var(--rule);
+  border-radius:2px; background:var(--soft); }
+.fr .fr-hhero-h{ font-family:Fraunces,serif; font-weight:500; font-size:44px; line-height:1.08;
+  letter-spacing:-.01em; color:var(--ink); margin:0 0 18px; }
+.fr .fr-hhero-h em{ font-style:italic; color:var(--acc); }
+.fr .fr-hhero-body .dek{ margin-bottom:20px; }
+.fr .fr-hhero-body .fr-benefits{ margin:0 0 24px; }
+@media (max-width:860px){
+  .fr .fr-hhero-grid{ grid-template-columns:1fr; gap:26px; }
+  .fr-hhero--right .fr-hhero-media{ order:0; }
+  .fr .fr-hhero-h{ font-size:32px; }
+}
+@media (max-width:420px){ .fr .fr-hhero-h{ font-size:28px; } }

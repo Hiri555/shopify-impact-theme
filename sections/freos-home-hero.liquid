@@ -1,0 +1,88 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · HOME — PREMIER ECRAN
+  Deux colonnes : le packshot d'un cote, la promesse et un CTA unique de
+  l'autre. La recherche marche est nette — la home ne recoit pas de trafic
+  payant dans ce creneau : son metier est la credibilite et l'aiguillage,
+  donc UN seul CTA primaire, vers la PDP.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="fr fr-hhero fr-hhero--{{ section.settings.media_side }}">
+  <div class="wide">
+    <div class="fr-hhero-grid">
+
+      <div class="fr-hhero-media">
+        {%- if section.settings.image_file != blank -%}
+          <img src="{{ section.settings.image_file | asset_url }}"
+               alt="{{ section.settings.image_alt }}"
+               width="1400" height="1400" fetchpriority="high">
+        {%- endif -%}
+      </div>
+
+      <div class="fr-hhero-body">
+        {%- if section.settings.kicker != blank -%}
+          <p class="chip">{{ section.settings.kicker }}</p>
+        {%- endif -%}
+        {%- if section.settings.heading != blank -%}
+          <h1 class="fr-hhero-h">{{ section.settings.heading }}</h1>
+        {%- endif -%}
+        {%- if section.settings.dek != blank -%}
+          <p class="dek">{{ section.settings.dek }}</p>
+        {%- endif -%}
+
+        {%- if section.settings.points != blank -%}
+          <ul class="fr-benefits">
+            {%- assign items = section.settings.points | newline_to_br | split: '<br />' -%}
+            {%- for it in items -%}
+              {%- assign line = it | strip -%}
+              {%- if line != blank -%}<li>{{ line }}</li>{%- endif -%}
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+
+        <div class="cta-wrap">
+          <a class="cta" href="{{ section.settings.cta_url | default: '#' }}">
+            <span>{{ section.settings.cta_label }}</span>
+            {%- if section.settings.cta_pill != blank -%}
+              <span class="pill">{{ section.settings.cta_pill }}</span>
+            {%- endif -%}
+          </a>
+          {%- if section.settings.cta_note != blank -%}
+            <span class="guar">{{ section.settings.cta_note }}</span>
+          {%- endif -%}
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS · Home hero",
+  "tag": "section",
+  "class": "freos-home-hero-section",
+  "settings": [
+    { "type": "text", "id": "image_file", "label": "Image (asset)", "default": "freos-pdp-01-main.jpg" },
+    { "type": "text", "id": "image_alt", "label": "Texte alternatif" },
+    {
+      "type": "select", "id": "media_side", "label": "Cote de l'image",
+      "options": [
+        { "value": "left", "label": "Gauche" },
+        { "value": "right", "label": "Droite" }
+      ],
+      "default": "left"
+    },
+    { "type": "text", "id": "kicker", "label": "Sur-titre" },
+    { "type": "text", "id": "heading", "label": "Titre" },
+    { "type": "text", "id": "dek", "label": "Chapeau" },
+    { "type": "textarea", "id": "points", "label": "Points", "info": "Un par ligne." },
+    { "type": "text", "id": "cta_label", "label": "Bouton", "default": "Vedi il prodotto" },
+    { "type": "text", "id": "cta_pill", "label": "Pastille" },
+    { "type": "text", "id": "cta_url", "label": "Lien" },
+    { "type": "text", "id": "cta_note", "label": "Ligne de reassurance" }
+  ],
+  "presets": [{ "name": "FREOS · Home hero" }]
+}
+{% endschema %}

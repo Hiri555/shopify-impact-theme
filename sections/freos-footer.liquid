@@ -1,18 +1,14 @@
 {%- comment -%}
   ============================================================================
-  FREOS · FOOTER
+  FREOS · FOOTER — version simple
   ----------------------------------------------------------------------------
-  Construit d'apres FREOS_MD-PAGES.md 7.1 (structure) et 7.2 (DA).
+  Decision du proprietaire (24/09) : PAS de bloc d'identite societe ici.
+  Raison sociale, adresse, reference fiscale et e-mails vivent dans les pages
+  legales, ou ils restent accessibles en permanence.
 
-  Le layout appelait deja {% sections 'footer-group' %} mais le fichier
-  n'existait pas : le site n'avait aucun footer. Cette section le cree, sans
-  toucher a sections/footer.liquid, qui reste disponible.
-
-  DA imposee par 7.2 : fond creme, filets #E3DDCD, titres de colonne en vert,
-  mentions legales a 12,5px minimum. Un fond sombre plein y est interdit.
-
-  Les identifiants de DINSO VENTURES LLC sont des reglages, pas du code : ils
-  restent visibles en placeholder tant qu'ils ne sont pas connus.
+  Restent ici, parce que ce sont des obligations produit et consommateur :
+  les avertissements complement alimentaire, l'avertissement the vert, et le
+  lien ODR. Taille minimale 12,5 px, comme l'exige la spec.
   ============================================================================
 {%- endcomment -%}
 
@@ -60,23 +56,10 @@
     </div>
 
     <div class="fr-footer-legal">
-      <p class="fr-footer-id">
-        <b>{{ section.settings.ragione_sociale }}</b>
-        {%- if section.settings.indirizzo != blank %} &middot; {{ section.settings.indirizzo }}{% endif -%}
-        {%- if section.settings.riferimento_fiscale != blank %} &middot; {{ section.settings.riferimento_fiscale }}{% endif -%}
-        {%- if section.settings.numero_rea != blank %} &middot; REA {{ section.settings.numero_rea }}{% endif -%}
-        {%- if section.settings.email != blank %} &middot; {{ section.settings.email }}{% endif -%}
-      </p>
-
       <p class="fr-footer-warn">{{ section.settings.avvertenze_integratore }}</p>
 
       {%- if section.settings.avvertenze_te_verde != blank -%}
-        <p class="fr-footer-warn">
-          {{ section.settings.avvertenze_te_verde }}
-          {%- if section.settings.ingredienti_url != blank %}
-            <a href="{{ section.settings.ingredienti_url }}">{{ section.settings.ingredienti_label }}</a>
-          {%- endif -%}
-        </p>
+        <p class="fr-footer-warn">{{ section.settings.avvertenze_te_verde }}</p>
       {%- endif -%}
 
       <p class="fr-footer-odr">
@@ -95,7 +78,7 @@
   "name": "FREOS · Footer",
   "tag": "footer",
   "class": "freos-footer-section",
-  "max_blocks": 6,
+  "max_blocks": 4,
   "settings": [
     { "type": "header", "content": "Newsletter" },
     { "type": "checkbox", "id": "show_newsletter", "label": "Afficher", "default": true },
@@ -106,24 +89,15 @@
     { "type": "text", "id": "news_success", "label": "Succes", "default": "Fatto. Ti abbiamo aggiunto alla lista." },
     { "type": "richtext", "id": "news_consent", "label": "Consentement" },
 
-    { "type": "header", "content": "Identification du vendeur" },
-    { "type": "text", "id": "ragione_sociale", "label": "Raison sociale", "default": "DINSO VENTURES LLC" },
-    { "type": "text", "id": "indirizzo", "label": "Adresse", "default": "[INDIRIZZO_COMPLETO]" },
-    { "type": "text", "id": "riferimento_fiscale", "label": "Reference fiscale", "default": "[RIFERIMENTO_FISCALE]" },
-    { "type": "text", "id": "numero_rea", "label": "Numero REA", "default": "[NUMERO_REA]" },
-    { "type": "text", "id": "email", "label": "E-mail", "default": "[EMAIL_GENERALE]" },
-
     { "type": "header", "content": "Mentions obligatoires" },
     { "type": "textarea", "id": "avvertenze_integratore", "label": "Avertissements complement",
       "default": "Integratore alimentare. Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano. Non superare la dose giornaliera consigliata. Tenere fuori dalla portata dei bambini al di sotto dei tre anni. Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento." },
     { "type": "textarea", "id": "avvertenze_te_verde", "label": "Avertissement the vert",
       "default": "[AVVERTENZE_TE_VERDE]" },
-    { "type": "url", "id": "ingredienti_url", "label": "Lien page Ingredienti" },
-    { "type": "text", "id": "ingredienti_label", "label": "Libelle du lien", "default": "Leggi la pagina Ingredienti e sicurezza" },
     { "type": "text", "id": "odr_text", "label": "Texte ODR",
-      "default": "Piattaforma europea di risoluzione delle controversie online (ODR):" },
+      "default": "Risoluzione online delle controversie:" },
     { "type": "text", "id": "odr_url", "label": "URL ODR", "default": "https://ec.europa.eu/consumers/odr" },
-    { "type": "text", "id": "copyright", "label": "Copyright", "default": "© FREOS — DINSO VENTURES LLC" }
+    { "type": "text", "id": "copyright", "label": "Copyright", "default": "© FREOS" }
   ],
   "blocks": [
     {

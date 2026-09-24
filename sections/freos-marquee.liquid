@@ -1,0 +1,54 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · BANDEAU DEFILANT
+  Reprend rosalia-marquee : une bande pleine largeur, quelques termes courts.
+  Regle : seulement des termes REELS de l'offre, jamais un badge fabrique.
+  L'animation s'arrete si le visiteur demande moins de mouvement.
+  ============================================================================
+{%- endcomment -%}
+
+{%- assign items = section.settings.items | split: '|' -%}
+
+{%- if items.size > 0 -%}
+  <div class="fr fr-marquee fr-marquee--{{ section.settings.tone }}">
+    <div class="fr-marquee-track" style="--fr-mq-dur:{{ section.settings.duration }}s">
+      {%- for pass in (1..2) -%}
+        <div class="fr-marquee-run" {% if pass == 2 %}aria-hidden="true"{% endif %}>
+          {%- for it in items -%}
+            {%- assign line = it | strip -%}
+            {%- if line != blank -%}
+              <span class="fr-marquee-i">{{ line }}</span>
+              <span class="fr-marquee-d" aria-hidden="true">&middot;</span>
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "FREOS · Bandeau",
+  "tag": "section",
+  "class": "freos-marquee-section",
+  "settings": [
+    {
+      "type": "textarea", "id": "items", "label": "Termes",
+      "info": "Separes par |. Uniquement des termes reels de l'offre.",
+      "default": "Trenta sere di prova | Il barattolo resta a te | Nessun abbonamento | Sette estratti e uno ione | Dosi dichiarate in etichetta"
+    },
+    {
+      "type": "select", "id": "tone", "label": "Fond",
+      "options": [
+        { "value": "ink", "label": "Encre" },
+        { "value": "acc", "label": "Vert" },
+        { "value": "soft", "label": "Creme" }
+      ],
+      "default": "ink"
+    },
+    { "type": "range", "id": "duration", "label": "Duree du cycle", "min": 20, "max": 90, "step": 5, "unit": "s", "default": 45 }
+  ],
+  "presets": [{ "name": "FREOS · Bandeau" }]
+}
+{% endschema %}
