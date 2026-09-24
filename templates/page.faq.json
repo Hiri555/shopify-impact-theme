@@ -179,6 +179,7 @@
       "settings": {
         "surface": "white",
         "width": "narrow",
+        "reading": true,
         "padding_top": 56,
         "padding_bottom": 64
       }
