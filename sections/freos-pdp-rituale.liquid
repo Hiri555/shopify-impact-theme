@@ -1,18 +1,16 @@
 {%- comment -%}
   ============================================================================
-  FREOS · PDP — FREOS · 06 Ingredienti
+  FREOS · PDP — FREOS · 09 Rituale
   ----------------------------------------------------------------------------
-  Un rail qui defile a l'horizontale : a 390 px une carte fait 78 pour cent
-  de la largeur, donc la suivante depasse toujours un peu. C'est ce
-  depassement qui dit « ca continue » -- une grille coupee net ne le dit pas.
-  La dose est un champ a part, en gros et en vert : c'est ce qui separe une
-  fiche credible d'une liste de mots.
+  Trois cartes numerotees. EN PLACEHOLDER ASSUME : le proprietaire remplit
+  apres. Aucune posologie n'est inventee ici -- un mode d'emploi faux sur une
+  fiche de complement est pire qu'un mode d'emploi absent.
   Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur.
   Genere par build_pdp_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
 {%- endcomment -%}
 
-<div class="fr fr-pdp fr-pdp--ingredienti fr-surface--{{ section.settings.surface }}"
+<div class="fr fr-pdp fr-pdp--rituale fr-surface--{{ section.settings.surface }}"
      style="--fr-pt:{{ section.settings.padding_top }}px;--fr-pb:{{ section.settings.padding_bottom }}px">
   <div class="{{ section.settings.width }}">
 
@@ -31,59 +29,48 @@
     </header>
   {%- endif -%}
 
-    <div class="fr-rail" role="list">
+    <div class="fr-steps">
       {%- for block in section.blocks -%}
-        <article class="fr-icard" role="listitem" {{ block.shopify_attributes }}>
-          <span class="fr-icard-ph">
+        <article class="fr-step" {{ block.shopify_attributes }}>
+          <span class="fr-step-ph">
             {%- if block.settings.image != blank -%}
               {{ block.settings.image | image_url: width: 800 | image_tag:
-                   widths: '320,520,800', sizes: '(max-width:860px) 78vw, 260px',
-                   alt: block.settings.name, class: 'fr-icard-img', loading: 'lazy' }}
+                   widths: '320,520,800', sizes: '(max-width:860px) 42vw, 300px',
+                   alt: block.settings.label, class: 'fr-step-img', loading: 'lazy' }}
             {%- elsif block.settings.file != blank -%}
-              <img class="fr-icard-img" src="{{ block.settings.file | strip | asset_url }}"
-                   alt="{{ block.settings.name | escape }}" loading="lazy">
+              <img class="fr-step-img" src="{{ block.settings.file | strip | asset_url }}"
+                   alt="{{ block.settings.label | escape }}" loading="lazy">
             {%- endif -%}
           </span>
-          <div class="fr-icard-b">
-            <b class="fr-icard-n">{{ block.settings.name }}</b>
-            {%- if block.settings.dose != blank -%}
-              <p class="fr-icard-d">{{ block.settings.dose }}</p>
-            {%- endif -%}
-            {%- if block.settings.quote != blank -%}
-              <p class="fr-icard-q">{{ block.settings.quote }}</p>
-            {%- endif -%}
-            {%- if block.settings.role != blank -%}
-              <p class="fr-icard-r">{{ block.settings.role }}</p>
-            {%- endif -%}
-            {%- if block.settings.pill != blank -%}
-              <p class="fr-icard-p">{{ block.settings.pill }}</p>
-            {%- endif -%}
-          </div>
+          <p class="fr-step-n" aria-hidden="true">{{ block.settings.num }}</p>
+          <p class="fr-step-l">{{ block.settings.label }}</p>
+          {%- if block.settings.text != blank -%}
+            <p class="fr-step-x">{{ block.settings.text }}</p>
+          {%- endif -%}
         </article>
       {%- endfor -%}
     </div>
-    <p class="fr-rail-hint" aria-hidden="true">Scorri &#8594;</p>
 
-    {%- if section.settings.note != blank -%}
-      <div class="fr-ings-note">{{ section.settings.note }}</div>
+    {%- if section.settings.foot != blank -%}
+      <p class="fr-steps-foot">{{ section.settings.foot }}</p>
     {%- endif -%}
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "FREOS · 06 Ingredienti",
+  "name": "FREOS · 09 Rituale",
   "tag": "section",
-  "class": "freos-pdp-ingredienti",
+  "class": "freos-pdp-rituale",
   "settings": [
     {
       "type": "header",
       "content": "Bas de section"
     },
     {
-      "type": "richtext",
-      "id": "note",
-      "label": "Composition et avertissements"
+      "type": "text",
+      "id": "foot",
+      "label": "Ligne de pied"
     },
     {
       "type": "header",
@@ -172,8 +159,8 @@
   ],
   "blocks": [
     {
-      "type": "ing",
-      "name": "Ingrediente",
+      "type": "step",
+      "name": "Passaggio",
       "settings": [
         {
           "type": "image_picker",
@@ -187,34 +174,23 @@
         },
         {
           "type": "text",
-          "id": "name",
-          "label": "Nom"
+          "id": "num",
+          "label": "Numero",
+          "default": "01"
         },
         {
           "type": "text",
-          "id": "dose",
-          "label": "Dose",
-          "info": "En gros et en vert. Exemple : 1,38 mg (14 pour cent VNR)."
-        },
-        {
-          "type": "text",
-          "id": "quote",
-          "label": "Citation",
-          "info": "Une ligne, en italique. Le role en six mots."
+          "id": "label",
+          "label": "Libelle"
         },
         {
           "type": "textarea",
-          "id": "role",
-          "label": "Paragraphe"
-        },
-        {
-          "type": "text",
-          "id": "pill",
-          "label": "Pastille",
-          "info": "Exemple : 01 · LA SERA"
+          "id": "text",
+          "label": "Micro-texte"
         }
       ]
     }
-  ]
+  ],
+  "max_blocks": 6
 }
 {% endschema %}

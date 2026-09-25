@@ -1,13 +1,13 @@
 {%- comment -%}
   ============================================================================
-  FREOS · PDP 10 — FREOS · 10 Recensioni
+  FREOS · PDP — FREOS · 08 Recensioni
   ----------------------------------------------------------------------------
-  Avis. Pas de fausse photo de client : une initiale sur pastille, ce qui
-  est honnete et ce que fait la reference. Le badge « verifie » est un champ
-  libre, pas une affirmation codee en dur.
-  Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur
-  dans ce fichier. Genere par build_pdp_sections.py -- modifier le generateur,
-  pas ce fichier, sinon la prochaine generation ecrase la retouche.
+  Un rail qui defile, une carte par recit. L'image est une SCENE du soir,
+  pas un portrait : decision du proprietaire, pas de faux clients generes.
+  Aucune note globale ici -- le « 4,8 sur 126 recensioni » etait invente, et
+  les advertorials disent eux-memes qu'il n'y a pas encore d'avis verifies.
+  Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur.
+  Genere par build_pdp_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
 {%- endcomment -%}
 
@@ -30,82 +30,69 @@
     </header>
   {%- endif -%}
 
-    {%- if section.settings.score != blank -%}
-      <div class="fr-reviews-head">
-        <span class="fr-rate-stars" aria-hidden="true">
-          {%- for i in (1..5) -%}
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.6l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.4 4.2 13.4l.7-4.3-3.1-3 4.3-.6z"/></svg>
-          {%- endfor -%}
-        </span>
-        <b>{{ section.settings.score }}</b>
-        <span>{{ section.settings.count }}</span>
-        {%- if section.settings.source != blank -%}
-          <span class="fr-reviews-src">{{ section.settings.source }}</span>
-        {%- endif -%}
-      </div>
-    {%- endif -%}
-
-    <div class="fr-reviews-grid">
+    <div class="fr-rail fr-rail--rev" role="list">
       {%- for block in section.blocks -%}
-        <article class="fr-review" {{ block.shopify_attributes }}>
-          <span class="fr-rate-stars" aria-label="{{ block.settings.stars }}/5">
-            {%- for i in (1..5) -%}
-              <svg width="14" height="14" viewBox="0 0 16 16" aria-hidden="true"
-                   fill="{% if forloop.index <= block.settings.stars %}currentColor{% else %}none{% endif %}"
-                   stroke="currentColor" stroke-width="1.1"><path d="M8 1.6l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.4 4.2 13.4l.7-4.3-3.1-3 4.3-.6z"/></svg>
-            {%- endfor -%}
+        <article class="fr-rcard" role="listitem" {{ block.shopify_attributes }}>
+          <span class="fr-rcard-ph">
+            {%- if block.settings.image != blank -%}
+              {{ block.settings.image | image_url: width: 800 | image_tag:
+                   widths: '320,520,800', sizes: '(max-width:860px) 78vw, 300px',
+                   alt: block.settings.name, class: 'fr-rcard-img', loading: 'lazy' }}
+            {%- elsif block.settings.file != blank -%}
+              <img class="fr-rcard-img" src="{{ block.settings.file | strip | asset_url }}"
+                   alt="{{ block.settings.name | escape }}" loading="lazy">
+            {%- endif -%}
           </span>
-          {%- if block.settings.title != blank -%}
-            <h3 class="fr-review-t">{{ block.settings.title }}</h3>
-          {%- endif -%}
-          {%- if block.settings.body != blank -%}
-            <p class="fr-review-b">{{ block.settings.body }}</p>
-          {%- endif -%}
-          <footer class="fr-review-f">
-            <span class="fr-review-av" aria-hidden="true">{{ block.settings.name | strip | slice: 0 }}</span>
-            <span class="fr-review-n">{{ block.settings.name }}</span>
-            {%- if block.settings.badge != blank -%}
-              <span class="fr-review-vb">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
-                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.3 6.4 12 13 4.5"/></svg>
-                {{- block.settings.badge -}}
+          <div class="fr-rcard-b">
+            {%- assign n = block.settings.stars | times: 1 -%}
+            {%- if n > 0 -%}
+              <span class="fr-rcard-s" aria-label="{{ n }}/5">
+                {%- for i in (1..n) -%}
+                  <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.6l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.4 4.2 13.4l.7-4.3-3.1-3 4.3-.6z"/></svg>
+                {%- endfor -%}
               </span>
             {%- endif -%}
-            {%- if block.settings.date != blank -%}
-              <span class="fr-review-d">{{ block.settings.date }}</span>
+            {%- if block.settings.title != blank -%}
+              <h3 class="fr-rcard-t">{{ block.settings.title }}</h3>
             {%- endif -%}
-          </footer>
+            {%- if block.settings.body != blank -%}
+              <div class="fr-rcard-x">{{ block.settings.body }}</div>
+            {%- endif -%}
+            <footer class="fr-rcard-f">
+              <b>{{ block.settings.name }}</b>
+              {%- if block.settings.age != blank -%}
+                <span>&middot; {{ block.settings.age }}</span>
+              {%- endif -%}
+              {%- if block.settings.durata != blank -%}
+                <span>&middot; {{ block.settings.durata }}</span>
+              {%- endif -%}
+            </footer>
+          </div>
         </article>
       {%- endfor -%}
     </div>
+    <p class="fr-rail-hint" aria-hidden="true">Scorri &#8594;</p>
 
+    {%- if section.settings.source != blank -%}
+      <p class="fr-reviews-src">{{ section.settings.source }}</p>
+    {%- endif -%}
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "FREOS · 10 Recensioni",
+  "name": "FREOS · 08 Recensioni",
   "tag": "section",
   "class": "freos-pdp-recensioni",
   "settings": [
     {
       "type": "header",
-      "content": "Note agregee"
-    },
-    {
-      "type": "text",
-      "id": "score",
-      "label": "Note"
-    },
-    {
-      "type": "text",
-      "id": "count",
-      "label": "Nombre d'avis"
+      "content": "Bas de section"
     },
     {
       "type": "text",
       "id": "source",
-      "label": "Mention de source"
+      "label": "Mention de provenance"
     },
     {
       "type": "header",
@@ -159,7 +146,7 @@
       "type": "select",
       "id": "width",
       "label": "Largeur",
-      "default": "narrow",
+      "default": "wide",
       "options": [
         {
           "value": "narrow",
@@ -179,7 +166,7 @@
       "max": 120,
       "step": 4,
       "unit": "px",
-      "default": 56
+      "default": 40
     },
     {
       "type": "range",
@@ -189,29 +176,44 @@
       "max": 120,
       "step": 4,
       "unit": "px",
-      "default": 56
+      "default": 40
     }
   ],
   "blocks": [
     {
       "type": "review",
-      "name": "Avis",
+      "name": "Racconto",
       "settings": [
         {
-          "type": "text",
-          "id": "name",
-          "label": "Nom"
+          "type": "image_picker",
+          "id": "image",
+          "label": "Photo de scene"
         },
         {
           "type": "text",
-          "id": "badge",
-          "label": "Badge"
+          "id": "file",
+          "label": "Ou : asset du theme"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Prenom"
+        },
+        {
+          "type": "text",
+          "id": "age",
+          "label": "Age"
+        },
+        {
+          "type": "text",
+          "id": "durata",
+          "label": "Depuis combien de temps"
         },
         {
           "type": "range",
           "id": "stars",
           "label": "Etoiles",
-          "min": 1,
+          "min": 0,
           "max": 5,
           "step": 1,
           "default": 5
@@ -219,24 +221,14 @@
         {
           "type": "text",
           "id": "title",
-          "label": "Titre"
+          "label": "Titre du recit"
         },
         {
-          "type": "textarea",
+          "type": "richtext",
           "id": "body",
-          "label": "Texte"
-        },
-        {
-          "type": "text",
-          "id": "date",
-          "label": "Date"
+          "label": "Recit"
         }
       ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "FREOS · 10 Recensioni"
     }
   ]
 }

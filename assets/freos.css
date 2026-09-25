@@ -1151,3 +1151,145 @@
   .fr .fr-hhero-cta a{ display:flex; width:100%; justify-content:center;
     padding:18px 20px; }
 }
+
+/* ==========================================================================
+   PDP v2 — RAILS, COMPARATIF, RECITS, RITUEL, FAQ
+   --------------------------------------------------------------------------
+   Le rail : overflow-x:auto + scroll-snap. A 390 px une carte fait 78 % de la
+   largeur, donc la suivante depasse — c'est ce depassement qui dit « ca
+   continue ». Une grille coupee net ne le dit pas.
+   La gouttiere est reprise en padding sur le rail pour que la premiere carte
+   s'aligne sur le texte et que la derniere respire a droite.
+   ========================================================================== */
+.fr .fr-rail{ display:flex; gap:14px; overflow-x:auto; scroll-snap-type:x mandatory;
+  -webkit-overflow-scrolling:touch; scrollbar-width:thin;
+  padding:4px 0 16px; margin:0 0 4px; }
+.fr .fr-rail > *{ scroll-snap-align:start; flex:0 0 auto; }
+.fr .fr-rail::-webkit-scrollbar{ height:5px; }
+.fr .fr-rail::-webkit-scrollbar-thumb{ background:var(--accl); border-radius:4px; }
+.fr .fr-rail-hint{ font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink3); margin:0 0 4px; }
+
+/* --- cartes ingredient --- */
+.fr .fr-icard{ width:260px; background:#FFFEF9; border:1px solid var(--rule);
+  border-radius:3px; overflow:hidden; display:flex; flex-direction:column; }
+.fr .fr-icard-ph{ display:block; aspect-ratio:4/3; background:var(--soft); overflow:hidden; }
+.fr .fr-icard-img{ width:100%; height:100%; object-fit:cover; display:block; }
+.fr .fr-icard-b{ padding:16px 18px 18px; display:flex; flex-direction:column;
+  align-items:flex-start; flex:1 1 auto; }
+.fr .fr-icard-n{ font-size:13.5px; font-weight:600; color:var(--ink); }
+.fr .fr-icard-d{ font-family:Fraunces,serif; font-size:26px; line-height:1.1;
+  color:var(--acc); margin:4px 0 8px; }
+.fr .fr-icard-q{ font-family:Fraunces,serif; font-style:italic; font-size:14px;
+  color:var(--ink2); margin:0 0 10px; padding-bottom:10px;
+  border-bottom:1px solid var(--rule); width:100%; }
+.fr .fr-icard-r{ font-size:13px; line-height:1.55; color:var(--ink2); margin:0 0 12px; }
+.fr .fr-icard-p{ margin:auto 0 0; background:var(--acclt); color:var(--acc);
+  font-size:10.5px; letter-spacing:.12em; text-transform:uppercase; font-weight:600;
+  padding:5px 10px; border-radius:2px; }
+
+/* --- comparatif --- */
+.fr .fr-vs{ display:grid; grid-template-columns:1fr auto 1fr; align-items:start;
+  gap:0 18px; position:relative; }
+.fr .fr-vs-col{ min-width:0; border-radius:8px; padding:20px 20px 8px; }
+.fr .fr-vs-col--a{ background:rgba(18,22,15,.045); border:1px solid var(--rule); }
+.fr .fr-vs-col--b{ background:#FFFEF9; border:1px solid var(--acc); }
+.fr .fr-vs-head{ display:flex; align-items:center; gap:12px; padding-bottom:14px; }
+.fr .fr-vs-ph{ flex:0 0 54px; width:54px; height:54px; border-radius:4px;
+  background:var(--soft); overflow:hidden; display:block; }
+.fr .fr-vs-ph img{ width:100%; height:100%; object-fit:contain; display:block; }
+.fr .fr-vs-t{ margin:0; font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  font-weight:600; line-height:1.35; }
+.fr .fr-vs-col--a .fr-vs-t{ color:var(--ink3); }
+.fr .fr-vs-col--b .fr-vs-t{ color:var(--acc); }
+.fr .fr-vs-row{ padding:12px 0; border-top:1px dashed var(--rule); }
+.fr .fr-vs-row dt{ font-family:Fraunces,serif; font-style:italic; font-size:13px;
+  margin:0 0 4px; }
+.fr .fr-vs-col--a dt{ color:var(--ink3); }
+.fr .fr-vs-col--b dt{ color:var(--acc); }
+.fr .fr-vs-row dd{ margin:0; font-size:14px; line-height:1.5; color:var(--ink); }
+.fr .fr-vs-col--a dd{ color:var(--ink2); }
+.fr .fr-vs-badge{ align-self:center; width:40px; height:40px; border-radius:50%;
+  background:var(--acc); color:var(--soft); display:inline-flex; align-items:center;
+  justify-content:center; font-family:Fraunces,serif; font-style:italic; font-size:14px; }
+.fr .fr-vs-note{ font-size:12.5px; color:var(--ink3); margin-top:16px; }
+
+/* --- cartes de recit --- */
+.fr .fr-rcard{ width:300px; background:#FFFEF9; border:1px solid var(--rule);
+  border-radius:3px; overflow:hidden; display:flex; flex-direction:column; }
+.fr .fr-rcard-ph{ display:block; aspect-ratio:3/4; background:var(--soft); overflow:hidden; }
+.fr .fr-rcard-img{ width:100%; height:100%; object-fit:cover; display:block; }
+.fr .fr-rcard-b{ padding:16px 18px 18px; display:flex; flex-direction:column; flex:1 1 auto; }
+.fr .fr-rcard-s{ display:inline-flex; gap:1px; color:var(--acc); margin-bottom:8px; }
+.fr .fr-rcard-t{ font-family:Fraunces,serif; font-style:italic; font-weight:500;
+  font-size:17px; line-height:1.3; color:var(--ink); margin:0 0 8px; }
+.fr .fr-rcard-x p{ font-size:13.5px; line-height:1.6; color:var(--ink2); margin:0 0 10px; }
+/* `.fr footer` habille le pied de page du site. Sans cette regle il repeint le
+   pied de chaque carte en encre, et le nom devient encre sur encre. */
+.fr .fr-rcard .fr-rcard-f{ background:none; color:var(--ink3); margin:auto 0 0;
+  padding:12px 0 0; border-top:1px solid var(--rule); display:flex; flex-wrap:wrap;
+  gap:5px; font-size:12.5px; align-items:baseline; }
+.fr .fr-rcard .fr-rcard-f b{ color:var(--ink); font-weight:600; }
+
+/* --- le rituel --- */
+.fr .fr-steps{ display:grid; grid-template-columns:repeat(3,1fr); gap:16px; }
+.fr .fr-step{ background:#FFFEF9; border:1px solid var(--rule); border-radius:3px;
+  padding:14px 14px 20px; text-align:center; }
+.fr .fr-step-ph{ display:block; aspect-ratio:4/3; background:var(--soft);
+  border-radius:2px; overflow:hidden; margin-bottom:14px; }
+.fr .fr-step-img{ width:100%; height:100%; object-fit:cover; display:block; }
+.fr .fr-step-n{ font-family:Fraunces,serif; font-size:30px; line-height:1;
+  color:var(--accl); margin:0 0 6px; }
+.fr .fr-step-l{ font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+  font-weight:600; color:var(--ink); margin:0 0 8px; }
+.fr .fr-step-x{ font-family:Fraunces,serif; font-style:italic; font-size:13.5px;
+  line-height:1.5; color:var(--ink2); margin:0; }
+.fr .fr-steps-foot{ font-size:12.5px; color:var(--ink3); margin:16px 0 0; }
+
+/* --- FAQ --- */
+.fr .fr-faq{ border-top:1px solid var(--rule); }
+.fr .fr-faq-i{ border-bottom:1px solid var(--rule); }
+.fr .fr-faq-q{ list-style:none; cursor:pointer; display:flex; align-items:flex-start;
+  justify-content:space-between; gap:18px; padding:17px 0;
+  font-family:Fraunces,serif; font-size:16px; line-height:1.4; color:var(--ink); }
+.fr .fr-faq-q::-webkit-details-marker{ display:none; }
+.fr .fr-faq-m{ flex:0 0 14px; width:14px; height:14px; position:relative; margin-top:5px; }
+.fr .fr-faq-m::before,
+.fr .fr-faq-m::after{ content:''; position:absolute; background:var(--acc);
+  left:50%; top:50%; transform:translate(-50%,-50%); }
+.fr .fr-faq-m::before{ width:13px; height:1.5px; }
+.fr .fr-faq-m::after{ width:1.5px; height:13px; }
+.fr .fr-faq-i[open] .fr-faq-m::after{ transform:translate(-50%,-50%) scaleY(0); }
+.fr .fr-faq-a{ padding:0 0 18px; max-width:64ch; }
+.fr .fr-faq-a p{ font-size:14.5px; line-height:1.65; color:var(--ink2); margin:0 0 10px; }
+.fr .fr-faq-a li{ font-size:14.5px; line-height:1.6; color:var(--ink2); }
+
+/* --- barre de garantie --- */
+.fr .fr-guarbar{ display:flex; align-items:center; gap:14px; margin-top:26px;
+  padding:16px 18px; background:var(--acclt); border:1px solid var(--accl);
+  border-radius:4px; }
+.fr .fr-guarbar-i{ flex:0 0 auto; color:var(--acc); display:inline-flex; }
+.fr .fr-guarbar-b{ flex:1 1 auto; min-width:0; display:flex; flex-direction:column; gap:2px; }
+.fr .fr-guarbar-b b{ font-size:11px; letter-spacing:.12em; text-transform:uppercase;
+  color:var(--acc); }
+.fr .fr-guarbar-b span{ font-size:13.5px; line-height:1.5; color:var(--ink2); }
+.fr .fr-guarbar-a{ flex:0 0 auto; font-family:Fraunces,serif; font-style:italic;
+  font-size:13.5px; color:var(--acc); text-decoration:none; }
+.fr .fr-guarbar-a span{ margin-left:5px; }
+
+@media (max-width:860px){
+  .fr .fr-rail{ margin-left:-22px; margin-right:-22px;
+    padding-left:22px; padding-right:22px; }
+  .fr .fr-icard{ width:78vw; max-width:300px; }
+  .fr .fr-rcard{ width:78vw; max-width:320px; }
+  .fr .fr-vs{ grid-template-columns:1fr; gap:0; }
+  .fr .fr-vs-badge{ margin:-20px auto; position:relative; z-index:2; }
+  .fr .fr-steps{ grid-template-columns:1fr; }
+  .fr .fr-step{ display:grid; grid-template-columns:110px 1fr; gap:0 16px;
+    text-align:left; align-items:center; padding:14px; }
+  .fr .fr-step-ph{ margin:0; grid-row:1 / span 3; }
+  .fr .fr-step-n{ font-size:24px; margin:0; }
+  .fr .fr-step-l{ margin:0 0 4px; }
+  .fr .fr-guarbar{ flex-wrap:wrap; }
+  .fr .fr-guarbar-a{ width:100%; }
+}

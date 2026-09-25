@@ -1,22 +1,18 @@
 {%- comment -%}
   ============================================================================
-  FREOS · PDP 09 — FREOS · 09 Confronto
+  FREOS · PDP — FREOS · 07 Confronto
   ----------------------------------------------------------------------------
-  Tableau comparatif. La ligne mise en avant se coche, elle ne se marque
-  plus par une etoile en debut de texte -- une convention invisible qui se
-  perdait au premier copier-coller.
-
-  Sous 640 px le tableau cesse d'etre un tableau : chaque ligne devient un
-  bloc empile, l'intitule de colonne repris en etiquette par cellule (data-l).
-  Un tableau a trois colonnes sur 390 px se balaye lateralement, et 90 % du
-  trafic est mobile.
-  Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur
-  dans ce fichier. Genere par build_pdp_sections.py -- modifier le generateur,
-  pas ce fichier, sinon la prochaine generation ecrase la retouche.
+  Deux colonnes face a face, une pastille « vs » sur l'axe. A gauche la
+  solution deja essayee, en gris ; a droite FREOS, mis en valeur. Chaque
+  ligne est un bloc : le libelle, puis les deux reponses l'une en face de
+  l'autre.
+  A 390 px les colonnes s'empilent et le « vs » passe entre les deux.
+  Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur.
+  Genere par build_pdp_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
 {%- endcomment -%}
 
-<div class="fr fr-pdp fr-pdp--confronto fr-pdp--tbl fr-surface--{{ section.settings.surface }}"
+<div class="fr fr-pdp fr-pdp--confronto fr-surface--{{ section.settings.surface }}"
      style="--fr-pt:{{ section.settings.padding_top }}px;--fr-pb:{{ section.settings.padding_bottom }}px">
   <div class="{{ section.settings.width }}">
 
@@ -35,62 +31,90 @@
     </header>
   {%- endif -%}
 
-    <div class="fr-cmp-wrap">
-      <table class="fr-cmp">
-        {%- if section.settings.col1 != blank or section.settings.col2 != blank -%}
-          <thead>
-            <tr>
-              <th scope="col"><span class="fr-sr">Gesto</span></th>
-              <th scope="col">{{ section.settings.col1 }}</th>
-              <th scope="col">{{ section.settings.col2 }}</th>
-            </tr>
-          </thead>
-        {%- endif -%}
-        <tbody>
+    <div class="fr-vs">
+      <div class="fr-vs-col fr-vs-col--a">
+        <div class="fr-vs-head">
+          {%- if section.settings.img1 != blank -%}
+            <span class="fr-vs-ph"><img src="{{ section.settings.img1 | strip | asset_url }}"
+                 alt="{{ section.settings.col1 | escape }}" loading="lazy"></span>
+          {%- endif -%}
+          <p class="fr-vs-t">{{ section.settings.col1 }}</p>
+        </div>
+        <dl class="fr-vs-rows">
           {%- for block in section.blocks -%}
-            <tr class="{% if block.settings.accent %}is-acc{% endif %}" {{ block.shopify_attributes }}>
-              <th scope="row">
-                <span class="fr-cmp-m" aria-hidden="true">
-                  {%- if block.settings.accent -%}
-                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"
-                         stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.3 6.4 12 13 4.5"/></svg>
-                  {%- else -%}
-                    <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"
-                         stroke-linecap="round"><path d="M4.5 4.5l7 7M11.5 4.5l-7 7"/></svg>
-                  {%- endif -%}
-                </span>
-                {{ block.settings.label }}
-              </th>
-              <td{% if section.settings.col1 != blank %} data-l="{{ section.settings.col1 | escape }}"{% endif %}>{{ block.settings.c1 }}</td>
-              <td{% if section.settings.col2 != blank %} data-l="{{ section.settings.col2 | escape }}"{% endif %}>{{ block.settings.c2 }}</td>
-            </tr>
+            <div class="fr-vs-row" {{ block.shopify_attributes }}>
+              <dt>{{ block.settings.label }}</dt>
+              <dd>{{ block.settings.c1 }}</dd>
+            </div>
           {%- endfor -%}
-        </tbody>
-      </table>
+        </dl>
+      </div>
+
+      <span class="fr-vs-badge" aria-hidden="true">vs</span>
+
+      <div class="fr-vs-col fr-vs-col--b">
+        <div class="fr-vs-head">
+          {%- if section.settings.img2 != blank -%}
+            <span class="fr-vs-ph"><img src="{{ section.settings.img2 | strip | asset_url }}"
+                 alt="{{ section.settings.col2 | escape }}" loading="lazy"></span>
+          {%- endif -%}
+          <p class="fr-vs-t">{{ section.settings.col2 }}</p>
+        </div>
+        <dl class="fr-vs-rows">
+          {%- for block in section.blocks -%}
+            <div class="fr-vs-row" {{ block.shopify_attributes }}>
+              <dt>{{ block.settings.label }}</dt>
+              <dd>{{ block.settings.c2 }}</dd>
+            </div>
+          {%- endfor -%}
+        </dl>
+      </div>
     </div>
 
+    {%- if section.settings.note != blank -%}
+      <div class="fr-vs-note">{{ section.settings.note }}</div>
+    {%- endif -%}
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "FREOS · 09 Confronto",
+  "name": "FREOS · 07 Confronto",
   "tag": "section",
   "class": "freos-pdp-confronto",
   "settings": [
     {
       "type": "header",
-      "content": "Colonnes"
+      "content": "Les deux colonnes"
     },
     {
       "type": "text",
       "id": "col1",
-      "label": "Titre colonne 1"
+      "label": "Titre de gauche"
+    },
+    {
+      "type": "text",
+      "id": "img1",
+      "label": "Vignette de gauche (asset)"
     },
     {
       "type": "text",
       "id": "col2",
-      "label": "Titre colonne 2"
+      "label": "Titre de droite"
+    },
+    {
+      "type": "text",
+      "id": "img2",
+      "label": "Vignette de droite (asset)"
+    },
+    {
+      "type": "header",
+      "content": "Bas de section"
+    },
+    {
+      "type": "richtext",
+      "id": "note",
+      "label": "Note"
     },
     {
       "type": "header",
@@ -144,7 +168,7 @@
       "type": "select",
       "id": "width",
       "label": "Largeur",
-      "default": "narrow",
+      "default": "wide",
       "options": [
         {
           "value": "narrow",
@@ -164,7 +188,7 @@
       "max": 120,
       "step": 4,
       "unit": "px",
-      "default": 56
+      "default": 40
     },
     {
       "type": "range",
@@ -174,7 +198,7 @@
       "max": 120,
       "step": 4,
       "unit": "px",
-      "default": 56
+      "default": 40
     }
   ],
   "blocks": [
@@ -188,27 +212,16 @@
           "label": "Libelle"
         },
         {
-          "type": "text",
+          "type": "textarea",
           "id": "c1",
-          "label": "Colonne 1"
+          "label": "Colonne de gauche"
         },
         {
-          "type": "text",
+          "type": "textarea",
           "id": "c2",
-          "label": "Colonne 2"
-        },
-        {
-          "type": "checkbox",
-          "id": "accent",
-          "label": "Mettre en avant",
-          "default": false
+          "label": "Colonne de droite"
         }
       ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "FREOS · 09 Confronto"
     }
   ]
 }
