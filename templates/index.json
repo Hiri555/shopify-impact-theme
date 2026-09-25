@@ -39,8 +39,8 @@
         "surface": "softer",
         "width": "narrow",
         "reading": false,
-        "padding_top": 56,
-        "padding_bottom": 56
+        "padding_top": 40,
+        "padding_bottom": 40
       },
       "blocks": {
         "00_section_header": {
@@ -69,8 +69,8 @@
         "surface": "white",
         "width": "narrow",
         "reading": false,
-        "padding_top": 56,
-        "padding_bottom": 48
+        "padding_top": 40,
+        "padding_bottom": 40
       },
       "blocks": {
         "00_kicker": {
@@ -105,6 +105,24 @@
             "url": "/pages/listicle",
             "reassurance": ""
           }
+        },
+        "05_turno_h": {
+          "type": "heading",
+          "settings": {
+            "text": "Il <em>Turno di Notte</em>."
+          }
+        },
+        "06_turno_tl": {
+          "type": "timeline",
+          "settings": {
+            "rows": "RESTA | È un gel, non un liquido. | Dopo la deglutizione resta sulle mucose invece di sciacquarle e andarsene.\nLEGA | Gli ioni di zinco legano i composti solforati. | Zinco 1,38 mg (14% VNR) per porzione serale. Un composto legato non è più volatile.\nACCOMPAGNA | Copre le ore in cui la saliva cala. | La bocca resta chiusa, e quello che sale non viene più diluito. Non trenta secondi: una notte."
+          }
+        },
+        "07_turno_p": {
+          "type": "punch",
+          "settings": {
+            "text": "Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova."
+          }
         }
       },
       "block_order": [
@@ -112,6 +130,9 @@
         "01_heading",
         "02_paragraph",
         "03_bars",
+        "05_turno_h",
+        "06_turno_tl",
+        "07_turno_p",
         "04_cta"
       ]
     },
@@ -121,8 +142,8 @@
         "surface": "white",
         "width": "narrow",
         "reading": false,
-        "padding_top": 48,
-        "padding_bottom": 48
+        "padding_top": 40,
+        "padding_bottom": 40
       },
       "blocks": {
         "00_section_header": {
@@ -153,8 +174,8 @@
         "surface": "white",
         "width": "narrow",
         "reading": false,
-        "padding_top": 48,
-        "padding_bottom": 48
+        "padding_top": 40,
+        "padding_bottom": 40
       },
       "blocks": {
         "00_kicker": {
@@ -188,8 +209,8 @@
         "surface": "ink",
         "width": "narrow",
         "reading": false,
-        "padding_top": 64,
-        "padding_bottom": 64
+        "padding_top": 40,
+        "padding_bottom": 40
       },
       "blocks": {
         "00_kicker": {
