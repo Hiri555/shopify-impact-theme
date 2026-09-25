@@ -1,0 +1,159 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — FREOS LP · Fasi
+  ----------------------------------------------------------------------------
+  Les cartes illustrees d'une progression. Chaque carte porte son image, son
+  numero et son texte -- tous editables.
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="freos-lp-body {{ section.settings.scope }}"
+     style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+  <section class="section">
+    {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+    {%- if section.settings.intro != blank -%}<div class="prose">{{ section.settings.intro }}</div>{%- endif -%}
+    <div class="phase-anatomia">
+      {%- for block in section.blocks -%}
+        <div class="phase-card" {{ block.shopify_attributes }}>
+          {%- if block.settings.image != blank -%}
+  {{ block.settings.image | image_url: width: 800 | image_tag: widths: '480,760,1000,800', sizes: '(max-width:760px) 100vw, 720px', alt: block.settings.alt }}
+{%- elsif block.settings.file != blank -%}
+  <img src="{{ block.settings.file | strip | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy">
+{%- endif -%}
+          <div class="phase-title">
+            {%- if block.settings.num != blank -%}<span class="phase-num">{{ block.settings.num }}</span>{%- endif -%}
+            {{- block.settings.title -}}
+          </div>
+          {%- if block.settings.text != blank -%}<p class="phase-body">{{ block.settings.text }}</p>{%- endif -%}
+        </div>
+      {%- endfor -%}
+    </div>
+    {%- if section.settings.outro != blank -%}<div class="prose">{{ section.settings.outro }}</div>{%- endif -%}
+    {%- if section.settings.credit != blank -%}<figcaption>{{ section.settings.credit }}</figcaption>{%- endif -%}
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS LP · Fasi",
+  "tag": "section",
+  "class": "freos-lp-phases",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre de section"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Introduction"
+    },
+    {
+      "type": "richtext",
+      "id": "outro",
+      "label": "Conclusion"
+    },
+    {
+      "type": "text",
+      "id": "credit",
+      "label": "Credit illustration"
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "scope",
+      "label": "Page",
+      "default": "fr-lp1",
+      "info": "Choisit la feuille de style appliquee. Une section deplacee d'une LP a l'autre doit changer de page ici.",
+      "options": [
+        {
+          "value": "fr-lp1",
+          "label": "Adv 1 · Inchiesta"
+        },
+        {
+          "value": "fr-lp2",
+          "label": "Adv 2 · Cripta"
+        },
+        {
+          "value": "fr-lp3",
+          "label": "Listicle"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Marges"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "phase",
+      "name": "Fase",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "file",
+          "label": "Ou : asset du theme",
+          "info": "Nom de fichier, utilise si aucune image n'est deposee."
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Texte alternatif"
+        },
+        {
+          "type": "text",
+          "id": "num",
+          "label": "Numero"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Texte"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS LP · Fasi"
+    }
+  ]
+}
+{% endschema %}

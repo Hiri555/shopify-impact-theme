@@ -1,0 +1,96 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — FREOS LP · Testata
+  ----------------------------------------------------------------------------
+  Le bandeau de titre de la publication.
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="freos-lp-body {{ section.settings.scope }}"
+     style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+  <header class="masthead">
+    {%- if section.settings.logo != blank -%}
+      <div class="masthead-logo">{{ section.settings.logo }}</div>
+    {%- endif -%}
+    {%- if section.settings.tagline != blank -%}
+      <div class="masthead-tagline">{{ section.settings.tagline }}</div>
+    {%- endif -%}
+  </header>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS LP · Testata",
+  "tag": "section",
+  "class": "freos-lp-masthead",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo",
+      "label": "Titre",
+      "info": "<em>...</em> met un fragment en italique."
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Signature"
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "scope",
+      "label": "Page",
+      "default": "fr-lp1",
+      "info": "Choisit la feuille de style appliquee. Une section deplacee d'une LP a l'autre doit changer de page ici.",
+      "options": [
+        {
+          "value": "fr-lp1",
+          "label": "Adv 1 · Inchiesta"
+        },
+        {
+          "value": "fr-lp2",
+          "label": "Adv 2 · Cripta"
+        },
+        {
+          "value": "fr-lp3",
+          "label": "Listicle"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Marges"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS LP · Testata"
+    }
+  ]
+}
+{% endschema %}

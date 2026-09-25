@@ -1,0 +1,234 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — FREOS LP · Editoriale
+  ----------------------------------------------------------------------------
+  Le cheval de trait : un titre de section et une suite de blocs. Couvre la
+  majorite des sections d'un advertorial, et remplace a lui seul ce qui serait
+  sinon une demi-douzaine de fichiers.
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="freos-lp-body {{ section.settings.scope }}"
+     style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+  <section class="section">
+    {%- if section.settings.heading != blank -%}
+      <h2>{{ section.settings.heading }}</h2>
+    {%- endif -%}
+
+    {%- for block in section.blocks -%}
+      {%- case block.type -%}
+
+        {%- when 'para' -%}
+          <div class="prose" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+
+        {%- when 'sub' -%}
+          <h3 {{ block.shopify_attributes }}>{{ block.settings.text }}</h3>
+
+        {%- when 'pull' -%}
+          <div class="pull" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
+
+        {%- when 'figure' -%}
+          <figure {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank -%}
+  {{ block.settings.image | image_url: width: 1200 | image_tag: widths: '480,760,1000,1200', sizes: '(max-width:760px) 100vw, 720px', alt: block.settings.alt }}
+{%- elsif block.settings.file != blank -%}
+  <img src="{{ block.settings.file | strip | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy">
+{%- endif -%}
+            {%- if block.settings.caption != blank -%}
+              <figcaption>{{ block.settings.caption }}</figcaption>
+            {%- endif -%}
+          </figure>
+
+        {%- when 'testimony' -%}
+          <div class="testimony" {{ block.shopify_attributes }}>
+            {%- if block.settings.image != blank or block.settings.file != blank -%}
+              <div class="testimony-photo">
+                {%- if block.settings.image != blank -%}
+                  {{ block.settings.image | image_url: width: 200 | image_tag: widths: '100,200', sizes: '64px', alt: block.settings.name }}
+                {%- else -%}
+                  <img src="{{ block.settings.file | strip | asset_url }}" alt="{{ block.settings.name | escape }}" loading="lazy">
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            <div class="testimony-header">
+              {%- if block.settings.name != blank -%}<div class="testimony-name">{{ block.settings.name }}</div>{%- endif -%}
+              {%- if block.settings.role != blank -%}<div class="testimony-role">{{ block.settings.role }}</div>{%- endif -%}
+            </div>
+            {%- if block.settings.quote != blank -%}<blockquote>{{ block.settings.quote }}</blockquote>{%- endif -%}
+          </div>
+
+      {%- endcase -%}
+    {%- endfor -%}
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS LP · Editoriale",
+  "tag": "section",
+  "class": "freos-lp-editorial",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre de section",
+      "info": "<em>...</em> met un fragment en italique d'accent."
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "scope",
+      "label": "Page",
+      "default": "fr-lp1",
+      "info": "Choisit la feuille de style appliquee. Une section deplacee d'une LP a l'autre doit changer de page ici.",
+      "options": [
+        {
+          "value": "fr-lp1",
+          "label": "Adv 1 · Inchiesta"
+        },
+        {
+          "value": "fr-lp2",
+          "label": "Adv 2 · Cripta"
+        },
+        {
+          "value": "fr-lp3",
+          "label": "Listicle"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Marges"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "para",
+      "name": "Paragraphe",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Texte"
+        }
+      ]
+    },
+    {
+      "type": "sub",
+      "name": "Sous-titre",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texte"
+        }
+      ]
+    },
+    {
+      "type": "pull",
+      "name": "Citation detachee",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Texte"
+        }
+      ]
+    },
+    {
+      "type": "figure",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "file",
+          "label": "Ou : asset du theme",
+          "info": "Nom de fichier, utilise si aucune image n'est deposee."
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Texte alternatif"
+        },
+        {
+          "type": "textarea",
+          "id": "caption",
+          "label": "Legende"
+        }
+      ]
+    },
+    {
+      "type": "testimony",
+      "name": "Temoin",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "file",
+          "label": "Ou : asset du theme",
+          "info": "Nom de fichier, utilise si aucune image n'est deposee."
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Texte alternatif"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nom"
+        },
+        {
+          "type": "text",
+          "id": "role",
+          "label": "Qualite"
+        },
+        {
+          "type": "richtext",
+          "id": "quote",
+          "label": "Citation"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS LP · Editoriale"
+    }
+  ]
+}
+{% endschema %}

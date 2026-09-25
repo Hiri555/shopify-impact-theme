@@ -1,0 +1,135 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — FREOS LP · Colophon
+  ----------------------------------------------------------------------------
+  L'ours de la publication. Chaque entree est un bloc.
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="freos-lp-body {{ section.settings.scope }}"
+     style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+  <footer class="colophon">
+    <div class="colophon-inner">
+      <div class="colophon-masthead">
+        {%- if section.settings.logo != blank -%}<div class="colophon-logo">{{ section.settings.logo }}</div>{%- endif -%}
+        {%- if section.settings.tagline != blank -%}<div class="colophon-tagline">{{ section.settings.tagline }}</div>{%- endif -%}
+      </div>
+      <div class="colophon-grid">
+        {%- for block in section.blocks -%}
+          <div {{ block.shopify_attributes }}>
+            {%- if block.settings.label != blank -%}<div class="colophon-label">{{ block.settings.label }}</div>{%- endif -%}
+            <div class="colophon-body">{{ block.settings.body }}</div>
+          </div>
+        {%- endfor -%}
+      </div>
+      <div class="colophon-legal">
+        {%- if section.settings.legal != blank -%}{{ section.settings.legal }}{%- endif -%}
+        {%- if section.settings.links != blank -%}<p class="colophon-copy">{{ section.settings.links }}</p>{%- endif -%}
+      </div>
+    </div>
+  </footer>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS LP · Colophon",
+  "tag": "section",
+  "class": "freos-lp-colophon",
+  "settings": [
+    {
+      "type": "text",
+      "id": "logo",
+      "label": "Titre"
+    },
+    {
+      "type": "text",
+      "id": "tagline",
+      "label": "Signature"
+    },
+    {
+      "type": "richtext",
+      "id": "legal",
+      "label": "Mentions legales"
+    },
+    {
+      "type": "richtext",
+      "id": "links",
+      "label": "Liens et copyright"
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "scope",
+      "label": "Page",
+      "default": "fr-lp1",
+      "info": "Choisit la feuille de style appliquee. Une section deplacee d'une LP a l'autre doit changer de page ici.",
+      "options": [
+        {
+          "value": "fr-lp1",
+          "label": "Adv 1 · Inchiesta"
+        },
+        {
+          "value": "fr-lp2",
+          "label": "Adv 2 · Cripta"
+        },
+        {
+          "value": "fr-lp3",
+          "label": "Listicle"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Marges"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "entry",
+      "name": "Voce",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Intitule"
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Contenu"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS LP · Colophon"
+    }
+  ]
+}
+{% endschema %}

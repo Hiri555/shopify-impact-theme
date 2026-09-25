@@ -1,0 +1,112 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — FREOS LP · Offerta
+  ----------------------------------------------------------------------------
+  Le bloc prix. La ligne de garantie n'est pas optionnelle par accident : si
+  elle manque, la page annonce un prix sans dire ce qui se passe si ca ne
+  convient pas.
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="freos-lp-body {{ section.settings.scope }}"
+     style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+  <div class="price-block">
+    {%- if section.settings.headline != blank -%}<div class="price-headline">{{ section.settings.headline }}</div>{%- endif -%}
+    {%- if section.settings.body != blank -%}<div class="price-body">{{ section.settings.body }}</div>{%- endif -%}
+    {%- if section.settings.cta_label != blank -%}
+      <a href="{{ section.settings.cta_url | default: '/' }}" class="price-cta">{{ section.settings.cta_label }}</a>
+    {%- endif -%}
+    {%- if section.settings.guarantee != blank -%}<div class="price-guarantee">{{ section.settings.guarantee }}</div>{%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS LP · Offerta",
+  "tag": "section",
+  "class": "freos-lp-offer",
+  "settings": [
+    {
+      "type": "text",
+      "id": "headline",
+      "label": "Accroche"
+    },
+    {
+      "type": "richtext",
+      "id": "body",
+      "label": "Texte"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Libelle du bouton"
+    },
+    {
+      "type": "text",
+      "id": "cta_url",
+      "label": "Lien"
+    },
+    {
+      "type": "richtext",
+      "id": "guarantee",
+      "label": "Garantie"
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "scope",
+      "label": "Page",
+      "default": "fr-lp1",
+      "info": "Choisit la feuille de style appliquee. Une section deplacee d'une LP a l'autre doit changer de page ici.",
+      "options": [
+        {
+          "value": "fr-lp1",
+          "label": "Adv 1 · Inchiesta"
+        },
+        {
+          "value": "fr-lp2",
+          "label": "Adv 2 · Cripta"
+        },
+        {
+          "value": "fr-lp3",
+          "label": "Listicle"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Marges"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS LP · Offerta"
+    }
+  ]
+}
+{% endschema %}

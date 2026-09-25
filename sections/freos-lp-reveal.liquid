@@ -1,0 +1,199 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — FREOS LP · Rivelazione
+  ----------------------------------------------------------------------------
+  La revelation produit et les ingredients.
+
+  Chaque ingredient est un bloc portant son nom, sa dose et SON benefice --
+  sur le terrain de la forme, du moment et du geste. Jamais une allegation
+  medicale : « lega » pour le zinc, jamais « uccide » ni « antibatterico ».
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="freos-lp-body {{ section.settings.scope }}"
+     style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+  <section class="section">
+    {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
+    {%- if section.settings.intro != blank -%}<div class="prose">{{ section.settings.intro }}</div>{%- endif -%}
+
+    {%- if section.settings.photo != blank or section.settings.photo_file != blank -%}
+      <figure class="product-photo">
+        {%- if section.settings.photo != blank -%}
+          {{ section.settings.photo | image_url: width: 1200 | image_tag: widths: '480,760,1000,1200', sizes: '(max-width:760px) 100vw, 720px', alt: section.settings.photo_alt }}
+        {%- else -%}
+          <img src="{{ section.settings.photo_file | strip | asset_url }}" alt="{{ section.settings.photo_alt | escape }}" loading="lazy">
+        {%- endif -%}
+        {%- if section.settings.photo_caption != blank -%}
+          <figcaption>{{ section.settings.photo_caption }}</figcaption>
+        {%- endif -%}
+      </figure>
+    {%- endif -%}
+
+    {%- if section.settings.ing_heading != blank -%}<h3>{{ section.settings.ing_heading }}</h3>{%- endif -%}
+    <div class="prose">
+      {%- for block in section.blocks -%}
+        <p {{ block.shopify_attributes }}>
+          <strong>{{ block.settings.name }}{% if block.settings.dose != blank %} — {{ block.settings.dose }}{% endif %}.</strong>
+          {{ block.settings.benefit }}
+        </p>
+      {%- endfor -%}
+    </div>
+
+    {%- if section.settings.note != blank -%}<div class="prose">{{ section.settings.note }}</div>{%- endif -%}
+    {%- if section.settings.disclaimer_heading != blank -%}<h3>{{ section.settings.disclaimer_heading }}</h3>{%- endif -%}
+    {%- if section.settings.disclaimer != blank -%}<div class="prose">{{ section.settings.disclaimer }}</div>{%- endif -%}
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS LP · Rivelazione",
+  "tag": "section",
+  "class": "freos-lp-reveal",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre de section"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Introduction"
+    },
+    {
+      "type": "header",
+      "content": "Photo produit"
+    },
+    {
+      "type": "image_picker",
+      "id": "photo",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "photo_file",
+      "label": "Ou : asset du theme"
+    },
+    {
+      "type": "text",
+      "id": "photo_alt",
+      "label": "Texte alternatif"
+    },
+    {
+      "type": "textarea",
+      "id": "photo_caption",
+      "label": "Legende"
+    },
+    {
+      "type": "header",
+      "content": "Ingredients"
+    },
+    {
+      "type": "text",
+      "id": "ing_heading",
+      "label": "Titre du bloc ingredients"
+    },
+    {
+      "type": "richtext",
+      "id": "note",
+      "label": "Note sous les ingredients"
+    },
+    {
+      "type": "header",
+      "content": "Ce que le produit n'est pas"
+    },
+    {
+      "type": "text",
+      "id": "disclaimer_heading",
+      "label": "Titre"
+    },
+    {
+      "type": "richtext",
+      "id": "disclaimer",
+      "label": "Texte"
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "scope",
+      "label": "Page",
+      "default": "fr-lp1",
+      "info": "Choisit la feuille de style appliquee. Une section deplacee d'une LP a l'autre doit changer de page ici.",
+      "options": [
+        {
+          "value": "fr-lp1",
+          "label": "Adv 1 · Inchiesta"
+        },
+        {
+          "value": "fr-lp2",
+          "label": "Adv 2 · Cripta"
+        },
+        {
+          "value": "fr-lp3",
+          "label": "Listicle"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Marges"
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "ing",
+      "name": "Ingrediente",
+      "settings": [
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Nom"
+        },
+        {
+          "type": "text",
+          "id": "dose",
+          "label": "Dose",
+          "info": "Reprise de l'etiquette. Laisser vide si non declaree."
+        },
+        {
+          "type": "richtext",
+          "id": "benefit",
+          "label": "Benefice",
+          "info": "Forme, moment, geste. Jamais une allegation medicale."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS LP · Rivelazione"
+    }
+  ]
+}
+{% endschema %}
