@@ -548,6 +548,7 @@
 .fr-hero{ padding:34px 0 8px; }
 .fr-hero .wide{ max-width:1120px; }
 .fr .fr-hero-grid{ display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start; }
+.fr .fr-hero-grid > *{ min-width:0; }
 
 /* galerie */
 .fr .fr-gal-main{ position:relative; aspect-ratio:1/1; background:var(--soft);
@@ -644,7 +645,8 @@
 .fr .fr-sticky-b{ width:auto; flex:0 0 auto; padding:13px 22px; font-size:15px; }
 
 @media (max-width:860px){
-  .fr .fr-hero-grid{ grid-template-columns:1fr; gap:22px; }
+  .fr .fr-hero-grid{ grid-template-columns:1fr; gap:18px; }
+  .fr .fr-gal-thumb{ flex:0 0 54px; width:54px; height:54px; }
   .fr .fr-buy-title{ font-size:27px; }
   .fr .fr-sticky-t{ display:none; }
 }
