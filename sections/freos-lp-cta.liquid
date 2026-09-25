@@ -1,10 +1,11 @@
 {%- comment -%}
   ============================================================================
-  FREOS · LP — FREOS LP · Offerta
+  FREOS · LP — FREOS LP · Bottone
   ----------------------------------------------------------------------------
-  Le bloc prix. La ligne de garantie n'est pas optionnelle par accident : si
-  elle manque, la page annonce un prix sans dire ce qui se passe si ca ne
-  convient pas.
+  Le bouton de milieu de page.
+
+  Il ne rend RIEN si le libelle est vide : c'est la garantie qu'aucun appel a
+  l'action n'apparait avant la revelation du produit.
   Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
   Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
@@ -12,69 +13,35 @@
 
 <div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
-  {%- if section.settings.heading != blank or section.settings.intro != blank -%}
-    <section class="section">
-      {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
-      {%- if section.settings.intro != blank -%}
-        <div class="prose">{{ section.settings.intro }}</div>
-      {%- endif -%}
-    </section>
+  {%- if section.settings.label != blank -%}
+    <div class="cta-mid">
+      <a href="{{ section.settings.url | default: '/' }}">{{ section.settings.label }}</a>
+      {%- if section.settings.sub != blank -%}<p>{{ section.settings.sub }}</p>{%- endif -%}
+    </div>
   {%- endif -%}
-  <div class="price-block">
-    {%- if section.settings.headline != blank -%}<div class="price-headline">{{ section.settings.headline }}</div>{%- endif -%}
-    {%- if section.settings.body != blank -%}<div class="price-body">{{ section.settings.body }}</div>{%- endif -%}
-    {%- if section.settings.cta_label != blank -%}
-      <a href="{{ section.settings.cta_url | default: '/' }}" class="price-cta">{{ section.settings.cta_label }}</a>
-    {%- endif -%}
-    {%- if section.settings.guarantee != blank -%}<div class="price-guarantee">{{ section.settings.guarantee }}</div>{%- endif -%}
-  </div>
 </div>
 
 {% schema %}
 {
-  "name": "FREOS LP · Offerta",
+  "name": "FREOS LP · Bottone",
   "tag": "section",
-  "class": "freos-lp-offer",
+  "class": "freos-lp-cta",
   "settings": [
     {
       "type": "text",
-      "id": "heading",
-      "label": "Titre de section",
-      "info": "Optionnel. Le texte de conclusion qui precede le prix."
-    },
-    {
-      "type": "richtext",
-      "id": "intro",
-      "label": "Avant le bloc prix"
-    },
-    {
-      "type": "header",
-      "content": "Le bloc prix"
+      "id": "label",
+      "label": "Libelle",
+      "info": "Vide = aucun bouton. Ne rien mettre avant la revelation du produit."
     },
     {
       "type": "text",
-      "id": "headline",
-      "label": "Accroche"
-    },
-    {
-      "type": "richtext",
-      "id": "body",
-      "label": "Texte"
-    },
-    {
-      "type": "text",
-      "id": "cta_label",
-      "label": "Libelle du bouton"
-    },
-    {
-      "type": "text",
-      "id": "cta_url",
+      "id": "url",
       "label": "Lien"
     },
     {
-      "type": "richtext",
-      "id": "guarantee",
-      "label": "Garantie"
+      "type": "textarea",
+      "id": "sub",
+      "label": "Ligne sous le bouton"
     },
     {
       "type": "header",
@@ -135,7 +102,7 @@
   ],
   "presets": [
     {
-      "name": "FREOS LP · Offerta"
+      "name": "FREOS LP · Bottone"
     }
   ]
 }

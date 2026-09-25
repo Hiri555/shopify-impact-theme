@@ -8,8 +8,16 @@
   ============================================================================
 {%- endcomment -%}
 
-<div class="freos-lp-body {{ section.settings.scope }}"
+<div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+  {%- if section.settings.whisper != blank -%}
+    <div class="whisper">
+      {{ section.settings.whisper }}
+      {%- if section.settings.whisper_sign != blank -%}
+        <p class="whisper-sign">{{ section.settings.whisper_sign }}</p>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
   <footer class="colophon">
     <div class="colophon-inner">
       <div class="colophon-masthead">
@@ -38,6 +46,21 @@
   "tag": "section",
   "class": "freos-lp-colophon",
   "settings": [
+    {
+      "type": "richtext",
+      "id": "whisper",
+      "label": "L'adieu de l'auteur",
+      "info": "Les dernieres lignes, juste avant l'ours. Optionnel."
+    },
+    {
+      "type": "text",
+      "id": "whisper_sign",
+      "label": "Signature de l'adieu"
+    },
+    {
+      "type": "header",
+      "content": "L'ours"
+    },
     {
       "type": "text",
       "id": "logo",
@@ -86,6 +109,13 @@
     {
       "type": "header",
       "content": "Marges"
+    },
+    {
+      "type": "checkbox",
+      "id": "rule",
+      "label": "Filet de separation au-dessus",
+      "info": "A decocher sur la premiere partie de l'article.",
+      "default": true
     },
     {
       "type": "range",

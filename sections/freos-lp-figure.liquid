@@ -1,0 +1,291 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — FREOS LP · Figura
+  ----------------------------------------------------------------------------
+  Une figure avec ses reperes.
+
+  Les marqueurs etaient positionnes par des styles en ligne
+  (`style="left:38%;top:60%"`) : onze coordonnees ecrites en dur, qui se
+  seraient decalees a la premiere image remplacee. Chacun devient un bloc avec
+  deux curseurs de 0 a 100 %, son libelle, son numero et son cote.
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
+     style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+  <section class="section">
+    {%- if section.settings.heading != blank -%}
+      <h2>{{ section.settings.heading }}</h2>
+    {%- endif -%}
+    {%- if section.settings.intro != blank -%}
+      <div class="prose">{{ section.settings.intro }}</div>
+    {%- endif -%}
+
+    {%- if section.settings.label != blank or section.settings.title != blank
+          or section.settings.text != blank -%}
+      <div class="step">
+        {%- if section.settings.label != blank -%}
+          <div class="step-n">{{ section.settings.label }}</div>
+        {%- endif -%}
+        {%- if section.settings.title != blank -%}<h4>{{ section.settings.title }}</h4>{%- endif -%}
+        {%- if section.settings.text != blank -%}{{ section.settings.text }}{%- endif -%}
+        {%- if section.settings.source != blank -%}
+          <div class="s">{{ section.settings.source }}</div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    <figure class="{{ section.settings.kind | default: 'fig' }}">
+      {%- if section.settings.kicker != blank and section.settings.kind != 'plate' -%}
+        <div class="fig-h">{{ section.settings.kicker }}</div>
+      {%- endif -%}
+
+      {%- if section.settings.kind == 'plate' -%}
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1200 | image_tag:
+               widths: '480,760,1000,1200', sizes: '(max-width:760px) 100vw, 720px',
+               alt: section.settings.alt }}
+        {%- elsif section.settings.file != blank -%}
+          <img src="{{ section.settings.file | strip | asset_url }}"
+               alt="{{ section.settings.alt | escape }}" loading="lazy">
+        {%- endif -%}
+      {%- else -%}
+        <div class="fig-i">
+          {%- if section.settings.image != blank -%}
+            {{ section.settings.image | image_url: width: 1200 | image_tag:
+                 widths: '480,760,1000,1200', sizes: '(max-width:760px) 100vw, 720px',
+                 alt: section.settings.alt }}
+          {%- elsif section.settings.file != blank -%}
+            <img src="{{ section.settings.file | strip | asset_url }}"
+                 alt="{{ section.settings.alt | escape }}" loading="lazy">
+          {%- endif -%}
+
+          {%- for block in section.blocks -%}
+            <div class="mk mk-{{ block.settings.side }}"
+                 style="left:{{ block.settings.left }}%;top:{{ block.settings.top }}%"
+                 {{ block.shopify_attributes }}>
+              {%- if block.settings.num != blank -%}
+                <span class="dot">{{ block.settings.num }}</span>
+              {%- endif -%}
+              <span class="txt">{{ block.settings.label }}</span>
+            </div>
+          {%- endfor -%}
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.caption != blank -%}
+        <figcaption>{{ section.settings.caption }}</figcaption>
+      {%- endif -%}
+    </figure>
+  </section>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS LP · Figura",
+  "tag": "section",
+  "class": "freos-lp-figure",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre de section",
+      "info": "Optionnel. Seulement si la figure ouvre une partie."
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Chapeau"
+    },
+    {
+      "type": "header",
+      "content": "L'etape qui precede la figure"
+    },
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Rang",
+      "info": "« Primo », « Secondo »... Vide = pas d'etape."
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Titre de l'etape"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Texte de l'etape"
+    },
+    {
+      "type": "textarea",
+      "id": "source",
+      "label": "Source de l'etape"
+    },
+    {
+      "type": "header",
+      "content": "La figure"
+    },
+    {
+      "type": "select",
+      "id": "kind",
+      "label": "Genre",
+      "default": "fig",
+      "info": "Encadree : schema annote, sur fond, avec ses reperes. Pleine : photographie sans cadre ni repere.",
+      "options": [
+        {
+          "value": "fig",
+          "label": "Encadree, avec reperes"
+        },
+        {
+          "value": "plate",
+          "label": "Pleine largeur, sans repere"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Sur-titre de la figure"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "file",
+      "label": "Ou : asset du theme",
+      "info": "Nom de fichier, utilise si aucune image n'est deposee."
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Texte alternatif"
+    },
+    {
+      "type": "textarea",
+      "id": "caption",
+      "label": "Legende"
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "scope",
+      "label": "Page",
+      "default": "fr-lp1",
+      "info": "Choisit la feuille de style appliquee. Une section deplacee d'une LP a l'autre doit changer de page ici.",
+      "options": [
+        {
+          "value": "fr-lp1",
+          "label": "Adv 1 · Inchiesta"
+        },
+        {
+          "value": "fr-lp2",
+          "label": "Adv 2 · Cripta"
+        },
+        {
+          "value": "fr-lp3",
+          "label": "Listicle"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Marges"
+    },
+    {
+      "type": "checkbox",
+      "id": "rule",
+      "label": "Filet de separation au-dessus",
+      "info": "A decocher sur la premiere partie de l'article.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "mk",
+      "name": "Repere",
+      "settings": [
+        {
+          "type": "text",
+          "id": "num",
+          "label": "Numero"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Libelle"
+        },
+        {
+          "type": "range",
+          "id": "left",
+          "label": "Position horizontale",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 50
+        },
+        {
+          "type": "range",
+          "id": "top",
+          "label": "Position verticale",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "default": 50
+        },
+        {
+          "type": "select",
+          "id": "side",
+          "label": "Cote du libelle",
+          "default": "r",
+          "options": [
+            {
+              "value": "r",
+              "label": "A droite"
+            },
+            {
+              "value": "l",
+              "label": "A gauche"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS LP · Figura"
+    }
+  ]
+}
+{% endschema %}

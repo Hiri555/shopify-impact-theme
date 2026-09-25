@@ -12,7 +12,7 @@
   ============================================================================
 {%- endcomment -%}
 
-<div class="freos-lp-body {{ section.settings.scope }}"
+<div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
   <section class="section">
     {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
@@ -143,6 +143,13 @@
     {
       "type": "header",
       "content": "Marges"
+    },
+    {
+      "type": "checkbox",
+      "id": "rule",
+      "label": "Filet de separation au-dessus",
+      "info": "A decocher sur la premiere partie de l'article.",
+      "default": true
     },
     {
       "type": "range",

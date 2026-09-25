@@ -9,20 +9,23 @@
   ============================================================================
 {%- endcomment -%}
 
-<div class="freos-lp-body {{ section.settings.scope }}"
+<div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
   <section class="section">
     {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
     {%- if section.settings.intro != blank -%}<div class="prose">{{ section.settings.intro }}</div>{%- endif -%}
     <div class="failure-table">
       {%- for block in section.blocks -%}
-        <div class="failure-row" {{ block.shopify_attributes }}>
+        <div class="failure-row{% if block.settings.hot %} hot{% endif %}" {{ block.shopify_attributes }}>
           <div class="failure-what">{{ block.settings.what }}</div>
           <div class="failure-why">{{ block.settings.why }}</div>
         </div>
       {%- endfor -%}
     </div>
     {%- if section.settings.outro != blank -%}<div class="prose">{{ section.settings.outro }}</div>{%- endif -%}
+    {%- if section.settings.outro_pull != blank -%}
+      <div class="pull">{{ section.settings.outro_pull }}</div>
+    {%- endif -%}
   </section>
 </div>
 
@@ -46,6 +49,11 @@
       "type": "richtext",
       "id": "outro",
       "label": "Conclusion"
+    },
+    {
+      "type": "text",
+      "id": "outro_pull",
+      "label": "La phrase detachee, en fin de tableau"
     },
     {
       "type": "header",
@@ -75,6 +83,13 @@
     {
       "type": "header",
       "content": "Marges"
+    },
+    {
+      "type": "checkbox",
+      "id": "rule",
+      "label": "Filet de separation au-dessus",
+      "info": "A decocher sur la premiere partie de l'article.",
+      "default": true
     },
     {
       "type": "range",
@@ -111,6 +126,12 @@
           "type": "textarea",
           "id": "why",
           "label": "Pourquoi il ne suffit pas"
+        },
+        {
+          "type": "checkbox",
+          "id": "hot",
+          "label": "Ligne mise en avant",
+          "default": false
         }
       ]
     }

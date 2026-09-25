@@ -10,7 +10,7 @@
   ============================================================================
 {%- endcomment -%}
 
-<div class="freos-lp-body {{ section.settings.scope }}"
+<div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
   <section class="section">
     {%- if section.settings.heading != blank -%}
@@ -29,8 +29,11 @@
         {%- when 'pull' -%}
           <div class="pull" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
 
+        {%- when 'solo' -%}
+          <p class="solo" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+
         {%- when 'figure' -%}
-          <figure {{ block.shopify_attributes }}>
+          <figure class="{{ block.settings.kind }}" {{ block.shopify_attributes }}>
             {%- if block.settings.image != blank -%}
   {{ block.settings.image | image_url: width: 1200 | image_tag: widths: '480,760,1000,1200', sizes: '(max-width:760px) 100vw, 720px', alt: block.settings.alt }}
 {%- elsif block.settings.file != blank -%}
@@ -40,6 +43,31 @@
               <figcaption>{{ block.settings.caption }}</figcaption>
             {%- endif -%}
           </figure>
+
+        {%- when 'quote' -%}
+          <div class="quote" {{ block.shopify_attributes }}>
+            {{ block.settings.text }}
+            {%- if block.settings.source != blank -%}
+              <div class="w">{{ block.settings.source }}</div>
+            {%- endif -%}
+          </div>
+
+        {%- when 'note' -%}
+          <div class="note{% if block.settings.accent %} is-acc{% endif %}" {{ block.shopify_attributes }}>
+            {%- if block.settings.title != blank -%}
+              <div class="note-t">{{ block.settings.title }}</div>
+            {%- endif -%}
+            {%- if block.settings.text != blank -%}{{ block.settings.text }}{%- endif -%}
+            {%- if block.settings.items != blank -%}
+              <ul>
+                {%- assign rows = block.settings.items | newline_to_br | split: '<br />' -%}
+                {%- for r in rows -%}
+                  {%- assign line = r | strip -%}
+                  {%- if line != blank -%}<li>{{ line }}</li>{%- endif -%}
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </div>
 
         {%- when 'testimony' -%}
           <div class="testimony" {{ block.shopify_attributes }}>
@@ -106,6 +134,13 @@
       "content": "Marges"
     },
     {
+      "type": "checkbox",
+      "id": "rule",
+      "label": "Filet de separation au-dessus",
+      "info": "A decocher sur la premiere partie de l'article.",
+      "default": true
+    },
+    {
       "type": "range",
       "id": "pt",
       "label": "Marge haute",
@@ -161,6 +196,17 @@
       ]
     },
     {
+      "type": "solo",
+      "name": "Riga isolata",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "La phrase"
+        }
+      ]
+    },
+    {
       "type": "figure",
       "name": "Image",
       "settings": [
@@ -184,6 +230,70 @@
           "type": "textarea",
           "id": "caption",
           "label": "Legende"
+        },
+        {
+          "type": "select",
+          "id": "kind",
+          "label": "Traitement",
+          "default": "",
+          "options": [
+            {
+              "value": "",
+              "label": "Courant"
+            },
+            {
+              "value": "prod",
+              "label": "Photo produit"
+            },
+            {
+              "value": "plate",
+              "label": "Planche pleine largeur"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "quote",
+      "name": "Citazione",
+      "settings": [
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Citation"
+        },
+        {
+          "type": "text",
+          "id": "source",
+          "label": "Attribution"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "name": "Riquadro",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre du cadre"
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Texte"
+        },
+        {
+          "type": "textarea",
+          "id": "items",
+          "label": "Liste",
+          "info": "Une entree par ligne. Optionnel."
+        },
+        {
+          "type": "checkbox",
+          "id": "accent",
+          "label": "Fond accentue",
+          "default": false
         }
       ]
     },
