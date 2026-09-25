@@ -483,6 +483,12 @@
   margin-left: auto; margin-right: auto;
   padding-left: var(--gutter); padding-right: var(--gutter);
   background: var(--paper);
+  /* `display:flow-root` retient les marges des enfants a l'interieur du bloc.
+     Sans lui, le `margin-top` de `.section` s'echappait par le haut et ouvrait
+     un trou ENTRE deux blocs de papier : 838 px de fond de page visibles sur
+     adv-cripta, et la colonne se lisait comme une pile de cartes au lieu d'un
+     article continu. La respiration revient a l'interieur du papier. */
+  display: flow-root;
 }
 @media (min-width: 900px){
   .fr-lp1.freos-lp-body, .fr-lp2.freos-lp-body, .fr-lp3.freos-lp-body{ box-shadow: inset 1px 0 0 var(--rule), inset -1px 0 0 var(--rule); }
