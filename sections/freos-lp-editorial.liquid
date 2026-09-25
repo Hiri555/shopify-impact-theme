@@ -36,6 +36,14 @@
         {%- when 'solo' -%}
           <p class="solo" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
 
+        {%- when 'cta' -%}
+          {%- if block.settings.label != blank -%}
+            <div class="cta-mid" {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.url | default: '/' }}">{{ block.settings.label }}</a>
+              {%- if block.settings.sub != blank -%}<p>{{ block.settings.sub }}</p>{%- endif -%}
+            </div>
+          {%- endif -%}
+
         {%- when 'figure' -%}
           <figure class="{{ block.settings.kind }}" {{ block.shopify_attributes }}>
             {%- if block.settings.image != blank -%}
@@ -223,6 +231,28 @@
           "type": "text",
           "id": "text",
           "label": "La phrase"
+        }
+      ]
+    },
+    {
+      "type": "cta",
+      "name": "Bottone",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Libelle",
+          "info": "Vide = aucun bouton. Le meme libelle partout sur la page."
+        },
+        {
+          "type": "url",
+          "id": "url",
+          "label": "Destination"
+        },
+        {
+          "type": "textarea",
+          "id": "sub",
+          "label": "Ligne sous le bouton"
         }
       ]
     },

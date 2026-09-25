@@ -35,6 +35,12 @@
         </div>
       </div>
     {%- endfor -%}
+    {%- if section.settings.cta_label != blank -%}
+      <div class="cta-mid">
+        <a href="{{ section.settings.cta_url | default: '/' }}">{{ section.settings.cta_label }}</a>
+        {%- if section.settings.cta_sub != blank -%}<p>{{ section.settings.cta_sub }}</p>{%- endif -%}
+      </div>
+    {%- endif -%}
   </div>
 </div>
 
@@ -53,6 +59,26 @@
       "type": "textarea",
       "id": "sub",
       "label": "Sous-titre"
+    },
+    {
+      "type": "header",
+      "content": "Appel a l'action en fin de section"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Libelle",
+      "info": "Vide = aucun bouton."
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "Destination"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_sub",
+      "label": "Ligne sous le bouton"
     },
     {
       "type": "header",
