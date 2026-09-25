@@ -10,6 +10,7 @@
 
 <div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}
   {%- if section.settings.whisper != blank -%}
     <div class="whisper">
       {{ section.settings.whisper }}
@@ -23,6 +24,7 @@
       <div class="colophon-masthead">
         {%- if section.settings.logo != blank -%}<div class="colophon-logo">{{ section.settings.logo }}</div>{%- endif -%}
         {%- if section.settings.tagline != blank -%}<div class="colophon-tagline">{{ section.settings.tagline }}</div>{%- endif -%}
+        {%- if section.settings.desc != blank -%}<p class="colophon-desc">{{ section.settings.desc }}</p>{%- endif -%}
       </div>
       <div class="colophon-grid">
         {%- for block in section.blocks -%}
@@ -47,6 +49,12 @@
   "class": "freos-lp-colophon",
   "settings": [
     {
+      "type": "text",
+      "id": "kicker",
+      "label": "Sur-titre",
+      "info": "La petite ligne au-dessus du titre. Vide = rien."
+    },
+    {
       "type": "richtext",
       "id": "whisper",
       "label": "L'adieu de l'auteur",
@@ -70,6 +78,11 @@
       "type": "text",
       "id": "tagline",
       "label": "Signature"
+    },
+    {
+      "type": "textarea",
+      "id": "desc",
+      "label": "Description de la marque"
     },
     {
       "type": "richtext",

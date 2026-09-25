@@ -1,0 +1,285 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — FREOS LP · Motivi
+  ----------------------------------------------------------------------------
+  Les raisons d'une listicle. CHAQUE RAISON EST UN BLOC : on en ajoute, on en
+  retire, on les reordonne a la souris, et la numerotation suit toute seule.
+
+  Le bloc porte tout ce qu'une raison contient dans la page d'origine -- son
+  visuel, son rang, son etiquette, son titre, son corps, sa source, l'encadre
+  « Lo sapevi ? », la voix du lecteur, la phrase de cloture -- plus deux choses
+  qui vivaient ENTRE les raisons et n'appartenaient a personne : la ligne de
+  transition et l'appel a l'action. Les rattacher a la raison qui les precede
+  est ce qui rend l'ordre reellement modifiable : on deplace une raison, sa
+  transition et son bouton la suivent.
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
+     style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}
+  {%- for block in section.blocks -%}
+    <section class="r"{% if block.settings.anchor != blank %} id="{{ block.settings.anchor }}"{% endif %} {{ block.shopify_attributes }}>
+      {%- if block.settings.image != blank or block.settings.file != blank -%}
+        <div class="rv">
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 1200 | image_tag: widths: '480,760,1000,1200', sizes: '(max-width:760px) 100vw, 720px', alt: block.settings.alt }}
+          {%- else -%}
+            <img src="{{ block.settings.file | strip | asset_url }}" alt="{{ block.settings.alt | escape }}" loading="lazy">
+          {%- endif -%}
+        </div>
+      {%- endif -%}
+
+      <div class="num">{{ forloop.index }}<i>/ {{ section.blocks.size }}</i></div>
+      {%- if block.settings.chip != blank -%}<div class="chip">{{ block.settings.chip }}</div>{%- endif -%}
+      {%- if block.settings.title != blank -%}<h2>{{ block.settings.title }}</h2>{%- endif -%}
+      {%- if block.settings.body != blank -%}{{ block.settings.body }}{%- endif -%}
+      {%- if block.settings.cite != blank -%}<p class="cite">{{ block.settings.cite }}</p>{%- endif -%}
+
+      {%- if block.settings.callout != blank -%}
+        <div class="callout">
+          {%- if block.settings.callout_lead != blank -%}<b>{{ block.settings.callout_lead }}</b> {% endif -%}
+          {{ block.settings.callout }}
+        </div>
+      {%- endif -%}
+
+      {%- if block.settings.mirror != blank -%}
+        <div class="mirror">
+          <p>{{ block.settings.mirror }}</p>
+          {%- if block.settings.mirror_src != blank -%}<span>{{ block.settings.mirror_src }}</span>{%- endif -%}
+        </div>
+      {%- endif -%}
+
+      {%- if block.settings.punch != blank -%}<p class="punch">{{ block.settings.punch }}</p>{%- endif -%}
+    </section>
+
+    {%- if block.settings.cta_label != blank -%}
+      <div class="cta-wrap">
+        <a class="cta" href="{{ block.settings.cta_url | default: '/' }}">
+          {{ block.settings.cta_label }}
+          {%- if block.settings.cta_pill != blank -%}<span class="pill">{{ block.settings.cta_pill }}</span>{%- endif -%}
+        </a>
+        {%- if block.settings.cta_sub != blank -%}<span class="guar">{{ block.settings.cta_sub }}</span>{%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if block.settings.tx != blank -%}
+      <div class="tx">
+        <p>{{ block.settings.tx }}</p>
+        {%- if block.settings.tx_sub != blank -%}<small>{{ block.settings.tx_sub }}</small>{%- endif -%}
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "FREOS LP · Motivi",
+  "tag": "section",
+  "class": "freos-lp-motivi",
+  "settings": [
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Sur-titre",
+      "info": "La petite ligne au-dessus du titre. Vide = rien."
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "scope",
+      "label": "Page",
+      "default": "fr-lp1",
+      "info": "Choisit la feuille de style appliquee. Une section deplacee d'une LP a l'autre doit changer de page ici.",
+      "options": [
+        {
+          "value": "fr-lp1",
+          "label": "Adv 1 · Inchiesta"
+        },
+        {
+          "value": "fr-lp2",
+          "label": "Adv 2 · Cripta"
+        },
+        {
+          "value": "fr-lp3",
+          "label": "Listicle"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Marges"
+    },
+    {
+      "type": "checkbox",
+      "id": "rule",
+      "label": "Filet de separation au-dessus",
+      "info": "A decocher sur la premiere partie de l'article.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "blocks": [
+    {
+      "type": "motivo",
+      "name": "Motivo",
+      "settings": [
+        {
+          "type": "text",
+          "id": "chip",
+          "label": "Etiquette",
+          "info": "« Il posto », « Lo zinco »..."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Titre",
+          "info": "<em>...</em> met un fragment en italique."
+        },
+        {
+          "type": "richtext",
+          "id": "body",
+          "label": "Corps"
+        },
+        {
+          "type": "text",
+          "id": "anchor",
+          "label": "Ancre",
+          "info": "Optionnel, pour un lien interne."
+        },
+        {
+          "type": "header",
+          "content": "Visuel"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "file",
+          "label": "Ou : asset du theme"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Texte alternatif"
+        },
+        {
+          "type": "header",
+          "content": "Preuve"
+        },
+        {
+          "type": "text",
+          "id": "cite",
+          "label": "Source"
+        },
+        {
+          "type": "text",
+          "id": "callout_lead",
+          "label": "Amorce de l'encadre",
+          "default": "Lo sapevi?"
+        },
+        {
+          "type": "richtext",
+          "id": "callout",
+          "label": "Encadre"
+        },
+        {
+          "type": "header",
+          "content": "La voix du lecteur"
+        },
+        {
+          "type": "textarea",
+          "id": "mirror",
+          "label": "Citation"
+        },
+        {
+          "type": "text",
+          "id": "mirror_src",
+          "label": "Provenance"
+        },
+        {
+          "type": "header",
+          "content": "Cloture"
+        },
+        {
+          "type": "textarea",
+          "id": "punch",
+          "label": "Phrase de cloture"
+        },
+        {
+          "type": "header",
+          "content": "Appel a l'action, apres cette raison"
+        },
+        {
+          "type": "text",
+          "id": "cta_label",
+          "label": "Libelle",
+          "info": "Vide = aucun bouton."
+        },
+        {
+          "type": "text",
+          "id": "cta_pill",
+          "label": "Pastille",
+          "info": "Le prix, en general."
+        },
+        {
+          "type": "url",
+          "id": "cta_url",
+          "label": "Destination"
+        },
+        {
+          "type": "textarea",
+          "id": "cta_sub",
+          "label": "Ligne de garantie"
+        },
+        {
+          "type": "header",
+          "content": "Transition vers la raison suivante"
+        },
+        {
+          "type": "textarea",
+          "id": "tx",
+          "label": "Phrase de transition"
+        },
+        {
+          "type": "textarea",
+          "id": "tx_sub",
+          "label": "Precision"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS LP · Motivi"
+    }
+  ]
+}
+{% endschema %}

@@ -13,6 +13,7 @@
 
 <div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}
   {%- if section.settings.label != blank -%}
     <div class="cta-mid">
       <a href="{{ section.settings.url | default: '/' }}">{{ section.settings.label }}</a>
@@ -27,6 +28,12 @@
   "tag": "section",
   "class": "freos-lp-cta",
   "settings": [
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Sur-titre",
+      "info": "La petite ligne au-dessus du titre. Vide = rien."
+    },
     {
       "type": "text",
       "id": "label",

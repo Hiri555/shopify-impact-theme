@@ -12,6 +12,7 @@
 
 <div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}
   {%- if section.settings.heading != blank or section.settings.intro != blank -%}
     <section class="section">
       {%- if section.settings.heading != blank -%}<h2>{{ section.settings.heading }}</h2>{%- endif -%}
@@ -21,6 +22,15 @@
     </section>
   {%- endif -%}
   <div class="price-block">
+    {%- if section.settings.photo != blank or section.settings.photo_file != blank -%}
+      <div class="price-photo">
+        {%- if section.settings.photo != blank -%}
+          {{ section.settings.photo | image_url: width: 600 | image_tag: widths: '220,440,600', sizes: '220px', alt: section.settings.photo_alt }}
+        {%- else -%}
+          <img src="{{ section.settings.photo_file | strip | asset_url }}" alt="{{ section.settings.photo_alt | escape }}" loading="lazy">
+        {%- endif -%}
+      </div>
+    {%- endif -%}
     {%- if section.settings.headline != blank -%}<div class="price-headline">{{ section.settings.headline }}</div>{%- endif -%}
     {%- if section.settings.body != blank -%}<div class="price-body">{{ section.settings.body }}</div>{%- endif -%}
     {%- if section.settings.cta_label != blank -%}
@@ -38,6 +48,12 @@
   "settings": [
     {
       "type": "text",
+      "id": "kicker",
+      "label": "Sur-titre",
+      "info": "La petite ligne au-dessus du titre. Vide = rien."
+    },
+    {
+      "type": "text",
       "id": "heading",
       "label": "Titre de section",
       "info": "Optionnel. Le texte de conclusion qui precede le prix."
@@ -50,6 +66,21 @@
     {
       "type": "header",
       "content": "Le bloc prix"
+    },
+    {
+      "type": "image_picker",
+      "id": "photo",
+      "label": "Photo du produit"
+    },
+    {
+      "type": "text",
+      "id": "photo_file",
+      "label": "Ou : asset du theme"
+    },
+    {
+      "type": "text",
+      "id": "photo_alt",
+      "label": "Texte alternatif"
     },
     {
       "type": "text",

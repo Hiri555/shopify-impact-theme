@@ -12,6 +12,7 @@
 
 <div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}
   <div class="ps">
     {%- if section.settings.heading != blank -%}<h3>{{ section.settings.heading }}</h3>{%- endif -%}
     {%- if section.settings.sub != blank -%}<p class="psub">{{ section.settings.sub }}</p>{%- endif -%}
@@ -50,6 +51,12 @@
   "tag": "section",
   "class": "freos-lp-testimonials",
   "settings": [
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Sur-titre",
+      "info": "La petite ligne au-dessus du titre. Vide = rien."
+    },
     {
       "type": "text",
       "id": "heading",
