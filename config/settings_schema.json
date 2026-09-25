@@ -931,5 +931,54 @@
         "info": "180 x 180px .png recommended"
       }
     ]
+  },
+  {
+    "name": "FREOS · Barre collante",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "La barre d'appel des landing pages. Elle renvoie a la fiche produit : l'ajout au panier natif, avec son pixel, se fait la-bas. Elle ne s'affiche pas sur la fiche produit, qui a deja la sienne."
+      },
+      {
+        "type": "checkbox",
+        "id": "fr_sticky_on",
+        "label": "Afficher la barre",
+        "default": true
+      },
+      {
+        "type": "text",
+        "id": "fr_sticky_label",
+        "label": "Libelle",
+        "default": "Riprenditi i trenta centimetri · 29,90 €"
+      },
+      {
+        "type": "url",
+        "id": "fr_sticky_url",
+        "label": "Destination"
+      },
+      {
+        "type": "text",
+        "id": "fr_sticky_sub",
+        "label": "Ligne sous le bouton",
+        "default": "Un barattolo, trenta sere"
+      },
+      {
+        "type": "range",
+        "id": "fr_sticky_at",
+        "label": "Apparait apres",
+        "min": 10,
+        "max": 90,
+        "step": 5,
+        "unit": "%",
+        "default": 45,
+        "info": "Part de la page defilee avant que la barre apparaisse. A garder APRES la revelation produit."
+      },
+      {
+        "type": "checkbox",
+        "id": "fr_sticky_mobile_only",
+        "label": "Telephone seulement",
+        "default": true
+      }
+    ]
   }
 ]

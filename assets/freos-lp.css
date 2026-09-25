@@ -551,3 +551,35 @@
 .fr-lp1 .colophon b, .fr-lp2 .colophon b, .fr-lp3 .colophon b{
   color: var(--paper);
 }
+
+/* ======================================================================
+   LA BARRE COLLANTE DES LANDING PAGES
+   ----------------------------------------------------------------------
+   Elle vit dans le layout, hors de toute portee `.fr-lpN` : ses couleurs
+   sont donc ecrites en clair, elles ne peuvent pas lire les jetons d'une
+   page. Encre sombre et papier : les trois LP partagent ces deux-la.
+   Une seule action, pas de prix -- le prix vit dans le libelle, a un seul
+   endroit, pour qu'il ne puisse pas diverger.
+   ====================================================================== */
+.fr-sticky{
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  background: #181D18;
+  padding: 10px 14px calc(10px + env(safe-area-inset-bottom, 0px));
+  box-shadow: 0 -6px 18px rgba(0,0,0,.18);
+}
+.fr-sticky[hidden]{ display: none !important; }
+.fr-sticky-a{
+  display: block; width: 100%; max-width: 520px; text-align: center;
+  background: #FAF5E9; color: #181D18; text-decoration: none;
+  font-family: Inter, sans-serif; font-size: 14px; font-weight: 700;
+  letter-spacing: .04em; line-height: 1.2;
+  padding: 15px 18px; min-height: 44px; box-sizing: border-box;
+}
+.fr-sticky-s{
+  font-family: Inter, sans-serif; font-size: 11px; letter-spacing: .06em;
+  color: rgba(250,245,233,.72);
+}
+@media (min-width: 900px){
+  .fr-sticky--mobile{ display: none !important; }
+}

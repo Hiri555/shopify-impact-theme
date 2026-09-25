@@ -1,0 +1,58 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — BARRE COLLANTE
+  ----------------------------------------------------------------------------
+  Elle vit dans le layout, pas dans un template. Deux raisons :
+
+    * les deux advertorials sont deja a 25 sections, la limite dure de Shopify.
+      Une section de plus et le template entier serait refuse -- silencieusement,
+      comme la premiere fois ;
+    * une barre d'appel n'est pas du contenu, c'est de l'habillage : elle est la
+      meme sur les trois LP, elle se regle donc une fois pour toutes dans
+      Personnaliser -> Parametres du theme -> FREOS · Barre collante.
+
+  Ce n'est PAS un bouton d'achat. Sur un advertorial on est en lecture : la
+  barre renvoie a la fiche produit, ou l'ajout au panier natif Impact prend le
+  relais avec son pixel. Aucun formulaire n'est emis ici.
+
+  L'onglet Chrome pilote depuis ce poste est en `visibilityState:"hidden"` : il
+  ne declenche ni `scroll` ni `IntersectionObserver`. L'element expose donc
+  `frSync()`, qui recalcule l'etat a la demande -- c'est par la qu'on le teste,
+  et c'est dit dans le handback.
+  ============================================================================
+{%- endcomment -%}
+
+{%- if settings.fr_sticky_on and settings.fr_sticky_label != blank -%}
+  <fr-sticky class="fr-sticky{% if settings.fr_sticky_mobile_only %} fr-sticky--mobile{% endif %}"
+             data-at="{{ settings.fr_sticky_at | default: 45 }}" hidden>
+    <a class="fr-sticky-a" href="{{ settings.fr_sticky_url | default: '/' }}">
+      {{ settings.fr_sticky_label }}
+    </a>
+    {%- if settings.fr_sticky_sub != blank -%}
+      <span class="fr-sticky-s">{{ settings.fr_sticky_sub }}</span>
+    {%- endif -%}
+  </fr-sticky>
+
+  <script>
+    (function () {
+      if (customElements.get('fr-sticky')) return;
+      customElements.define('fr-sticky', class extends HTMLElement {
+        connectedCallback() {
+          this.at = parseFloat(this.dataset.at) || 45;
+          this.frSync();
+          addEventListener('scroll', this.frSync.bind(this), { passive: true });
+          addEventListener('resize', this.frSync.bind(this), { passive: true });
+        }
+        /* Expose exprès : dans un onglet masque aucun evenement de defilement
+           n'arrive, et c'est le seul moyen de verifier les deux etats. */
+        frSync() {
+          var d = document.documentElement;
+          var course = (d.scrollHeight - innerHeight) || 1;
+          var pct = (scrollY / course) * 100;
+          this.hidden = pct < this.at;
+          return { pct: Math.round(pct), seuil: this.at, visible: !this.hidden };
+        }
+      });
+    })();
+  </script>
+{%- endif -%}
