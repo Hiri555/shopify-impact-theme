@@ -24,7 +24,11 @@
           <div class="prose" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
 
         {%- when 'sub' -%}
-          <h3 {{ block.shopify_attributes }}>{{ block.settings.text }}</h3>
+          {%- if block.settings.level == 'h2' -%}
+            <h2 {{ block.shopify_attributes }}>{{ block.settings.text }}</h2>
+          {%- else -%}
+            <h3 {{ block.shopify_attributes }}>{{ block.settings.text }}</h3>
+          {%- endif -%}
 
         {%- when 'pull' -%}
           <div class="pull" {{ block.shopify_attributes }}>{{ block.settings.text }}</div>
@@ -181,6 +185,22 @@
           "type": "text",
           "id": "text",
           "label": "Texte"
+        },
+        {
+          "type": "select",
+          "id": "level",
+          "label": "Rang du titre",
+          "default": "h3",
+          "options": [
+            {
+              "value": "h3",
+              "label": "Sous-titre (h3)"
+            },
+            {
+              "value": "h2",
+              "label": "Titre de partie (h2)"
+            }
+          ]
         }
       ]
     },
