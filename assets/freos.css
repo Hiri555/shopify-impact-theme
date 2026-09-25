@@ -1247,26 +1247,26 @@
 .fr .fr-steps-foot{ font-size:12.5px; color:var(--ink3); margin:16px 0 0; }
 
 /* --- FAQ --- */
-.fr .fr-faq{ border-top:1px solid var(--rule); display:block; width:100%; }
-.fr .fr-faq-i{ display:block; width:100%; float:none; margin:0;
+.fr .fr-qa{ border-top:1px solid var(--rule); display:block; width:100%; }
+.fr .fr-qa-i{ display:block; width:100%; float:none; margin:0;
   position:static; inset:auto; transform:none; }
-.fr .fr-faq-i{ border-bottom:1px solid var(--rule); }
-.fr .fr-faq-q{ width:100%; box-sizing:border-box; }
-.fr .fr-faq-q{ list-style:none; cursor:pointer; display:flex; align-items:flex-start;
+.fr .fr-qa-i{ border-bottom:1px solid var(--rule); }
+.fr .fr-qa-q{ width:100%; box-sizing:border-box; }
+.fr .fr-qa-q{ list-style:none; cursor:pointer; display:flex; align-items:flex-start;
   justify-content:space-between; gap:18px; padding:17px 0;
   font-family:Fraunces,serif; font-size:16px; line-height:1.4; color:var(--ink); }
-.fr .fr-faq-q::-webkit-details-marker{ display:none; }
-.fr .fr-faq-q > span{ flex:1 1 auto; min-width:0; }
-.fr .fr-faq-m{ flex:0 0 14px; width:14px; height:14px; position:relative; margin-top:5px; }
-.fr .fr-faq-m::before,
-.fr .fr-faq-m::after{ content:''; position:absolute; background:var(--acc);
+.fr .fr-qa-q::-webkit-details-marker{ display:none; }
+.fr .fr-qa-q > span{ flex:1 1 auto; min-width:0; }
+.fr .fr-qa-m{ flex:0 0 14px; width:14px; height:14px; position:relative; margin-top:5px; }
+.fr .fr-qa-m::before,
+.fr .fr-qa-m::after{ content:''; position:absolute; background:var(--acc);
   left:50%; top:50%; transform:translate(-50%,-50%); }
-.fr .fr-faq-m::before{ width:13px; height:1.5px; }
-.fr .fr-faq-m::after{ width:1.5px; height:13px; }
-.fr .fr-faq-i[open] .fr-faq-m::after{ transform:translate(-50%,-50%) scaleY(0); }
-.fr .fr-faq-a{ padding:0 0 18px; max-width:64ch; }
-.fr .fr-faq-a p{ font-size:14.5px; line-height:1.65; color:var(--ink2); margin:0 0 10px; }
-.fr .fr-faq-a li{ font-size:14.5px; line-height:1.6; color:var(--ink2); }
+.fr .fr-qa-m::before{ width:13px; height:1.5px; }
+.fr .fr-qa-m::after{ width:1.5px; height:13px; }
+.fr .fr-qa-i[open] .fr-qa-m::after{ transform:translate(-50%,-50%) scaleY(0); }
+.fr .fr-qa-a{ padding:0 0 18px; max-width:64ch; }
+.fr .fr-qa-a p{ font-size:14.5px; line-height:1.65; color:var(--ink2); margin:0 0 10px; }
+.fr .fr-qa-a li{ font-size:14.5px; line-height:1.6; color:var(--ink2); }
 
 /* --- barre de garantie --- */
 .fr .fr-guarbar{ display:flex; align-items:center; gap:14px; margin-top:26px;
