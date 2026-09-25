@@ -613,3 +613,7 @@
   .fr-lp3 .anc-r.us{ margin-left:0; margin-right:0;
     padding-left:14px; padding-right:14px; }
 }
+
+/* Mesure a 390 px : le texte des etapes sortait a 14,5 px. Le seuil de
+   lisibilite mobile retenu sur ce projet est 15 px pour le corps. */
+.fr-lp1 .stage-text, .fr-lp2 .stage-text, .fr-lp3 .stage-text{ font-size:15px; }
