@@ -756,48 +756,6 @@
     "non_sei_sola": {
       "type": "freos-lp-editorial",
       "blocks": {
-        "p1": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Ho cominciato a farci caso nell'inverno del 2019, in macchina, mentre accompagnavo mia figlia a scuola. Si è girata verso il finestrino e l'ha aperto. Aveva nove anni, non l'ha fatto per cattiveria — l'ha fatto e basta. Io ho continuato a guidare come se niente fosse.</p></p>"
-          }
-        },
-        "p2": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Da lì è cominciato il giro. Gastroscopia, test per l'Helicobacter, due cicli di probiotici, quattro mesi senza latticini. Il gastroenterologo è stato onesto: «Lei ha una gastrite lieve, ma non è questo che le dà quel sintomo.» Non gli ho creduto. Era più facile pensare allo stomaco: lo stomaco si cura.</p></p>"
-          }
-        },
-        "p3": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Quando ho ordinato FREOS non ci credevo. L'ho comprato per una riga sola: che di notte la saliva quasi si ferma. Quella cosa l'avevo notata senza saperla spiegare — era sempre peggio al risveglio, mai dopo pranzo.</p></p>"
-          }
-        },
-        "p4": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Il primo cambiamento non è stato l'alito. È stato che ho smesso di tenere le mentine nel cruscotto. Me ne sono accorta a maggio, ritrovando un pacchetto aperto a gennaio e ancora mezzo pieno.</p></p>"
-          }
-        },
-        "p5": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Il sapore al mattino è cambiato verso la seconda settimana. Non è sparito — presto la mattina c'è ancora qualcosa. È diventato più leggero, meno denso.</p></p>"
-          }
-        },
-        "p6": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Il segnale non l'ho cercato io. A marzo mia figlia si è addormentata sul divano appoggiata alla mia spalla, con la faccia girata verso di me. Non lo faceva da anni. Non le ho chiesto niente e non le ho detto niente.</p></p>"
-          }
-        },
-        "p7": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Se dovessi rifarlo, non ricomincerei dallo stomaco.</p></p>"
-          }
-        },
         "p8": {
           "type": "para",
           "settings": {
@@ -824,13 +782,6 @@
         }
       },
       "block_order": [
-        "p1",
-        "p2",
-        "p3",
-        "p4",
-        "p5",
-        "p6",
-        "p7",
         "p8",
         "p9",
         "p10",
