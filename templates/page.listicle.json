@@ -15,9 +15,40 @@
       "settings": {
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco"
       }
+    },
+    "test_impact": {
+      "type": "rich-text",
+      "blocks": {
+        "h": {
+          "type": "heading",
+          "settings": {
+            "text": "Sezione Impact nativa"
+          }
+        },
+        "r": {
+          "type": "richtext",
+          "settings": {
+            "content": "<p>Questo blocco viene dal tema Impact, non da FREOS. Se lo vedi impaginato, il layout carica tutto.</p>"
+          }
+        },
+        "b": {
+          "type": "button",
+          "settings": {
+            "text": "Bottone nativo",
+            "url": "/products/gel-notturno-micro-aderente-allo-zinco"
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "r",
+        "b"
+      ],
+      "settings": {}
     }
   },
   "order": [
+    "test_impact",
     "corpo"
   ]
 }
