@@ -908,6 +908,50 @@
         "soldout": "Non disponibile",
         "watch": ".fr-atc-wrap"
       }
+    },
+    "meccanismo": {
+      "type": "freos-pdp-journey",
+      "blocks": {
+        "m1": {
+          "type": "step",
+          "settings": {
+            "badge": "RESTA",
+            "title": "È un gel, non un liquido.",
+            "text": "Dopo la deglutizione resta sulle mucose invece di sciacquarle e andarsene."
+          }
+        },
+        "m2": {
+          "type": "step",
+          "settings": {
+            "badge": "LEGA",
+            "title": "Gli ioni di zinco legano i composti solforati.",
+            "text": "Zinco 1,38 mg (14% VNR) per porzione serale. Un composto legato non è più volatile — cioè non arriva più al naso di nessuno."
+          }
+        },
+        "m3": {
+          "type": "step",
+          "settings": {
+            "badge": "ACCOMPAGNA",
+            "title": "Copre le ore in cui la saliva cala.",
+            "text": "La bocca resta chiusa, e quello che sale non viene più diluito né portato via. Non trenta secondi: una notte."
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2",
+        "m3"
+      ],
+      "settings": {
+        "kicker": "Il meccanismo",
+        "heading": "Il <em>Turno di Notte</em>.",
+        "dek": "Di notte la saliva cala e la bocca resta chiusa. È la finestra in cui i composti si accumulano — ed è l’unica in cui qualcosa che resta al suo posto ha senso.",
+        "foot": "<p>Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova.</p>",
+        "surface": "soft",
+        "width": "narrow",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -917,6 +961,7 @@
     "benefici",
     "differenza",
     "numeri",
+    "meccanismo",
     "ingredienti",
     "percorso",
     "motivi",
