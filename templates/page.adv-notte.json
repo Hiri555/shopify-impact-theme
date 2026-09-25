@@ -61,8 +61,8 @@
         }
       },
       "block_order": [
-        "lead1",
         "lead2",
+        "lead1",
         "lead3",
         "thesis"
       ],
@@ -71,7 +71,7 @@
         "pt": 0,
         "pb": 0,
         "eyebrow": "<span>Inchiesta</span><span class=\"sep\">·</span><span>Salute orale</span><span class=\"sep\">·</span><span>8 min di lettura</span>",
-        "heading": "Nove italiani su dieci hanno un'alitosi che parte in bocca. <em>Non nello stomaco.</em>",
+        "heading": "PREUVE-A titre modifie par l API",
         "subhead": "Un dato pubblicato dal 2009 che quasi nessuno conosce. E che spiega perché, dopo dieci anni di cotton fioc, gargarismi e mentine, l'alito può ancora tornare.",
         "portrait_file": "freos-lp1-01.webp",
         "author": "di <strong>Elena Manzoni</strong> <em>— Redazione Inchieste</em>",
@@ -87,7 +87,7 @@
         "p1": {
           "type": "para",
           "settings": {
-            "text": "<p><p>Per qualcuno comincia con un colpo di tosse, o una sera mentre si lava i denti. Una pallina bianca o gialla, piccola, dura, finisce nel fazzoletto, e quando la schiacci l'odore è nauseante. Pensavi fosse una placca. Nei racconti che abbiamo raccolto per questa inchiesta, la persona ha lavato i denti di continuo, per anni, <em>«perché ero a disagio»</em>, prima di scoprire un nome: tonsille criptiche.</p></p>"
+            "text": "<p>PREUVE-C ce paragraphe a ete reecrit par l API.</p>"
           }
         },
         "p2": {
@@ -99,7 +99,7 @@
         "fig": {
           "type": "figure",
           "settings": {
-            "file": "freos-lp1-03.webp",
+            "file": "freos-lp2-05.webp",
             "alt": "Scena dello specchio con la luce del telefono",
             "caption": "Undici anni della stessa luce, dello stesso gesto, della stessa domanda."
           }
