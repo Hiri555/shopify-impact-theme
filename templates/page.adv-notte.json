@@ -16,7 +16,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "text": "Contenuto sponsorizzato · FREOS"
+        "text": "Contenuto sponsorizzato · FREOS",
+        "rule": false
       }
     },
     "masthead": {
@@ -26,7 +27,8 @@
         "pt": 0,
         "pb": 0,
         "logo": "L'Inchiesta<em>Salute</em>",
-        "tagline": "Un caso alla volta · Fino in fondo"
+        "tagline": "Un caso alla volta · Fino in fondo",
+        "rule": false
       }
     },
     "opener": {
@@ -78,7 +80,8 @@
         "consulenza": "con la consulenza scientifica del <strong>Dott. Marco Serpelloni</strong>, otorinolaringoiatra",
         "hero_file": "freos-lp1-02.webp",
         "hero_alt": "Gli oggetti della sera",
-        "hero_caption": "Tutto quello che una persona può accumulare in un cassetto per non farsi sentire. Alle 23, torna sul comodino."
+        "hero_caption": "Tutto quello che una persona può accumulare in un cassetto per non farsi sentire. Alle 23, torna sul comodino.",
+        "rule": false
       }
     },
     "specchio": {
@@ -208,7 +211,8 @@
         "pb": 0,
         "heading": "All'inizio sembra una cosa piccola. Poi diventa <em>un appuntamento fisso</em>.",
         "intro": "",
-        "outro": ""
+        "outro": "",
+        "rule": true
       }
     },
     "segnali1": {
@@ -256,7 +260,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "title": "Segnali da riconoscere"
+        "title": "Segnali da riconoscere",
+        "rule": false
       }
     },
     "segnali2": {
@@ -304,7 +309,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "title": "Quando è meglio andare dal medico"
+        "title": "Quando è meglio andare dal medico",
+        "rule": false
       }
     },
     "tappe_testo": {
@@ -338,7 +344,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "heading": "Forse ti riguarda, anche se non li hai mai visti."
+        "heading": "Forse ti riguarda, anche se non li hai mai visti.",
+        "rule": true
       }
     },
     "vilain": {
@@ -400,7 +407,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "heading": "Il vero vilain <em>non sei tu</em>."
+        "heading": "Il vero vilain <em>non sei tu</em>.",
+        "rule": true
       }
     },
     "fasi": {
@@ -460,7 +468,8 @@
         "heading": "Quattro fasi in ventiquattro ore. <em>Solo una è sotto la tua guardia.</em>",
         "intro": "<p><p>Il Turno di Notte non è un'immagine. È una sequenza di quattro fasi, misurabili, ognuna con la sua ora del giorno e la sua zona precisa della bocca. Le abbiamo fatte illustrare dal Dott. L. Bertani, illustratore medico che collabora con la nostra redazione. Sono le stesse fasi che ogni notte, da anni, ti fanno svegliare con quel sapore.</p></p>",
         "outro": "<p><p>Ecco perché, dopo l'ennesima estrazione o dopo anni di collutorio, l'alito può restare. Non perché hai sbagliato qualcosa, ma perché stavi combattendo un turno che comincia quando tu smetti di guardare. È il motivo per cui, dopo un intervento chirurgico che sembrava definitivo, molti ci hanno raccontato di aver sentito l'alito tornare dopo tre mesi. Nessuno gliel'aveva detto che poteva succedere. Perché la biologia della notte, fino ad oggi, non era mai stata spiegata a nessuno.</p></p>",
-        "credit": ""
+        "credit": "",
+        "rule": true
       }
     },
     "rimedi": {
@@ -523,7 +532,8 @@
         "pb": 0,
         "heading": "Ognuno di quei rimedi <em>faceva la sua parte</em>. Ma nessuno faceva quella giusta.",
         "intro": "<p><p>Il cassetto lo conosci meglio di chiunque. Ci sono passati dieci prodotti, forse venti. Ognuno prometteva qualcosa. Nessuno ti ha dato quello che cercavi. Non perché tu abbia scelto male. Perché ognuno di questi rimedi era pensato per un momento e una zona che <strong>non sono il vilain</strong>.</p></p>",
-        "outro": "<p><p>In fondo a questa lista, la frase che abbiamo letto e riletto è sempre nelle stesse parole: <em>«ho provato tutti i rimedi — pulizia dopo ogni pasto, nettalingua, colluttori appositi, probiotici, scovolini, idropulsore. Nulla. Mi sento sempre la fiatella. L'unica cosa che mi fa stare serena in pubblico è consumare chewing gum a raffica.»</em> Non è una resa. È la mappa esatta di dove il vilain non era.</p><p>Non hai fallito, e nemmeno hai scelto male. Hai combattuto <strong>il vilain sbagliato, nel posto sbagliato, all'ora sbagliata</strong>. Non era colpa tua che nessuno ti avesse detto quale fosse davvero.</p></p>"
+        "outro": "<p><p>In fondo a questa lista, la frase che abbiamo letto e riletto è sempre nelle stesse parole: <em>«ho provato tutti i rimedi — pulizia dopo ogni pasto, nettalingua, colluttori appositi, probiotici, scovolini, idropulsore. Nulla. Mi sento sempre la fiatella. L'unica cosa che mi fa stare serena in pubblico è consumare chewing gum a raffica.»</em> Non è una resa. È la mappa esatta di dove il vilain non era.</p><p>Non hai fallito, e nemmeno hai scelto male. Hai combattuto <strong>il vilain sbagliato, nel posto sbagliato, all'ora sbagliata</strong>. Non era colpa tua che nessuno ti avesse detto quale fosse davvero.</p></p>",
+        "rule": true
       }
     },
     "gesto": {
@@ -592,7 +602,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "heading": "Ci vorrebbe un gesto pensato per <em>la Metà Invisibile</em>."
+        "heading": "Ci vorrebbe un gesto pensato per <em>la Metà Invisibile</em>.",
+        "rule": true
       }
     },
     "rivelazione": {
@@ -694,7 +705,8 @@
         "ing_heading": "Cosa c’è dentro, e a cosa serve.",
         "note": "<p><p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p></p>",
         "disclaimer_heading": "Cosa FREOS non è, e non promette.",
-        "disclaimer": "<p><p>FREOS è un <strong>integratore alimentare</strong>. <strong>Non cura l’alitosi</strong>: non è un farmaco e non ha un’indicazione terapeutica. Non tocca le tonsille e non scioglie i tonsilloliti. Se hai dolore, febbre o difficoltà a deglutire, l’otorino viene prima di qualunque gel.</p></p>"
+        "disclaimer": "<p><p>FREOS è un <strong>integratore alimentare</strong>. <strong>Non cura l’alitosi</strong>: non è un farmaco e non ha un’indicazione terapeutica. Non tocca le tonsille e non scioglie i tonsilloliti. Se hai dolore, febbre o difficoltà a deglutire, l’otorino viene prima di qualunque gel.</p></p>",
+        "rule": true
       }
     },
     "offerta1": {
@@ -707,7 +719,8 @@
         "body": "<p><p>Un barattolo dura trenta sere. Spedizione gratuita in Italia · 3–5 giorni lavorativi. <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
         "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>"
+        "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>",
+        "rule": false
       }
     },
     "racconto": {
@@ -733,7 +746,8 @@
         "pt": 0,
         "pb": 0,
         "heading": "La storia di chi <em>non ci credeva.</em>",
-        "sub": "Il primo racconto completo: trenta sere, dall’inizio alla fine. Nome, età, città — verificati."
+        "sub": "Il primo racconto completo: trenta sere, dall’inizio alla fine. Nome, età, città — verificati.",
+        "rule": true
       }
     },
     "non_sei_sola": {
@@ -823,7 +837,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "heading": "Non sei l'unica persona <em>con la luce del telefono accesa la sera.</em>"
+        "heading": "Non sei l'unica persona <em>con la luce del telefono accesa la sera.</em>",
+        "rule": true
       }
     },
     "coppie": {
@@ -878,7 +893,8 @@
         "pb": 0,
         "heading": "La cosa più pesante <em>non è mai stata il calcolo</em>.",
         "intro": "<p><p>Se ci pensi davvero, non vuoi solo tonsille pulite. Vuoi smettere di pensarci. Non era il mezzo passo indietro quando qualcuno ti parlava vicino. Non era la mano davanti alla bocca quando ridevi. Non era il bagno dopo cena, con la luce del telefono. Non era il formaggio che avevi tolto dal piatto, per sicurezza.</p></p>",
-        "outro": "<p><p>Niente di tutto questo eri tu. <em>Era una vita che si stringeva in fondo alla gola, senza fare rumore.</em></p><p>Volere tutto questo <strong>non è vanità</strong>. È voler tornare a fidarti di te. Non vuoi controllare meglio la tua gola. <em>Vuoi smettere di doverla controllare.</em></p></p>"
+        "outro": "<p><p>Niente di tutto questo eri tu. <em>Era una vita che si stringeva in fondo alla gola, senza fare rumore.</em></p><p>Volere tutto questo <strong>non è vanità</strong>. È voler tornare a fidarti di te. Non vuoi controllare meglio la tua gola. <em>Vuoi smettere di doverla controllare.</em></p></p>",
+        "rule": true
       }
     },
     "obiezioni": {
@@ -957,7 +973,8 @@
         "pt": 0,
         "pb": 0,
         "heading": "Le cinque obiezioni <em>che fermano tutti.</em>",
-        "sub": "Un’obiezione per testimonianza. Un avatar diverso ogni volta, perché ognuno si riconosca in almeno uno."
+        "sub": "Un’obiezione per testimonianza. Un avatar diverso ogni volta, perché ognuno si riconosca in almeno uno.",
+        "rule": true
       }
     },
     "costi": {
@@ -1016,7 +1033,8 @@
         "source": "Fonti tariffe: detartrasi per regione (Nord 84 €, Centro 70 €, Sud 60 €) · pulizia approfondita 70–150 € · routine preventiva ≈ 200 €/anno · spesa odontoiatrica media 430 € nel 2025, indagine nazionale OmniSalus. Le tariffe variano per struttura e regione.",
         "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Un barattolo, trenta sere. Un mese di prova, rimborso senza reso."
+        "cta_sub": "Un barattolo, trenta sere. Un mese di prova, rimborso senza reso.",
+        "rule": true
       }
     },
     "fiducia": {
@@ -1050,7 +1068,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "heading": "La fiducia torna da un gesto. <em>Il primo lo scegli tu.</em>"
+        "heading": "La fiducia torna da un gesto. <em>Il primo lo scegli tu.</em>",
+        "rule": true
       }
     },
     "domande": {
@@ -1111,7 +1130,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "heading": ""
+        "heading": "",
+        "rule": false
       }
     },
     "offerta2": {
@@ -1124,7 +1144,8 @@
         "body": "<p><p>Un barattolo dura trenta sere. Spedizione gratuita in Italia · 3–5 giorni lavorativi. <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
         "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>"
+        "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>",
+        "rule": false
       }
     },
     "chiusura": {
@@ -1144,7 +1165,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "heading": ""
+        "heading": "",
+        "rule": false
       }
     },
     "fonti": {
@@ -1199,7 +1221,8 @@
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0,
-        "title": "Fonti scientifiche citate"
+        "title": "Fonti scientifiche citate",
+        "rule": false
       }
     },
     "colophon": {
@@ -1247,7 +1270,8 @@
         "logo": "L'Inchiesta<em>Salute</em>",
         "tagline": "Un caso alla volta · Fino in fondo",
         "legal": "<p><p>Registrazione Tribunale di Milano n. [numero]/2024 · ISSN [numero-numero] · Direttore responsabile [nome]. Nota per il lettore. Questo articolo è un'inchiesta editoriale con contenuti sponsorizzati dal produttore di FREOS. La linea editoriale, le fonti citate, le riserve scientifiche e i limiti dichiarati del prodotto restano indipendenti. Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di sintomi rivolgersi al proprio medico curante o allo specialista. © L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p></p>",
-        "links": "<p>© L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p>"
+        "links": "<p>© L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p>",
+        "rule": false
       }
     }
   },
