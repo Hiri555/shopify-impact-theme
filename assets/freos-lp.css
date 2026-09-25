@@ -502,3 +502,20 @@
   max-width: none; padding-left: 0; padding-right: 0;
   background: none; box-shadow: none;
 }
+
+/* ======================================================================
+   LE FOND DE PAGE, DERRIERE LA COLONNE
+   ----------------------------------------------------------------------
+   Les pages d'origine peignaient `--bg` sur le <body>. Ce fond a disparu au
+   moment ou la feuille a ete mise sous portee : une regle `body{}` fuit sur
+   tout le theme, elle a donc ete retiree -- et la colonne de papier s'est
+   retrouvee sur le blanc du theme au lieu de son creme.
+
+   On le repeint sur l'enveloppe <section> de Shopify, seul element qui
+   entoure la colonne. Elle ne porte pas la classe de portee : `:has()` va la
+   chercher sur l'enfant. La valeur est ecrite en clair parce que le jeton est
+   declare sur cet enfant, donc hors de portee ici.
+   ====================================================================== */
+.shopify-section:has(> .fr-lp1){ background: #F2ECD9; }
+.shopify-section:has(> .fr-lp2){ background: #F0EADB; }
+.shopify-section:has(> .fr-lp3){ background: #FFFFFF; }
