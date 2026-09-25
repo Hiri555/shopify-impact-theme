@@ -1253,6 +1253,7 @@
   justify-content:space-between; gap:18px; padding:17px 0;
   font-family:Fraunces,serif; font-size:16px; line-height:1.4; color:var(--ink); }
 .fr .fr-faq-q::-webkit-details-marker{ display:none; }
+.fr .fr-faq-q > span{ flex:1 1 auto; min-width:0; }
 .fr .fr-faq-m{ flex:0 0 14px; width:14px; height:14px; position:relative; margin-top:5px; }
 .fr .fr-faq-m::before,
 .fr .fr-faq-m::after{ content:''; position:absolute; background:var(--acc);
