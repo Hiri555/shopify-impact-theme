@@ -12,7 +12,7 @@
     "promo": {
       "type": "freos-pdp-promo",
       "settings": {
-        "text": "Trenta sere di prova · Il barattolo resta a te · [SPEDIZIONE]",
+        "text": "Trenta sere di prova · Il barattolo resta a te · Spedizione gratuita in Italia · 3–5 giorni lavorativi.",
         "cta_label": "",
         "cta_url": "",
         "countdown": false,
@@ -144,7 +144,7 @@
           "settings": {
             "label": "Aggiungi al carrello",
             "soldout": "Non disponibile",
-            "under": "Trenta sere di prova · rimborso pieno · [SPEDIZIONE]"
+            "under": "Trenta sere di prova · rimborso pieno · Spedizione gratuita in Italia · 3–5 giorni lavorativi."
           }
         },
         "badges": {
@@ -360,7 +360,7 @@
             "file": "freos-ing_zinco.jpg",
             "name": "Zinco",
             "role": "Lega i composti solforati",
-            "dose": "[DOSE]"
+            "dose": "1,38 mg (14% VNR)"
           }
         },
         "ing2": {
@@ -369,7 +369,7 @@
             "file": "freos-ing_menta.jpg",
             "name": "Menta piperita",
             "role": "Freschezza immediata",
-            "dose": "[DOSE]"
+            "dose": "80 mg"
           }
         },
         "ing3": {
@@ -378,7 +378,7 @@
             "file": "freos-ing_clorofilla.jpg",
             "name": "Clorofilla",
             "role": "Uso tradizionale per gli odori",
-            "dose": "[DOSE]"
+            "dose": "85 mg"
           }
         },
         "ing4": {
@@ -387,7 +387,7 @@
             "file": "freos-ing_te_verde.jpg",
             "name": "Tè verde",
             "role": "Ricco di polifenoli",
-            "dose": "[DOSE]"
+            "dose": "85 mg"
           }
         },
         "ing5": {
@@ -396,7 +396,7 @@
             "file": "freos-ing_prezzemolo.jpg",
             "name": "Prezzemolo",
             "role": "Uso tradizionale dopo i pasti",
-            "dose": "[DOSE]"
+            "dose": "85 mg"
           }
         },
         "ing6": {
@@ -405,7 +405,7 @@
             "file": "freos-ing_melissa.jpg",
             "name": "Melissa",
             "role": "Aroma dolce",
-            "dose": "[DOSE]"
+            "dose": "85 mg"
           }
         },
         "ing7": {
@@ -414,7 +414,7 @@
             "file": "freos-ing_chiodi.jpg",
             "name": "Chiodi di garofano",
             "role": "Aroma intenso",
-            "dose": "[DOSE]"
+            "dose": "85 mg"
           }
         },
         "ing8": {
@@ -423,11 +423,21 @@
             "file": "freos-ing_pueraria.jpg",
             "name": "Pueraria lobata",
             "role": "Radice della tradizione asiatica",
-            "dose": "[DOSE]"
+            "dose": ""
+          }
+        },
+        "ing_shilajit": {
+          "type": "ing",
+          "settings": {
+            "file": "",
+            "name": "Shilajit",
+            "dose": "100 mg",
+            "role": "Resina minerale himalayana. L’ingrediente più dosato della formula."
           }
         }
       },
       "block_order": [
+        "ing_shilajit",
         "ing1",
         "ing2",
         "ing3",
@@ -438,7 +448,7 @@
         "ing8"
       ],
       "settings": {
-        "note": "<p><strong>Composizione completa.</strong> [COMPOSIZIONE_COMPLETA]</p><p><strong>Avvertenze.</strong> [AVVERTENZE_TE_VERDE] · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>",
+        "note": "<p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>",
         "kicker": "La formula",
         "heading": "Sette estratti e uno ione.",
         "dek": "Dosi dichiarate in etichetta · Nessuna miscela proprietaria",
@@ -843,7 +853,7 @@
           "type": "q",
           "settings": {
             "question": "Che sapore ha?",
-            "answer": "<p>[SAPORE]</p>",
+            "answer": "<p>Sapore di menta, con un fondo erbale di chiodi di garofano. Non è dolce.</p>",
             "open": false
           }
         },

@@ -54,7 +54,7 @@
         "01_doors": {
           "type": "doors",
           "settings": {
-            "doors": "Non so da dove arriva | Due minuti di domande, nessun acquisto. | Fai il quiz | [QUIZ_URL]\nHo già provato tutto | Perché spazzolino, collutorio e gomme lasciano fuori la stessa zona. | Leggi | [LP_LISTICLE_URL]\nVoglio solo il gesto | Cosa c’è dentro, come si usa, quanto costa. | Vedi il prodotto | /products/gel-notturno-micro-aderente-allo-zinco"
+            "doors": "Non so da dove arriva | Due minuti di domande, nessun acquisto. | Fai il quiz | https://breezy-radios-give.clarflow.com/freos-quiz-origine-notturna-it\nHo già provato tutto | Perché spazzolino, collutorio e gomme lasciano fuori la stessa zona. | Leggi | /pages/listicle\nVoglio solo il gesto | Cosa c’è dentro, come si usa, quanto costa. | Vedi il prodotto | /products/gel-notturno-micro-aderente-allo-zinco"
           }
         }
       },
@@ -102,7 +102,7 @@
           "settings": {
             "label": "Come funziona, per esteso",
             "pill": "",
-            "url": "[LP_LISTICLE_URL]",
+            "url": "/pages/listicle",
             "reassurance": ""
           }
         }
