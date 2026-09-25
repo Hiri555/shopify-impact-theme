@@ -109,7 +109,7 @@
           "type": "price",
           "settings": {
             "fallback": "29,90 €",
-            "note": "<p>120 g · trenta sere · meno di un euro al giorno</p>"
+            "note": "120 g · trenta sere · meno di un euro al giorno"
           }
         },
         "recognition": {
@@ -117,7 +117,7 @@
           "settings": {
             "question": "Quale di queste ti somiglia di più?",
             "options": "Torna dopo venti minuti\nSoprattutto al risveglio\nNon riesco a saperlo da solo",
-            "answer": "<p>In tutti e tre i casi il momento che conta è la sera: è lì che la bocca smette di difendersi, e nessuno fa niente.</p>"
+            "answer": "In tutti e tre i casi il momento che conta è la sera: è lì che la bocca smette di difendersi, e nessuno fa niente."
           }
         },
         "buy_buttons": {
