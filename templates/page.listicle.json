@@ -39,7 +39,7 @@
         "pt": 0,
         "pb": 0,
         "eyebrow": "Cripta · Notte · Lingua · Distanza",
-        "heading": "6 motivi per cui l'alito torna <em>anche se ti lavi i denti tre volte al giorno.</em>",
+        "heading": "PREUVE-A titre modifie par l API",
         "subhead": "Il collutorio, il filo, il raschietto, la mentina. Fanno bene il loro lavoro — <strong>sulle superfici che raggiungono.</strong> C'è un punto della tua bocca dove niente di tutto questo arriva. Ed è lì che si produce l'odore, ventiquattro ore su ventiquattro.",
         "author": "6 studi ORL citati Formulato in Italia 30 sere di prova · rimborso pieno",
         "consulenza": "Fonti · 6 studi ORL, 2006–2017 Aggiornato · marzo 2026 Autore · redazione FREOS"
@@ -53,7 +53,7 @@
         "pt": 0,
         "pb": 0,
         "kind": "plate",
-        "file": "freos-lp3-01.webp",
+        "file": "freos-lp2-05.webp",
         "alt": "Visita otorinolaringoiatrica",
         "caption": ""
       }
@@ -64,7 +64,7 @@
         "s1": {
           "type": "para",
           "settings": {
-            "text": "<p>Cinque secondi con l'abbassalingua e la torcia. Poi l'otorino si tira indietro sulla sedia.</p>"
+            "text": "<p>PREUVE-C ce paragraphe a ete reecrit par l API.</p>"
           }
         },
         "sq": {
@@ -93,8 +93,8 @@
         }
       },
       "block_order": [
-        "s1",
         "sq",
+        "s1",
         "s2",
         "s3",
         "sk"
