@@ -2,29 +2,41 @@
   ============================================================================
   FREOS · LAYOUT DES LANDING PAGES
   ----------------------------------------------------------------------------
-  Layout nu, partage par les 3 LP. Reprend le principe de Rosalia, dont
-  l'advertorial notait : « loaded by layout/full-page.liquid ».
+  C'est `layout/theme.liquid` MOINS le header et le footer. Rien d'autre.
 
-  Ce qu'il ne contient PAS, volontairement : le header du site, le footer, le
-  cart drawer, le search drawer, et tout le JS d'Impact. Une advertorial doit
-  se lire comme une page editoriale autonome, pas comme une page de boutique.
+  Pourquoi ce n'est plus un layout nu : le proprietaire doit pouvoir inserer
+  une section Impact native n'importe ou dans une LP. Une section Impact a
+  besoin de theme.css, de theme.js, de sections.js, des variables CSS/JS et du
+  cart drawer. Un layout qui ne les charge pas rendrait cette section sans
+  style et sans comportement -- le test d'acceptation echouerait par
+  construction. On charge donc toute la machinerie d'Impact et on retire
+  uniquement `header-group` et `footer-group`.
 
-  Ce qu'il contient obligatoirement : {{ content_for_header }}, sans quoi
-  Shopify ne peut ni mesurer ni injecter ses scripts.
+  Consequence : les feuilles des LP ne peuvent plus etre globales. Elles sont
+  scopees sous .fr-lp1 / .fr-lp2 / .fr-lp3 dans assets/freos-lp.css, genere
+  par scope_lp_css.py. Sans ce scope, la regle `section{margin-top:50px;
+  border-top:...}` de la cripta s'appliquerait aux 71 sections du theme qui
+  declarent `"tag": "section"`.
 
-  Les LP portent leur propre CSS complet (reset compris) dans leur section :
-  on ne charge donc PAS assets/freos.css ici, ce serait 46 Ko inutilises. La
-  congruence DA vient du CSS de la LP elle-meme.
+  Ce layout se choisit depuis un template JSON, qui reste donc entierement
+  reordonnable dans le customizer :
+
+      templates/page.listicle.json -> { "layout": "freos-lp", "sections": {...} }
+
+  Ne jamais ecrire `"layout": false` : un template sans layout n'est pas
+  personnalisable dans l'editeur de theme.
   ============================================================================
 {%- endcomment -%}
 
 <!doctype html>
-<html class="no-js" lang="{{ request.locale.iso_code }}">
+
+<html class="no-js" lang="{{ request.locale.iso_code }}" dir="{% render 'direction' %}">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, height=device-height, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="theme-color" content="{{ settings.header_background }}">
 
-    <title>{% if page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% endif %}</title>
+    <title>{% if page_title == blank %}{{ shop.name }}{% else %}{{ page_title }}{% if current_page != 1 %} &ndash; {{ 'general.page' | t: page: current_page }}{% endif %}{% endif %}</title>
 
     {%- if page_description -%}
       <meta name="description" content="{{ page_description | escape }}">
@@ -34,25 +46,76 @@
 
     {%- if settings.favicon -%}
       <link rel="shortcut icon" href="{{ settings.favicon | image_url: width: 96 }}">
+      <link rel="apple-touch-icon" href="{{ settings.favicon | image_url: width: 180 }}">
     {%- endif -%}
 
     <link rel="preconnect" href="https://cdn.shopify.com">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,400;1,9..144,500;1,9..144,600;1,9..144,700;1,9..144,900&family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
 
-    {%- comment -%}
-      Le poids 900 sert aux lettrines d'Adv1, qui titrait auparavant en Playfair.
-      Une LP qui a besoin d'une autre famille (Adv1 garde Source Serif 4 pour son
-      corps de lecture) la declare elle-meme dans sa section.
-    {%- endcomment -%}
+    {%- unless settings.heading_font.system? -%}
+      <link rel="preload" href="{{ settings.heading_font | font_url }}" as="font" type="font/woff2" crossorigin>
+    {%- endunless -%}
+
+    {%- unless settings.text_font.system? -%}
+      <link rel="preload" href="{{ settings.text_font | font_url }}" as="font" type="font/woff2" crossorigin>
+    {%- endunless -%}
+
+    {%- render 'social-meta-tags' -%}
+    {%- render 'microdata-schema' -%}
+    {%- render 'css-variables' -%}
+    {%- render 'js-variables' -%}
+
+    <script type="module" src="{{ 'vendor.min.js' | asset_url }}"></script>
+    <script type="module" src="{{ 'theme.js' | asset_url }}"></script>
+    <script type="module" src="{{ 'sections.js' | asset_url }}"></script>
 
     {{ content_for_header }}
+
+    {{- 'theme.css' | asset_url | stylesheet_tag: preload: true -}}
+
+    {%- render 'freos-head' -%}
+    {%- render 'freos-lp-head' -%}
+
+    <!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+ fbq('init', '2079925779414700');
+fbq('track', 'PageView');
+</script>
+<noscript>
+ <img height="1" width="1"
+src="https://www.facebook.com/tr?id=2079925779414700&ev=PageView
+&noscript=1"/>
+</noscript>
+<!-- End Facebook Pixel Code -->
   </head>
 
-  <body class="freos-lp">
-    {{ content_for_layout }}
+  <body class="freos-lp {% if settings.zoom_image_on_hover %}zoom-image--enabled{% endif %}">
+    {%- render 'shadow-dom-templates' -%}
+
+    <a href="#main" class="skip-to-content sr-only">{{ 'general.accessibility.skip_to_content' | t }}</a>
+
+    {%- comment -%}
+      On garde overlay-group : il porte le cart drawer, sans lequel une section
+      produit Impact inseree dans la page n'aurait nulle part ou ajouter.
+      On ne garde PAS header-group ni footer-group : c'est tout l'objet de ce
+      layout, une page editoriale qui se lit sans le chrome de la boutique.
+    {%- endcomment -%}
+    {%- sections 'overlay-group' -%}
+
+    {%- if settings.cart_type == 'popover' -%}
+      <cart-notification-drawer open-from="bottom" class="quick-buy-drawer drawer"></cart-notification-drawer>
+    {%- endif -%}
+
+    <main role="main" id="main" class="anchor">
+      {{ content_for_layout }}
+    </main>
   </body>
 </html>
