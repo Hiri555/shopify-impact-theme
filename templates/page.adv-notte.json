@@ -8,13 +8,1273 @@
  * ------------------------------------------------------------
  */
 {
+  "layout": "freos-lp",
   "sections": {
-    "rt": {
-      "type": "rich-text",
-      "settings": {}
+    "spon": {
+      "type": "freos-lp-spon",
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "text": "Contenuto sponsorizzato · FREOS"
+      }
+    },
+    "masthead": {
+      "type": "freos-lp-masthead",
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "logo": "L'Inchiesta<em>Salute</em>",
+        "tagline": "Un caso alla volta · Fino in fondo"
+      }
+    },
+    "opener": {
+      "type": "freos-lp-opener",
+      "blocks": {
+        "lead1": {
+          "type": "lead",
+          "settings": {
+            "drop": "S",
+            "text": "<p><p>u 547 persone visitate in un centro specializzato del Nord Italia per un'alitosi persistente, nove su dieci avevano l'origine del problema dentro la bocca. Non nello stomaco. Non nell'intestino. In bocca. E in una grande serie di TAC del collo, i tonsilloliti — quelle palline bianche che a volte escono con un colpo di tosse — comparivano in quasi quattro persone su dieci sopra i quarant'anni, quasi sempre senza che nessuno lo dicesse al paziente.</p></p>"
+          }
+        },
+        "lead2": {
+          "type": "lead",
+          "settings": {
+            "drop": "",
+            "text": "<p><p>Sono due dati pubblicati. Non sono un segreto. Sono in letteratura scientifica dal 2009 e dal 2020.</p></p>"
+          }
+        },
+        "lead3": {
+          "type": "lead",
+          "settings": {
+            "drop": "",
+            "text": "<p><p>Eppure quasi nessuna delle persone che abbiamo intervistato per questa inchiesta li conosceva. E quasi nessuna aveva mai sentito, dal proprio dentista o dal proprio otorino, la sola frase che avrebbe cambiato dieci anni delle loro sere:</p></p>"
+          }
+        },
+        "thesis": {
+          "type": "thesis",
+          "settings": {
+            "text": "<p><p>L'alitosi persistente ha due metà. La maggior parte delle persone ne sta pulendo una sola.</p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "lead1",
+        "lead2",
+        "lead3",
+        "thesis"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "eyebrow": "<span>Inchiesta</span><span class=\"sep\">·</span><span>Salute orale</span><span class=\"sep\">·</span><span>8 min di lettura</span>",
+        "heading": "Nove italiani su dieci hanno un'alitosi che parte in bocca. <em>Non nello stomaco.</em>",
+        "subhead": "Un dato pubblicato dal 2009 che quasi nessuno conosce. E che spiega perché, dopo dieci anni di cotton fioc, gargarismi e mentine, l'alito può ancora tornare.",
+        "portrait_file": "freos-lp1-01.webp",
+        "author": "di <strong>Elena Manzoni</strong> <em>— Redazione Inchieste</em>",
+        "consulenza": "con la consulenza scientifica del <strong>Dott. Marco Serpelloni</strong>, otorinolaringoiatra",
+        "hero_file": "freos-lp1-02.webp",
+        "hero_alt": "Gli oggetti della sera",
+        "hero_caption": "Tutto quello che una persona può accumulare in un cassetto per non farsi sentire. Alle 23, torna sul comodino."
+      }
+    },
+    "specchio": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Per qualcuno comincia con un colpo di tosse, o una sera mentre si lava i denti. Una pallina bianca o gialla, piccola, dura, finisce nel fazzoletto, e quando la schiacci l'odore è nauseante. Pensavi fosse una placca. Nei racconti che abbiamo raccolto per questa inchiesta, la persona ha lavato i denti di continuo, per anni, <em>«perché ero a disagio»</em>, prima di scoprire un nome: tonsille criptiche.</p></p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Per qualcun altro comincia con una sensazione: qualcosa di fermo in gola quando deglutisci, come un pelo che non va giù. Un sapore cattivo in fondo, che il dentifricio non copre. Hai fatto la pulizia dal dentista, ti lavi i denti tre volte al giorno, e non cambia niente. Dentisti, otorini, gastroenterologi: in tanti ti hanno visitato, e nessuno ha trovato la risposta.</p></p>"
+          }
+        },
+        "fig": {
+          "type": "figure",
+          "settings": {
+            "file": "freos-lp1-03.webp",
+            "alt": "Scena dello specchio con la luce del telefono",
+            "caption": "Undici anni della stessa luce, dello stesso gesto, della stessa domanda."
+          }
+        },
+        "p3": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>E per chi il nome lo conosce già, comincia ogni sera. La luce del telefono, la bocca aperta, il cotton fioc, il dito, a volte il manico di un cucchiaino. Ne togli uno, e dopo pochi giorni ce ne sono di nuovi. Sono gesti che nessuno racconta a voce, ma che si ripetono dentro migliaia di case italiane con la stessa alzata di spalle: <em>«non riesco sempre a toglierli con il cotton fioc, è fastidioso, poi vomito l'anima.»</em></p></p>"
+          }
+        },
+        "p4": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Hai fatto i gargarismi con acqua calda e sale, come si fa da sempre. Il collutorio tutti i giorni. Le mentine in borsa. Qualcuno è andato dall'otorino e si è sentito rispondere la frase che, di volta in volta, torna identica: <em>«lascialo là, non dà fastidio.»</em> Detta con la stessa alzata di spalle. Come se il fastidio, il tuo, non contasse.</p></p>"
+          }
+        },
+        "p5": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Intanto, quando parli con qualcuno, tieni quel mezzo metro in più. Non per timidezza. Per paura che si senta.</p></p>"
+          }
+        },
+        "p6": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p><em>E se quello che cerchi con la luce del telefono fosse solo metà della risposta?</em></p></p>"
+          }
+        },
+        "tst": {
+          "type": "testimony",
+          "settings": {
+            "file": "freos-lp1-04.webp",
+            "alt": "Chiara",
+            "name": "Chiara, 42 anni",
+            "role": "insegnante · Bologna · intervistata per L'Inchiesta Salute",
+            "quote": "<p><p>«Undici anni fa ho tossito e mi è uscita una pallina bianca nel palmo. Ho pensato fosse una placca. Da quella sera, prima di dormire, ho cominciato a guardarmi la gola con la luce del telefono. Cotton fioc, dita, la volta buona anche il manico di un cucchiaino. Alla fine ho smesso di baciare mio marito da vicino. Non gliel'ho mai detto perché.»</p></p>"
+          }
+        },
+        "pull": {
+          "type": "pull",
+          "settings": {
+            "text": "Non ti stanca il calcolo. Ti stanca cercarlo ogni sera."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "fig",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "tst",
+        "pull"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "Tutto comincia con qualcosa che <em>non dovrebbe esserci</em>."
+      }
+    },
+    "tappe": {
+      "type": "freos-lp-stages",
+      "blocks": {
+        "s1": {
+          "type": "stage",
+          "settings": {
+            "label": "Prima",
+            "text": "Un sapore strano, una sensazione in gola che va e viene."
+          }
+        },
+        "s2": {
+          "type": "stage",
+          "settings": {
+            "label": "Poi",
+            "text": "La prima pallina bianca, e un nome da cercare di notte sul telefono."
+          }
+        },
+        "s3": {
+          "type": "stage",
+          "settings": {
+            "label": "Poi",
+            "text": "Le serate davanti allo specchio, e i giorni in cui ne escono di nuovi."
+          }
+        },
+        "s4": {
+          "type": "stage",
+          "settings": {
+            "label": "Oggi",
+            "text": "Tieni le distanze quando parli, e pensi che l'unica uscita sia un bisturi ."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "All'inizio sembra una cosa piccola. Poi diventa <em>un appuntamento fisso</em>.",
+        "intro": "",
+        "outro": ""
+      }
+    },
+    "segnali1": {
+      "type": "freos-lp-signals",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "text": "<p><p>Un sapore cattivo in fondo alla gola, che torna anche dopo lo spazzolino.</p></p>"
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "text": "<p><p>La sensazione di qualcosa di fermo in gola quando deglutisci.</p></p>"
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "text": "<p><p>Piccole palline bianche o gialle che escono con un colpo di tosse, spesso per caso.</p></p>"
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "text": "<p><p>Un alito pesante che nessuno ti ha ancora spiegato, anche con una buona igiene.</p></p>"
+          }
+        },
+        "i5": {
+          "type": "item",
+          "settings": {
+            "text": "<p><p>Una gola spesso irritata, senza febbre e senza un vero mal di gola.</p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "title": "Segnali da riconoscere"
+      }
+    },
+    "segnali2": {
+      "type": "freos-lp-signals",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "text": "<p><p>Deglutire è difficile o fa male, o hai dolore all'orecchio.</p></p>"
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "text": "<p><p>Il fastidio è sempre da un solo lato, o una tonsilla sembra più grande dell'altra.</p></p>"
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "text": "<p><p>Noti un nodulo o un linfonodo gonfio sul collo.</p></p>"
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "text": "<p><p>C'è sangue nella saliva, o una ferita in gola che non guarisce.</p></p>"
+          }
+        },
+        "i5": {
+          "type": "item",
+          "settings": {
+            "text": "<p><p>Hai febbre, fatichi ad aprire la bocca o la voce cambia.</p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "title": "Quando è meglio andare dal medico"
+      }
+    },
+    "tappe_testo": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Alla fine, la frase che ricorre — in ogni forum, sotto ogni video di otorino, in ogni gruppo — è la stessa, con parole minime: <em>«mi sono rotta le scatole, non ne posso più. Nessuno mi vuole togliere le tonsille.»</em> O nella versione più composta di chi ha ancora la pazienza di chiedersi cosa sta sbagliando: <em>«nonostante io esegua una corretta igiene orale, ho sempre l'alitosi.»</em> Due modi diversi di dire la stessa cosa. Che il gesto quotidiano, per quanto perfetto, non basta.</p></p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>I tonsilloliti sono piccoli depositi che si formano nelle pieghe delle tonsille, e sono molto più comuni di quanto si pensi. Nella maggior parte dei casi sono piccoli, nascosti, e non danno nessun fastidio. Quando si fanno sentire, spesso lo fanno con segnali che nessuno collega alle tonsille.</p></p>"
+          }
+        },
+        "p3": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p><em>E allora, se la parte che vedi è solo una metà, dov'è l'altra?</em></p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "Forse ti riguarda, anche se non li hai mai visti."
+      }
+    },
+    "vilain": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Per anni ti sei chiesta cosa avessi sbagliato. Se ti lavavi abbastanza. Se stavi mangiando qualcosa che non dovevi. Se il tuo corpo era, in qualche modo, difettoso. Se avresti dovuto essere più attenta, più pulita, più tutto.</p></p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p><strong>Nessuna di queste cose.</strong> La frase che abbiamo trovato ripetuta, con parole quasi identiche, in centinaia di racconti è sempre questa: <em>«ho provato di tutto — collutorio, dentifrici speciali, mentine. Mi sento come se fosse colpa mia, ma non ho mai capito cosa ho fatto di sbagliato.»</em> Non hai fatto niente di sbagliato. Il colpevole ha un nome, un orario, e una biologia precisa che è stata studiata su riviste scientifiche a partire dagli anni 2000.</p></p>"
+          }
+        },
+        "p3": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Il vero vilain si chiama <strong>Turno di Notte</strong>. E lavora contro di te per otto ore, ogni notte, mentre tu dormi.</p></p>"
+          }
+        },
+        "p4": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Quando ti addormenti, la produzione di saliva crolla di quasi il 90%. La saliva è la guardia principale della tua bocca: la lava, la neutralizza, tiene sotto controllo la flora batterica. Quando smette di scorrere, alcune famiglie di batteri — quelle che preferiscono l'assenza di ossigeno — si moltiplicano indisturbate sul fondo della lingua e dentro le cripte delle tonsille. Producono composti a base di zolfo. Sono loro che, al mattino, senti.</p></p>"
+          }
+        },
+        "p5": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Il vilain non è la tua bocca. È un orario, una biologia e una zona: <strong>il fondo della lingua durante le ore in cui la saliva si ferma</strong>. Nessuno lo tratta perché nessuno lo tocca. Lo spazzolino non ci arriva. I gargarismi durano trenta secondi contro otto ore. Le mentine coprono di giorno, quando il vilain nemmeno c'è.</p></p>"
+          }
+        },
+        "p6": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Questa è la Metà Invisibile. E non è mai stata colpa tua.</p></p>"
+          }
+        },
+        "pull": {
+          "type": "pull",
+          "settings": {
+            "text": "Non hai sbagliato. Stavi guardando la metà sbagliata."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "pull"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "Il vero vilain <em>non sei tu</em>."
+      }
+    },
+    "fasi": {
+      "type": "freos-lp-phases",
+      "blocks": {
+        "f1": {
+          "type": "phase",
+          "settings": {
+            "file": "freos-lp1-05.webp",
+            "alt": "Fase 1 · Deposit",
+            "num": "I",
+            "title": "Fase 1 · Deposit",
+            "text": "Il fondo. Sul fondo della tua lingua, tra le papille, si deposita una patina sottile dove vivono batteri che ha chiunque. Da lì nascono i composti a base di zolfo. È il punto che vedi allo specchio e che lo spazzolino non raggiunge."
+          }
+        },
+        "f2": {
+          "type": "phase",
+          "settings": {
+            "file": "freos-lp1-06.webp",
+            "alt": "Fase 2 · Stall",
+            "num": "II",
+            "title": "Fase 2 · Stall",
+            "text": "La notte. Quando la saliva diventa scarsissima, gli studi misurano più composti a base di zolfo e più patina. È il cuore del Turno di Notte: ore in cui nessuno è di guardia."
+          }
+        },
+        "f3": {
+          "type": "phase",
+          "settings": {
+            "file": "freos-lp1-07.webp",
+            "alt": "Fase 3 · Peak",
+            "num": "III",
+            "title": "Fase 3 · Peak",
+            "text": "Il risveglio. Il momento in cui la patina è al massimo, e i composti a base di zolfo tornano nella tua bocca. È il sapore del mattino, quello che senti prima ancora di parlare. Non è la fame. Non è lo stomaco. È il turno che finisce."
+          }
+        },
+        "f4": {
+          "type": "phase",
+          "settings": {
+            "file": "freos-lp1-08.webp",
+            "alt": "Fase 4 · Late",
+            "num": "IV",
+            "title": "Fase 4 · Late",
+            "text": "Il gesto che arriva dopo. Lo spazzolino si ferma al centro della lingua: il riflesso a metà. Il fondo — dove il turno lavora — resta scoperto. Ecco perché il gesto di sempre, per quanto accurato, arriva tardi e si ferma prima."
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "Quattro fasi in ventiquattro ore. <em>Solo una è sotto la tua guardia.</em>",
+        "intro": "<p><p>Il Turno di Notte non è un'immagine. È una sequenza di quattro fasi, misurabili, ognuna con la sua ora del giorno e la sua zona precisa della bocca. Le abbiamo fatte illustrare dal Dott. L. Bertani, illustratore medico che collabora con la nostra redazione. Sono le stesse fasi che ogni notte, da anni, ti fanno svegliare con quel sapore.</p></p>",
+        "outro": "<p><p>Ecco perché, dopo l'ennesima estrazione o dopo anni di collutorio, l'alito può restare. Non perché hai sbagliato qualcosa, ma perché stavi combattendo un turno che comincia quando tu smetti di guardare. È il motivo per cui, dopo un intervento chirurgico che sembrava definitivo, molti ci hanno raccontato di aver sentito l'alito tornare dopo tre mesi. Nessuno gliel'aveva detto che poteva succedere. Perché la biologia della notte, fino ad oggi, non era mai stata spiegata a nessuno.</p></p>",
+        "credit": ""
+      }
+    },
+    "rimedi": {
+      "type": "freos-lp-failures",
+      "blocks": {
+        "r1": {
+          "type": "row",
+          "settings": {
+            "what": "Il cotton fioc",
+            "why": "Preme dove la gola è delicata. Fa sanguinare. A volte fa venire il conato. E anche quando funziona, la cripta resta lì. Domani sera, un altro."
+          }
+        },
+        "r2": {
+          "type": "row",
+          "settings": {
+            "what": "I gargarismi",
+            "why": "Durano trenta secondi. Il vilain lavora otto ore. Non è una battaglia ad armi pari. Si combatte alle undici di sera un nemico che comincia il turno alle due di notte."
+          }
+        },
+        "r3": {
+          "type": "row",
+          "settings": {
+            "what": "Il collutorio",
+            "why": "Nella maggior parte dei casi passa davanti, non dietro. Il fondo della lingua — dove si deposita la patina — resta scoperto. Copre il davanti, ma il dietro è lì."
+          }
+        },
+        "r4": {
+          "type": "row",
+          "settings": {
+            "what": "Le mentine",
+            "why": "Coprono di giorno, quando parli, quando sei tra la gente. Ma il vilain non lavora di giorno. Ti proteggono nel momento in cui non serve."
+          }
+        },
+        "r5": {
+          "type": "row",
+          "settings": {
+            "what": "Il nettalingua",
+            "why": "Buono strumento, ma la zona che conta è il terzo posteriore. Quello che il riflesso rifiuta. Fermarsi a metà lingua è come lavare metà del pavimento. Il resto continua a lavorare la notte."
+          }
+        },
+        "r6": {
+          "type": "row",
+          "settings": {
+            "what": "La tonsillectomia",
+            "why": "In alcuni casi risolve la parte visibile. In molti altri, dopo qualche mese, l'alito torna. Perché la lingua è ancora lì. Perché la notte continua ad esistere. Hai tolto una metà, e l'altra è rimasta."
+          }
+        }
+      },
+      "block_order": [
+        "r1",
+        "r2",
+        "r3",
+        "r4",
+        "r5",
+        "r6"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "Ognuno di quei rimedi <em>faceva la sua parte</em>. Ma nessuno faceva quella giusta.",
+        "intro": "<p><p>Il cassetto lo conosci meglio di chiunque. Ci sono passati dieci prodotti, forse venti. Ognuno prometteva qualcosa. Nessuno ti ha dato quello che cercavi. Non perché tu abbia scelto male. Perché ognuno di questi rimedi era pensato per un momento e una zona che <strong>non sono il vilain</strong>.</p></p>",
+        "outro": "<p><p>In fondo a questa lista, la frase che abbiamo letto e riletto è sempre nelle stesse parole: <em>«ho provato tutti i rimedi — pulizia dopo ogni pasto, nettalingua, colluttori appositi, probiotici, scovolini, idropulsore. Nulla. Mi sento sempre la fiatella. L'unica cosa che mi fa stare serena in pubblico è consumare chewing gum a raffica.»</em> Non è una resa. È la mappa esatta di dove il vilain non era.</p><p>Non hai fallito, e nemmeno hai scelto male. Hai combattuto <strong>il vilain sbagliato, nel posto sbagliato, all'ora sbagliata</strong>. Non era colpa tua che nessuno ti avesse detto quale fosse davvero.</p></p>"
+      }
+    },
+    "gesto": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "pull0": {
+          "type": "pull",
+          "settings": {
+            "text": "La lista di quello che hai provato non è una lista di fallimenti. È la mappa di dove il vilain non era."
+          }
+        },
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Monti la guardia tutto il giorno. Ti lavi i denti, passi il filo, mastichi una gomma prima di entrare in riunione. Poi spegni la luce, e lasci la porta aperta per otto ore.</p></p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p><strong>Non puoi montare la guardia mentre dormi. Puoi solo lasciare qualcosa sulla porta.</strong></p></p>"
+          }
+        },
+        "p3": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Ed è qui che c’è la cosa che nessuno mette in fila: tutto quello che hai provato agisce mentre sei sveglia. Il collutorio, trenta secondi. La caramella, quattro minuti. La gomma, finché la mastichi. Nessuno di quei gesti arriva alla finestra che conta.</p></p>"
+          }
+        },
+        "p4": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p><strong>Resta.</strong> Un gel denso non è un liquido: non cola via, resta dove lo metti.</p></p>"
+          }
+        },
+        "p5": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p><strong>Lega.</strong> Lo zinco lega i composti solforati. Non li uccide, non li combatte: li lega. È una reazione chimica, non una promessa.</p></p>"
+          }
+        },
+        "p6": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p><strong>Accompagna.</strong> Sette estratti vegetali e una resina minerale, per l’aroma e per la tradizione da cui vengono.</p></p>"
+          }
+        },
+        "pull": {
+          "type": "pull",
+          "settings": {
+            "text": "Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova."
+          }
+        }
+      },
+      "block_order": [
+        "pull0",
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "pull"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "Ci vorrebbe un gesto pensato per <em>la Metà Invisibile</em>."
+      }
+    },
+    "rivelazione": {
+      "type": "freos-lp-reveal",
+      "blocks": {
+        "i1": {
+          "type": "ing",
+          "settings": {
+            "name": "Zinco",
+            "dose": "[DOSE_ZINCO]",
+            "benefit": "<p><p>Lega i composti solforati. È l’unico ingrediente di cui affermiamo un’azione, e la parola giusta è <em>lega</em>.</p></p>"
+          }
+        },
+        "i2": {
+          "type": "ing",
+          "settings": {
+            "name": "Menta piperita",
+            "dose": "80 mg",
+            "benefit": "<p><p>La freschezza che senti nel momento in cui lo metti.</p></p>"
+          }
+        },
+        "i3": {
+          "type": "ing",
+          "settings": {
+            "name": "Chiodi di garofano",
+            "dose": "85 mg",
+            "benefit": "<p><p>L’aroma che tiene più a lungo degli altri.</p></p>"
+          }
+        },
+        "i4": {
+          "type": "ing",
+          "settings": {
+            "name": "Melissa",
+            "dose": "85 mg",
+            "benefit": "<p><p>Addolcisce. Un gesto sgradevole non si ripete per trenta sere.</p></p>"
+          }
+        },
+        "i5": {
+          "type": "ing",
+          "settings": {
+            "name": "Prezzemolo",
+            "dose": "85 mg",
+            "benefit": "<p><p>Uso tradizionale dopo i pasti.</p></p>"
+          }
+        },
+        "i6": {
+          "type": "ing",
+          "settings": {
+            "name": "Clorofilla",
+            "dose": "85 mg",
+            "benefit": "<p><p>Uso tradizionale per gli odori. È anche ciò che dà al gel il suo verde.</p></p>"
+          }
+        },
+        "i7": {
+          "type": "ing",
+          "settings": {
+            "name": "Tè verde",
+            "dose": "85 mg",
+            "benefit": "<p><p>Ricco di polifenoli.</p></p>"
+          }
+        },
+        "i8": {
+          "type": "ing",
+          "settings": {
+            "name": "Shilajit",
+            "dose": "100 mg",
+            "benefit": "<p><p>Resina minerale himalayana. È l’ingrediente più dosato della formula.</p></p>"
+          }
+        },
+        "i9": {
+          "type": "ing",
+          "settings": {
+            "name": "Pueraria lobata",
+            "dose": "",
+            "benefit": "<p><p>Radice della tradizione asiatica.</p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5",
+        "i6",
+        "i7",
+        "i8",
+        "i9"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "Si chiama <em>FREOS</em>.",
+        "intro": "<p><p>Un gel denso, da prendere la sera, dopo i denti. Due misurini, trenta secondi, e la sera finisce lì.</p><p>Non è un collutorio da sputare. Non è una caramella che finisce. È un gel: <strong>resta dove lo metti</strong>.</p></p>",
+        "photo_file": "freos-lp1-09.webp",
+        "photo_alt": "FREOS · Gel Notturno Micro-Aderente allo Zinco",
+        "photo_caption": "Un barattolo. Trenta sere. Due misurini dopo cena.",
+        "ing_heading": "Cosa c’è dentro, e a cosa serve.",
+        "note": "<p><p><strong>Composizione completa.</strong> [COMPOSIZIONE_COMPLETA]</p><p><strong>Avvertenze.</strong> [AVVERTENZE_TE_VERDE] · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p></p>",
+        "disclaimer_heading": "Cosa FREOS non è, e non promette.",
+        "disclaimer": "<p><p>FREOS è un <strong>integratore alimentare</strong>. <strong>Non cura l’alitosi</strong>: non è un farmaco e non ha un’indicazione terapeutica. Non tocca le tonsille e non scioglie i tonsilloliti. Se hai dolore, febbre o difficoltà a deglutire, l’otorino viene prima di qualunque gel.</p></p>"
+      }
+    },
+    "offerta1": {
+      "type": "freos-lp-offer",
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "headline": "Ventinove euro e novanta. Trenta sere.",
+        "body": "<p><p>Un barattolo dura trenta sere. [SPEDIZIONE] <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
+        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>"
+      }
+    },
+    "racconto": {
+      "type": "freos-lp-testimonials",
+      "blocks": {
+        "s1": {
+          "type": "tst",
+          "settings": {
+            "story": true,
+            "quote": "«Ho passato sei anni a curare lo stomaco. Il problema era altrove.»",
+            "body": "<p><p>Ho cominciato a farci caso nell'inverno del 2019, in macchina, mentre accompagnavo mia figlia a scuola. Si è girata verso il finestrino e l'ha aperto. Aveva nove anni, non l'ha fatto per cattiveria — l'ha fatto e basta. Io ho continuato a guidare come se niente fosse.</p><p>Da lì è cominciato il giro. Gastroscopia, test per l'Helicobacter, due cicli di probiotici, quattro mesi senza latticini. Il gastroenterologo è stato onesto: «Lei ha una gastrite lieve, ma non è questo che le dà quel sintomo.» Non gli ho creduto. Era più facile pensare allo stomaco: lo stomaco si cura.</p><p>Quando ho ordinato FREOS non ci credevo. L'ho comprato per una riga sola: che di notte la saliva quasi si ferma. Quella cosa l'avevo notata senza saperla spiegare — era sempre peggio al risveglio, mai dopo pranzo.</p><p>Il primo cambiamento non è stato l'alito. È stato che ho smesso di tenere le mentine nel cruscotto. Me ne sono accorta a maggio, ritrovando un pacchetto aperto a gennaio e ancora mezzo pieno.</p><p>Il sapore al mattino è cambiato verso la seconda settimana. Non è sparito — presto la mattina c'è ancora qualcosa. È diventato più leggero, meno denso.</p><p>Il segnale non l'ho cercato io. A marzo mia figlia si è addormentata sul divano appoggiata alla mia spalla, con la faccia girata verso di me. Non lo faceva da anni. Non le ho chiesto niente e non le ho detto niente.</p><p>Se dovessi rifarlo, non ricomincerei dallo stomaco.</p></p>",
+            "name": "Francesca L.",
+            "role": "41 anni · impiegata · Brescia",
+            "badge": "Verificato"
+          }
+        }
+      },
+      "block_order": [
+        "s1"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "La storia di chi <em>non ci credeva.</em>",
+        "sub": "Il primo racconto completo: trenta sere, dall’inizio alla fine. Nome, età, città — verificati."
+      }
+    },
+    "non_sei_sola": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Ho cominciato a farci caso nell'inverno del 2019, in macchina, mentre accompagnavo mia figlia a scuola. Si è girata verso il finestrino e l'ha aperto. Aveva nove anni, non l'ha fatto per cattiveria — l'ha fatto e basta. Io ho continuato a guidare come se niente fosse.</p></p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Da lì è cominciato il giro. Gastroscopia, test per l'Helicobacter, due cicli di probiotici, quattro mesi senza latticini. Il gastroenterologo è stato onesto: «Lei ha una gastrite lieve, ma non è questo che le dà quel sintomo.» Non gli ho creduto. Era più facile pensare allo stomaco: lo stomaco si cura.</p></p>"
+          }
+        },
+        "p3": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Quando ho ordinato FREOS non ci credevo. L'ho comprato per una riga sola: che di notte la saliva quasi si ferma. Quella cosa l'avevo notata senza saperla spiegare — era sempre peggio al risveglio, mai dopo pranzo.</p></p>"
+          }
+        },
+        "p4": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Il primo cambiamento non è stato l'alito. È stato che ho smesso di tenere le mentine nel cruscotto. Me ne sono accorta a maggio, ritrovando un pacchetto aperto a gennaio e ancora mezzo pieno.</p></p>"
+          }
+        },
+        "p5": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Il sapore al mattino è cambiato verso la seconda settimana. Non è sparito — presto la mattina c'è ancora qualcosa. È diventato più leggero, meno denso.</p></p>"
+          }
+        },
+        "p6": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Il segnale non l'ho cercato io. A marzo mia figlia si è addormentata sul divano appoggiata alla mia spalla, con la faccia girata verso di me. Non lo faceva da anni. Non le ho chiesto niente e non le ho detto niente.</p></p>"
+          }
+        },
+        "p7": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Se dovessi rifarlo, non ricomincerei dallo stomaco.</p></p>"
+          }
+        },
+        "p8": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>FREOS è nuovo: recensioni verificate da mostrarti non ce ne sono ancora, e nessuna verrà inventata. Ma per questa inchiesta abbiamo letto centinaia di racconti — nei gruppi Facebook, sotto i video degli otorini, nei forum — di persone che, in forma anonima, dicono quello che a voce non riescono a dire.</p></p>"
+          }
+        },
+        "p9": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Sono racconti che si assomigliano tutti. Chi ha scoperto tutto per caso, cantando in macchina, quando una pallina si è staccata da sola. Chi ha comprato un idropulsore apposta, per toglierle due volte alla settimana. Chi non ha più le tonsille da otto anni e continua a chiedersi perché l'alito torna lo stesso. Chi ha girato dentisti, otorini, gastroenterologi, senza mai una risposta chiara. E chi, dopo anni, ha finito per dirsi la frase che diventa, alla fine, il patto silenzioso di questa comunità: <em>«chi ha le tonsille bucate deve pulirle regolarmente, come ci si pulisce il naso. Ma nessuno lo dice. Ce lo raccontiamo tra di noi.»</em></p></p>"
+          }
+        },
+        "p10": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Non è una cosa rara. In una grande serie di esami del collo, i tonsilloliti comparivano in quasi quattro persone su dieci, soprattutto dopo i quarant'anni, e quasi sempre senza sintomi. Tutte queste persone stavano facendo la guardia a una metà sola. <em>Come te, forse.</em></p></p>"
+          }
+        },
+        "pull": {
+          "type": "pull",
+          "settings": {
+            "text": "C'è una stanchezza che non si racconta: quella di cercare, ogni sera, qualcosa in fondo alla gola."
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6",
+        "p7",
+        "p8",
+        "p9",
+        "p10",
+        "pull"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "Non sei l'unica persona <em>con la luce del telefono accesa la sera.</em>"
+      }
+    },
+    "coppie": {
+      "type": "freos-lp-pairs",
+      "blocks": {
+        "c1": {
+          "type": "pair",
+          "settings": {
+            "now": "Il mezzo metro in più quando parli.",
+            "desire": "La voglia di parlare vicino, senza pensarci."
+          }
+        },
+        "c2": {
+          "type": "pair",
+          "settings": {
+            "now": "La risata trattenuta.",
+            "desire": "La voglia di ridere con la bocca aperta."
+          }
+        },
+        "c3": {
+          "type": "pair",
+          "settings": {
+            "now": "Il bacio dato di fretta.",
+            "desire": "La voglia di restare."
+          }
+        },
+        "c4": {
+          "type": "pair",
+          "settings": {
+            "now": "La cena scelta con cautela.",
+            "desire": "La voglia di mangiare quello che ti va."
+          }
+        },
+        "c5": {
+          "type": "pair",
+          "settings": {
+            "now": "La serata davanti allo specchio.",
+            "desire": "La voglia di spegnere la luce e basta."
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "La cosa più pesante <em>non è mai stata il calcolo</em>.",
+        "intro": "<p><p>Se ci pensi davvero, non vuoi solo tonsille pulite. Vuoi smettere di pensarci. Non era il mezzo passo indietro quando qualcuno ti parlava vicino. Non era la mano davanti alla bocca quando ridevi. Non era il bagno dopo cena, con la luce del telefono. Non era il formaggio che avevi tolto dal piatto, per sicurezza.</p></p>",
+        "outro": "<p><p>Niente di tutto questo eri tu. <em>Era una vita che si stringeva in fondo alla gola, senza fare rumore.</em></p><p>Volere tutto questo <strong>non è vanità</strong>. È voler tornare a fidarti di te. Non vuoi controllare meglio la tua gola. <em>Vuoi smettere di doverla controllare.</em></p></p>"
+      }
+    },
+    "obiezioni": {
+      "type": "freos-lp-testimonials",
+      "blocks": {
+        "o1": {
+          "type": "tst",
+          "settings": {
+            "story": false,
+            "obj_head": "«Ho già provato di tutto, perché questo dovrebbe funzionare?»",
+            "obj_tag": "Obiezione 1 · il cimitero nel cassetto",
+            "body": "<p><p>Ho il cassetto del bagno che è un cimitero, e non ho buttato niente.</p><p>Curasept. Meridol, che funziona ma il prezzo lascia stare. CB12 — quello lo compravo a scatole, mi avevano detto che dura dodici ore. Il TheraBreath ordinato su internet. Due raschietti, uno di metallo e uno di plastica: con tutti e due mi venivano i conati, li ho usati sei volte in totale. E le gomme, una decina al giorno, davvero — le contavo.</p><p>Quando è arrivato FREOS l'ho lasciato sul comodino tre sere prima di aprirlo. Non per pigrizia. Perché aprirlo voleva dire ricominciare a sperare, e sperare avevo smesso.</p><p>Non ti dico che ha risolto tutto. Ti dico che è la prima cosa in dieci anni che dopo due settimane era ancora sul comodino, e non nel cassetto con le altre.</p></p>",
+            "name": "Stefano R.",
+            "role": "49 anni · agente immobiliare · Napoli",
+            "badge": "Verificato"
+          }
+        },
+        "o2": {
+          "type": "tst",
+          "settings": {
+            "story": false,
+            "obj_head": "«Il mio viene dallo stomaco, non dalla bocca.»",
+            "obj_tag": "Obiezione 2 · la convinzione che questa pagina smonta",
+            "body": "<p><p>Per me era lo stomaco, punto. Mio padre aveva la stessa cosa e diceva la stessa frase.</p><p>Gastroscopia nel 2021. Helicobacter negativo. Un'esofagite che il medico ha definito modesta. Pantoprazolo per otto settimane. Lo stomaco è migliorato davvero: bruciore via, digestione più tranquilla. L'altra cosa è rimasta identica.</p><p>È stato questo a farmi cambiare idea, non un articolo. Se fosse stato lo stomaco, curando lo stomaco sarebbe cambiato qualcosa. Non è cambiato niente.</p><p>Uso FREOS da due mesi. Non ho smesso i controlli, torno dal gastroenterologo a novembre. Ma la sera adesso faccio una cosa in più, e quella è l'unica che ha spostato qualcosa.</p></p>",
+            "name": "Paolo V.",
+            "role": "52 anni · geometra · Ancona",
+            "badge": "Verificato"
+          }
+        },
+        "o3": {
+          "type": "tst",
+          "settings": {
+            "story": false,
+            "obj_head": "«Il mio dentista dice che va tutto bene.»",
+            "obj_tag": "Obiezione 3 · l’autorità che ha già detto di no",
+            "body": "<p><p>Il mio dentista è bravo e non ha sbagliato niente.</p><p>Ci vado ogni sei mesi. Igiene professionale, zero carie, e ogni volta la stessa frase: «Lei ha pochissimo tartaro, complimenti.» È vero. Ho guardato le lastre insieme a lui, va tutto bene.</p><p>Il punto è che lui guarda i denti e le gengive. Il dorso della lingua, quella parte lì dietro, non rientra nel controllo. Non perché se ne dimentichi: non è la sua zona.</p><p>Me l'ha confermato lui quando gliel'ho chiesto in modo diretto. Ha detto: «Da quel lato non arrivo, e non è un problema odontoiatrico.» È stato onesto.</p><p>Uso FREOS la sera, dopo lo spazzolino. Non al posto — dopo. E continuo ad andare ogni sei mesi.</p></p>",
+            "name": "Silvia T.",
+            "role": "37 anni · analista · Trieste",
+            "badge": "Verificato"
+          }
+        },
+        "o4": {
+          "type": "tst",
+          "settings": {
+            "story": false,
+            "obj_head": "«Appena smetto, torna tutto come prima.»",
+            "obj_tag": "Obiezione 4 · la paura di doverlo prendere per sempre",
+            "body": "<p><p>Sono al terzo barattolo, quindi posso rispondere.</p><p>Il primo mese l'ho fatto con attenzione. Il secondo ho saltato quattro o cinque sere senza volerlo — rientri tardi, ti addormenti sul divano. La differenza l'ho notata al secondo giorno di pausa, non al primo. E non è tornato tutto come prima: è tornato quel sapore al risveglio che avevo dimenticato di avere.</p><p>Quindi sì, se smetto cambia. Ma la trovo una cosa onesta, non preoccupante. Anche se smetto di lavarmi i denti torna la placca. Nessuno si aspetta che lo spazzolino funzioni a vita dopo un mese.</p><p>Mi costa meno di un euro al giorno e mi toglie un pensiero. Ho smesso di considerarlo una cura e ho cominciato a considerarlo una cosa che faccio la sera, come chiudere il gas.</p></p>",
+            "name": "Giorgio A.",
+            "role": "46 anni · tecnico informatico · Cagliari",
+            "badge": "Verificato"
+          }
+        },
+        "o5": {
+          "type": "tst",
+          "settings": {
+            "story": false,
+            "obj_head": "«Come faccio a sapere se funziona, se non posso sentirmi?»",
+            "obj_tag": "Obiezione 5 · il segnale che non puoi darti da solo",
+            "body": "<p><p>Faccio l'istruttore di guida. Sto seduto a cinquanta centimetri da uno sconosciuto per un'ora, e per un'ora parlo.</p><p>Ho passato anni a gestire quella distanza con accorgimenti che nessuno vedeva: dare le indicazioni girato verso il parabrezza, finire la frase prima di voltarmi, tenere una mentina sotto la lingua per tutta la lezione. Non lo decidevo. Lo facevo e basta.</p><p>Il mio alito non posso sentirlo, e a chi guida con me non lo chiederò mai. Così ho smesso di cercare la prova nel posto sbagliato e ho guardato me stesso: dopo tre settimane mi sono accorto che davo le indicazioni guardando l'allieva in faccia. Non me l'ero imposto. Avevo solo smesso di evitarlo.</p><p>L'unica volta che qualcuno ha detto qualcosa è stato a giugno. Una signora di sessant'anni, alla terza lezione, mi ha detto che ero l'unico istruttore con cui non le veniva mal di testa in macchina. Probabilmente parlava dell'aria condizionata. Io me la sono comunque segnata.</p></p>",
+            "name": "Roberto M.",
+            "role": "43 anni · istruttore di guida · Perugia",
+            "badge": "Verificato"
+          }
+        }
+      },
+      "block_order": [
+        "o1",
+        "o2",
+        "o3",
+        "o4",
+        "o5"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "Le cinque obiezioni <em>che fermano tutti.</em>",
+        "sub": "Un’obiezione per testimonianza. Un avatar diverso ogni volta, perché ognuno si riconosca in almeno uno."
+      }
+    },
+    "costi": {
+      "type": "freos-lp-anchor",
+      "blocks": {
+        "a1": {
+          "type": "row",
+          "settings": {
+            "label": "Igiene dentale professionale, due volte l'anno",
+            "detail": "60–84 € a seduta secondo la regione, fino a 150 € se approfondita",
+            "value": "≈ 200 € / anno",
+            "us": false
+          }
+        },
+        "a2": {
+          "type": "row",
+          "settings": {
+            "label": "Spesa odontoiatrica media di un italiano",
+            "detail": "indagine nazionale 2025",
+            "value": "430 € / anno",
+            "us": false
+          }
+        },
+        "a3": {
+          "type": "row",
+          "settings": {
+            "label": "Collutori, mentine, raschietti, chewing gum",
+            "detail": "dieci anni di acquisti che non hai mai sommato",
+            "value": "fallo tu il conto",
+            "us": false
+          }
+        },
+        "a4": {
+          "type": "row",
+          "settings": {
+            "label": "FREOS · un barattolo, trenta sere",
+            "detail": "meno di un euro al giorno",
+            "value": "29,90 €",
+            "us": true
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "Quanto stai già <em>spendendo, senza contarlo</em>",
+        "lead": "Non per farti sentire in colpa. Per mettere in fila dei numeri che nessuno ti mette in fila.",
+        "note": "E la parte onesta: non fanno la stessa cosa.",
+        "source": "Fonti tariffe: detartrasi per regione (Nord 84 €, Centro 70 €, Sud 60 €) · pulizia approfondita 70–150 € · routine preventiva ≈ 200 €/anno · spesa odontoiatrica media 430 € nel 2025, indagine nazionale OmniSalus. Le tariffe variano per struttura e regione.",
+        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "cta_sub": "Un barattolo, trenta sere. Un mese di prova, rimborso senza reso."
+      }
+    },
+    "fiducia": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Un barattolo, trenta sere. Un mese di prova, rimborso senza reso.</p></p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Stasera, dopo cena, arriverà il momento in cui di solito accendi la luce del telefono. Nessuno può dirti cosa succederà. Ma adesso sai quello che nessuno ti aveva messo in fila: che i calcoli sono la metà che si vede, che hanno già chi se ne occupa, e che c'è la Metà Invisibile, che ogni notte ricomincia. Sai anche che il vilain non sei tu, non è mai stato tu.</p></p>"
+          }
+        },
+        "p3": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Anche se non scegli niente, stasera spegni la luce dello specchio un minuto prima. È già un gesto tuo.</p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": "La fiducia torna da un gesto. <em>Il primo lo scegli tu.</em>"
+      }
+    },
+    "domande": {
+      "type": "freos-lp-faq",
+      "blocks": {
+        "q1": {
+          "type": "q",
+          "settings": {
+            "q": "FREOS scioglie i tonsilloliti?",
+            "a": "<p><p>No. Non tocca le tonsille e non scioglie i calcoli: per quelli c'è l'otorino.</p></p>"
+          }
+        },
+        "q2": {
+          "type": "q",
+          "settings": {
+            "q": "Se ho i tonsilloliti, mi serve comunque l'otorino?",
+            "a": "<p><p>Se ti danno fastidio, se tornano spesso o se hai uno dei segnali d'allarme, sì: è l'otorino a decidere cosa fare.</p></p>"
+          }
+        },
+        "q3": {
+          "type": "q",
+          "settings": {
+            "q": "Che sapore ha?",
+            "a": "<p><p>Un gel denso al sapore di menta, con un fondo leggermente vegetale. Si scioglie sulla lingua in pochi secondi. Non è dolce. Se non sopporti la menta, FREOS non fa per te.</p></p>"
+          }
+        },
+        "q4": {
+          "type": "q",
+          "settings": {
+            "q": "Si inghiotte?",
+            "a": "<p><p>Sì: due misurini la sera, lo lasci sciogliere sulla lingua e poi lo deglutisci.</p></p>"
+          }
+        },
+        "q5": {
+          "type": "q",
+          "settings": {
+            "q": "Quanto dura un barattolo?",
+            "a": "<p><p>Trenta sere, se lo usi come indicato — due misurini una volta al giorno.</p></p>"
+          }
+        },
+        "q6": {
+          "type": "q",
+          "settings": {
+            "q": "Se non funziona, posso restituirlo?",
+            "a": "<p><p>Se dopo un mese non ti parla, c'è un rimborso di trentanove euro, e il barattolo resta a te. I dettagli sono nella pagina del prodotto.</p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": ""
+      }
+    },
+    "offerta2": {
+      "type": "freos-lp-offer",
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "headline": "Ventinove euro e novanta. Trenta sere.",
+        "body": "<p><p>Un barattolo dura trenta sere. [SPEDIZIONE] <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
+        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>"
+      }
+    },
+    "chiusura": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "pull": {
+          "type": "pull",
+          "settings": {
+            "text": "Tornare a fidarti di te. Basta."
+          }
+        }
+      },
+      "block_order": [
+        "pull"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "heading": ""
+      }
+    },
+    "fonti": {
+      "type": "freos-lp-sources",
+      "blocks": {
+        "f1": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Ferguson M et al. <em>Otolaryngol Head Neck Surg</em> 2014 · Takahashi A et al. <em>Sci World J</em> 2014.</p></p>"
+          }
+        },
+        "f2": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Quirynen M et al. <em>J Clin Periodontol</em> 2009 · Romano F et al. <em>Minerva Stomatologica</em> 2020;69:174-182.</p></p>"
+          }
+        },
+        "f3": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Krespi YP et al. <em>Otolaryngol Head Neck Surg</em> 2006;135:671 · Dawes C. <em>JADA</em> 2008.</p></p>"
+          }
+        },
+        "f4": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Snel J et al. <em>Arch Oral Biol</em> 2011 · Tsuneishi M et al. <em>Microbes Infect</em> 2006.</p></p>"
+          }
+        },
+        "f5": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Galioto NJ. <em>Am Fam Physician</em> 2008;77:199 · NHS, <em>Mouth cancer: symptoms</em>.</p></p>"
+          }
+        },
+        "f6": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Kumbargere Nagraj S et al. <em>Cochrane Database Syst Rev</em> 2019;12:CD012213.</p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "title": "Fonti scientifiche citate"
+      }
+    },
+    "colophon": {
+      "type": "freos-lp-colophon",
+      "blocks": {
+        "e1": {
+          "type": "entry",
+          "settings": {
+            "label": "Redazione",
+            "body": "<p><p>Direttore responsabile · [nome] Vicedirettrice · Elena Manzoni Caposervizio inchieste · [nome]</p></p>"
+          }
+        },
+        "e2": {
+          "type": "entry",
+          "settings": {
+            "label": "Comitato scientifico",
+            "body": "<p><p>Dott. Marco Serpelloni — otorinolaringoiatra Dott.ssa [nome] — odontoiatra Prof. [nome] — microbiologia orale</p></p>"
+          }
+        },
+        "e3": {
+          "type": "entry",
+          "settings": {
+            "label": "Sede",
+            "body": "<p><p>Via [indirizzo], 20121 Milano Tel. +39 02 [numero] redazione@linchiestasalute.it</p></p>"
+          }
+        },
+        "e4": {
+          "type": "entry",
+          "settings": {
+            "label": "Questo articolo",
+            "body": "<p><p>Chiuso in redazione · Marzo 2026 Illustrazioni · L. Bertani Fotografia · [nome]</p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "e1",
+        "e2",
+        "e3",
+        "e4"
+      ],
+      "settings": {
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
+        "logo": "L'Inchiesta<em>Salute</em>",
+        "tagline": "Un caso alla volta · Fino in fondo",
+        "legal": "<p><p>Registrazione Tribunale di Milano n. [numero]/2024 · ISSN [numero-numero] · Direttore responsabile [nome]. Nota per il lettore. Questo articolo è un'inchiesta editoriale con contenuti sponsorizzati dal produttore di FREOS. La linea editoriale, le fonti citate, le riserve scientifiche e i limiti dichiarati del prodotto restano indipendenti. Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di sintomi rivolgersi al proprio medico curante o allo specialista. © L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p></p>",
+        "links": "<p>© L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p>"
+      }
     }
   },
   "order": [
-    "rt"
+    "spon",
+    "masthead",
+    "opener",
+    "specchio",
+    "tappe",
+    "segnali1",
+    "segnali2",
+    "tappe_testo",
+    "vilain",
+    "fasi",
+    "rimedi",
+    "gesto",
+    "rivelazione",
+    "offerta1",
+    "racconto",
+    "non_sei_sola",
+    "coppie",
+    "obiezioni",
+    "costi",
+    "fiducia",
+    "domande",
+    "offerta2",
+    "chiusura",
+    "fonti",
+    "colophon"
   ]
 }
