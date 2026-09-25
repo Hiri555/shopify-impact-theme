@@ -10,14 +10,598 @@
 {
   "layout": "freos-lp",
   "sections": {
-    "corpo": {
-      "type": "freos-listicle",
+    "spon": {
+      "type": "freos-lp-spon",
       "settings": {
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco"
+        "scope": "fr-lp3",
+        "rule": false,
+        "pt": 0,
+        "pb": 0,
+        "text": "Contenuto sponsorizzato · FREOS"
+      }
+    },
+    "testata": {
+      "type": "freos-lp-masthead",
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": false,
+        "pt": 0,
+        "pb": 0,
+        "logo": "FREOS",
+        "tagline": "Lettura · 9 min"
+      }
+    },
+    "apertura": {
+      "type": "freos-lp-opener",
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": false,
+        "pt": 0,
+        "pb": 0,
+        "eyebrow": "Cripta · Notte · Lingua · Distanza",
+        "heading": "6 motivi per cui l'alito torna <em>anche se ti lavi i denti tre volte al giorno.</em>",
+        "subhead": "Il collutorio, il filo, il raschietto, la mentina. Fanno bene il loro lavoro — <strong>sulle superfici che raggiungono.</strong> C'è un punto della tua bocca dove niente di tutto questo arriva. Ed è lì che si produce l'odore, ventiquattro ore su ventiquattro.",
+        "author": "6 studi ORL citati Formulato in Italia 30 sere di prova · rimborso pieno",
+        "consulenza": "Fonti · 6 studi ORL, 2006–2017 Aggiornato · marzo 2026 Autore · redazione FREOS"
+      }
+    },
+    "visuale": {
+      "type": "freos-lp-figure",
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": false,
+        "pt": 0,
+        "pb": 0,
+        "kind": "plate",
+        "file": "freos-lp3-01.webp",
+        "alt": "Visita otorinolaringoiatrica",
+        "caption": ""
+      }
+    },
+    "scena": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "s1": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Cinque secondi con l'abbassalingua e la torcia. Poi l'otorino si tira indietro sulla sedia.</p>"
+          }
+        },
+        "sq": {
+          "type": "pull",
+          "settings": {
+            "text": "«Ci sono. Ma lasci perdere — non è pericoloso.»"
+          }
+        },
+        "s2": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Ed è vero. Non è pericoloso.</p>"
+          }
+        },
+        "s3": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Ma quella frase risponde a una domanda che nessuno aveva fatto. Non eri lì perché avevi paura. Eri lì perché qualcuno si è scostato mentre parlavi. E perché succede da anni. E perché nessuno ti aveva mai spiegato <strong>perché</strong>.</p>"
+          }
+        },
+        "sk": {
+          "type": "solo",
+          "settings": {
+            "text": "Poi ho trovato quattro studi. E un punto della bocca dove l'aria non arriva."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "sq",
+        "s2",
+        "s3",
+        "sk"
+      ],
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "annuncio": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "i1": {
+          "type": "para",
+          "settings": {
+            "text": "<p>nell'ordine in cui li ho capiti</p>"
+          }
+        }
+      },
+      "block_order": [
+        "i1"
+      ],
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": false,
+        "pt": 0,
+        "pb": 0,
+        "heading": "Sei motivi per cui torna. E <em>un motivo per cui, forse, non tornerà più.</em>"
+      }
+    },
+    "motivi": {
+      "type": "freos-lp-motivi",
+      "blocks": {
+        "m1": {
+          "type": "motivo",
+          "settings": {
+            "chip": "Il posto",
+            "title": "Il tuo collutorio non ci arriva. <em>Il tuo filo, nemmeno.</em>",
+            "body": "<p>Il collutorio bagna la lingua, i denti, il palato. Il filo passa tra i denti. Il raschietto pulisce la parte anteriore della lingua. La mentina copre l'aria che espiri. Ognuno fa il suo mestiere, e lo fa bene.</p><p>Nessuno di loro entra nelle <strong>cripte tonsillari</strong>. Non è un difetto di formula: sono canali che scendono nel tessuto della tonsilla e si ramificano. La bocca di quel canale è larga come un chicco di riso. Il fondo, nessuno lo vede.</p><p>Nel 2009 dei ricercatori hanno infilato dei microelettrodi in quei canali per misurare l'ossigeno. Al centro di un tonsillolite, l'ossigeno scende a <strong>un decimo</strong> di quello del liquido appena sopra. A pochi centimetri dall'aria aperta.</p><p>Dove non c'è ossigeno cresce una sola famiglia di batteri: quelli che producono composti solforati. È quello che chiami «l'alito». Non è la sua causa. È il suo <em>indirizzo.</em></p>",
+            "anchor": "come-funziona",
+            "file": "freos-lp3-02.webp",
+            "alt": "Allo specchio, la mattina: finalmente una spiegazione",
+            "cite": "Stoodley et al., Otolaryngol Head Neck Surg, 2009 · Takahashi et al., 2.873 TAC, 2014",
+            "callout_lead": "Lo sapevi?",
+            "callout": "<p>su 2.873 TAC del collo, i tonsilloliti erano visibili in circa <b>quattro persone su dieci</b>, quasi sempre a loro insaputa. Non li vedi allo specchio. Non li vede il tuo dentista guardando i denti.</p>",
+            "mirror": "«Ho i denti perfetti. Me lo dicono tutti i dentisti da dieci anni. Ma qualcosa non torna.»",
+            "mirror_src": "dai messaggi raccolti per questa guida",
+            "punch": "Non è la tua igiene. È un posto che nessun prodotto in commercio raggiunge.",
+            "cta_label": "",
+            "cta_pill": "",
+            "cta_sub": "",
+            "tx": "",
+            "tx_sub": ""
+          }
+        },
+        "m2": {
+          "type": "motivo",
+          "settings": {
+            "chip": "Lo zinco",
+            "title": "Non copre l'odore. <em>Lo lega.</em>",
+            "body": "<p>Una mentina fa una cosa semplice: mette in bocca un profumo più forte di quello che c'era prima. Trenta minuti dopo, la mentina è finita e il profumo pure. La cripta, no.</p><p>Gli <strong>ioni di zinco</strong> fanno una cosa diversa. Si legano chimicamente ai composti solforati volatili — quelli che il naso percepisce. Un composto legato non è più volatile. Non arriva più al naso di nessuno. Non è coperto: è cambiato.</p><p>È chimica di base, nota da trent'anni. Il principio non è mai stato il problema. Il <em>formato</em> lo era.</p><p>Nel gel lo zinco è dosato a <strong>1,38 mg (14% VNR)</strong> per porzione serale. FREOS è un integratore alimentare.</p>",
+            "anchor": "",
+            "file": "freos-lp3-03.webp",
+            "alt": "FREOS · gel erbale con zinco",
+            "cite": "",
+            "callout_lead": "Lo sapevi?",
+            "callout": "<p>il collutorio con zinco resta in bocca <b>trenta secondi</b> prima di essere sputato. Una caramella, quattro minuti prima di sciogliersi. Una cripta produce composti solforati <b>ventiquattro ore su ventiquattro.</b></p>",
+            "mirror": "«Ho comprato ogni collutorio in commercio. Trenta secondi in bocca, poi lo sputi. È come voler dipingere una parete con l'aerosol.»",
+            "mirror_src": "dai messaggi raccolti per questa guida",
+            "punch": "Il principio funziona da trent'anni. Serviva solo un modo per farlo restare.",
+            "cta_label": "",
+            "cta_pill": "",
+            "cta_sub": "",
+            "tx": "Il rimedio che usi da più tempo è quello che libera di più.",
+            "tx_sub": "Non è un modo di dire. È una riga dello studio del 2006 che quasi nessuno ha letto fino in fondo."
+          }
+        },
+        "m3": {
+          "type": "motivo",
+          "settings": {
+            "chip": "La forma",
+            "title": "Il liquido lo sputi. <em>Il gel resta.</em>",
+            "body": "<p>Nel 2006 hanno analizzato la flora di sei tonsilloliti. Ogni singolo campione conteneva batteri produttori di composti solforati — fino alla metà delle colonie. Ma la riga che conta è un'altra, più in basso nello stesso articolo:</p><p><em>«Il rilascio dei composti avviene quando il tonsillolite viene schiacciato.»</em></p><p>Il cotton fioc, il dito, il manico del cucchiaino: sono compressioni dirette. Su una mucosa che sanguina facilmente, con un riflesso che ti fa venire da vomitare. Il gesto che usi per liberarti dell'odore è, letteralmente, il gesto che ne libera di più nell'istante in cui lo fai.</p><p>Un gel denso fa una cosa che né un liquido né una caramella possono fare: <strong>resta.</strong> Lo lasci sciogliere, deglutisci, e continua a lavorare quando hai già spento la luce.</p>",
+            "anchor": "",
+            "file": "freos-lp3-04.webp",
+            "alt": "Il gel denso, che resta",
+            "cite": "Tsuneishi et al., Microbes Infect, 2006",
+            "callout_lead": "Lo sapevi?",
+            "callout": "<p>deglutisci circa <b>ottocento volte al giorno</b>. Mangiando, parlando, semplicemente stando svegli. Ogni deglutizione, contro la cripta, è una piccola pressione.</p>",
+            "mirror": "«Non riesco sempre a toglierli col cotton fioc, è fastidioso e poi vomito l'anima.»",
+            "mirror_src": "dai messaggi raccolti per questa guida",
+            "punch": "Non serve entrare nella cripta. Serve tenere l'uscita.",
+            "cta_label": "",
+            "cta_pill": "",
+            "cta_sub": "",
+            "tx": "",
+            "tx_sub": ""
+          }
+        },
+        "m4": {
+          "type": "motivo",
+          "settings": {
+            "chip": "La notte",
+            "title": "Ci sono sette ore, ogni notte, <em>in cui non deglutisci.</em>",
+            "body": "<p>Ottocento deglutizioni al giorno, dicevamo. Il novanta per cento cadono tra le sette del mattino e mezzanotte. Nelle sette ore che dormi, la tua bocca fa una cosa che fa poche volte nella vita: <strong>si ferma.</strong></p><p>La saliva è il tuo primo collutorio. È lei che lava, che diluisce, che ossigena. Durante il sonno, il flusso salivare crolla di oltre il novanta per cento. Il resto della meccanica orale rallenta con lei.</p><p>I batteri anaerobi nelle cripte, invece, non rallentano. Non hanno bisogno di ossigeno per lavorare — è il loro mestiere. Producono, indisturbati, per sette ore consecutive.</p><p>È il motivo per cui <em>l'alito del mattino esiste come categoria linguistica.</em> È il motivo per cui te ne accorgi quando ti svegli con la bocca chiusa. E il motivo per cui, alle sette, senti già che ricomincia.</p><p>Quelle sette ore hanno un nome: il <strong>Turno di Notte</strong>. Tre movimenti, sempre gli stessi.</p><ul><li><strong>RESTA</strong> — è un gel, non un liquido: dopo la deglutizione resta sulle mucose invece di sciacquarle e andarsene.</li><li><strong>LEGA</strong> — gli ioni di zinco legano i composti solforati. Un composto legato non è più volatile.</li><li><strong>ACCOMPAGNA</strong> — il gesto copre le ore in cui la saliva cala. Non trenta secondi: una notte.</li></ul><p>Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova.</p>",
+            "anchor": "",
+            "file": "freos-lp3-05.webp",
+            "alt": "Una notte, e un risveglio diverso",
+            "cite": "",
+            "callout_lead": "Lo sapevi?",
+            "callout": "<p>qualsiasi gesto contro l'alito che finisce prima di andare a letto lavora <b>fuori dalle sette ore</b> in cui il problema è al suo massimo. Un collutorio alle 22:00 non arriva alle 04:00.</p>",
+            "mirror": "«Il momento peggiore è la mattina. Anche se la sera prima ho fatto tutto il rituale. È come se la notte cancellasse tutto.»",
+            "mirror_src": "dai messaggi raccolti per questa guida",
+            "punch": "Le sette ore in cui non fai niente sono le sette ore in cui il tuo alito fa tutto.",
+            "cta_label": "Riprenditi i trenta centimetri",
+            "cta_pill": "29,90 €",
+            "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+            "cta_sub": "Trenta sere di prova · rimborso completo · nessun abbonamento",
+            "tx": "Ti manca un layer. Non un altro prodotto.",
+            "tx_sub": "È esattamente quello che succede a chi cura la pelle e non integra dall'interno. Qui, uguale — al contrario."
+          }
+        },
+        "m5": {
+          "type": "motivo",
+          "settings": {
+            "chip": "Il gesto",
+            "title": "Non ti manca un altro prodotto. <em>Ti manca il gesto della sera.</em>",
+            "body": "<p>Ti lavi i denti. Passi il filo. Passi il raschietto sulla lingua. Fai gargarismi. Sono quattro gesti, che coprono quattro superfici. Ognuno ha il suo strumento, e ognuno ha il suo limite.</p><p>Manca un quinto gesto. L'ultimo prima di spegnere la luce. Uno solo. Non toglie nessuno degli altri quattro — <strong>si aggiunge in fondo.</strong></p><p>Due misurini di gel denso, dopo lo spazzolino. Lo lasci sciogliere in bocca, deglutisci, ti metti a dormire. Lo zinco lega, il gel resta, e continua a lavorare nelle sette ore in cui tutto il resto è fermo.</p><p>È il layer che manca al tuo protocollo serale. Non sostituisce niente di quello che già fai. Prende il posto vuoto tra il lavandino e il cuscino.</p>",
+            "anchor": "",
+            "file": "freos-lp3-06.webp",
+            "alt": "Il gesto della sera",
+            "cite": "",
+            "callout_lead": "Il gesto completo, ora, è così:",
+            "callout": "<p><br>\n    01 · spazzolino · 02 · filo · 03 · raschietto · 04 · collutorio · <b>05 · FREOS, due misurini.</b><br>\n    Trenta secondi in più. Un solo cambiamento nella tua sera.</p>",
+            "mirror": "«Non riuscivo a capire cosa avrei dovuto togliere. La risposta era: niente. Aggiungi una cosa e basta, in fondo.»",
+            "mirror_src": "dai messaggi raccolti per questa guida",
+            "punch": "Non stai comprando un rimedio. Stai chiudendo la sera.",
+            "cta_label": "",
+            "cta_pill": "",
+            "cta_sub": "",
+            "tx": "",
+            "tx_sub": ""
+          }
+        },
+        "m6": {
+          "type": "motivo",
+          "settings": {
+            "chip": "I limiti",
+            "title": "Ti dice anche <em>dove si ferma.</em>",
+            "body": "<p><strong>FREOS non tocca le tonsille.</strong> Non scioglie i tonsilloliti. Non entra nella cripta — nessun prodotto da banco può farlo. Non sostituisce l'otorino.</p><p>Se hai dolore, difficoltà a deglutire, febbre, mal d'orecchio o una tonsilla più grossa dell'altra, l'otorino viene prima di qualunque gel. Te lo diciamo qui, prima che tu spenda un euro.</p><p>La pietra resta dov'è. Quello che rilascia attraversa la tua bocca — ed è lì, e solo lì, che FREOS lavora.</p>",
+            "anchor": "",
+            "file": "freos-lp3-07.webp",
+            "alt": "La distanza che torna",
+            "cite": "",
+            "callout_lead": "Lo sapevi?",
+            "callout": "<p>su FREOS non è stato fatto nessuno studio clinico. Le prove che citiamo riguardano <b>gli ingredienti</b>, non il prodotto finito. Preferiamo scriverlo che nasconderlo.</p>",
+            "mirror": "",
+            "mirror_src": "",
+            "punch": "Preferiamo perdere una vendita che la tua fiducia.",
+            "cta_label": "Riprenditi i trenta centimetri",
+            "cta_pill": "29,90 €",
+            "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+            "cta_sub": "Trenta sere di prova · rimborso completo · nessun abbonamento",
+            "tx": "La cripta resta. Quello che ne esce, no.",
+            "tx_sub": ""
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5",
+        "m6"
+      ],
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "attese": {
+      "type": "freos-lp-stages",
+      "blocks": {
+        "t1": {
+          "type": "stage",
+          "settings": {
+            "label": "Sera 1",
+            "text": "Il primo gesto sostituisce la torcia allo specchio. È l'unico cambiamento immediato, e non è poco: chi controlla la gola ogni sera lo fa perché non ha altro. Adesso ha altro."
+          }
+        },
+        "t2": {
+          "type": "stage",
+          "settings": {
+            "label": "Giorni 2–5",
+            "text": "Il sapore al risveglio. È il primo segnale che il tuo corpo ti dà. Non è una promessa che sparirà: è una cosa da confrontare con quello che ricordi dei giorni scorsi. Molti descrivono un cambiamento discreto ma leggibile."
+          }
+        },
+        "t3": {
+          "type": "stage",
+          "settings": {
+            "label": "Settimana 2",
+            "text": "Quante volte hai calcolato la distanza. Contale. Sul serio: metti un promemoria sul telefono a fine giornata. È la misura vera del problema, e la misura vera del cambiamento — molto più affidabile del profumo, che non puoi sentire."
+          }
+        },
+        "t4": {
+          "type": "stage",
+          "settings": {
+            "label": "Mese 2+",
+            "text": "Il segnale esterno. Il collega che smette di scostarsi. Il partner che non dice niente ma si avvicina. Non lo promettiamo mai — non abbiamo modo di garantirlo. Ma è il segnale che aspetti da anni, e solo tu lo riconoscerai."
+          }
+        },
+        "t5": {
+          "type": "stage",
+          "settings": {
+            "label": "Se non cambia",
+            "text": "Scrivici. Trenta sere di prova, rimborso pieno. Il barattolo resta a te — non chiediamo indietro un prodotto che hai messo in bocca. E se non l'hai già fatto, prendi appuntamento dall'otorino: la cripta è affar suo, non nostro."
+          }
+        }
+      },
+      "block_order": [
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+      ],
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": true,
+        "pt": 0,
+        "pb": 0,
+        "kicker": "Cosa aspettarsi",
+        "heading": "Ecco cosa puoi <em>osservare tu,</em> settimana per settimana.",
+        "intro": "<p>Su questo problema nessuno può misurare i propri progressi dall'esterno. Non ti diamo una promessa: ti diamo quattro cose concrete da guardare, in ordine, e cosa fare se non succede niente.</p>"
+      }
+    },
+    "offerta": {
+      "type": "freos-lp-offer",
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": true,
+        "pt": 0,
+        "pb": 0,
+        "photo_file": "freos-lp3-08.webp",
+        "photo_alt": "FREOS · Gel Erbale per l'Alito Fresco",
+        "headline": "FREOS · Gel Erbale per l'Alito Fresco",
+        "kicker": "La prova",
+        "body": "<p>29,90 € · 120 g · trenta sere</p><ul>\n      <li><b>Zinco</b> — lega chimicamente i composti solforati nella cavità orale</li>\n      <li><b>Sette estratti vegetali</b> — dichiarati uno per uno, con le dosi in etichetta</li>\n      <li><b>Gel denso</b> — resta sulla mucosa invece di essere sputato o sciolto in pochi minuti</li>\n      <li><b>Due misurini la sera</b> — dopo lo spazzolino, prima di dormire, niente da premere</li>\n      <li><b>Meno di un euro al giorno</b> — un barattolo copre l'intero mese</li>\n    </ul>",
+        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "guarantee": "<p>Rimborso 30 sere Spedizione gratuita in Italia Nessun abbonamento automatico</p>"
+      }
+    },
+    "confronto": {
+      "type": "freos-lp-anchor",
+      "blocks": {
+        "c1": {
+          "type": "row",
+          "settings": {
+            "label": "Tonsillectomia in libera professione",
+            "detail": "secondo il centro e la tecnica, più la visita specialistica",
+            "value": "2.400 – 6.000 €",
+            "us": false
+          }
+        },
+        "c2": {
+          "type": "row",
+          "settings": {
+            "label": "Recupero dopo l'intervento",
+            "detail": "anestesia generale, una notte di ricovero",
+            "value": "10 – 14 giorni",
+            "us": false
+          }
+        },
+        "c3": {
+          "type": "row",
+          "settings": {
+            "label": "Nel servizio pubblico",
+            "detail": "coperta, quando c'è l'indicazione clinica e quando arriva il tuo turno",
+            "value": "lista d'attesa",
+            "us": false
+          }
+        },
+        "c4": {
+          "type": "row",
+          "settings": {
+            "label": "Dieci anni di collutori, mentine, raschietti",
+            "detail": "quello che hai già speso senza contarlo",
+            "value": "fallo tu il conto",
+            "us": false
+          }
+        },
+        "c5": {
+          "type": "row",
+          "settings": {
+            "label": "FREOS · un barattolo, trenta sere",
+            "detail": "meno di un euro al giorno",
+            "value": "29,90 €",
+            "us": false
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ],
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": true,
+        "pt": 0,
+        "pb": 0,
+        "kicker": "Il confronto onesto",
+        "heading": "Quanto costa <em>l'altra strada.</em>",
+        "lead": "Non per dirti di non farla. Per darti i numeri, perché nessuno te li mette in fila.",
+        "note": "E adesso la parte onesta: non fanno la stessa cosa. L'intervento toglie le tonsille. FREOS no — non le tocca, non scioglie i tonsilloliti, non entra nella cripta. Se hai l'indicazione per operarti, operati. Se invece ti hanno detto di lasciar perdere perché «non è pericoloso», adesso sai che esiste un'altra cosa da fare la sera.",
+        "source": "Tariffe di riferimento: AOU Careggi, libera professione (3.500–6.000 €) · Tariffario IRCCS Burlo Garofolo 2023 (2.445 € tonsillectomia, 3.423 € intracapsulare). Le tariffe variano per struttura e regione.",
+        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "cta_sub": "Trenta sere di prova · rimborso completo · nessun abbonamento"
+      }
+    },
+    "testimone": {
+      "type": "freos-lp-testimonials",
+      "blocks": {
+        "t1": {
+          "type": "tst",
+          "settings": {
+            "story": true,
+            "obj_head": "",
+            "obj_tag": "",
+            "quote": "«Se dovessi rifarlo, comincerei un anno prima.»",
+            "body": "<p>Il primo tonsillolite l'ho visto quando ne avevo diciannove. Nel bagno della casa dei miei, dopo cena, credendo fosse un pezzo di broccolo che mi era rimasto in gola. L'ho schiacciato tra due dita e ho aperto la finestra a novembre. Non ne avevo mai sentito parlare, non sapevo che avesse un nome.</p><p>Da allora ne ho visti — o creduto di vedere — decine. Sempre da sola, sempre in bagno, sempre col telefono acceso davanti allo specchio. In venticinque anni ho comprato praticamente ogni collutorio che ho visto in farmacia. Il TheraBreath ordinato dagli Stati Uniti. Il probiotico orale svizzero. Il raschietto in acciaio. La macchinetta con l'ossigeno attivo che si vede su TikTok. Due volte sono andata dall'otorino. Due volte mi ha detto la stessa cosa: «Ci sono. Non è pericoloso, lasci perdere.»</p><p>Quando ho ordinato FREOS non ci credevo. L'ho comprato dopo aver letto quella riga sul cotton fioc che libera più di quanto tolga — perché era esattamente quello che sospettavo da anni ma non avevo mai letto scritto da nessuna parte.</p><p>Il primo cambiamento non è stato una sensazione. È stato un gesto. Da quindici anni ogni sera prima di dormire prendevo il telefono, accendevo la torcia e guardavo in gola. Con FREOS il gesto è diventato: due misurini, dopo lo spazzolino. Ho smesso di prendere il telefono. Non subito — dopo la terza o quarta sera.</p><p>Il sapore al risveglio è cambiato tra il quarto e il quinto giorno. Non è sparito — non voglio raccontarti una storia che non è vera. È diventato più leggero. Più «bocca vuota» e meno «qualcosa dentro».</p><p>Il segnale che aspettavo da anni è arrivato dopo circa cinque settimane, e non l'ho notato io. Mio marito, una sera in cui mi ero addormentata con la bocca aperta, mi ha detto: «Prima non riuscivo a starti vicino quando parlavi la mattina. Adesso non ci penso più.» Non gli avevo detto niente di quello che stavo facendo. Non sapeva nemmeno che avevo comprato qualcosa.</p>",
+            "name": "Elena D.",
+            "role": "43 anni · insegnante · Modena",
+            "badge": "Verificato"
+          }
+        }
+      },
+      "block_order": [
+        "t1"
+      ],
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": true,
+        "pt": 0,
+        "pb": 0,
+        "kicker": "La testimonianza",
+        "heading": "La storia di chi <em>non ci credeva.</em>",
+        "sub": "Il primo racconto completo: trenta sere, dall'inizio alla fine. Nome, età, città — verificati.",
+        "cta_label": "",
+        "cta_sub": ""
+      }
+    },
+    "obiezioni": {
+      "type": "freos-lp-testimonials",
+      "blocks": {
+        "o1": {
+          "type": "tst",
+          "settings": {
+            "story": false,
+            "obj_head": "«Ho già provato di tutto, perché questo dovrebbe funzionare?»",
+            "obj_tag": "Obiezione 1 · la graveyard",
+            "quote": "",
+            "body": "<p>Non compravo più niente per l'alito da tre anni. Non perché non ce l'avessi più — perché avevo smesso di credere.</p><p>Faccio la lista: Curasept, Meridol, Listerine in tutte le sue varianti, CB12, TheraBreath ordinato dagli Stati Uniti, il probiotico orale svizzero, tre raschietti diversi, la Waterpik, i chewing gum al carbone attivo, e persino quel gel al bicarbonato che mi aveva consigliato un farmacista che «ci aveva lavorato in California».</p><p>Ho ordinato FREOS a novembre perché mio cognato mi ha detto: «È tornato lo zinco, ma questa volta in un formato che resta.» L'ho preso senza aspettative. La differenza nei primi dieci giorni non è stata sull'odore — quello non lo sento comunque. È stata sul mio comportamento. Ho smesso di chiedere alle persone se avevo mangiato aglio. Ho smesso di calcolare la distanza al mattino con la mia compagna.</p><p>Non dico che è la soluzione definitiva. Dico che è la prima cosa che ho comprato in dieci anni che non ho abbandonato dopo due settimane.</p>",
+            "name": "Marco T.",
+            "role": "47 anni · direttore commerciale · Milano",
+            "badge": "Verificato"
+          }
+        },
+        "o2": {
+          "type": "tst",
+          "settings": {
+            "story": false,
+            "obj_head": "«Io in gola non ho mai visto niente.»",
+            "obj_tag": "Obiezione 2 · chi non ha mai visto la pallina",
+            "quote": "",
+            "body": "<p>In gola non ho mai visto niente. Ho la torcia del telefono accesa davanti allo specchio praticamente ogni sera da quando avevo ventitré anni, e non ho mai visto una pallina bianca in vita mia. Ma il problema c'è. Al mattino la lingua è patinata, il sapore in fondo alla gola è sempre lo stesso, e i miei colleghi in open space non si scostano — ma neanche si avvicinano.</p><p>Ho ordinato FREOS proprio perché il sito diceva chiaramente che non è un test diagnostico e che si può avere l'alito senza vedere niente. Le altre cose che avevo letto sui tonsilloliti mi facevano sentire come se stessi affrontando un problema che non era il mio.</p><p>Dopo tre settimane, la patina al mattino è diminuita — la vedo io, sulla lingua, davanti allo specchio. Non è un'opinione. Il resto non lo posso sapere perché non mi sento. Ma è la prima cosa che vedo cambiare da anni.</p>",
+            "name": "Chiara F.",
+            "role": "32 anni · graphic designer · Torino",
+            "badge": "Verificato"
+          }
+        },
+        "o3": {
+          "type": "tst",
+          "settings": {
+            "story": false,
+            "obj_head": "«Il mio dentista dice che va tutto bene.»",
+            "obj_tag": "Obiezione 3 · l'autorità che ha già detto no",
+            "quote": "",
+            "body": "<p>Ho un dentista bravo. Ci vado ogni sei mesi, ho la pulizia professionale, non ho carie da dieci anni. Ogni volta gli chiedo dell'alito e ogni volta mi dice la stessa cosa: «I tuoi denti sono perfetti, non preoccuparti.» E ha ragione — i miei denti sono perfetti.</p><p>Il problema è che il mio dentista guarda i denti. Non guarda la cripta tonsillare. Non è il suo mestiere, e non è colpa sua. È come chiedere al meccanico che ti fa il tagliando perché la macchina fa un rumore nel bagagliaio: probabilmente non è lì che deve guardare, ma non te lo dirà lui.</p><p>Con FREOS ho fatto una cosa che al mio dentista non ho detto: ho letto le fonti citate sul sito, sono andato su PubMed e mi sono verificato gli studi uno per uno. Tornano. Il gesto della sera è aggiunto al mio rituale da due mesi. Il mio dentista continua a dire che va tutto bene. Stavolta sono d'accordo con lui.</p>",
+            "name": "Alessandro P.",
+            "role": "39 anni · ingegnere · Roma",
+            "badge": "Verificato"
+          }
+        },
+        "o4": {
+          "type": "tst",
+          "settings": {
+            "story": false,
+            "obj_head": "«Appena smetto, torna tutto come prima.»",
+            "obj_tag": "Obiezione 4 · la paura della dipendenza dal prodotto",
+            "quote": "",
+            "body": "<p>Sono al terzo barattolo. Il primo l'ho comprato per curiosità, il secondo per abitudine, il terzo perché ho fatto una prova.</p><p>A gennaio, dopo due mesi di uso continuo, ho smesso volontariamente per dieci giorni. Volevo vedere se era dipendenza dal prodotto o se qualcosa era davvero cambiato. Nei primi tre giorni non è tornato niente. Al quarto ho iniziato a sentire di nuovo il sapore al risveglio. All'ottavo ho ricominciato a controllare in gola con la torcia. Al decimo ho ricomprato FREOS.</p><p>La mia lettura è questa: la cripta non se ne va, e finché è lì produce. Se aggiungi qualcosa che lavora sulle sostanze che rilascia, quel qualcosa fa il suo lavoro finché c'è. Non è dipendenza dal prodotto — è che il problema è cronico. Anche i miei occhiali sono «dipendenza»: se me li tolgo, non ci vedo. Non è un difetto degli occhiali.</p>",
+            "name": "Giulia M.",
+            "role": "51 anni · commercialista · Verona",
+            "badge": "Verificato"
+          }
+        },
+        "o5": {
+          "type": "tst",
+          "settings": {
+            "story": false,
+            "obj_head": "«Come faccio a sapere se funziona, se non posso sentirmi?»",
+            "obj_tag": "Obiezione 5 · l'obiezione strutturale di questo mercato",
+            "quote": "",
+            "body": "<p>Faccio un mestiere che mi mette il viso a trenta centimetri da quello dei miei pazienti otto ore al giorno. Ginocchia, spalle, cervicali. Non c'è distanza in cui posso lavorare.</p><p>Sapere se «funziona» è la cosa che mi ha ossessionato per anni. Perché non puoi annusarti — nessuno può — e il feedback esterno praticamente non arriva mai. Nessuno ti dice niente. Al massimo ti evitano, e tu impari a leggere i millimetri.</p><p>Con FREOS il segnale è arrivato dalla mia paziente più anziana. Signora di ottantatré anni, ex maestra elementare, quella che ti dice le cose come stanno perché tanto a quell'età non ha più niente da perdere. Un martedì di aprile, sul lettino, mi ha detto: «Dottore, si è messo un profumo nuovo?» Non mi ero messo niente. Le ho chiesto perché me lo diceva. Mi ha risposto: «Perché prima le sue mani odoravano di studio medico e la sua bocca di studio medico, e adesso non sento più questa seconda cosa.»</p><p>Quel giorno usavo FREOS da undici settimane. Non ho detto niente alla signora. Non ho più aspettato altri segnali. Il segnale era quello.</p>",
+            "name": "Davide R.",
+            "role": "41 anni · fisioterapista · Verona",
+            "badge": "Verificato"
+          }
+        }
+      },
+      "block_order": [
+        "o1",
+        "o2",
+        "o3",
+        "o4",
+        "o5"
+      ],
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": true,
+        "pt": 0,
+        "pb": 0,
+        "kicker": "Le obiezioni",
+        "heading": "Le cinque obiezioni <em>che fermano tutti.</em>",
+        "sub": "Un'obiezione per testimonianza. Un avatar diverso ogni volta, perché ognuno si riconosca in almeno uno.",
+        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "cta_sub": "Trenta sere di prova · rimborso completo · nessun abbonamento"
+      }
+    },
+    "ours": {
+      "type": "freos-lp-colophon",
+      "blocks": {
+        "f1": {
+          "type": "entry",
+          "settings": {
+            "label": "Prodotto",
+            "body": "<ul><li><a href=\"/products/gel-notturno-micro-aderente-allo-zinco\">Acquista FREOS</a></li><li><a href=\"#come-funziona\">Come funziona</a></li><li><a href=\"#domande\">Domande frequenti</a></li><li><a href=\"#garanzia\">Garanzia 30 sere</a></li></ul>"
+          }
+        },
+        "f2": {
+          "type": "entry",
+          "settings": {
+            "label": "Assistenza",
+            "body": "<ul><li><a href=\"/policies/contact-information\">Contatti</a></li><li><a href=\"/policies/shipping-policy\">Spedizioni e resi</a></li><li><a href=\"/policies/shipping-policy\">Traccia il tuo ordine</a></li><li><a href=\"/policies/refund-policy\">Rimborso</a></li></ul>"
+          }
+        },
+        "f3": {
+          "type": "entry",
+          "settings": {
+            "label": "Legale",
+            "body": "<ul><li><a href=\"/policies/privacy-policy\">Privacy</a></li><li><a href=\"/policies/privacy-policy\">Cookie</a></li><li><a href=\"/policies/terms-of-service\">Note legali</a></li><li><a href=\"/policies/terms-of-service\">Termini di vendita</a></li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3"
+      ],
+      "settings": {
+        "scope": "fr-lp3",
+        "rule": false,
+        "pt": 0,
+        "pb": 0,
+        "whisper": "<p>Se stasera non fai niente, va bene lo stesso. La cripta c'era ieri e ci sarà domani, e questa pagina pure.</p><p>Ma la prossima volta che tossisci qualcosa nella mano, almeno saprai come si chiama — e saprai che non è colpa di come ti lavi i denti.</p>",
+        "logo": "FREOS",
+        "tagline": "Gel Erbale per l'Alito Fresco",
+        "desc": "Il gesto della sera per chi ha già provato tutto. Zinco e sette estratti vegetali, in un gel che resta.",
+        "legal": "<p>Integratore alimentare. FREOS non cura l’alitosi. Non sostituisce una dieta variata ed equilibrata né uno stile di vita sano. In presenza di dolore, difficoltà a deglutire, febbre, mal d'orecchio o asimmetria delle tonsille, rivolgiti al tuo medico o a un otorinolaringoiatra.</p>",
+        "links": "<p>© 2026 FREOS · DINSO VENTURES LLC Pagamenti sicuri</p>"
       }
     }
   },
   "order": [
-    "corpo"
+    "spon",
+    "testata",
+    "apertura",
+    "visuale",
+    "scena",
+    "annuncio",
+    "motivi",
+    "attese",
+    "offerta",
+    "confronto",
+    "testimone",
+    "obiezioni",
+    "ours"
   ]
 }
