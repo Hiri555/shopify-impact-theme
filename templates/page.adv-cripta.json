@@ -28,7 +28,7 @@
         "pt": 0,
         "pb": 0,
         "eyebrow": "Salute · Prima persona · 9 min di lettura",
-        "heading": "Ti lavi i denti tre volte al giorno. La causa del tuo alito sta <em>dieci centimetri più indietro.</em>",
+        "heading": "PREUVE-A titre modifie par l API",
         "subhead": "Se hai già provato collutori, raschietti e cotton fioc senza risultato, non è perché hai sbagliato qualcosa. È perché agiscono tutti su superfici esposte all'aria — e il punto dove si forma non lo è.",
         "portrait_file": "freos-lp2-01.webp",
         "author": "di <strong>Davide M.</strong> <em>— fisioterapista, Verona</em>",
@@ -60,8 +60,8 @@
         }
       },
       "block_order": [
-        "mk1",
-        "mk2"
+        "mk2",
+        "mk1"
       ],
       "settings": {
         "scope": "fr-lp2",
@@ -69,7 +69,7 @@
         "pt": 0,
         "pb": 0,
         "kicker": "Dove siamo · sezione laterale",
-        "file": "freos-lp2-02.webp",
+        "file": "freos-lp2-05.webp",
         "alt": "Sezione laterale della testa: bocca, lingua, gola e tonsille",
         "caption": "Sezione della testa e del collo. Le tonsille stanno lì, in fondo alla bocca, dietro la lingua — dove nessuno guarda mai.",
         "kind": "fig"
@@ -81,7 +81,7 @@
         "p1": {
           "type": "para",
           "settings": {
-            "text": "<p>Il quattordici marzo, alle sette e venti del mattino, ho tossito qualcosa nella mano.</p>"
+            "text": "<p>PREUVE-C ce paragraphe a ete reecrit par l API.</p>"
           }
         },
         "p2": {
