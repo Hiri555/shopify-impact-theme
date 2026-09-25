@@ -757,36 +757,7 @@
 /* ==========================================================================
    HOME — PREMIER ECRAN
    ========================================================================== */
-.fr-hhero{ padding:44px 0 36px; }
-.fr-hhero .wide{ max-width:1080px; }
-.fr .fr-hhero-grid{ display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; }
-.fr-hhero--right .fr-hhero-media{ order:2; }
-.fr .fr-hhero-media img{ width:100%; height:auto; display:block; border:1px solid var(--rule);
-  border-radius:2px; background:var(--soft); }
-.fr .fr-hhero-h{ font-family:Fraunces,serif; font-weight:500; font-size:44px; line-height:1.08;
-  letter-spacing:-.01em; color:var(--ink); margin:0 0 18px; }
-.fr .fr-hhero-h em{ font-style:italic; color:var(--acc); }
-.fr .fr-hhero-body .dek{ margin-bottom:20px; }
-.fr .fr-hhero-body .fr-benefits{ margin:0 0 24px; }
-@media (max-width:860px){
-  .fr .fr-hhero-grid{ grid-template-columns:1fr; gap:26px; }
-  .fr-hhero--right .fr-hhero-media{ order:0; }
-  .fr .fr-hhero-h{ font-size:32px; }
-}
-@media (max-width:420px){ .fr .fr-hhero-h{ font-size:28px; } }
 
-/* --------------------------------------------------------------------------
-   CORRECTIF GRILLE — min-width:auto
-   Un enfant de grid refuse par defaut de descendre sous sa largeur mini de
-   contenu. La bande de vignettes (8 x 68px) forcait donc la colonne a 600px
-   et faisait deborder la PDP a 390px. min-width:0 rend la colonne compressible
-   et laisse la bande defiler dans son propre overflow.
-   -------------------------------------------------------------------------- */
-.fr .fr-hero-grid > *,
-.fr .fr-hhero-grid > *,
-.fr .fr-doors > *,
-.fr .fr-reviews-grid > *,
-.fr .fr-bar > *{ min-width:0; }
 .fr .fr-gal-thumbs{ min-width:0; max-width:100%; }
 .fr .fr-gal-main{ max-width:100%; }
 
@@ -1097,4 +1068,78 @@
   .fr .fr-cmp td[data-l]::before{ content:attr(data-l) " \00b7 "; color:var(--ink3);
     font-size:12px; letter-spacing:.06em; text-transform:uppercase; }
   .fr .fr-cmp tr.is-acc{ padding-left:12px; padding-right:12px; border-radius:2px; }
+}
+
+/* ======================================================================
+   HOME · LA BANNIERE D'OUVERTURE
+   ----------------------------------------------------------------------
+   Deux colonnes, la photo file jusqu'au bord de l'ecran de son cote. Le
+   titre est en DEUX tailles : l'accroche pose la situation, la promesse
+   la renverse. C'est ce contraste qui fait la banniere -- une seule
+   taille et l'ensemble retombe en encart publicitaire.
+   Telephone : la photo passe au-dessus, puis le texte, puis le bouton.
+   ====================================================================== */
+.fr-hband{ background:var(--ink); padding:9px 0; }
+.fr .fr-hband-l{ display:flex; gap:26px; justify-content:center; flex-wrap:wrap;
+  margin:0; padding:0; list-style:none; }
+.fr .fr-hband-l li{ font-family:Inter,sans-serif; font-size:10.5px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:rgba(244,241,232,.86); }
+
+.fr-hhero{ background:var(--soft); overflow:hidden; }
+.fr .fr-hhero-grid{ display:grid; grid-template-columns:1.05fr .95fr; align-items:center; }
+.fr-hhero--right .fr-hhero-media{ order:2; }
+.fr-hhero--left  .fr-hhero-media{ order:0; }
+
+.fr .fr-hhero-body{ padding:52px clamp(20px,4vw,56px) 52px
+  max(20px, calc((100vw - 1180px) / 2)); }
+.fr-hhero--left .fr-hhero-body{ padding-left:clamp(20px,4vw,56px);
+  padding-right:max(20px, calc((100vw - 1180px) / 2)); }
+
+.fr .fr-hhero-badge{ display:inline-block; margin:0 0 22px;
+  font-family:Inter,sans-serif; font-size:10.5px; font-weight:700;
+  letter-spacing:.2em; text-transform:uppercase; color:var(--ink);
+  background:rgba(44,84,64,.09); border:1px solid rgba(44,84,64,.28);
+  padding:6px 13px; }
+.fr .fr-hhero-hook{ font-family:Fraunces,Georgia,serif; font-weight:400;
+  font-size:clamp(19px,2.4vw,27px); line-height:1.18; color:var(--ink);
+  margin:0 0 6px; max-width:18ch; }
+.fr .fr-hhero-h{ font-family:Fraunces,Georgia,serif; font-weight:700;
+  font-size:clamp(31px,4.6vw,53px); line-height:1.04; letter-spacing:-.018em;
+  color:var(--acc); margin:0 0 20px; max-width:15ch; }
+.fr .fr-hhero-h em{ font-style:italic; }
+.fr .fr-hhero-dek{ font-family:Inter,sans-serif; font-size:15px; line-height:1.6;
+  color:var(--ink3); margin:0 0 26px; max-width:46ch; }
+
+.fr .fr-hhero-by{ display:flex; align-items:center; gap:13px; }
+.fr .fr-hhero-by-p{ width:48px; height:48px; border-radius:50%; overflow:hidden;
+  flex:0 0 auto; background:rgba(44,84,64,.08); }
+.fr .fr-hhero-by-p img{ width:100%; height:100%; object-fit:cover; display:block; }
+.fr .fr-hhero-by-n{ display:block; font-family:Fraunces,Georgia,serif;
+  font-weight:700; font-size:16px; color:var(--ink); }
+.fr .fr-hhero-by-r{ display:block; font-family:Inter,sans-serif; font-size:10.5px;
+  font-weight:600; letter-spacing:.12em; text-transform:uppercase; color:var(--ink3);
+  margin-top:2px; }
+
+.fr .fr-hhero-media{ align-self:stretch; min-height:100%; }
+.fr .fr-hhero-img{ width:100%; height:100%; min-height:420px; object-fit:cover;
+  display:block; }
+
+.fr .fr-hhero-cta{ text-align:center; padding:0 20px 44px; background:var(--soft); }
+.fr .fr-hhero-cta a{ display:inline-flex; align-items:center; gap:14px;
+  background:var(--acc); color:#F4F1E8; text-decoration:none;
+  font-family:Inter,sans-serif; font-size:14px; font-weight:700;
+  letter-spacing:.11em; text-transform:uppercase; line-height:1.2;
+  padding:19px 44px; min-height:44px; box-sizing:border-box; }
+.fr .fr-hhero-cta-n{ display:block; margin-top:12px; font-family:Inter,sans-serif;
+  font-size:11.5px; letter-spacing:.05em; color:var(--ink3); }
+
+@media (max-width:860px){
+  .fr .fr-hhero-grid{ grid-template-columns:1fr; }
+  .fr-hhero--right .fr-hhero-media,
+  .fr-hhero--left  .fr-hhero-media{ order:-1; }
+  .fr .fr-hhero-img{ min-height:0; aspect-ratio:4/3; }
+  .fr .fr-hhero-body{ padding:30px 20px 34px !important; }
+  .fr .fr-hhero-h{ max-width:none; }
+  .fr .fr-hhero-cta a{ display:flex; width:100%; justify-content:center;
+    padding:18px 20px; }
 }

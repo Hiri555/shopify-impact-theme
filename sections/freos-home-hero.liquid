@@ -1,88 +1,151 @@
 {%- comment -%}
   ============================================================================
-  FREOS · HOME — PREMIER ECRAN
-  Deux colonnes : le packshot d'un cote, la promesse et un CTA unique de
-  l'autre. La recherche marche est nette — la home ne recoit pas de trafic
-  payant dans ce creneau : son metier est la credibilite et l'aiguillage,
-  donc UN seul CTA primaire, vers la PDP.
+  FREOS · HOME — BANNIERE D'OUVERTURE
+  ----------------------------------------------------------------------------
+  Bati sur la logique d'une banniere de « dossier » de presse, pas sur ses
+  pixels : bandeau de confiance, puis deux colonnes -- le texte a gauche, une
+  photo immersive qui file jusqu'au bord a droite -- puis UN seul bouton.
+
+  Le titre est en DEUX tailles, et c'est le ressort de la mise en page : une
+  accroche fine qui pose la situation du lecteur, puis la promesse en grand et
+  en vert. Une seule taille, et la banniere retombe en encart publicitaire.
+
+  AUCUN PRIX, AUCUNE BUY BOX ICI. La home aiguille, elle ne vend pas : le prix
+  vit sur la fiche produit, a un seul endroit, pour qu'il ne puisse pas
+  diverger. Le bouton n'a donc pas de pastille.
+
+  La signature est celle d'une voix deja installee sur l'advertorial, avec sa
+  photo -- pas un medecin invente. Vide, elle ne s'affiche pas.
   ============================================================================
 {%- endcomment -%}
 
-<div class="fr fr-hhero fr-hhero--{{ section.settings.media_side }}">
-  <div class="wide">
-    <div class="fr-hhero-grid">
-
-      <div class="fr-hhero-media">
-        {%- if section.settings.image_file != blank -%}
-          <img src="{{ section.settings.image_file | asset_url }}"
-               alt="{{ section.settings.image_alt }}"
-               width="1400" height="1400" fetchpriority="high">
-        {%- endif -%}
-      </div>
-
-      <div class="fr-hhero-body">
-        {%- if section.settings.kicker != blank -%}
-          <p class="chip">{{ section.settings.kicker }}</p>
-        {%- endif -%}
-        {%- if section.settings.heading != blank -%}
-          <h1 class="fr-hhero-h">{{ section.settings.heading }}</h1>
-        {%- endif -%}
-        {%- if section.settings.dek != blank -%}
-          <p class="dek">{{ section.settings.dek }}</p>
-        {%- endif -%}
-
-        {%- if section.settings.points != blank -%}
-          <ul class="fr-benefits">
-            {%- assign items = section.settings.points | newline_to_br | split: '<br />' -%}
-            {%- for it in items -%}
-              {%- assign line = it | strip -%}
-              {%- if line != blank -%}<li>{{ line }}</li>{%- endif -%}
-            {%- endfor -%}
-          </ul>
-        {%- endif -%}
-
-        <div class="cta-wrap">
-          <a class="cta" href="{{ section.settings.cta_url | default: '#' }}">
-            <span>{{ section.settings.cta_label }}</span>
-            {%- if section.settings.cta_pill != blank -%}
-              <span class="pill">{{ section.settings.cta_pill }}</span>
-            {%- endif -%}
-          </a>
-          {%- if section.settings.cta_note != blank -%}
-            <span class="guar">{{ section.settings.cta_note }}</span>
-          {%- endif -%}
-        </div>
-      </div>
-
+{%- if section.settings.trust != blank -%}
+  <div class="fr fr-hband">
+    <div class="wide">
+      <ul class="fr-hband-l">
+        {%- assign marks = section.settings.trust | newline_to_br | split: '<br />' -%}
+        {%- for m in marks -%}
+          {%- assign line = m | strip -%}
+          {%- if line != blank -%}<li>{{ line }}</li>{%- endif -%}
+        {%- endfor -%}
+      </ul>
     </div>
   </div>
+{%- endif -%}
+
+<div class="fr fr-hhero fr-hhero--{{ section.settings.media_side }}">
+  <div class="fr-hhero-grid">
+
+    <div class="fr-hhero-body">
+      {%- if section.settings.kicker != blank -%}
+        <p class="fr-hhero-badge">{{ section.settings.kicker }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.hook != blank -%}
+        <p class="fr-hhero-hook">{{ section.settings.hook }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.heading != blank -%}
+        <h1 class="fr-hhero-h">{{ section.settings.heading }}</h1>
+      {%- endif -%}
+
+      {%- if section.settings.dek != blank -%}
+        <p class="fr-hhero-dek">{{ section.settings.dek }}</p>
+      {%- endif -%}
+
+      {%- if section.settings.by_name != blank -%}
+        <div class="fr-hhero-by">
+          {%- if section.settings.by_image != blank or section.settings.by_file != blank -%}
+            <span class="fr-hhero-by-p">
+              {%- if section.settings.by_image != blank -%}
+                {{ section.settings.by_image | image_url: width: 200 | image_tag:
+                     widths: '96,200', sizes: '48px', alt: section.settings.by_name }}
+              {%- else -%}
+                <img src="{{ section.settings.by_file | strip | asset_url }}"
+                     alt="{{ section.settings.by_name | escape }}" loading="lazy">
+              {%- endif -%}
+            </span>
+          {%- endif -%}
+          <span>
+            <span class="fr-hhero-by-n">{{ section.settings.by_name }}</span>
+            {%- if section.settings.by_role != blank -%}
+              <span class="fr-hhero-by-r">{{ section.settings.by_role }}</span>
+            {%- endif -%}
+          </span>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="fr-hhero-media">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 1400 | image_tag:
+             widths: '600,900,1200,1400', sizes: '(max-width:860px) 100vw, 46vw',
+             alt: section.settings.image_alt, class: 'fr-hhero-img' }}
+      {%- elsif section.settings.image_file != blank -%}
+        <img class="fr-hhero-img" src="{{ section.settings.image_file | strip | asset_url }}"
+             alt="{{ section.settings.image_alt | escape }}" fetchpriority="high">
+      {%- endif -%}
+    </div>
+
+  </div>
+
+  {%- if section.settings.cta_label != blank -%}
+    <div class="fr-hhero-cta">
+      <a href="{{ section.settings.cta_url | default: '#' }}">
+        {{ section.settings.cta_label }}<span aria-hidden="true">&#8594;</span>
+      </a>
+      {%- if section.settings.cta_note != blank -%}
+        <span class="fr-hhero-cta-n">{{ section.settings.cta_note }}</span>
+      {%- endif -%}
+    </div>
+  {%- endif -%}
 </div>
 
 {% schema %}
 {
-  "name": "FREOS · Home hero",
+  "name": "FREOS · Home banniere",
   "tag": "section",
-  "class": "freos-home-hero-section",
+  "class": "freos-home-hero",
   "settings": [
-    { "type": "text", "id": "image_file", "label": "Image (asset)", "default": "freos-pdp-01-main.jpg" },
+    { "type": "header", "content": "Bandeau de confiance" },
+    { "type": "textarea", "id": "trust", "label": "Gages",
+      "info": "Un par ligne. Trois suffisent. Vide = pas de bandeau.",
+      "default": "Zinco dosato in etichetta\nTrenta sere di prova\nNessun abbonamento" },
+
+    { "type": "header", "content": "Le titre" },
+    { "type": "text", "id": "kicker", "label": "Mention de dossier",
+      "info": "Encadree, en petites capitales. « INCHIESTA », « SPECIALE »...",
+      "default": "INCHIESTA" },
+    { "type": "text", "id": "hook", "label": "Accroche",
+      "info": "La premiere ligne, plus petite : la situation du lecteur." },
+    { "type": "text", "id": "heading", "label": "La promesse",
+      "info": "En grand et en vert. <em>...</em> met un fragment en italique." },
+    { "type": "textarea", "id": "dek", "label": "Sous-texte",
+      "info": "Deux ou trois lignes, pas plus." },
+
+    { "type": "header", "content": "Signature" },
+    { "type": "image_picker", "id": "by_image", "label": "Portrait" },
+    { "type": "text", "id": "by_file", "label": "Ou : asset du theme" },
+    { "type": "text", "id": "by_name", "label": "Nom",
+      "info": "Vide = aucune signature." },
+    { "type": "text", "id": "by_role", "label": "Qualite et lieu" },
+
+    { "type": "header", "content": "Photo" },
+    { "type": "image_picker", "id": "image", "label": "Image" },
+    { "type": "text", "id": "image_file", "label": "Ou : asset du theme",
+      "default": "freos-home-hero.webp" },
     { "type": "text", "id": "image_alt", "label": "Texte alternatif" },
-    {
-      "type": "select", "id": "media_side", "label": "Cote de l'image",
-      "options": [
-        { "value": "left", "label": "Gauche" },
-        { "value": "right", "label": "Droite" }
-      ],
-      "default": "left"
-    },
-    { "type": "text", "id": "kicker", "label": "Sur-titre" },
-    { "type": "text", "id": "heading", "label": "Titre" },
-    { "type": "text", "id": "dek", "label": "Chapeau" },
-    { "type": "textarea", "id": "points", "label": "Points", "info": "Un par ligne." },
-    { "type": "text", "id": "cta_label", "label": "Bouton", "default": "Vedi il prodotto" },
-    { "type": "text", "id": "cta_pill", "label": "Pastille" },
-    { "type": "text", "id": "cta_url", "label": "Lien" },
-    { "type": "text", "id": "cta_note", "label": "Ligne de reassurance" }
+    { "type": "select", "id": "media_side", "label": "Cote de la photo",
+      "default": "right",
+      "options": [ { "value": "right", "label": "A droite" },
+                   { "value": "left", "label": "A gauche" } ] },
+
+    { "type": "header", "content": "Le bouton" },
+    { "type": "text", "id": "cta_label", "label": "Libelle",
+      "info": "Un seul bouton, sans prix : la home aiguille." },
+    { "type": "url", "id": "cta_url", "label": "Destination" },
+    { "type": "text", "id": "cta_note", "label": "Ligne sous le bouton" }
   ],
-  "presets": [{ "name": "FREOS · Home hero" }]
+  "presets": [ { "name": "FREOS · Home banniere" } ]
 }
 {% endschema %}
