@@ -530,3 +530,11 @@
 .fr-lp3.freos-lp-body.no-rule .section{
   border-top: none; margin-top: 40px; padding-top: 0;
 }
+
+/* Sur le fond sombre de l'ours, le gras doit s'eclaircir. La cripta le faisait
+   avec un `style="color:#E8E3D2"` en ligne, que Shopify refuse dans un reglage
+   richtext -- c'est la place du CSS, pas du markup. */
+.fr-lp1 .colophon strong, .fr-lp2 .colophon strong, .fr-lp3 .colophon strong,
+.fr-lp1 .colophon b, .fr-lp2 .colophon b, .fr-lp3 .colophon b{
+  color: var(--paper);
+}
