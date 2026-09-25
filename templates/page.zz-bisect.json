@@ -10,25 +10,79 @@
 {
   "layout": "freos-lp",
   "sections": {
-    "offerta": {
-      "type": "freos-lp-offer",
+    "confronto": {
+      "type": "freos-lp-anchor",
+      "blocks": {
+        "c1": {
+          "type": "row",
+          "settings": {
+            "label": "Tonsillectomia in libera professione",
+            "detail": "secondo il centro e la tecnica, più la visita specialistica",
+            "value": "2.400 – 6.000 €",
+            "us": false
+          }
+        },
+        "c2": {
+          "type": "row",
+          "settings": {
+            "label": "Recupero dopo l'intervento",
+            "detail": "anestesia generale, una notte di ricovero",
+            "value": "10 – 14 giorni",
+            "us": false
+          }
+        },
+        "c3": {
+          "type": "row",
+          "settings": {
+            "label": "Nel servizio pubblico",
+            "detail": "coperta, quando c'è l'indicazione clinica e quando arriva il tuo turno",
+            "value": "lista d'attesa",
+            "us": false
+          }
+        },
+        "c4": {
+          "type": "row",
+          "settings": {
+            "label": "Dieci anni di collutori, mentine, raschietti",
+            "detail": "quello che hai già speso senza contarlo",
+            "value": "fallo tu il conto",
+            "us": false
+          }
+        },
+        "c5": {
+          "type": "row",
+          "settings": {
+            "label": "FREOS · un barattolo, trenta sere",
+            "detail": "meno di un euro al giorno",
+            "value": "29,90 €",
+            "us": false
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ],
       "settings": {
         "scope": "fr-lp3",
         "rule": true,
         "pt": 0,
         "pb": 0,
-        "photo_file": "freos-lp3-08.webp",
-        "photo_alt": "FREOS · Gel Erbale per l'Alito Fresco",
-        "headline": "FREOS · Gel Erbale per l'Alito Fresco",
-        "kicker": "La prova",
-        "body": "<p>29,90 € · 120 g · trenta sere</p><ul>\n      <li><b>Zinco</b> — lega chimicamente i composti solforati nella cavità orale</li>\n      <li><b>Sette estratti vegetali</b> — dichiarati uno per uno, con le dosi in etichetta</li>\n      <li><b>Gel denso</b> — resta sulla mucosa invece di essere sputato o sciolto in pochi minuti</li>\n      <li><b>Due misurini la sera</b> — dopo lo spazzolino, prima di dormire, niente da premere</li>\n      <li><b>Meno di un euro al giorno</b> — un barattolo copre l'intero mese</li>\n    </ul>",
+        "kicker": "Il confronto onesto",
+        "heading": "Quanto costa <em>l'altra strada.</em>",
+        "lead": "Non per dirti di non farla. Per darti i numeri, perché nessuno te li mette in fila.",
+        "note": "E adesso la parte onesta: non fanno la stessa cosa. L'intervento toglie le tonsille. FREOS no — non le tocca, non scioglie i tonsilloliti, non entra nella cripta. Se hai l'indicazione per operarti, operati. Se invece ti hanno detto di lasciar perdere perché «non è pericoloso», adesso sai che esiste un'altra cosa da fare la sera.",
+        "source": "Tariffe di riferimento: AOU Careggi, libera professione (3.500–6.000 €) · Tariffario IRCCS Burlo Garofolo 2023 (2.445 € tonsillectomia, 3.423 € intracapsulare). Le tariffe variano per struttura e regione.",
         "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "guarantee": "<p>Rimborso 30 sere Spedizione gratuita in Italia Nessun abbonamento automatico</p>"
+        "cta_sub": "Trenta sere di prova · rimborso completo · nessun abbonamento"
       }
     }
   },
   "order": [
-    "offerta"
+    "confronto"
   ]
 }
