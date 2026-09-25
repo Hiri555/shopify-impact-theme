@@ -109,7 +109,7 @@
           "type": "price",
           "settings": {
             "fallback": "29,90 €",
-            "note": "120 g · trenta sere · meno di un euro al giorno"
+            "note": "<p>120 g · trenta sere · meno di un euro al giorno</p>"
           }
         },
         "recognition": {
@@ -117,7 +117,7 @@
           "settings": {
             "question": "Quale di queste ti somiglia di più?",
             "options": "Torna dopo venti minuti\nSoprattutto al risveglio\nNon riesco a saperlo da solo",
-            "answer": "In tutti e tre i casi il momento che conta è la sera: è lì che la bocca smette di difendersi, e nessuno fa niente."
+            "answer": "<p>In tutti e tre i casi il momento che conta è la sera: è lì che la bocca smette di difendersi, e nessuno fa niente.</p>"
           }
         },
         "buy_buttons": {
@@ -237,104 +237,122 @@
     "ingredienti": {
       "type": "freos-pdp-ingredienti",
       "blocks": {
-        "ing1": {
+        "ing_zinco": {
           "type": "ing",
           "settings": {
             "file": "freos-ing_zinco.jpg",
             "name": "Zinco",
-            "role": "Lega i composti solforati",
-            "dose": "1,38 mg (14% VNR)"
-          }
-        },
-        "ing2": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_menta.jpg",
-            "name": "Menta piperita",
-            "role": "Freschezza immediata",
-            "dose": "80 mg"
-          }
-        },
-        "ing3": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_clorofilla.jpg",
-            "name": "Clorofilla",
-            "role": "Uso tradizionale per gli odori",
-            "dose": "85 mg"
-          }
-        },
-        "ing4": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_te_verde.jpg",
-            "name": "Tè verde",
-            "role": "Ricco di polifenoli",
-            "dose": "85 mg"
-          }
-        },
-        "ing5": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_prezzemolo.jpg",
-            "name": "Prezzemolo",
-            "role": "Uso tradizionale dopo i pasti",
-            "dose": "85 mg"
-          }
-        },
-        "ing6": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_melissa.jpg",
-            "name": "Melissa",
-            "role": "Aroma dolce",
-            "dose": "85 mg"
-          }
-        },
-        "ing7": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_chiodi.jpg",
-            "name": "Chiodi di garofano",
-            "role": "Aroma intenso",
-            "dose": "85 mg"
-          }
-        },
-        "ing8": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_pueraria.jpg",
-            "name": "Pueraria lobata",
-            "role": "Radice della tradizione asiatica",
-            "dose": ""
+            "dose": "1,38 mg (14% VNR)",
+            "quote": "Lega, non copre.",
+            "role": "Il minerale della formula, dosato in etichetta. Lo zinco lega i composti solforati — quelli che si accumulano quando la bocca si ferma.",
+            "pill": "01 · IL LEGAME"
           }
         },
         "ing_shilajit": {
           "type": "ing",
           "settings": {
-            "file": "",
+            "file": "freos-ing-shilajit.webp",
             "name": "Shilajit",
             "dose": "100 mg",
-            "role": "Resina minerale himalayana. L’ingrediente più dosato della formula."
+            "quote": "Il più dosato.",
+            "role": "Resina minerale himalayana, purificata. È l’ingrediente più dosato della formula.",
+            "pill": "02 · LA BASE"
+          }
+        },
+        "ing_clorofilla": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_clorofilla.jpg",
+            "name": "Clorofilla",
+            "dose": "85 mg",
+            "quote": "Verde, da sempre.",
+            "role": "Il pigmento verde delle piante. Uso tradizionale legato agli odori.",
+            "pill": "03 · LA TRADIZIONE"
+          }
+        },
+        "ing_te_verde": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_te_verde.jpg",
+            "name": "Tè verde",
+            "dose": "85 mg",
+            "quote": "Ricco di polifenoli.",
+            "role": "Foglia di Camellia sinensis. Contiene caffeina naturalmente presente.",
+            "pill": "04 · I POLIFENOLI"
+          }
+        },
+        "ing_prezzemolo": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_prezzemolo.jpg",
+            "name": "Prezzemolo",
+            "dose": "85 mg",
+            "quote": "Quello del dopo-pasto.",
+            "role": "Foglia di Petroselinum crispum. Quella che in Italia si mastica dopo i pasti, da molto prima che qualcuno la studiasse.",
+            "pill": "05 · IL DOPO-PASTO"
+          }
+        },
+        "ing_melissa": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_melissa.jpg",
+            "name": "Melissa",
+            "dose": "85 mg",
+            "quote": "Chiude in dolcezza.",
+            "role": "Foglia dal profilo dolce. Chiude il gusto della formula.",
+            "pill": "06 · IL FONDO"
+          }
+        },
+        "ing_chiodi": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_chiodi.jpg",
+            "name": "Chiodi di garofano",
+            "dose": "85 mg",
+            "quote": "Aroma che resta.",
+            "role": "Bocciolo essiccato, aroma intenso e persistente.",
+            "pill": "07 · L’AROMA"
+          }
+        },
+        "ing_menta": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_menta.jpg",
+            "name": "Menta piperita",
+            "dose": "80 mg",
+            "quote": "Il fresco della sera.",
+            "role": "Il fresco che chiude il gesto. Se non sopporti la menta, FREOS non fa per te: meglio saperlo adesso.",
+            "pill": "08 · IL FRESCO"
+          }
+        },
+        "ing_pueraria": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_pueraria.jpg",
+            "name": "Pueraria lobata",
+            "dose": "",
+            "quote": "Radice d’Oriente.",
+            "role": "Radice della tradizione asiatica, presente nella formula per il suo profilo vegetale.",
+            "pill": "09 · LA RADICE"
           }
         }
       },
       "block_order": [
+        "ing_zinco",
         "ing_shilajit",
-        "ing1",
-        "ing2",
-        "ing3",
-        "ing4",
-        "ing5",
-        "ing6",
-        "ing7",
-        "ing8"
+        "ing_clorofilla",
+        "ing_te_verde",
+        "ing_prezzemolo",
+        "ing_melissa",
+        "ing_chiodi",
+        "ing_menta",
+        "ing_pueraria"
       ],
       "settings": {
         "note": "<p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>",
-        "kicker": "La formula",
-        "heading": "Sette estratti e uno ione.",
-        "dek": "Dosi dichiarate in etichetta · Nessuna miscela proprietaria",
+        "kicker": "Nove attivi",
+        "heading": "La formula <em>completa.</em>",
+        "dek": "Ogni ingrediente alla dose che porta in etichetta. Il decimo elemento non è un ingrediente: è l’ora in cui lo prendi.",
         "surface": "white",
         "width": "wide",
         "padding_top": 40,
@@ -348,66 +366,72 @@
           "type": "review",
           "settings": {
             "name": "Giulia R.",
-            "badge": "Verificato",
             "stars": 5,
             "title": "Non mi controllo più a metà frase",
-            "body": "Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Dopo tre settimane mi sono resa conto che non lo facevo più. È la cosa che mi ha colpito di più.",
-            "date": ""
+            "body": "<p>Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Lo facevo al lavoro, lo facevo a cena, lo facevo mentre parlavo con mia sorella.</p><p>Dopo tre settimane mi sono resa conto che non lo facevo più. Non me l’ero imposto e non me ne ero accorta sul momento: l’ho capito ripensandoci. È la cosa che mi ha colpito di più.</p>",
+            "file": "freos-sc-lavabo.webp",
+            "age": "34 anni",
+            "durata": "da 2 mesi"
           }
         },
         "rv2": {
           "type": "review",
           "settings": {
             "name": "Marco T.",
-            "badge": "Verificato",
             "stars": 5,
             "title": "Il risveglio è la differenza",
-            "body": "Non prometto miracoli, ma al mattino la sensazione non è più quella di prima. Ed è lì che me ne sono accorto per primo.",
-            "date": ""
+            "body": "<p>L’ho preso senza aspettarmi granché. Avevo letto la riga sulla saliva che di notte quasi si ferma, e quella cosa l’avevo notata da solo senza saperla spiegare: era sempre peggio al risveglio, mai dopo pranzo.</p><p>Non prometto miracoli. Dico che al mattino la sensazione non è più quella di prima, ed è lì che me ne sono accorto per primo.</p>",
+            "file": "freos-sc-comodino.webp",
+            "age": "47 anni",
+            "durata": "da 3 mesi"
           }
         },
         "rv3": {
           "type": "review",
           "settings": {
             "name": "Elena D.",
-            "badge": "Verificato",
             "stars": 5,
             "title": "Ho smesso di comprare cicche",
-            "body": "Avevo il cassetto pieno. Adesso ne ho ancora un pacchetto aperto da due mesi.",
-            "date": ""
+            "body": "<p>Avevo il cassetto del bagno pieno: collutori in tre gusti, uno spray preso in aeroporto, due raschietti usati sei volte in totale. Le gomme le compravo a scatole e le contavo.</p><p>Adesso ne ho ancora un pacchetto aperto da due mesi. Non ho deciso di smettere di comprarle: mi sono accorta a un certo punto che non le stavo più finendo.</p>",
+            "file": "freos-sc-mensola.webp",
+            "age": "43 anni",
+            "durata": "da 6 settimane"
           }
         },
         "rv4": {
           "type": "review",
           "settings": {
             "name": "Davide P.",
-            "badge": "Verificato",
             "stars": 5,
             "title": "Il gesto si tiene",
-            "body": "Venti giorni e ormai lo faccio senza pensarci, subito dopo i denti. È l’unica cosa che sono riuscito a mantenere.",
-            "date": ""
+            "body": "<p>La mia paura era di non riuscire a tenerlo. Ho cominciato cose del genere almeno cinque volte e le ho mollate tutte entro il mese, sempre per lo stesso motivo: mi dimenticavo.</p><p>Venti giorni e ormai lo faccio senza pensarci, subito dopo i denti. È l’unica cosa che sono riuscito a mantenere, e credo sia perché dura trenta secondi e sta accanto allo spazzolino.</p>",
+            "file": "freos-sc-specchio.webp",
+            "age": "39 anni",
+            "durata": "da 4 mesi"
           }
         },
         "rv5": {
           "type": "review",
           "settings": {
             "name": "Sara M.",
-            "badge": "Verificato",
             "stars": 4,
             "title": "Ci ho messo un po’ a fidarmi",
-            "body": "Avevo provato di tutto e non ci credevo più. Tolgo una stella perché la prima settimana non ho notato niente, ma poi sì.",
-            "date": ""
+            "body": "<p>Avevo provato di tutto e non ci credevo più. La prima settimana non ho notato niente e stavo per lasciar perdere — l’ho lasciato sul lavandino più per pigrizia che per convinzione.</p><p>Poi sì, qualcosa si è mosso. Tolgo una stella proprio per quella prima settimana: se qualcuno me l’avesse detto prima, non sarei stata lì a chiedermi se avevo buttato altri soldi.</p>",
+            "file": "freos-sc-mattino.webp",
+            "age": "31 anni",
+            "durata": "da 5 settimane"
           }
         },
         "rv6": {
           "type": "review",
           "settings": {
             "name": "Alessandro V.",
-            "badge": "Verificato",
             "stars": 5,
             "title": "Vivo da solo, nessuno me lo diceva",
-            "body": "Era esattamente il mio problema: non avevo modo di saperlo. Adesso ho una routine e non ci penso tutto il giorno.",
-            "date": ""
+            "body": "<p>Vivo da solo e lavoro da casa. Il punto non era nemmeno il problema in sé: era che non avevo modo di saperlo, e a un certo punto ci pensavo prima di ogni chiamata, prima di ogni caffè al bar.</p><p>Adesso ho una routine e non ci penso tutto il giorno. Non so dire se sia cambiato quello che sentono gli altri. So che è cambiato quanto tempo ci passo sopra.</p>",
+            "file": "freos-sc-cucina.webp",
+            "age": "52 anni",
+            "durata": "da 3 mesi"
           }
         }
       },
@@ -420,12 +444,10 @@
         "rv6"
       ],
       "settings": {
-        "score": "4,8",
-        "count": "su 126 recensioni",
-        "source": "",
-        "kicker": "Le voci",
-        "heading": "Cosa dicono.",
-        "dek": "",
+        "source": "Racconti raccolti in forma anonima. FREOS è nuovo in Italia: recensioni verificate non ce ne sono ancora, e non ne inventiamo.",
+        "kicker": "Storie vere",
+        "heading": "Hanno smesso <em>di controllare.</em>",
+        "dek": "Con parole loro.",
         "surface": "softer",
         "width": "wide",
         "padding_top": 40,
@@ -560,6 +582,30 @@
             "answer": "<ul><li>Non tocca le tonsille</li><li>Non scioglie i tonsilloliti</li><li>Non sostituisce l’otorino, né il dentista, né lo spazzolino</li><li>Non cura l’alitosi: non è un farmaco e non ha un’indicazione terapeutica</li></ul><p>Dolore, febbre o difficoltà a deglutire? L’otorino viene prima di qualunque gel.</p>",
             "open": false
           }
+        },
+        "q_tempo": {
+          "type": "q",
+          "settings": {
+            "question": "In quanto tempo si sente qualcosa?",
+            "answer": "<p>Non c’è una risposta onesta valida per tutti. Chi ci scrive parla di una seconda o terza settimana, e quasi mai di un cambiamento improvviso: più spesso è una cosa che si smette di fare — controllare, coprire, contare le mentine. Le trenta sere di prova servono proprio a questo.</p>",
+            "open": false
+          }
+        },
+        "q_apparecchio": {
+          "type": "q",
+          "settings": {
+            "question": "Posso usarlo con apparecchio, bite o impianti?",
+            "answer": "<p>FREOS è un integratore alimentare: si scioglie in bocca e si deglutisce, non è un prodotto che si applica su denti o dispositivi. Se porti un bite notturno, il gesto va fatto prima di metterlo. Per qualsiasi dubbio legato al tuo apparecchio, la persona da sentire è il tuo dentista.</p>",
+            "open": false
+          }
+        },
+        "q_contro": {
+          "type": "q",
+          "settings": {
+            "question": "Ci sono controindicazioni?",
+            "answer": "<p>La formula contiene tè verde, che apporta caffeina naturalmente presente: se sei sensibile alla caffeina, tienine conto per un prodotto che si prende la sera. Non assumere in gravidanza o durante l’allattamento. Non superare la dose giornaliera consigliata. Tenere fuori dalla portata dei bambini sotto i tre anni. Gli integratori non sostituiscono una dieta variata e uno stile di vita sano.</p>",
+            "open": false
+          }
         }
       },
       "block_order": [
@@ -572,18 +618,25 @@
         "q6",
         "q7",
         "q8",
+        "q_tempo",
+        "q_apparecchio",
+        "q_contro",
         "q9"
       ],
       "settings": {
         "src_title": "Fonti",
-        "src_items": "Takahashi et al., 2.873 pazienti consecutivi, 2014\nTangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205\nDawes C, Wong DTW. J Dent Res, 2019. PMID 30782091\nQuirynen M et al. J Clin Periodontol, 2009. PMID 19811581",
-        "kicker": "Le domande scomode",
-        "heading": "Le domande.",
+        "src_items": "<ul><li>Takahashi et al., 2.873 pazienti consecutivi, 2014</li><li>Tangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205</li><li>Dawes C, Wong DTW. J Dent Res, 2019. PMID 30782091</li><li>Quirynen M et al. J Clin Periodontol, 2009. PMID 19811581</li></ul>",
+        "kicker": "Domande",
+        "heading": "Prima <em>di decidere.</em>",
         "dek": "",
         "surface": "white",
         "width": "narrow",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "guar_title": "Un mese di prova",
+        "guar_text": "Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. Il barattolo resta a te, anche aperto.",
+        "guar_label": "La nostra politica",
+        "guar_url": "/pages/rimborsi-e-recesso"
       }
     },
     "sticky": {
@@ -668,6 +721,119 @@
         "padding_top": 40,
         "padding_bottom": 40
       }
+    },
+    "confronto": {
+      "type": "freos-pdp-confronto",
+      "blocks": {
+        "row_1": {
+          "type": "row",
+          "settings": {
+            "label": "Il formato",
+            "c1": "Un liquido. Trenta secondi in bocca, poi lo sputi.",
+            "c2": "Un gel denso. Resta dove lo metti."
+          }
+        },
+        "row_2": {
+          "type": "row",
+          "settings": {
+            "label": "Il meccanismo",
+            "c1": "Un aroma più forte, sopra quello che c’è.",
+            "c2": "Lo zinco lega i composti solforati."
+          }
+        },
+        "row_3": {
+          "type": "row",
+          "settings": {
+            "label": "Dove agisce",
+            "c1": "Su denti e gengive, mentre parli.",
+            "c2": "La sera, quando la bocca smette di difendersi."
+          }
+        },
+        "row_4": {
+          "type": "row",
+          "settings": {
+            "label": "La prova",
+            "c1": "«Clinicamente testato». Quale studio, non si dice.",
+            "c2": "Zinco dosato in etichetta: 1,38 mg, 14% VNR."
+          }
+        },
+        "row_5": {
+          "type": "row",
+          "settings": {
+            "label": "La promessa",
+            "c1": "Dodici ore, promesse sulla confezione.",
+            "c2": "Trenta sere di prova. Barattolo aperto, rimborso intero."
+          }
+        }
+      },
+      "block_order": [
+        "row_1",
+        "row_2",
+        "row_3",
+        "row_4",
+        "row_5"
+      ],
+      "settings": {
+        "col1": "I collutori e le altre soluzioni",
+        "img1": "freos-cmp-collutorio.webp",
+        "col2": "FREOS — Gel Notturno allo Zinco",
+        "img2": "freos-cmp-pot.webp",
+        "note": "<p>Non diciamo che il collutorio non serva. Diciamo che fa un’altra cosa, in un altro momento della giornata.</p>",
+        "kicker": "Il confronto",
+        "heading": "Perché il resto <em>non è bastato.</em>",
+        "dek": "Cinque righe, una di fronte all’altra. Giudica tu.",
+        "surface": "soft",
+        "width": "wide",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "rituale": {
+      "type": "freos-pdp-rituale",
+      "blocks": {
+        "step_01": {
+          "type": "step",
+          "settings": {
+            "file": "freos-rit-01.webp",
+            "num": "01",
+            "label": "La sera",
+            "text": "Dopo lo spazzolino, non al posto."
+          }
+        },
+        "step_02": {
+          "type": "step",
+          "settings": {
+            "file": "freos-rit-02.webp",
+            "num": "02",
+            "label": "Il gesto",
+            "text": "Da completare — il modo d’uso arriva qui."
+          }
+        },
+        "step_03": {
+          "type": "step",
+          "settings": {
+            "file": "freos-rit-03.webp",
+            "num": "03",
+            "label": "Poi a letto",
+            "text": "Da completare — cosa fare dopo arriva qui."
+          }
+        }
+      },
+      "block_order": [
+        "step_01",
+        "step_02",
+        "step_03"
+      ],
+      "settings": {
+        "foot": "Sezione in preparazione: il modo d’uso definitivo arriva qui.",
+        "kicker": "Il gesto",
+        "heading": "Tre passaggi. <em>Trenta secondi.</em>",
+        "dek": "La sera, dopo lo spazzolino. Non al posto.",
+        "surface": "white",
+        "width": "wide",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
@@ -676,7 +842,9 @@
     "differenza",
     "meccanismo",
     "ingredienti",
+    "confronto",
     "recensioni",
+    "rituale",
     "garanzia",
     "faq",
     "sticky"
