@@ -591,3 +591,25 @@
 @media(max-width:640px){
 .fr-lp3 .r .rv{aspect-ratio:4/3}
 }
+
+
+/* ======================================================================
+   CORRECTIFS DE RENDU
+   --------------------------------------------------------------------
+   Cette feuille a ete GENEREE une fois par scope_lp_css.py a partir des
+   <style> des trois LP. Ces <style> n'existent plus depuis le palier A :
+   le fichier est desormais une SOURCE et s'edite ici. Le generateur a
+   un garde-fou qui refuse de l'ecraser.
+   ==================================================================== */
+
+/* La ligne de cout mise en avant porte `margin: 8px -18px 0` : un debord
+   negatif qui tenait dans le padding de l'article monolithique, et qui
+   sortait du cadre depuis que chaque section a son propre conteneur.
+   Mesure a 390 px : scrollWidth 394 pour un viewport de 375. On annule le
+   debord sous le point de rupture ; au-dessus la regle d'origine reprend. */
+@media (max-width: 620px){
+  .fr-lp1 .anc-r.us,
+  .fr-lp2 .anc-r.us,
+  .fr-lp3 .anc-r.us{ margin-left:0; margin-right:0;
+    padding-left:14px; padding-right:14px; }
+}
