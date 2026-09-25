@@ -10,161 +10,25 @@
 {
   "layout": "freos-lp",
   "sections": {
-    "motivi": {
-      "type": "freos-lp-motivi",
-      "blocks": {
-        "m1": {
-          "type": "motivo",
-          "settings": {
-            "chip": "Il posto",
-            "title": "Il tuo collutorio non ci arriva. <em>Il tuo filo, nemmeno.</em>",
-            "body": "<p>Il collutorio bagna la lingua, i denti, il palato. Il filo passa tra i denti. Il raschietto pulisce la parte anteriore della lingua. La mentina copre l'aria che espiri. Ognuno fa il suo mestiere, e lo fa bene.</p><p>Nessuno di loro entra nelle <strong>cripte tonsillari</strong>. Non è un difetto di formula: sono canali che scendono nel tessuto della tonsilla e si ramificano. La bocca di quel canale è larga come un chicco di riso. Il fondo, nessuno lo vede.</p><p>Nel 2009 dei ricercatori hanno infilato dei microelettrodi in quei canali per misurare l'ossigeno. Al centro di un tonsillolite, l'ossigeno scende a <strong>un decimo</strong> di quello del liquido appena sopra. A pochi centimetri dall'aria aperta.</p><p>Dove non c'è ossigeno cresce una sola famiglia di batteri: quelli che producono composti solforati. È quello che chiami «l'alito». Non è la sua causa. È il suo <em>indirizzo.</em></p>",
-            "anchor": "come-funziona",
-            "file": "freos-lp3-02.webp",
-            "alt": "Allo specchio, la mattina: finalmente una spiegazione",
-            "cite": "Stoodley et al., Otolaryngol Head Neck Surg, 2009 · Takahashi et al., 2.873 TAC, 2014",
-            "callout_lead": "Lo sapevi?",
-            "callout": "<p>su 2.873 TAC del collo, i tonsilloliti erano visibili in circa <b>quattro persone su dieci</b>, quasi sempre a loro insaputa. Non li vedi allo specchio. Non li vede il tuo dentista guardando i denti.</p>",
-            "mirror": "«Ho i denti perfetti. Me lo dicono tutti i dentisti da dieci anni. Ma qualcosa non torna.»",
-            "mirror_src": "dai messaggi raccolti per questa guida",
-            "punch": "Non è la tua igiene. È un posto che nessun prodotto in commercio raggiunge.",
-            "cta_label": "",
-            "cta_pill": "",
-            "cta_sub": "",
-            "tx": "",
-            "tx_sub": ""
-          }
-        },
-        "m2": {
-          "type": "motivo",
-          "settings": {
-            "chip": "Lo zinco",
-            "title": "Non copre l'odore. <em>Lo lega.</em>",
-            "body": "<p>Una mentina fa una cosa semplice: mette in bocca un profumo più forte di quello che c'era prima. Trenta minuti dopo, la mentina è finita e il profumo pure. La cripta, no.</p><p>Gli <strong>ioni di zinco</strong> fanno una cosa diversa. Si legano chimicamente ai composti solforati volatili — quelli che il naso percepisce. Un composto legato non è più volatile. Non arriva più al naso di nessuno. Non è coperto: è cambiato.</p><p>È chimica di base, nota da trent'anni. Il principio non è mai stato il problema. Il <em>formato</em> lo era.</p><p>Nel gel lo zinco è dosato a <strong>1,38 mg (14% VNR)</strong> per porzione serale. FREOS è un integratore alimentare.</p>",
-            "anchor": "",
-            "file": "freos-lp3-03.webp",
-            "alt": "FREOS · gel erbale con zinco",
-            "cite": "",
-            "callout_lead": "Lo sapevi?",
-            "callout": "<p>il collutorio con zinco resta in bocca <b>trenta secondi</b> prima di essere sputato. Una caramella, quattro minuti prima di sciogliersi. Una cripta produce composti solforati <b>ventiquattro ore su ventiquattro.</b></p>",
-            "mirror": "«Ho comprato ogni collutorio in commercio. Trenta secondi in bocca, poi lo sputi. È come voler dipingere una parete con l'aerosol.»",
-            "mirror_src": "dai messaggi raccolti per questa guida",
-            "punch": "Il principio funziona da trent'anni. Serviva solo un modo per farlo restare.",
-            "cta_label": "",
-            "cta_pill": "",
-            "cta_sub": "",
-            "tx": "Il rimedio che usi da più tempo è quello che libera di più.",
-            "tx_sub": "Non è un modo di dire. È una riga dello studio del 2006 che quasi nessuno ha letto fino in fondo."
-          }
-        },
-        "m3": {
-          "type": "motivo",
-          "settings": {
-            "chip": "La forma",
-            "title": "Il liquido lo sputi. <em>Il gel resta.</em>",
-            "body": "<p>Nel 2006 hanno analizzato la flora di sei tonsilloliti. Ogni singolo campione conteneva batteri produttori di composti solforati — fino alla metà delle colonie. Ma la riga che conta è un'altra, più in basso nello stesso articolo:</p><p><em>«Il rilascio dei composti avviene quando il tonsillolite viene schiacciato.»</em></p><p>Il cotton fioc, il dito, il manico del cucchiaino: sono compressioni dirette. Su una mucosa che sanguina facilmente, con un riflesso che ti fa venire da vomitare. Il gesto che usi per liberarti dell'odore è, letteralmente, il gesto che ne libera di più nell'istante in cui lo fai.</p><p>Un gel denso fa una cosa che né un liquido né una caramella possono fare: <strong>resta.</strong> Lo lasci sciogliere, deglutisci, e continua a lavorare quando hai già spento la luce.</p>",
-            "anchor": "",
-            "file": "freos-lp3-04.webp",
-            "alt": "Il gel denso, che resta",
-            "cite": "Tsuneishi et al., Microbes Infect, 2006",
-            "callout_lead": "Lo sapevi?",
-            "callout": "<p>deglutisci circa <b>ottocento volte al giorno</b>. Mangiando, parlando, semplicemente stando svegli. Ogni deglutizione, contro la cripta, è una piccola pressione.</p>",
-            "mirror": "«Non riesco sempre a toglierli col cotton fioc, è fastidioso e poi vomito l'anima.»",
-            "mirror_src": "dai messaggi raccolti per questa guida",
-            "punch": "Non serve entrare nella cripta. Serve tenere l'uscita.",
-            "cta_label": "",
-            "cta_pill": "",
-            "cta_sub": "",
-            "tx": "",
-            "tx_sub": ""
-          }
-        },
-        "m4": {
-          "type": "motivo",
-          "settings": {
-            "chip": "La notte",
-            "title": "Ci sono sette ore, ogni notte, <em>in cui non deglutisci.</em>",
-            "body": "<p>Ottocento deglutizioni al giorno, dicevamo. Il novanta per cento cadono tra le sette del mattino e mezzanotte. Nelle sette ore che dormi, la tua bocca fa una cosa che fa poche volte nella vita: <strong>si ferma.</strong></p><p>La saliva è il tuo primo collutorio. È lei che lava, che diluisce, che ossigena. Durante il sonno, il flusso salivare crolla di oltre il novanta per cento. Il resto della meccanica orale rallenta con lei.</p><p>I batteri anaerobi nelle cripte, invece, non rallentano. Non hanno bisogno di ossigeno per lavorare — è il loro mestiere. Producono, indisturbati, per sette ore consecutive.</p><p>È il motivo per cui <em>l'alito del mattino esiste come categoria linguistica.</em> È il motivo per cui te ne accorgi quando ti svegli con la bocca chiusa. E il motivo per cui, alle sette, senti già che ricomincia.</p><p>Quelle sette ore hanno un nome: il <strong>Turno di Notte</strong>. Tre movimenti, sempre gli stessi.</p><ul><li><strong>RESTA</strong> — è un gel, non un liquido: dopo la deglutizione resta sulle mucose invece di sciacquarle e andarsene.</li><li><strong>LEGA</strong> — gli ioni di zinco legano i composti solforati. Un composto legato non è più volatile.</li><li><strong>ACCOMPAGNA</strong> — il gesto copre le ore in cui la saliva cala. Non trenta secondi: una notte.</li></ul><p>Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova.</p>",
-            "anchor": "",
-            "file": "freos-lp3-05.webp",
-            "alt": "Una notte, e un risveglio diverso",
-            "cite": "",
-            "callout_lead": "Lo sapevi?",
-            "callout": "<p>qualsiasi gesto contro l'alito che finisce prima di andare a letto lavora <b>fuori dalle sette ore</b> in cui il problema è al suo massimo. Un collutorio alle 22:00 non arriva alle 04:00.</p>",
-            "mirror": "«Il momento peggiore è la mattina. Anche se la sera prima ho fatto tutto il rituale. È come se la notte cancellasse tutto.»",
-            "mirror_src": "dai messaggi raccolti per questa guida",
-            "punch": "Le sette ore in cui non fai niente sono le sette ore in cui il tuo alito fa tutto.",
-            "cta_label": "Riprenditi i trenta centimetri",
-            "cta_pill": "29,90 €",
-            "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-            "cta_sub": "Trenta sere di prova · rimborso completo · nessun abbonamento",
-            "tx": "Ti manca un layer. Non un altro prodotto.",
-            "tx_sub": "È esattamente quello che succede a chi cura la pelle e non integra dall'interno. Qui, uguale — al contrario."
-          }
-        },
-        "m5": {
-          "type": "motivo",
-          "settings": {
-            "chip": "Il gesto",
-            "title": "Non ti manca un altro prodotto. <em>Ti manca il gesto della sera.</em>",
-            "body": "<p>Ti lavi i denti. Passi il filo. Passi il raschietto sulla lingua. Fai gargarismi. Sono quattro gesti, che coprono quattro superfici. Ognuno ha il suo strumento, e ognuno ha il suo limite.</p><p>Manca un quinto gesto. L'ultimo prima di spegnere la luce. Uno solo. Non toglie nessuno degli altri quattro — <strong>si aggiunge in fondo.</strong></p><p>Due misurini di gel denso, dopo lo spazzolino. Lo lasci sciogliere in bocca, deglutisci, ti metti a dormire. Lo zinco lega, il gel resta, e continua a lavorare nelle sette ore in cui tutto il resto è fermo.</p><p>È il layer che manca al tuo protocollo serale. Non sostituisce niente di quello che già fai. Prende il posto vuoto tra il lavandino e il cuscino.</p>",
-            "anchor": "",
-            "file": "freos-lp3-06.webp",
-            "alt": "Il gesto della sera",
-            "cite": "",
-            "callout_lead": "Il gesto completo, ora, è così:",
-            "callout": "<p><br>\n    01 · spazzolino · 02 · filo · 03 · raschietto · 04 · collutorio · <b>05 · FREOS, due misurini.</b><br>\n    Trenta secondi in più. Un solo cambiamento nella tua sera.</p>",
-            "mirror": "«Non riuscivo a capire cosa avrei dovuto togliere. La risposta era: niente. Aggiungi una cosa e basta, in fondo.»",
-            "mirror_src": "dai messaggi raccolti per questa guida",
-            "punch": "Non stai comprando un rimedio. Stai chiudendo la sera.",
-            "cta_label": "",
-            "cta_pill": "",
-            "cta_sub": "",
-            "tx": "",
-            "tx_sub": ""
-          }
-        },
-        "m6": {
-          "type": "motivo",
-          "settings": {
-            "chip": "I limiti",
-            "title": "Ti dice anche <em>dove si ferma.</em>",
-            "body": "<p><strong>FREOS non tocca le tonsille.</strong> Non scioglie i tonsilloliti. Non entra nella cripta — nessun prodotto da banco può farlo. Non sostituisce l'otorino.</p><p>Se hai dolore, difficoltà a deglutire, febbre, mal d'orecchio o una tonsilla più grossa dell'altra, l'otorino viene prima di qualunque gel. Te lo diciamo qui, prima che tu spenda un euro.</p><p>La pietra resta dov'è. Quello che rilascia attraversa la tua bocca — ed è lì, e solo lì, che FREOS lavora.</p>",
-            "anchor": "",
-            "file": "freos-lp3-07.webp",
-            "alt": "La distanza che torna",
-            "cite": "",
-            "callout_lead": "Lo sapevi?",
-            "callout": "<p>su FREOS non è stato fatto nessuno studio clinico. Le prove che citiamo riguardano <b>gli ingredienti</b>, non il prodotto finito. Preferiamo scriverlo che nasconderlo.</p>",
-            "mirror": "",
-            "mirror_src": "",
-            "punch": "Preferiamo perdere una vendita che la tua fiducia.",
-            "cta_label": "Riprenditi i trenta centimetri",
-            "cta_pill": "29,90 €",
-            "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-            "cta_sub": "Trenta sere di prova · rimborso completo · nessun abbonamento",
-            "tx": "La cripta resta. Quello che ne esce, no.",
-            "tx_sub": ""
-          }
-        }
-      },
-      "block_order": [
-        "m1",
-        "m2",
-        "m3",
-        "m4",
-        "m5",
-        "m6"
-      ],
+    "offerta": {
+      "type": "freos-lp-offer",
       "settings": {
         "scope": "fr-lp3",
         "rule": true,
         "pt": 0,
-        "pb": 0
+        "pb": 0,
+        "photo_file": "freos-lp3-08.webp",
+        "photo_alt": "FREOS · Gel Erbale per l'Alito Fresco",
+        "headline": "FREOS · Gel Erbale per l'Alito Fresco",
+        "kicker": "La prova",
+        "body": "<p>29,90 € · 120 g · trenta sere</p><ul>\n      <li><b>Zinco</b> — lega chimicamente i composti solforati nella cavità orale</li>\n      <li><b>Sette estratti vegetali</b> — dichiarati uno per uno, con le dosi in etichetta</li>\n      <li><b>Gel denso</b> — resta sulla mucosa invece di essere sputato o sciolto in pochi minuti</li>\n      <li><b>Due misurini la sera</b> — dopo lo spazzolino, prima di dormire, niente da premere</li>\n      <li><b>Meno di un euro al giorno</b> — un barattolo copre l'intero mese</li>\n    </ul>",
+        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "guarantee": "<p>Rimborso 30 sere Spedizione gratuita in Italia Nessun abbonamento automatico</p>"
       }
     }
   },
   "order": [
-    "motivi"
+    "offerta"
   ]
 }
