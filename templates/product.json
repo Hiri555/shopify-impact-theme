@@ -9,25 +9,6 @@
  */
 {
   "sections": {
-    "promo": {
-      "type": "freos-pdp-promo",
-      "settings": {
-        "text": "Trenta sere di prova · Il barattolo resta a te · Spedizione gratuita in Italia · 3–5 giorni lavorativi.",
-        "cta_label": "",
-        "cta_url": "",
-        "countdown": false,
-        "mode": "daily",
-        "end": "",
-        "prefix": "Termina tra",
-        "kicker": "",
-        "heading": "",
-        "dek": "",
-        "surface": "softer",
-        "width": "wide",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "buybox": {
       "type": "freos-pdp-buybox",
       "blocks": {
@@ -121,7 +102,7 @@
         "benefits": {
           "type": "benefits",
           "settings": {
-            "items": "Un gesto la sera, dopo i denti. Trenta secondi.\nNiente da raschiare, niente conati.\nUn barattolo copre un mese pieno."
+            "items": "Agisce quando la bocca si ferma. La sera la bocca smette di difendersi, e nessuno fa niente. È lì che il gel lavora, non mentre parli\nResta dove lo metti. Un gel denso, non un liquido da sputare dopo trenta secondi. Il principio è lo stesso; il formato no\nNiente da raschiare. Nessuno strumento da spingere in gola, nessun riflesso da forzare, nessun conato"
           }
         },
         "price": {
@@ -180,19 +161,19 @@
         "rating",
         "title",
         "subtitle",
-        "pills",
         "benefits",
         "price",
-        "recognition",
         "buy_buttons",
-        "payments",
         "badges",
-        "guarantee"
+        "payments",
+        "guarantee",
+        "pills",
+        "recognition"
       ],
       "settings": {
         "surface": "white",
         "padding_top": 24,
-        "padding_bottom": 48,
+        "padding_bottom": 40,
         "flag": "",
         "thumbs_label": "Immagini del prodotto"
       }
@@ -203,58 +184,6 @@
         "items": "Trenta sere di prova | Il barattolo resta a te | Nessun abbonamento | Sette estratti e uno ione | Dosi dichiarate in etichetta",
         "tone": "ink",
         "duration": 45
-      }
-    },
-    "benefici": {
-      "type": "freos-pdp-benefici",
-      "blocks": {
-        "b1": {
-          "type": "item",
-          "settings": {
-            "icon": "luna",
-            "title": "Agisce quando la bocca si ferma",
-            "text": "La sera la bocca smette di difendersi, e nessuno fa niente. È lì che il gel lavora, non mentre parli."
-          }
-        },
-        "b2": {
-          "type": "item",
-          "settings": {
-            "icon": "goccia",
-            "title": "Resta dove lo metti",
-            "text": "Un gel denso, non un liquido da sputare dopo trenta secondi. Il principio è lo stesso; il formato no."
-          }
-        },
-        "b3": {
-          "type": "item",
-          "settings": {
-            "icon": "stop",
-            "title": "Niente da raschiare",
-            "text": "Nessuno strumento da spingere in gola, nessun riflesso da forzare, nessun conato."
-          }
-        },
-        "b4": {
-          "type": "item",
-          "settings": {
-            "icon": "orologio",
-            "title": "Trenta secondi, una volta al giorno",
-            "text": "Dopo i denti, prima di dormire. Un barattolo copre un mese pieno: nessun abbonamento, un ordine e basta."
-          }
-        }
-      },
-      "block_order": [
-        "b1",
-        "b2",
-        "b3",
-        "b4"
-      ],
-      "settings": {
-        "kicker": "Perché la sera",
-        "heading": "Quattro cose che cambiano <em>quando il gesto resta.</em>",
-        "dek": "",
-        "surface": "white",
-        "width": "narrow",
-        "padding_top": 56,
-        "padding_bottom": 56
       }
     },
     "differenza": {
@@ -301,54 +230,8 @@
         "dek": "",
         "surface": "softer",
         "width": "narrow",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "numeri": {
-      "type": "freos-pdp-stats",
-      "blocks": {
-        "s1": {
-          "type": "stat",
-          "settings": {
-            "value": "90",
-            "unit": "%",
-            "label": "Di quanto crolla la produzione di saliva mentre dormi",
-            "note": "Dawes C, Wong DTW. J Dent Res, 2019 · PMID 30782091"
-          }
-        },
-        "s2": {
-          "type": "stat",
-          "settings": {
-            "value": "8",
-            "unit": "ore",
-            "label": "Le ore in cui la bocca resta senza la sua guardia",
-            "note": "Una notte di sonno media, ogni notte."
-          }
-        },
-        "s3": {
-          "type": "stat",
-          "settings": {
-            "value": "30",
-            "unit": "sere",
-            "label": "Le sere coperte da un barattolo da 120 g",
-            "note": "Due misurini (1,2 g) a sera, misurino incluso."
-          }
-        }
-      },
-      "block_order": [
-        "s1",
-        "s2",
-        "s3"
-      ],
-      "settings": {
-        "kicker": "I numeri",
-        "heading": "Tre cifre che spiegano <em>perché la sera.</em>",
-        "dek": "",
-        "surface": "ink",
-        "width": "narrow",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "ingredienti": {
@@ -454,166 +337,8 @@
         "dek": "Dosi dichiarate in etichetta · Nessuna miscela proprietaria",
         "surface": "white",
         "width": "wide",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "percorso": {
-      "type": "freos-pdp-journey",
-      "blocks": {
-        "st1": {
-          "type": "step",
-          "settings": {
-            "badge": "Uno",
-            "title": "Due misurini",
-            "text": "1,2 g di gel sul dorso della lingua. Mai a stomaco vuoto."
-          }
-        },
-        "st2": {
-          "type": "step",
-          "settings": {
-            "badge": "Due",
-            "title": "Lascia sciogliere",
-            "text": "Non serve risciacquare, non serve acqua."
-          }
-        },
-        "st3": {
-          "type": "step",
-          "settings": {
-            "badge": "Tre",
-            "title": "Deglutisci e dormi",
-            "text": "La sera finisce lì."
-          }
-        }
-      },
-      "block_order": [
-        "st1",
-        "st2",
-        "st3"
-      ],
-      "settings": {
-        "foot": "<p>Niente da spingere in gola. <strong>Nessun riflesso da forzare.</strong></p>",
-        "kicker": "Come si usa",
-        "heading": "Trenta secondi. <em>Dopo i denti, prima di dormire.</em>",
-        "dek": "",
-        "surface": "softer",
-        "width": "narrow",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "motivi": {
-      "type": "freos-pdp-motivi",
-      "blocks": {
-        "m1": {
-          "type": "motivo",
-          "settings": {
-            "title": "Il principio è vecchio, il formato no",
-            "text": "<p>Gli ioni di zinco <strong>legano</strong> i composti solforati. Il mercato lo mette in un collutorio: trenta secondi, poi lo sputi.</p>"
-          }
-        },
-        "m2": {
-          "type": "motivo",
-          "settings": {
-            "title": "Agisce nell’unica finestra che conta",
-            "text": "<p>La sera la bocca smette di difendersi. È il momento in cui nessuno fa niente.</p>"
-          }
-        },
-        "m3": {
-          "type": "motivo",
-          "settings": {
-            "title": "Un gesto che si tiene",
-            "text": "<p>Trenta secondi dopo i denti. Niente da raschiare, niente riflesso da forzare.</p>"
-          }
-        },
-        "m4": {
-          "type": "motivo",
-          "settings": {
-            "title": "Un ordine, una volta",
-            "text": "<p>Un barattolo copre un mese pieno. <strong>Nessun abbonamento.</strong></p>"
-          }
-        },
-        "m5": {
-          "type": "motivo",
-          "settings": {
-            "title": "Ti diciamo anche cosa non fa",
-            "text": "<p>Non tocca le tonsille, non scioglie i tonsilloliti, non cura l’alitosi. La sezione qui sotto lo scrive per esteso.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "m1",
-        "m2",
-        "m3",
-        "m4",
-        "m5"
-      ],
-      "settings": {
-        "kicker": "In breve",
-        "heading": "Cinque motivi, <em>senza giri di parole.</em>",
-        "dek": "",
-        "surface": "white",
-        "width": "narrow",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "confronto": {
-      "type": "freos-pdp-confronto",
-      "blocks": {
-        "r1": {
-          "type": "row",
-          "settings": {
-            "label": "Spazzolino",
-            "c1": "La superficie",
-            "c2": "denti e parte davanti della lingua",
-            "accent": false
-          }
-        },
-        "r2": {
-          "type": "row",
-          "settings": {
-            "label": "Collutorio",
-            "c1": "Trenta secondi",
-            "c2": "poi lo sputi",
-            "accent": false
-          }
-        },
-        "r3": {
-          "type": "row",
-          "settings": {
-            "label": "Gomma",
-            "c1": "Finché la mastichi",
-            "c2": "l’effetto finisce con la masticazione",
-            "accent": false
-          }
-        },
-        "r4": {
-          "type": "row",
-          "settings": {
-            "label": "Gel denso, la sera",
-            "c1": "Ore",
-            "c2": "resta dove lo metti",
-            "accent": true
-          }
-        }
-      },
-      "block_order": [
-        "r1",
-        "r2",
-        "r3",
-        "r4"
-      ],
-      "settings": {
-        "col1": "",
-        "col2": "",
-        "kicker": "Il confronto",
-        "heading": "Dove finiscono gli altri gesti.",
-        "dek": "",
-        "surface": "white",
-        "width": "narrow",
-        "padding_top": 56,
-        "padding_bottom": 56
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "recensioni": {
@@ -703,53 +428,8 @@
         "dek": "",
         "surface": "softer",
         "width": "wide",
-        "padding_top": 56,
-        "padding_bottom": 56
-      }
-    },
-    "limiti": {
-      "type": "freos-pdp-limiti",
-      "blocks": {
-        "l1": {
-          "type": "line",
-          "settings": {
-            "text": "Non tocca le tonsille"
-          }
-        },
-        "l2": {
-          "type": "line",
-          "settings": {
-            "text": "Non scioglie i tonsilloliti"
-          }
-        },
-        "l3": {
-          "type": "line",
-          "settings": {
-            "text": "Non sostituisce l’otorino, né il dentista, né lo spazzolino"
-          }
-        },
-        "l4": {
-          "type": "line",
-          "settings": {
-            "text": "Non cura l’alitosi: non è un farmaco e non ha un’indicazione terapeutica"
-          }
-        }
-      },
-      "block_order": [
-        "l1",
-        "l2",
-        "l3",
-        "l4"
-      ],
-      "settings": {
-        "note": "<p>Dolore, febbre o difficoltà a deglutire? <strong>L’otorino viene prima di qualunque gel.</strong></p>",
-        "kicker": "Onestà",
-        "heading": "Quello che FREOS non fa.",
-        "dek": "",
-        "surface": "white",
-        "width": "narrow",
-        "padding_top": 56,
-        "padding_bottom": 56
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "garanzia": {
@@ -794,8 +474,8 @@
         "dek": "",
         "surface": "ink",
         "width": "narrow",
-        "padding_top": 64,
-        "padding_bottom": 64
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "faq": {
@@ -872,9 +552,18 @@
             "answer": "<p>Trenta sere di prova. Se non ti dice niente, ti rimborsiamo e <strong>il barattolo resta a te</strong>. È una garanzia commerciale che offriamo noi e <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità — che restano interi.</p>",
             "open": false
           }
+        },
+        "q_limiti": {
+          "type": "q",
+          "settings": {
+            "question": "Quello che FREOS non fa.",
+            "answer": "<ul><li>Non tocca le tonsille</li><li>Non scioglie i tonsilloliti</li><li>Non sostituisce l’otorino, né il dentista, né lo spazzolino</li><li>Non cura l’alitosi: non è un farmaco e non ha un’indicazione terapeutica</li></ul><p>Dolore, febbre o difficoltà a deglutire? L’otorino viene prima di qualunque gel.</p>",
+            "open": false
+          }
         }
       },
       "block_order": [
+        "q_limiti",
         "q1",
         "q2",
         "q3",
@@ -893,8 +582,8 @@
         "dek": "",
         "surface": "white",
         "width": "narrow",
-        "padding_top": 56,
-        "padding_bottom": 72
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "sticky": {
@@ -935,17 +624,44 @@
             "title": "Copre le ore in cui la saliva cala.",
             "text": "La bocca resta chiusa, e quello che sale non viene più diluito né portato via. Non trenta secondi: una notte."
           }
+        },
+        "geste_st1": {
+          "type": "step",
+          "settings": {
+            "badge": "Uno",
+            "title": "Due misurini",
+            "text": "1,2 g di gel sul dorso della lingua. Mai a stomaco vuoto."
+          }
+        },
+        "geste_st2": {
+          "type": "step",
+          "settings": {
+            "badge": "Due",
+            "title": "Lascia sciogliere",
+            "text": "Non serve risciacquare, non serve acqua."
+          }
+        },
+        "geste_st3": {
+          "type": "step",
+          "settings": {
+            "badge": "Tre",
+            "title": "Deglutisci e dormi",
+            "text": "La sera finisce lì."
+          }
         }
       },
       "block_order": [
         "m1",
         "m2",
-        "m3"
+        "m3",
+        "geste_st1",
+        "geste_st2",
+        "geste_st3"
       ],
       "settings": {
         "kicker": "Il meccanismo",
         "heading": "Il <em>Turno di Notte</em>.",
-        "dek": "Di notte la saliva cala e la bocca resta chiusa. È la finestra in cui i composti si accumulano — ed è l’unica in cui qualcosa che resta al suo posto ha senso.",
+        "dek": "Durante il sonno il flusso salivare crolla del 90%. È la finestra in cui i composti si accumulano — ed è l’unica in cui qualcosa che resta al suo posto ha senso. (Dawes C, Wong DTW. J Dent Res, 2019)",
         "foot": "<p>Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova.</p>",
         "surface": "soft",
         "width": "narrow",
@@ -955,19 +671,12 @@
     }
   },
   "order": [
-    "promo",
     "buybox",
     "marquee",
-    "benefici",
     "differenza",
-    "numeri",
     "meccanismo",
     "ingredienti",
-    "percorso",
-    "motivi",
-    "confronto",
     "recensioni",
-    "limiti",
     "garanzia",
     "faq",
     "sticky"
