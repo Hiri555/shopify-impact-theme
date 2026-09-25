@@ -647,6 +647,7 @@
 @media (max-width:860px){
   .fr .fr-hero-grid{ grid-template-columns:1fr; gap:18px; }
   .fr .fr-gal-thumb{ flex:0 0 54px; width:54px; height:54px; }
+  .fr .fr-gal{ max-width:420px; margin-left:auto; margin-right:auto; }
   .fr .fr-buy-title{ font-size:27px; }
   .fr .fr-sticky-t{ display:none; }
 }
