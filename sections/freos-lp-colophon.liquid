@@ -10,8 +10,7 @@
 
 <div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
-{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}
-  {%- if section.settings.whisper != blank -%}
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}  {%- if section.settings.whisper != blank -%}
     <div class="whisper">
       {{ section.settings.whisper }}
       {%- if section.settings.whisper_sign != blank -%}

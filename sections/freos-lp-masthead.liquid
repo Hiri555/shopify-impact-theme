@@ -10,8 +10,7 @@
 
 <div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
-{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}
-  <header class="masthead">
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}  <header class="masthead">
     {%- if section.settings.logo != blank -%}
       <div class="masthead-logo">{{ section.settings.logo }}</div>
     {%- endif -%}
