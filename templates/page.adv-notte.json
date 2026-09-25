@@ -8,16 +8,13 @@
  * ------------------------------------------------------------
  */
 {
-  "layout": "freos-lp",
   "sections": {
-    "corpo": {
-      "type": "freos-adv-notte",
-      "settings": {
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco"
-      }
+    "rt": {
+      "type": "rich-text",
+      "settings": {}
     }
   },
   "order": [
-    "corpo"
+    "rt"
   ]
 }
