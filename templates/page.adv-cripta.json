@@ -803,12 +803,6 @@
             "text": "<p>Se hai dolore, difficoltà a deglutire, febbre, mal d'orecchio o una tonsilla visibilmente più grossa dell'altra, <strong>l'otorino viene prima di qualunque gel.</strong></p>"
           }
         },
-        "m2": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Trenta sere di prova. Se non ti dice niente, ti rimborsiamo — e il barattolo resta a te: non chiediamo indietro un prodotto che hai messo in bocca.</p>"
-          }
-        },
         "m3": {
           "type": "para",
           "settings": {
@@ -830,7 +824,6 @@
         "note1",
         "note2",
         "m1",
-        "m2",
         "m3",
         "m4"
       ],
