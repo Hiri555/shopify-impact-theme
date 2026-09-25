@@ -10,72 +10,90 @@
 {
   "layout": "freos-lp",
   "sections": {
-    "confronto": {
-      "type": "freos-lp-anchor",
+    "obiezioni": {
+      "type": "freos-lp-testimonials",
       "blocks": {
-        "c1": {
-          "type": "row",
+        "o1": {
+          "type": "tst",
           "settings": {
-            "label": "Tonsillectomia in libera professione",
-            "detail": "secondo il centro e la tecnica, più la visita specialistica",
-            "value": "2.400 – 6.000 €",
-            "us": false
+            "story": false,
+            "obj_head": "«Ho già provato di tutto, perché questo dovrebbe funzionare?»",
+            "obj_tag": "Obiezione 1 · la graveyard",
+            "quote": "",
+            "body": "<p>Non compravo più niente per l'alito da tre anni. Non perché non ce l'avessi più — perché avevo smesso di credere.</p><p>Faccio la lista: Curasept, Meridol, Listerine in tutte le sue varianti, CB12, TheraBreath ordinato dagli Stati Uniti, il probiotico orale svizzero, tre raschietti diversi, la Waterpik, i chewing gum al carbone attivo, e persino quel gel al bicarbonato che mi aveva consigliato un farmacista che «ci aveva lavorato in California».</p><p>Ho ordinato FREOS a novembre perché mio cognato mi ha detto: «È tornato lo zinco, ma questa volta in un formato che resta.» L'ho preso senza aspettative. La differenza nei primi dieci giorni non è stata sull'odore — quello non lo sento comunque. È stata sul mio comportamento. Ho smesso di chiedere alle persone se avevo mangiato aglio. Ho smesso di calcolare la distanza al mattino con la mia compagna.</p><p>Non dico che è la soluzione definitiva. Dico che è la prima cosa che ho comprato in dieci anni che non ho abbandonato dopo due settimane.</p>",
+            "name": "Marco T.",
+            "role": "47 anni · direttore commerciale · Milano",
+            "badge": "Verificato"
           }
         },
-        "c2": {
-          "type": "row",
+        "o2": {
+          "type": "tst",
           "settings": {
-            "label": "Recupero dopo l'intervento",
-            "detail": "anestesia generale, una notte di ricovero",
-            "value": "10 – 14 giorni",
-            "us": false
+            "story": false,
+            "obj_head": "«Io in gola non ho mai visto niente.»",
+            "obj_tag": "Obiezione 2 · chi non ha mai visto la pallina",
+            "quote": "",
+            "body": "<p>In gola non ho mai visto niente. Ho la torcia del telefono accesa davanti allo specchio praticamente ogni sera da quando avevo ventitré anni, e non ho mai visto una pallina bianca in vita mia. Ma il problema c'è. Al mattino la lingua è patinata, il sapore in fondo alla gola è sempre lo stesso, e i miei colleghi in open space non si scostano — ma neanche si avvicinano.</p><p>Ho ordinato FREOS proprio perché il sito diceva chiaramente che non è un test diagnostico e che si può avere l'alito senza vedere niente. Le altre cose che avevo letto sui tonsilloliti mi facevano sentire come se stessi affrontando un problema che non era il mio.</p><p>Dopo tre settimane, la patina al mattino è diminuita — la vedo io, sulla lingua, davanti allo specchio. Non è un'opinione. Il resto non lo posso sapere perché non mi sento. Ma è la prima cosa che vedo cambiare da anni.</p>",
+            "name": "Chiara F.",
+            "role": "32 anni · graphic designer · Torino",
+            "badge": "Verificato"
           }
         },
-        "c3": {
-          "type": "row",
+        "o3": {
+          "type": "tst",
           "settings": {
-            "label": "Nel servizio pubblico",
-            "detail": "coperta, quando c'è l'indicazione clinica e quando arriva il tuo turno",
-            "value": "lista d'attesa",
-            "us": false
+            "story": false,
+            "obj_head": "«Il mio dentista dice che va tutto bene.»",
+            "obj_tag": "Obiezione 3 · l'autorità che ha già detto no",
+            "quote": "",
+            "body": "<p>Ho un dentista bravo. Ci vado ogni sei mesi, ho la pulizia professionale, non ho carie da dieci anni. Ogni volta gli chiedo dell'alito e ogni volta mi dice la stessa cosa: «I tuoi denti sono perfetti, non preoccuparti.» E ha ragione — i miei denti sono perfetti.</p><p>Il problema è che il mio dentista guarda i denti. Non guarda la cripta tonsillare. Non è il suo mestiere, e non è colpa sua. È come chiedere al meccanico che ti fa il tagliando perché la macchina fa un rumore nel bagagliaio: probabilmente non è lì che deve guardare, ma non te lo dirà lui.</p><p>Con FREOS ho fatto una cosa che al mio dentista non ho detto: ho letto le fonti citate sul sito, sono andato su PubMed e mi sono verificato gli studi uno per uno. Tornano. Il gesto della sera è aggiunto al mio rituale da due mesi. Il mio dentista continua a dire che va tutto bene. Stavolta sono d'accordo con lui.</p>",
+            "name": "Alessandro P.",
+            "role": "39 anni · ingegnere · Roma",
+            "badge": "Verificato"
           }
         },
-        "c4": {
-          "type": "row",
+        "o4": {
+          "type": "tst",
           "settings": {
-            "label": "Dieci anni di collutori, mentine, raschietti",
-            "detail": "quello che hai già speso senza contarlo",
-            "value": "fallo tu il conto",
-            "us": false
+            "story": false,
+            "obj_head": "«Appena smetto, torna tutto come prima.»",
+            "obj_tag": "Obiezione 4 · la paura della dipendenza dal prodotto",
+            "quote": "",
+            "body": "<p>Sono al terzo barattolo. Il primo l'ho comprato per curiosità, il secondo per abitudine, il terzo perché ho fatto una prova.</p><p>A gennaio, dopo due mesi di uso continuo, ho smesso volontariamente per dieci giorni. Volevo vedere se era dipendenza dal prodotto o se qualcosa era davvero cambiato. Nei primi tre giorni non è tornato niente. Al quarto ho iniziato a sentire di nuovo il sapore al risveglio. All'ottavo ho ricominciato a controllare in gola con la torcia. Al decimo ho ricomprato FREOS.</p><p>La mia lettura è questa: la cripta non se ne va, e finché è lì produce. Se aggiungi qualcosa che lavora sulle sostanze che rilascia, quel qualcosa fa il suo lavoro finché c'è. Non è dipendenza dal prodotto — è che il problema è cronico. Anche i miei occhiali sono «dipendenza»: se me li tolgo, non ci vedo. Non è un difetto degli occhiali.</p>",
+            "name": "Giulia M.",
+            "role": "51 anni · commercialista · Verona",
+            "badge": "Verificato"
           }
         },
-        "c5": {
-          "type": "row",
+        "o5": {
+          "type": "tst",
           "settings": {
-            "label": "FREOS · un barattolo, trenta sere",
-            "detail": "meno di un euro al giorno",
-            "value": "29,90 €",
-            "us": false
+            "story": false,
+            "obj_head": "«Come faccio a sapere se funziona, se non posso sentirmi?»",
+            "obj_tag": "Obiezione 5 · l'obiezione strutturale di questo mercato",
+            "quote": "",
+            "body": "<p>Faccio un mestiere che mi mette il viso a trenta centimetri da quello dei miei pazienti otto ore al giorno. Ginocchia, spalle, cervicali. Non c'è distanza in cui posso lavorare.</p><p>Sapere se «funziona» è la cosa che mi ha ossessionato per anni. Perché non puoi annusarti — nessuno può — e il feedback esterno praticamente non arriva mai. Nessuno ti dice niente. Al massimo ti evitano, e tu impari a leggere i millimetri.</p><p>Con FREOS il segnale è arrivato dalla mia paziente più anziana. Signora di ottantatré anni, ex maestra elementare, quella che ti dice le cose come stanno perché tanto a quell'età non ha più niente da perdere. Un martedì di aprile, sul lettino, mi ha detto: «Dottore, si è messo un profumo nuovo?» Non mi ero messo niente. Le ho chiesto perché me lo diceva. Mi ha risposto: «Perché prima le sue mani odoravano di studio medico e la sua bocca di studio medico, e adesso non sento più questa seconda cosa.»</p><p>Quel giorno usavo FREOS da undici settimane. Non ho detto niente alla signora. Non ho più aspettato altri segnali. Il segnale era quello.</p>",
+            "name": "Davide R.",
+            "role": "41 anni · fisioterapista · Verona",
+            "badge": "Verificato"
           }
         }
       },
       "block_order": [
-        "c1",
-        "c2",
-        "c3",
-        "c4",
-        "c5"
+        "o1",
+        "o2",
+        "o3",
+        "o4",
+        "o5"
       ],
       "settings": {
         "scope": "fr-lp3",
         "rule": true,
         "pt": 0,
         "pb": 0,
-        "kicker": "Il confronto onesto",
-        "heading": "Quanto costa <em>l'altra strada.</em>",
-        "lead": "Non per dirti di non farla. Per darti i numeri, perché nessuno te li mette in fila.",
-        "note": "E adesso la parte onesta: non fanno la stessa cosa. L'intervento toglie le tonsille. FREOS no — non le tocca, non scioglie i tonsilloliti, non entra nella cripta. Se hai l'indicazione per operarti, operati. Se invece ti hanno detto di lasciar perdere perché «non è pericoloso», adesso sai che esiste un'altra cosa da fare la sera.",
-        "source": "Tariffe di riferimento: AOU Careggi, libera professione (3.500–6.000 €) · Tariffario IRCCS Burlo Garofolo 2023 (2.445 € tonsillectomia, 3.423 € intracapsulare). Le tariffe variano per struttura e regione.",
+        "kicker": "Le obiezioni",
+        "heading": "Le cinque obiezioni <em>che fermano tutti.</em>",
+        "sub": "Un'obiezione per testimonianza. Un avatar diverso ogni volta, perché ognuno si riconosca in almeno uno.",
         "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
         "cta_sub": "Trenta sere di prova · rimborso completo · nessun abbonamento"
@@ -83,6 +101,6 @@
     }
   },
   "order": [
-    "confronto"
+    "obiezioni"
   ]
 }
