@@ -1,0 +1,209 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — FREOS LP · Primo schermo
+  ----------------------------------------------------------------------------
+  Le premier ecran : photo, note, un seul bouton, un seul avis.
+
+  L'ORDRE N'EST PAS NEGOCIABLE et c'est pour ca qu'il est en dur ici plutot
+  qu'en blocs reordonnables : photo, note, bouton, avis. C'est le cadre qui le
+  fixe, et un premier ecran ou l'avis passe avant le bouton n'est plus un
+  premier ecran, c'est un debut d'article.
+
+  UN SEUL BOUTON. Deux boutons dans le premier ecran, c'est une hesitation
+  offerte au lecteur.
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3 / fr-lp4).
+  Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
+     style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}  <div class="primo">
+    {%- if section.settings.image != blank or section.settings.file != blank -%}
+      <div class="primo-v">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1200 | image_tag: widths: '480,760,1000,1200', sizes: '(max-width:760px) 100vw, 720px', alt: section.settings.alt }}
+        {%- else -%}
+          <img src="{{ section.settings.file | strip | asset_url }}" alt="{{ section.settings.alt | escape }}">
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.rating != blank -%}
+      <p class="primo-st">
+        <span class="primo-et" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span>{{ section.settings.rating }}</span>
+      </p>
+    {%- endif -%}
+
+    {%- if section.settings.cta_label != blank -%}
+      <div class="cta-wrap">
+        <a class="cta" href="{{ section.settings.cta_url | default: '/' }}">
+          {{ section.settings.cta_label }}
+          {%- if section.settings.cta_pill != blank -%}<span class="pill">{{ section.settings.cta_pill }}</span>{%- endif -%}
+        </a>
+        {%- if section.settings.cta_sub != blank -%}<span class="guar">{{ section.settings.cta_sub }}</span>{%- endif -%}
+      </div>
+    {%- endif -%}
+
+    {%- if section.settings.review != blank -%}
+      <figure class="primo-av">
+        <blockquote>{{ section.settings.review }}</blockquote>
+        {%- if section.settings.who != blank -%}
+          <figcaption>{{ section.settings.who }}</figcaption>
+        {%- endif -%}
+      </figure>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "FREOS LP · Primo schermo",
+  "tag": "section",
+  "class": "freos-lp-primo",
+  "settings": [
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Sur-titre",
+      "info": "La petite ligne au-dessus du titre. Vide = rien."
+    },
+    {
+      "type": "header",
+      "content": "La photo"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "file",
+      "label": "Ou : asset du theme"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Texte alternatif"
+    },
+    {
+      "type": "header",
+      "content": "La note"
+    },
+    {
+      "type": "text",
+      "id": "rating",
+      "label": "Note",
+      "info": "Doit correspondre a celle de la fiche produit. Vide = pas d'etoiles."
+    },
+    {
+      "type": "header",
+      "content": "Le bouton, un seul"
+    },
+    {
+      "type": "text",
+      "id": "cta_label",
+      "label": "Libelle"
+    },
+    {
+      "type": "text",
+      "id": "cta_pill",
+      "label": "Pastille",
+      "info": "Le prix, en general."
+    },
+    {
+      "type": "text",
+      "id": "cta_url",
+      "label": "Destination"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_sub",
+      "label": "Ligne de garantie"
+    },
+    {
+      "type": "header",
+      "content": "L'avis, un seul"
+    },
+    {
+      "type": "textarea",
+      "id": "review",
+      "label": "Ce qu'il dit",
+      "info": "Il doit repondre au titre de la page, pas au produit en general."
+    },
+    {
+      "type": "text",
+      "id": "who",
+      "label": "Qui",
+      "info": "Prenom, age."
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "scope",
+      "label": "Page",
+      "default": "fr-lp1",
+      "info": "Choisit la feuille de style appliquee. Une section deplacee d'une LP a l'autre doit changer de page ici.",
+      "options": [
+        {
+          "value": "fr-lp1",
+          "label": "Adv 1 · Inchiesta"
+        },
+        {
+          "value": "fr-lp2",
+          "label": "Adv 2 · Cripta"
+        },
+        {
+          "value": "fr-lp3",
+          "label": "Listicle"
+        },
+        {
+          "value": "fr-lp4",
+          "label": "Prelander · A Bocca Chiusa"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Marges"
+    },
+    {
+      "type": "checkbox",
+      "id": "rule",
+      "label": "Filet de separation au-dessus",
+      "info": "A decocher sur la premiere partie de l'article.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS LP · Primo schermo"
+    }
+  ]
+}
+{% endschema %}

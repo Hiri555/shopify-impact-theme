@@ -4,15 +4,19 @@
   ----------------------------------------------------------------------------
   Le bandeau « Contenuto sponsorizzato ». Obligatoire en tete des trois pages :
   la mention doit se lire avant le premier caractere de l'article.
-  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3 / fr-lp4).
   Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
 {%- endcomment -%}
 
 <div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
-{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}  {%- if section.settings.text != blank -%}
-    <div class="freos-spon">{{ section.settings.text }}</div>
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}  {%- if section.settings.text != blank or section.settings.link != blank -%}
+    <div class="freos-spon">{{ section.settings.text }}
+      {%- if section.settings.link != blank -%}
+        <a class="spon-a" href="{{ section.settings.url | default: '/' }}">{{ section.settings.link }}</a>
+      {%- endif -%}
+    </div>
   {%- endif -%}
 </div>
 
@@ -33,6 +37,17 @@
       "id": "text",
       "label": "Mention",
       "default": "Contenuto sponsorizzato · FREOS"
+    },
+    {
+      "type": "text",
+      "id": "link",
+      "label": "Lien de la barre",
+      "info": "Le cadre CROEvolution veut l'offre en une ligne, tout en haut. Vide = pas de lien."
+    },
+    {
+      "type": "text",
+      "id": "url",
+      "label": "Destination du lien"
     },
     {
       "type": "header",
@@ -56,6 +71,10 @@
         {
           "value": "fr-lp3",
           "label": "Listicle"
+        },
+        {
+          "value": "fr-lp4",
+          "label": "Prelander · A Bocca Chiusa"
         }
       ]
     },

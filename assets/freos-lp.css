@@ -782,3 +782,69 @@
 .fr-lp1 .punch, .fr-lp2 .punch, .fr-lp3 .punch{ padding: 0; margin: 20px 0; }
 .fr-lp1 .mirror, .fr-lp2 .mirror, .fr-lp3 .mirror{ padding: 0; margin: 18px 0; }
 .fr-lp1 .whisper, .fr-lp2 .whisper, .fr-lp3 .whisper{ padding-top: 0; margin-top: 22px; }
+
+/* ==========================================================================
+   VAGUE C1 — LE PREMIER ECRAN ET LA BARRE DE TETE
+   --------------------------------------------------------------------------
+   Deux ajouts, et ils reutilisent l'existant plutot que de s'inventer un
+   habillage : le bouton du premier ecran est `.cta` / `.pill` / `.guar`, les
+   memes que dans le corps de la listicle. Un premier ecran dont le bouton ne
+   ressemble pas aux autres boutons de la page apprend au lecteur qu'il y a
+   deux sortes de boutons.
+
+   LES ETOILES NE VIVENT QUE LA. Le cadre CROEvolution demande une note
+   chiffree dans le premier ecran ; le rail de voix, lui, reste sans etoile et
+   sans note -- ce sont des voix reappropriees, elles ne prouvent rien. Les
+   deux choses ne portent donc pas la meme classe, expres.
+   ========================================================================== */
+
+.fr-lp1 .freos-spon .spon-a, .fr-lp2 .freos-spon .spon-a,
+.fr-lp3 .freos-spon .spon-a, .fr-lp4 .freos-spon .spon-a{
+  color: inherit; text-decoration: underline; text-underline-offset: 2px;
+  white-space: nowrap; margin-left: 8px; font-weight: 600;
+}
+
+.fr-lp1 .primo, .fr-lp2 .primo, .fr-lp3 .primo, .fr-lp4 .primo{
+  margin: 18px 0 4px;
+}
+.fr-lp1 .primo-v, .fr-lp2 .primo-v, .fr-lp3 .primo-v, .fr-lp4 .primo-v{
+  background: var(--soft, #F4F1E8); border-radius: 2px; overflow: hidden;
+  margin: 0 0 18px;
+}
+.fr-lp1 .primo-v img, .fr-lp2 .primo-v img,
+.fr-lp3 .primo-v img, .fr-lp4 .primo-v img{ width: 100%; display: block; }
+
+/* La note. `tabular-nums` pour que 4,8 ne danse pas d'un rendu a l'autre. */
+.fr-lp1 .primo-st, .fr-lp2 .primo-st, .fr-lp3 .primo-st, .fr-lp4 .primo-st{
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  font-size: 13.5px; color: var(--ink2, #3B423A); margin: 0 0 16px;
+  font-variant-numeric: tabular-nums;
+}
+.fr-lp1 .primo-et, .fr-lp2 .primo-et, .fr-lp3 .primo-et, .fr-lp4 .primo-et{
+  color: #B8893B; letter-spacing: .08em; font-size: 15px; line-height: 1;
+}
+
+/* L'avis. Un trait a GAUCHE, pas en haut ni en bas : ce n'est pas un
+   separateur de parties, c'est une marque de citation -- la cure epuree ne le
+   vise donc pas, et c'est voulu. */
+.fr-lp1 .primo-av, .fr-lp2 .primo-av, .fr-lp3 .primo-av, .fr-lp4 .primo-av{
+  margin: 20px 0 0; padding: 2px 0 2px 16px;
+  border-left: 2px solid var(--accl, #E7EDE6);
+}
+.fr-lp1 .primo-av blockquote, .fr-lp2 .primo-av blockquote,
+.fr-lp3 .primo-av blockquote, .fr-lp4 .primo-av blockquote{
+  margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--ink2, #3B423A);
+}
+.fr-lp1 .primo-av figcaption, .fr-lp2 .primo-av figcaption,
+.fr-lp3 .primo-av figcaption, .fr-lp4 .primo-av figcaption{
+  margin-top: 8px; font-size: 12.5px; color: var(--ink3, #787D72);
+  border: 0; padding: 0;
+}
+
+/* 390 px d'abord : la note et le bouton doivent tenir sans deborder. */
+@media (max-width: 420px){
+  .fr-lp1 .primo-st, .fr-lp2 .primo-st,
+  .fr-lp3 .primo-st, .fr-lp4 .primo-st{ font-size: 13px; }
+  .fr-lp1 .primo-av, .fr-lp2 .primo-av,
+  .fr-lp3 .primo-av, .fr-lp4 .primo-av{ padding-left: 13px; }
+}

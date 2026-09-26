@@ -12,7 +12,7 @@
   transition et l'appel a l'action. Les rattacher a la raison qui les precede
   est ce qui rend l'ordre reellement modifiable : on deplace une raison, sa
   transition et son bouton la suivent.
-  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3 / fr-lp4).
   Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
 {%- endcomment -%}
@@ -31,7 +31,9 @@
         </div>
       {%- endif -%}
 
-      <div class="num">{{ forloop.index }}<i>/ {{ section.blocks.size }}</i></div>
+      {%- assign fr_rang = forloop.index | plus: section.settings.start -%}
+      {%- assign fr_tot = section.settings.total | default: section.blocks.size -%}
+      <div class="num">{{ fr_rang }}<i>/ {{ fr_tot }}</i></div>
       {%- if block.settings.chip != blank -%}<div class="chip">{{ block.settings.chip }}</div>{%- endif -%}
       {%- if block.settings.title != blank -%}<h2>{{ block.settings.title }}</h2>{%- endif -%}
       {%- if block.settings.body != blank -%}{{ block.settings.body }}{%- endif -%}
@@ -87,6 +89,22 @@
     },
     {
       "type": "header",
+      "content": "Numerotation, si la liste est coupee"
+    },
+    {
+      "type": "number",
+      "id": "start",
+      "label": "Rang du premier point, moins un",
+      "info": "0 pour la premiere tranche, 3 si les trois premiers points sont dans une autre section."
+    },
+    {
+      "type": "number",
+      "id": "total",
+      "label": "Nombre total de points",
+      "info": "0 = compter les blocs de cette seule section."
+    },
+    {
+      "type": "header",
       "content": "Mise en page"
     },
     {
@@ -107,6 +125,10 @@
         {
           "value": "fr-lp3",
           "label": "Listicle"
+        },
+        {
+          "value": "fr-lp4",
+          "label": "Prelander · A Bocca Chiusa"
         }
       ]
     },
@@ -249,7 +271,7 @@
           "info": "Le prix, en general."
         },
         {
-          "type": "url",
+          "type": "text",
           "id": "cta_url",
           "label": "Destination"
         },
