@@ -1258,6 +1258,6 @@
 .fr-lp1 .prose:empty, .fr-lp2 .prose:empty,
 .fr-lp3 .prose:empty, .fr-lp4 .prose:empty{ display: none; }
 
-.fr-lp3 .freos-lp-opener .article{ padding-bottom: 10px; }
+.freos-lp-opener .fr-lp3 .article{ padding-bottom: 10px; }
 .fr-lp3 .byline{ margin-bottom: 14px; }
 .fr-lp3 .primo{ margin-top: 10px; }
