@@ -25,14 +25,14 @@
           "type": "column",
           "settings": {
             "title": "Assistenza",
-            "links": "Contatti|/pages/contact\nSpedizioni e consegne|/pages/spedizioni\nRimborsi e recesso|/pages/rimborsi\ncontact@try-freos.com|mailto:contact@try-freos.com"
+            "links": "Contatti|/pages/contact\nSpedizioni e consegne|/policies/shipping-policy\nRimborsi e recesso|/policies/refund-policy\ncontact@try-freos.com|mailto:contact@try-freos.com"
           }
         },
         "col_legale": {
           "type": "column",
           "settings": {
             "title": "Legale",
-            "links": "Informativa privacy|/policies/privacy-policy\nTermini e condizioni|/pages/termini"
+            "links": "Informativa privacy|/policies/privacy-policy\nTermini e condizioni|/policies/terms-of-service\nNote legali|/policies/legal-notice"
           }
         }
       },
