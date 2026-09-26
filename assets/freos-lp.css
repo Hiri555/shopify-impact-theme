@@ -740,3 +740,45 @@
 @media (min-width: 760px){
   .fr-lp1 .voce, .fr-lp2 .voce, .fr-lp3 .voce{ width: 280px; }
 }
+
+/* --------------------------------------------------------------------------
+   DEUXIEME PASSE : les traits que la premiere n'a pas eus.
+   Mesure faite au rendu, element par element, en distinguant trois cas :
+     trait    = bord haut/bas seul        -> on supprime
+     boite    = bord sur les quatre cotes -> on garde (c'est un encadre)
+     image    = cadre de photo            -> on garde
+   Le `!important` est assume : on ecrase une longue traine de regles de base
+   qu'on a deliberement choisi de ne pas editer une par une.
+   -------------------------------------------------------------------------- */
+.fr-lp1 .stage, .fr-lp2 .stage, .fr-lp3 .stage, .fr-lp4 .stage,
+.fr-lp1 .sig, .fr-lp2 .sig, .fr-lp3 .sig, .fr-lp4 .sig,
+.fr-lp1 .anc-r, .fr-lp2 .anc-r, .fr-lp3 .anc-r, .fr-lp4 .anc-r,
+.fr-lp1 .faq, .fr-lp2 .faq, .fr-lp3 .faq, .fr-lp4 .faq,
+.fr-lp1 .eyebrow, .fr-lp2 .eyebrow, .fr-lp3 .eyebrow, .fr-lp4 .eyebrow,
+.fr-lp1 .fig, .fr-lp2 .fig, .fr-lp3 .fig, .fr-lp4 .fig,
+.fr-lp1 .price-cta, .fr-lp2 .price-cta, .fr-lp3 .price-cta,
+.fr-lp1 .whisper, .fr-lp2 .whisper, .fr-lp3 .whisper,
+.fr-lp1 .mirror, .fr-lp2 .mirror, .fr-lp3 .mirror,
+.fr-lp1 .punch, .fr-lp2 .punch, .fr-lp3 .punch,
+.fr-lp1 .tx, .fr-lp2 .tx, .fr-lp3 .tx,
+.fr-lp1 figcaption, .fr-lp2 figcaption, .fr-lp3 figcaption, .fr-lp4 figcaption{
+  border-top: 0 !important; border-bottom: 0 !important;
+}
+
+/* Les encadres et les cadres de photo gardent leur bord : ce ne sont pas des
+   separateurs. `.tst`, `.txt`, `.callout`, `img`. */
+
+/* Le trait de fin d'article, lui, reste -- et il est le seul. */
+.fr-lp1 .colophon-masthead, .fr-lp2 .colophon-masthead,
+.fr-lp3 .colophon-masthead, .fr-lp4 .colophon-masthead{
+  border-top: 1px solid var(--rule) !important;
+}
+
+/* Le rythme des elements qui portaient un trait : sans le filet, il faut un
+   peu d'air pour que la separation reste lisible. */
+.fr-lp1 .stage, .fr-lp2 .stage, .fr-lp3 .stage{ padding: 8px 0; }
+.fr-lp1 .anc-r, .fr-lp2 .anc-r, .fr-lp3 .anc-r{ padding: 9px 0; }
+.fr-lp1 .sig, .fr-lp2 .sig, .fr-lp3 .sig{ padding-top: 10px; }
+.fr-lp1 .punch, .fr-lp2 .punch, .fr-lp3 .punch{ padding: 0; margin: 20px 0; }
+.fr-lp1 .mirror, .fr-lp2 .mirror, .fr-lp3 .mirror{ padding: 0; margin: 18px 0; }
+.fr-lp1 .whisper, .fr-lp2 .whisper, .fr-lp3 .whisper{ padding-top: 0; margin-top: 22px; }
