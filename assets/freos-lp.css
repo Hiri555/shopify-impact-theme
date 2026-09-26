@@ -560,3 +560,81 @@
   font-family: Inter, sans-serif; font-size: 12.5px; line-height: 1.55;
   color: var(--ink-3); margin: 8px 0 0; max-width: 42ch;
 }
+
+/* ==========================================================================
+   FR-LP4 — PRELANDER « A BOCCA CHIUSA »
+   --------------------------------------------------------------------------
+   Quatrieme feuille de scope. Elle differe des trois autres sur trois points
+   seulement : la mesure (680 px au lieu de 720), le corps a 18 px/1.72, et
+   un chrome de magazine que les advertorials n'ont pas.
+   Tout est prefixe `.fr-lp4` : rien ne fuit sur les autres pages.
+   ========================================================================== */
+.fr-lp4{ --gutter: 22px; --measure: 680px;
+  --pl-ink:#12160F; --pl-body:#2b3129; --pl-muted:#6a7064; --pl-faint:#9aa093;
+  --pl-rule:#E3DDCD; --pl-rule2:#EFEBE0; --pl-wash:#F4F1E8;
+  --pl-accent:#2C5440; --pl-accent-dark:#1E5631; }
+@media (min-width:760px){ .fr-lp4{ --gutter: 22px; --measure: 680px; } }
+
+.fr-lp4.freos-lp-body{ max-width:none; padding-left:0; padding-right:0;
+  background:#fff; color:var(--pl-body);
+  font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+  font-size:18px; line-height:1.72; display:flow-root; }
+.fr-lp4 .pl-w{ max-width:var(--measure); margin:0 auto; padding:0 var(--gutter); }
+.fr-lp4 img{ max-width:100%; height:auto; display:block; }
+.fr-lp4 a{ color:var(--pl-accent); }
+
+/* --- barre de titre et rubriques --- */
+.fr-lp4 .pl-topbar{ border-bottom:1px solid var(--pl-rule); background:rgba(255,255,255,.97); }
+.fr-lp4 .pl-topbar .pl-w{ display:flex; align-items:center; justify-content:space-between;
+  height:54px; gap:16px; }
+.fr-lp4 .pl-logo{ font-family:Fraunces,Georgia,serif; font-size:17px; font-weight:600;
+  letter-spacing:.02em; color:var(--pl-ink); text-decoration:none; white-space:nowrap; }
+.fr-lp4 .pl-logo em{ color:var(--pl-accent); font-style:italic; }
+.fr-lp4 .pl-nav{ display:flex; gap:20px; font-size:13.5px; font-weight:500; }
+.fr-lp4 .pl-nav a{ color:var(--pl-muted); text-decoration:none; white-space:nowrap; }
+.fr-lp4 .pl-nav a.on{ color:var(--pl-ink); }
+.fr-lp4 .pl-srch{ width:19px; height:19px; flex:none; stroke:var(--pl-muted);
+  fill:none; stroke-width:2; }
+@media (max-width:660px){ .fr-lp4 .pl-nav{ display:none; } }
+
+.fr-lp4 .pl-subnav{ border-bottom:1px solid var(--pl-rule2); background:var(--pl-wash); }
+.fr-lp4 .pl-subnav .pl-w{ display:flex; gap:18px; height:40px; align-items:center;
+  overflow-x:auto; font-size:12.5px; scrollbar-width:none;
+  overscroll-behavior-x:contain; }
+.fr-lp4 .pl-subnav .pl-w::-webkit-scrollbar{ display:none; }
+.fr-lp4 .pl-subnav a{ color:var(--pl-muted); text-decoration:none; white-space:nowrap; }
+.fr-lp4 .pl-subnav a.on{ color:var(--pl-accent); font-weight:600; }
+
+.fr-lp4 .pl-crumb{ font-size:12px; color:var(--pl-faint); letter-spacing:.02em;
+  padding:26px 0 0; margin:0; }
+.fr-lp4 .pl-crumb b{ color:var(--pl-accent); font-weight:600; }
+
+/* --- mots-cles --- */
+.fr-lp4 .pl-tags{ margin:34px 0 0; padding-top:20px; border-top:1px solid var(--pl-rule);
+  display:flex; flex-wrap:wrap; gap:8px; }
+.fr-lp4 .pl-tags span{ font-size:12px; color:var(--pl-muted);
+  border:1px solid var(--pl-rule); padding:5px 11px; border-radius:2px; }
+
+/* --- altro da leggere --- */
+.fr-lp4 .pl-more{ margin:36px 0 0; padding-top:26px; border-top:3px solid var(--pl-ink); }
+.fr-lp4 .pl-more h4{ font-size:12px; font-weight:700; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--pl-ink); margin:0 0 16px; }
+.fr-lp4 .pl-more ul{ list-style:none; margin:0; padding:0; }
+.fr-lp4 .pl-more li{ padding:14px 0; border-bottom:1px solid var(--pl-rule2); }
+.fr-lp4 .pl-cat{ display:block; font-size:11px; font-weight:600; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--pl-accent); margin-bottom:4px; }
+.fr-lp4 .pl-more a{ font-family:Fraunces,Georgia,serif; color:var(--pl-ink);
+  text-decoration:none; font-size:17px; font-weight:600; line-height:1.35; }
+
+/* --- la chaine numerotee : on reprend `stages` et on l'habille en liste --- */
+.fr-lp4 .stages{ margin:22px 0 24px; }
+.fr-lp4 .stage{ position:relative; padding:0 0 14px 40px; font-size:17px;
+  line-height:1.6; border:0; background:none; }
+.fr-lp4 .stage .stage-label{ position:absolute; left:0; top:1px; width:25px; height:25px;
+  border:1px solid var(--pl-rule); border-radius:50%; color:var(--pl-accent);
+  font-size:12px; font-weight:600; display:flex; align-items:center;
+  justify-content:center; background:none; padding:0; letter-spacing:0;
+  text-transform:none; }
+.fr-lp4 .stage h4{ font-family:Inter,sans-serif; font-size:17px; font-weight:600;
+  color:var(--pl-ink); margin:0; line-height:1.6; }
+.fr-lp4 .stage .stage-text{ font-size:17px; line-height:1.6; color:var(--pl-body); }
