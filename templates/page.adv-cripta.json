@@ -1256,6 +1256,7 @@
     },
     "ours": {
       "type": "freos-lp-colophon",
+      "disabled": true,
       "settings": {
         "kicker": "",
         "whisper": "<p>Se stasera non fai niente, va bene lo stesso. La cripta c'era ieri e ci sarà domani, e questa pagina pure.</p><p>Ma la prossima volta che tossisci qualcosa nella mano, almeno saprai come si chiama.</p><p>— Davide</p>",
