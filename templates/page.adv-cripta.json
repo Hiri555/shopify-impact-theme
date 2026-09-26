@@ -13,26 +13,33 @@
     "spon": {
       "type": "freos-lp-spon",
       "settings": {
+        "kicker": "",
+        "text": "Contenuto sponsorizzato · FREOS",
+        "link": "",
+        "url": "",
         "scope": "fr-lp2",
         "rule": false,
         "pt": 0,
-        "pb": 0,
-        "text": "Contenuto sponsorizzato · FREOS"
+        "pb": 0
       }
     },
     "testata": {
       "type": "freos-lp-opener",
       "settings": {
-        "scope": "fr-lp2",
-        "rule": false,
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "eyebrow": "Salute · Prima persona · 9 min di lettura",
         "heading": "Ti lavi i denti tre volte al giorno. La causa del tuo alito sta <em>dieci centimetri più indietro.</em>",
         "subhead": "Se hai già provato collutori, raschietti e cotton fioc senza risultato, non è perché hai sbagliato qualcosa. È perché agiscono tutti su superfici esposte all'aria — e il punto dove si forma non lo è.",
         "portrait_file": "freos-lp2-01.webp",
         "author": "di <strong>Davide M.</strong> <em>— fisioterapista, Verona</em>",
-        "consulenza": "Racconto in prima persona. Fonti scientifiche in fondo alla pagina."
+        "consulenza": "Racconto in prima persona. Fonti scientifiche in fondo alla pagina.",
+        "hero_file": "",
+        "hero_alt": "",
+        "hero_caption": "",
+        "scope": "fr-lp2",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "fig_testa": {
@@ -64,15 +71,21 @@
         "mk2"
       ],
       "settings": {
-        "scope": "fr-lp2",
-        "rule": false,
-        "pt": 0,
-        "pb": 0,
+        "heading": "",
+        "intro": "",
+        "label": "",
+        "title": "",
+        "text": "",
+        "source": "",
+        "kind": "fig",
         "kicker": "Dove siamo · sezione laterale",
         "file": "freos-lp2-02.webp",
         "alt": "Sezione laterale della testa: bocca, lingua, gola e tonsille",
         "caption": "Sezione della testa e del collo. Le tonsille stanno lì, in fondo alla bocca, dietro la lingua — dove nessuno guarda mai.",
-        "kind": "fig"
+        "scope": "fr-lp2",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "racconto": {
@@ -230,6 +243,9 @@
         "q8"
       ],
       "settings": {
+        "kicker": "",
+        "heading": "",
+        "drop": false,
         "scope": "fr-lp2",
         "rule": false,
         "pt": 0,
@@ -276,21 +292,21 @@
         "mk3"
       ],
       "settings": {
-        "scope": "fr-lp2",
-        "rule": false,
-        "pt": 0,
-        "pb": 0,
-        "kicker": "Ingrandimento 1 · la tonsilla aperta",
-        "file": "freos-lp2-03.webp",
-        "alt": "Tonsilla in sezione con cripte ramificate e un tonsillolite in fondo",
-        "caption": "Quello che vedi allo specchio sono solo i fori in superficie. Il canale continua sotto, e si ramifica.",
-        "kind": "fig",
         "heading": "Quello che ho trovato in tre mesi <em>non era su nessun sito di rimedi.</em>",
         "intro": "<p>Era in quattro studi. E nessuno me li aveva mai messi in fila.</p>",
         "label": "Passo 1",
         "title": "Non hai una bocca liscia.",
         "text": "<p>Le tonsille non sono due palline. Sono attraversate da <strong>cripte</strong>: canali ramificati che scendono dentro il tessuto. Ogni infiammazione che hai avuto le ha allargate un po'.</p><p>Sono fatte per intrappolare. È il loro mestiere. Dentro finisce quello che passa — cibo, cellule morte, batteri.</p>",
-        "source": ""
+        "source": "",
+        "kind": "fig",
+        "kicker": "Ingrandimento 1 · la tonsilla aperta",
+        "file": "freos-lp2-03.webp",
+        "alt": "Tonsilla in sezione con cripte ramificate e un tonsillolite in fondo",
+        "caption": "Quello che vedi allo specchio sono solo i fori in superficie. Il canale continua sotto, e si ramifica.",
+        "scope": "fr-lp2",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "passo2": {
@@ -322,48 +338,57 @@
         "mk2"
       ],
       "settings": {
-        "scope": "fr-lp2",
-        "rule": false,
-        "pt": 0,
-        "pb": 0,
+        "heading": "",
+        "intro": "",
+        "label": "Passo 2",
+        "title": "Là dentro non arriva aria.",
+        "text": "<p>Nel 2009 dei ricercatori hanno infilato microelettrodi dentro tonsilloliti veri, per misurare l'ossigeno.</p>",
+        "source": "",
+        "kind": "fig",
         "kicker": "Ingrandimento 2 · dentro una cripta",
         "file": "freos-lp2-04.webp",
         "alt": "Sezione di una cripta tonsillare, dal chiaro in superficie al buio in fondo",
         "caption": "Il buio in fondo non è un effetto grafico. È la quantità di ossigeno che ci arriva.",
-        "kind": "fig",
-        "label": "Passo 2",
-        "title": "Là dentro non arriva aria.",
-        "text": "<p>Nel 2009 dei ricercatori hanno infilato microelettrodi dentro tonsilloliti veri, per misurare l'ossigeno.</p>",
-        "source": ""
+        "scope": "fr-lp2",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "dato_ossigeno": {
       "type": "freos-lp-stat",
       "settings": {
+        "kicker": "",
+        "heading": "",
+        "intro": "",
+        "value": "Un decimo.",
+        "body": "<p>Al centro del tonsillolite, l'ossigeno era un decimo di quello del liquido sopra. In un punto della tua bocca, a pochi centimetri dall'aria aperta.</p>",
+        "source": "Stoodley et al., Otolaryngol Head Neck Surg, 2009",
+        "outro": "",
         "scope": "fr-lp2",
         "rule": false,
         "pt": 0,
-        "pb": 0,
-        "value": "Un decimo.",
-        "body": "<p>Al centro del tonsillolite, l'ossigeno era un decimo di quello del liquido sopra. In un punto della tua bocca, a pochi centimetri dall'aria aperta.</p>",
-        "source": "Stoodley et al., Otolaryngol Head Neck Surg, 2009"
+        "pb": 0
       }
     },
     "passo3": {
       "type": "freos-lp-figure",
       "settings": {
-        "scope": "fr-lp2",
-        "rule": false,
-        "pt": 0,
-        "pb": 0,
+        "heading": "",
+        "intro": "",
         "label": "Passo 3",
         "title": "In un posto senza aria cresce solo una cosa.",
         "text": "<p>I batteri anaerobi. Quelli che non sopportano l'ossigeno, e che ovunque altro nella tua bocca non riuscirebbero a vivere.</p><p>Uno studio del 2006 ha analizzato la flora di sei tonsilloliti. In <strong>tutti e sei</strong> c'erano batteri produttori di composti solforati — fino alla metà delle colonie.</p><p>Quei composti si chiamano idrogeno solforato e metilmercaptano. Sono gli stessi dell'uovo marcio.</p><p>E non è una pietra. È una colonia viva, a strati, costruita come la placca sui denti.</p>",
         "source": "",
         "kind": "plate",
+        "kicker": "",
         "file": "freos-lp2-05.webp",
         "alt": "Struttura stratificata della colonia batterica",
-        "caption": "La struttura interna al microscopio: filamenti e cocci disposti a strati. Non un sasso — un organismo."
+        "caption": "La struttura interna al microscopio: filamenti e cocci disposti a strati. Non un sasso — un organismo.",
+        "scope": "fr-lp2",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "passo4": {
@@ -395,19 +420,21 @@
         "mk2"
       ],
       "settings": {
-        "scope": "fr-lp2",
-        "rule": false,
-        "pt": 0,
-        "pb": 0,
+        "heading": "",
+        "intro": "",
+        "label": "Passo 4",
+        "title": "I composti non restano nella pietra.",
+        "text": "<p>Lo stesso studio lo scrive: <strong>il rilascio avviene quando il tonsillolite viene schiacciato.</strong></p><p>Tu deglutisci circa ottocento volte al giorno. Mangi. Parli. Tossisci.</p>",
+        "source": "",
+        "kind": "fig",
         "kicker": "Ingrandimento 3 · quando deglutisci",
         "file": "freos-lp2-06.webp",
         "alt": "Il tonsillolite compresso libera composti solforati verso la cavità orale",
         "caption": "Ottocento volte al giorno. A ogni compressione, quello che c'è dentro esce.",
-        "kind": "fig",
-        "label": "Passo 4",
-        "title": "I composti non restano nella pietra.",
-        "text": "<p>Lo stesso studio lo scrive: <strong>il rilascio avviene quando il tonsillolite viene schiacciato.</strong></p><p>Tu deglutisci circa ottocento volte al giorno. Mangi. Parli. Tossisci.</p>",
-        "source": ""
+        "scope": "fr-lp2",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "rimedi": {
@@ -471,13 +498,15 @@
         "r6"
       ],
       "settings": {
+        "kicker": "",
+        "heading": "Adesso rileggi la lista di tutto quello che hai provato.",
+        "intro": "",
+        "outro": "<p>Non hai sbagliato niente. Hai pulito tutto quello che si può pulire.</p>",
+        "outro_pull": "Non è la tua igiene.<br>È un posto dove l'aria non arriva.",
         "scope": "fr-lp2",
         "rule": true,
         "pt": 0,
-        "pb": 0,
-        "heading": "Adesso rileggi la lista di tutto quello che hai provato.",
-        "outro": "<p>Non hai sbagliato niente. Hai pulito tutto quello che si può pulire.</p>",
-        "outro_pull": "Non è la tua igiene.<br>È un posto dove l'aria non arriva."
+        "pb": 0
       }
     },
     "dubbio": {
@@ -537,26 +566,29 @@
         "q"
       ],
       "settings": {
+        "kicker": "",
+        "heading": "«Ma io in gola <em>non ho mai visto niente.»</em>",
+        "drop": false,
         "scope": "fr-lp2",
         "rule": true,
         "pt": 0,
-        "pb": 0,
-        "heading": "«Ma io in gola <em>non ho mai visto niente.»</em>"
+        "pb": 0
       }
     },
     "tonsille": {
       "type": "freos-lp-stat",
       "settings": {
-        "scope": "fr-lp2",
-        "rule": true,
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "heading": "La prova che mi ha convinto <em>non è uno studio sui rimedi.</em>",
         "intro": "<p>È uno studio su chi le tonsille se le è fatte togliere.</p><p>Nel 2017 hanno misurato i composti solforati nel respiro di pazienti con tonsillite cronica, prima dell'intervento e dopo. Non un questionario: una misura con il gascromatografo.</p>",
         "value": "Tolte le tonsille, i valori scendono.",
         "body": "<p>Idrogeno solforato, metilmercaptano e dimetilsolfuro risultavano significativamente più bassi a due settimane dall'intervento. Tutti i pazienti che avevano alito pesante prima risultavano migliorati dopo.</p><p>È un campione piccolo. Ma è la direzione che conta: <strong>togli la fonte, scendono i composti.</strong> Non è una correlazione. È una sottrazione.</p>",
         "source": "Cho et al., Clin Exp Otorhinolaryngol, 2017 · 8 pazienti con alitosi preoperatoria",
-        "outro": "<p>Quando ho letto quella riga ho smesso di chiedermi se il collegamento fosse reale. La domanda è diventata un'altra: e se non voglio farmi operare?</p>"
+        "outro": "<p>Quando ho letto quella riga ho smesso di chiedermi se il collegamento fosse reale. La domanda è diventata un'altra: e se non voglio farmi operare?</p>",
+        "scope": "fr-lp2",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
       }
     },
     "ricerca": {
@@ -615,11 +647,13 @@
         "p6"
       ],
       "settings": {
+        "kicker": "",
+        "heading": "Per due mesi ho cercato <em>come svuotare una cripta.</em>",
+        "drop": false,
         "scope": "fr-lp2",
         "rule": true,
         "pt": 0,
-        "pb": 0,
-        "heading": "Per due mesi ho cercato <em>come svuotare una cripta.</em>"
+        "pb": 0
       }
     },
     "fig_zone": {
@@ -651,15 +685,21 @@
         "mk2"
       ],
       "settings": {
-        "scope": "fr-lp2",
-        "rule": false,
-        "pt": 0,
-        "pb": 0,
+        "heading": "",
+        "intro": "",
+        "label": "",
+        "title": "",
+        "text": "",
+        "source": "",
+        "kind": "fig",
         "kicker": "Le due zone · dove si può agire e dove no",
         "file": "freos-lp2-07.webp",
         "alt": "Le due zone: cavità orale raggiungibile, cripta irraggiungibile",
         "caption": "Nessun prodotto da banco entra nella cripta. Ma tutto quello che ne esce passa da sopra.",
-        "kind": "fig"
+        "scope": "fr-lp2",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "chimica": {
@@ -743,6 +783,9 @@
         "t_pivot"
       ],
       "settings": {
+        "kicker": "",
+        "heading": "",
+        "drop": false,
         "scope": "fr-lp2",
         "rule": false,
         "pt": 0,
@@ -776,7 +819,8 @@
         "h3": {
           "type": "sub",
           "settings": {
-            "text": "Adesso la parte che preferisco dirti subito."
+            "text": "Adesso la parte che preferisco dirti subito.",
+            "level": "h3"
           }
         },
         "note1": {
@@ -828,23 +872,91 @@
         "m4"
       ],
       "settings": {
+        "kicker": "",
+        "heading": "Si chiama <em>FREOS.</em>",
+        "drop": false,
         "scope": "fr-lp2",
         "rule": true,
         "pt": 0,
-        "pb": 0,
-        "heading": "Si chiama <em>FREOS.</em>"
+        "pb": 0
       }
     },
     "cta1": {
       "type": "freos-lp-cta",
       "settings": {
+        "kicker": "",
+        "heading": "",
+        "body": "",
+        "label": "Riprenditi i trenta centimetri →",
+        "url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "sub": "Trenta sere di prova · spedizione gratuita in Italia · nessun abbonamento.",
         "scope": "fr-lp2",
         "rule": false,
         "pt": 0,
-        "pb": 0,
-        "label": "Riprenditi i trenta centimetri →",
-        "url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "sub": "Trenta sere di prova · spedizione gratuita in Italia · nessun abbonamento."
+        "pb": 0
+      }
+    },
+    "voci": {
+      "type": "freos-lp-voci",
+      "blocks": {
+        "v1": {
+          "type": "voce",
+          "settings": {
+            "text": "Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Un giorno mi sono resa conto che non lo stavo più facendo.",
+            "who": "Giulia, 34 anni"
+          }
+        },
+        "v2": {
+          "type": "voce",
+          "settings": {
+            "text": "Non prometto miracoli. Dico che al mattino la sensazione non è più quella di prima, ed è lì che me ne sono accorto per primo.",
+            "who": "Marco, 47 anni"
+          }
+        },
+        "v3": {
+          "type": "voce",
+          "settings": {
+            "text": "Avevo il cassetto del bagno pieno di cose comprate e mai finite. Adesso c’è un pacchetto di mentine aperto da due mesi.",
+            "who": "Elena, 43 anni"
+          }
+        },
+        "v4": {
+          "type": "voce",
+          "settings": {
+            "text": "Ho smesso di calcolare la distanza quando parlo. Non me l’ero imposto: me ne sono accorto dopo, ripensandoci.",
+            "who": "Davide, 39 anni"
+          }
+        },
+        "v5": {
+          "type": "voce",
+          "settings": {
+            "text": "La prima settimana non è successo niente e stavo per lasciar perdere. Poi qualcosa si è mosso. Avrei voluto saperlo prima.",
+            "who": "Sara, 31 anni"
+          }
+        },
+        "v6": {
+          "type": "voce",
+          "settings": {
+            "text": "La cosa che mi ha colpito non è il prodotto. È aver letto la descrizione esatta di quello che mi succede. Quindi non me lo stavo inventando.",
+            "who": "Alessandro, 52 anni"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6"
+      ],
+      "settings": {
+        "heading": "Quello che ci siamo sentiti ripetere.",
+        "intro": "<p>Raccolte durante la nostra ricerca, riscritte in forma breve.</p>",
+        "foot": "<p>Sono esperienze individuali, non risultati tipici.</p>",
+        "scope": "fr-lp2",
+        "pt": 0,
+        "pb": 0
       }
     },
     "obiezioni": {
@@ -924,15 +1036,16 @@
         "o5"
       ],
       "settings": {
-        "scope": "fr-lp2",
-        "rule": true,
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "heading": "Le cinque obiezioni <em>che fermano tutti.</em>",
         "sub": "Un’obiezione per testimonianza, nell’ordine in cui ci vengono dette.",
         "cta_label": "Riprenditi i trenta centimetri →",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Trenta sere di prova · spedizione gratuita in Italia · nessun abbonamento."
+        "cta_sub": "Trenta sere di prova · spedizione gratuita in Italia · nessun abbonamento.",
+        "scope": "fr-lp2",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
       }
     },
     "costo": {
@@ -992,33 +1105,37 @@
         "a5"
       ],
       "settings": {
+        "kicker": "",
+        "heading": "Quanto costa l'altra strada",
+        "lead": "Non per dirti di non farla. Per darti i numeri, perché nessuno te li mette in fila.",
+        "note": "E adesso la parte onesta: <b>non fanno la stessa cosa.</b> L'intervento toglie le tonsille. FREOS no — non le tocca, non scioglie i tonsilloliti, non entra nella cripta.<br><br>Se hai l'indicazione per operarti, operati. Se invece ti hanno detto di lasciar perdere perché «non è pericoloso», adesso sai che esiste un'altra cosa da fare la sera.",
+        "source": "",
+        "cta_label": "Riprenditi i trenta centimetri →",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "cta_sub": "Trenta sere di prova · spedizione gratuita in Italia · nessun abbonamento.",
         "scope": "fr-lp2",
         "rule": true,
         "pt": 0,
-        "pb": 0,
-        "heading": "Quanto costa <em>l'altra strada</em>",
-        "lead": "Non per dirti di non farla. Per darti i numeri, perché nessuno te li mette in fila.",
-        "note": "E adesso la parte onesta: <b>non fanno la stessa cosa.</b> L'intervento toglie le tonsille. FREOS no — non le tocca, non scioglie i tonsilloliti, non entra nella cripta.<br><br>Se hai l'indicazione per operarti, operati. Se invece ti hanno detto di lasciar perdere perché «non è pericoloso», adesso sai che esiste un'altra cosa da fare la sera.",
-        "source": "Tariffe di riferimento: AOU Careggi, libera professione (3.500–6.000 €) · Tariffario IRCCS Burlo Garofolo 2023 (2.445 € tonsillectomia, 3.423 € intracapsulare) · Tempi di recupero: 10–14 giorni. Le tariffe variano per struttura e regione.",
-        "cta_label": "Riprenditi i trenta centimetri →",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Trenta sere di prova · spedizione gratuita in Italia · nessun abbonamento."
+        "pb": 0
       }
     },
     "stasera": {
       "type": "freos-lp-offer",
       "settings": {
-        "scope": "fr-lp2",
-        "rule": true,
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "heading": "Quello che puoi fare stasera, <em>anche senza comprare niente.</em>",
         "intro": "<p>Questo articolo esiste perché nessuno mi ha dato una parola che avrei potuto cercare dieci anni prima. Adesso ce l'hai.</p><p><strong>La prima cosa è gratis.</strong> Se hai uno dei segnali d'allarme qui sopra, prendi appuntamento. Se non ne hai, sai almeno dove guardare e come si chiama — ed è più di quanto avessi io a quarant'anni.</p><p><strong>La seconda, se vuoi.</strong> Il gesto della sera esiste. La pagina del prodotto dice tutto: formula completa, dosi, prezzo, garanzia. Non lo metto qui perché qui non è il posto.</p>",
+        "photo_file": "",
+        "photo_alt": "",
         "headline": "La cripta resta.<br>Quello che ne esce, no.",
         "body": "<p>Un barattolo, trenta sere. Composizione completa, dosi, prezzo e garanzia sulla pagina del prodotto.</p>",
         "cta_label": "Riprenditi i trenta centimetri →",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "guarantee": "<p>Nessun abbonamento nascosto. Nessun conto alla rovescia.</p>"
+        "guarantee": "<p>Nessun abbonamento nascosto. Nessun conto alla rovescia.</p>",
+        "scope": "fr-lp2",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
       }
     },
     "faq": {
@@ -1068,11 +1185,15 @@
         "q5"
       ],
       "settings": {
+        "kicker": "",
+        "heading": "",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_sub": "",
         "scope": "fr-lp2",
         "rule": false,
         "pt": 0,
-        "pb": 0,
-        "heading": ""
+        "pb": 0
       }
     },
     "fonti": {
@@ -1123,88 +1244,29 @@
         "s5",
         "s6"
       ],
+      "disabled": true,
       "settings": {
+        "kicker": "",
+        "title": "Fonti",
         "scope": "fr-lp2",
         "rule": false,
         "pt": 0,
-        "pb": 0,
-        "title": "Fonti"
+        "pb": 0
       }
     },
     "ours": {
       "type": "freos-lp-colophon",
       "settings": {
-        "scope": "fr-lp2",
-        "rule": false,
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "whisper": "<p>Se stasera non fai niente, va bene lo stesso. La cripta c'era ieri e ci sarà domani, e questa pagina pure.</p><p>Ma la prossima volta che tossisci qualcosa nella mano, almeno saprai come si chiama.</p><p>— Davide</p>",
         "whisper_sign": "— Davide",
         "logo": "FREOS",
         "tagline": "",
+        "desc": "",
         "legal": "<p><strong>Editore.</strong> DINSO VENTURES LLC · 30 N Gould St, Ste #59143, Sheridan, WY 82801, USA · Reg. 2026-002082547 · <a href=\"mailto:contact@try-freos.com\">contact@try-freos.com</a></p><p><strong>Nota per chi legge.</strong> Racconto in prima persona, con contenuti sponsorizzati dal produttore di FREOS. Le fonti citate, i limiti dichiarati del prodotto e il rinvio allo specialista restano indipendenti dallo sponsor.</p><p>Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di dolore, difficoltà a deglutire, febbre, mal d'orecchio o asimmetria delle tonsille, rivolgersi al proprio medico o a un otorinolaringoiatra.</p><p>Il nome dell'autore è stato modificato su sua richiesta. Illustrazioni mediche realizzate per questo articolo.</p>",
-        "links": "<p>© 2026 · <a href=\"/policies/privacy-policy\">Privacy e cookie</a> · <a href=\"/policies/terms-of-service\">Note legali</a></p>"
-      }
-    },
-    "voci": {
-      "type": "freos-lp-voci",
-      "blocks": {
-        "v1": {
-          "type": "voce",
-          "settings": {
-            "text": "Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Un giorno mi sono resa conto che non lo stavo più facendo.",
-            "who": "Giulia, 34 anni"
-          }
-        },
-        "v2": {
-          "type": "voce",
-          "settings": {
-            "text": "Non prometto miracoli. Dico che al mattino la sensazione non è più quella di prima, ed è lì che me ne sono accorto per primo.",
-            "who": "Marco, 47 anni"
-          }
-        },
-        "v3": {
-          "type": "voce",
-          "settings": {
-            "text": "Avevo il cassetto del bagno pieno di cose comprate e mai finite. Adesso c’è un pacchetto di mentine aperto da due mesi.",
-            "who": "Elena, 43 anni"
-          }
-        },
-        "v4": {
-          "type": "voce",
-          "settings": {
-            "text": "Ho smesso di calcolare la distanza quando parlo. Non me l’ero imposto: me ne sono accorto dopo, ripensandoci.",
-            "who": "Davide, 39 anni"
-          }
-        },
-        "v5": {
-          "type": "voce",
-          "settings": {
-            "text": "La prima settimana non è successo niente e stavo per lasciar perdere. Poi qualcosa si è mosso. Avrei voluto saperlo prima.",
-            "who": "Sara, 31 anni"
-          }
-        },
-        "v6": {
-          "type": "voce",
-          "settings": {
-            "text": "La cosa che mi ha colpito non è il prodotto. È aver letto la descrizione esatta di quello che mi succede. Quindi non me lo stavo inventando.",
-            "who": "Alessandro, 52 anni"
-          }
-        }
-      },
-      "block_order": [
-        "v1",
-        "v2",
-        "v3",
-        "v4",
-        "v5",
-        "v6"
-      ],
-      "settings": {
-        "heading": "Quello che ci siamo sentiti ripetere.",
-        "intro": "<p>Raccolte durante la nostra ricerca, riscritte in forma breve.</p>",
-        "foot": "<p>Sono esperienze individuali, non risultati tipici.</p>",
+        "links": "<p>© 2026 · <a href=\"/policies/privacy-policy\">Privacy e cookie</a> · <a href=\"/policies/terms-of-service\">Note legali</a></p>",
         "scope": "fr-lp2",
+        "rule": false,
         "pt": 0,
         "pb": 0
       }
