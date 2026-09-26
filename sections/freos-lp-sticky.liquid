@@ -1,0 +1,107 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — BARRE COLLANTE
+  ----------------------------------------------------------------------------
+  Une par page, donc un libelle et une cible par page : le quiz sur
+  l'editorial, la fiche produit sur la listicle. Jamais de prix sur une page
+  editoriale.
+  Elle apparait au defilement (seuil reglable) et se cache pres du pied de
+  page, pour ne pas couvrir le dernier bouton.
+  Genere par build_sticky.py.
+  ============================================================================
+{%- endcomment -%}
+
+{%- if section.settings.label != blank -%}
+  <fr-sticky class="fr-sticky{% if section.settings.mobile_only %} fr-sticky--mobile{% endif %}"
+             data-at="{{ section.settings.at | default: 30 }}"
+             data-hide-end="{{ section.settings.hide_end | default: 88 }}" hidden>
+    <a class="fr-sticky-a" href="{{ section.settings.url | default: '#' }}">
+      {{ section.settings.label }}</a>
+    {%- if section.settings.sub != blank -%}
+      <span class="fr-sticky-s">{{ section.settings.sub }}</span>
+    {%- endif -%}
+  </fr-sticky>
+
+  <script>
+    (function () {
+      if (customElements.get('fr-sticky')) return;
+      customElements.define('fr-sticky', class extends HTMLElement {
+        connectedCallback() {
+          this.at = parseFloat(this.dataset.at) || 30;
+          this.fin = parseFloat(this.dataset.hideEnd) || 88;
+          this.frSync();
+          addEventListener('scroll', this.frSync.bind(this), { passive: true });
+          addEventListener('resize', this.frSync.bind(this), { passive: true });
+        }
+        /* Expose expres : voir l'en-tete de build_sticky.py. */
+        frSync() {
+          var d = document.documentElement;
+          var course = (d.scrollHeight - innerHeight) || 1;
+          var pct = (scrollY / course) * 100;
+          /* Cachee en haut, et cachee a l'approche du pied de page : la barre
+             ne doit pas couvrir le dernier bouton de la page. */
+          this.hidden = (pct < this.at) || (pct > this.fin);
+          return { pct: Math.round(pct), seuil: this.at, fin: this.fin,
+                   visible: !this.hidden };
+        }
+      });
+    })();
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "LP · Barre collante",
+  "tag": "section",
+  "class": "freos-lp-sticky",
+  "settings": [
+    {
+      "type": "text",
+      "id": "label",
+      "label": "Libelle du bouton",
+      "info": "Vide = pas de barre. Sur une page editoriale : jamais de prix."
+    },
+    {
+      "type": "text",
+      "id": "url",
+      "label": "Destination"
+    },
+    {
+      "type": "text",
+      "id": "sub",
+      "label": "Ligne sous le bouton"
+    },
+    {
+      "type": "range",
+      "id": "at",
+      "label": "Apparait a",
+      "min": 5,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "default": 30
+    },
+    {
+      "type": "range",
+      "id": "hide_end",
+      "label": "Se cache apres",
+      "min": 60,
+      "max": 100,
+      "step": 2,
+      "unit": "%",
+      "default": 88
+    },
+    {
+      "type": "checkbox",
+      "id": "mobile_only",
+      "label": "Mobile seulement",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "LP · Barre collante"
+    }
+  ]
+}
+{% endschema %}
