@@ -1,0 +1,195 @@
+{%- comment -%}
+  ============================================================================
+  FREOS · LP — FREOS LP · Copertina
+  ----------------------------------------------------------------------------
+  L'image de couverture, le titre par-dessus, la signature dessous.
+
+  LE CADRAGE CHANGE AVEC L'ECRAN, PAS L'IMAGE : 4:5 en mobile, 21:9 en
+  desktop, par `aspect-ratio` et `object-fit`. Une seule image a deposer.
+
+  La signature (auteur, date, temps de lecture) est ici et pas dans une section
+  a part, parce qu'elle est collee a la couverture : deplacer l'une sans
+  l'autre n'a pas de sens.
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3 / fr-lp4).
+  Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
+  ============================================================================
+{%- endcomment -%}
+
+<div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
+     style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}  <div class="cover">
+    <div class="cover-img">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 1600 | image_tag: widths: '480,760,1100,1600', sizes: '100vw', alt: section.settings.alt }}
+      {%- elsif section.settings.file != blank -%}
+        <img src="{{ section.settings.file | strip | asset_url }}" alt="{{ section.settings.alt | escape }}">
+      {%- endif -%}
+    </div>
+    <div class="cover-txt">
+      {%- if section.settings.eyebrow != blank -%}
+        <span class="kicker">{{ section.settings.eyebrow }}</span>
+      {%- endif -%}
+      {%- if section.settings.heading != blank -%}
+        <h1>{{ section.settings.heading }}</h1>
+      {%- endif -%}
+      {%- if section.settings.dek != blank -%}
+        <p class="dek">{{ section.settings.dek }}</p>
+      {%- endif -%}
+    </div>
+  </div>
+
+  {%- if section.settings.author != blank or section.settings.date != blank -%}
+    <div class="byline">
+      <div class="byline-in">
+        {%- if section.settings.author != blank -%}
+          <span><b>{{ section.settings.author }}</b></span>
+        {%- endif -%}
+        {%- if section.settings.date != blank -%}
+          <span class="sep"></span><span>{{ section.settings.date }}</span>
+        {%- endif -%}
+        {%- if section.settings.lecture != blank -%}
+          <span class="sep"></span><span>{{ section.settings.lecture }}</span>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "FREOS LP · Copertina",
+  "tag": "section",
+  "class": "freos-lp-cover",
+  "settings": [
+    {
+      "type": "text",
+      "id": "kicker",
+      "label": "Sur-titre",
+      "info": "La petite ligne au-dessus du titre. Vide = rien."
+    },
+    {
+      "type": "header",
+      "content": "L'image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image de couverture"
+    },
+    {
+      "type": "text",
+      "id": "file",
+      "label": "Ou : asset du theme"
+    },
+    {
+      "type": "text",
+      "id": "alt",
+      "label": "Texte alternatif"
+    },
+    {
+      "type": "header",
+      "content": "Le titre, par-dessus l'image"
+    },
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Sur-titre"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Titre",
+      "info": "<i>...</i> met un fragment en italique."
+    },
+    {
+      "type": "textarea",
+      "id": "dek",
+      "label": "Chapeau"
+    },
+    {
+      "type": "header",
+      "content": "La signature"
+    },
+    {
+      "type": "text",
+      "id": "author",
+      "label": "Signature"
+    },
+    {
+      "type": "text",
+      "id": "date",
+      "label": "Date"
+    },
+    {
+      "type": "text",
+      "id": "lecture",
+      "label": "Temps de lecture"
+    },
+    {
+      "type": "header",
+      "content": "Mise en page"
+    },
+    {
+      "type": "select",
+      "id": "scope",
+      "label": "Page",
+      "default": "fr-lp1",
+      "info": "Choisit la feuille de style appliquee. Une section deplacee d'une LP a l'autre doit changer de page ici.",
+      "options": [
+        {
+          "value": "fr-lp1",
+          "label": "Adv 1 · Inchiesta"
+        },
+        {
+          "value": "fr-lp2",
+          "label": "Adv 2 · Cripta"
+        },
+        {
+          "value": "fr-lp3",
+          "label": "Listicle"
+        },
+        {
+          "value": "fr-lp4",
+          "label": "Prelander · A Bocca Chiusa"
+        }
+      ]
+    },
+    {
+      "type": "header",
+      "content": "Marges"
+    },
+    {
+      "type": "checkbox",
+      "id": "rule",
+      "label": "Filet de separation au-dessus",
+      "info": "A decocher sur la premiere partie de l'article.",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "pt",
+      "label": "Marge haute",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "pb",
+      "label": "Marge basse",
+      "min": 0,
+      "max": 120,
+      "step": 4,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "FREOS LP · Copertina"
+    }
+  ]
+}
+{% endschema %}

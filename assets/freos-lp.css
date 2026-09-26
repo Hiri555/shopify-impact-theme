@@ -53,9 +53,6 @@
 .fr-lp1 .anc-r{grid-template-columns:1fr auto;gap:20px;align-items:baseline}
 }.fr-lp1 .anc-l, .fr-lp3 .anc-l{font-size:15.5px;color:var(--ink2);line-height:1.5}.fr-lp1 .anc-l small, .fr-lp3 .anc-l small{display:block;font-size:13px;color:var(--ink3);margin-top:3px}.fr-lp1 .anc-v, .fr-lp3 .anc-v{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:18px;color:var(--ink);white-space:nowrap}
 .fr-lp1 .anc-r.us{background:rgba(45,90,58,.07);padding:20px 18px;margin:8px -18px 0;border-bottom:none}
-@media(min-width:620px){
-
-}
 .fr-lp1 .anc-r.us .anc-l{color:var(--ink);font-weight:600}
 .fr-lp1 .anc-r.us .anc-v{color:var(--accent);font-size:clamp(26px,7vw,34px);line-height:1}.fr-lp1 .anc-note, .fr-lp3 .anc-note{margin-top:22px;padding-left:16px;border-left:2px solid var(--rule2);font-size:15px;line-height:1.6;color:var(--ink2);max-width:54ch}.fr-lp1 .anc-note b, .fr-lp3 .anc-note b{color:var(--ink)}.fr-lp1 .anc-src, .fr-lp3 .anc-src{margin-top:16px;font-size:11.5px;color:var(--ink3);line-height:1.55}.fr-lp1 .cta-mid, .fr-lp3 .cta-mid{margin:34px 0 0;text-align:center}.fr-lp1 .cta-mid a, .fr-lp3 .cta-mid a{display:block;width:100%;background:var(--ink);color:#fff;text-decoration:none;padding:17px 20px;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
 @media(min-width:620px){.fr-lp1 .cta-mid a, .fr-lp3 .cta-mid a{display:inline-block;width:auto;padding:17px 42px}
@@ -146,9 +143,6 @@
 .fr-lp2 .anc-l small{display:block;font-size:13px;color:var(--ink3);margin-top:3px}
 .fr-lp2 .anc-v{font-family:Fraunces,serif;font-weight:700;font-size:18px;color:var(--ink);white-space:nowrap}
 .fr-lp2 .anc-r.us{background:var(--rule);padding:20px 18px;margin:8px -18px 0;border-bottom:none}
-@media(min-width:620px){
-
-}
 .fr-lp2 .anc-r.us .anc-l{color:var(--ink);font-weight:600}
 .fr-lp2 .anc-r.us .anc-v{color:var(--acc);font-size:clamp(26px,7vw,34px);line-height:1}
 .fr-lp2 .anc-note{margin-top:22px;padding-left:16px;border-left:2px solid var(--rule2);font-size:15px;line-height:1.6;color:var(--ink2);max-width:54ch}
@@ -579,53 +573,8 @@
   background:#fff; color:var(--pl-body);
   font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
   font-size:18px; line-height:1.72; display:flow-root; }
-.fr-lp4 .pl-w{ max-width:var(--measure); margin:0 auto; padding:0 var(--gutter); }
 .fr-lp4 img{ max-width:100%; height:auto; display:block; }
 .fr-lp4 a{ color:var(--pl-accent); }
-
-/* --- barre de titre et rubriques --- */
-.fr-lp4 .pl-topbar{ border-bottom:1px solid var(--pl-rule); background:rgba(255,255,255,.97); }
-.fr-lp4 .pl-topbar .pl-w{ display:flex; align-items:center; justify-content:space-between;
-  height:54px; gap:16px; }
-.fr-lp4 .pl-logo{ font-family:Fraunces,Georgia,serif; font-size:17px; font-weight:600;
-  letter-spacing:.02em; color:var(--pl-ink); text-decoration:none; white-space:nowrap; }
-.fr-lp4 .pl-logo em{ color:var(--pl-accent); font-style:italic; }
-.fr-lp4 .pl-nav{ display:flex; gap:20px; font-size:13.5px; font-weight:500; }
-.fr-lp4 .pl-nav a{ color:var(--pl-muted); text-decoration:none; white-space:nowrap; }
-.fr-lp4 .pl-nav a.on{ color:var(--pl-ink); }
-.fr-lp4 .pl-srch{ width:19px; height:19px; flex:none; stroke:var(--pl-muted);
-  fill:none; stroke-width:2; }
-@media (max-width:660px){ .fr-lp4 .pl-nav{ display:none; } }
-
-.fr-lp4 .pl-subnav{ border-bottom:1px solid var(--pl-rule2); background:var(--pl-wash); }
-.fr-lp4 .pl-subnav .pl-w{ display:flex; gap:18px; height:40px; align-items:center;
-  overflow-x:auto; font-size:12.5px; scrollbar-width:none;
-  overscroll-behavior-x:contain; }
-.fr-lp4 .pl-subnav .pl-w::-webkit-scrollbar{ display:none; }
-.fr-lp4 .pl-subnav a{ color:var(--pl-muted); text-decoration:none; white-space:nowrap; }
-.fr-lp4 .pl-subnav a.on{ color:var(--pl-accent); font-weight:600; }
-
-.fr-lp4 .pl-crumb{ font-size:12px; color:var(--pl-faint); letter-spacing:.02em;
-  padding:26px 0 0; margin:0; }
-.fr-lp4 .pl-crumb b{ color:var(--pl-accent); font-weight:600; }
-
-/* --- mots-cles --- */
-.fr-lp4 .pl-tags{ margin:34px 0 0; padding-top:20px; border-top:1px solid var(--pl-rule);
-  display:flex; flex-wrap:wrap; gap:8px; }
-.fr-lp4 .pl-tags span{ font-size:12px; color:var(--pl-muted);
-  border:1px solid var(--pl-rule); padding:5px 11px; border-radius:2px; }
-
-/* --- altro da leggere --- */
-.fr-lp4 .pl-more{ margin:36px 0 0; padding-top:26px; border-top:3px solid var(--pl-ink); }
-.fr-lp4 .pl-more h4{ font-size:12px; font-weight:700; letter-spacing:.16em;
-  text-transform:uppercase; color:var(--pl-ink); margin:0 0 16px; }
-.fr-lp4 .pl-more ul{ list-style:none; margin:0; padding:0; }
-.fr-lp4 .pl-more li{ padding:14px 0; border-bottom:1px solid var(--pl-rule2); }
-.fr-lp4 .pl-cat{ display:block; font-size:11px; font-weight:600; letter-spacing:.1em;
-  text-transform:uppercase; color:var(--pl-accent); margin-bottom:4px; }
-.fr-lp4 .pl-more a{ font-family:Fraunces,Georgia,serif; color:var(--pl-ink);
-  text-decoration:none; font-size:17px; font-weight:600; line-height:1.35; }
-
 /* --- la chaine numerotee : on reprend `stages` et on l'habille en liste --- */
 .fr-lp4 .stages{ margin:22px 0 24px; }
 .fr-lp4 .stage{ position:relative; padding:0 0 14px 40px; font-size:17px;
@@ -847,4 +796,314 @@
   .fr-lp3 .primo-st, .fr-lp4 .primo-st{ font-size: 13px; }
   .fr-lp1 .primo-av, .fr-lp2 .primo-av,
   .fr-lp3 .primo-av, .fr-lp4 .primo-av{ padding-left: 13px; }
+}
+
+/* ==========================================================================
+   FR-LP4 V10 — « A BOCCA CHIUSA », REPEINTE
+   --------------------------------------------------------------------------
+   Trois couleurs et rien d'autre : le papier #F6F3E9, le vert #234A32, l'or
+   #C6A15B. Le vert porte l'autorite (bandeau de titre, encadre des anneaux,
+   boutons), l'or ne sert qu'a marquer UN mot et UN chiffre -- des qu'il sert
+   a trois choses, il ne signale plus rien.
+
+   POURQUOI CE BLOC EST EN FIN DE FICHIER ET NON UNE REECRITURE DU BLOC V6 :
+   la V6 pose 47 regles sur `.fr-lp4`. Les reecrire une par une, c'est 47
+   occasions de casser une page sans la regarder. Ici la repeinte est d'un
+   seul tenant, lisible, et reversible en supprimant ce bloc. Ce qui est
+   VRAIMENT mort -- le chrome de magazine des sections topbar / tags / more,
+   supprimees -- est retire du fichier, pas neutralise : du CSS qui n'a plus
+   de HTML n'est pas de la mise en page, c'est du bagage.
+
+   LE PLEIN CADRE SANS ENVELOPPE : le bandeau de titre, la couverture et la
+   signature doivent toucher les bords, mais leur TEXTE doit rester aligne sur
+   la colonne de l'article. Sans div interieur, `--bleed` fait le travail : la
+   marge laterale vaut la gouttiere en mobile, et la moitie de ce qui depasse
+   de la colonne au-dela.
+   ========================================================================== */
+
+.fr-lp4{
+  --paper: #F6F3E9;
+  --green: #234A32;
+  --gold:  #C6A15B;
+
+  --ink:   #141A15;
+  --ink2:  #2C332C;
+  --ink3:  #6B7268;
+  --ink4:  #969C8F;
+  --rule:  #DED7C6;
+  --rule2: #EAE4D6;
+  --wash:  #EFEBDF;
+
+  /* les noms attendus par les regles heritees des autres scopes */
+  --bg: var(--paper); --soft: var(--wash); --softer: #FBF8F0;
+  --acc: var(--green); --acc2: var(--green);
+  --accl: #E1E8DF; --acclt: #EDF1EA;
+  --warn: #9A4A22;
+
+  --gutter: 22px; --measure: 680px;
+  --bleed: max(var(--gutter), calc((100% - var(--measure)) / 2 + var(--gutter)));
+}
+
+.fr-lp4.freos-lp-body{
+  background: var(--paper); color: var(--ink2);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 18px; line-height: 1.72;
+  max-width: none; padding-left: 0; padding-right: 0;
+  display: flow-root; box-shadow: none;
+}
+.fr-lp4 a{ color: var(--green); }
+.fr-lp4 img{ max-width: 100%; height: auto; display: block; }
+
+/* --- le bandeau de titre : vert, plein cadre, texte sur la colonne --------- */
+.fr-lp4 .masthead{
+  background: var(--green); border: 0; margin: 0;
+  padding: 13px var(--bleed); max-width: none;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px 16px; flex-wrap: wrap;
+}
+.fr-lp4 .masthead-logo{
+  font-family: Fraunces, Georgia, serif; font-size: 17px; font-weight: 600;
+  letter-spacing: .01em; color: #FBF8F0; margin: 0;
+}
+.fr-lp4 .masthead-tagline{
+  font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--gold); margin: 0; border: 0;
+}
+
+/* --- la couverture -------------------------------------------------------- */
+/* Le degrade est STRUCTUREL : le proprietaire peut deposer une photo claire,
+   et un titre blanc sur fond clair disparait. Il garantit le contraste quelle
+   que soit l'image. */
+.fr-lp4 .cover{ position: relative; margin: 0; background: #1A231B; }
+.fr-lp4 .cover-img{ aspect-ratio: 4 / 5; margin: 0; }
+.fr-lp4 .cover-img img{
+  width: 100%; height: 100%; object-fit: cover; object-position: center 32%;
+}
+.fr-lp4 .cover::after{
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(to top,
+    rgba(12,18,13,.90) 0%, rgba(12,18,13,.62) 34%,
+    rgba(12,18,13,.10) 70%, rgba(12,18,13,0) 100%);
+}
+.fr-lp4 .cover-txt{
+  position: absolute; left: 0; right: 0; bottom: 0; z-index: 1;
+  padding: 0 var(--bleed) 26px;
+}
+.fr-lp4 .cover-txt .kicker{
+  display: inline-block; font-size: 11px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--gold); margin: 0 0 12px;
+  border: 0; padding: 0;
+}
+.fr-lp4 .cover-txt h1{
+  font-family: Fraunces, Georgia, serif; font-weight: 500;
+  font-size: 34px; line-height: 1.08; letter-spacing: -.015em;
+  color: #fff; margin: 0;
+}
+.fr-lp4 .cover-txt h1 i, .fr-lp4 .cover-txt h1 em{
+  font-style: italic; color: var(--gold);
+}
+.fr-lp4 .cover-txt .dek{
+  font-size: 16px; line-height: 1.52; color: rgba(255,255,255,.84);
+  margin: 14px 0 0; max-width: 40ch;
+}
+
+/* --- la signature --------------------------------------------------------- */
+.fr-lp4 .byline{
+  background: #FBF8F0; border-top: 0;
+  border-bottom: 1px solid var(--rule); margin: 0; padding: 0;
+}
+.fr-lp4 .byline-in{
+  display: flex; align-items: center; flex-wrap: wrap; gap: 6px 11px;
+  padding: 13px var(--bleed); max-width: none; margin: 0;
+  font-size: 11.5px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink3);
+}
+.fr-lp4 .byline-in b{ color: var(--ink); font-weight: 600; }
+.fr-lp4 .byline .sep{
+  width: 3px; height: 3px; border-radius: 50%;
+  background: var(--ink4); display: inline-block; flex: none;
+}
+
+/* --- le corps de l'article ------------------------------------------------ */
+.fr-lp4 .section{
+  max-width: var(--measure); margin: 0 auto;
+  padding: 0 var(--gutter); border: 0;
+}
+.fr-lp4 .prose{ margin: 0; }
+.fr-lp4 .prose p{
+  font-size: 18px; line-height: 1.72; color: var(--ink2); margin: 0 0 22px;
+}
+.fr-lp4 .prose p b, .fr-lp4 .prose p strong{ color: var(--ink); font-weight: 600; }
+.fr-lp4 .prose p em, .fr-lp4 .prose p i{ font-style: italic; }
+.fr-lp4 .section h2{
+  font-family: Fraunces, Georgia, serif; font-weight: 500;
+  font-size: 27px; line-height: 1.22; letter-spacing: -.01em;
+  color: var(--ink); margin: 40px 0 20px;
+}
+.fr-lp4 .section h2 em, .fr-lp4 .section h2 i{ font-style: italic; color: var(--green); }
+.fr-lp4 .section h3{
+  font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: 21px;
+  line-height: 1.3; color: var(--ink); margin: 32px 0 14px;
+}
+
+/* La lettrine. C'est un REGLAGE de la section qui ouvre l'article, pas une
+   regle devinee sur « la premiere section » : une fois les sections
+   reordonnables, deviner se trompe. */
+.fr-lp4 .section.has-drop .prose:first-of-type p:first-child{
+  font-size: 20.5px; line-height: 1.6; color: var(--ink);
+}
+.fr-lp4 .section.has-drop .prose:first-of-type p:first-child::first-letter{
+  float: left; font-family: Fraunces, Georgia, serif; font-weight: 600;
+  font-size: 64px; line-height: .8; color: var(--green);
+  margin: 6px 11px 0 0;
+}
+
+/* L'exergue : un trait a GAUCHE, jamais en haut ni en bas. Ce n'est pas une
+   frontiere de partie, c'est une voix qu'on detache. */
+.fr-lp4 .pull{
+  margin: 30px 0; padding: 2px 0 2px 18px;
+  border-top: 0; border-bottom: 0; border-left: 3px solid var(--gold);
+  font-family: Fraunces, Georgia, serif; font-style: italic; font-weight: 400;
+  font-size: 21px; line-height: 1.45; color: var(--ink); background: none;
+}
+.fr-lp4 .solo{
+  font-family: Fraunces, Georgia, serif; font-weight: 500;
+  font-size: 26px; line-height: 1.28; color: var(--green);
+  margin: 32px 0; border: 0; padding: 0;
+}
+
+/* --- les anneaux : l'encadre vert ---------------------------------------- */
+/* `width` + `max-width` plutot que `max-width` seul : sinon l'encadre touche
+   les deux bords en mobile et le texte se colle a l'ecran. */
+.fr-lp4 .cycle{
+  width: calc(100% - 2 * var(--gutter));
+  max-width: calc(var(--measure) - 2 * var(--gutter));
+  margin: 32px auto; padding: 26px 22px 24px;
+  background: var(--green); color: rgba(251,248,240,.90);
+  border: 0; border-radius: 3px;
+}
+.fr-lp4 .cycle h3{
+  font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: 19px;
+  line-height: 1.3; color: #fff; margin: 0 0 6px;
+}
+.fr-lp4 .cycle .sub{
+  font-size: 14px; line-height: 1.55; margin: 0 0 20px;
+  color: rgba(251,248,240,.70);
+}
+.fr-lp4 .cycle ol{ list-style: none; margin: 0; padding: 0; counter-reset: anello; }
+.fr-lp4 .cycle li{
+  counter-increment: anello; position: relative;
+  padding: 0 0 17px 42px; font-size: 15.5px; line-height: 1.58;
+  color: rgba(251,248,240,.86); border: 0;
+}
+.fr-lp4 .cycle li:last-child{ padding-bottom: 0; }
+.fr-lp4 .cycle li::before{
+  content: counter(anello); position: absolute; left: 0; top: 0;
+  width: 27px; height: 27px; box-sizing: border-box;
+  border: 1px solid var(--gold); border-radius: 50%;
+  color: var(--gold); font-family: Inter, sans-serif; font-size: 12.5px;
+  font-weight: 600; display: flex; align-items: center; justify-content: center;
+}
+.fr-lp4 .cycle li b{
+  display: block; color: #fff; font-weight: 600; font-size: 16.5px;
+  margin-bottom: 2px;
+}
+.fr-lp4 .cycle-f{
+  margin: 20px 0 0; font-size: 13.5px; line-height: 1.55;
+  color: rgba(251,248,240,.68);
+}
+
+/* --- la carte d'appel a l'action ----------------------------------------- */
+.fr-lp4 .cta-mid.is-carte{
+  width: calc(100% - 2 * var(--gutter));
+  max-width: calc(var(--measure) - 2 * var(--gutter));
+  margin: 36px auto; padding: 26px 22px 24px;
+  background: #FBF8F0; border: 1px solid var(--rule); border-radius: 3px;
+  text-align: left;
+}
+.fr-lp4 .cta-mid h3{
+  font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: 21px;
+  line-height: 1.3; color: var(--ink); margin: 0 0 10px;
+}
+.fr-lp4 .cta-mid p{
+  font-size: 15.5px; line-height: 1.6; color: var(--ink3); margin: 0 0 20px;
+}
+/* 52 px de haut : au-dessus du minimum tactile de 44, parce qu'un pouce qui
+   rate le seul bouton de la page ne revient pas. */
+.fr-lp4 .cta-mid a{
+  display: block; box-sizing: border-box; min-height: 52px;
+  background: var(--green); color: #FBF8F0; text-decoration: none;
+  text-align: center; font-weight: 600; font-size: 16.5px; line-height: 1.3;
+  padding: 16px 20px; border-radius: 2px;
+}
+.fr-lp4 .cta-mid p.fine{
+  margin: 13px 0 0; font-size: 12.5px; color: var(--ink4); text-align: center;
+}
+
+/* --- l'encadre des limites ----------------------------------------------- */
+.fr-lp4 .note{
+  margin: 36px 0 0; padding: 22px 20px;
+  background: var(--wash); border: 0; border-left: 3px solid var(--green);
+  border-radius: 2px;
+}
+.fr-lp4 .note-t{
+  font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: 19px;
+  line-height: 1.3; color: var(--ink); margin: 0 0 12px;
+}
+.fr-lp4 .note p{
+  font-size: 15.5px; line-height: 1.62; color: var(--ink2); margin: 0 0 12px;
+}
+.fr-lp4 .note p:last-child{ margin-bottom: 0; }
+.fr-lp4 .note b, .fr-lp4 .note strong{ color: var(--green); font-weight: 600; }
+
+/* --- le pied de page ----------------------------------------------------- */
+.fr-lp4 .colophon{
+  background: var(--green); color: rgba(251,248,240,.80);
+  margin: 44px 0 0; padding: 30px var(--bleed) 34px; border: 0;
+}
+.fr-lp4 .colophon-inner{ max-width: none; margin: 0; padding: 0; }
+.fr-lp4 .colophon-masthead{
+  border: 0 !important; padding: 0; margin: 0 0 14px;
+}
+.fr-lp4 .colophon-logo{
+  font-family: Fraunces, Georgia, serif; font-size: 19px; font-weight: 600;
+  color: #fff; margin: 0 0 4px;
+}
+.fr-lp4 .colophon-tagline{
+  font-size: 11px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--gold); margin: 0; border: 0;
+}
+.fr-lp4 .colophon-desc,
+.fr-lp4 .colophon-body,
+.fr-lp4 .colophon-legal{
+  font-size: 13.5px; line-height: 1.6; color: rgba(251,248,240,.74);
+  border: 0; margin: 12px 0 0; padding: 0;
+}
+.fr-lp4 .colophon-legal p{ margin: 0 0 8px; }
+.fr-lp4 .colophon-copy{
+  font-size: 12px; color: rgba(251,248,240,.56); margin: 12px 0 0; border: 0;
+}
+.fr-lp4 .colophon a{ color: var(--gold); }
+.fr-lp4 .colophon-grid{ display: grid; gap: 14px; margin: 0; }
+.fr-lp4 .colophon-label{
+  font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--gold); margin: 0 0 4px; border: 0; padding: 0;
+}
+
+/* --- au-dela du telephone ------------------------------------------------ */
+@media (min-width: 760px){
+  .fr-lp4 .cover-img{ aspect-ratio: 21 / 9; }
+  .fr-lp4 .cover-txt{ padding-bottom: 34px; }
+  .fr-lp4 .cover-txt h1{ font-size: 48px; }
+  .fr-lp4 .cover-txt .dek{ font-size: 17.5px; }
+  .fr-lp4 .section h2{ font-size: 31px; }
+  .fr-lp4 .solo{ font-size: 30px; }
+  .fr-lp4 .pull{ font-size: 23px; }
+  .fr-lp4 .colophon-grid{ grid-template-columns: repeat(3, 1fr); gap: 22px; }
+}
+@media (max-width: 400px){
+  .fr-lp4 .cover-txt h1{ font-size: 31px; }
+  .fr-lp4 .section.has-drop .prose:first-of-type p:first-child::first-letter{
+    font-size: 58px; margin-right: 9px;
+  }
 }

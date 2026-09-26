@@ -5,14 +5,14 @@
   Le cheval de trait : un titre de section et une suite de blocs. Couvre la
   majorite des sections d'un advertorial, et remplace a lui seul ce qui serait
   sinon une demi-douzaine de fichiers.
-  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3 / fr-lp4).
   Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
 {%- endcomment -%}
 
 <div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
-{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}  <section class="section">
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}  <section class="section{% if section.settings.drop %} has-drop{% endif %}">
     {%- if section.settings.heading != blank -%}
       <h2>{{ section.settings.heading }}</h2>
     {%- endif -%}
@@ -123,6 +123,12 @@
       "info": "<em>...</em> met un fragment en italique d'accent."
     },
     {
+      "type": "checkbox",
+      "id": "drop",
+      "label": "Lettrine sur le premier paragraphe",
+      "default": false
+    },
+    {
       "type": "header",
       "content": "Mise en page"
     },
@@ -144,6 +150,10 @@
         {
           "value": "fr-lp3",
           "label": "Listicle"
+        },
+        {
+          "value": "fr-lp4",
+          "label": "Prelander · A Bocca Chiusa"
         }
       ]
     },

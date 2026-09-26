@@ -1,11 +1,12 @@
 {%- comment -%}
   ============================================================================
-  FREOS · LP — FREOS LP · Bottone
+  FREOS · LP — FREOS LP · Anelli
   ----------------------------------------------------------------------------
-  Le bouton de milieu de page.
+  Les anneaux de la chaine, numerotes, dans un encadre.
 
-  Il ne rend RIEN si le libelle est vide : c'est la garantie qu'aucun appel a
-  l'action n'apparait avant la revelation du produit.
+  LE NOMBRE ANNONCE PEUT DEPASSER LE NOMBRE MONTRE, expres : la page annonce
+  cinq anneaux et en montre quatre, le cinquieme est la revelation. Le titre et
+  le sous-titre sont donc du texte libre, jamais un compteur.
   Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3 / fr-lp4).
   Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
@@ -13,23 +14,28 @@
 
 <div class="freos-lp-body {{ section.settings.scope }}{% unless section.settings.rule %} no-rule{% endunless %}"
      style="padding-top:{{ section.settings.pt }}px;padding-bottom:{{ section.settings.pb }}px">
-{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}  {%- if section.settings.label != blank -%}
-    <div class="cta-mid{% if section.settings.heading != blank %} is-carte{% endif %}">
-      {%- if section.settings.heading != blank -%}
-        <h3>{{ section.settings.heading }}</h3>
-      {%- endif -%}
-      {%- if section.settings.body != blank -%}{{ section.settings.body }}{%- endif -%}
-      <a href="{{ section.settings.url | default: '/' }}">{{ section.settings.label }}</a>
-      {%- if section.settings.sub != blank -%}<p class="fine">{{ section.settings.sub }}</p>{%- endif -%}
-    </div>
-  {%- endif -%}
+{%- if section.settings.kicker != blank -%}<p class="k">{{ section.settings.kicker }}</p>{%- endif -%}  <div class="cycle">
+    {%- if section.settings.heading != blank -%}<h3>{{ section.settings.heading }}</h3>{%- endif -%}
+    {%- if section.settings.sub != blank -%}<p class="sub">{{ section.settings.sub }}</p>{%- endif -%}
+    {%- if section.blocks.size > 0 -%}
+      <ol>
+        {%- for block in section.blocks -%}
+          <li {{ block.shopify_attributes }}>
+            {%- if block.settings.title != blank -%}<b>{{ block.settings.title }}</b>{%- endif -%}
+            {{ block.settings.text }}
+          </li>
+        {%- endfor -%}
+      </ol>
+    {%- endif -%}
+    {%- if section.settings.foot != blank -%}<p class="cycle-f">{{ section.settings.foot }}</p>{%- endif -%}
+  </div>
 </div>
 
 {% schema %}
 {
-  "name": "FREOS LP · Bottone",
+  "name": "FREOS LP · Anelli",
   "tag": "section",
-  "class": "freos-lp-cta",
+  "class": "freos-lp-cycle",
   "settings": [
     {
       "type": "text",
@@ -40,29 +46,18 @@
     {
       "type": "text",
       "id": "heading",
-      "label": "La question, au-dessus du bouton",
-      "info": "Vide = bouton nu, sans carte."
-    },
-    {
-      "type": "richtext",
-      "id": "body",
-      "label": "Ce qu'on y gagne, en une ligne"
-    },
-    {
-      "type": "text",
-      "id": "label",
-      "label": "Libelle",
-      "info": "Vide = aucun bouton. Ne rien mettre avant la revelation du produit."
-    },
-    {
-      "type": "text",
-      "id": "url",
-      "label": "Lien"
+      "label": "Titre de l'encadre"
     },
     {
       "type": "textarea",
       "id": "sub",
-      "label": "Ligne sous le bouton"
+      "label": "Sous-titre",
+      "info": "Texte libre. Il peut annoncer plus d'anneaux qu'il n'en est montre."
+    },
+    {
+      "type": "textarea",
+      "id": "foot",
+      "label": "Ligne de bas d'encadre"
     },
     {
       "type": "header",
@@ -125,9 +120,27 @@
       "default": 0
     }
   ],
+  "blocks": [
+    {
+      "type": "anello",
+      "name": "Anello",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Nom de l'anneau"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Ce qu'il est, en une ligne"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "FREOS LP · Bottone"
+      "name": "FREOS LP · Anelli"
     }
   ]
 }
