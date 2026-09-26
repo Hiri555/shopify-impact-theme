@@ -638,3 +638,105 @@
 .fr-lp4 .stage h4{ font-family:Inter,sans-serif; font-size:17px; font-weight:600;
   color:var(--pl-ink); margin:0; line-height:1.6; }
 .fr-lp4 .stage .stage-text{ font-size:17px; line-height:1.6; color:var(--pl-body); }
+
+/* ==========================================================================
+   CURE EPUREE — 0 FILET, RYTHME D'ARTICLE
+   --------------------------------------------------------------------------
+   POURQUOI UN BLOC D'ANNULATION ET PAS UNE CHASSE AUX 78 REGLES : les filets
+   sont poses sur 26 types d'element, chacun decline sur trois scopes. Les
+   retirer un par un dans les regles de base, c'est 78 occasions de casser une
+   page qu'on ne regarde pas. Ici tout est au meme endroit, lisible, et
+   reversible en supprimant ce bloc.
+
+   CE QUI GARDE SON FILET, ET C'EST LE SEUL : `.colophon-masthead`, le trait
+   avant le pied de page. Il dit « l'article est fini ». Partout ailleurs le
+   texte doit s'enchainer.
+
+   LE RYTHME : une frontiere de partie passe de ~56 px a 20 px. C'est le
+   rythme d'un article -- un paragraphe d'ecart -- pas celui d'une pile de
+   cartes.
+   ========================================================================== */
+
+.fr-lp1 .section, .fr-lp2 .section, .fr-lp3 .section, .fr-lp4 .section,
+.fr-lp1 .ps, .fr-lp2 .ps, .fr-lp3 .ps, .fr-lp4 .ps,
+.fr-lp1 .masthead, .fr-lp2 .masthead, .fr-lp3 .masthead, .fr-lp4 .masthead,
+.fr-lp1 .byline, .fr-lp2 .byline, .fr-lp3 .byline, .fr-lp4 .byline,
+.fr-lp1 .testimony, .fr-lp2 .testimony, .fr-lp3 .testimony, .fr-lp4 .testimony,
+.fr-lp1 .testimony-header, .fr-lp2 .testimony-header, .fr-lp3 .testimony-header,
+.fr-lp1 .pull, .fr-lp2 .pull, .fr-lp3 .pull, .fr-lp4 .pull,
+.fr-lp1 .signals, .fr-lp2 .signals, .fr-lp3 .signals, .fr-lp4 .signals,
+.fr-lp1 .stages, .fr-lp2 .stages, .fr-lp3 .stages, .fr-lp4 .stages,
+.fr-lp1 .failure-table, .fr-lp2 .failure-table, .fr-lp3 .failure-table,
+.fr-lp1 .failure-row, .fr-lp2 .failure-row, .fr-lp3 .failure-row,
+.fr-lp1 .price-block, .fr-lp2 .price-block, .fr-lp3 .price-block,
+.fr-lp1 .price-cta, .fr-lp2 .price-cta, .fr-lp3 .price-cta,
+.fr-lp1 .pair, .fr-lp2 .pair, .fr-lp3 .pair,
+.fr-lp1 .faq-item, .fr-lp2 .faq-item, .fr-lp3 .faq-item, .fr-lp4 .faq-item,
+.fr-lp1 .fonti, .fr-lp2 .fonti, .fr-lp3 .fonti,
+.fr-lp1 .anc, .fr-lp2 .anc, .fr-lp3 .anc,
+.fr-lp1 .sig, .fr-lp2 .sig, .fr-lp3 .sig,
+.fr-lp1 .obj-tag, .fr-lp2 .obj-tag, .fr-lp3 .obj-tag,
+.fr-lp1 .fig-h, .fr-lp2 .fig-h, .fr-lp3 .fig-h,
+.fr-lp1 .quote, .fr-lp2 .quote, .fr-lp3 .quote, .fr-lp4 .quote,
+.fr-lp1 figcaption, .fr-lp2 figcaption, .fr-lp3 figcaption, .fr-lp4 figcaption,
+.fr-lp1 .colophon-label, .fr-lp2 .colophon-label, .fr-lp3 .colophon-label,
+.fr-lp1 .colophon-legal, .fr-lp2 .colophon-legal, .fr-lp3 .colophon-legal,
+.fr-lp1 .colophon-copy, .fr-lp2 .colophon-copy, .fr-lp3 .colophon-copy,
+.fr-lp1 hr, .fr-lp2 hr, .fr-lp3 hr, .fr-lp4 hr{
+  border-top: 0; border-bottom: 0;
+}
+.fr-lp1 hr, .fr-lp2 hr, .fr-lp3 hr, .fr-lp4 hr{ display: none; }
+
+/* Le seul filet qui reste : celui qui ferme l'article. */
+.fr-lp1 .colophon-masthead, .fr-lp2 .colophon-masthead,
+.fr-lp3 .colophon-masthead, .fr-lp4 .colophon-masthead{
+  border-top: 1px solid var(--rule);
+}
+
+/* --- le rythme : frontiere de partie a 20 px, pas 56 --- */
+.fr-lp1 .section, .fr-lp2 .section, .fr-lp3 .section, .fr-lp4 .section{
+  margin-top: 20px; padding-top: 0;
+}
+.fr-lp1 .ps, .fr-lp2 .ps, .fr-lp3 .ps, .fr-lp4 .ps{ padding: 0; margin-top: 20px; }
+.fr-lp1 .pull, .fr-lp2 .pull, .fr-lp3 .pull, .fr-lp4 .pull{ padding: 0; margin: 24px 0; }
+.fr-lp1 .stages, .fr-lp2 .stages, .fr-lp3 .stages{ padding-top: 0; margin-top: 18px; }
+.fr-lp1 .signals, .fr-lp2 .signals, .fr-lp3 .signals{ padding-top: 0; margin-top: 18px; }
+.fr-lp1 .faq-item, .fr-lp2 .faq-item, .fr-lp3 .faq-item{ padding: 12px 0; }
+.fr-lp1 .testimony, .fr-lp2 .testimony, .fr-lp3 .testimony{ padding: 0; margin: 20px 0; }
+.fr-lp1 .pair, .fr-lp2 .pair, .fr-lp3 .pair{ padding: 10px 0; }
+.fr-lp1 .failure-row, .fr-lp2 .failure-row, .fr-lp3 .failure-row{ padding: 10px 0; }
+
+/* ==========================================================================
+   LE RAIL DE VOIX — sobre, sans etoile, sans note
+   --------------------------------------------------------------------------
+   Ce n'est pas un bloc d'avis produit : pas d'etoile, pas de note chiffree,
+   pas de mention de source. Ce sont des voix reappropriees de notre corpus,
+   ecrites en prose courte. Le prenom et l'age situent, ils ne prouvent rien.
+   ========================================================================== */
+.fr-lp1 .voci, .fr-lp2 .voci, .fr-lp3 .voci{
+  display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+  padding: 2px 40px 14px 0; margin: 18px 0 4px; scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+          mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+}
+.fr-lp1 .voci::-webkit-scrollbar, .fr-lp2 .voci::-webkit-scrollbar,
+.fr-lp3 .voci::-webkit-scrollbar{ display: none; }
+.fr-lp1 .voce, .fr-lp2 .voce, .fr-lp3 .voce{
+  scroll-snap-align: start; flex: 0 0 auto; width: 78vw; max-width: 290px;
+  background: var(--wash, #FAF7EE); border: 0; border-radius: 4px;
+  padding: 18px 18px 16px;
+}
+.fr-lp1 .voce p, .fr-lp2 .voce p, .fr-lp3 .voce p{
+  font-size: 15px; line-height: 1.6; margin: 0 0 12px;
+}
+.fr-lp1 .voce .chi, .fr-lp2 .voce .chi, .fr-lp3 .voce .chi{
+  font-size: 12.5px; color: var(--ink3, #6a7064); border: 0; padding: 0; margin: 0;
+}
+.fr-lp1 .voci-hint, .fr-lp2 .voci-hint, .fr-lp3 .voci-hint{
+  font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink3, #6a7064); margin: 0 0 4px;
+}
+@media (min-width: 760px){
+  .fr-lp1 .voce, .fr-lp2 .voce, .fr-lp3 .voce{ width: 280px; }
+}
