@@ -8,125 +8,29 @@
  * ------------------------------------------------------------
  */
 {
-  "layout": "freos-lp",
   "sections": {
-    "topbar": {
-      "type": "freos-lp-topbar",
-      "blocks": {
-        "nav_1": {
-          "type": "nav",
-          "settings": {
-            "label": "Bocca",
-            "url": "",
-            "on": true
-          }
-        },
-        "nav_2": {
-          "type": "nav",
-          "settings": {
-            "label": "Cause",
-            "url": "",
-            "on": false
-          }
-        },
-        "nav_3": {
-          "type": "nav",
-          "settings": {
-            "label": "Ricerca",
-            "url": "",
-            "on": false
-          }
-        },
-        "nav_4": {
-          "type": "nav",
-          "settings": {
-            "label": "Tonsille",
-            "url": "",
-            "on": false
-          }
-        },
-        "nav_5": {
-          "type": "nav",
-          "settings": {
-            "label": "Chi siamo",
-            "url": "",
-            "on": false
-          }
-        },
-        "sub_1": {
-          "type": "sub",
-          "settings": {
-            "label": "Alito",
-            "url": "",
-            "on": true
-          }
-        },
-        "sub_2": {
-          "type": "sub",
-          "settings": {
-            "label": "Saliva",
-            "url": "",
-            "on": false
-          }
-        },
-        "sub_3": {
-          "type": "sub",
-          "settings": {
-            "label": "Ingredienti",
-            "url": "",
-            "on": false
-          }
-        },
-        "sub_4": {
-          "type": "sub",
-          "settings": {
-            "label": "Tonsilloliti",
-            "url": "",
-            "on": false
-          }
-        },
-        "sub_5": {
-          "type": "sub",
-          "settings": {
-            "label": "Quello che non consigliamo",
-            "url": "",
-            "on": false
-          }
-        }
-      },
-      "block_order": [
-        "nav_1",
-        "nav_2",
-        "nav_3",
-        "nav_4",
-        "nav_5",
-        "sub_1",
-        "sub_2",
-        "sub_3",
-        "sub_4",
-        "sub_5"
-      ],
+    "mast": {
+      "type": "freos-lp-masthead",
       "settings": {
-        "logo": "A Bocca <em>Chiusa</em>",
-        "logo_url": "",
-        "crumb": "Bocca › Ricerca › <b>Alito</b>",
+        "logo": "A Bocca Chiusa",
+        "tagline": "Inchiesta · Igiene orale",
         "scope": "fr-lp4",
+        "rule": false,
         "pt": 0,
         "pb": 0
       }
     },
-    "opener": {
-      "type": "freos-lp-opener",
+    "cover": {
+      "type": "freos-lp-cover",
       "settings": {
-        "kicker": "",
-        "eyebrow": "",
-        "heading": "Perché a qualcuno l’alito torna dopo venti minuti — <em>e a qualcun altro no</em>",
-        "subhead": "L’alito che torna subito dopo i denti si comporta diversamente da un alito occasionale. La differenza, a quanto pare, non è l’igiene.",
-        "author": "Redazione A Bocca Chiusa · 25 settembre 2026 · 4 min di lettura",
-        "consulenza": "",
-        "hero_file": "freos-pl-hero.webp",
-        "hero_alt": "Una donna al bar, la mano davanti alla bocca",
-        "hero_caption": "Il gesto della mano davanti alla bocca è il primo adattamento che compare nei racconti. Quasi nessuno lo decide: si accorge di farlo dopo anni. <em>Fotografia posata.</em>",
+        "file": "freos-lp4-cover.webp",
+        "alt": "Una donna al tavolino di un bar porta la mano davanti alla bocca mentre parla",
+        "eyebrow": "L’inchiesta",
+        "heading": "La metà <i>invisibile</i> dell’alito",
+        "dek": "A qualcuno l’alito torna venti minuti dopo i denti. Ad altri no. La differenza non è l’igiene.",
+        "author": "Redazione A Bocca Chiusa",
+        "date": "26 settembre 2026",
+        "lecture": "3 min",
         "scope": "fr-lp4",
         "rule": false,
         "pt": 0,
@@ -136,59 +40,96 @@
     "apertura": {
       "type": "freos-lp-editorial",
       "blocks": {
-        "a1": {
+        "p1": {
           "type": "para",
           "settings": {
-            "text": "<p><strong>« Mi lavo i denti e dopo venti minuti è di nuovo cattivo. »</strong> La frase si ripete quasi identica in centinaia di discussioni italiane.</p>"
+            "text": "<p>C’è una domanda che nessuno fa ad alta voce, e che migliaia di persone digitano di nascosto ogni mese: perché a me l’alito torna dopo venti minuti, e agli altri no?</p>"
           }
         },
-        "a2": {
+        "p2": {
           "type": "para",
           "settings": {
-            "text": "<p>Per molti non ha senso: ci si lava, e passa. Per altri passa, e torna — anche senza aver mangiato niente. Non è una questione di igiene. È una questione di orari.</p>"
+            "text": "<p>Non è una domanda da poco. Chi se la pone ha già provato tutto. Si lava i denti tre volte al giorno, a volte di più. Ha il filo interdentale, il collutorio, le mentine in ogni tasca. E ogni volta la sequenza è la stessa: si lava, controlla, esce di casa tranquillo — e venti minuti dopo è di nuovo lì.</p>"
+          }
+        },
+        "p3": {
+          "type": "para",
+          "settings": {
+            "text": "<p>La spiegazione che tutti ricevono è una sola: <b>ti lavi male.</b> È la risposta del dentista, del farmacista, degli articoli online. Ed è quella che tiene ferme queste persone per anni, a fare sempre di più della stessa cosa che non ha mai funzionato.</p>"
+          }
+        },
+        "p4": {
+          "type": "para",
+          "settings": {
+            "text": "<p>C’è solo un problema. <em>Non regge.</em></p>"
           }
         }
       },
       "block_order": [
-        "a1",
-        "a2"
+        "p1",
+        "p2",
+        "p3",
+        "p4"
       ],
       "settings": {
+        "heading": "",
+        "drop": true,
         "scope": "fr-lp4",
         "rule": false,
         "pt": 0,
         "pb": 0
       }
     },
-    "differenza": {
+    "igiene": {
       "type": "freos-lp-editorial",
       "blocks": {
-        "d0": {
-          "type": "sub",
-          "settings": {
-            "text": "La differenza non è quanto ti lavi",
-            "level": "h2"
-          }
-        },
-        "d1": {
+        "p1": {
           "type": "para",
           "settings": {
-            "text": "<p>Chi ha il problema si lava di più, non di meno. Il dentista non trova niente. Eppure l’odore torna.</p>"
+            "text": "<p>È il primo dettaglio che rovina la spiegazione ufficiale. Nei racconti che abbiamo raccolto — centinaia, quasi identici — chi convive con l’alito che torna descrive un’igiene ossessiva. Non trascurata: ossessiva.</p>"
           }
         },
-        "d2": {
+        "p2": {
           "type": "para",
           "settings": {
-            "text": "<p>Non conta l’impegno. Conta dove si forma. Spazzolino, filo e collutorio arrivano sulle superfici esposte all’aria. Il punto in cui l’odore si produce, quasi sempre, non lo è. Tra l’80 e il 90 % dei casi ha origine nella bocca, non nello stomaco — l’opposto di quello che si legge online.</p>"
+            "text": "<p>Il dentista, alla visita, non trova niente. Anzi, spesso si complimenta: poco tartaro, gengive sane. La persona esce dallo studio con una diagnosi che suona come un’assoluzione e che dentro si sente come una condanna. <em>Se va tutto bene, perché continua?</em></p>"
+          }
+        },
+        "p3": {
+          "type": "para",
+          "settings": {
+            "text": "<p>E qui la maggior parte delle persone fa la cosa più logica e più sbagliata: aggiunge un prodotto. Poi un altro. C’è chi ne ha provati dieci, e chi conta gli anni invece dei mesi. Il cassetto del bagno diventa un piccolo cimitero di collutori aperti a metà.</p>"
+          }
+        },
+        "p4": {
+          "type": "para",
+          "settings": {
+            "text": "<p>La verità è che stavano tutti guardando nel posto sbagliato. <b>Non conta quanto ti lavi. Conta dove si forma l’odore.</b></p>"
+          }
+        },
+        "p5": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Spazzolino, filo e collutorio arrivano su denti, gengive e la parte anteriore della lingua: superfici esposte all’aria. Ma tra l’<b>80 e il 90% dei casi ha origine intraorale</b> — nella bocca, sì, ma in un punto che nessuno di quei gesti raggiunge davvero. È l’opposto di quello che si legge online, dove tutti puntano il dito contro lo stomaco.</p>"
+          }
+        },
+        "p6": {
+          "type": "para",
+          "settings": {
+            "text": "<p>E se l’odore non nasce dove guardi, allora la domanda cambia. Non è più « cosa uso ». È <em>dove.</em></p>"
           }
         }
       },
       "block_order": [
-        "d0",
-        "d1",
-        "d2"
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
       ],
       "settings": {
+        "heading": "Chi ha il problema si lava di più, non di meno",
         "scope": "fr-lp4",
         "rule": false,
         "pt": 0,
@@ -196,79 +137,124 @@
       }
     },
     "catena": {
-      "type": "freos-lp-stages",
+      "type": "freos-lp-editorial",
       "blocks": {
-        "st_1": {
-          "type": "stage",
+        "p1": {
+          "type": "para",
           "settings": {
-            "label": "1",
-            "title": "Il flusso salivare.",
-            "text": "Quanta saliva produci, e quando smetti."
-          }
-        },
-        "st_2": {
-          "type": "stage",
-          "settings": {
-            "label": "2",
-            "title": "Le superfici coperte.",
-            "text": "Il fondo della lingua, dove niente arriva davvero."
-          }
-        },
-        "st_3": {
-          "type": "stage",
-          "settings": {
-            "label": "3",
-            "title": "I composti solforati.",
-            "text": "Quello che si sente. Non è il cibo."
-          }
-        },
-        "st_4": {
-          "type": "stage",
-          "settings": {
-            "label": "4",
-            "title": "Il formato.",
-            "text": "Un liquido resta trenta secondi. Una caramella, quattro minuti."
+            "text": "<p>La letteratura odontoiatrica ha smesso da tempo di trattare l’alito persistente come un evento isolato. Lo descrive come una catena. E il punto della catena è precisamente questo: <b>non si spezza tirando un solo anello.</b></p>"
           }
         }
       },
       "block_order": [
-        "st_1",
-        "st_2",
-        "st_3",
-        "st_4"
+        "p1"
       ],
       "settings": {
-        "kicker": "",
-        "heading": "Non è un sintomo. <em>È un ciclo.</em>",
-        "intro": "<p>La letteratura lo tratta da anni come una catena di cinque componenti.</p>",
-        "outro": "<p>Ce n’è un quinto, che non si vede su uno schema. Arriva dopo.</p>",
+        "heading": "Non è un sintomo. È un meccanismo che si richiude",
         "scope": "fr-lp4",
         "rule": false,
         "pt": 0,
         "pb": 0
       }
     },
-    "ciclo": {
-      "type": "freos-lp-editorial",
+    "anelli": {
+      "type": "freos-lp-cycle",
       "blocks": {
-        "c1": {
-          "type": "para",
+        "a1": {
+          "type": "anello",
           "settings": {
-            "text": "<p>Ogni componente abbassa la soglia del successivo. È per questo che affrontarne uno solo non basta: gli altri quattro riportano indietro quello trattato.</p>"
+            "title": "Il flusso salivare",
+            "text": "Quanta saliva produci, e in quali ore smette."
           }
         },
-        "c2": {
-          "type": "pull",
+        "a2": {
+          "type": "anello",
           "settings": {
-            "text": "« Funziona, poi smette » sembra casualità. In un ciclo, è il risultato previsto."
+            "title": "Le superfici coperte",
+            "text": "Il fondo della lingua, dove nessun gesto abituale arriva."
+          }
+        },
+        "a3": {
+          "type": "anello",
+          "settings": {
+            "title": "I composti solforati",
+            "text": "Quello che si sente davvero. Non è il cibo."
+          }
+        },
+        "a4": {
+          "type": "anello",
+          "settings": {
+            "title": "Il formato di quello che usi",
+            "text": "Un liquido resta trenta secondi. Una caramella, quattro minuti. Poi basta."
           }
         }
       },
       "block_order": [
-        "c1",
-        "c2"
+        "a1",
+        "a2",
+        "a3",
+        "a4"
       ],
       "settings": {
+        "heading": "I cinque anelli",
+        "sub": "Quattro si possono spiegare subito. Il quinto è quello che cambia tutto.",
+        "foot": "",
+        "scope": "fr-lp4",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "trappola": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Guarda bene questi quattro. Ognuno, da solo, ha una soluzione in farmacia. E ognuna di quelle soluzioni funziona — sul suo anello.</p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Il collutorio pulisce le superfici esposte, e non è fatto per restare: trenta secondi in bocca, poi lo sputi. Il raschietto lavora sulla patina, ma per molti è insopportabile — il riflesso di vomito arriva prima del risultato. Le gomme coprono, per qualche minuto, e il conto arriva a fine mese: pacchetti comprati per paura.</p>"
+          }
+        },
+        "p3": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Ed è qui che scatta la trappola. <b>Ogni anello abbassa la soglia del successivo.</b> Affrontarne uno e lasciarne quattro non è il venti per cento di una soluzione: è zero, perché gli altri quattro riportano indietro quello che hai trattato. In pochi giorni.</p>"
+          }
+        },
+        "p4": {
+          "type": "pull",
+          "settings": {
+            "text": "« Funziona, poi smette » non è sfortuna. In una catena a cinque anelli, è l’unico esito possibile."
+          }
+        },
+        "p5": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Questo spiega la frase che demoralizza di più, quella che torna più spesso: qualcosa che a gennaio sembrava aver risolto, a marzo non fa più niente. Non hai fatto niente di sbagliato. Stavi solo tirando un anello alla volta.</p>"
+          }
+        },
+        "p6": {
+          "type": "para",
+          "settings": {
+            "text": "<p>E manca ancora il quinto. Quello che non si vede su nessuno schema, che nessun prodotto in farmacia affronta, e che nei racconti compare sempre travestito da dettaglio.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "p1",
+        "p2",
+        "p3",
+        "p4",
+        "p5",
+        "p6"
+      ],
+      "settings": {
+        "heading": "",
         "scope": "fr-lp4",
         "rule": false,
         "pt": 0,
@@ -278,10 +264,11 @@
     "cta1": {
       "type": "freos-lp-cta",
       "settings": {
-        "kicker": "Interattivo",
-        "label": "Scopri il tuo punto di partenza →",
-        "url": "[QUIZ_URL]?src=prelander-tool1",
-        "sub": "Quale dei cinque lavora di più, nel tuo caso? Sessanta secondi. La valutazione ti dice da quale conviene cominciare. Nessuna email, nessun account.",
+        "heading": "Quale dei cinque anelli tira di più, nel tuo caso?",
+        "body": "<p>Due persone con lo stesso problema partono quasi sempre da un anello diverso. Sessanta secondi per scoprire il tuo.</p>",
+        "label": "Scopri da dove cominciare",
+        "url": "[QUIZ_URL]",
+        "sub": "Nessuna email, nessun account.",
         "scope": "fr-lp4",
         "rule": false,
         "pt": 0,
@@ -291,32 +278,60 @@
     "quinto": {
       "type": "freos-lp-editorial",
       "blocks": {
-        "q0": {
-          "type": "sub",
-          "settings": {
-            "text": "Il quinto non è in bocca. È un orario.",
-            "level": "h2"
-          }
-        },
-        "q1": {
+        "p1": {
           "type": "para",
           "settings": {
-            "text": "<p>Di notte il flusso salivare crolla di circa il 90 %, per sei o sette ore. La saliva è la sola cosa che ti proteggeva senza sforzo — e si ferma proprio quando non deglutisci, non parli, non bevi.</p>"
+            "text": "<p>Ricordi il dettaglio che compare in ogni racconto e che sembra impossibile finché non capisci la struttura? Eccolo. Chi ha l’alito che torna lo sente più forte <em>al mattino, appena sveglio</em> — prima del caffè, prima di aver messo in bocca qualsiasi cosa.</p>"
           }
         },
-        "q2": {
+        "p2": {
           "type": "para",
           "settings": {
-            "text": "<p>Ecco perché l’odore è più forte al risveglio, prima del caffè. Non è il caffè. È l’orario. E non esiste un collutorio per le sette ore in cui dormi.</p>"
+            "text": "<p>Se fosse questione di cibo o di igiene, non avrebbe senso. Al risveglio non hai mangiato niente da otto ore, e ti sei lavato i denti prima di dormire. Eppure è il momento peggiore della giornata. Perché?</p>"
+          }
+        },
+        "s3": {
+          "type": "solo",
+          "settings": {
+            "text": "Di notte il flusso salivare crolla di circa il 90%."
+          }
+        },
+        "p4": {
+          "type": "para",
+          "settings": {
+            "text": "<p>E resta a terra per sei, sette ore. La saliva è la sola cosa che teneva la bocca in equilibrio <em>senza che tu facessi niente</em>. Di notte si ferma. E si ferma proprio nell’unica finestra in cui non deglutisci, non parli, non bevi — l’unica in cui non puoi fare niente per rimediare.</p>"
+          }
+        },
+        "p5": {
+          "type": "para",
+          "settings": {
+            "text": "<p>È il quinto anello. Lavora mentre dormi, quando tutti gli altri quattro sono fuori servizio. Ed è la ragione per cui un gesto può funzionare in superficie per qualche settimana mentre la catena, sotto, continua a girare intatta.</p>"
+          }
+        },
+        "p6": {
+          "type": "para",
+          "settings": {
+            "text": "<p><b>Non esiste un collutorio per le sette ore in cui dormi.</b> Nessuna mentina dura fino al mattino. Nessun raschietto agisce nel sonno. Ecco perché la domanda giusta non è mai stata « cosa uso » — ma quale anello, nel tuo caso, sta reggendo tutta la catena.</p>"
+          }
+        },
+        "p7": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Studiando questo fenomeno abbiamo notato una costante: le persone descrivono quasi tutte la stessa progressione, senza sapere che è un meccanismo. All’inizio un sapore che va e viene. Poi la mano portata davanti alla bocca, quasi senza accorgersene. Poi la distanza calcolata a ogni conversazione. E, alla fine, la mattina vissuta come la parte peggiore della giornata — proprio quando non si è ancora mangiato niente. Nessuna di queste persone trascura l’igiene: fanno tutto giusto, da anni, tirando l’anello sbagliato. La differenza tra un gesto che tiene e uno che dura tre settimane sta tutta nel sapere <em>da quale cominciare.</em></p>"
           }
         }
       },
       "block_order": [
-        "q0",
-        "q1",
-        "q2"
+        "p1",
+        "p2",
+        "s3",
+        "p4",
+        "p5",
+        "p6",
+        "p7"
       ],
       "settings": {
+        "heading": "Il quinto anello non è in bocca. <em>È un orario.</em>",
         "scope": "fr-lp4",
         "rule": false,
         "pt": 0,
@@ -326,162 +341,83 @@
     "cta2": {
       "type": "freos-lp-cta",
       "settings": {
-        "kicker": "Interattivo",
-        "label": "Vedi il tuo profilo →",
-        "url": "[QUIZ_URL]?src=prelander-tool2",
-        "sub": "Il quinto è attivo anche per te? Tre domande sugli orari bastano a dirlo. Circa 60 secondi.",
+        "heading": "Il quinto anello è attivo anche per te?",
+        "body": "<p>Tre domande sugli orari bastano a dirlo. E a dirti quale, dei cinque, tira gli altri.</p>",
+        "label": "Vedi il tuo profilo",
+        "url": "[QUIZ_URL]",
+        "sub": "Circa 60 secondi. Nessuna email.",
         "scope": "fr-lp4",
         "rule": false,
         "pt": 0,
         "pb": 0
       }
     },
-    "casi": {
+    "limiti": {
       "type": "freos-lp-editorial",
       "blocks": {
-        "k0": {
-          "type": "sub",
+        "n1": {
+          "type": "note",
           "settings": {
-            "text": "Due casi a parte",
-            "level": "h2"
-          }
-        },
-        "k1": {
-          "type": "para",
-          "settings": {
-            "text": "<p><strong>Tonsilloliti.</strong> Se l’odore arriva dalla gola, il punto sono le cripte tonsillari, non la bocca — circa quattro persone su dieci ne hanno, spesso senza saperlo (Takahashi, 2014). Si valuta con l’otorino.</p>"
-          }
-        },
-        "k2": {
-          "type": "para",
-          "settings": {
-            "text": "<p><strong>Origine digestiva.</strong> Reflusso o terapie in corso producono un odore che non nasce in bocca. Ne parli con il medico.</p>"
+            "title": "Due casi in cui niente di tutto questo vale",
+            "text": "<p><b>Tonsilloliti.</b> Se l’odore sembra arrivare dalla gola, o hai già visto piccole formazioni biancastre, il punto non è la bocca ma le cripte tonsillari — circa quattro persone su dieci ne hanno, quasi sempre senza saperlo. Nessun gesto orale ci arriva: si valuta con l’otorino.</p><p><b>Origine digestiva.</b> Reflusso o terapie in corso producono un odore che non nasce in bocca. Ne parli con il medico.</p>",
+            "items": "",
+            "accent": false
           }
         }
       },
       "block_order": [
-        "k0",
-        "k1",
-        "k2"
+        "n1"
       ],
       "settings": {
+        "heading": "",
         "scope": "fr-lp4",
         "rule": false,
         "pt": 0,
         "pb": 0
       }
     },
-    "tags": {
-      "type": "freos-lp-tags",
-      "blocks": {
-        "tg_1": {
-          "type": "tag",
-          "settings": {
-            "label": "Alito"
-          }
-        },
-        "tg_2": {
-          "type": "tag",
-          "settings": {
-            "label": "Saliva"
-          }
-        },
-        "tg_3": {
-          "type": "tag",
-          "settings": {
-            "label": "Lingua"
-          }
-        },
-        "tg_4": {
-          "type": "tag",
-          "settings": {
-            "label": "Tonsilloliti"
-          }
-        }
-      },
-      "block_order": [
-        "tg_1",
-        "tg_2",
-        "tg_3",
-        "tg_4"
-      ],
-      "settings": {
-        "scope": "fr-lp4",
-        "pt": 0,
-        "pb": 0
-      }
-    },
-    "more": {
-      "type": "freos-lp-more",
-      "blocks": {
-        "mr_1": {
-          "type": "item",
-          "settings": {
-            "cat": "Tonsille",
-            "title": "Le cripte tonsillari: perché non vedi niente e senti tutto",
-            "url": "/pages/adv-cripta"
-          }
-        },
-        "mr_2": {
-          "type": "item",
-          "settings": {
-            "cat": "Alito",
-            "title": "Sei motivi per cui l’alito torna sempre",
-            "url": "/pages/listicle"
-          }
-        },
-        "mr_3": {
-          "type": "item",
-          "settings": {
-            "cat": "Ricerca",
-            "title": "La metà invisibile della bocca",
-            "url": "/pages/adv-notte"
-          }
-        }
-      },
-      "block_order": [
-        "mr_1",
-        "mr_2",
-        "mr_3"
-      ],
-      "settings": {
-        "heading": "Altro da Ricerca",
-        "scope": "fr-lp4",
-        "pt": 0,
-        "pb": 0
-      }
-    },
-    "colophon": {
+    "ours": {
       "type": "freos-lp-colophon",
       "settings": {
         "kicker": "",
         "whisper": "",
         "whisper_sign": "",
         "logo": "A Bocca Chiusa",
-        "tagline": "",
-        "desc": "",
-        "legal": "<p>A Bocca Chiusa è pubblicato da FREOS (try-freos.com), che vende integratori per l’igiene orale. Gli articoli sono prodotti dalla redazione FREOS. Le esperienze citate provengono da discussioni pubbliche e sono racconti individuali, non risultati tipici.</p><p>Questo articolo è a scopo informativo e non sostituisce un consulto medico. Parla con il dentista o con il medico dei tuoi sintomi. FREOS è un integratore alimentare: <strong>non cura l’alitosi</strong>, non è un farmaco e non ha indicazioni terapeutiche.</p>",
-        "links": "<p>© 2026 A Bocca Chiusa · <a href=\"mailto:contact@try-freos.com\">contact@try-freos.com</a></p>",
+        "tagline": "Inchiesta · Igiene orale",
+        "desc": "A Bocca Chiusa è pubblicato da FREOS. Le esperienze descritte in questo articolo sono riscritte da noi in forma breve: sono racconti individuali, non risultati tipici.",
+        "legal": "<p>Questo articolo è a scopo informativo e non sostituisce un consulto medico. Parla con il dentista o con il medico dei tuoi sintomi.</p>",
+        "links": "<p>© 2026 FREOS · DINSO VENTURES LLC</p>",
         "scope": "fr-lp4",
         "rule": false,
         "pt": 0,
         "pb": 0
       }
+    },
+    "sticky": {
+      "type": "freos-lp-sticky",
+      "settings": {
+        "label": "Fai il test in 60 secondi →",
+        "url": "[QUIZ_URL]",
+        "sub": "",
+        "at": 30,
+        "hide_end": 88,
+        "mobile_only": false
+      }
     }
   },
   "order": [
-    "topbar",
-    "opener",
+    "mast",
+    "cover",
     "apertura",
-    "differenza",
+    "igiene",
     "catena",
-    "ciclo",
+    "anelli",
+    "trappola",
     "cta1",
     "quinto",
     "cta2",
-    "casi",
-    "tags",
-    "more",
-    "colophon"
+    "limiti",
+    "ours",
+    "sticky"
   ]
 }
