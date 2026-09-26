@@ -618,6 +618,17 @@
         "pt": 0,
         "pb": 0
       }
+    },
+    "sticky": {
+      "type": "freos-lp-sticky",
+      "settings": {
+        "label": "Scopri il gesto della sera →",
+        "url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "sub": "",
+        "at": 30,
+        "hide_end": 88,
+        "mobile_only": false
+      }
     }
   },
   "order": [
@@ -633,6 +644,7 @@
     "confronto",
     "voci",
     "obiezioni",
-    "ours"
+    "ours",
+    "sticky"
   ]
 }
