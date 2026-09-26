@@ -1374,3 +1374,130 @@
   .fr .fr-ben{ grid-template-columns:38px 1fr; row-gap:8px; }
   .fr .fr-ben-g{ grid-column:2; justify-self:start; }
 }
+
+/* ==========================================================================
+   V11 — LE COMPARATIF QUI GARDE SA COLONNE, LE RITUEL QUI DEFILE
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. LE COMPARATIF : LA COLONNE CRITERE DEVIENT COLLANTE
+   --------------------------------------------------------------------------
+   MESURE AVANT : le tableau ne debordait PAS. `.fr-cmp-wrap{overflow-x:auto}`
+   plus `min-width:460px` le font defiler proprement dans son conteneur a
+   390 px. Le defaut etait ailleurs, et il ne se voit qu'en scrollant : la
+   colonne des criteres partait avec le reste. Arrive a la colonne « Spray »,
+   on ne savait plus de quelle question il s'agissait -- un tableau de
+   comparaison ou l'on perd le critere ne compare plus rien.
+
+   `position:sticky` sur la premiere cellule de chaque ligne. Le fond opaque
+   n'est pas decoratif : sans lui, les colonnes defilantes se voient PAR
+   TRANSPARENCE sous le critere.
+   -------------------------------------------------------------------------- */
+.fr .fr-cmp-corner, .fr .fr-cmp-l{
+  position: sticky; left: 0; z-index: 2;
+  background: var(--softer); /* opaque : voir le commentaire ci-dessus */
+}
+.fr .fr-cmp-l{
+  box-shadow: 1px 0 0 var(--rule);   /* la separation suit la colonne */
+  min-width: 156px; max-width: 200px;
+  white-space: normal;               /* la question tient sur deux lignes */
+  line-height: 1.35;
+}
+.fr .fr-cmp thead .fr-cmp-corner{ z-index: 3; }
+
+/* La colonne FREOS se voit sans crier : un fond tres pale et un filet. */
+.fr .fr-cmp-c--nous, .fr .fr-cmp-h--nous{
+  background: var(--acclt);
+}
+.fr .fr-cmp-h--nous .fr-cmp-hn{ color: var(--acc); font-weight: 700; }
+
+/* L'indice de defilement : sans lui, personne ne devine qu'il y a une suite. */
+.fr .fr-cmp-wrap{
+  position: relative;
+  -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+          mask-image: linear-gradient(to right, #000 calc(100% - 26px), transparent);
+  scrollbar-width: none;
+}
+.fr .fr-cmp-wrap::-webkit-scrollbar{ display: none; }
+.fr .fr-cmp-hint{
+  font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink3); margin: 0 0 6px;
+}
+
+@media (max-width: 560px){
+  .fr .fr-cmp{ min-width: 520px; }
+  .fr .fr-cmp th, .fr .fr-cmp td{ padding: 11px 10px; font-size: 14px; }
+  .fr .fr-cmp-l{ min-width: 132px; max-width: 150px; font-size: 13.5px; }
+}
+
+/* --------------------------------------------------------------------------
+   2. LE RITUEL : TROIS COLONNES EN GRAND, UN RAIL EN PETIT
+   --------------------------------------------------------------------------
+   A RETABLIR, PARCE QUE JE L'AVAIS MAL LU : le rituel etait DEJA sur trois
+   colonnes au-dessus de 860 px. L'empilement dont parle l'owner est celui du
+   TELEPHONE -- une regle `grid-template-columns:1fr` sous 860 px transformait
+   chaque etape en une ligne image-a-gauche / texte-a-droite, et les trois se
+   suivaient verticalement. C'est donc la version mobile qu'on change, pas le
+   desktop.
+
+   Un rail a accrochage plutot qu'une pile : trois etapes qui se suivent du
+   doigt se lisent comme une sequence, trois etapes empilees se lisent comme
+   trois paragraphes.
+   -------------------------------------------------------------------------- */
+@media (max-width: 860px){
+  .fr .fr-steps{
+    display: flex; grid-template-columns: none;
+    overflow-x: auto; scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+    gap: 12px; padding: 2px 34px 12px 0; margin: 0;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 34px), transparent);
+            mask-image: linear-gradient(to right, #000 calc(100% - 34px), transparent);
+  }
+  .fr .fr-steps::-webkit-scrollbar{ display: none; }
+  /* on defait la ligne image+texte que posait l'ancienne regle mobile */
+  .fr .fr-step{
+    scroll-snap-align: start; flex: 0 0 auto;
+    width: 72vw; max-width: 268px;
+    display: block; grid-template-columns: none;
+    text-align: center; padding: 14px 14px 20px;
+  }
+  .fr .fr-step-ph{
+    margin: 0 0 14px; grid-row: auto;
+    aspect-ratio: 4/3; width: 100%;
+  }
+  .fr .fr-step-n{ font-size: 28px; margin: 0 0 6px; }
+  .fr .fr-step-l{ margin: 0 0 8px; }
+  .fr .fr-steps-hint{
+    font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+    color: var(--ink3); margin: 0 0 4px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. LES ICONES DE BENEFICE DES INGREDIENTS
+   --------------------------------------------------------------------------
+   L'icone illustre LA PLUS-VALUE, pas la plante : un frein pour le zinc, une
+   goutte de fraicheur pour la menthe. Elle se pose en pastille sur le coin de
+   la vignette ronde, la ou l'oeil arrive apres l'image et avant le nom.
+   -------------------------------------------------------------------------- */
+.fr .fr-icard-ph{ position: relative; display: block; }
+.fr .fr-icard-ic{
+  position: absolute; right: 10px; bottom: 10px;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: var(--acc); color: #FBF8F0;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 0 3px #fff;
+}
+.fr .fr-icard-ic svg{ width: 18px; height: 18px; display: block; }
+
+/* Le benefice passe AVANT la dose : ce qui change pour toi, puis combien. */
+.fr .fr-icard-be{
+  font-size: 13.5px; line-height: 1.45; color: var(--acc);
+  font-weight: 600; margin: 2px 0 6px;
+}
+@media (max-width: 420px){
+  .fr .fr-icard-ic{ width: 30px; height: 30px; right: 8px; bottom: 8px; }
+  .fr .fr-icard-ic svg{ width: 16px; height: 16px; }
+  .fr .fr-icard-be{ font-size: 13px; }
+}

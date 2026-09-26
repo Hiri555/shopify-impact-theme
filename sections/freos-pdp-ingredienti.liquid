@@ -43,9 +43,15 @@
               <img class="fr-icard-img" src="{{ block.settings.file | strip | asset_url }}"
                    alt="{{ block.settings.name | escape }}" loading="lazy">
             {%- endif -%}
+            {%- if block.settings.icon != blank and block.settings.icon != 'nessuna' -%}
+              <span class="fr-icard-ic" aria-hidden="true">{% render 'freos-icone', nom: block.settings.icon %}</span>
+            {%- endif -%}
           </span>
           <div class="fr-icard-b">
             <b class="fr-icard-n">{{ block.settings.name }}</b>
+            {%- if block.settings.benefit != blank -%}
+              <p class="fr-icard-be">{{ block.settings.benefit }}</p>
+            {%- endif -%}
             {%- if block.settings.dose != blank -%}
               <p class="fr-icard-d">{{ block.settings.dose }}</p>
             {%- endif -%}
@@ -189,6 +195,57 @@
           "type": "text",
           "id": "name",
           "label": "Nom"
+        },
+        {
+          "type": "text",
+          "id": "benefit",
+          "label": "Benefice ressenti",
+          "info": "Ce que ca change pour la personne. Exemple : le freno che tiene mentre dormi."
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icone du benefice",
+          "default": "foglia",
+          "info": "Elle illustre le BENEFICE, pas la plante.",
+          "options": [
+            {
+              "value": "nessuna",
+              "label": "Aucune"
+            },
+            {
+              "value": "freno",
+              "label": "Frein — ce qui retient"
+            },
+            {
+              "value": "notte",
+              "label": "Nuit — pendant le sommeil"
+            },
+            {
+              "value": "fresco",
+              "label": "Fraicheur — ce qu'on sent"
+            },
+            {
+              "value": "base",
+              "label": "Base — le socle"
+            },
+            {
+              "value": "foglia",
+              "label": "Feuille — vegetal"
+            },
+            {
+              "value": "dolce",
+              "label": "Douceur — la cloture"
+            },
+            {
+              "value": "tempo",
+              "label": "Duree — ce qui reste"
+            },
+            {
+              "value": "radice",
+              "label": "Racine — la tradition"
+            }
+          ]
         },
         {
           "type": "text",

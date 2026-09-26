@@ -1287,3 +1287,10 @@
     max-height: 48vh; max-height: 48svh;
   }
 }
+
+/* Le glyphe panier de la barre collante : il ne parait que sur les pages qui
+   vendent, et il est purement decoratif -- le libelle porte le sens. */
+.fr-sticky-a .fr-sticky-g{
+  width: 17px; height: 17px; flex: none; margin-right: 8px;
+  vertical-align: -3px; display: inline-block;
+}
