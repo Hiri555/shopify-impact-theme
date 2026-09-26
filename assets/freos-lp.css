@@ -1171,3 +1171,46 @@
   .fr-lp1 .section h2{ font-size: 30px; }
   .fr-lp3 .section h2{ font-size: 27px; }
 }
+
+/* ==========================================================================
+   COLLISION DE NOM : `.prose` APPARTIENT DEJA A IMPACT
+   --------------------------------------------------------------------------
+   CE QUE J'AI VU. Sur les quatre LP, deux paragraphes consecutifs se
+   touchaient : aucun blanc entre eux, juste l'interligne. Mesure : le
+   `margin-bottom` calcule d'un paragraphe d'article valait 0 px, alors que
+   notre feuille lui en donne 22.
+
+   POURQUOI. `theme.css`, la feuille d'Impact, declare :
+
+       .prose > :first-child, .prose > :first-child :first-child{
+         margin-block-start: 0 !important; }
+       .prose > :last-child,  .prose > :last-child :last-child{
+         margin-block-end: 0 !important; }
+
+   C'est une regle saine chez Impact : elle empeche le premier et le dernier
+   enfant d'un bloc de texte d'ajouter du blanc aux bords du bloc. Sauf que
+   NOTRE bloc paragraphe est un `<div class="prose">` qui contient UN SEUL
+   `<p>`. Ce paragraphe est donc a la fois premier et dernier enfant : les
+   deux `!important` lui prennent ses deux marges. Nos 22 px n'avaient aucune
+   chance -- `!important` bat n'importe quelle specificite.
+
+   Meme famille de bug que `.fr-faq-i`, qui etait deja l'icone « + » de la FAQ
+   d'Impact : on a repris un nom de classe que le theme hote utilise deja.
+
+   LE CORRECTIF. On ne se bat pas contre le `!important` -- on deplace le
+   rythme la ou Impact ne touche a rien : sur le CONTENEUR `.prose` lui-meme.
+   C'est d'ailleurs sa place logique, puisqu'un bloc paragraphe = un `.prose`.
+
+   CE QUI N'ETAIT PAS CASSE ET NE BOUGE PAS : un `.prose` qui contient
+   PLUSIEURS paragraphes gardait deja ses blancs interieurs (seuls le premier
+   et le dernier sont vises). Impact continue de les tenir aux bords, et c'est
+   ce qu'on veut.
+   ========================================================================== */
+
+.fr-lp1 .prose, .fr-lp2 .prose, .fr-lp3 .prose{ margin-bottom: 1.2em; }
+.fr-lp4 .prose{ margin-bottom: 22px; }
+
+/* Pas de blanc en trop a la fin d'une partie : la marge de section s'en
+   charge deja. */
+.fr-lp1 .prose:last-child, .fr-lp2 .prose:last-child,
+.fr-lp3 .prose:last-child, .fr-lp4 .prose:last-child{ margin-bottom: 0; }
