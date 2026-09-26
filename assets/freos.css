@@ -1321,6 +1321,12 @@
 .fr .fr-cmp-wrap::-webkit-scrollbar-thumb{ background:var(--accl); border-radius:4px; }
 .fr .fr-cmp{ border-collapse:separate; border-spacing:0; width:100%;
   min-width:660px; font-size:13.5px; }
+.fr .fr-cmp{ display:table; }
+.fr .fr-cmp thead{ display:table-header-group; }
+.fr .fr-cmp tbody{ display:table-row-group; }
+.fr .fr-cmp tr{ display:table-row; }
+.fr .fr-cmp th,
+.fr .fr-cmp td{ display:table-cell; }
 .fr .fr-cmp-corner{ background:var(--paper,#FFFEF9); position:sticky; left:0; z-index:3;
   width:116px; min-width:116px; }
 .fr .fr-cmp-h{ vertical-align:bottom; text-align:center; padding:0 10px 12px;
