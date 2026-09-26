@@ -620,8 +620,8 @@
         "pb": 0,
         "headline": "Ventinove euro e novanta. Trenta sere.",
         "body": "<p><p>Un barattolo dura trenta sere. Spedizione gratuita in Italia · 6-11 giorni lavorativi. <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
-        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "cta_label": "Scopri qual è il tuo caso →",
+        "cta_url": "[QUIZ_URL]",
         "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>",
         "rule": false
       }
@@ -758,11 +758,11 @@
         "pt": 0,
         "pb": 0,
         "heading": "Le cinque obiezioni <em>che fermano tutti.</em>",
-        "sub": "Un’obiezione per testimonianza. Un avatar diverso ogni volta, perché ognuno si riconosca in almeno uno.",
+        "sub": "Sessanta secondi. Nessuna email, nessun account.",
         "rule": true,
-        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Un barattolo, trenta sere. Un mese di prova, rimborso senza reso."
+        "cta_label": "Scopri qual è il tuo caso →",
+        "cta_url": "[QUIZ_URL]",
+        "cta_sub": "Sessanta secondi. Nessuna email, nessun account."
       }
     },
     "costi": {
@@ -819,9 +819,9 @@
         "lead": "Non per farti sentire in colpa. Per mettere in fila dei numeri che nessuno ti mette in fila.",
         "note": "E la parte onesta: non fanno la stessa cosa.",
         "source": "Fonti tariffe: detartrasi per regione (Nord 84 €, Centro 70 €, Sud 60 €) · pulizia approfondita 70–150 € · routine preventiva ≈ 200 €/anno · spesa odontoiatrica media 430 € nel 2025, indagine nazionale OmniSalus. Le tariffe variano per struttura e regione.",
-        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Un barattolo, trenta sere. Un mese di prova, rimborso senza reso.",
+        "cta_label": "Scopri qual è il tuo caso →",
+        "cta_url": "[QUIZ_URL]",
+        "cta_sub": "Sessanta secondi. Nessuna email, nessun account.",
         "rule": true
       }
     },
@@ -930,8 +930,8 @@
         "pb": 0,
         "headline": "Ventinove euro e novanta. Trenta sere.",
         "body": "<p><p>Un barattolo dura trenta sere. Spedizione gratuita in Italia · 6-11 giorni lavorativi. <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
-        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "cta_label": "Scopri qual è il tuo caso →",
+        "cta_url": "[QUIZ_URL]",
         "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>",
         "rule": false
       }
@@ -1182,6 +1182,17 @@
         "pt": 0,
         "pb": 0
       }
+    },
+    "sticky": {
+      "type": "freos-lp-sticky",
+      "settings": {
+        "label": "Fai il test in 60 secondi →",
+        "url": "[QUIZ_URL]",
+        "sub": "",
+        "at": 30,
+        "hide_end": 88,
+        "mobile_only": false
+      }
     }
   },
   "order": [
@@ -1208,6 +1219,7 @@
     "offerta2",
     "chiusura",
     "fonti",
-    "colophon"
+    "colophon",
+    "sticky"
   ]
 }

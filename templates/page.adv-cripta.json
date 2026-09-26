@@ -287,7 +287,7 @@
         "kind": "fig",
         "heading": "Quello che ho trovato in tre mesi <em>non era su nessun sito di rimedi.</em>",
         "intro": "<p>Era in quattro studi. E nessuno me li aveva mai messi in fila.</p>",
-        "label": "Primo",
+        "label": "Scopri qual è il tuo caso →",
         "title": "Non hai una bocca liscia.",
         "text": "<p>Le tonsille non sono due palline. Sono attraversate da <strong>cripte</strong>: canali ramificati che scendono dentro il tessuto. Ogni infiammazione che hai avuto le ha allargate un po'.</p><p>Sono fatte per intrappolare. È il loro mestiere. Dentro finisce quello che passa — cibo, cellule morte, batteri.</p>",
         "source": ""
@@ -331,7 +331,7 @@
         "alt": "Sezione di una cripta tonsillare, dal chiaro in superficie al buio in fondo",
         "caption": "Il buio in fondo non è un effetto grafico. È la quantità di ossigeno che ci arriva.",
         "kind": "fig",
-        "label": "Secondo",
+        "label": "Scopri qual è il tuo caso →",
         "title": "Là dentro non arriva aria.",
         "text": "<p>Nel 2009 dei ricercatori hanno infilato microelettrodi dentro tonsilloliti veri, per misurare l'ossigeno.</p>",
         "source": ""
@@ -356,7 +356,7 @@
         "rule": false,
         "pt": 0,
         "pb": 0,
-        "label": "Terzo",
+        "label": "Scopri qual è il tuo caso →",
         "title": "In un posto senza aria cresce solo una cosa.",
         "text": "<p>I batteri anaerobi. Quelli che non sopportano l'ossigeno, e che ovunque altro nella tua bocca non riuscirebbero a vivere.</p><p>Uno studio del 2006 ha analizzato la flora di sei tonsilloliti. In <strong>tutti e sei</strong> c'erano batteri produttori di composti solforati — fino alla metà delle colonie.</p><p>Quei composti si chiamano idrogeno solforato e metilmercaptano. Sono gli stessi dell'uovo marcio.</p><p>E non è una pietra. È una colonia viva, a strati, costruita come la placca sui denti.</p>",
         "source": "",
@@ -404,7 +404,7 @@
         "alt": "Il tonsillolite compresso libera composti solforati verso la cavità orale",
         "caption": "Ottocento volte al giorno. A ogni compressione, quello che c'è dentro esce.",
         "kind": "fig",
-        "label": "Quarto — ed è qui che tutto cambia",
+        "label": "Scopri qual è il tuo caso →",
         "title": "I composti non restano nella pietra.",
         "text": "<p>Lo stesso studio lo scrive: <strong>il rilascio avviene quando il tonsillolite viene schiacciato.</strong></p><p>Tu deglutisci circa ottocento volte al giorno. Mangi. Parli. Tossisci.</p>",
         "source": ""
@@ -842,9 +842,9 @@
         "rule": false,
         "pt": 0,
         "pb": 0,
-        "label": "Riprenditi i trenta centimetri · 29,90 €",
-        "url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "sub": "Un barattolo, trenta sere. Un mese di prova, rimborso senza reso."
+        "label": "Scopri qual è il tuo caso →",
+        "url": "[QUIZ_URL]",
+        "sub": "Sessanta secondi. Nessuna email, nessun account."
       }
     },
     "obiezioni": {
@@ -929,10 +929,10 @@
         "pt": 0,
         "pb": 0,
         "heading": "Le cinque obiezioni <em>che fermano tutti.</em>",
-        "sub": "Un’obiezione per testimonianza. Un avatar diverso ogni volta, perché ognuno si riconosca in almeno uno.",
-        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Un barattolo, trenta sere. Un mese di prova, rimborso senza reso."
+        "sub": "Sessanta secondi. Nessuna email, nessun account.",
+        "cta_label": "Scopri qual è il tuo caso →",
+        "cta_url": "[QUIZ_URL]",
+        "cta_sub": "Sessanta secondi. Nessuna email, nessun account."
       }
     },
     "costo": {
@@ -1000,9 +1000,9 @@
         "lead": "Non per dirti di non farla. Per darti i numeri, perché nessuno te li mette in fila.",
         "note": "E adesso la parte onesta: <b>non fanno la stessa cosa.</b> L'intervento toglie le tonsille. FREOS no — non le tocca, non scioglie i tonsilloliti, non entra nella cripta.<br><br>Se hai l'indicazione per operarti, operati. Se invece ti hanno detto di lasciar perdere perché «non è pericoloso», adesso sai che esiste un'altra cosa da fare la sera.",
         "source": "Tariffe di riferimento: AOU Careggi, libera professione (3.500–6.000 €) · Tariffario IRCCS Burlo Garofolo 2023 (2.445 € tonsillectomia, 3.423 € intracapsulare) · Tempi di recupero: 10–14 giorni. Le tariffe variano per struttura e regione.",
-        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Composizione completa e garanzia sulla pagina del prodotto."
+        "cta_label": "Scopri qual è il tuo caso →",
+        "cta_url": "[QUIZ_URL]",
+        "cta_sub": "Sessanta secondi. Nessuna email, nessun account."
       }
     },
     "stasera": {
@@ -1016,8 +1016,8 @@
         "intro": "<p>Questo articolo esiste perché nessuno mi ha dato una parola che avrei potuto cercare dieci anni prima. Adesso ce l'hai.</p><p><strong>La prima cosa è gratis.</strong> Se hai uno dei segnali d'allarme qui sopra, prendi appuntamento. Se non ne hai, sai almeno dove guardare e come si chiama — ed è più di quanto avessi io a quarant'anni.</p><p><strong>La seconda, se vuoi.</strong> Il gesto della sera esiste. La pagina del prodotto dice tutto: formula completa, dosi, prezzo, garanzia. Non lo metto qui perché qui non è il posto.</p>",
         "headline": "La cripta resta.<br>Quello che ne esce, no.",
         "body": "<p>29,90 € il barattolo — trenta sere. Composizione completa, dosi e garanzia sulla pagina del prodotto.</p>",
-        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "cta_label": "Scopri qual è il tuo caso →",
+        "cta_url": "[QUIZ_URL]",
         "guarantee": "<p>Nessun abbonamento nascosto. Nessun conto alla rovescia.</p>"
       }
     },
@@ -1208,6 +1208,17 @@
         "pt": 0,
         "pb": 0
       }
+    },
+    "sticky": {
+      "type": "freos-lp-sticky",
+      "settings": {
+        "label": "Fai il test in 60 secondi →",
+        "url": "[QUIZ_URL]",
+        "sub": "",
+        "at": 30,
+        "hide_end": 88,
+        "mobile_only": false
+      }
     }
   },
   "order": [
@@ -1234,6 +1245,7 @@
     "stasera",
     "faq",
     "fonti",
-    "ours"
+    "ours",
+    "sticky"
   ]
 }
