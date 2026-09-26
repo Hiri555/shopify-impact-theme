@@ -1107,3 +1107,67 @@
     font-size: 58px; margin-right: 9px;
   }
 }
+
+/* ==========================================================================
+   DEUX DEFAUTS TROUVES A LA MESURE, APRES C1 ET C2
+   --------------------------------------------------------------------------
+   Ils ne se voient pas dans le code : ils se voient en mesurant la page
+   rendue. Les voici tous les deux, avec ce qui les a causes.
+
+   1. LE BOUTON D'OFFRE N'ETAIT PLUS UN BOUTON. `.price-cta` etait un lien
+      texte : italique, souligne d'un filet de 2 px, `padding: 4px 0`. La cure
+      epuree de la vague A a retire les bords haut et bas de 26 types
+      d'element -- et `.price-cta` etait dans la liste. Elle lui a donc pris
+      son soulignement, c'est-a-dire sa seule marque de bouton. Mesure : 36 px
+      de haut sur adv-cripta, 42 px sur la listicle en desktop. Sous les 44 px
+      d'une cible tactile, sur le bouton qui vend.
+      C'EST MA REGRESSION, introduite en vague A et rattrapee ici. Il devient
+      un vrai bouton : plein, centre, 52 px minimum, sur les quatre feuilles.
+
+   2. LES TITRES DE PARTIE RENDAIENT A 16 PX. `.fr-lp2` avait sa regle `h2`,
+      `.fr-lp1` et `.fr-lp3` ne l'avaient jamais eue : seuls les titres des
+      motivi (`.r h2`) etaient habilles. Resultat sur la listicle refondue :
+      le chapeau « Sei motivi per cui torna » et les DEUX titres d'encart
+      d'offre s'affichaient a la taille du texte courant -- indiscernables
+      d'un paragraphe. Sur une page dont l'ossature est une liste de six
+      points annonces, c'est le titre qui annonce la liste qui disparaissait.
+   ========================================================================== */
+
+/* --- 1. le bouton d'offre ------------------------------------------------- */
+.fr-lp1 .price-cta, .fr-lp2 .price-cta,
+.fr-lp3 .price-cta, .fr-lp4 .price-cta{
+  display: flex; align-items: center; justify-content: center;
+  box-sizing: border-box; width: 100%; max-width: 440px;
+  min-height: 52px; padding: 14px 20px; margin: 6px 0 0;
+  background: var(--acc, var(--accent)); color: #fff;
+  font-family: Inter, -apple-system, 'Segoe UI', sans-serif;
+  font-size: 16.5px; font-weight: 600; font-style: normal; line-height: 1.3;
+  letter-spacing: 0; text-align: center; text-decoration: none;
+  border: 0; border-radius: 2px;
+}
+.fr-lp1 .price-cta:hover, .fr-lp2 .price-cta:hover,
+.fr-lp3 .price-cta:hover, .fr-lp4 .price-cta:hover{
+  background: var(--acc2, var(--ink)); color: #fff; border: 0;
+}
+
+/* --- 2. les titres de partie -------------------------------------------- */
+/* Chaque feuille garde sa police : le titre d'une partie doit ressembler au
+   reste de SA page, pas aux autres. */
+.fr-lp1 .section h2{
+  font-family: 'Source Serif 4', Georgia, serif; font-weight: 700;
+  font-size: 26px; line-height: 1.18; letter-spacing: -.01em;
+  color: var(--ink); margin: 0 0 18px;
+}
+.fr-lp3 .section h2{
+  font-family: Fraunces, Georgia, serif; font-weight: 500;
+  font-size: 24px; line-height: 1.15; letter-spacing: -.01em;
+  color: var(--ink); margin: 0 0 16px;
+}
+.fr-lp1 .section h2 em, .fr-lp1 .section h2 i,
+.fr-lp3 .section h2 em, .fr-lp3 .section h2 i{
+  font-style: italic; color: var(--acc, var(--accent));
+}
+@media (min-width: 760px){
+  .fr-lp1 .section h2{ font-size: 30px; }
+  .fr-lp3 .section h2{ font-size: 27px; }
+}
