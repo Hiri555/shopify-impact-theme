@@ -1214,3 +1214,31 @@
    charge deja. */
 .fr-lp1 .prose:last-child, .fr-lp2 .prose:last-child,
 .fr-lp3 .prose:last-child, .fr-lp4 .prose:last-child{ margin-bottom: 0; }
+
+/* --------------------------------------------------------------------------
+   LE PREMIER ECRAN DOIT TENIR DANS UN ECRAN
+   --------------------------------------------------------------------------
+   MESURE : `freos-lp3-08.webp` est un portrait 3:4 (700 x 933). Servi pleine
+   largeur a 390 px, il fait 520 px de haut -- 62 % d'un ecran de telephone, et
+   le titre de la page est deja au-dessus. Resultat : la note, le bouton et
+   l'avis, que le cadre CROEvolution veut TOUS sur le premier ecran,
+   tombaient sous la ligne de flottaison. Un premier ecran qui ne tient pas
+   dans un ecran n'est plus un premier ecran.
+
+   On borne donc la hauteur de la photo en unites d'ecran, et on cadre par le
+   haut : l'image porte son titre en haut, c'est la partie qu'on garde.
+   `svh` = la hauteur visible quand les barres du navigateur sont deployees,
+   soit le pire cas ; `vh` reste en repli pour les vieux navigateurs.
+   -------------------------------------------------------------------------- */
+.fr-lp1 .primo-v, .fr-lp2 .primo-v, .fr-lp3 .primo-v, .fr-lp4 .primo-v{
+  height: 44vh; height: 44svh; max-height: 400px; min-height: 230px;
+}
+.fr-lp1 .primo-v img, .fr-lp2 .primo-v img,
+.fr-lp3 .primo-v img, .fr-lp4 .primo-v img{
+  width: 100%; height: 100%; object-fit: cover; object-position: center 18%;
+}
+@media (min-width: 760px){
+  .fr-lp1 .primo-v, .fr-lp2 .primo-v, .fr-lp3 .primo-v, .fr-lp4 .primo-v{
+    height: 48vh; height: 48svh; max-height: 460px;
+  }
+}
