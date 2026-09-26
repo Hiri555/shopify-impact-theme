@@ -424,38 +424,6 @@
         "cta_sub": "Trenta sere di prova · rimborso completo · nessun abbonamento"
       }
     },
-    "testimone": {
-      "type": "freos-lp-testimonials",
-      "blocks": {
-        "t1": {
-          "type": "tst",
-          "settings": {
-            "story": true,
-            "obj_head": "",
-            "obj_tag": "",
-            "quote": "«Se dovessi rifarlo, comincerei un anno prima.»",
-            "body": "<p>Il primo tonsillolite l'ho visto quando ne avevo diciannove. Nel bagno della casa dei miei, dopo cena, credendo fosse un pezzo di broccolo che mi era rimasto in gola. L'ho schiacciato tra due dita e ho aperto la finestra a novembre. Non ne avevo mai sentito parlare, non sapevo che avesse un nome.</p><p>Da allora ne ho visti — o creduto di vedere — decine. Sempre da sola, sempre in bagno, sempre col telefono acceso davanti allo specchio. In venticinque anni ho comprato praticamente ogni collutorio che ho visto in farmacia. Il TheraBreath ordinato dagli Stati Uniti. Il probiotico orale svizzero. Il raschietto in acciaio. La macchinetta con l'ossigeno attivo che si vede su TikTok. Due volte sono andata dall'otorino. Due volte mi ha detto la stessa cosa: «Ci sono. Non è pericoloso, lasci perdere.»</p><p>Quando ho ordinato FREOS non ci credevo. L'ho comprato dopo aver letto quella riga sul cotton fioc che libera più di quanto tolga — perché era esattamente quello che sospettavo da anni ma non avevo mai letto scritto da nessuna parte.</p><p>Il primo cambiamento non è stato una sensazione. È stato un gesto. Da quindici anni ogni sera prima di dormire prendevo il telefono, accendevo la torcia e guardavo in gola. Con FREOS il gesto è diventato: due misurini, dopo lo spazzolino. Ho smesso di prendere il telefono. Non subito — dopo la terza o quarta sera.</p><p>Il sapore al risveglio è cambiato tra il quarto e il quinto giorno. Non è sparito — non voglio raccontarti una storia che non è vera. È diventato più leggero. Più «bocca vuota» e meno «qualcosa dentro».</p><p>Il segnale che aspettavo da anni è arrivato dopo circa cinque settimane, e non l'ho notato io. Mio marito, una sera in cui mi ero addormentata con la bocca aperta, mi ha detto: «Prima non riuscivo a starti vicino quando parlavi la mattina. Adesso non ci penso più.» Non gli avevo detto niente di quello che stavo facendo. Non sapeva nemmeno che avevo comprato qualcosa.</p>",
-            "name": "Elena D.",
-            "role": "43 anni · insegnante · Modena",
-            "badge": "Verificato"
-          }
-        }
-      },
-      "block_order": [
-        "t1"
-      ],
-      "settings": {
-        "scope": "fr-lp3",
-        "rule": true,
-        "pt": 0,
-        "pb": 0,
-        "kicker": "La testimonianza",
-        "heading": "La storia di chi <em>non ci credeva.</em>",
-        "sub": "Il primo racconto completo: trenta sere, dall'inizio alla fine. Nome, età, città — verificati.",
-        "cta_label": "",
-        "cta_sub": ""
-      }
-    },
     "obiezioni": {
       "type": "freos-lp-testimonials",
       "blocks": {
@@ -587,6 +555,69 @@
         "legal": "<p>Integratore alimentare. FREOS non cura l’alitosi. Non sostituisce una dieta variata ed equilibrata né uno stile di vita sano. In presenza di dolore, difficoltà a deglutire, febbre, mal d'orecchio o asimmetria delle tonsille, rivolgiti al tuo medico o a un otorinolaringoiatra.</p>",
         "links": "<p>© 2026 FREOS · DINSO VENTURES LLC Pagamenti sicuri</p>"
       }
+    },
+    "voci": {
+      "type": "freos-lp-voci",
+      "blocks": {
+        "v1": {
+          "type": "voce",
+          "settings": {
+            "text": "Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Un giorno mi sono resa conto che non lo stavo più facendo.",
+            "who": "Giulia, 34 anni"
+          }
+        },
+        "v2": {
+          "type": "voce",
+          "settings": {
+            "text": "Non prometto miracoli. Dico che al mattino la sensazione non è più quella di prima, ed è lì che me ne sono accorto per primo.",
+            "who": "Marco, 47 anni"
+          }
+        },
+        "v3": {
+          "type": "voce",
+          "settings": {
+            "text": "Avevo il cassetto del bagno pieno di cose comprate e mai finite. Adesso c’è un pacchetto di mentine aperto da due mesi.",
+            "who": "Elena, 43 anni"
+          }
+        },
+        "v4": {
+          "type": "voce",
+          "settings": {
+            "text": "Ho smesso di calcolare la distanza quando parlo. Non me l’ero imposto: me ne sono accorto dopo, ripensandoci.",
+            "who": "Davide, 39 anni"
+          }
+        },
+        "v5": {
+          "type": "voce",
+          "settings": {
+            "text": "La prima settimana non è successo niente e stavo per lasciar perdere. Poi qualcosa si è mosso. Avrei voluto saperlo prima.",
+            "who": "Sara, 31 anni"
+          }
+        },
+        "v6": {
+          "type": "voce",
+          "settings": {
+            "text": "La cosa che mi ha colpito non è il prodotto. È aver letto la descrizione esatta di quello che mi succede. Quindi non me lo stavo inventando.",
+            "who": "Alessandro, 52 anni"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6"
+      ],
+      "settings": {
+        "heading": "Quello che ci siamo sentiti ripetere.",
+        "intro": "<p>Raccolte durante la nostra ricerca, riscritte in forma breve.</p>",
+        "foot": "<p>Sono esperienze individuali, non risultati tipici.</p>",
+        "scope": "fr-lp3",
+        "pt": 0,
+        "pb": 0
+      }
     }
   },
   "order": [
@@ -600,7 +631,7 @@
     "attese",
     "offerta",
     "confronto",
-    "testimone",
+    "voci",
     "obiezioni",
     "ours"
   ]

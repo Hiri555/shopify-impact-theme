@@ -847,144 +847,6 @@
         "sub": "Un barattolo, trenta sere. Un mese di prova, rimborso senza reso."
       }
     },
-    "martina": {
-      "type": "freos-lp-testimonials",
-      "blocks": {
-        "t1": {
-          "type": "tst",
-          "settings": {
-            "story": true,
-            "obj_head": "",
-            "obj_tag": "",
-            "quote": "«Mi hanno detto per anni che me le inventavo.»",
-            "body": "<p>La prima volta che ne ho tirata fuori una avevo ventidue anni ed ero nel bagno del locale dove lavoravo. Bianca, grande come un chicco di riso. L'ho schiacciata per capire cosa fosse e ho dovuto uscire dal bagno.</p><p>Dall'otorino ci sono andata due volte. La prima mi ha detto che le tonsille erano criptiche e che non c'era niente da fare. La seconda, tre anni dopo, mi ha detto che ero fissata. Quella parola me la ricordo ancora.</p><p>Da lì ho fatto da sola. Cotton fioc, l'idropulsore puntato in gola, una volta anche un cucchiaino. Funzionava per un giorno. Il giorno dopo era tutto come prima.</p><p>Quando ho letto che il cotton fioc libera più odore di quanto ne tolga ho pensato: ecco, quindi non sono matta. Non perché risolvesse qualcosa. Perché per la prima volta qualcuno descriveva esattamente quello che mi succedeva.</p><p>Ho comprato FREOS a ottobre. La prima settimana non è successo niente e stavo per lasciar perdere. Il cambiamento l'ho visto verso la decima sera, e non in gola: ho smesso di controllare con la torcia prima di dormire. Facevo quella cosa ogni sera da sette anni.</p><p>Le cripte ci sono ancora. Non sono sparite, e nessuno mi aveva promesso che sarebbero sparite. Quello che è cambiato è che non passo più la sera a guardarci dentro.</p>",
-            "name": "Martina G.",
-            "role": "29 anni · barista · Firenze",
-            "badge": "Verificato"
-          }
-        }
-      },
-      "block_order": [
-        "t1"
-      ],
-      "settings": {
-        "scope": "fr-lp2",
-        "rule": true,
-        "pt": 0,
-        "pb": 0,
-        "heading": "La storia di chi <em>non ci credeva.</em>",
-        "sub": "Il primo racconto completo: trenta sere, dall’inizio alla fine. Nome, età, città — verificati.",
-        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Un barattolo, trenta sere. Un mese di prova, rimborso senza reso."
-      }
-    },
-    "letture": {
-      "type": "freos-lp-editorial",
-      "blocks": {
-        "l1": {
-          "type": "para",
-          "settings": {
-            "text": "<p>FREOS è arrivato in Italia da poco: le prime recensioni sono sulla scheda del prodotto. Qui sotto trovi invece i racconti raccolti per questa inchiesta, in forma anonima.</p>"
-          }
-        },
-        "l2": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Ma per scrivere questo ho letto centinaia di messaggi, in tre lingue, quasi tutti anonimi.</p>"
-          }
-        },
-        "l3": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Uno ha cinquantotto anni e ha scritto in maiuscolo: <em>possibile che sia l'unico a non averne mai sentito parlare? Perché il mio dentista non me lo ha mai detto?</em></p>"
-          }
-        },
-        "l4": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Uno le toglie da quando era bambino e ha scoperto il nome a trent'anni.</p>"
-          }
-        },
-        "l5": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Uno ha scritto: <em>i colleghi si scostano sempre, ma io in gola non vedo niente, devono essere nascosti.</em></p>"
-          }
-        },
-        "l6": {
-          "type": "para",
-          "settings": {
-            "text": "<p>E uno, dopo aver elencato otto rimedi provati, ha chiuso così: <em>niente. L'unica cosa che mi fa stare tranquillo in mezzo alla gente è masticare chewing gum a raffica.</em></p>"
-          }
-        },
-        "l7": {
-          "type": "para",
-          "settings": {
-            "text": "<p><strong>Siamo tanti. Ci riconosciamo da una cosa sola: nessuno ce lo ha mai spiegato.</strong></p>"
-          }
-        },
-        "l8": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Un barattolo, trenta sere. Un mese di prova, rimborso senza reso.</p>"
-          }
-        },
-        "h_pesante": {
-          "type": "sub",
-          "settings": {
-            "text": "La cosa più pesante <em>non è mai stata la pallina.</em>",
-            "level": "h2"
-          }
-        },
-        "d1": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Nel mio lavoro la distanza non si sceglie. Una cervicale la tratti da vicino, oppure non la tratti.</p>"
-          }
-        },
-        "d2": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Per anni ho gestito quella distanza con micro-decisioni che nessuno vedeva. Parlare girando leggermente la testa. Finire la frase prima di avvicinarmi. Tenere la mentina sotto la lingua durante la seduta.</p>"
-          }
-        },
-        "d3": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Nessuna di quelle cose ero io. Era un lavoro in più, silenzioso, sopra il lavoro vero.</p>"
-          }
-        },
-        "pull9": {
-          "type": "pull",
-          "settings": {
-            "text": "Non volevo l'alito fresco.<br>Volevo smettere di calcolare."
-          }
-        }
-      },
-      "block_order": [
-        "l1",
-        "l2",
-        "l3",
-        "l4",
-        "l5",
-        "l6",
-        "l7",
-        "l8",
-        "h_pesante",
-        "d1",
-        "d2",
-        "d3",
-        "pull9"
-      ],
-      "settings": {
-        "scope": "fr-lp2",
-        "rule": true,
-        "pt": 0,
-        "pb": 0,
-        "heading": "Non sei l'unico <em>con la torcia del telefono accesa.</em>"
-      }
-    },
     "obiezioni": {
       "type": "freos-lp-testimonials",
       "blocks": {
@@ -1283,6 +1145,69 @@
         "legal": "<p><strong>Editore.</strong> DINSO VENTURES LLC · 30 N Gould St, Ste #59143, Sheridan, WY 82801, USA · Reg. 2026-002082547 · <a href=\"mailto:contact@try-freos.com\">contact@try-freos.com</a></p><p><strong>Nota per chi legge.</strong> Racconto in prima persona, con contenuti sponsorizzati dal produttore di FREOS. Le fonti citate, i limiti dichiarati del prodotto e il rinvio allo specialista restano indipendenti dallo sponsor.</p><p>Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di dolore, difficoltà a deglutire, febbre, mal d'orecchio o asimmetria delle tonsille, rivolgersi al proprio medico o a un otorinolaringoiatra.</p><p>Il nome dell'autore è stato modificato su sua richiesta. Illustrazioni mediche realizzate per questo articolo.</p>",
         "links": "<p>© 2026 · <a href=\"/policies/privacy-policy\">Privacy e cookie</a> · <a href=\"/policies/terms-of-service\">Note legali</a></p>"
       }
+    },
+    "voci": {
+      "type": "freos-lp-voci",
+      "blocks": {
+        "v1": {
+          "type": "voce",
+          "settings": {
+            "text": "Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Un giorno mi sono resa conto che non lo stavo più facendo.",
+            "who": "Giulia, 34 anni"
+          }
+        },
+        "v2": {
+          "type": "voce",
+          "settings": {
+            "text": "Non prometto miracoli. Dico che al mattino la sensazione non è più quella di prima, ed è lì che me ne sono accorto per primo.",
+            "who": "Marco, 47 anni"
+          }
+        },
+        "v3": {
+          "type": "voce",
+          "settings": {
+            "text": "Avevo il cassetto del bagno pieno di cose comprate e mai finite. Adesso c’è un pacchetto di mentine aperto da due mesi.",
+            "who": "Elena, 43 anni"
+          }
+        },
+        "v4": {
+          "type": "voce",
+          "settings": {
+            "text": "Ho smesso di calcolare la distanza quando parlo. Non me l’ero imposto: me ne sono accorto dopo, ripensandoci.",
+            "who": "Davide, 39 anni"
+          }
+        },
+        "v5": {
+          "type": "voce",
+          "settings": {
+            "text": "La prima settimana non è successo niente e stavo per lasciar perdere. Poi qualcosa si è mosso. Avrei voluto saperlo prima.",
+            "who": "Sara, 31 anni"
+          }
+        },
+        "v6": {
+          "type": "voce",
+          "settings": {
+            "text": "La cosa che mi ha colpito non è il prodotto. È aver letto la descrizione esatta di quello che mi succede. Quindi non me lo stavo inventando.",
+            "who": "Alessandro, 52 anni"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6"
+      ],
+      "settings": {
+        "heading": "Quello che ci siamo sentiti ripetere.",
+        "intro": "<p>Raccolte durante la nostra ricerca, riscritte in forma breve.</p>",
+        "foot": "<p>Sono esperienze individuali, non risultati tipici.</p>",
+        "scope": "fr-lp2",
+        "pt": 0,
+        "pb": 0
+      }
     }
   },
   "order": [
@@ -1303,8 +1228,7 @@
     "chimica",
     "freos",
     "cta1",
-    "martina",
-    "letture",
+    "voci",
     "obiezioni",
     "costo",
     "stasera",

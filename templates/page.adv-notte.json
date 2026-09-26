@@ -703,9 +703,9 @@
         "photo_alt": "FREOS · Gel Notturno Micro-Aderente allo Zinco",
         "photo_caption": "Un barattolo. Trenta sere. Due misurini dopo cena.",
         "ing_heading": "Cosa c’è dentro, e a cosa serve.",
-        "note": "<p><p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco (citrato) 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p></p>",
-        "disclaimer_heading": "Cosa FREOS non è, e non promette.",
-        "disclaimer": "<p><p>FREOS è un <strong>integratore alimentare</strong>. <strong>Non cura l’alitosi</strong>: non è un farmaco e non ha un’indicazione terapeutica. Non tocca le tonsille e non scioglie i tonsilloliti. Se hai dolore, febbre o difficoltà a deglutire, l’otorino viene prima di qualunque gel.</p></p>",
+        "note": "",
+        "disclaimer_heading": "",
+        "disclaimer": "",
         "rule": true
       }
     },
@@ -721,78 +721,6 @@
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
         "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>",
         "rule": false
-      }
-    },
-    "racconto": {
-      "type": "freos-lp-testimonials",
-      "blocks": {
-        "s1": {
-          "type": "tst",
-          "settings": {
-            "story": true,
-            "quote": "«Ho passato sei anni a curare lo stomaco. Il problema era altrove.»",
-            "body": "<p><p>Ho cominciato a farci caso nell'inverno del 2019, in macchina, mentre accompagnavo mia figlia a scuola. Si è girata verso il finestrino e l'ha aperto. Aveva nove anni, non l'ha fatto per cattiveria — l'ha fatto e basta. Io ho continuato a guidare come se niente fosse.</p><p>Da lì è cominciato il giro. Gastroscopia, test per l'Helicobacter, due cicli di probiotici, quattro mesi senza latticini. Il gastroenterologo è stato onesto: «Lei ha una gastrite lieve, ma non è questo che le dà quel sintomo.» Non gli ho creduto. Era più facile pensare allo stomaco: lo stomaco si cura.</p><p>Quando ho ordinato FREOS non ci credevo. L'ho comprato per una riga sola: che di notte la saliva quasi si ferma. Quella cosa l'avevo notata senza saperla spiegare — era sempre peggio al risveglio, mai dopo pranzo.</p><p>Il primo cambiamento non è stato l'alito. È stato che ho smesso di tenere le mentine nel cruscotto. Me ne sono accorta a maggio, ritrovando un pacchetto aperto a gennaio e ancora mezzo pieno.</p><p>Il sapore al mattino è cambiato verso la seconda settimana. Non è sparito — presto la mattina c'è ancora qualcosa. È diventato più leggero, meno denso.</p><p>Il segnale non l'ho cercato io. A marzo mia figlia si è addormentata sul divano appoggiata alla mia spalla, con la faccia girata verso di me. Non lo faceva da anni. Non le ho chiesto niente e non le ho detto niente.</p><p>Se dovessi rifarlo, non ricomincerei dallo stomaco.</p></p>",
-            "name": "Francesca L.",
-            "role": "41 anni · impiegata · Brescia",
-            "badge": "Verificato"
-          }
-        }
-      },
-      "block_order": [
-        "s1"
-      ],
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "heading": "La storia di chi <em>non ci credeva.</em>",
-        "sub": "Il primo racconto completo: trenta sere, dall’inizio alla fine. Nome, età, città — verificati.",
-        "rule": true,
-        "cta_label": "Riprenditi i trenta centimetri · 29,90 €",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Un barattolo, trenta sere. Un mese di prova, rimborso senza reso."
-      }
-    },
-    "non_sei_sola": {
-      "type": "freos-lp-editorial",
-      "blocks": {
-        "p8": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>FREOS è arrivato in Italia da poco: le prime recensioni sono sulla scheda del prodotto. Per questa inchiesta siamo andati anche altrove, e abbiamo letto centinaia di racconti — nei gruppi Facebook, sotto i video degli otorini, nei forum — di persone che, in forma anonima, dicono quello che a voce non riescono a dire.</p></p>"
-          }
-        },
-        "p9": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Sono racconti che si assomigliano tutti. Chi ha scoperto tutto per caso, cantando in macchina, quando una pallina si è staccata da sola. Chi ha comprato un idropulsore apposta, per toglierle due volte alla settimana. Chi non ha più le tonsille da otto anni e continua a chiedersi perché l'alito torna lo stesso. Chi ha girato dentisti, otorini, gastroenterologi, senza mai una risposta chiara. E chi, dopo anni, ha finito per dirsi la frase che diventa, alla fine, il patto silenzioso di questa comunità: <em>«chi ha le tonsille bucate deve pulirle regolarmente, come ci si pulisce il naso. Ma nessuno lo dice. Ce lo raccontiamo tra di noi.»</em></p></p>"
-          }
-        },
-        "p10": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Non è una cosa rara. In una grande serie di esami del collo, i tonsilloliti comparivano in quasi quattro persone su dieci, soprattutto dopo i quarant'anni, e quasi sempre senza sintomi. Tutte queste persone stavano facendo la guardia a una metà sola. <em>Come te, forse.</em></p></p>"
-          }
-        },
-        "pull": {
-          "type": "pull",
-          "settings": {
-            "text": "C'è una stanchezza che non si racconta: quella di cercare, ogni sera, qualcosa in fondo alla gola."
-          }
-        }
-      },
-      "block_order": [
-        "p8",
-        "p9",
-        "p10",
-        "pull"
-      ],
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "heading": "Non sei l'unica persona <em>con la luce del telefono accesa la sera.</em>",
-        "rule": true
       }
     },
     "coppie": {
@@ -1214,6 +1142,69 @@
         "links": "<p>© L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p>",
         "rule": false
       }
+    },
+    "voci": {
+      "type": "freos-lp-voci",
+      "blocks": {
+        "v1": {
+          "type": "voce",
+          "settings": {
+            "text": "Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Un giorno mi sono resa conto che non lo stavo più facendo.",
+            "who": "Giulia, 34 anni"
+          }
+        },
+        "v2": {
+          "type": "voce",
+          "settings": {
+            "text": "Non prometto miracoli. Dico che al mattino la sensazione non è più quella di prima, ed è lì che me ne sono accorto per primo.",
+            "who": "Marco, 47 anni"
+          }
+        },
+        "v3": {
+          "type": "voce",
+          "settings": {
+            "text": "Avevo il cassetto del bagno pieno di cose comprate e mai finite. Adesso c’è un pacchetto di mentine aperto da due mesi.",
+            "who": "Elena, 43 anni"
+          }
+        },
+        "v4": {
+          "type": "voce",
+          "settings": {
+            "text": "Ho smesso di calcolare la distanza quando parlo. Non me l’ero imposto: me ne sono accorto dopo, ripensandoci.",
+            "who": "Davide, 39 anni"
+          }
+        },
+        "v5": {
+          "type": "voce",
+          "settings": {
+            "text": "La prima settimana non è successo niente e stavo per lasciar perdere. Poi qualcosa si è mosso. Avrei voluto saperlo prima.",
+            "who": "Sara, 31 anni"
+          }
+        },
+        "v6": {
+          "type": "voce",
+          "settings": {
+            "text": "La cosa che mi ha colpito non è il prodotto. È aver letto la descrizione esatta di quello che mi succede. Quindi non me lo stavo inventando.",
+            "who": "Alessandro, 52 anni"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6"
+      ],
+      "settings": {
+        "heading": "Quello che ci siamo sentiti ripetere.",
+        "intro": "<p>Studiando questo fenomeno abbiamo raccolto centinaia di racconti. Quello che segue è riscritto da noi, in forma breve: sono osservazioni, non prove.</p>",
+        "foot": "<p>Sono esperienze individuali. Non sono risultati tipici e non descrivono quello che succederà a te.</p>",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0
+      }
     }
   },
   "order": [
@@ -1231,8 +1222,7 @@
     "gesto",
     "rivelazione",
     "offerta1",
-    "racconto",
-    "non_sei_sola",
+    "voci",
     "coppie",
     "obiezioni",
     "costi",
