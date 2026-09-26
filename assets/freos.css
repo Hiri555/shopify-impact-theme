@@ -1501,3 +1501,27 @@
   .fr .fr-icard-ic svg{ width: 16px; height: 16px; }
   .fr .fr-icard-be{ font-size: 13px; }
 }
+
+/* --------------------------------------------------------------------------
+   LE PLANCHER DE 15 px S'APPLIQUE AU CONTENU, PAS AUX MENTIONS
+   --------------------------------------------------------------------------
+   Mesure a 390 px : la prose des articles etait deja a 17-19 px, mais le texte
+   des CARTES tombait a 13 px -- le role d'un ingredient, la phrase d'une etape
+   du rituel. Ce sont des phrases qu'on lit, pas des mentions : elles passent
+   au plancher.
+
+   CE QUI RESTE SOUS 15 px, ET C'EST VOULU : la ligne de garantie sous un
+   bouton, l'avertissement legal, la bibliographie. Les mettre a 15 px ne les
+   rendrait pas plus lisibles, ca les mettrait au meme rang que le texte qui
+   porte l'argument -- et une mention legale qui crie aussi fort que la prose
+   est une page qui ne hierarchise plus rien.
+   -------------------------------------------------------------------------- */
+.fr .fr-icard-r{ font-size: 15px; line-height: 1.55; }
+.fr .fr-icard-be{ font-size: 15px; }
+.fr .fr-icard-q{ font-size: 15px; }
+.fr .fr-step-x{ font-size: 15px; line-height: 1.5; }
+.fr .fr-cmp th, .fr .fr-cmp td{ font-size: 15px; }
+@media (max-width: 560px){
+  .fr .fr-cmp th, .fr .fr-cmp td{ font-size: 15px; }
+  .fr .fr-cmp-l{ font-size: 15px; }
+}
