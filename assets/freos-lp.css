@@ -1261,3 +1261,29 @@
 .freos-lp-opener .fr-lp3 .article{ padding-bottom: 10px; }
 .fr-lp3 .byline{ margin-bottom: 14px; }
 .fr-lp3 .primo{ margin-top: 10px; }
+
+/* --------------------------------------------------------------------------
+   LE PREMIER ECRAN ACCEPTE UNE SCENE, PAS SEULEMENT UN PACKSHOT
+   --------------------------------------------------------------------------
+   La borne precedente etait une hauteur fixe en unites d'ecran : elle servait
+   a dompter un packshot PORTRAIT 3:4 qui mangeait 62 % du telephone. Le
+   visuel editorial est un PAYSAGE 4:3 -- la meme borne le recadrait
+   inutilement sur les cotes.
+
+   On borne donc par le RAPPORT, pas par la hauteur : l'image occupe sa forme
+   naturelle et la hauteur d'ecran ne sert plus que de plafond. Un paysage 4:3
+   passe entier a 390 px (292 px de haut) ; un portrait depose plus tard sera
+   recadre par le plafond, comme avant. La regle tient dans les deux cas, ce
+   que la precedente ne faisait pas.
+   -------------------------------------------------------------------------- */
+.fr-lp1 .primo-v, .fr-lp2 .primo-v, .fr-lp3 .primo-v, .fr-lp4 .primo-v{
+  height: auto; aspect-ratio: 4 / 3;
+  max-height: 44vh; max-height: 44svh; min-height: 0;
+}
+.fr-lp1 .primo-v img, .fr-lp2 .primo-v img,
+.fr-lp3 .primo-v img, .fr-lp4 .primo-v img{ object-position: center 45%; }
+@media (min-width: 760px){
+  .fr-lp1 .primo-v, .fr-lp2 .primo-v, .fr-lp3 .primo-v, .fr-lp4 .primo-v{
+    max-height: 48vh; max-height: 48svh;
+  }
+}
