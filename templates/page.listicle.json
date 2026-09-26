@@ -39,7 +39,7 @@
         "pt": 0,
         "pb": 0,
         "eyebrow": "Cripta · Notte · Lingua · Distanza",
-        "heading": "PREUVE-A titre modifie par l API",
+        "heading": "6 motivi per cui l'alito torna <em>anche se ti lavi i denti tre volte al giorno.</em>",
         "subhead": "Il collutorio, il filo, il raschietto, la mentina. Fanno bene il loro lavoro — <strong>sulle superfici che raggiungono.</strong> C'è un punto della tua bocca dove niente di tutto questo arriva. Ed è lì che si produce l'odore, ventiquattro ore su ventiquattro.",
         "author": "6 studi ORL citati Formulato in Italia 30 sere di prova · rimborso pieno",
         "consulenza": "Fonti · 6 studi ORL, 2006–2017 Aggiornato · marzo 2026 Autore · redazione FREOS"
@@ -53,7 +53,7 @@
         "pt": 0,
         "pb": 0,
         "kind": "plate",
-        "file": "freos-lp2-05.webp",
+        "file": "freos-lp3-01.webp",
         "alt": "Visita otorinolaringoiatrica",
         "caption": ""
       }
@@ -64,7 +64,7 @@
         "s1": {
           "type": "para",
           "settings": {
-            "text": "<p>PREUVE-C ce paragraphe a ete reecrit par l API.</p>"
+            "text": "<p>Cinque secondi con l'abbassalingua e la torcia. Poi l'otorino si tira indietro sulla sedia.</p>"
           }
         },
         "sq": {
@@ -93,8 +93,8 @@
         }
       },
       "block_order": [
-        "sq",
         "s1",
+        "sq",
         "s2",
         "s3",
         "sk"
@@ -157,7 +157,7 @@
           "settings": {
             "chip": "Lo zinco",
             "title": "Non copre l'odore. <em>Lo lega.</em>",
-            "body": "<p>Una mentina fa una cosa semplice: mette in bocca un profumo più forte di quello che c'era prima. Trenta minuti dopo, la mentina è finita e il profumo pure. La cripta, no.</p><p>Gli <strong>ioni di zinco</strong> fanno una cosa diversa. Si legano chimicamente ai composti solforati volatili — quelli che il naso percepisce. Un composto legato non è più volatile. Non arriva più al naso di nessuno. Non è coperto: è cambiato.</p><p>È chimica di base, nota da trent'anni. Il principio non è mai stato il problema. Il <em>formato</em> lo era.</p><p>Nel gel lo zinco è dosato a <strong>1,38 mg (14% VNR)</strong> per porzione serale. FREOS è un integratore alimentare.</p>",
+            "body": "<p>Una mentina fa una cosa semplice: mette in bocca un profumo più forte di quello che c'era prima. Trenta minuti dopo, la mentina è finita e il profumo pure. La cripta, no.</p><p>Gli <strong>ioni di zinco</strong> fanno una cosa diversa. Si legano chimicamente ai composti solforati volatili — quelli che il naso percepisce. Un composto legato non è più volatile. Non arriva più al naso di nessuno. Non è coperto: è cambiato.</p><p>È chimica di base, nota da trent'anni. Il principio non è mai stato il problema. Il <em>formato</em> lo era.</p><p>Nel gel lo zinco (citrato) è dosato a <strong>1,38 mg (14% VNR)</strong> per porzione serale. FREOS è un integratore alimentare.</p>",
             "anchor": "",
             "file": "freos-lp3-03.webp",
             "alt": "FREOS · gel erbale con zinco",
