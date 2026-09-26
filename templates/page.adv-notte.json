@@ -612,7 +612,7 @@
         "i1": {
           "type": "ing",
           "settings": {
-            "name": "Zinco",
+            "name": "Zinco (citrato)",
             "dose": "1,38 mg (14% VNR)",
             "benefit": "<p><p>Lega i composti solforati. È l’unico ingrediente di cui affermiamo un’azione, e la parola giusta è <em>lega</em>.</p></p>"
           }
@@ -703,7 +703,7 @@
         "photo_alt": "FREOS · Gel Notturno Micro-Aderente allo Zinco",
         "photo_caption": "Un barattolo. Trenta sere. Due misurini dopo cena.",
         "ing_heading": "Cosa c’è dentro, e a cosa serve.",
-        "note": "<p><p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p></p>",
+        "note": "<p><p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco (citrato) 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p></p>",
         "disclaimer_heading": "Cosa FREOS non è, e non promette.",
         "disclaimer": "<p><p>FREOS è un <strong>integratore alimentare</strong>. <strong>Non cura l’alitosi</strong>: non è un farmaco e non ha un’indicazione terapeutica. Non tocca le tonsille e non scioglie i tonsilloliti. Se hai dolore, febbre o difficoltà a deglutire, l’otorino viene prima di qualunque gel.</p></p>",
         "rule": true
@@ -1185,39 +1185,23 @@
     "colophon": {
       "type": "freos-lp-colophon",
       "blocks": {
-        "e1": {
-          "type": "entry",
-          "settings": {
-            "label": "Redazione",
-            "body": "<p><p>Direttore responsabile · [nome] Vicedirettrice · Elena Manzoni Caposervizio inchieste · [nome]</p></p>"
-          }
-        },
-        "e2": {
-          "type": "entry",
-          "settings": {
-            "label": "Comitato scientifico",
-            "body": "<p><p>Dott. Marco Serpelloni — otorinolaringoiatra Dott.ssa [nome] — odontoiatra Prof. [nome] — microbiologia orale</p></p>"
-          }
-        },
-        "e3": {
-          "type": "entry",
-          "settings": {
-            "label": "Sede",
-            "body": "<p><p>Via [indirizzo], 20121 Milano Tel. +39 02 [numero] redazione@linchiestasalute.it</p></p>"
-          }
-        },
         "e4": {
           "type": "entry",
           "settings": {
             "label": "Questo articolo",
-            "body": "<p><p>Chiuso in redazione · Marzo 2026 Illustrazioni · L. Bertani Fotografia · [nome]</p></p>"
+            "body": "<p>Chiuso in redazione · Marzo 2026</p>"
+          }
+        },
+        "e_editore": {
+          "type": "entry",
+          "settings": {
+            "label": "Editore",
+            "body": "<p>DINSO VENTURES LLC</p><p>30 N Gould St, Ste #59143, Sheridan, WY 82801, USA</p><p>Reg. 2026-002082547</p><p><a href=\"mailto:contact@try-freos.com\">contact@try-freos.com</a></p>"
           }
         }
       },
       "block_order": [
-        "e1",
-        "e2",
-        "e3",
+        "e_editore",
         "e4"
       ],
       "settings": {
@@ -1226,7 +1210,7 @@
         "pb": 0,
         "logo": "L'Inchiesta<em>Salute</em>",
         "tagline": "Un caso alla volta · Fino in fondo",
-        "legal": "<p><p>Registrazione Tribunale di Milano n. [numero]/2024 · ISSN [numero-numero] · Direttore responsabile [nome]. Nota per il lettore. Questo articolo è un'inchiesta editoriale con contenuti sponsorizzati dal produttore di FREOS. La linea editoriale, le fonti citate, le riserve scientifiche e i limiti dichiarati del prodotto restano indipendenti. Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di sintomi rivolgersi al proprio medico curante o allo specialista. © L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p></p>",
+        "legal": "<p>Nota per il lettore. Questo articolo è un'inchiesta editoriale con contenuti sponsorizzati dal produttore di FREOS. La linea editoriale, le fonti citate, le riserve scientifiche e i limiti dichiarati del prodotto restano indipendenti. Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di sintomi rivolgersi al proprio medico curante o allo specialista. © L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p></p>",
         "links": "<p>© L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p>",
         "rule": false
       }

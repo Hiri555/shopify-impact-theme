@@ -18,30 +18,37 @@
           "type": "column",
           "settings": {
             "title": "Prodotto",
-            "links": "Il gesto della sera|/products/gel-notturno-micro-aderente-allo-zinco"
+            "links": "Il gesto della sera|/products/gel-notturno-micro-aderente-allo-zinco\nCome si usa|/pages/listicle\nHome|/"
           }
         },
         "col_assistenza": {
           "type": "column",
           "settings": {
             "title": "Assistenza",
-            "links": "Contatti|/policies/contact-information\nSpedizioni|/policies/shipping-policy\nRimborsi e recesso|/policies/refund-policy"
+            "links": "Contatti|/pages/contact\ncontact@try-freos.com|mailto:contact@try-freos.com"
           }
         },
         "col_legale": {
           "type": "column",
           "settings": {
             "title": "Legale",
-            "links": "Informativa privacy|/policies/privacy-policy\nTermini e condizioni|/policies/terms-of-service"
+            "links": "Informativa privacy|/policies/privacy-policy"
           }
         }
       },
-      "block_order": ["col_prodotto", "col_assistenza", "col_legale"],
+      "block_order": [
+        "col_prodotto",
+        "col_assistenza",
+        "col_legale"
+      ],
       "settings": {
         "show_newsletter": true,
-        "news_consent": "<p>Iscrivendoti accetti di ricevere le nostre email. Puoi disiscriverti in ogni momento dal link in fondo a ogni messaggio. <a href=\"/policies/privacy-policy\">Informativa privacy</a>.</p>"
+        "news_consent": "<p>Iscrivendoti accetti di ricevere le nostre email. Puoi disiscriverti in ogni momento dal link in fondo a ogni messaggio. <a href=\"/policies/privacy-policy\">Informativa privacy</a>.</p>",
+        "copyright": "© 2026 FREOS — DINSO VENTURES LLC"
       }
     }
   },
-  "order": ["freos_footer"]
+  "order": [
+    "freos_footer"
+  ]
 }
