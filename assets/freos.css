@@ -732,6 +732,7 @@
 .fr .fr-review p{ font-size:14.5px; line-height:1.6; color:var(--ink2); margin:0 0 14px; }
 .fr .fr-review footer{ display:flex; align-items:baseline; gap:8px; padding-top:12px;
   border-top:1px solid var(--rule); font-size:12.5px; }
+.fr .fr-review footer{ background:none; margin-top:0; }
 .fr .fr-review footer b{ color:var(--ink); font-weight:600; }
 .fr .fr-review footer span{ color:var(--ink3); }
 @media (max-width:640px){ .fr .fr-reviews-grid{ grid-template-columns:1fr; } }
