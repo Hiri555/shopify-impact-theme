@@ -12,28 +12,23 @@
   "sections": {
     "spon": {
       "type": "freos-lp-spon",
-      "disabled": true,
       "settings": {
-        "kicker": "",
-        "text": "Contenuto sponsorizzato · FREOS",
-        "link": "",
-        "url": "",
         "scope": "fr-lp1",
-        "rule": false,
         "pt": 0,
-        "pb": 0
+        "pb": 0,
+        "text": "Contenuto sponsorizzato · FREOS",
+        "rule": false
       }
     },
     "masthead": {
       "type": "freos-lp-masthead",
       "settings": {
-        "kicker": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "logo": "L'Inchiesta<em>Salute</em>",
         "tagline": "Un caso alla volta · Fino in fondo",
-        "scope": "fr-lp1",
-        "rule": false,
-        "pt": 0,
-        "pb": 0
+        "rule": false
       }
     },
     "opener": {
@@ -74,7 +69,9 @@
         "thesis"
       ],
       "settings": {
-        "kicker": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "eyebrow": "<span>Inchiesta</span><span class=\"sep\">·</span><span>Salute orale</span><span class=\"sep\">·</span><span>8 min di lettura</span>",
         "heading": "Nove italiani su dieci hanno un'alitosi che parte in bocca. <em>Non nello stomaco.</em>",
         "subhead": "Un dato pubblicato dal 2009 che quasi nessuno conosce. E che spiega perché, dopo dieci anni di cotton fioc, gargarismi e mentine, l'alito può ancora tornare.",
@@ -84,10 +81,7 @@
         "hero_file": "freos-lp1-02.webp",
         "hero_alt": "Gli oggetti della sera",
         "hero_caption": "Tutto quello che una persona può accumulare in un cassetto per non farsi sentire. Alle 23, torna sul comodino.",
-        "scope": "fr-lp1",
-        "rule": false,
-        "pt": 0,
-        "pb": 0
+        "rule": false
       }
     },
     "specchio": {
@@ -110,8 +104,7 @@
           "settings": {
             "file": "freos-lp1-03.webp",
             "alt": "Scena dello specchio con la luce del telefono",
-            "caption": "Undici anni della stessa luce, dello stesso gesto, della stessa domanda.",
-            "kind": ""
+            "caption": "Undici anni della stessa luce, dello stesso gesto, della stessa domanda."
           }
         },
         "p3": {
@@ -167,89 +160,11 @@
         "pull"
       ],
       "settings": {
-        "kicker": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "heading": "Tutto comincia con qualcosa che <em>non dovrebbe esserci</em>.",
-        "drop": false,
-        "scope": "fr-lp1",
-        "rule": false,
-        "pt": 0,
-        "pb": 0
-      }
-    },
-    "tappe": {
-      "type": "freos-lp-editorial",
-      "blocks": {
-        "h": {
-          "type": "sub",
-          "settings": {
-            "text": "All’inizio sembra una cosa piccola. Poi diventa un appuntamento fisso.",
-            "level": "h3"
-          }
-        },
-        "p1": {
-          "type": "para",
-          "settings": {
-            "text": "<p>All’inizio è un sapore strano, una sensazione in gola che va e viene e che non si riesce a spiegare. Poi arriva la prima pallina bianca, e un nome cercato di notte sul telefono.</p>"
-          }
-        },
-        "p2": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Poi vengono le serate davanti allo specchio, e i giorni in cui ne escono due o tre. E oggi tieni le distanze quando parli, convinto che l’unica uscita sia l’intervento.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "h",
-        "p1",
-        "p2"
-      ],
-      "settings": {
-        "kicker": "",
-        "heading": "",
-        "drop": false,
-        "scope": "fr-lp1",
-        "rule": false,
-        "pt": 0,
-        "pb": 0
-      }
-    },
-    "segnali1": {
-      "type": "freos-lp-editorial",
-      "blocks": {
-        "h": {
-          "type": "sub",
-          "settings": {
-            "text": "Segnali da riconoscere",
-            "level": "h3"
-          }
-        },
-        "p1": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Quello che si riconosce è quasi sempre lo stesso: un sapore cattivo in fondo alla gola che torna anche dopo lo spazzolino, la sensazione di qualcosa di fermo quando deglutisci, piccole palline bianche o gialle che escono con un colpo di tosse.</p>"
-          }
-        },
-        "p2": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Poi un alito pesante che nessuno ti ha ancora spiegato, e una gola spesso irritata — senza febbre, e senza un vero mal di gola.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "h",
-        "p1",
-        "p2"
-      ],
-      "settings": {
-        "kicker": "",
-        "heading": "",
-        "drop": false,
-        "scope": "fr-lp1",
-        "rule": false,
-        "pt": 0,
-        "pb": 0
+        "rule": false
       }
     },
     "segnali2": {
@@ -294,12 +209,11 @@
         "i5"
       ],
       "settings": {
-        "kicker": "",
-        "title": "Quando è meglio andare dal medico",
         "scope": "fr-lp1",
-        "rule": false,
         "pt": 0,
-        "pb": 0
+        "pb": 0,
+        "title": "Quando è meglio andare dal medico",
+        "rule": false
       }
     },
     "tappe_testo": {
@@ -330,13 +244,11 @@
         "p3"
       ],
       "settings": {
-        "kicker": "",
-        "heading": "Forse ti riguarda, anche se non li hai mai visti.",
-        "drop": false,
         "scope": "fr-lp1",
-        "rule": true,
         "pt": 0,
-        "pb": 0
+        "pb": 0,
+        "heading": "Forse ti riguarda, anche se non li hai mai visti.",
+        "rule": true
       }
     },
     "vilain": {
@@ -395,13 +307,11 @@
         "pull"
       ],
       "settings": {
-        "kicker": "",
-        "heading": "Il vero vilain <em>non sei tu</em>.",
-        "drop": false,
         "scope": "fr-lp1",
-        "rule": true,
         "pt": 0,
-        "pb": 0
+        "pb": 0,
+        "heading": "Il vero vilain <em>non sei tu</em>.",
+        "rule": true
       }
     },
     "fasi": {
@@ -455,15 +365,14 @@
         "f4"
       ],
       "settings": {
-        "kicker": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "heading": "Quattro fasi in ventiquattro ore. <em>Solo una è sotto la tua guardia.</em>",
         "intro": "<p><p>Il Turno di Notte non è un'immagine. È una sequenza di quattro fasi, misurabili, ognuna con la sua ora del giorno e la sua zona precisa della bocca. Le abbiamo fatte illustrare dal Dott. L. Bertani, illustratore medico che collabora con la nostra redazione. Sono le stesse fasi che ogni notte, da anni, ti fanno svegliare con quel sapore.</p></p>",
         "outro": "<p><p>Ecco perché, dopo l'ennesima estrazione o dopo anni di collutorio, l'alito può restare. Non perché hai sbagliato qualcosa, ma perché stavi combattendo un turno che comincia quando tu smetti di guardare. È il motivo per cui, dopo un intervento chirurgico che sembrava definitivo, molti ci hanno raccontato di aver sentito l'alito tornare dopo tre mesi. Nessuno gliel'aveva detto che poteva succedere. Perché la biologia della notte, fino ad oggi, non era mai stata spiegata a nessuno.</p></p>",
         "credit": "",
-        "scope": "fr-lp1",
-        "rule": true,
-        "pt": 0,
-        "pb": 0
+        "rule": true
       }
     },
     "rimedi": {
@@ -473,48 +382,42 @@
           "type": "row",
           "settings": {
             "what": "Il cotton fioc",
-            "why": "Preme dove la gola è delicata. Fa sanguinare. A volte fa venire il conato. E anche quando funziona, la cripta resta lì. Domani sera, un altro.",
-            "hot": false
+            "why": "Preme dove la gola è delicata. Fa sanguinare. A volte fa venire il conato. E anche quando funziona, la cripta resta lì. Domani sera, un altro."
           }
         },
         "r2": {
           "type": "row",
           "settings": {
             "what": "I gargarismi",
-            "why": "Durano trenta secondi. Il vilain lavora otto ore. Non è una battaglia ad armi pari. Si combatte alle undici di sera un nemico che comincia il turno alle due di notte.",
-            "hot": false
+            "why": "Durano trenta secondi. Il vilain lavora otto ore. Non è una battaglia ad armi pari. Si combatte alle undici di sera un nemico che comincia il turno alle due di notte."
           }
         },
         "r3": {
           "type": "row",
           "settings": {
             "what": "Il collutorio",
-            "why": "Nella maggior parte dei casi passa davanti, non dietro. Il fondo della lingua — dove si deposita la patina — resta scoperto. Copre il davanti, ma il dietro è lì.",
-            "hot": false
+            "why": "Nella maggior parte dei casi passa davanti, non dietro. Il fondo della lingua — dove si deposita la patina — resta scoperto. Copre il davanti, ma il dietro è lì."
           }
         },
         "r4": {
           "type": "row",
           "settings": {
             "what": "Le mentine",
-            "why": "Coprono di giorno, quando parli, quando sei tra la gente. Ma il vilain non lavora di giorno. Ti proteggono nel momento in cui non serve.",
-            "hot": false
+            "why": "Coprono di giorno, quando parli, quando sei tra la gente. Ma il vilain non lavora di giorno. Ti proteggono nel momento in cui non serve."
           }
         },
         "r5": {
           "type": "row",
           "settings": {
             "what": "Il nettalingua",
-            "why": "Buono strumento, ma la zona che conta è il terzo posteriore. Quello che il riflesso rifiuta. Fermarsi a metà lingua è come lavare metà del pavimento. Il resto continua a lavorare la notte.",
-            "hot": false
+            "why": "Buono strumento, ma la zona che conta è il terzo posteriore. Quello che il riflesso rifiuta. Fermarsi a metà lingua è come lavare metà del pavimento. Il resto continua a lavorare la notte."
           }
         },
         "r6": {
           "type": "row",
           "settings": {
             "what": "La tonsillectomia",
-            "why": "In alcuni casi toglie la parte visibile. In molti altri, dopo qualche mese, l'alito torna. Perché la lingua è ancora lì. Perché la notte continua ad esistere. Hai tolto una metà, e l'altra è rimasta.",
-            "hot": false
+            "why": "In alcuni casi toglie la parte visibile. In molti altri, dopo qualche mese, l'alito torna. Perché la lingua è ancora lì. Perché la notte continua ad esistere. Hai tolto una metà, e l'altra è rimasta."
           }
         }
       },
@@ -527,15 +430,13 @@
         "r6"
       ],
       "settings": {
-        "kicker": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "heading": "Ognuno di quei rimedi <em>faceva la sua parte</em>. Ma nessuno faceva quella giusta.",
         "intro": "<p><p>Il cassetto lo conosci meglio di chiunque. Ci sono passati dieci prodotti, forse venti. Ognuno prometteva qualcosa. Nessuno ti ha dato quello che cercavi. Non perché tu abbia scelto male. Perché ognuno di questi rimedi era pensato per un momento e una zona che <strong>non sono il vilain</strong>.</p></p>",
         "outro": "<p><p>In fondo a questa lista, la frase che abbiamo letto e riletto è sempre nelle stesse parole: <em>«ho provato tutti i rimedi — pulizia dopo ogni pasto, nettalingua, colluttori appositi, probiotici, scovolini, idropulsore. Nulla. Mi sento sempre la fiatella. L'unica cosa che mi fa stare serena in pubblico è consumare chewing gum a raffica.»</em> Non è una resa. È la mappa esatta di dove il vilain non era.</p><p>Non hai fallito, e nemmeno hai scelto male. Hai combattuto <strong>il vilain sbagliato, nel posto sbagliato, all'ora sbagliata</strong>. Non era colpa tua che nessuno ti avesse detto quale fosse davvero.</p></p>",
-        "outro_pull": "",
-        "scope": "fr-lp1",
-        "rule": true,
-        "pt": 0,
-        "pb": 0
+        "rule": true
       }
     },
     "gesto": {
@@ -601,13 +502,11 @@
         "pull"
       ],
       "settings": {
-        "kicker": "",
-        "heading": "Ci vorrebbe un gesto pensato per <em>la Metà Invisibile</em>.",
-        "drop": false,
         "scope": "fr-lp1",
-        "rule": true,
         "pt": 0,
-        "pb": 0
+        "pb": 0,
+        "heading": "Ci vorrebbe un gesto pensato per <em>la Metà Invisibile</em>.",
+        "rule": true
       }
     },
     "rivelazione": {
@@ -698,7 +597,9 @@
         "i9"
       ],
       "settings": {
-        "kicker": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "heading": "Si chiama <em>FREOS</em>.",
         "intro": "<p><p>Un gel denso, da prendere la sera, dopo i denti. Due misurini, trenta secondi, e la sera finisce lì.</p><p>Non è un collutorio da sputare. Non è una caramella che finisce. È un gel: <strong>resta dove lo metti</strong>.</p></p>",
         "photo_file": "freos-lp1-09.webp",
@@ -708,92 +609,21 @@
         "note": "",
         "disclaimer_heading": "",
         "disclaimer": "",
-        "scope": "fr-lp1",
-        "rule": true,
-        "pt": 0,
-        "pb": 0
+        "rule": true
       }
     },
     "offerta1": {
       "type": "freos-lp-offer",
       "settings": {
-        "kicker": "",
-        "heading": "",
-        "intro": "",
-        "photo_file": "",
-        "photo_alt": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "headline": "Ventinove euro e novanta. Trenta sere.",
         "body": "<p><p>Un barattolo dura trenta sere. Spedizione gratuita in Italia · 6-11 giorni lavorativi. <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
         "cta_label": "Riprenditi i trenta centimetri →",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
         "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>",
-        "scope": "fr-lp1",
-        "rule": false,
-        "pt": 0,
-        "pb": 0
-      }
-    },
-    "voci": {
-      "type": "freos-lp-voci",
-      "blocks": {
-        "v1": {
-          "type": "voce",
-          "settings": {
-            "text": "Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Un giorno mi sono resa conto che non lo stavo più facendo.",
-            "who": "Giulia, 34 anni"
-          }
-        },
-        "v2": {
-          "type": "voce",
-          "settings": {
-            "text": "Non prometto miracoli. Dico che al mattino la sensazione non è più quella di prima, ed è lì che me ne sono accorto per primo.",
-            "who": "Marco, 47 anni"
-          }
-        },
-        "v3": {
-          "type": "voce",
-          "settings": {
-            "text": "Avevo il cassetto del bagno pieno di cose comprate e mai finite. Adesso c’è un pacchetto di mentine aperto da due mesi.",
-            "who": "Elena, 43 anni"
-          }
-        },
-        "v4": {
-          "type": "voce",
-          "settings": {
-            "text": "Ho smesso di calcolare la distanza quando parlo. Non me l’ero imposto: me ne sono accorto dopo, ripensandoci.",
-            "who": "Davide, 39 anni"
-          }
-        },
-        "v5": {
-          "type": "voce",
-          "settings": {
-            "text": "La prima settimana non è successo niente e stavo per lasciar perdere. Poi qualcosa si è mosso. Avrei voluto saperlo prima.",
-            "who": "Sara, 31 anni"
-          }
-        },
-        "v6": {
-          "type": "voce",
-          "settings": {
-            "text": "La cosa che mi ha colpito non è il prodotto. È aver letto la descrizione esatta di quello che mi succede. Quindi non me lo stavo inventando.",
-            "who": "Alessandro, 52 anni"
-          }
-        }
-      },
-      "block_order": [
-        "v1",
-        "v2",
-        "v3",
-        "v4",
-        "v5",
-        "v6"
-      ],
-      "settings": {
-        "heading": "Quello che ci siamo sentiti ripetere.",
-        "intro": "<p>Studiando questo fenomeno abbiamo raccolto centinaia di racconti. Quello che segue è riscritto da noi, in forma breve: sono osservazioni, non prove.</p>",
-        "foot": "<p>Sono esperienze individuali. Non sono risultati tipici e non descrivono quello che succederà a te.</p>",
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0
+        "rule": false
       }
     },
     "coppie": {
@@ -843,103 +673,13 @@
         "c5"
       ],
       "settings": {
-        "kicker": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "heading": "La cosa più pesante <em>non è mai stata il calcolo</em>.",
         "intro": "<p><p>Se ci pensi davvero, non vuoi solo tonsille pulite. Vuoi smettere di pensarci. Non era il mezzo passo indietro quando qualcuno ti parlava vicino. Non era la mano davanti alla bocca quando ridevi. Non era il bagno dopo cena, con la luce del telefono. Non era il formaggio che avevi tolto dal piatto, per sicurezza.</p></p>",
         "outro": "<p><p>Niente di tutto questo eri tu. <em>Era una vita che si stringeva in fondo alla gola, senza fare rumore.</em></p><p>Volere tutto questo <strong>non è vanità</strong>. È voler tornare a fidarti di te. Non vuoi controllare meglio la tua gola. <em>Vuoi smettere di doverla controllare.</em></p></p>",
-        "scope": "fr-lp1",
-        "rule": true,
-        "pt": 0,
-        "pb": 0
-      }
-    },
-    "obiezioni": {
-      "type": "freos-lp-testimonials",
-      "blocks": {
-        "o1": {
-          "type": "tst",
-          "settings": {
-            "story": false,
-            "obj_head": "«Ho già provato di tutto, perché questo dovrebbe funzionare?»",
-            "obj_tag": "Obiezione 1 · il cimitero nel cassetto",
-            "quote": "",
-            "body": "<p><p>Ho il cassetto del bagno che è un cimitero, e non ho buttato niente.</p><p>Curasept. Meridol, che funziona ma il prezzo lascia stare. CB12 — quello lo compravo a scatole, mi avevano detto che dura dodici ore. Il TheraBreath ordinato su internet. Due raschietti, uno di metallo e uno di plastica: con tutti e due mi venivano i conati, li ho usati sei volte in totale. E le gomme, una decina al giorno, davvero — le contavo.</p><p>Quando è arrivato FREOS l'ho lasciato sul comodino tre sere prima di aprirlo. Non per pigrizia. Perché aprirlo voleva dire ricominciare a sperare, e sperare avevo smesso.</p><p>Non ti dico che ha risolto tutto. Ti dico che è la prima cosa in dieci anni che dopo due settimane era ancora sul comodino, e non nel cassetto con le altre.</p></p>",
-            "name": "Stefano R.",
-            "role": "49 anni · agente immobiliare · Napoli",
-            "badge": "Verificato"
-          }
-        },
-        "o2": {
-          "type": "tst",
-          "settings": {
-            "story": false,
-            "obj_head": "«Il mio viene dallo stomaco, non dalla bocca.»",
-            "obj_tag": "Obiezione 2 · la convinzione che questa pagina smonta",
-            "quote": "",
-            "body": "<p></p><p>Per me era lo stomaco, punto. Mio padre aveva la stessa cosa e diceva la stessa frase.</p><p>Gastroscopia nel 2021. Helicobacter negativo. Un'esofagite che il medico ha definito modesta. Pantoprazolo per otto settimane. Lo stomaco è migliorato davvero: bruciore via, digestione più tranquilla. L'altra cosa è rimasta identica.</p><p>È stato questo a farmi cambiare idea, non un articolo. Se fosse stato lo stomaco, curando lo stomaco sarebbe cambiato qualcosa. Non è cambiato niente.</p><p>Uso FREOS da due mesi. Non ho smesso i controlli, torno dal gastroenterologo a novembre. Ma la sera adesso faccio una cosa in più, e quella è l'unica che ha spostato qualcosa.</p><p></p>",
-            "name": "Paolo V.",
-            "role": "52 anni · geometra · Ancona",
-            "badge": "Verificato"
-          }
-        },
-        "o3": {
-          "type": "tst",
-          "settings": {
-            "story": false,
-            "obj_head": "«Il mio dentista dice che va tutto bene.»",
-            "obj_tag": "Obiezione 3 · l’autorità che ha già detto di no",
-            "quote": "",
-            "body": "<p><p>Il mio dentista è bravo e non ha sbagliato niente.</p><p>Ci vado ogni sei mesi. Igiene professionale, zero carie, e ogni volta la stessa frase: «Lei ha pochissimo tartaro, complimenti.» È vero. Ho guardato le lastre insieme a lui, va tutto bene.</p><p>Il punto è che lui guarda i denti e le gengive. Il dorso della lingua, quella parte lì dietro, non rientra nel controllo. Non perché se ne dimentichi: non è la sua zona.</p><p>Me l'ha confermato lui quando gliel'ho chiesto in modo diretto. Ha detto: «Da quel lato non arrivo, e non è un problema odontoiatrico.» È stato onesto.</p><p>Uso FREOS la sera, dopo lo spazzolino. Non al posto — dopo. E continuo ad andare ogni sei mesi.</p></p>",
-            "name": "Silvia T.",
-            "role": "37 anni · analista · Trieste",
-            "badge": "Verificato"
-          }
-        },
-        "o4": {
-          "type": "tst",
-          "settings": {
-            "story": false,
-            "obj_head": "«Appena smetto, torna tutto come prima.»",
-            "obj_tag": "Obiezione 4 · la paura di doverlo prendere per sempre",
-            "quote": "",
-            "body": "<p><p>Sono al terzo barattolo, quindi posso rispondere.</p><p>Il primo mese l'ho fatto con attenzione. Il secondo ho saltato quattro o cinque sere senza volerlo — rientri tardi, ti addormenti sul divano. La differenza l'ho notata al secondo giorno di pausa, non al primo. E non è tornato tutto come prima: è tornato quel sapore al risveglio che avevo dimenticato di avere.</p><p>Quindi sì, se smetto cambia. Ma la trovo una cosa onesta, non preoccupante. Anche se smetto di lavarmi i denti torna la placca. Nessuno si aspetta che lo spazzolino funzioni a vita dopo un mese.</p><p>Mi costa meno di un euro al giorno e mi toglie un pensiero. Ho smesso di considerarlo una cura e ho cominciato a considerarlo una cosa che faccio la sera, come chiudere il gas.</p></p>",
-            "name": "Giorgio A.",
-            "role": "46 anni · tecnico informatico · Cagliari",
-            "badge": "Verificato"
-          }
-        },
-        "o5": {
-          "type": "tst",
-          "settings": {
-            "story": false,
-            "obj_head": "«Come faccio a sapere se funziona, se non posso sentirmi?»",
-            "obj_tag": "Obiezione 5 · il segnale che non puoi darti da solo",
-            "quote": "",
-            "body": "<p><p>Faccio l'istruttore di guida. Sto seduto a cinquanta centimetri da uno sconosciuto per un'ora, e per un'ora parlo.</p><p>Ho passato anni a gestire quella distanza con accorgimenti che nessuno vedeva: dare le indicazioni girato verso il parabrezza, finire la frase prima di voltarmi, tenere una mentina sotto la lingua per tutta la lezione. Non lo decidevo. Lo facevo e basta.</p><p>Il mio alito non posso sentirlo, e a chi guida con me non lo chiederò mai. Così ho smesso di cercare la prova nel posto sbagliato e ho guardato me stesso: dopo tre settimane mi sono accorto che davo le indicazioni guardando l'allieva in faccia. Non me l'ero imposto. Avevo solo smesso di evitarlo.</p><p>L'unica volta che qualcuno ha detto qualcosa è stato a giugno. Una signora di sessant'anni, alla terza lezione, mi ha detto che ero l'unico istruttore con cui non le veniva mal di testa in macchina. Probabilmente parlava dell'aria condizionata. Io me la sono comunque segnata.</p></p>",
-            "name": "Roberto M.",
-            "role": "43 anni · istruttore di guida · Perugia",
-            "badge": "Verificato"
-          }
-        }
-      },
-      "block_order": [
-        "o1",
-        "o2",
-        "o3",
-        "o4",
-        "o5"
-      ],
-      "settings": {
-        "kicker": "",
-        "heading": "Le cinque obiezioni <em>che fermano tutti.</em>",
-        "sub": "Un’obiezione per testimonianza, nell’ordine in cui ci vengono dette.",
-        "cta_label": "Riprenditi i trenta centimetri →",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Trenta sere di prova · spedizione gratuita in Italia · nessun abbonamento.",
-        "scope": "fr-lp1",
-        "rule": true,
-        "pt": 0,
-        "pb": 0
+        "rule": true
       }
     },
     "costi": {
@@ -989,7 +729,9 @@
         "a4"
       ],
       "settings": {
-        "kicker": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "heading": "Quanto stai già <em>spendendo, senza contarlo</em>",
         "lead": "Non per farti sentire in colpa. Per mettere in fila dei numeri che nessuno ti mette in fila.",
         "note": "E la parte onesta: non fanno la stessa cosa.",
@@ -997,10 +739,7 @@
         "cta_label": "Riprenditi i trenta centimetri →",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
         "cta_sub": "Trenta sere di prova · spedizione gratuita in Italia · nessun abbonamento.",
-        "scope": "fr-lp1",
-        "rule": true,
-        "pt": 0,
-        "pb": 0
+        "rule": true
       }
     },
     "fiducia": {
@@ -1031,13 +770,11 @@
         "p3"
       ],
       "settings": {
-        "kicker": "",
-        "heading": "La fiducia torna da un gesto. <em>Il primo lo scegli tu.</em>",
-        "drop": false,
         "scope": "fr-lp1",
-        "rule": true,
         "pt": 0,
-        "pb": 0
+        "pb": 0,
+        "heading": "La fiducia torna da un gesto. <em>Il primo lo scegli tu.</em>",
+        "rule": true
       }
     },
     "domande": {
@@ -1095,34 +832,25 @@
         "q6"
       ],
       "settings": {
-        "kicker": "",
-        "heading": "",
-        "cta_label": "",
-        "cta_url": "",
-        "cta_sub": "",
         "scope": "fr-lp1",
-        "rule": false,
         "pt": 0,
-        "pb": 0
+        "pb": 0,
+        "heading": "",
+        "rule": false
       }
     },
     "offerta2": {
       "type": "freos-lp-offer",
       "settings": {
-        "kicker": "",
-        "heading": "",
-        "intro": "",
-        "photo_file": "",
-        "photo_alt": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "headline": "Ventinove euro e novanta. Trenta sere.",
         "body": "<p><p>Un barattolo dura trenta sere. Spedizione gratuita in Italia · 6-11 giorni lavorativi. <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
         "cta_label": "Riprenditi i trenta centimetri →",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
         "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>",
-        "scope": "fr-lp1",
-        "rule": false,
-        "pt": 0,
-        "pb": 0
+        "rule": false
       }
     },
     "chiusura": {
@@ -1139,13 +867,11 @@
         "pull"
       ],
       "settings": {
-        "kicker": "",
-        "heading": "",
-        "drop": false,
         "scope": "fr-lp1",
-        "rule": false,
         "pt": 0,
-        "pb": 0
+        "pb": 0,
+        "heading": "",
+        "rule": false
       }
     },
     "fonti": {
@@ -1197,29 +923,28 @@
         "f6"
       ],
       "settings": {
-        "kicker": "",
-        "title": "Fonti scientifiche citate",
         "scope": "fr-lp1",
-        "rule": false,
         "pt": 0,
-        "pb": 0
+        "pb": 0,
+        "title": "Fonti scientifiche citate",
+        "rule": false
       }
     },
     "colophon": {
       "type": "freos-lp-colophon",
       "blocks": {
-        "e_editore": {
-          "type": "entry",
-          "settings": {
-            "label": "Editore",
-            "body": "<p></p><p><a href=\"mailto:contact@try-freos.com\">contact@try-freos.com</a></p>"
-          }
-        },
         "e4": {
           "type": "entry",
           "settings": {
             "label": "Questo articolo",
             "body": "<p>Chiuso in redazione · Marzo 2026</p>"
+          }
+        },
+        "e_editore": {
+          "type": "entry",
+          "settings": {
+            "label": "Editore",
+            "body": "<p>DINSO VENTURES LLC</p><p>30 N Gould St, Ste #59143, Sheridan, WY 82801, USA</p><p>Reg. 2026-002082547</p><p><a href=\"mailto:contact@try-freos.com\">contact@try-freos.com</a></p>"
           }
         }
       },
@@ -1228,14 +953,147 @@
         "e4"
       ],
       "settings": {
-        "kicker": "",
-        "whisper": "",
-        "whisper_sign": "",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0,
         "logo": "L'Inchiesta<em>Salute</em>",
         "tagline": "Un caso alla volta · Fino in fondo",
-        "desc": "",
         "legal": "<p>Nota per il lettore. Questo articolo è un'inchiesta editoriale con contenuti sponsorizzati dal produttore di FREOS. La linea editoriale, le fonti citate, le riserve scientifiche e i limiti dichiarati del prodotto restano indipendenti. Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di sintomi rivolgersi al proprio medico curante o allo specialista. © L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p></p>",
         "links": "<p>© L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p>",
+        "rule": false
+      }
+    },
+    "voci": {
+      "type": "freos-lp-voci",
+      "blocks": {
+        "v1": {
+          "type": "voce",
+          "settings": {
+            "text": "Per anni ho tenuto la mano davanti alla bocca parlando, senza nemmeno accorgermene. Un mese fa mia figlia mi ha chiesto perché avevo smesso di farlo.",
+            "who": "Giulia, 34 anni"
+          }
+        },
+        "v2": {
+          "type": "voce",
+          "settings": {
+            "text": "Prima mi svegliavo e la prima cosa che facevo era correre a sciacquarmi. Adesso mi alzo e vado a fare il caffè.",
+            "who": "Marco, 47 anni"
+          }
+        },
+        "v3": {
+          "type": "voce",
+          "settings": {
+            "text": "Avevo il cassetto del bagno pieno di roba aperta a metà. Adesso c’è un barattolo e un pacchetto di mentine che non finisco più.",
+            "who": "Elena, 43 anni"
+          }
+        },
+        "v4": {
+          "type": "voce",
+          "settings": {
+            "text": "In riunione mi mettevo sempre in fondo al tavolo, di lato. Il mese scorso mi sono accorto che ero seduto di fronte a tutti e non ci avevo pensato.",
+            "who": "Davide, 39 anni"
+          }
+        },
+        "v5": {
+          "type": "voce",
+          "settings": {
+            "text": "La prima settimana non è successo niente e stavo per lasciar perdere. Alla terza ho smesso di controllarmi il fiato nella mano.",
+            "who": "Sara, 31 anni"
+          }
+        },
+        "v6": {
+          "type": "voce",
+          "settings": {
+            "text": "Non ho buttato niente di quello che avevo comprato prima, per scaramanzia. Sono sei mesi che non apro quel cassetto.",
+            "who": "Alessandro, 52 anni"
+          }
+        }
+      },
+      "block_order": [
+        "v1",
+        "v2",
+        "v3",
+        "v4",
+        "v5",
+        "v6"
+      ],
+      "settings": {
+        "heading": "Quello che ci siamo sentiti ripetere.",
+        "intro": "<p>Studiando questo fenomeno abbiamo raccolto centinaia di racconti. Quello che segue è riscritto da noi, in forma breve: sono osservazioni, non prove.</p>",
+        "foot": "<p>Sono esperienze individuali. Non sono risultati tipici e non descrivono quello che succederà a te.</p>",
+        "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "tappe": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "h": {
+          "type": "sub",
+          "settings": {
+            "text": "All’inizio sembra una cosa piccola. Poi diventa un appuntamento fisso.",
+            "level": "h3"
+          }
+        },
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p>All’inizio è un sapore strano, una sensazione in gola che va e viene e che non si riesce a spiegare. Poi arriva la prima pallina bianca, e un nome cercato di notte sul telefono.</p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Poi vengono le serate davanti allo specchio, e i giorni in cui ne escono due o tre. E oggi tieni le distanze quando parli, convinto che l’unica uscita sia l’intervento.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "p1",
+        "p2"
+      ],
+      "settings": {
+        "kicker": "",
+        "heading": "",
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "segnali1": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "h": {
+          "type": "sub",
+          "settings": {
+            "text": "Segnali da riconoscere",
+            "level": "h3"
+          }
+        },
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Quello che si riconosce è quasi sempre lo stesso: un sapore cattivo in fondo alla gola che torna anche dopo lo spazzolino, la sensazione di qualcosa di fermo quando deglutisci, piccole palline bianche o gialle che escono con un colpo di tosse.</p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Poi un alito pesante che nessuno ti ha ancora spiegato, e una gola spesso irritata — senza febbre, e senza un vero mal di gola.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "p1",
+        "p2"
+      ],
+      "settings": {
+        "kicker": "",
+        "heading": "",
         "scope": "fr-lp1",
         "rule": false,
         "pt": 0,
@@ -1245,12 +1103,13 @@
     "sticky": {
       "type": "freos-lp-sticky",
       "settings": {
-        "label": "Scopri il gesto della sera →",
+        "label": "Provalo trenta sere →",
         "url": "/products/gel-notturno-micro-aderente-allo-zinco",
         "sub": "",
         "at": 30,
         "hide_end": 88,
-        "mobile_only": false
+        "mobile_only": false,
+        "glyph": "carrello"
       }
     }
   },
@@ -1271,7 +1130,6 @@
     "offerta1",
     "voci",
     "coppie",
-    "obiezioni",
     "costi",
     "fiducia",
     "domande",

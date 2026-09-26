@@ -74,13 +74,6 @@
             "text": ""
           }
         },
-        "rating": {
-          "type": "rating",
-          "settings": {
-            "score": "4,8",
-            "count": "su 126 recensioni"
-          }
-        },
         "title": {
           "type": "title",
           "settings": {
@@ -93,6 +86,12 @@
             "text": "Sette estratti e uno ione, in un gel denso che resta dove lo metti."
           }
         },
+        "pills": {
+          "type": "pills",
+          "settings": {
+            "items": "Integratore alimentare | Zinco + 7 estratti | Nessun abbonamento"
+          }
+        },
         "benefits": {
           "type": "benefits",
           "settings": {
@@ -103,8 +102,15 @@
           "type": "price",
           "settings": {
             "fallback": "29,90 €",
-            "save_label": "",
             "note": "120 g · trenta sere · meno di un euro al giorno"
+          }
+        },
+        "recognition": {
+          "type": "recognition",
+          "settings": {
+            "question": "Quale di queste ti somiglia di più?",
+            "options": "Torna dopo venti minuti\nSoprattutto al risveglio\nNon riesco a saperlo da solo",
+            "answer": "In tutti e tre i casi il momento che conta è la sera: è lì che la bocca smette di difendersi, e nessuno fa niente."
           }
         },
         "buy_buttons": {
@@ -121,6 +127,12 @@
             "items": "Trenta sere di prova | o rimborso\nIl barattolo resta a te | anche aperto\nNessun abbonamento | un ordine, una volta"
           }
         },
+        "guarantee": {
+          "type": "guarantee",
+          "settings": {
+            "text": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>"
+          }
+        },
         "payments": {
           "type": "payments",
           "settings": {
@@ -128,27 +140,11 @@
             "marks": "visa, master, american_express, paypal, apple_pay, google_pay"
           }
         },
-        "guarantee": {
-          "type": "guarantee",
-          "disabled": true,
+        "rating": {
+          "type": "rating",
           "settings": {
-            "text": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>"
-          }
-        },
-        "pills": {
-          "type": "pills",
-          "disabled": true,
-          "settings": {
-            "items": "Integratore alimentare | Zinco + 7 estratti | Nessun abbonamento"
-          }
-        },
-        "recognition": {
-          "type": "recognition",
-          "disabled": true,
-          "settings": {
-            "question": "Quale di queste ti somiglia di più?",
-            "options": "Torna dopo venti minuti\nSoprattutto al risveglio\nNon riesco a saperlo da solo",
-            "answer": "In tutti e tre i casi il momento che conta è la sera: è lì che la bocca smette di difendersi, e nessuno fa niente."
+            "score": "4,8",
+            "count": "su 126 recensioni"
           }
         }
       },
@@ -179,62 +175,7 @@
         "padding_top": 24,
         "padding_bottom": 40,
         "flag": "",
-        "thumbs_label": "Immagini del prodotto",
-        "atc_bg": "",
-        "atc_fg": ""
-      }
-    },
-    "benefici": {
-      "type": "freos-pdp-benefici",
-      "blocks": {
-        "ben_1": {
-          "type": "ben",
-          "settings": {
-            "icona": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z\"></path></svg>",
-            "text": "Agisce quando la bocca smette di difendersi",
-            "tag": "LA SERA"
-          }
-        },
-        "ben_2": {
-          "type": "ben",
-          "settings": {
-            "icona": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"8.5\"></circle><path d=\"M12 7.5V12l3 1.8\"></path></svg>",
-            "text": "Un gesto, trenta secondi",
-            "tag": "SENZA SFORZO"
-          }
-        },
-        "ben_3": {
-          "type": "ben",
-          "settings": {
-            "icona": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3.5s5.5 5.9 5.5 9.4a5.5 5.5 0 1 1-11 0C6.5 9.4 12 3.5 12 3.5z\"></path></svg>",
-            "text": "Resta dove lo metti",
-            "tag": "GEL DENSO"
-          }
-        },
-        "ben_4": {
-          "type": "ben",
-          "settings": {
-            "icona": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3.5\" y=\"5\" width=\"17\" height=\"15.5\" rx=\"2\"></rect><path d=\"M3.5 9.5h17M8 3.5v3M16 3.5v3\"></path></svg>",
-            "text": "Un barattolo copre un mese",
-            "tag": "TRENTA SERE"
-          }
-        }
-      },
-      "block_order": [
-        "ben_1",
-        "ben_2",
-        "ben_3",
-        "ben_4"
-      ],
-      "settings": {
-        "foot": "Integratore alimentare. Non cura l’alitosi.",
-        "kicker": "",
-        "heading": "Quattro cose, <em>e basta.</em>",
-        "dek": "",
-        "surface": "softer",
-        "width": "narrow",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "thumbs_label": "Immagini del prodotto"
       }
     },
     "marquee": {
@@ -293,77 +234,6 @@
         "padding_bottom": 40
       }
     },
-    "meccanismo": {
-      "type": "freos-pdp-journey",
-      "blocks": {
-        "m1": {
-          "type": "step",
-          "settings": {
-            "badge": "RESTA",
-            "title": "È un gel, non un liquido.",
-            "text": "Dopo la deglutizione resta sulle mucose invece di sciacquarle e andarsene."
-          }
-        },
-        "m2": {
-          "type": "step",
-          "settings": {
-            "badge": "LEGA",
-            "title": "Gli ioni di zinco legano i composti solforati.",
-            "text": "Zinco (citrato) 1,38 mg (14% VNR) per porzione serale. Un composto legato non è più volatile — cioè non arriva più al naso di nessuno."
-          }
-        },
-        "m3": {
-          "type": "step",
-          "settings": {
-            "badge": "ACCOMPAGNA",
-            "title": "Copre le ore in cui la saliva cala.",
-            "text": "La bocca resta chiusa, e quello che sale non viene più diluito né portato via. Non trenta secondi: una notte."
-          }
-        },
-        "geste_st1": {
-          "type": "step",
-          "settings": {
-            "badge": "Uno",
-            "title": "Due misurini",
-            "text": "1,2 g di gel sul dorso della lingua. Mai a stomaco vuoto."
-          }
-        },
-        "geste_st2": {
-          "type": "step",
-          "settings": {
-            "badge": "Due",
-            "title": "Lascia sciogliere",
-            "text": "Non serve risciacquare, non serve acqua."
-          }
-        },
-        "geste_st3": {
-          "type": "step",
-          "settings": {
-            "badge": "Tre",
-            "title": "Deglutisci e dormi",
-            "text": "La sera finisce lì."
-          }
-        }
-      },
-      "block_order": [
-        "m1",
-        "m2",
-        "m3",
-        "geste_st1",
-        "geste_st2",
-        "geste_st3"
-      ],
-      "settings": {
-        "foot": "<p>Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova.</p>",
-        "kicker": "",
-        "heading": "Il <em>Turno di Notte</em>.",
-        "dek": "Durante il sonno il flusso salivare crolla del 90%. È la finestra in cui i composti si accumulano — ed è l’unica in cui qualcosa che resta al suo posto ha senso. (Dawes C, Wong DTW. J Dent Res, 2019)",
-        "surface": "soft",
-        "width": "narrow",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
     "ingredienti": {
       "type": "freos-pdp-ingredienti",
       "blocks": {
@@ -375,7 +245,9 @@
             "dose": "1,38 mg (14% VNR)",
             "quote": "Lega, non copre.",
             "role": "Il minerale della formula, dosato in etichetta. Lo zinco lega i composti solforati — quelli che si accumulano quando la bocca si ferma.",
-            "pill": "01 · IL LEGAME"
+            "pill": "01 · IL LEGAME",
+            "benefit": "Il freno che tiene mentre dormi.",
+            "icon": "freno"
           }
         },
         "ing_shilajit": {
@@ -386,7 +258,9 @@
             "dose": "100 mg",
             "quote": "Il più dosato.",
             "role": "Resina minerale himalayana, purificata. È l’ingrediente più dosato della formula.",
-            "pill": "02 · LA BASE"
+            "pill": "02 · LA BASE",
+            "benefit": "La base su cui poggia tutto il resto.",
+            "icon": "base"
           }
         },
         "ing_clorofilla": {
@@ -397,7 +271,9 @@
             "dose": "85 mg",
             "quote": "Verde, da sempre.",
             "role": "Il pigmento verde delle piante. Uso tradizionale legato agli odori.",
-            "pill": "03 · LA TRADIZIONE"
+            "pill": "03 · LA TRADIZIONE",
+            "benefit": "Il verde che accompagna, da sempre.",
+            "icon": "foglia"
           }
         },
         "ing_te_verde": {
@@ -408,7 +284,9 @@
             "dose": "85 mg",
             "quote": "Ricco di polifenoli.",
             "role": "Foglia di Camellia sinensis. Contiene caffeina naturalmente presente.",
-            "pill": "04 · I POLIFENOLI"
+            "pill": "04 · I POLIFENOLI",
+            "benefit": "La nota che pulisce il finale.",
+            "icon": "fresco"
           }
         },
         "ing_prezzemolo": {
@@ -419,7 +297,9 @@
             "dose": "85 mg",
             "quote": "Quello del dopo-pasto.",
             "role": "Foglia di Petroselinum crispum. Quella che in Italia si mastica dopo i pasti, da molto prima che qualcuno la studiasse.",
-            "pill": "05 · IL DOPO-PASTO"
+            "pill": "05 · IL DOPO-PASTO",
+            "benefit": "Quello che si masticava a fine pasto.",
+            "icon": "foglia"
           }
         },
         "ing_melissa": {
@@ -430,7 +310,9 @@
             "dose": "85 mg",
             "quote": "Chiude in dolcezza.",
             "role": "Foglia dal profilo dolce. Chiude il gusto della formula.",
-            "pill": "06 · IL FONDO"
+            "pill": "06 · IL FONDO",
+            "benefit": "La chiusura dolce, quando tutto tace.",
+            "icon": "dolce"
           }
         },
         "ing_chiodi": {
@@ -441,7 +323,9 @@
             "dose": "85 mg",
             "quote": "Aroma che resta.",
             "role": "Bocciolo essiccato, aroma intenso e persistente.",
-            "pill": "07 · L’AROMA"
+            "pill": "07 · L’AROMA",
+            "benefit": "L’aroma che resta quando spegni la luce.",
+            "icon": "tempo"
           }
         },
         "ing_menta": {
@@ -452,7 +336,9 @@
             "dose": "80 mg",
             "quote": "Il fresco della sera.",
             "role": "Il fresco che chiude il gesto. Se non sopporti la menta, FREOS non fa per te: meglio saperlo adesso.",
-            "pill": "08 · IL FRESCO"
+            "pill": "08 · IL FRESCO",
+            "benefit": "La freschezza che senti nel momento.",
+            "icon": "fresco"
           }
         },
         "ing_pueraria": {
@@ -463,7 +349,9 @@
             "dose": "",
             "quote": "Radice d’Oriente.",
             "role": "Radice della tradizione asiatica, presente nella formula per il suo profilo vegetale.",
-            "pill": "09 · LA RADICE"
+            "pill": "09 · LA RADICE",
+            "benefit": "La radice che viene da lontano.",
+            "icon": "radice"
           }
         }
       },
@@ -479,110 +367,11 @@
         "ing_pueraria"
       ],
       "settings": {
-        "note": "",
+        "note": "<p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco (citrato) 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>",
         "kicker": "",
-        "heading": "La formula completa.",
-        "dek": "Ogni ingrediente alla dose che porta in etichetta. Il decimo elemento non è un ingrediente: è l’ora in cui lo prendi.",
+        "heading": "La formula <em>completa.</em>",
+        "dek": "Ogni ingrediente con la sua dose, e quello che cambia per te. Il decimo elemento non è un ingrediente: è l’ora in cui lo usi.",
         "surface": "white",
-        "width": "wide",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "confronto": {
-      "type": "freos-pdp-confronto",
-      "blocks": {
-        "cr_1": {
-          "type": "row",
-          "settings": {
-            "label": "Il formato",
-            "v0": "Gel denso",
-            "v1": "Liquido",
-            "v2": "Caramella",
-            "v3": "Confetto",
-            "v4": "Liquido"
-          }
-        },
-        "cr_2": {
-          "type": "row",
-          "settings": {
-            "label": "Dove agisce",
-            "v0": "Resta dove lo metti",
-            "v1": "Si sputa",
-            "v2": "Si scioglie",
-            "v3": "Si mastica",
-            "v4": "Evapora"
-          }
-        },
-        "cr_3": {
-          "type": "row",
-          "settings": {
-            "label": "Durata del gesto",
-            "v0": "Trenta secondi",
-            "v1": "Trenta secondi",
-            "v2": "Qualche minuto",
-            "v3": "Qualche minuto",
-            "v4": "Un secondo"
-          }
-        },
-        "cr_4": {
-          "type": "row",
-          "settings": {
-            "label": "Zinco che lega",
-            "v0": "si",
-            "v1": "no",
-            "v2": "no",
-            "v3": "no",
-            "v4": "no"
-          }
-        },
-        "cr_5": {
-          "type": "row",
-          "settings": {
-            "label": "Nessun abbonamento",
-            "v0": "si",
-            "v1": "si",
-            "v2": "si",
-            "v3": "si",
-            "v4": "si"
-          }
-        },
-        "cr_6": {
-          "type": "row",
-          "settings": {
-            "label": "Il momento",
-            "v0": "La sera",
-            "v1": "Dopo i pasti",
-            "v2": "Quando serve",
-            "v3": "Quando serve",
-            "v4": "Quando serve"
-          }
-        }
-      },
-      "block_order": [
-        "cr_1",
-        "cr_2",
-        "cr_3",
-        "cr_4",
-        "cr_5",
-        "cr_6"
-      ],
-      "settings": {
-        "h0": "FREOS",
-        "i0": "freos-cmp-pot.webp",
-        "h1": "Collutorio",
-        "i1": "freos-cmp-collutorio.webp",
-        "h2": "Mentine",
-        "i2": "freos-cat-mentine.webp",
-        "h3": "Gomme",
-        "i3": "freos-cat-gomme.webp",
-        "h4": "Spray",
-        "i4": "freos-cat-spray.webp",
-        "note": "<p>Non diciamo che le altre soluzioni non servano. Diciamo che fanno un’altra cosa, in un altro momento della giornata.</p>",
-        "kicker": "",
-        "heading": "Perché il resto non è bastato.",
-        "dek": "Sei criteri, cinque soluzioni. Giudica tu.",
-        "surface": "soft",
         "width": "wide",
         "padding_top": 40,
         "padding_bottom": 40
@@ -594,73 +383,79 @@
         "rv1": {
           "type": "review",
           "settings": {
-            "file": "freos-p-giulia.webp",
             "name": "Giulia R.",
-            "age": "34 anni",
-            "durata": "da 2 mesi",
             "stars": 5,
             "title": "Non mi controllo più a metà frase",
-            "body": "<p>Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Lo facevo al lavoro, lo facevo a cena, lo facevo mentre parlavo con mia sorella.</p><p>Dopo tre settimane mi sono resa conto che non lo facevo più. Non me l’ero imposto e non me ne ero accorta sul momento: l’ho capito ripensandoci. È la cosa che mi ha colpito di più.</p>"
+            "body": "<p>Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Lo facevo al lavoro, lo facevo a cena, lo facevo mentre parlavo con mia sorella.</p><p>Dopo tre settimane mi sono resa conto che non lo facevo più. Non me l’ero imposto e non me ne ero accorta sul momento: l’ho capito ripensandoci. È la cosa che mi ha colpito di più.</p>",
+            "file": "freos-p-giulia.webp",
+            "age": "34 anni",
+            "durata": "da 2 mesi",
+            "image": ""
           }
         },
         "rv2": {
           "type": "review",
           "settings": {
-            "file": "freos-p-marco.webp",
             "name": "Marco T.",
-            "age": "47 anni",
-            "durata": "da 3 mesi",
             "stars": 5,
             "title": "Il risveglio è la differenza",
-            "body": "<p>L’ho preso senza aspettarmi granché. Avevo letto la riga sulla saliva che di notte quasi si ferma, e quella cosa l’avevo notata da solo senza saperla spiegare: era sempre peggio al risveglio, mai dopo pranzo.</p><p>Non prometto miracoli. Dico che al mattino la sensazione non è più quella di prima, ed è lì che me ne sono accorto per primo.</p>"
+            "body": "<p>L’ho preso senza aspettarmi granché. Avevo letto la riga sulla saliva che di notte quasi si ferma, e quella cosa l’avevo notata da solo senza saperla spiegare: era sempre peggio al risveglio, mai dopo pranzo.</p><p>Non prometto miracoli. Dico che al mattino la sensazione non è più quella di prima, ed è lì che me ne sono accorto per primo.</p>",
+            "file": "freos-p-marco.webp",
+            "age": "47 anni",
+            "durata": "da 3 mesi",
+            "image": ""
           }
         },
         "rv3": {
           "type": "review",
           "settings": {
-            "file": "freos-p-elena.webp",
             "name": "Elena D.",
-            "age": "43 anni",
-            "durata": "da 6 settimane",
             "stars": 5,
             "title": "Ho smesso di comprare cicche",
-            "body": "<p>Avevo il cassetto del bagno pieno: collutori in tre gusti, uno spray preso in aeroporto, due raschietti usati sei volte in totale. Le gomme le compravo a scatole e le contavo.</p><p>Adesso ne ho ancora un pacchetto aperto da due mesi. Non ho deciso di smettere di comprarle: mi sono accorta a un certo punto che non le stavo più finendo.</p>"
+            "body": "<p>Avevo il cassetto del bagno pieno: collutori in tre gusti, uno spray preso in aeroporto, due raschietti usati sei volte in totale. Le gomme le compravo a scatole e le contavo.</p><p>Adesso ne ho ancora un pacchetto aperto da due mesi. Non ho deciso di smettere di comprarle: mi sono accorta a un certo punto che non le stavo più finendo.</p>",
+            "file": "freos-p-elena.webp",
+            "age": "43 anni",
+            "durata": "da 6 settimane",
+            "image": ""
           }
         },
         "rv4": {
           "type": "review",
           "settings": {
-            "file": "freos-p-davide.webp",
             "name": "Davide P.",
-            "age": "39 anni",
-            "durata": "da 4 mesi",
             "stars": 5,
             "title": "Il gesto si tiene",
-            "body": "<p>La mia paura era di non riuscire a tenerlo. Ho cominciato cose del genere almeno cinque volte e le ho mollate tutte entro il mese, sempre per lo stesso motivo: mi dimenticavo.</p><p>Venti giorni e ormai lo faccio senza pensarci, subito dopo i denti. È l’unica cosa che sono riuscito a mantenere, e credo sia perché dura trenta secondi e sta accanto allo spazzolino.</p>"
+            "body": "<p>La mia paura era di non riuscire a tenerlo. Ho cominciato cose del genere almeno cinque volte e le ho mollate tutte entro il mese, sempre per lo stesso motivo: mi dimenticavo.</p><p>Venti giorni e ormai lo faccio senza pensarci, subito dopo i denti. È l’unica cosa che sono riuscito a mantenere, e credo sia perché dura trenta secondi e sta accanto allo spazzolino.</p>",
+            "file": "freos-p-davide.webp",
+            "age": "39 anni",
+            "durata": "da 4 mesi",
+            "image": ""
           }
         },
         "rv5": {
           "type": "review",
           "settings": {
-            "file": "freos-p-sara.webp",
             "name": "Sara M.",
-            "age": "31 anni",
-            "durata": "da 5 settimane",
             "stars": 4,
             "title": "Ci ho messo un po’ a fidarmi",
-            "body": "<p>Avevo provato di tutto e non ci credevo più. La prima settimana non ho notato niente e stavo per lasciar perdere — l’ho lasciato sul lavandino più per pigrizia che per convinzione.</p><p>Poi sì, qualcosa si è mosso. Tolgo una stella proprio per quella prima settimana: se qualcuno me l’avesse detto prima, non sarei stata lì a chiedermi se avevo buttato altri soldi.</p>"
+            "body": "<p>Avevo provato di tutto e non ci credevo più. La prima settimana non ho notato niente e stavo per lasciar perdere — l’ho lasciato sul lavandino più per pigrizia che per convinzione.</p><p>Poi sì, qualcosa si è mosso. Tolgo una stella proprio per quella prima settimana: se qualcuno me l’avesse detto prima, non sarei stata lì a chiedermi se avevo buttato altri soldi.</p>",
+            "file": "freos-p-sara.webp",
+            "age": "31 anni",
+            "durata": "da 5 settimane",
+            "image": ""
           }
         },
         "rv6": {
           "type": "review",
           "settings": {
-            "file": "freos-p-alessandro.webp",
             "name": "Alessandro V.",
-            "age": "52 anni",
-            "durata": "da 3 mesi",
             "stars": 5,
             "title": "Vivo da solo, nessuno me lo diceva",
-            "body": "<p>Vivo da solo e lavoro da casa. Il punto non era nemmeno il problema in sé: era che non avevo modo di saperlo, e a un certo punto ci pensavo prima di ogni chiamata, prima di ogni caffè al bar.</p><p>Adesso ho una routine e non ci penso tutto il giorno. Non so dire se sia cambiato quello che sentono gli altri. So che è cambiato quanto tempo ci passo sopra.</p>"
+            "body": "<p>Vivo da solo e lavoro da casa. Il punto non era nemmeno il problema in sé: era che non avevo modo di saperlo, e a un certo punto ci pensavo prima di ogni chiamata, prima di ogni caffè al bar.</p><p>Adesso ho una routine e non ci penso tutto il giorno. Non so dire se sia cambiato quello che sentono gli altri. So che è cambiato quanto tempo ci passo sopra.</p>",
+            "file": "freos-p-alessandro.webp",
+            "age": "52 anni",
+            "durata": "da 3 mesi",
+            "image": ""
           }
         }
       },
@@ -673,58 +468,11 @@
         "rv6"
       ],
       "settings": {
-        "source": "",
+        "source": "Le prime recensioni sono qui sopra. Questi racconti sono stati raccolti in forma anonima per la nostra inchiesta.",
         "kicker": "",
-        "heading": "Hanno smesso di controllare.",
+        "heading": "Hanno smesso <em>di controllare.</em>",
         "dek": "Con parole loro.",
         "surface": "softer",
-        "width": "wide",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "rituale": {
-      "type": "freos-pdp-rituale",
-      "blocks": {
-        "step_01": {
-          "type": "step",
-          "settings": {
-            "file": "freos-rit-01.webp",
-            "num": "01",
-            "label": "La sera",
-            "text": "Dopo lo spazzolino, non al posto."
-          }
-        },
-        "step_02": {
-          "type": "step",
-          "settings": {
-            "file": "freos-rit-02.webp",
-            "num": "02",
-            "label": "Il gesto",
-            "text": "Da completare — il modo d’uso arriva qui."
-          }
-        },
-        "step_03": {
-          "type": "step",
-          "settings": {
-            "file": "freos-rit-03.webp",
-            "num": "03",
-            "label": "Poi a letto",
-            "text": "Da completare — cosa fare dopo arriva qui."
-          }
-        }
-      },
-      "block_order": [
-        "step_01",
-        "step_02",
-        "step_03"
-      ],
-      "settings": {
-        "foot": "Sezione in preparazione: il modo d’uso definitivo arriva qui.",
-        "kicker": "",
-        "heading": "Tre passaggi. Trenta secondi.",
-        "dek": "La sera, dopo lo spazzolino. Non al posto.",
-        "surface": "white",
         "width": "wide",
         "padding_top": 40,
         "padding_bottom": 40
@@ -760,7 +508,6 @@
         "g2",
         "g3"
       ],
-      "disabled": true,
       "settings": {
         "shield": true,
         "body": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>",
@@ -769,7 +516,7 @@
         "cta_url": "",
         "legal": "Garanzia commerciale. Si aggiunge ai tuoi diritti di legge — recesso di 14 giorni e garanzia legale di conformità — che restano interi.",
         "kicker": "",
-        "heading": "Un mese di prova. Il rischio è nostro.",
+        "heading": "Un mese di prova. <em>Il rischio è nostro.</em>",
         "dek": "",
         "surface": "ink",
         "width": "narrow",
@@ -780,14 +527,6 @@
     "faq": {
       "type": "freos-pdp-faq",
       "blocks": {
-        "q_limiti": {
-          "type": "q",
-          "settings": {
-            "question": "Quello che FREOS non fa.",
-            "answer": "<ul><li>Non tocca le tonsille</li><li>Non scioglie i tonsilloliti</li><li>Non sostituisce l’otorino, né il dentista, né lo spazzolino</li><li>Non cura l’alitosi: non è un farmaco e non ha un’indicazione terapeutica</li></ul><p>Dolore, febbre o difficoltà a deglutire? L’otorino viene prima di qualunque gel.</p>",
-            "open": false
-          }
-        },
         "q1": {
           "type": "q",
           "settings": {
@@ -852,6 +591,22 @@
             "open": false
           }
         },
+        "q9": {
+          "type": "q",
+          "settings": {
+            "question": "Come funziona la garanzia?",
+            "answer": "<p>Trenta sere di prova. Se non ti dice niente, ti rimborsiamo e <strong>il barattolo resta a te</strong>. È una garanzia commerciale che offriamo noi e <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità — che restano interi.</p>",
+            "open": false
+          }
+        },
+        "q_limiti": {
+          "type": "q",
+          "settings": {
+            "question": "Quello che FREOS non fa.",
+            "answer": "<ul><li>Non tocca le tonsille</li><li>Non scioglie i tonsilloliti</li><li>Non sostituisce l’otorino, né il dentista, né lo spazzolino</li><li>Non cura l’alitosi: non è un farmaco e non ha un’indicazione terapeutica</li></ul><p>Dolore, febbre o difficoltà a deglutire? L’otorino viene prima di qualunque gel.</p>",
+            "open": false
+          }
+        },
         "q_tempo": {
           "type": "q",
           "settings": {
@@ -875,14 +630,6 @@
             "answer": "<p>La formula contiene tè verde, che apporta caffeina naturalmente presente: se sei sensibile alla caffeina, tienine conto per un prodotto che si prende la sera. Non assumere in gravidanza o durante l’allattamento. Non superare la dose giornaliera consigliata. Tenere fuori dalla portata dei bambini sotto i tre anni. Gli integratori non sostituiscono una dieta variata e uno stile di vita sano.</p>",
             "open": false
           }
-        },
-        "q9": {
-          "type": "q",
-          "settings": {
-            "question": "Come funziona la garanzia?",
-            "answer": "<p>Trenta sere di prova. Se non ti dice niente, ti rimborsiamo e <strong>il barattolo resta a te</strong>. È una garanzia commerciale che offriamo noi e <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità — che restano interi.</p>",
-            "open": false
-          }
         }
       },
       "block_order": [
@@ -901,19 +648,19 @@
         "q9"
       ],
       "settings": {
-        "guar_title": "",
-        "guar_text": "",
-        "guar_label": "",
-        "guar_url": "",
-        "src_title": "",
-        "src_items": "",
+        "src_title": "Fonti",
+        "src_items": "<ul><li>Takahashi et al., 2.873 pazienti consecutivi, 2014</li><li>Tangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205</li><li>Dawes C, Wong DTW. J Dent Res, 2019. PMID 30782091</li><li>Quirynen M et al. J Clin Periodontol, 2009. PMID 19811581</li></ul>",
         "kicker": "",
-        "heading": "Prima di decidere.",
+        "heading": "Prima <em>di decidere.</em>",
         "dek": "",
         "surface": "white",
         "width": "narrow",
         "padding_top": 40,
-        "padding_bottom": 40
+        "padding_bottom": 40,
+        "guar_title": "",
+        "guar_text": "",
+        "guar_label": "",
+        "guar_url": ""
       }
     },
     "sticky": {
@@ -925,9 +672,277 @@
         "score": "4,8",
         "cta": "Aggiungi al carrello",
         "soldout": "Non disponibile",
-        "atc_bg": "",
-        "atc_fg": "",
         "watch": ".fr-atc-wrap"
+      }
+    },
+    "meccanismo": {
+      "type": "freos-pdp-journey",
+      "blocks": {
+        "m1": {
+          "type": "step",
+          "settings": {
+            "badge": "RESTA",
+            "title": "È un gel, non un liquido.",
+            "text": "Dopo la deglutizione resta sulle mucose invece di sciacquarle e andarsene."
+          }
+        },
+        "m2": {
+          "type": "step",
+          "settings": {
+            "badge": "LEGA",
+            "title": "Gli ioni di zinco legano i composti solforati.",
+            "text": "Zinco (citrato) 1,38 mg (14% VNR) per porzione serale. Un composto legato non è più volatile — cioè non arriva più al naso di nessuno."
+          }
+        },
+        "m3": {
+          "type": "step",
+          "settings": {
+            "badge": "ACCOMPAGNA",
+            "title": "Copre le ore in cui la saliva cala.",
+            "text": "La bocca resta chiusa, e quello che sale non viene più diluito né portato via. Non trenta secondi: una notte."
+          }
+        },
+        "geste_st1": {
+          "type": "step",
+          "settings": {
+            "badge": "Uno",
+            "title": "Due misurini",
+            "text": "1,2 g di gel sul dorso della lingua. Mai a stomaco vuoto."
+          }
+        },
+        "geste_st2": {
+          "type": "step",
+          "settings": {
+            "badge": "Due",
+            "title": "Lascia sciogliere",
+            "text": "Non serve risciacquare, non serve acqua."
+          }
+        },
+        "geste_st3": {
+          "type": "step",
+          "settings": {
+            "badge": "Tre",
+            "title": "Deglutisci e dormi",
+            "text": "La sera finisce lì."
+          }
+        }
+      },
+      "block_order": [
+        "m1",
+        "m2",
+        "m3",
+        "geste_st1",
+        "geste_st2",
+        "geste_st3"
+      ],
+      "settings": {
+        "kicker": "",
+        "heading": "Il <em>Turno di Notte</em>.",
+        "dek": "Durante il sonno il flusso salivare crolla del 90%. È la finestra in cui i composti si accumulano — ed è l’unica in cui qualcosa che resta al suo posto ha senso. (Dawes C, Wong DTW. J Dent Res, 2019)",
+        "foot": "<p>Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova.</p>",
+        "surface": "soft",
+        "width": "narrow",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "confronto": {
+      "type": "freos-pdp-confronto",
+      "blocks": {
+        "cr_1": {
+          "type": "row",
+          "settings": {
+            "label": "Resta in bocca dopo il gesto?",
+            "v0": "si",
+            "v1": "no",
+            "v2": "no",
+            "v3": "no",
+            "v4": "no"
+          }
+        },
+        "cr_2": {
+          "type": "row",
+          "settings": {
+            "label": "Copre le ore in cui dormi?",
+            "v0": "si",
+            "v1": "no",
+            "v2": "no",
+            "v3": "no",
+            "v4": "no"
+          }
+        },
+        "cr_3": {
+          "type": "row",
+          "settings": {
+            "label": "Devi ripeterlo durante il giorno?",
+            "v0": "no",
+            "v1": "si",
+            "v2": "si",
+            "v3": "si",
+            "v4": "si"
+          }
+        },
+        "cr_4": {
+          "type": "row",
+          "settings": {
+            "label": "Lo zinco lega i composti solforati?",
+            "v0": "si",
+            "v1": "no",
+            "v2": "no",
+            "v3": "no",
+            "v4": "no"
+          }
+        },
+        "cr_5": {
+          "type": "row",
+          "settings": {
+            "label": "Profuma sopra, o lega?",
+            "v0": "Lega",
+            "v1": "Profuma",
+            "v2": "Profuma",
+            "v3": "Profuma",
+            "v4": "Profuma"
+          }
+        },
+        "cr_6": {
+          "type": "row",
+          "settings": {
+            "label": "Per il momento, o per la notte?",
+            "v0": "Per la notte",
+            "v1": "Al momento",
+            "v2": "Al momento",
+            "v3": "Al momento",
+            "v4": "Al momento"
+          }
+        }
+      },
+      "block_order": [
+        "cr_1",
+        "cr_2",
+        "cr_3",
+        "cr_4",
+        "cr_5",
+        "cr_6"
+      ],
+      "settings": {
+        "note": "<p>Non diciamo che le altre soluzioni non servano. Diciamo che fanno un’altra cosa, in un altro momento della giornata.</p>",
+        "kicker": "",
+        "heading": "Perché il resto <em>non è bastato.</em>",
+        "dek": "Sei domande che ti sei già fatto. Giudica tu.",
+        "surface": "soft",
+        "width": "wide",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "h0": "FREOS",
+        "i0": "freos-cmp-pot.webp",
+        "h1": "Collutorio",
+        "i1": "freos-cmp-collutorio.webp",
+        "h2": "Mentine",
+        "i2": "freos-cat-mentine.webp",
+        "h3": "Gomme",
+        "i3": "freos-cat-gomme.webp",
+        "h4": "Spray",
+        "i4": "freos-cat-spray.webp"
+      }
+    },
+    "rituale": {
+      "type": "freos-pdp-rituale",
+      "blocks": {
+        "step_01": {
+          "type": "step",
+          "settings": {
+            "file": "freos-rit-01.webp",
+            "num": "01",
+            "label": "La sera",
+            "text": "Dopo lo spazzolino, non al posto."
+          }
+        },
+        "step_02": {
+          "type": "step",
+          "settings": {
+            "file": "freos-rit-02.webp",
+            "num": "02",
+            "label": "Il gesto",
+            "text": "Da completare — il modo d’uso arriva qui."
+          }
+        },
+        "step_03": {
+          "type": "step",
+          "settings": {
+            "file": "freos-rit-03.webp",
+            "num": "03",
+            "label": "Poi a letto",
+            "text": "Da completare — cosa fare dopo arriva qui."
+          }
+        }
+      },
+      "block_order": [
+        "step_01",
+        "step_02",
+        "step_03"
+      ],
+      "settings": {
+        "foot": "Sezione in preparazione: il modo d’uso definitivo arriva qui.",
+        "kicker": "",
+        "heading": "Tre passaggi. <em>Trenta secondi.</em>",
+        "dek": "La sera, dopo lo spazzolino. Non al posto.",
+        "surface": "white",
+        "width": "wide",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "benefici": {
+      "type": "freos-pdp-benefici",
+      "blocks": {
+        "ben_1": {
+          "type": "ben",
+          "settings": {
+            "icona": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z\"/></svg>",
+            "text": "Agisce quando la bocca smette di difendersi",
+            "tag": "LA SERA"
+          }
+        },
+        "ben_2": {
+          "type": "ben",
+          "settings": {
+            "icona": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"8.5\"/><path d=\"M12 7.5V12l3 1.8\"/></svg>",
+            "text": "Un gesto, trenta secondi",
+            "tag": "SENZA SFORZO"
+          }
+        },
+        "ben_3": {
+          "type": "ben",
+          "settings": {
+            "icona": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3.5s5.5 5.9 5.5 9.4a5.5 5.5 0 1 1-11 0C6.5 9.4 12 3.5 12 3.5z\"/></svg>",
+            "text": "Resta dove lo metti",
+            "tag": "GEL DENSO"
+          }
+        },
+        "ben_4": {
+          "type": "ben",
+          "settings": {
+            "icona": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3.5\" y=\"5\" width=\"17\" height=\"15.5\" rx=\"2\"/><path d=\"M3.5 9.5h17M8 3.5v3M16 3.5v3\"/></svg>",
+            "text": "Un barattolo copre un mese",
+            "tag": "TRENTA SERE"
+          }
+        }
+      },
+      "block_order": [
+        "ben_1",
+        "ben_2",
+        "ben_3",
+        "ben_4"
+      ],
+      "settings": {
+        "foot": "Integratore alimentare. Non cura l’alitosi.",
+        "kicker": "",
+        "heading": "Quattro cose, <em>e basta.</em>",
+        "dek": "",
+        "surface": "softer",
+        "width": "narrow",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     }
   },

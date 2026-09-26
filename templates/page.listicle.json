@@ -647,12 +647,13 @@
     "sticky": {
       "type": "freos-lp-sticky",
       "settings": {
-        "label": "Scopri il gesto della sera →",
+        "label": "Provalo trenta sere →",
         "url": "/products/gel-notturno-micro-aderente-allo-zinco",
         "sub": "",
         "at": 30,
         "hide_end": 88,
-        "mobile_only": false
+        "mobile_only": false,
+        "glyph": "carrello"
       }
     }
   },
