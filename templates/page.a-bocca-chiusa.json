@@ -8,6 +8,7 @@
  * ------------------------------------------------------------
  */
 {
+  "layout": "freos-lp",
   "sections": {
     "mast": {
       "type": "freos-lp-masthead",
