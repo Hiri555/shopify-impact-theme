@@ -167,103 +167,6 @@
         "rule": false
       }
     },
-    "tappe": {
-      "type": "freos-lp-stages",
-      "blocks": {
-        "s1": {
-          "type": "stage",
-          "settings": {
-            "label": "Prima",
-            "text": "Un sapore strano, una sensazione in gola che va e viene."
-          }
-        },
-        "s2": {
-          "type": "stage",
-          "settings": {
-            "label": "Poi",
-            "text": "La prima pallina bianca, e un nome da cercare di notte sul telefono."
-          }
-        },
-        "s3": {
-          "type": "stage",
-          "settings": {
-            "label": "Poi",
-            "text": "Le serate davanti allo specchio, e i giorni in cui ne escono di nuovi."
-          }
-        },
-        "s4": {
-          "type": "stage",
-          "settings": {
-            "label": "Oggi",
-            "text": "Tieni le distanze quando parli, e pensi che l'unica uscita sia un bisturi ."
-          }
-        }
-      },
-      "block_order": [
-        "s1",
-        "s2",
-        "s3",
-        "s4"
-      ],
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "heading": "All'inizio sembra una cosa piccola. Poi diventa <em>un appuntamento fisso</em>.",
-        "intro": "",
-        "outro": "",
-        "rule": true
-      }
-    },
-    "segnali1": {
-      "type": "freos-lp-signals",
-      "blocks": {
-        "i1": {
-          "type": "item",
-          "settings": {
-            "text": "<p><p>Un sapore cattivo in fondo alla gola, che torna anche dopo lo spazzolino.</p></p>"
-          }
-        },
-        "i2": {
-          "type": "item",
-          "settings": {
-            "text": "<p><p>La sensazione di qualcosa di fermo in gola quando deglutisci.</p></p>"
-          }
-        },
-        "i3": {
-          "type": "item",
-          "settings": {
-            "text": "<p><p>Piccole palline bianche o gialle che escono con un colpo di tosse, spesso per caso.</p></p>"
-          }
-        },
-        "i4": {
-          "type": "item",
-          "settings": {
-            "text": "<p><p>Un alito pesante che nessuno ti ha ancora spiegato, anche con una buona igiene.</p></p>"
-          }
-        },
-        "i5": {
-          "type": "item",
-          "settings": {
-            "text": "<p><p>Una gola spesso irritata, senza febbre e senza un vero mal di gola.</p></p>"
-          }
-        }
-      },
-      "block_order": [
-        "i1",
-        "i2",
-        "i3",
-        "i4",
-        "i5"
-      ],
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "title": "Segnali da riconoscere",
-        "rule": false
-      }
-    },
     "segnali2": {
       "type": "freos-lp-signals",
       "blocks": {
@@ -1202,6 +1105,80 @@
         "intro": "<p>Studiando questo fenomeno abbiamo raccolto centinaia di racconti. Quello che segue è riscritto da noi, in forma breve: sono osservazioni, non prove.</p>",
         "foot": "<p>Sono esperienze individuali. Non sono risultati tipici e non descrivono quello che succederà a te.</p>",
         "scope": "fr-lp1",
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "tappe": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "h": {
+          "type": "sub",
+          "settings": {
+            "text": "All’inizio sembra una cosa piccola. Poi diventa un appuntamento fisso.",
+            "level": "h3"
+          }
+        },
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p>All’inizio è un sapore strano, una sensazione in gola che va e viene e che non si riesce a spiegare. Poi arriva la prima pallina bianca, e un nome cercato di notte sul telefono.</p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Poi vengono le serate davanti allo specchio, e i giorni in cui ne escono due o tre. E oggi tieni le distanze quando parli, convinto che l’unica uscita sia l’intervento.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "p1",
+        "p2"
+      ],
+      "settings": {
+        "kicker": "",
+        "heading": "",
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "segnali1": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "h": {
+          "type": "sub",
+          "settings": {
+            "text": "Segnali da riconoscere",
+            "level": "h3"
+          }
+        },
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Quello che si riconosce è quasi sempre lo stesso: un sapore cattivo in fondo alla gola che torna anche dopo lo spazzolino, la sensazione di qualcosa di fermo quando deglutisci, piccole palline bianche o gialle che escono con un colpo di tosse.</p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Poi un alito pesante che nessuno ti ha ancora spiegato, e una gola spesso irritata — senza febbre, e senza un vero mal di gola.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "p1",
+        "p2"
+      ],
+      "settings": {
+        "kicker": "",
+        "heading": "",
+        "scope": "fr-lp1",
+        "rule": false,
         "pt": 0,
         "pb": 0
       }
