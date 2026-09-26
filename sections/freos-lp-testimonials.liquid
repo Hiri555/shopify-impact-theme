@@ -5,7 +5,7 @@
   Les temoignages. Un bloc par temoignage, et UN richtext pour tout son corps
   -- pas un reglage par paragraphe : ca garde le schema lisible et reste sous
   la limite de 50 blocs.
-  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3).
+  Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3 / fr-lp4).
   Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
 {%- endcomment -%}
@@ -77,7 +77,7 @@
       "info": "Vide = aucun bouton."
     },
     {
-      "type": "url",
+      "type": "text",
       "id": "cta_url",
       "label": "Destination"
     },
@@ -108,6 +108,10 @@
         {
           "value": "fr-lp3",
           "label": "Listicle"
+        },
+        {
+          "value": "fr-lp4",
+          "label": "Prelander · A Bocca Chiusa"
         }
       ]
     },
