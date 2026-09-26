@@ -1242,3 +1242,22 @@
     height: 48vh; height: 48svh; max-height: 460px;
   }
 }
+
+/* --------------------------------------------------------------------------
+   L'AIR MORT ENTRE LE TITRE ET LE PREMIER ECRAN (listicle)
+   --------------------------------------------------------------------------
+   Mesure a 390 px, du bas de la signature au haut de la photo : 98 px de vide,
+   faits de quatre choses qui s'additionnent sans que personne les ait
+   additionnees -- 36 px sous la signature, 44 px de bas de bloc de titre, un
+   `.prose` VIDE que la section titre emet quand elle n'a pas de chapeau, et
+   18 px de haut de premier ecran. Chacune est raisonnable seule.
+
+   `.prose:empty` est neutralise sur les quatre feuilles : un conteneur vide
+   qui pousse le contenu vers le bas est un bug partout, pas seulement ici.
+   -------------------------------------------------------------------------- */
+.fr-lp1 .prose:empty, .fr-lp2 .prose:empty,
+.fr-lp3 .prose:empty, .fr-lp4 .prose:empty{ display: none; }
+
+.fr-lp3 .freos-lp-opener .article{ padding-bottom: 10px; }
+.fr-lp3 .byline{ margin-bottom: 14px; }
+.fr-lp3 .primo{ margin-top: 10px; }
