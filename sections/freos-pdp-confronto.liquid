@@ -2,11 +2,11 @@
   ============================================================================
   FREOS · PDP — FREOS · 07 Confronto
   ----------------------------------------------------------------------------
-  Deux colonnes face a face, une pastille « vs » sur l'axe. A gauche la
-  solution deja essayee, en gris ; a droite FREOS, mis en valeur. Chaque
-  ligne est un bloc : le libelle, puis les deux reponses l'une en face de
-  l'autre.
-  A 390 px les colonnes s'empilent et le « vs » passe entre les deux.
+  Un tableau comparatif a cinq colonnes. Le libelle du critere est fige a
+  gauche : a 390 px le tableau defile, et sans lui « si » tout seul ne veut
+  rien dire. FREOS est la premiere colonne produit, donc visible au repos.
+  Une cellule qui vaut « si » ou « no » devient une icone ; sinon le texte
+  s'affiche tel quel. Une colonne dont le titre est vide disparait.
   Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur.
   Genere par build_pdp_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
@@ -31,45 +31,62 @@
     </header>
   {%- endif -%}
 
-    <div class="fr-vs">
-      <div class="fr-vs-col fr-vs-col--a">
-        <div class="fr-vs-head">
-          {%- if section.settings.img1 != blank -%}
-            <span class="fr-vs-ph"><img src="{{ section.settings.img1 | strip | asset_url }}"
-                 alt="{{ section.settings.col1 | escape }}" loading="lazy"></span>
-          {%- endif -%}
-          <p class="fr-vs-t">{{ section.settings.col1 }}</p>
-        </div>
-        <dl class="fr-vs-rows">
+    <div class="fr-cmp-wrap">
+      <table class="fr-cmp">
+        <thead>
+          <tr>
+            <td class="fr-cmp-corner"></td>
+            {%- for i in (1..5) -%}
+              {%- case i -%}
+                {%- when 1 -%}{%- assign t = section.settings.h0 -%}{%- assign im = section.settings.i0 -%}
+                {%- when 2 -%}{%- assign t = section.settings.h1 -%}{%- assign im = section.settings.i1 -%}
+                {%- when 3 -%}{%- assign t = section.settings.h2 -%}{%- assign im = section.settings.i2 -%}
+                {%- when 4 -%}{%- assign t = section.settings.h3 -%}{%- assign im = section.settings.i3 -%}
+                {%- when 5 -%}{%- assign t = section.settings.h4 -%}{%- assign im = section.settings.i4 -%}
+              {%- endcase -%}
+              {%- if t != blank -%}
+                <th scope="col" class="fr-cmp-h{% if i == 1 %} fr-cmp-h--nous{% endif %}">
+                  {%- if im != blank -%}
+                    <span class="fr-cmp-ph"><img src="{{ im | strip | asset_url }}"
+                         alt="{{ t | escape }}" loading="lazy"></span>
+                  {%- endif -%}
+                  <span class="fr-cmp-hn">{{ t }}</span>
+                </th>
+              {%- endif -%}
+            {%- endfor -%}
+          </tr>
+        </thead>
+        <tbody>
           {%- for block in section.blocks -%}
-            <div class="fr-vs-row" {{ block.shopify_attributes }}>
-              <dt>{{ block.settings.label }}</dt>
-              <dd>{{ block.settings.c1 }}</dd>
-            </div>
+            <tr {{ block.shopify_attributes }}>
+              <th scope="row" class="fr-cmp-l">{{ block.settings.label }}</th>
+              {%- for i in (1..5) -%}
+                {%- case i -%}
+                  {%- when 1 -%}{%- assign t = section.settings.h0 -%}{%- assign v = block.settings.v0 -%}
+                  {%- when 2 -%}{%- assign t = section.settings.h1 -%}{%- assign v = block.settings.v1 -%}
+                  {%- when 3 -%}{%- assign t = section.settings.h2 -%}{%- assign v = block.settings.v2 -%}
+                  {%- when 4 -%}{%- assign t = section.settings.h3 -%}{%- assign v = block.settings.v3 -%}
+                  {%- when 5 -%}{%- assign t = section.settings.h4 -%}{%- assign v = block.settings.v4 -%}
+                {%- endcase -%}
+                {%- if t != blank -%}
+                  {%- assign vv = v | strip | downcase -%}
+                  <td class="fr-cmp-c{% if i == 1 %} fr-cmp-c--nous{% endif %}">
+                    {%- if vv == 'si' -%}
+                      <span class="fr-cmp-oui" aria-label="si"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 8.5l3.2 3.2L13 5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                    {%- elsif vv == 'no' -%}
+                      <span class="fr-cmp-non" aria-label="no"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4l8 8M12 4l-8 8" stroke-linecap="round"/></svg></span>
+                    {%- else -%}
+                      {{ v }}
+                    {%- endif -%}
+                  </td>
+                {%- endif -%}
+              {%- endfor -%}
+            </tr>
           {%- endfor -%}
-        </dl>
-      </div>
-
-      <span class="fr-vs-badge" aria-hidden="true">vs</span>
-
-      <div class="fr-vs-col fr-vs-col--b">
-        <div class="fr-vs-head">
-          {%- if section.settings.img2 != blank -%}
-            <span class="fr-vs-ph"><img src="{{ section.settings.img2 | strip | asset_url }}"
-                 alt="{{ section.settings.col2 | escape }}" loading="lazy"></span>
-          {%- endif -%}
-          <p class="fr-vs-t">{{ section.settings.col2 }}</p>
-        </div>
-        <dl class="fr-vs-rows">
-          {%- for block in section.blocks -%}
-            <div class="fr-vs-row" {{ block.shopify_attributes }}>
-              <dt>{{ block.settings.label }}</dt>
-              <dd>{{ block.settings.c2 }}</dd>
-            </div>
-          {%- endfor -%}
-        </dl>
-      </div>
+        </tbody>
+      </table>
     </div>
+    <p class="fr-rail-hint" aria-hidden="true">Scorri &#8594;</p>
 
     {%- if section.settings.note != blank -%}
       <div class="fr-vs-note">{{ section.settings.note }}</div>
@@ -85,27 +102,62 @@
   "settings": [
     {
       "type": "header",
-      "content": "Les deux colonnes"
+      "content": "Les colonnes"
     },
     {
       "type": "text",
-      "id": "col1",
-      "label": "Titre de gauche"
+      "id": "h0",
+      "label": "Colonne 1 (FREOS, mise en valeur)",
+      "default": "FREOS"
     },
     {
       "type": "text",
-      "id": "img1",
-      "label": "Vignette de gauche (asset)"
+      "id": "i0",
+      "label": "Vignette (asset)"
     },
     {
       "type": "text",
-      "id": "col2",
-      "label": "Titre de droite"
+      "id": "h1",
+      "label": "Colonne 2",
+      "default": "Collutorio"
     },
     {
       "type": "text",
-      "id": "img2",
-      "label": "Vignette de droite (asset)"
+      "id": "i1",
+      "label": "Vignette (asset)"
+    },
+    {
+      "type": "text",
+      "id": "h2",
+      "label": "Colonne 3",
+      "default": "Mentine"
+    },
+    {
+      "type": "text",
+      "id": "i2",
+      "label": "Vignette (asset)"
+    },
+    {
+      "type": "text",
+      "id": "h3",
+      "label": "Colonne 4",
+      "default": "Gomme"
+    },
+    {
+      "type": "text",
+      "id": "i3",
+      "label": "Vignette (asset)"
+    },
+    {
+      "type": "text",
+      "id": "h4",
+      "label": "Colonne 5",
+      "default": "Spray"
+    },
+    {
+      "type": "text",
+      "id": "i4",
+      "label": "Vignette (asset)"
     },
     {
       "type": "header",
@@ -204,22 +256,38 @@
   "blocks": [
     {
       "type": "row",
-      "name": "Ligne",
+      "name": "Criterio",
       "settings": [
         {
           "type": "text",
           "id": "label",
-          "label": "Libelle"
+          "label": "Critere"
         },
         {
-          "type": "textarea",
-          "id": "c1",
-          "label": "Colonne de gauche"
+          "type": "text",
+          "id": "v0",
+          "label": "FREOS",
+          "info": "« si », « no », ou un texte court."
         },
         {
-          "type": "textarea",
-          "id": "c2",
-          "label": "Colonne de droite"
+          "type": "text",
+          "id": "v1",
+          "label": "Colonne 2"
+        },
+        {
+          "type": "text",
+          "id": "v2",
+          "label": "Colonne 3"
+        },
+        {
+          "type": "text",
+          "id": "v3",
+          "label": "Colonne 4"
+        },
+        {
+          "type": "text",
+          "id": "v4",
+          "label": "Colonne 5"
         }
       ]
     }

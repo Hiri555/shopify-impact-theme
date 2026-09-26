@@ -1295,3 +1295,73 @@
   .fr .fr-guarbar{ flex-wrap:wrap; }
   .fr .fr-guarbar-a{ width:100%; }
 }
+
+/* ==========================================================================
+   PDP v3 — TABLEAU COMPARATIF, BENEFICES, SIGNAL DE DEFILEMENT
+   ========================================================================== */
+
+/* --- le signal « ca defile » ---------------------------------------------
+   Un degrade en masque sur le bord droit du rail. Pas de JavaScript, donc
+   rien a synchroniser. Le `padding-right` de la meme largeur fait qu'en fin
+   de course le degrade tombe sur du vide, pas sur la derniere carte. */
+.fr .fr-rail,
+.fr .fr-cmp-wrap{ overscroll-behavior-x:contain; }
+.fr .fr-rail{ padding-right:40px;
+  -webkit-mask-image:linear-gradient(to right, #000 calc(100% - 40px), transparent);
+          mask-image:linear-gradient(to right, #000 calc(100% - 40px), transparent); }
+.fr .fr-rail-hint{ display:inline-flex; align-items:center; gap:6px; }
+
+/* --- tableau comparatif ---------------------------------------------------
+   Le libelle du critere est fige a gauche : a 390 px le tableau defile, et
+   sans lui une coche toute seule ne veut rien dire. FREOS est la premiere
+   colonne produit, donc lisible au repos. */
+.fr .fr-cmp-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch;
+  margin:0 0 4px; padding-bottom:12px; }
+.fr .fr-cmp-wrap::-webkit-scrollbar{ height:5px; }
+.fr .fr-cmp-wrap::-webkit-scrollbar-thumb{ background:var(--accl); border-radius:4px; }
+.fr .fr-cmp{ border-collapse:separate; border-spacing:0; width:100%;
+  min-width:660px; font-size:13.5px; }
+.fr .fr-cmp-corner{ background:var(--paper,#FFFEF9); position:sticky; left:0; z-index:3;
+  width:116px; min-width:116px; }
+.fr .fr-cmp-h{ vertical-align:bottom; text-align:center; padding:0 10px 12px;
+  font-size:10.5px; letter-spacing:.1em; text-transform:uppercase; font-weight:600;
+  color:var(--ink3); min-width:104px; }
+.fr .fr-cmp-h--nous{ color:var(--acc); }
+.fr .fr-cmp-ph{ display:block; width:44px; height:44px; margin:0 auto 8px;
+  border-radius:4px; overflow:hidden; background:var(--soft); }
+.fr .fr-cmp-ph img{ width:100%; height:100%; object-fit:contain; display:block; }
+.fr .fr-cmp-hn{ display:block; line-height:1.3; }
+.fr .fr-cmp-l{ position:sticky; left:0; z-index:2; text-align:left;
+  background:var(--paper,#FFFEF9); width:116px; min-width:116px;
+  padding:13px 12px 13px 0; font-family:Fraunces,serif; font-style:italic;
+  font-weight:400; font-size:13px; color:var(--ink2);
+  border-top:1px solid var(--rule); }
+.fr .fr-cmp-c{ text-align:center; padding:13px 10px; color:var(--ink2);
+  line-height:1.45; border-top:1px solid var(--rule); vertical-align:middle; }
+.fr .fr-cmp-c--nous{ background:var(--acclt); color:var(--ink); font-weight:600; }
+.fr .fr-cmp-h--nous{ position:relative; }
+.fr .fr-cmp tbody tr:last-child .fr-cmp-c--nous{ border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px; }
+.fr .fr-cmp-oui{ color:var(--acc); display:inline-flex; }
+.fr .fr-cmp-non{ color:var(--ink3); opacity:.55; display:inline-flex; }
+
+/* --- benefices ------------------------------------------------------------ */
+.fr .fr-bens{ list-style:none; margin:0; padding:0; display:grid; gap:10px; }
+.fr .fr-ben{ display:grid; grid-template-columns:38px 1fr auto; align-items:center;
+  gap:14px; padding:15px 16px; background:#FFFEF9; border:1px solid var(--rule);
+  border-radius:4px; }
+.fr .fr-ben-i{ width:38px; height:38px; border-radius:50%; background:var(--acclt);
+  color:var(--acc); display:inline-flex; align-items:center; justify-content:center; }
+.fr .fr-ben-i svg{ width:19px; height:19px; display:block; }
+.fr .fr-ben-t{ font-size:15px; line-height:1.4; color:var(--ink); min-width:0; }
+.fr .fr-ben-g{ flex:0 0 auto; background:var(--acclt); color:var(--acc);
+  font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; font-weight:600;
+  padding:5px 9px; border-radius:2px; white-space:nowrap; }
+.fr .fr-bens-foot{ font-size:12.5px; color:var(--ink3); margin:14px 0 0; }
+
+@media (max-width:640px){
+  /* L'etiquette passe sous la phrase : a 390 px les trois colonnes
+     ecraseraient le texte a une quinzaine de caracteres par ligne. */
+  .fr .fr-ben{ grid-template-columns:38px 1fr; row-gap:8px; }
+  .fr .fr-ben-g{ grid-column:2; justify-self:start; }
+}

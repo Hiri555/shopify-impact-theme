@@ -1,12 +1,16 @@
 {%- comment -%}
   ============================================================================
-  FREOS · PDP 03 — FREOS · 03 Benefici
+  FREOS · PDP — FREOS · 05 Benefici
   ----------------------------------------------------------------------------
-  Liste de benefices illustres : une icone de trait, un titre, une phrase.
-  L'icone se choisit dans un jeu ferme, ou se remplace par une image.
-  Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur
-  dans ce fichier. Genere par build_pdp_sections.py -- modifier le generateur,
-  pas ce fichier, sinon la prochaine generation ecrase la retouche.
+  Quatre lignes, pas plus. Chacune : une icone, la phrase, une etiquette a
+  droite. L'etiquette dit le REGISTRE de la promesse (le moment, l'effort,
+  la texture, la duree) -- elle ne repete pas la phrase.
+  Chaque promesse porte sur la FORME, le MOMENT ou le GESTE. Aucune ne
+  porte sur un effet : c'est un complement alimentaire.
+  L'icone est du SVG colle dans un reglage, donc editable sans toucher au
+  code -- quatre icones par defaut sont fournies dans les presets.
+  Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur.
+  Genere par build_pdp_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
 {%- endcomment -%}
 
@@ -29,50 +33,39 @@
     </header>
   {%- endif -%}
 
-    <div class="fr-bens">
+    <ul class="fr-bens">
       {%- for block in section.blocks -%}
-        <div class="fr-ben" {{ block.shopify_attributes }}>
-          <span class="fr-ben-i" aria-hidden="true">
-            {%- if block.settings.image != blank -%}
-              {{ block.settings.image | image_url: width: 120 | image_tag: widths: '60,120', sizes: '44px', alt: '' }}
-            {%- else -%}
-<svg class="fr-ico" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-  {%- case block.settings.icon -%}
-    {%- when 'bocca' -%}<path d="M3.5 9.5h15M4 9.5c1.6 4.4 4 6.6 7 6.6s5.4-2.2 7-6.6"/>
-    {%- when 'check' -%}<path d="M4.5 11.3 9 15.5 17.5 6"/>
-    {%- when 'foglia' -%}<path d="M4 18C4 9 10 5 18 4c1 8-3 14-11 14Z"/><path d="M4 18c3-4 6-6.5 10-8"/>
-    {%- when 'goccia' -%}<path d="M11 3s5 5.3 5 8.6A5 5 0 0 1 6 11.6C6 8.3 11 3 11 3Z"/>
-    {%- when 'luna' -%}<path d="M17 12.8A6.5 6.5 0 1 1 9.2 5a5.4 5.4 0 0 0 7.8 7.8Z"/>
-    {%- when 'nodo' -%}<circle cx="11" cy="11" r="3.2"/><path d="M11 3.5v4.3M11 14.2v4.3M3.5 11h4.3M14.2 11h4.3"/>
-    {%- when 'orologio' -%}<circle cx="11" cy="11" r="7.5"/><path d="M11 6.5V11l3 1.8"/>
-    {%- when 'scudo' -%}<path d="M11 3.5 4.5 6v5.2c0 3.6 2.6 6.4 6.5 7.3 3.9-.9 6.5-3.7 6.5-7.3V6Z"/>
-    {%- when 'stop' -%}<circle cx="11" cy="11" r="7.5"/><path d="M6.5 6.5 15.5 15.5"/>
-    {%- when 'zinco' -%}<path d="M11 3.5 4.5 7.2v7.6L11 18.5l6.5-3.7V7.2Z"/><path d="M11 9.2v5"/>
-  {%- endcase -%}
-</svg>
-            {%- endif -%}
-          </span>
-          <div class="fr-ben-b">
-            {%- if block.settings.title != blank -%}
-              <h3 class="fr-ben-t">{{ block.settings.title }}</h3>
-            {%- endif -%}
-            {%- if block.settings.text != blank -%}
-              <p class="fr-ben-d">{{ block.settings.text }}</p>
-            {%- endif -%}
-          </div>
-        </div>
+        <li class="fr-ben" {{ block.shopify_attributes }}>
+          <span class="fr-ben-i" aria-hidden="true">{{ block.settings.icona }}</span>
+          <span class="fr-ben-t">{{ block.settings.text }}</span>
+          {%- if block.settings.tag != blank -%}
+            <span class="fr-ben-g">{{ block.settings.tag }}</span>
+          {%- endif -%}
+        </li>
       {%- endfor -%}
-    </div>
+    </ul>
 
+    {%- if section.settings.foot != blank -%}
+      <p class="fr-bens-foot">{{ section.settings.foot }}</p>
+    {%- endif -%}
   </div>
 </div>
 
 {% schema %}
 {
-  "name": "FREOS · 03 Benefici",
+  "name": "FREOS · 05 Benefici",
   "tag": "section",
   "class": "freos-pdp-benefici",
   "settings": [
+    {
+      "type": "header",
+      "content": "Bas de section"
+    },
+    {
+      "type": "text",
+      "id": "foot",
+      "label": "Ligne de pied"
+    },
     {
       "type": "header",
       "content": "En-tete"
@@ -125,7 +118,7 @@
       "type": "select",
       "id": "width",
       "label": "Largeur",
-      "default": "narrow",
+      "default": "wide",
       "options": [
         {
           "value": "narrow",
@@ -145,7 +138,7 @@
       "max": 120,
       "step": 4,
       "unit": "px",
-      "default": 56
+      "default": 40
     },
     {
       "type": "range",
@@ -155,85 +148,33 @@
       "max": 120,
       "step": 4,
       "unit": "px",
-      "default": 56
+      "default": 40
     }
   ],
   "blocks": [
     {
-      "type": "item",
-      "name": "Benefice",
+      "type": "ben",
+      "name": "Beneficio",
       "settings": [
         {
-          "type": "select",
-          "id": "icon",
-          "label": "Icone",
-          "default": "check",
-          "options": [
-            {
-              "value": "bocca",
-              "label": "Bocca"
-            },
-            {
-              "value": "check",
-              "label": "Check"
-            },
-            {
-              "value": "foglia",
-              "label": "Foglia"
-            },
-            {
-              "value": "goccia",
-              "label": "Goccia"
-            },
-            {
-              "value": "luna",
-              "label": "Luna"
-            },
-            {
-              "value": "nodo",
-              "label": "Nodo"
-            },
-            {
-              "value": "orologio",
-              "label": "Orologio"
-            },
-            {
-              "value": "scudo",
-              "label": "Scudo"
-            },
-            {
-              "value": "stop",
-              "label": "Stop"
-            },
-            {
-              "value": "zinco",
-              "label": "Zinco"
-            }
-          ]
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Ou : une image",
-          "info": "Remplace l'icone si elle est deposee."
+          "type": "textarea",
+          "id": "icona",
+          "label": "Icone (SVG)",
+          "info": "Colle un <svg>. Vide = pas d'icone."
         },
         {
           "type": "text",
-          "id": "title",
-          "label": "Titre"
+          "id": "text",
+          "label": "La phrase"
         },
         {
-          "type": "textarea",
-          "id": "text",
-          "label": "Texte"
+          "type": "text",
+          "id": "tag",
+          "label": "Etiquette"
         }
       ]
     }
   ],
-  "presets": [
-    {
-      "name": "FREOS · 03 Benefici"
-    }
-  ]
+  "max_blocks": 6
 }
 {% endschema %}
