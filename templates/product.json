@@ -130,18 +130,21 @@
         },
         "guarantee": {
           "type": "guarantee",
+          "disabled": true,
           "settings": {
             "text": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>"
           }
         },
         "pills": {
           "type": "pills",
+          "disabled": true,
           "settings": {
             "items": "Integratore alimentare | Zinco + 7 estratti | Nessun abbonamento"
           }
         },
         "recognition": {
           "type": "recognition",
+          "disabled": true,
           "settings": {
             "question": "Quale di queste ti somiglia di più?",
             "options": "Torna dopo venti minuti\nSoprattutto al risveglio\nNon riesco a saperlo da solo",
@@ -476,9 +479,9 @@
         "ing_pueraria"
       ],
       "settings": {
-        "note": "<p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco (citrato) 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>",
+        "note": "",
         "kicker": "",
-        "heading": "La formula <em>completa.</em>",
+        "heading": "La formula completa.",
         "dek": "Ogni ingrediente alla dose che porta in etichetta. Il decimo elemento non è un ingrediente: è l’ora in cui lo prendi.",
         "surface": "white",
         "width": "wide",
@@ -577,7 +580,7 @@
         "i4": "freos-cat-spray.webp",
         "note": "<p>Non diciamo che le altre soluzioni non servano. Diciamo che fanno un’altra cosa, in un altro momento della giornata.</p>",
         "kicker": "",
-        "heading": "Perché il resto <em>non è bastato.</em>",
+        "heading": "Perché il resto non è bastato.",
         "dek": "Sei criteri, cinque soluzioni. Giudica tu.",
         "surface": "soft",
         "width": "wide",
@@ -670,7 +673,7 @@
         "rv6"
       ],
       "settings": {
-        "source": "Le prime recensioni sono qui sopra. Questi racconti sono stati raccolti in forma anonima per la nostra inchiesta.",
+        "source": "",
         "kicker": "",
         "heading": "Hanno smesso di controllare.",
         "dek": "Con parole loro.",
@@ -719,7 +722,7 @@
       "settings": {
         "foot": "Sezione in preparazione: il modo d’uso definitivo arriva qui.",
         "kicker": "",
-        "heading": "Tre passaggi. <em>Trenta secondi.</em>",
+        "heading": "Tre passaggi. Trenta secondi.",
         "dek": "La sera, dopo lo spazzolino. Non al posto.",
         "surface": "white",
         "width": "wide",
@@ -902,10 +905,10 @@
         "guar_text": "",
         "guar_label": "",
         "guar_url": "",
-        "src_title": "Fonti",
-        "src_items": "<ul><li>Takahashi et al., 2.873 pazienti consecutivi, 2014</li><li>Tangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205</li><li>Dawes C, Wong DTW. J Dent Res, 2019. PMID 30782091</li><li>Quirynen M et al. J Clin Periodontol, 2009. PMID 19811581</li></ul>",
+        "src_title": "",
+        "src_items": "",
         "kicker": "",
-        "heading": "Prima <em>di decidere.</em>",
+        "heading": "Prima di decidere.",
         "dek": "",
         "surface": "white",
         "width": "narrow",
