@@ -241,7 +241,7 @@
           "type": "ing",
           "settings": {
             "file": "freos-ing_zinco.jpg",
-            "name": "Zinco",
+            "name": "Zinco (citrato)",
             "dose": "1,38 mg (14% VNR)",
             "quote": "Lega, non copre.",
             "role": "Il minerale della formula, dosato in etichetta. Lo zinco lega i composti solforati — quelli che si accumulano quando la bocca si ferma.",
@@ -349,7 +349,7 @@
         "ing_pueraria"
       ],
       "settings": {
-        "note": "<p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>",
+        "note": "<p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco (citrato) 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>",
         "kicker": "",
         "heading": "La formula <em>completa.</em>",
         "dek": "Ogni ingrediente alla dose che porta in etichetta. Il decimo elemento non è un ingrediente: è l’ora in cui lo prendi.",
@@ -673,7 +673,7 @@
           "settings": {
             "badge": "LEGA",
             "title": "Gli ioni di zinco legano i composti solforati.",
-            "text": "Zinco 1,38 mg (14% VNR) per porzione serale. Un composto legato non è più volatile — cioè non arriva più al naso di nessuno."
+            "text": "Zinco (citrato) 1,38 mg (14% VNR) per porzione serale. Un composto legato non è più volatile — cioè non arriva più al naso di nessuno."
           }
         },
         "m3": {

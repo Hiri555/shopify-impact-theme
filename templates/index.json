@@ -12,17 +12,20 @@
     "hero": {
       "type": "freos-home-hero",
       "settings": {
-        "image_file": "freos-pdp-01-main.jpg",
-        "image_alt": "Il barattolo FREOS da 120 g",
-        "media_side": "left",
-        "kicker": "Il gesto della sera",
-        "heading": "L’alito non nasce sui denti.",
-        "dek": "Nasce dove l’aria non arriva — e la sera è il momento in cui nessuno fa niente.",
-        "points": "Un gesto la sera, dopo i denti. Trenta secondi.\nSette estratti e uno ione, dosi dichiarate in etichetta.\nUn barattolo copre un mese pieno.",
-        "cta_label": "Vedi il prodotto",
-        "cta_pill": "29,90 €",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_note": "Trenta sere di prova · il barattolo resta a te"
+        "trust": "Zinco dosato in etichetta\nTrenta sere di prova\nNessun abbonamento",
+        "kicker": "INCHIESTA",
+        "hook": "Ti lavi i denti tre volte al giorno.",
+        "heading": "La causa del tuo alito sta <em>dieci centimetri più indietro.</em>",
+        "dek": "Collutori, raschietti e mentine agiscono tutti su superfici esposte all’aria. Il punto dove si forma non lo è.",
+        "by_file": "freos-lp2-01.webp",
+        "by_name": "Davide M.",
+        "by_role": "Fisioterapista · Verona",
+        "image_file": "freos-home-hero.webp",
+        "image_alt": "La sera, davanti allo specchio, dopo i denti",
+        "media_side": "right",
+        "cta_label": "Scopri il gesto della sera",
+        "cta_url": "/pages/listicle",
+        "cta_note": "Sei motivi, nell’ordine in cui contano. Nessun acquisto."
       }
     },
     "marquee": {
@@ -115,7 +118,7 @@
         "06_turno_tl": {
           "type": "timeline",
           "settings": {
-            "rows": "RESTA | È un gel, non un liquido. | Dopo la deglutizione resta sulle mucose invece di sciacquarle e andarsene.\nLEGA | Gli ioni di zinco legano i composti solforati. | Zinco 1,38 mg (14% VNR) per porzione serale. Un composto legato non è più volatile.\nACCOMPAGNA | Copre le ore in cui la saliva cala. | La bocca resta chiusa, e quello che sale non viene più diluito. Non trenta secondi: una notte."
+            "rows": "RESTA | È un gel, non un liquido. | Dopo la deglutizione resta sulle mucose invece di sciacquarle e andarsene.\nLEGA | Gli ioni di zinco legano i composti solforati. | Zinco (citrato) 1,38 mg (14% VNR) per porzione serale. Un composto legato non è più volatile.\nACCOMPAGNA | Copre le ore in cui la saliva cala. | La bocca resta chiusa, e quello che sale non viene più diluito. Non trenta secondi: una notte."
           }
         },
         "07_turno_p": {
