@@ -3,9 +3,13 @@
   FREOS · LP — VOCI
   ----------------------------------------------------------------------------
   Un rail de voix courtes, a la place d'un long recit a un seul temoin.
-  Ce n'est PAS un bloc d'avis produit : aucune etoile, aucune note chiffree,
-  aucune mention de source. Ce sont des voix reappropriees de notre corpus,
-  reecrites en prose. Le prenom et l'age situent, ils ne prouvent rien.
+  Ce n'est PAS un bloc d'avis produit : aucune etoile, aucune note chiffree.
+
+  PLUS DE « Prenom, age » NON PLUS. On s'etait dit qu'il situait sans rien
+  prouver ; il fait l'inverse -- il transforme une phrase recueillie en
+  temoignage client, sur un produit qui n'a pas encore de clients. La
+  provenance se dit une fois, au chapeau de la section, et couvre toutes les
+  voix.
   Genere par cure_vague_a.py.
   ============================================================================
 {%- endcomment -%}
@@ -24,7 +28,6 @@
     {%- for block in section.blocks -%}
       <article class="voce" role="listitem" {{ block.shopify_attributes }}>
         <p>{{ block.settings.text }}</p>
-        <p class="chi">{{ block.settings.who }}</p>
       </article>
     {%- endfor -%}
   </div>
@@ -110,12 +113,6 @@
           "id": "text",
           "label": "Ce qu'elle dit",
           "info": "Deux ou trois phrases. En prose, sans guillemets de citation."
-        },
-        {
-          "type": "text",
-          "id": "who",
-          "label": "Qui",
-          "info": "Prenom, age."
         }
       ]
     }

@@ -50,13 +50,30 @@
             -%}
             <div class="fr-gal-slide{% if forloop.first %} is-on{% endif %}" data-i="{{ forloop.index0 }}">
               {%- if img != blank -%}
-                {%- if forloop.first -%}{%- assign ld = 'eager' -%}{%- else -%}{%- assign ld = 'lazy' -%}{%- endif -%}
-                {%- assign slide_alt = block.settings.alt | default: p.title -%}
+                {%- liquid
+                  comment
+                    PERF lot 1 + lot 4, branche image_picker : la premiere
+                    diapositive est celle qu'on voit, elle est chargee tot et en
+                    priorite haute ; les autres sont empilees en absolu sous la
+                    regle display:none plus haut, donc `lazy` s'y applique
+                    vraiment. `sizes` est recopie de la branche asset, sinon le
+                    telephone irait chercher une variante trop large.
+                  endcomment
+                  if forloop.first
+                    assign ld = 'eager'
+                    assign fp = 'high'
+                  else
+                    assign ld = 'lazy'
+                    assign fp = 'auto'
+                  endif
+                  assign slide_alt = block.settings.alt | default: p.title
+                -%}
                 {{ img | image_url: width: 1400 | image_tag:
-                     widths: '480,760,1000,1400',
-                     sizes: '(max-width:860px) 100vw, 46vw',
+                     widths: '600,900,1200,1400',
+                     sizes: '(max-width:599px) calc(100vw - 32px), (max-width:860px) 420px, 46vw',
                      alt: slide_alt,
-                     loading: ld }}
+                     loading: ld,
+                     fetchpriority: fp }}
               {%- elsif fallback != blank -%}
                 {%- assign fb_url = fallback | asset_url -%}
                 <img src="{{ fb_url }}&width=900"

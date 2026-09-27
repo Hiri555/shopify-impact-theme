@@ -43,12 +43,14 @@
               <img class="fr-icard-img" src="{{ block.settings.file | strip | asset_url }}"
                    alt="{{ block.settings.name | escape }}" loading="lazy">
             {%- endif -%}
-            {%- if block.settings.icon != blank and block.settings.icon != 'nessuna' -%}
-              <span class="fr-icard-ic" aria-hidden="true">{% render 'freos-icone', nom: block.settings.icon %}</span>
-            {%- endif -%}
           </span>
           <div class="fr-icard-b">
-            <b class="fr-icard-n">{{ block.settings.name }}</b>
+            <p class="fr-icard-nr">
+              {%- if block.settings.icon != blank and block.settings.icon != 'nessuna' -%}
+                <span class="fr-icard-ic" aria-hidden="true">{% render 'freos-icone', nom: block.settings.icon %}</span>
+              {%- endif -%}
+              <b class="fr-icard-n">{{ block.settings.name }}</b>
+            </p>
             {%- if block.settings.benefit != blank -%}
               <p class="fr-icard-be">{{ block.settings.benefit }}</p>
             {%- endif -%}
@@ -240,6 +242,14 @@
             {
               "value": "tempo",
               "label": "Duree — ce qui reste"
+            },
+            {
+              "value": "piatto",
+              "label": "Assiette — le dopo-pasto"
+            },
+            {
+              "value": "scintilla",
+              "label": "Eclat — ce qui nettoie la fin"
             },
             {
               "value": "radice",

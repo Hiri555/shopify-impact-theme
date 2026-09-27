@@ -2,10 +2,19 @@
   ============================================================================
   FREOS · PDP — FREOS · 08 Recensioni
   ----------------------------------------------------------------------------
-  Un rail qui defile, une carte par recit. L'image est une SCENE du soir,
-  pas un portrait : decision du proprietaire, pas de faux clients generes.
-  Aucune note globale ici -- le « 4,8 sur 126 recensioni » etait invente, et
-  les advertorials disent eux-memes qu'il n'y a pas encore d'avis verifies.
+  Un rail qui defile, une carte par recit.
+
+  NI VISAGE, NI PRENOM, NI AGE, NI ETOILE -- et ce n'est pas un reglage laisse
+  vide, c'est une capacite retiree du gabarit. Le produit est cree le 24
+  septembre : il n'a aucun client, donc tout nom, tout age, tout « avant /
+  apres » attribue a quelqu'un serait un faux temoignage, et toute note
+  chiffree une note inventee.
+
+  Ce qui reste est ce qu'on a le droit de montrer : des recits recueillis
+  pendant l'enquete, anonymes, raccourcis, annonces comme tels par la ligne de
+  provenance en bas de section. Les vrais avis viendront quand il y aura de
+  vrais clients -- ils auront leur propre bloc, alimente par l'application
+  d'avis, pas par ce gabarit.
   Tout le contenu visible est un reglage ou un bloc : rien n'est ecrit en dur.
   Genere par build_pdp_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
@@ -32,41 +41,14 @@
 
     <div class="fr-rail fr-rail--rev" role="list">
       {%- for block in section.blocks -%}
-        <article class="fr-rcard" role="listitem" {{ block.shopify_attributes }}>
-          <span class="fr-rcard-ph">
-            {%- if block.settings.image != blank -%}
-              {{ block.settings.image | image_url: width: 800 | image_tag:
-                   widths: '320,520,800', sizes: '(max-width:860px) 78vw, 300px',
-                   alt: block.settings.name, class: 'fr-rcard-img', loading: 'lazy' }}
-            {%- elsif block.settings.file != blank -%}
-              <img class="fr-rcard-img" src="{{ block.settings.file | strip | asset_url }}"
-                   alt="{{ block.settings.name | escape }}" loading="lazy">
-            {%- endif -%}
-          </span>
+        <article class="fr-rcard fr-rcard--nu" role="listitem" {{ block.shopify_attributes }}>
           <div class="fr-rcard-b">
-            {%- assign n = block.settings.stars | times: 1 -%}
-            {%- if n > 0 -%}
-              <span class="fr-rcard-s" aria-label="{{ n }}/5">
-                {%- for i in (1..n) -%}
-                  <svg width="13" height="13" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 1.6l1.9 3.9 4.3.6-3.1 3 .7 4.3L8 11.4 4.2 13.4l.7-4.3-3.1-3 4.3-.6z"/></svg>
-                {%- endfor -%}
-              </span>
-            {%- endif -%}
             {%- if block.settings.title != blank -%}
               <h3 class="fr-rcard-t">{{ block.settings.title }}</h3>
             {%- endif -%}
             {%- if block.settings.body != blank -%}
               <div class="fr-rcard-x">{{ block.settings.body }}</div>
             {%- endif -%}
-            <footer class="fr-rcard-f">
-              <b>{{ block.settings.name }}</b>
-              {%- if block.settings.age != blank -%}
-                <span>&middot; {{ block.settings.age }}</span>
-              {%- endif -%}
-              {%- if block.settings.durata != blank -%}
-                <span>&middot; {{ block.settings.durata }}</span>
-              {%- endif -%}
-            </footer>
           </div>
         </article>
       {%- endfor -%}
@@ -182,46 +164,13 @@
   "blocks": [
     {
       "type": "review",
-      "name": "Racconto",
+      "name": "Racconto anonimo",
       "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Photo de scene"
-        },
-        {
-          "type": "text",
-          "id": "file",
-          "label": "Ou : asset du theme"
-        },
-        {
-          "type": "text",
-          "id": "name",
-          "label": "Prenom"
-        },
-        {
-          "type": "text",
-          "id": "age",
-          "label": "Age"
-        },
-        {
-          "type": "text",
-          "id": "durata",
-          "label": "Depuis combien de temps"
-        },
-        {
-          "type": "range",
-          "id": "stars",
-          "label": "Etoiles",
-          "min": 0,
-          "max": 5,
-          "step": 1,
-          "default": 5
-        },
         {
           "type": "text",
           "id": "title",
-          "label": "Titre du recit"
+          "label": "Titre du recit",
+          "info": "Une phrase courte. Jamais un resultat attribue a quelqu'un."
         },
         {
           "type": "richtext",

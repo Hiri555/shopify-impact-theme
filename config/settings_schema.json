@@ -943,13 +943,13 @@
         "type": "checkbox",
         "id": "fr_sticky_on",
         "label": "Afficher la barre",
-        "default": true
+        "default": false
       },
       {
         "type": "text",
         "id": "fr_sticky_label",
         "label": "Libelle",
-        "default": "Riprenditi i trenta centimetri · 29,90 €"
+        "default": "Provalo trenta sere"
       },
       {
         "type": "url",

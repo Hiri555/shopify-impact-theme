@@ -1525,3 +1525,72 @@
   .fr .fr-cmp th, .fr .fr-cmp td{ font-size: 15px; }
   .fr .fr-cmp-l{ font-size: 15px; }
 }
+
+/* ==========================================================================
+   VAGUE A->F  ·  icone d'ingredient, colonne critere, indicateur de rail
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   C · L'ICONE PASSE A COTE DU NOM
+   --------------------------------------------------------------------------
+   Elle etait `position:absolute` sur `.fr-icard-ph`. On defait les deux
+   regles qui la tenaient la : sans le `position:static`, la pastille
+   resterait accrochee au dernier ancetre positionne et sortirait de la carte.
+   -------------------------------------------------------------------------- */
+.fr .fr-icard-nr{
+  display: flex; align-items: center; gap: 9px;
+  margin: 0 0 4px; width: 100%;
+}
+.fr .fr-icard-nr .fr-icard-n{ min-width: 0; }
+.fr .fr-icard-ic{
+  position: static; inset: auto;
+  flex: 0 0 26px; width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--acc); color: #FBF8F0;
+  display: inline-flex; align-items: center; justify-content: center;
+  box-shadow: none;
+}
+.fr .fr-icard-ic svg{ width: 15px; height: 15px; display: block; }
+
+/* --------------------------------------------------------------------------
+   B · LA COLONNE CRITERE SE LIT EN DEUX LIGNES, PAS EN QUATRE
+   --------------------------------------------------------------------------
+   `min-width` seul ne suffit pas : c'est `max-width` qui bridait la colonne a
+   150 px et forcait le retour a la ligne. Les deux montent ensemble, et la
+   largeur minimale de la table suit -- sinon la colonne gagnee est reprise
+   aux cinq colonnes produit, qui se mettent a plier a leur tour.
+   -------------------------------------------------------------------------- */
+.fr .fr-cmp-l{
+  font-family: inherit; font-style: normal; font-weight: 600;
+  line-height: 1.32; letter-spacing: -.005em;
+  text-wrap: balance;
+}
+@media (max-width: 560px){
+  .fr .fr-cmp{ min-width: 608px; }
+  .fr .fr-cmp-l{ min-width: 196px; max-width: 208px; font-size: 15px; }
+}
+@media (min-width: 561px){
+  .fr .fr-cmp-l{ font-size: 15.5px; }
+}
+
+/* --------------------------------------------------------------------------
+   D · L'INDICATEUR DE RAIL NE VIT QUE SOUS 860 px
+   --------------------------------------------------------------------------
+   Au-dessus, `.fr-steps` est une grille de trois colonnes : il n'y a rien a
+   faire defiler, et un « Scorri » sous un bloc immobile est un mensonge
+   d'interface.
+   -------------------------------------------------------------------------- */
+.fr .fr-steps-hint{ display: none; }
+@media (max-width: 860px){
+  .fr .fr-steps-hint{ display: block; }
+}
+
+/* --------------------------------------------------------------------------
+   AVIS · LA CARTE SANS VISAGE
+   --------------------------------------------------------------------------
+   La carte de recit n'a plus de photo ni de pied de signature. Sans ces deux
+   regles elle garderait la hauteur d'image reservee par `.fr-rcard-ph` et un
+   creux en bas la ou vivait la signature.
+   -------------------------------------------------------------------------- */
+.fr .fr-rcard--nu .fr-rcard-b{ padding-bottom: 18px; }
+.fr .fr-rcard--nu .fr-rcard-x p:last-child{ margin-bottom: 0; }

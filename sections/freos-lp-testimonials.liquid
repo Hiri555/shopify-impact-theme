@@ -2,9 +2,15 @@
   ============================================================================
   FREOS · LP — FREOS LP · Voci
   ----------------------------------------------------------------------------
-  Les temoignages. Un bloc par temoignage, et UN richtext pour tout son corps
-  -- pas un reglage par paragraphe : ca garde le schema lisible et reste sous
-  la limite de 50 blocs.
+  Les objections, et la reponse de la marque. Un bloc par objection, et UN
+  richtext pour tout son corps -- pas un reglage par paragraphe : ca garde le
+  schema lisible et reste sous la limite de 50 blocs.
+
+  LA SIGNATURE NE S'AFFICHE QUE SI ELLE EST REMPLIE. Tant qu'elle s'affichait
+  toujours, vider le nom laissait un <b> vide et surtout la place qui appelle a
+  le remplir. Sur un produit sans client, la place doit disparaitre avec le
+  nom : l'objection entre guillemets est du cote du LECTEUR, la reponse est du
+  cote de la marque, et aucune des deux n'a besoin d'un temoin invente.
   Le reglage `scope` choisit la feuille (fr-lp1 / fr-lp2 / fr-lp3 / fr-lp4).
   Genere par build_lp_sections_v2.py -- modifier le generateur, pas ce fichier.
   ============================================================================
@@ -28,11 +34,13 @@
           <p class="quo">{{ block.settings.quote }}</p>
         {%- endif -%}
         <div class="body">{{ block.settings.body }}</div>
-        <div class="sig">
-          <b>{{ block.settings.name }}</b>
-          {%- if block.settings.role != blank -%}<i>·</i><span class="role">{{ block.settings.role }}</span>{%- endif -%}
-          {%- if block.settings.badge != blank -%}<i>·</i><span class="verif">{{ block.settings.badge }}</span>{%- endif -%}
-        </div>
+        {%- if block.settings.name != blank or block.settings.role != blank or block.settings.badge != blank -%}
+          <div class="sig">
+            {%- if block.settings.name != blank -%}<b>{{ block.settings.name }}</b>{%- endif -%}
+            {%- if block.settings.role != blank -%}<i>·</i><span class="role">{{ block.settings.role }}</span>{%- endif -%}
+            {%- if block.settings.badge != blank -%}<i>·</i><span class="verif">{{ block.settings.badge }}</span>{%- endif -%}
+          </div>
+        {%- endif -%}
       </div>
     {%- endfor -%}
     {%- if section.settings.cta_label != blank -%}
