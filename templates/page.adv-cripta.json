@@ -799,7 +799,7 @@
           "type": "figure",
           "settings": {
             "image": "shopify://shop_images/freos-pdp-01-main.jpg",
-            "file": "",
+            "file": "freos-lp2-08.webp",
             "alt": "Il barattolo di FREOS, gel orale alla menta",
             "caption": "Due misurini la sera. Nient'altro.",
             "kind": "prod"
@@ -958,11 +958,11 @@
       "type": "freos-lp-offer",
       "settings": {
         "kicker": "",
-        "heading": "Quello che puoi fare stasera, <em>anche senza comprare niente.</em>",
+        "heading": "Quello che puoi fare stasera, anche senza comprare niente.",
         "intro": "<p>Questo articolo esiste perché nessuno mi ha dato una parola che avrei potuto cercare dieci anni prima. Adesso ce l'hai.</p><p><strong>La prima cosa è gratis.</strong> Se hai uno dei segnali d'allarme qui sopra, prendi appuntamento. Se non ne hai, sai almeno dove guardare e come si chiama — ed è più di quanto avessi io a quarant'anni.</p><p><strong>La seconda, se vuoi.</strong> Il gesto della sera esiste. La pagina del prodotto dice tutto: formula completa, dosi, prezzo, garanzia. Non lo metto qui perché qui non è il posto.</p>",
         "photo_file": "",
         "photo_alt": "",
-        "headline": "La cripta resta.<br>Quello che ne esce, no.",
+        "headline": "La cripta resta.Quello che ne esce, no.",
         "body": "<p>Un barattolo, trenta sere. Composizione completa, dosi, prezzo e garanzia sulla pagina del prodotto.</p>",
         "cta_label": "Riprenditi i trenta centimetri →",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
@@ -1079,6 +1079,7 @@
         "s5",
         "s6"
       ],
+      "disabled": true,
       "settings": {
         "kicker": "",
         "title": "Fonti",
@@ -1090,9 +1091,10 @@
     },
     "ours": {
       "type": "freos-lp-colophon",
+      "disabled": true,
       "settings": {
         "kicker": "",
-        "whisper": "<p>Se stasera non fai niente, va bene lo stesso. La cripta c'era ieri e ci sarà domani, e questa pagina pure.</p><p>Ma la prossima volta che tossisci qualcosa nella mano, almeno saprai come si chiama.</p><p>— Davide</p>",
+        "whisper": "",
         "whisper_sign": "— Davide",
         "logo": "FREOS",
         "tagline": "",
