@@ -92,10 +92,12 @@
                 {%- endif -%}
               </div>
             {%- endif -%}
-            <div class="testimony-header">
-              {%- if block.settings.name != blank -%}<div class="testimony-name">{{ block.settings.name }}</div>{%- endif -%}
-              {%- if block.settings.role != blank -%}<div class="testimony-role">{{ block.settings.role }}</div>{%- endif -%}
-            </div>
+            {%- if block.settings.name != blank or block.settings.role != blank -%}
+              <div class="testimony-header">
+                {%- if block.settings.name != blank -%}<div class="testimony-name">{{ block.settings.name }}</div>{%- endif -%}
+                {%- if block.settings.role != blank -%}<div class="testimony-role">{{ block.settings.role }}</div>{%- endif -%}
+              </div>
+            {%- endif -%}
             {%- if block.settings.quote != blank -%}<blockquote>{{ block.settings.quote }}</blockquote>{%- endif -%}
           </div>
 

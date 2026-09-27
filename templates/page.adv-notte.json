@@ -134,10 +134,10 @@
         "tst": {
           "type": "testimony",
           "settings": {
-            "file": "freos-lp1-04.webp",
-            "alt": "Chiara",
-            "name": "Chiara, 42 anni",
-            "role": "insegnante · Bologna · intervistata per L'Inchiesta Salute",
+            "file": "",
+            "alt": "",
+            "name": "",
+            "role": "Racconto raccolto durante l’inchiesta, in forma anonima",
             "quote": "<p><p>«Undici anni fa ho tossito e mi è uscita una pallina bianca nel palmo. Ho pensato fosse una placca. Da quella sera, prima di dormire, ho cominciato a guardarmi la gola con la luce del telefono. Cotton fioc, dita, la volta buona anche il manico di un cucchiaino. Alla fine ho smesso di baciare mio marito da vicino. Non gliel'ho mai detto perché.»</p></p>"
           }
         },

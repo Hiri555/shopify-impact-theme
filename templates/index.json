@@ -153,16 +153,16 @@
           "type": "section_header",
           "settings": {
             "kicker": "Le voci",
-            "heading": "Cosa dicono.",
-            "dek": ""
+            "heading": "Quello che ci siamo sentiti ripetere.",
+            "dek": "Racconti raccolti durante la nostra ricerca, riscritti in forma breve. Non sono recensioni verificate: FREOS è in vendita da poco e non ne ha ancora."
           }
         },
         "01_reviews": {
           "type": "reviews",
           "settings": {
-            "score": "4,8",
-            "count": "su 126 recensioni",
-            "items": "Giulia R. | Verificato | 5 | Non mi controllo più a metà frase | Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Dopo tre settimane mi sono resa conto che non lo facevo più. È la cosa che mi ha colpito di più.\nMarco T. | Verificato | 5 | Il risveglio è la differenza | Non prometto miracoli, ma al mattino la sensazione non è più quella di prima. Ed è lì che me ne sono accorto per primo.\nElena D. | Verificato | 5 | Ho smesso di comprare cicche | Avevo il cassetto pieno. Adesso ne ho ancora un pacchetto aperto da due mesi.\nDavide P. | Verificato | 5 | Il gesto si tiene | Venti giorni e ormai lo faccio senza pensarci, subito dopo i denti. È l’unica cosa che sono riuscito a mantenere."
+            "score": "",
+            "count": "",
+            "items": " |  | 0 | Mi controllo a metà frase | Tengo la mano davanti alla bocca quando parlo, e non ricordo quando ho cominciato.\n |  | 0 | Il cassetto è pieno | Collutori, spray, raschietti: comprati, aperti, mai finiti.\n |  | 0 | Il peggio è il risveglio | Prima ancora di mangiare, la domanda torna sempre uguale.\n |  | 0 | Non ho modo di saperlo | Vivo da solo: il problema non è averlo, è non poterlo verificare."
           }
         }
       },
