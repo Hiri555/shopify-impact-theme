@@ -46,6 +46,9 @@
           /* Cachee en haut, et cachee a l'approche du pied de page : la barre
              ne doit pas couvrir le dernier bouton de la page. */
           this.hidden = (pct < this.at) || (pct > this.fin);
+          /* freos.css (barre PDP) garde toute .fr-sticky invisible sans .is-on :
+             sans cette ligne la barre LP restait hors ecran meme "visible". */
+          this.classList.toggle('is-on', !this.hidden);
           return { pct: Math.round(pct), seuil: this.at, fin: this.fin,
                    visible: !this.hidden };
         }
