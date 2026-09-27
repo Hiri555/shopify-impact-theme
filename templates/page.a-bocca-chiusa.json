@@ -397,7 +397,7 @@
     "sticky": {
       "type": "freos-lp-sticky",
       "settings": {
-        "label": "Fai il test in 60 secondi →",
+        "label": "",
         "url": "[QUIZ_URL]",
         "sub": "",
         "at": 30,
