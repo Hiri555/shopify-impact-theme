@@ -27,6 +27,7 @@
                widths: '600,1000,1400',
                sizes: '(max-width:759px) calc(100vw - 32px), 720px',
                alt: section.settings.alt,
+               loading: 'eager',
                fetchpriority: 'high' }}
         {%- else -%}
           {%- comment -%}PERF lot 4 : image LCP de la listicle -- variante servie a la taille de l'ecran + priorite reseau haute (section utilisee une seule fois, en haut de page).{%- endcomment -%}
