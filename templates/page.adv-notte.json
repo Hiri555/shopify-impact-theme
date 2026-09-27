@@ -13,22 +13,26 @@
     "spon": {
       "type": "freos-lp-spon",
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "text": "Contenuto sponsorizzato · FREOS",
-        "rule": false
+        "link": "",
+        "url": "",
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "masthead": {
       "type": "freos-lp-masthead",
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "logo": "L'Inchiesta<em>Salute</em>",
         "tagline": "Un caso alla volta · Fino in fondo",
-        "rule": false
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "opener": {
@@ -69,9 +73,7 @@
         "thesis"
       ],
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "eyebrow": "<span>Inchiesta</span><span class=\"sep\">·</span><span>Salute orale</span><span class=\"sep\">·</span><span>8 min di lettura</span>",
         "heading": "Nove italiani su dieci hanno un'alitosi che parte in bocca. <em>Non nello stomaco.</em>",
         "subhead": "Un dato pubblicato dal 2009 che quasi nessuno conosce. E che spiega perché, dopo dieci anni di cotton fioc, gargarismi e mentine, l'alito può ancora tornare.",
@@ -81,7 +83,10 @@
         "hero_file": "freos-lp1-02.webp",
         "hero_alt": "Gli oggetti della sera",
         "hero_caption": "Tutto quello che una persona può accumulare in un cassetto per non farsi sentire. Alle 23, torna sul comodino.",
-        "rule": false
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "specchio": {
@@ -104,7 +109,8 @@
           "settings": {
             "file": "freos-lp1-03.webp",
             "alt": "Scena dello specchio con la luce del telefono",
-            "caption": "Undici anni della stessa luce, dello stesso gesto, della stessa domanda."
+            "caption": "Undici anni della stessa luce, dello stesso gesto, della stessa domanda.",
+            "kind": ""
           }
         },
         "p3": {
@@ -160,11 +166,89 @@
         "pull"
       ],
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "heading": "Tutto comincia con qualcosa che <em>non dovrebbe esserci</em>.",
-        "rule": false
+        "drop": false,
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "tappe": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "h": {
+          "type": "sub",
+          "settings": {
+            "text": "All’inizio sembra una cosa piccola. Poi diventa un appuntamento fisso.",
+            "level": "h3"
+          }
+        },
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p>All’inizio è un sapore strano, una sensazione in gola che va e viene e che non si riesce a spiegare. Poi arriva la prima pallina bianca, e un nome cercato di notte sul telefono.</p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Poi vengono le serate davanti allo specchio, e i giorni in cui ne escono due o tre. E oggi tieni le distanze quando parli, convinto che l’unica uscita sia l’intervento.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "p1",
+        "p2"
+      ],
+      "settings": {
+        "kicker": "",
+        "heading": "",
+        "drop": false,
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "segnali1": {
+      "type": "freos-lp-editorial",
+      "blocks": {
+        "h": {
+          "type": "sub",
+          "settings": {
+            "text": "Segnali da riconoscere",
+            "level": "h3"
+          }
+        },
+        "p1": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Quello che si riconosce è quasi sempre lo stesso: un sapore cattivo in fondo alla gola che torna anche dopo lo spazzolino, la sensazione di qualcosa di fermo quando deglutisci, piccole palline bianche o gialle che escono con un colpo di tosse.</p>"
+          }
+        },
+        "p2": {
+          "type": "para",
+          "settings": {
+            "text": "<p>Poi un alito pesante che nessuno ti ha ancora spiegato, e una gola spesso irritata — senza febbre, e senza un vero mal di gola.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "h",
+        "p1",
+        "p2"
+      ],
+      "settings": {
+        "kicker": "",
+        "heading": "",
+        "drop": false,
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "segnali2": {
@@ -173,31 +257,31 @@
         "i1": {
           "type": "item",
           "settings": {
-            "text": "<p><p>Deglutire è difficile o fa male, o hai dolore all'orecchio.</p></p>"
+            "text": "<p>Deglutire è difficile o fa male, o hai dolore all'orecchio.</p><p></p>"
           }
         },
         "i2": {
           "type": "item",
           "settings": {
-            "text": "<p><p>Il fastidio è sempre da un solo lato, o una tonsilla sembra più grande dell'altra.</p></p>"
+            "text": "<p>Il fastidio è sempre da un solo lato, o una tonsilla sembra più grande dell'altra.</p><p></p>"
           }
         },
         "i3": {
           "type": "item",
           "settings": {
-            "text": "<p><p>Noti un nodulo o un linfonodo gonfio sul collo.</p></p>"
+            "text": "<p>Noti un nodulo o un linfonodo gonfio sul collo.</p><p></p>"
           }
         },
         "i4": {
           "type": "item",
           "settings": {
-            "text": "<p><p>C'è sangue nella saliva, o una ferita in gola che non guarisce.</p></p>"
+            "text": "<p>C'è sangue nella saliva, o una ferita in gola che non guarisce.</p><p></p>"
           }
         },
         "i5": {
           "type": "item",
           "settings": {
-            "text": "<p><p>Hai febbre, fatichi ad aprire la bocca o la voce cambia.</p></p>"
+            "text": "<p>Hai febbre, fatichi ad aprire la bocca o la voce cambia.</p><p></p>"
           }
         }
       },
@@ -209,11 +293,12 @@
         "i5"
       ],
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "title": "Quando è meglio andare dal medico",
-        "rule": false
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
       }
     },
     "tappe_testo": {
@@ -244,11 +329,13 @@
         "p3"
       ],
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "heading": "Forse ti riguarda, anche se non li hai mai visti.",
-        "rule": true
+        "drop": false,
+        "scope": "fr-lp1",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
       }
     },
     "vilain": {
@@ -307,11 +394,13 @@
         "pull"
       ],
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "heading": "Il vero vilain <em>non sei tu</em>.",
-        "rule": true
+        "drop": false,
+        "scope": "fr-lp1",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
       }
     },
     "fasi": {
@@ -365,14 +454,15 @@
         "f4"
       ],
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "heading": "Quattro fasi in ventiquattro ore. <em>Solo una è sotto la tua guardia.</em>",
         "intro": "<p><p>Il Turno di Notte non è un'immagine. È una sequenza di quattro fasi, misurabili, ognuna con la sua ora del giorno e la sua zona precisa della bocca. Le abbiamo fatte illustrare dal Dott. L. Bertani, illustratore medico che collabora con la nostra redazione. Sono le stesse fasi che ogni notte, da anni, ti fanno svegliare con quel sapore.</p></p>",
         "outro": "<p><p>Ecco perché, dopo l'ennesima estrazione o dopo anni di collutorio, l'alito può restare. Non perché hai sbagliato qualcosa, ma perché stavi combattendo un turno che comincia quando tu smetti di guardare. È il motivo per cui, dopo un intervento chirurgico che sembrava definitivo, molti ci hanno raccontato di aver sentito l'alito tornare dopo tre mesi. Nessuno gliel'aveva detto che poteva succedere. Perché la biologia della notte, fino ad oggi, non era mai stata spiegata a nessuno.</p></p>",
         "credit": "",
-        "rule": true
+        "scope": "fr-lp1",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
       }
     },
     "rimedi": {
@@ -382,42 +472,48 @@
           "type": "row",
           "settings": {
             "what": "Il cotton fioc",
-            "why": "Preme dove la gola è delicata. Fa sanguinare. A volte fa venire il conato. E anche quando funziona, la cripta resta lì. Domani sera, un altro."
+            "why": "Preme dove la gola è delicata. Fa sanguinare. A volte fa venire il conato. E anche quando funziona, la cripta resta lì. Domani sera, un altro.",
+            "hot": false
           }
         },
         "r2": {
           "type": "row",
           "settings": {
             "what": "I gargarismi",
-            "why": "Durano trenta secondi. Il vilain lavora otto ore. Non è una battaglia ad armi pari. Si combatte alle undici di sera un nemico che comincia il turno alle due di notte."
+            "why": "Durano trenta secondi. Il vilain lavora otto ore. Non è una battaglia ad armi pari. Si combatte alle undici di sera un nemico che comincia il turno alle due di notte.",
+            "hot": false
           }
         },
         "r3": {
           "type": "row",
           "settings": {
             "what": "Il collutorio",
-            "why": "Nella maggior parte dei casi passa davanti, non dietro. Il fondo della lingua — dove si deposita la patina — resta scoperto. Copre il davanti, ma il dietro è lì."
+            "why": "Nella maggior parte dei casi passa davanti, non dietro. Il fondo della lingua — dove si deposita la patina — resta scoperto. Copre il davanti, ma il dietro è lì.",
+            "hot": false
           }
         },
         "r4": {
           "type": "row",
           "settings": {
             "what": "Le mentine",
-            "why": "Coprono di giorno, quando parli, quando sei tra la gente. Ma il vilain non lavora di giorno. Ti proteggono nel momento in cui non serve."
+            "why": "Coprono di giorno, quando parli, quando sei tra la gente. Ma il vilain non lavora di giorno. Ti proteggono nel momento in cui non serve.",
+            "hot": false
           }
         },
         "r5": {
           "type": "row",
           "settings": {
             "what": "Il nettalingua",
-            "why": "Buono strumento, ma la zona che conta è il terzo posteriore. Quello che il riflesso rifiuta. Fermarsi a metà lingua è come lavare metà del pavimento. Il resto continua a lavorare la notte."
+            "why": "Buono strumento, ma la zona che conta è il terzo posteriore. Quello che il riflesso rifiuta. Fermarsi a metà lingua è come lavare metà del pavimento. Il resto continua a lavorare la notte.",
+            "hot": false
           }
         },
         "r6": {
           "type": "row",
           "settings": {
             "what": "La tonsillectomia",
-            "why": "In alcuni casi toglie la parte visibile. In molti altri, dopo qualche mese, l'alito torna. Perché la lingua è ancora lì. Perché la notte continua ad esistere. Hai tolto una metà, e l'altra è rimasta."
+            "why": "In alcuni casi toglie la parte visibile. In molti altri, dopo qualche mese, l'alito torna. Perché la lingua è ancora lì. Perché la notte continua ad esistere. Hai tolto una metà, e l'altra è rimasta.",
+            "hot": false
           }
         }
       },
@@ -430,13 +526,15 @@
         "r6"
       ],
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "heading": "Ognuno di quei rimedi <em>faceva la sua parte</em>. Ma nessuno faceva quella giusta.",
         "intro": "<p><p>Il cassetto lo conosci meglio di chiunque. Ci sono passati dieci prodotti, forse venti. Ognuno prometteva qualcosa. Nessuno ti ha dato quello che cercavi. Non perché tu abbia scelto male. Perché ognuno di questi rimedi era pensato per un momento e una zona che <strong>non sono il vilain</strong>.</p></p>",
         "outro": "<p><p>In fondo a questa lista, la frase che abbiamo letto e riletto è sempre nelle stesse parole: <em>«ho provato tutti i rimedi — pulizia dopo ogni pasto, nettalingua, colluttori appositi, probiotici, scovolini, idropulsore. Nulla. Mi sento sempre la fiatella. L'unica cosa che mi fa stare serena in pubblico è consumare chewing gum a raffica.»</em> Non è una resa. È la mappa esatta di dove il vilain non era.</p><p>Non hai fallito, e nemmeno hai scelto male. Hai combattuto <strong>il vilain sbagliato, nel posto sbagliato, all'ora sbagliata</strong>. Non era colpa tua che nessuno ti avesse detto quale fosse davvero.</p></p>",
-        "rule": true
+        "outro_pull": "",
+        "scope": "fr-lp1",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
       }
     },
     "gesto": {
@@ -502,11 +600,13 @@
         "pull"
       ],
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "heading": "Ci vorrebbe un gesto pensato per <em>la Metà Invisibile</em>.",
-        "rule": true
+        "drop": false,
+        "scope": "fr-lp1",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
       }
     },
     "rivelazione": {
@@ -597,9 +697,7 @@
         "i9"
       ],
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
         "heading": "Si chiama <em>FREOS</em>.",
         "intro": "<p><p>Un gel denso, da prendere la sera, dopo i denti. Due misurini, trenta secondi, e la sera finisce lì.</p><p>Non è un collutorio da sputare. Non è una caramella che finisce. È un gel: <strong>resta dove lo metti</strong>.</p></p>",
         "photo_file": "freos-lp1-09.webp",
@@ -609,358 +707,29 @@
         "note": "",
         "disclaimer_heading": "",
         "disclaimer": "",
-        "rule": true
+        "scope": "fr-lp1",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
       }
     },
     "offerta1": {
       "type": "freos-lp-offer",
       "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
+        "kicker": "",
+        "heading": "",
+        "intro": "",
+        "photo_file": "",
+        "photo_alt": "",
         "headline": "Ventinove euro e novanta. Trenta sere.",
         "body": "<p><p>Un barattolo dura trenta sere. Spedizione gratuita in Italia · 6-11 giorni lavorativi. <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
         "cta_label": "Riprenditi i trenta centimetri →",
         "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
         "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>",
-        "rule": false
-      }
-    },
-    "coppie": {
-      "type": "freos-lp-pairs",
-      "blocks": {
-        "c1": {
-          "type": "pair",
-          "settings": {
-            "now": "Il mezzo metro in più quando parli.",
-            "desire": "La voglia di parlare vicino, senza pensarci."
-          }
-        },
-        "c2": {
-          "type": "pair",
-          "settings": {
-            "now": "La risata trattenuta.",
-            "desire": "La voglia di ridere con la bocca aperta."
-          }
-        },
-        "c3": {
-          "type": "pair",
-          "settings": {
-            "now": "Il bacio dato di fretta.",
-            "desire": "La voglia di restare."
-          }
-        },
-        "c4": {
-          "type": "pair",
-          "settings": {
-            "now": "La cena scelta con cautela.",
-            "desire": "La voglia di mangiare quello che ti va."
-          }
-        },
-        "c5": {
-          "type": "pair",
-          "settings": {
-            "now": "La serata davanti allo specchio.",
-            "desire": "La voglia di spegnere la luce e basta."
-          }
-        }
-      },
-      "block_order": [
-        "c1",
-        "c2",
-        "c3",
-        "c4",
-        "c5"
-      ],
-      "settings": {
         "scope": "fr-lp1",
+        "rule": false,
         "pt": 0,
-        "pb": 0,
-        "heading": "La cosa più pesante <em>non è mai stata il calcolo</em>.",
-        "intro": "<p><p>Se ci pensi davvero, non vuoi solo tonsille pulite. Vuoi smettere di pensarci. Non era il mezzo passo indietro quando qualcuno ti parlava vicino. Non era la mano davanti alla bocca quando ridevi. Non era il bagno dopo cena, con la luce del telefono. Non era il formaggio che avevi tolto dal piatto, per sicurezza.</p></p>",
-        "outro": "<p><p>Niente di tutto questo eri tu. <em>Era una vita che si stringeva in fondo alla gola, senza fare rumore.</em></p><p>Volere tutto questo <strong>non è vanità</strong>. È voler tornare a fidarti di te. Non vuoi controllare meglio la tua gola. <em>Vuoi smettere di doverla controllare.</em></p></p>",
-        "rule": true
-      }
-    },
-    "costi": {
-      "type": "freos-lp-anchor",
-      "blocks": {
-        "a1": {
-          "type": "row",
-          "settings": {
-            "label": "Igiene dentale professionale, due volte l'anno",
-            "detail": "60–84 € a seduta secondo la regione, fino a 150 € se approfondita",
-            "value": "≈ 200 € / anno",
-            "us": false
-          }
-        },
-        "a2": {
-          "type": "row",
-          "settings": {
-            "label": "Spesa odontoiatrica media di un italiano",
-            "detail": "indagine nazionale 2025",
-            "value": "430 € / anno",
-            "us": false
-          }
-        },
-        "a3": {
-          "type": "row",
-          "settings": {
-            "label": "Collutori, mentine, raschietti, chewing gum",
-            "detail": "dieci anni di acquisti che non hai mai sommato",
-            "value": "fallo tu il conto",
-            "us": false
-          }
-        },
-        "a4": {
-          "type": "row",
-          "settings": {
-            "label": "FREOS · un barattolo, trenta sere",
-            "detail": "meno di un euro al giorno",
-            "value": "29,90 €",
-            "us": true
-          }
-        }
-      },
-      "block_order": [
-        "a1",
-        "a2",
-        "a3",
-        "a4"
-      ],
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "heading": "Quanto stai già <em>spendendo, senza contarlo</em>",
-        "lead": "Non per farti sentire in colpa. Per mettere in fila dei numeri che nessuno ti mette in fila.",
-        "note": "E la parte onesta: non fanno la stessa cosa.",
-        "source": "Fonti tariffe: detartrasi per regione (Nord 84 €, Centro 70 €, Sud 60 €) · pulizia approfondita 70–150 € · routine preventiva ≈ 200 €/anno · spesa odontoiatrica media 430 € nel 2025, indagine nazionale OmniSalus. Le tariffe variano per struttura e regione.",
-        "cta_label": "Riprenditi i trenta centimetri →",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "cta_sub": "Trenta sere di prova · spedizione gratuita in Italia · nessun abbonamento.",
-        "rule": true
-      }
-    },
-    "fiducia": {
-      "type": "freos-lp-editorial",
-      "blocks": {
-        "p1": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Un barattolo, trenta sere. Un mese di prova, rimborso senza reso.</p></p>"
-          }
-        },
-        "p2": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Stasera, dopo cena, arriverà il momento in cui di solito accendi la luce del telefono. Nessuno può dirti cosa succederà. Ma adesso sai quello che nessuno ti aveva messo in fila: che i calcoli sono la metà che si vede, che hanno già chi se ne occupa, e che c'è la Metà Invisibile, che ogni notte ricomincia. Sai anche che il vilain non sei tu, non è mai stato tu.</p></p>"
-          }
-        },
-        "p3": {
-          "type": "para",
-          "settings": {
-            "text": "<p><p>Anche se non scegli niente, stasera spegni la luce dello specchio un minuto prima. È già un gesto tuo.</p></p>"
-          }
-        }
-      },
-      "block_order": [
-        "p1",
-        "p2",
-        "p3"
-      ],
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "heading": "La fiducia torna da un gesto. <em>Il primo lo scegli tu.</em>",
-        "rule": true
-      }
-    },
-    "domande": {
-      "type": "freos-lp-faq",
-      "blocks": {
-        "q1": {
-          "type": "q",
-          "settings": {
-            "q": "FREOS scioglie i tonsilloliti?",
-            "a": "<p><p>No. Non tocca le tonsille e non scioglie i calcoli: per quelli c'è l'otorino.</p></p>"
-          }
-        },
-        "q2": {
-          "type": "q",
-          "settings": {
-            "q": "Se ho i tonsilloliti, mi serve comunque l'otorino?",
-            "a": "<p><p>Se ti danno fastidio, se tornano spesso o se hai uno dei segnali d'allarme, sì: è l'otorino a decidere cosa fare.</p></p>"
-          }
-        },
-        "q3": {
-          "type": "q",
-          "settings": {
-            "q": "Che sapore ha?",
-            "a": "<p><p>Un gel denso al sapore di menta, con un fondo leggermente vegetale. Si scioglie sulla lingua in pochi secondi. Non è dolce. Se non sopporti la menta, FREOS non fa per te.</p></p>"
-          }
-        },
-        "q4": {
-          "type": "q",
-          "settings": {
-            "q": "Si inghiotte?",
-            "a": "<p><p>Sì: due misurini la sera, lo lasci sciogliere sulla lingua e poi lo deglutisci.</p></p>"
-          }
-        },
-        "q5": {
-          "type": "q",
-          "settings": {
-            "q": "Quanto dura un barattolo?",
-            "a": "<p><p>Trenta sere, se lo usi come indicato — due misurini una volta al giorno.</p></p>"
-          }
-        },
-        "q6": {
-          "type": "q",
-          "settings": {
-            "q": "Se non funziona, posso restituirlo?",
-            "a": "<p><p>Se dopo un mese non ti parla, c'è un rimborso di trentanove euro, e il barattolo resta a te. I dettagli sono nella pagina del prodotto.</p></p>"
-          }
-        }
-      },
-      "block_order": [
-        "q1",
-        "q2",
-        "q3",
-        "q4",
-        "q5",
-        "q6"
-      ],
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "heading": "",
-        "rule": false
-      }
-    },
-    "offerta2": {
-      "type": "freos-lp-offer",
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "headline": "Ventinove euro e novanta. Trenta sere.",
-        "body": "<p><p>Un barattolo dura trenta sere. Spedizione gratuita in Italia · 6-11 giorni lavorativi. <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
-        "cta_label": "Riprenditi i trenta centimetri →",
-        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
-        "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>",
-        "rule": false
-      }
-    },
-    "chiusura": {
-      "type": "freos-lp-editorial",
-      "blocks": {
-        "pull": {
-          "type": "pull",
-          "settings": {
-            "text": "Tornare a fidarti di te. Basta."
-          }
-        }
-      },
-      "block_order": [
-        "pull"
-      ],
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "heading": "",
-        "rule": false
-      }
-    },
-    "fonti": {
-      "type": "freos-lp-sources",
-      "blocks": {
-        "f1": {
-          "type": "src",
-          "settings": {
-            "text": "<p><p>Ferguson M et al. <em>Otolaryngol Head Neck Surg</em> 2014 · Takahashi A et al. <em>Sci World J</em> 2014.</p></p>"
-          }
-        },
-        "f2": {
-          "type": "src",
-          "settings": {
-            "text": "<p><p>Quirynen M et al. <em>J Clin Periodontol</em> 2009 · Romano F et al. <em>Minerva Stomatologica</em> 2020;69:174-182.</p></p>"
-          }
-        },
-        "f3": {
-          "type": "src",
-          "settings": {
-            "text": "<p><p>Krespi YP et al. <em>Otolaryngol Head Neck Surg</em> 2006;135:671 · Dawes C. <em>JADA</em> 2008.</p></p>"
-          }
-        },
-        "f4": {
-          "type": "src",
-          "settings": {
-            "text": "<p><p>Snel J et al. <em>Arch Oral Biol</em> 2011 · Tsuneishi M et al. <em>Microbes Infect</em> 2006.</p></p>"
-          }
-        },
-        "f5": {
-          "type": "src",
-          "settings": {
-            "text": "<p><p>Galioto NJ. <em>Am Fam Physician</em> 2008;77:199 · NHS, <em>Mouth cancer: symptoms</em>.</p></p>"
-          }
-        },
-        "f6": {
-          "type": "src",
-          "settings": {
-            "text": "<p><p>Kumbargere Nagraj S et al. <em>Cochrane Database Syst Rev</em> 2019;12:CD012213.</p></p>"
-          }
-        }
-      },
-      "block_order": [
-        "f1",
-        "f2",
-        "f3",
-        "f4",
-        "f5",
-        "f6"
-      ],
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "title": "Fonti scientifiche citate",
-        "rule": false
-      }
-    },
-    "colophon": {
-      "type": "freos-lp-colophon",
-      "blocks": {
-        "e4": {
-          "type": "entry",
-          "settings": {
-            "label": "Questo articolo",
-            "body": "<p>Chiuso in redazione · Marzo 2026</p>"
-          }
-        },
-        "e_editore": {
-          "type": "entry",
-          "settings": {
-            "label": "Editore",
-            "body": "<p>DINSO VENTURES LLC</p><p>30 N Gould St, Ste #59143, Sheridan, WY 82801, USA</p><p>Reg. 2026-002082547</p><p><a href=\"mailto:contact@try-freos.com\">contact@try-freos.com</a></p>"
-          }
-        }
-      },
-      "block_order": [
-        "e_editore",
-        "e4"
-      ],
-      "settings": {
-        "scope": "fr-lp1",
-        "pt": 0,
-        "pb": 0,
-        "logo": "L'Inchiesta<em>Salute</em>",
-        "tagline": "Un caso alla volta · Fino in fondo",
-        "legal": "<p>Nota per il lettore. Questo articolo è un'inchiesta editoriale con contenuti sponsorizzati dal produttore di FREOS. La linea editoriale, le fonti citate, le riserve scientifiche e i limiti dichiarati del prodotto restano indipendenti. Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di sintomi rivolgersi al proprio medico curante o allo specialista. © L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p></p>",
-        "links": "<p>© L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p>",
-        "rule": false
+        "pb": 0
       }
     },
     "voci": {
@@ -1020,74 +789,357 @@
         "pb": 0
       }
     },
-    "tappe": {
-      "type": "freos-lp-editorial",
+    "coppie": {
+      "type": "freos-lp-pairs",
       "blocks": {
-        "h": {
-          "type": "sub",
+        "c1": {
+          "type": "pair",
           "settings": {
-            "text": "All’inizio sembra una cosa piccola. Poi diventa un appuntamento fisso.",
-            "level": "h3"
+            "now": "Il mezzo metro in più quando parli.",
+            "desire": "La voglia di parlare vicino, senza pensarci."
           }
         },
+        "c2": {
+          "type": "pair",
+          "settings": {
+            "now": "La risata trattenuta.",
+            "desire": "La voglia di ridere con la bocca aperta."
+          }
+        },
+        "c3": {
+          "type": "pair",
+          "settings": {
+            "now": "Il bacio dato di fretta.",
+            "desire": "La voglia di restare."
+          }
+        },
+        "c4": {
+          "type": "pair",
+          "settings": {
+            "now": "La cena scelta con cautela.",
+            "desire": "La voglia di mangiare quello che ti va."
+          }
+        },
+        "c5": {
+          "type": "pair",
+          "settings": {
+            "now": "La serata davanti allo specchio.",
+            "desire": "La voglia di spegnere la luce e basta."
+          }
+        }
+      },
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "c5"
+      ],
+      "settings": {
+        "kicker": "",
+        "heading": "La cosa più pesante <em>non è mai stata il calcolo</em>.",
+        "intro": "<p><p>Se ci pensi davvero, non vuoi solo tonsille pulite. Vuoi smettere di pensarci. Non era il mezzo passo indietro quando qualcuno ti parlava vicino. Non era la mano davanti alla bocca quando ridevi. Non era il bagno dopo cena, con la luce del telefono. Non era il formaggio che avevi tolto dal piatto, per sicurezza.</p></p>",
+        "outro": "<p><p>Niente di tutto questo eri tu. <em>Era una vita che si stringeva in fondo alla gola, senza fare rumore.</em></p><p>Volere tutto questo <strong>non è vanità</strong>. È voler tornare a fidarti di te. Non vuoi controllare meglio la tua gola. <em>Vuoi smettere di doverla controllare.</em></p></p>",
+        "scope": "fr-lp1",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "costi": {
+      "type": "freos-lp-anchor",
+      "blocks": {
+        "a1": {
+          "type": "row",
+          "settings": {
+            "label": "Igiene dentale professionale, due volte l'anno",
+            "detail": "60–84 € a seduta secondo la regione, fino a 150 € se approfondita",
+            "value": "≈ 200 € / anno",
+            "us": false
+          }
+        },
+        "a2": {
+          "type": "row",
+          "settings": {
+            "label": "Spesa odontoiatrica media di un italiano",
+            "detail": "indagine nazionale 2025",
+            "value": "430 € / anno",
+            "us": false
+          }
+        },
+        "a3": {
+          "type": "row",
+          "settings": {
+            "label": "Collutori, mentine, raschietti, chewing gum",
+            "detail": "dieci anni di acquisti che non hai mai sommato",
+            "value": "fallo tu il conto",
+            "us": false
+          }
+        },
+        "a4": {
+          "type": "row",
+          "settings": {
+            "label": "FREOS · un barattolo, trenta sere",
+            "detail": "meno di un euro al giorno",
+            "value": "29,90 €",
+            "us": true
+          }
+        }
+      },
+      "block_order": [
+        "a1",
+        "a2",
+        "a3",
+        "a4"
+      ],
+      "settings": {
+        "kicker": "",
+        "heading": "Quanto stai già <em>spendendo, senza contarlo</em>",
+        "lead": "Non per farti sentire in colpa. Per mettere in fila dei numeri che nessuno ti mette in fila.",
+        "note": "E la parte onesta: non fanno la stessa cosa.",
+        "source": "Fonti tariffe: detartrasi per regione (Nord 84 €, Centro 70 €, Sud 60 €) · pulizia approfondita 70–150 € · routine preventiva ≈ 200 €/anno · spesa odontoiatrica media 430 € nel 2025, indagine nazionale OmniSalus. Le tariffe variano per struttura e regione.",
+        "cta_label": "Riprenditi i trenta centimetri →",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "cta_sub": "Trenta sere di prova · spedizione gratuita in Italia · nessun abbonamento.",
+        "scope": "fr-lp1",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "fiducia": {
+      "type": "freos-lp-editorial",
+      "blocks": {
         "p1": {
           "type": "para",
           "settings": {
-            "text": "<p>All’inizio è un sapore strano, una sensazione in gola che va e viene e che non si riesce a spiegare. Poi arriva la prima pallina bianca, e un nome cercato di notte sul telefono.</p>"
+            "text": "<p><p>Un barattolo, trenta sere. Un mese di prova, rimborso senza reso.</p></p>"
           }
         },
         "p2": {
           "type": "para",
           "settings": {
-            "text": "<p>Poi vengono le serate davanti allo specchio, e i giorni in cui ne escono due o tre. E oggi tieni le distanze quando parli, convinto che l’unica uscita sia l’intervento.</p>"
+            "text": "<p><p>Stasera, dopo cena, arriverà il momento in cui di solito accendi la luce del telefono. Nessuno può dirti cosa succederà. Ma adesso sai quello che nessuno ti aveva messo in fila: che i calcoli sono la metà che si vede, che hanno già chi se ne occupa, e che c'è la Metà Invisibile, che ogni notte ricomincia. Sai anche che il vilain non sei tu, non è mai stato tu.</p></p>"
+          }
+        },
+        "p3": {
+          "type": "para",
+          "settings": {
+            "text": "<p><p>Anche se non scegli niente, stasera spegni la luce dello specchio un minuto prima. È già un gesto tuo.</p></p>"
           }
         }
       },
       "block_order": [
-        "h",
         "p1",
-        "p2"
+        "p2",
+        "p3"
+      ],
+      "settings": {
+        "kicker": "",
+        "heading": "La fiducia torna da un gesto. <em>Il primo lo scegli tu.</em>",
+        "drop": false,
+        "scope": "fr-lp1",
+        "rule": true,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "domande": {
+      "type": "freos-lp-faq",
+      "blocks": {
+        "q1": {
+          "type": "q",
+          "settings": {
+            "q": "FREOS scioglie i tonsilloliti?",
+            "a": "<p><p>No. Non tocca le tonsille e non scioglie i calcoli: per quelli c'è l'otorino.</p></p>"
+          }
+        },
+        "q2": {
+          "type": "q",
+          "settings": {
+            "q": "Se ho i tonsilloliti, mi serve comunque l'otorino?",
+            "a": "<p><p>Se ti danno fastidio, se tornano spesso o se hai uno dei segnali d'allarme, sì: è l'otorino a decidere cosa fare.</p></p>"
+          }
+        },
+        "q3": {
+          "type": "q",
+          "settings": {
+            "q": "Che sapore ha?",
+            "a": "<p><p>Un gel denso al sapore di menta, con un fondo leggermente vegetale. Si scioglie sulla lingua in pochi secondi. Non è dolce. Se non sopporti la menta, FREOS non fa per te.</p></p>"
+          }
+        },
+        "q4": {
+          "type": "q",
+          "settings": {
+            "q": "Si inghiotte?",
+            "a": "<p><p>Sì: due misurini la sera, lo lasci sciogliere sulla lingua e poi lo deglutisci.</p></p>"
+          }
+        },
+        "q5": {
+          "type": "q",
+          "settings": {
+            "q": "Quanto dura un barattolo?",
+            "a": "<p><p>Trenta sere, se lo usi come indicato — due misurini una volta al giorno.</p></p>"
+          }
+        },
+        "q6": {
+          "type": "q",
+          "settings": {
+            "q": "Se non funziona, posso restituirlo?",
+            "a": "<p><p>Se dopo un mese non ti parla, c'è un rimborso di trentanove euro, e il barattolo resta a te. I dettagli sono nella pagina del prodotto.</p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6"
       ],
       "settings": {
         "kicker": "",
         "heading": "",
+        "cta_label": "",
+        "cta_url": "",
+        "cta_sub": "",
         "scope": "fr-lp1",
         "rule": false,
         "pt": 0,
         "pb": 0
       }
     },
-    "segnali1": {
+    "offerta2": {
+      "type": "freos-lp-offer",
+      "settings": {
+        "kicker": "",
+        "heading": "",
+        "intro": "",
+        "photo_file": "",
+        "photo_alt": "",
+        "headline": "Ventinove euro e novanta. Trenta sere.",
+        "body": "<p><p>Un barattolo dura trenta sere. Spedizione gratuita in Italia · 6-11 giorni lavorativi. <em>Nessun abbonamento</em>: un ordine, una volta.</p></p>",
+        "cta_label": "Riprenditi i trenta centimetri →",
+        "cta_url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "guarantee": "<p><p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. È una garanzia commerciale che <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità, che restano interi.</p></p>",
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "chiusura": {
       "type": "freos-lp-editorial",
       "blocks": {
-        "h": {
-          "type": "sub",
+        "pull": {
+          "type": "pull",
           "settings": {
-            "text": "Segnali da riconoscere",
-            "level": "h3"
-          }
-        },
-        "p1": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Quello che si riconosce è quasi sempre lo stesso: un sapore cattivo in fondo alla gola che torna anche dopo lo spazzolino, la sensazione di qualcosa di fermo quando deglutisci, piccole palline bianche o gialle che escono con un colpo di tosse.</p>"
-          }
-        },
-        "p2": {
-          "type": "para",
-          "settings": {
-            "text": "<p>Poi un alito pesante che nessuno ti ha ancora spiegato, e una gola spesso irritata — senza febbre, e senza un vero mal di gola.</p>"
+            "text": "Tornare a fidarti di te. Basta."
           }
         }
       },
       "block_order": [
-        "h",
-        "p1",
-        "p2"
+        "pull"
       ],
       "settings": {
         "kicker": "",
         "heading": "",
+        "drop": false,
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "fonti": {
+      "type": "freos-lp-sources",
+      "blocks": {
+        "f1": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Ferguson M et al. <em>Otolaryngol Head Neck Surg</em> 2014 · Takahashi A et al. <em>Sci World J</em> 2014.</p></p>"
+          }
+        },
+        "f2": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Quirynen M et al. <em>J Clin Periodontol</em> 2009 · Romano F et al. <em>Minerva Stomatologica</em> 2020;69:174-182.</p></p>"
+          }
+        },
+        "f3": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Krespi YP et al. <em>Otolaryngol Head Neck Surg</em> 2006;135:671 · Dawes C. <em>JADA</em> 2008.</p></p>"
+          }
+        },
+        "f4": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Snel J et al. <em>Arch Oral Biol</em> 2011 · Tsuneishi M et al. <em>Microbes Infect</em> 2006.</p></p>"
+          }
+        },
+        "f5": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Galioto NJ. <em>Am Fam Physician</em> 2008;77:199 · NHS, <em>Mouth cancer: symptoms</em>.</p></p>"
+          }
+        },
+        "f6": {
+          "type": "src",
+          "settings": {
+            "text": "<p><p>Kumbargere Nagraj S et al. <em>Cochrane Database Syst Rev</em> 2019;12:CD012213.</p></p>"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5",
+        "f6"
+      ],
+      "settings": {
+        "kicker": "",
+        "title": "Fonti scientifiche citate",
+        "scope": "fr-lp1",
+        "rule": false,
+        "pt": 0,
+        "pb": 0
+      }
+    },
+    "colophon": {
+      "type": "freos-lp-colophon",
+      "blocks": {
+        "e_editore": {
+          "type": "entry",
+          "settings": {
+            "label": "Editore",
+            "body": "<p>DINSO VENTURES LLC</p><p>30 N Gould St, Ste #59143, Sheridan, WY 82801, USA</p><p>Reg. 2026-002082547</p><p><a href=\"mailto:contact@try-freos.com\">contact@try-freos.com</a></p>"
+          }
+        },
+        "e4": {
+          "type": "entry",
+          "settings": {
+            "label": "Questo articolo",
+            "body": "<p>Chiuso in redazione · Marzo 2026</p>"
+          }
+        }
+      },
+      "block_order": [
+        "e_editore",
+        "e4"
+      ],
+      "settings": {
+        "kicker": "",
+        "whisper": "",
+        "whisper_sign": "",
+        "logo": "L'Inchiesta<em>Salute</em>",
+        "tagline": "Un caso alla volta · Fino in fondo",
+        "desc": "",
+        "legal": "<p>Nota per il lettore. Questo articolo è un'inchiesta editoriale con contenuti sponsorizzati dal produttore di FREOS. La linea editoriale, le fonti citate, le riserve scientifiche e i limiti dichiarati del prodotto restano indipendenti. Nessun ingrediente o prodotto qui menzionato sostituisce il parere di un medico. In presenza di sintomi rivolgersi al proprio medico curante o allo specialista. © L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p></p>",
+        "links": "<p>© L'Inchiesta Salute · Tutti i diritti riservati · Privacy · Cookie · Note legali</p>",
         "scope": "fr-lp1",
         "rule": false,
         "pt": 0,
@@ -1099,11 +1151,11 @@
       "settings": {
         "label": "Provalo trenta sere →",
         "url": "/products/gel-notturno-micro-aderente-allo-zinco",
+        "glyph": "carrello",
         "sub": "",
         "at": 30,
         "hide_end": 88,
-        "mobile_only": false,
-        "glyph": "carrello"
+        "mobile_only": false
       }
     }
   },
