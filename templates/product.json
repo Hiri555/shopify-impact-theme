@@ -752,7 +752,7 @@
         "cr_1": {
           "type": "row",
           "settings": {
-            "label": "Resta in bocca dopo il gesto?",
+            "label": "Resta oltre i 20 minuti?",
             "v0": "si",
             "v1": "no",
             "v2": "no",
@@ -763,7 +763,7 @@
         "cr_2": {
           "type": "row",
           "settings": {
-            "label": "Copre le ore in cui dormi?",
+            "label": "Agisce mentre dormi?",
             "v0": "si",
             "v1": "no",
             "v2": "no",
@@ -774,18 +774,18 @@
         "cr_3": {
           "type": "row",
           "settings": {
-            "label": "Devi ripeterlo durante il giorno?",
-            "v0": "no",
-            "v1": "si",
-            "v2": "si",
-            "v3": "si",
-            "v4": "si"
+            "label": "Niente da sputare o ripetere?",
+            "v0": "si",
+            "v1": "no",
+            "v2": "no",
+            "v3": "no",
+            "v4": "no"
           }
         },
         "cr_4": {
           "type": "row",
           "settings": {
-            "label": "Lo zinco lega i composti solforati?",
+            "label": "Agisce, non solo copre?",
             "v0": "si",
             "v1": "no",
             "v2": "no",
@@ -796,12 +796,12 @@
         "cr_5": {
           "type": "row",
           "settings": {
-            "label": "Profuma sopra, o lega?",
-            "v0": "Lega",
-            "v1": "Profuma",
-            "v2": "Profuma",
-            "v3": "Profuma",
-            "v4": "Profuma"
+            "label": "Senza abbonamento?",
+            "v0": "si",
+            "v1": "si",
+            "v2": "si",
+            "v3": "si",
+            "v4": "si"
           }
         },
         "cr_6": {
