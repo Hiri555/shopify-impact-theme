@@ -10,19 +10,6 @@
 {
   "layout": "freos-lp",
   "sections": {
-    "spon": {
-      "type": "freos-lp-spon",
-      "settings": {
-        "kicker": "",
-        "text": "Contenuto sponsorizzato · FREOS",
-        "link": "",
-        "url": "",
-        "scope": "fr-lp2",
-        "rule": false,
-        "pt": 0,
-        "pb": 0
-      }
-    },
     "testata": {
       "type": "freos-lp-opener",
       "settings": {
@@ -1121,7 +1108,6 @@
     }
   },
   "order": [
-    "spon",
     "testata",
     "fig_testa",
     "racconto",
