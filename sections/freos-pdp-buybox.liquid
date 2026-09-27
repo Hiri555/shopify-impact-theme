@@ -115,7 +115,10 @@
           {%- case block.type -%}
 
             {%- when 'eyebrow' -%}
-              <p class="chip fr-bx-eyebrow" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+              {%- comment -%}Le bloc existe avec un texte vide : sans cette condition la puce sortait quand meme, 24x12 px de fond vert au-dessus du titre -- une pastille qui ne dit rien.{%- endcomment -%}
+              {%- if block.settings.text != blank -%}
+                <p class="chip fr-bx-eyebrow" {{ block.shopify_attributes }}>{{ block.settings.text }}</p>
+              {%- endif -%}
 
             {%- when 'title' -%}
               <h1 class="fr-buy-title" {{ block.shopify_attributes }}>{{ block.settings.text | default: p.title }}</h1>
