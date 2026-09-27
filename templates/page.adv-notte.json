@@ -12,6 +12,7 @@
   "sections": {
     "spon": {
       "type": "freos-lp-spon",
+      "disabled": true,
       "settings": {
         "kicker": "",
         "text": "Contenuto sponsorizzato · FREOS",
