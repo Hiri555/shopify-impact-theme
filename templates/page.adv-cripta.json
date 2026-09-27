@@ -994,43 +994,37 @@
         "v1": {
           "type": "voce",
           "settings": {
-            "text": "Baciavo mia moglie di lato, sulla guancia, da così tanto tempo che lo facevo senza pensarci. Adesso la bacio in bocca.",
-            "who": "Luca, 41 anni"
+            "text": "Calcolo la distanza quando parlo, senza averlo deciso. Me ne accorgo solo dopo, ripensandoci."
           }
         },
         "v2": {
           "type": "voce",
           "settings": {
-            "text": "Prima parlavo con la testa girata di tre quarti, sempre. Me l’ha fatto notare un collega quando ho smesso.",
-            "who": "Elisa, 36 anni"
+            "text": "Tengo la mano davanti alla bocca da anni: ormai è un gesto automatico. Non ricordo quando ho cominciato."
           }
         },
         "v3": {
           "type": "voce",
           "settings": {
-            "text": "Tenevo le mentine in ogni tasca, in macchina, sulla scrivania. Ne ho ritrovato un pacchetto la settimana scorsa e non mi ricordavo perché fosse lì.",
-            "who": "Andrea, 45 anni"
+            "text": "Vivo da solo e lavoro da casa. Il problema non è averlo: è non avere modo di saperlo."
           }
         },
         "v4": {
           "type": "voce",
           "settings": {
-            "text": "Il momento peggiore era il mattino, prima ancora di mangiare. Adesso il mattino è solo il mattino.",
-            "who": "Paola, 38 anni"
+            "text": "Ho smesso di cercare dopo dieci anni. Non ho risolto niente, mi sono solo stancato di provare."
           }
         },
         "v5": {
           "type": "voce",
           "settings": {
-            "text": "Faccio il barbiere, sto a trenta centimetri dalla faccia della gente tutto il giorno. Ho smesso di trattenere il respiro mentre lavoro.",
-            "who": "Nicola, 49 anni"
+            "text": "Il momento peggiore è il risveglio, prima ancora di mangiare. È lì che la domanda torna sempre uguale."
           }
         },
         "v6": {
           "type": "voce",
           "settings": {
-            "text": "Avevo smesso di cercare, dopo dieci anni. Non mi aspettavo di riaprire il discorso, e invece eccomi qui a raccontarlo.",
-            "who": "Chiara, 52 anni"
+            "text": "Ho letto la descrizione esatta di quello che mi succede. Quello che mi ha colpito è stato capire che non me lo stavo inventando."
           }
         }
       },
@@ -1044,8 +1038,8 @@
       ],
       "settings": {
         "heading": "Quello che ci siamo sentiti ripetere.",
-        "intro": "<p>Raccolte durante la nostra ricerca, riscritte in forma breve.</p>",
-        "foot": "<p>Sono esperienze individuali, non risultati tipici.</p>",
+        "intro": "<p>Racconti raccolti durante la nostra ricerca, riscritti in forma breve.</p>",
+        "foot": "<p>Non sono recensioni e non sono risultati tipici: è il problema raccontato da chi lo vive. FREOS è un integratore alimentare, non cura l’alitosi e non sostituisce il parere del medico.</p>",
         "scope": "fr-lp2",
         "pt": 0,
         "pb": 0

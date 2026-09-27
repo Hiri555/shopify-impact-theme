@@ -140,16 +140,18 @@
             "marks": "visa, master, american_express, paypal, apple_pay, google_pay"
           }
         },
-        "rating": {
-          "type": "rating",
+        "slide_mano": {
+          "type": "slide",
           "settings": {
-            "score": "4,8",
-            "count": "su 126 recensioni"
+            "image": "shopify://shop_images/freos-mano-barattolo.webp",
+            "file": "",
+            "alt": "Una mano tiene il barattolo FREOS in bagno, con la luce accesa"
           }
         }
       },
       "block_order": [
         "slide_01",
+        "slide_mano",
         "slide_02",
         "slide_03",
         "slide_04",
@@ -158,7 +160,6 @@
         "slide_07",
         "slide_08",
         "eyebrow",
-        "rating",
         "title",
         "subtitle",
         "benefits",
@@ -383,79 +384,43 @@
         "rv1": {
           "type": "review",
           "settings": {
-            "name": "Giulia R.",
-            "stars": 5,
-            "title": "Non mi controllo più a metà frase",
-            "body": "<p>Per anni ho tenuto la mano davanti alla bocca senza nemmeno accorgermene. Lo facevo al lavoro, lo facevo a cena, lo facevo mentre parlavo con mia sorella.</p><p>Dopo tre settimane mi sono resa conto che non lo facevo più. Non me l’ero imposto e non me ne ero accorta sul momento: l’ho capito ripensandoci. È la cosa che mi ha colpito di più.</p>",
-            "file": "freos-p-giulia.webp",
-            "age": "34 anni",
-            "durata": "da 2 mesi",
-            "image": ""
+            "title": "La distanza",
+            "body": "<p>Calcolo la distanza quando parlo, senza averlo deciso. Me ne accorgo solo dopo, ripensandoci.</p>"
           }
         },
         "rv2": {
           "type": "review",
           "settings": {
-            "name": "Marco T.",
-            "stars": 5,
-            "title": "Il risveglio è la differenza",
-            "body": "<p>L’ho preso senza aspettarmi granché. Avevo letto la riga sulla saliva che di notte quasi si ferma, e quella cosa l’avevo notata da solo senza saperla spiegare: era sempre peggio al risveglio, mai dopo pranzo.</p><p>Non prometto miracoli. Dico che al mattino la sensazione non è più quella di prima, ed è lì che me ne sono accorto per primo.</p>",
-            "file": "freos-p-marco.webp",
-            "age": "47 anni",
-            "durata": "da 3 mesi",
-            "image": ""
+            "title": "La mano davanti",
+            "body": "<p>Tengo la mano davanti alla bocca da anni, ormai è un gesto automatico. Non ricordo nemmeno quando ho cominciato.</p>"
           }
         },
         "rv3": {
           "type": "review",
           "settings": {
-            "name": "Elena D.",
-            "stars": 5,
-            "title": "Ho smesso di comprare cicche",
-            "body": "<p>Avevo il cassetto del bagno pieno: collutori in tre gusti, uno spray preso in aeroporto, due raschietti usati sei volte in totale. Le gomme le compravo a scatole e le contavo.</p><p>Adesso ne ho ancora un pacchetto aperto da due mesi. Non ho deciso di smettere di comprarle: mi sono accorta a un certo punto che non le stavo più finendo.</p>",
-            "file": "freos-p-elena.webp",
-            "age": "43 anni",
-            "durata": "da 6 settimane",
-            "image": ""
+            "title": "Il cassetto pieno",
+            "body": "<p>Il cassetto del bagno è pieno di cose comprate e mai finite. Collutori, spray, raschietti, tutti aperti a metà.</p>"
           }
         },
         "rv4": {
           "type": "review",
           "settings": {
-            "name": "Davide P.",
-            "stars": 5,
-            "title": "Il gesto si tiene",
-            "body": "<p>La mia paura era di non riuscire a tenerlo. Ho cominciato cose del genere almeno cinque volte e le ho mollate tutte entro il mese, sempre per lo stesso motivo: mi dimenticavo.</p><p>Venti giorni e ormai lo faccio senza pensarci, subito dopo i denti. È l’unica cosa che sono riuscito a mantenere, e credo sia perché dura trenta secondi e sta accanto allo spazzolino.</p>",
-            "file": "freos-p-davide.webp",
-            "age": "39 anni",
-            "durata": "da 4 mesi",
-            "image": ""
+            "title": "Il risveglio",
+            "body": "<p>Il momento peggiore è il risveglio, prima ancora di mangiare. È lì che la domanda torna sempre uguale.</p>"
           }
         },
         "rv5": {
           "type": "review",
           "settings": {
-            "name": "Sara M.",
-            "stars": 4,
-            "title": "Ci ho messo un po’ a fidarmi",
-            "body": "<p>Avevo provato di tutto e non ci credevo più. La prima settimana non ho notato niente e stavo per lasciar perdere — l’ho lasciato sul lavandino più per pigrizia che per convinzione.</p><p>Poi sì, qualcosa si è mosso. Tolgo una stella proprio per quella prima settimana: se qualcuno me l’avesse detto prima, non sarei stata lì a chiedermi se avevo buttato altri soldi.</p>",
-            "file": "freos-p-sara.webp",
-            "age": "31 anni",
-            "durata": "da 5 settimane",
-            "image": ""
+            "title": "Non posso saperlo",
+            "body": "<p>Vivo da solo e lavoro da casa. Il problema non è averlo: è non avere modo di saperlo.</p>"
           }
         },
         "rv6": {
           "type": "review",
           "settings": {
-            "name": "Alessandro V.",
-            "stars": 5,
-            "title": "Vivo da solo, nessuno me lo diceva",
-            "body": "<p>Vivo da solo e lavoro da casa. Il punto non era nemmeno il problema in sé: era che non avevo modo di saperlo, e a un certo punto ci pensavo prima di ogni chiamata, prima di ogni caffè al bar.</p><p>Adesso ho una routine e non ci penso tutto il giorno. Non so dire se sia cambiato quello che sentono gli altri. So che è cambiato quanto tempo ci passo sopra.</p>",
-            "file": "freos-p-alessandro.webp",
-            "age": "52 anni",
-            "durata": "da 3 mesi",
-            "image": ""
+            "title": "Avevo smesso di cercare",
+            "body": "<p>Ho smesso di comprare qualcosa per l’alito dopo dieci anni. Non perché fosse passato, ma perché avevo smesso di crederci.</p>"
           }
         }
       },
@@ -468,10 +433,10 @@
         "rv6"
       ],
       "settings": {
-        "source": "Le prime recensioni sono qui sopra. Questi racconti sono stati raccolti in forma anonima per la nostra inchiesta.",
+        "source": "Racconti anonimi raccolti durante la nostra inchiesta, riscritti in forma breve. Non sono recensioni verificate e non sono risultati tipici. FREOS è in vendita da poco: le recensioni verificate compariranno qui quando ci saranno.",
         "kicker": "",
-        "heading": "Hanno smesso <em>di controllare.</em>",
-        "dek": "Con parole loro.",
+        "heading": "Quello che ci siamo sentiti <em>ripetere.</em>",
+        "dek": "Racconti raccolti durante la nostra inchiesta, riscritti in forma breve.",
         "surface": "softer",
         "width": "wide",
         "padding_top": 40,
@@ -668,8 +633,6 @@
       "settings": {
         "file": "freos-pdp-01-main.jpg",
         "label": "Gel Notturno allo Zinco",
-        "show_rating": true,
-        "score": "4,8",
         "cta": "Aggiungi al carrello",
         "soldout": "Non disponibile",
         "watch": ".fr-atc-wrap"
@@ -763,7 +726,7 @@
         "cr_2": {
           "type": "row",
           "settings": {
-            "label": "Agisce mentre dormi?",
+            "label": "Pensato per le ore del sonno?",
             "v0": "si",
             "v1": "no",
             "v2": "no",
@@ -796,23 +759,23 @@
         "cr_5": {
           "type": "row",
           "settings": {
-            "label": "Senza abbonamento?",
+            "label": "Un acquisto, trenta sere?",
             "v0": "si",
-            "v1": "si",
-            "v2": "si",
-            "v3": "si",
-            "v4": "si"
+            "v1": "no",
+            "v2": "no",
+            "v3": "no",
+            "v4": "no"
           }
         },
         "cr_6": {
           "type": "row",
           "settings": {
-            "label": "Per il momento, o per la notte?",
-            "v0": "Per la notte",
-            "v1": "Al momento",
-            "v2": "Al momento",
-            "v3": "Al momento",
-            "v4": "Al momento"
+            "label": "Lo zinco lega i solfuri?",
+            "v0": "si",
+            "v1": "no",
+            "v2": "no",
+            "v3": "no",
+            "v4": "no"
           }
         }
       },
@@ -825,7 +788,7 @@
         "cr_6"
       ],
       "settings": {
-        "note": "<p>Non diciamo che le altre soluzioni non servano. Diciamo che fanno un’altra cosa, in un altro momento della giornata.</p>",
+        "note": "<p>Non diciamo che le altre soluzioni non servano: fanno un’altra cosa, in un altro momento della giornata. I composti solforati sono quelli che si accumulano quando la bocca si ferma, di notte.</p>",
         "kicker": "",
         "heading": "Perché il resto <em>non è bastato.</em>",
         "dek": "Sei domande che ti sei già fatto. Giudica tu.",

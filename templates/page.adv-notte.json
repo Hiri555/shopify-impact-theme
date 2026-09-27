@@ -969,43 +969,37 @@
         "v1": {
           "type": "voce",
           "settings": {
-            "text": "Per anni ho tenuto la mano davanti alla bocca parlando, senza nemmeno accorgermene. Un mese fa mia figlia mi ha chiesto perché avevo smesso di farlo.",
-            "who": "Giulia, 34 anni"
+            "text": "La prima cosa che faccio appena sveglio è correre a sciacquarmi. Prima del caffè, prima di tutto."
           }
         },
         "v2": {
           "type": "voce",
           "settings": {
-            "text": "Prima mi svegliavo e la prima cosa che facevo era correre a sciacquarmi. Adesso mi alzo e vado a fare il caffè.",
-            "who": "Marco, 47 anni"
+            "text": "Parlo con la testa girata di tre quarti, sempre. È una postura che ho preso senza deciderla."
           }
         },
         "v3": {
           "type": "voce",
           "settings": {
-            "text": "Avevo il cassetto del bagno pieno di roba aperta a metà. Adesso c’è un barattolo e un pacchetto di mentine che non finisco più.",
-            "who": "Elena, 43 anni"
+            "text": "Bacio mia moglie sulla guancia da così tanto tempo che non me ne accorgo più. Non l’ho mai detto a nessuno."
           }
         },
         "v4": {
           "type": "voce",
           "settings": {
-            "text": "In riunione mi mettevo sempre in fondo al tavolo, di lato. Il mese scorso mi sono accorto che ero seduto di fronte a tutti e non ci avevo pensato.",
-            "who": "Davide, 39 anni"
+            "text": "Faccio un lavoro che mi tiene a trenta centimetri dalla faccia della gente. Trattengo il respiro senza rendermene conto."
           }
         },
         "v5": {
           "type": "voce",
           "settings": {
-            "text": "La prima settimana non è successo niente e stavo per lasciar perdere. Alla terza ho smesso di controllarmi il fiato nella mano.",
-            "who": "Sara, 31 anni"
+            "text": "Il dentista dice che va tutto bene, e sui denti ha ragione. La domanda che mi faccio ogni mattina però è un’altra."
           }
         },
         "v6": {
           "type": "voce",
           "settings": {
-            "text": "Non ho buttato niente di quello che avevo comprato prima, per scaramanzia. Sono sei mesi che non apro quel cassetto.",
-            "who": "Alessandro, 52 anni"
+            "text": "Il cassetto del bagno è pieno di roba aperta a metà. Nessuna di quelle cose è durata più di due settimane."
           }
         }
       },
@@ -1019,8 +1013,8 @@
       ],
       "settings": {
         "heading": "Quello che ci siamo sentiti ripetere.",
-        "intro": "<p>Studiando questo fenomeno abbiamo raccolto centinaia di racconti. Quello che segue è riscritto da noi, in forma breve: sono osservazioni, non prove.</p>",
-        "foot": "<p>Sono esperienze individuali. Non sono risultati tipici e non descrivono quello che succederà a te.</p>",
+        "intro": "<p>Racconti raccolti durante la nostra ricerca, riscritti in forma breve.</p>",
+        "foot": "<p>Non sono recensioni e non sono risultati tipici: è il problema raccontato da chi lo vive. FREOS è un integratore alimentare, non cura l’alitosi e non sostituisce il parere del medico.</p>",
         "scope": "fr-lp1",
         "pt": 0,
         "pb": 0
