@@ -14,12 +14,16 @@
 
 {%- comment -%}Refonte 27/09 : colonne critere compacte et lisible (Inter 15px, 1-2 lignes), FREOS en valeur. Scope a la section.{%- endcomment -%}
 <style>
-  .fr-pdp--confronto .fr-cmp-l{font-family:Inter,sans-serif;font-style:normal;font-weight:600;font-size:15px;line-height:1.3;color:var(--ink);min-width:132px;max-width:150px;padding:12px 10px 12px 0}
+  .fr-pdp--confronto .fr-cmp-l{font-family:Inter,sans-serif;font-style:normal;font-weight:600;font-size:15px;line-height:1.3;color:var(--ink);min-width:176px;max-width:190px;padding:12px 12px 12px 0;text-wrap:balance}
   .fr-pdp--confronto .fr-cmp-c{padding:12px 8px}
   .fr-pdp--confronto .fr-cmp-h{min-width:84px;padding:0 6px 10px}
   .fr-pdp--confronto .fr-cmp-h--nous .fr-cmp-ph{box-shadow:0 0 0 2px var(--acc)}
   .fr-pdp--confronto .fr-cmp-oui svg,.fr-pdp--confronto .fr-cmp-non svg{width:18px;height:18px}
   .fr-pdp--confronto .fr-cmp-c--nous{font-size:15px}
+  /* La table doit gagner ce que la colonne critere prend, sinon les cinq
+     colonnes produit se remettent a plier. Elle defile deja : il n'y a rien
+     a economiser en largeur. */
+  .fr-pdp--confronto .fr-cmp{min-width:608px}
   @media(min-width:861px){.fr-pdp--confronto .fr-cmp-l{max-width:220px}}
 </style>
 <div class="fr fr-pdp fr-pdp--confronto fr-surface--{{ section.settings.surface }}"

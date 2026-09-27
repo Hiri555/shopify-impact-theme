@@ -1560,18 +1560,11 @@
    largeur minimale de la table suit -- sinon la colonne gagnee est reprise
    aux cinq colonnes produit, qui se mettent a plier a leur tour.
    -------------------------------------------------------------------------- */
-.fr .fr-cmp-l{
-  font-family: inherit; font-style: normal; font-weight: 600;
-  line-height: 1.32; letter-spacing: -.005em;
-  text-wrap: balance;
-}
-@media (max-width: 560px){
-  .fr .fr-cmp{ min-width: 608px; }
-  .fr .fr-cmp-l{ min-width: 196px; max-width: 208px; font-size: 15px; }
-}
-@media (min-width: 561px){
-  .fr .fr-cmp-l{ font-size: 15.5px; }
-}
+/* La largeur et la fonte de `.fr-cmp-l` NE SONT PAS ICI : elles vivent dans
+   le <style> scope de sections/freos-pdp-confronto.liquid, qui est rendu apres
+   cette feuille et gagne donc a specificite egale. Les ecrire aussi ici ne
+   ferait que creer une deuxieme source, sans effet, qu'on corrigerait un jour
+   a la place de la bonne. */
 
 /* --------------------------------------------------------------------------
    D · L'INDICATEUR DE RAIL NE VIT QUE SOUS 860 px
