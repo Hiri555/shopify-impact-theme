@@ -24,7 +24,13 @@
         {%- if section.settings.image != blank -%}
           {{ section.settings.image | image_url: width: 1200 | image_tag: widths: '480,760,1000,1200', sizes: '(max-width:760px) 100vw, 720px', alt: section.settings.alt }}
         {%- else -%}
-          <img src="{{ section.settings.file | strip | asset_url }}" alt="{{ section.settings.alt | escape }}">
+          {%- comment -%}PERF lot 4 : image LCP de la listicle -- variante servie a la taille de l'ecran + priorite reseau haute (section utilisee une seule fois, en haut de page).{%- endcomment -%}
+          {%- assign primo_url = section.settings.file | strip | asset_url -%}
+          <img src="{{ primo_url }}&width=1000"
+               srcset="{{ primo_url }}&width=600 600w, {{ primo_url }}&width=1000 1000w, {{ primo_url }} 1400w"
+               sizes="(max-width:759px) calc(100vw - 32px), 720px"
+               width="1400" height="1050" fetchpriority="high"
+               alt="{{ section.settings.alt | escape }}">
         {%- endif -%}
       </div>
     {%- endif -%}
