@@ -58,7 +58,10 @@
                      alt: slide_alt,
                      loading: ld }}
               {%- elsif fallback != blank -%}
-                <img src="{{ fallback | asset_url }}"
+                {%- assign fb_url = fallback | asset_url -%}
+                <img src="{{ fb_url }}&width=900"
+                     srcset="{{ fb_url }}&width=600 600w, {{ fb_url }}&width=900 900w, {{ fb_url }}&width=1200 1200w, {{ fb_url }} 1400w"
+                     sizes="(max-width:599px) calc(100vw - 32px), (max-width:860px) 420px, 46vw"
                      alt="{{ block.settings.alt | default: p.title | escape }}"
                      width="1400" height="1400"
                      {% if forloop.first %}fetchpriority="high"{% else %}loading="lazy"{% endif %}>
