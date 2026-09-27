@@ -28,6 +28,9 @@
   assign slides = section.blocks | where: 'type', 'slide'
 -%}
 
+{%- comment -%}PERF lot 1 : une diapositive inactive n'a pas de boite, donc loading="lazy" s'applique ; sinon les 8 images empilees (position:absolute) se chargent toutes au demarrage.{%- endcomment -%}
+<style>.fr .fr-gal-slide:not(.is-on) img{display:none}</style>
+
 <div class="fr fr-hero fr-bx fr-surface--{{ section.settings.surface }}"
      style="--fr-pt:{{ section.settings.padding_top }}px;--fr-pb:{{ section.settings.padding_bottom }}px">
   <div class="wide">
@@ -78,7 +81,7 @@
                 {%- if img != blank -%}
                   {{ img | image_url: width: 200 | image_tag: widths: '100,200', sizes: '80px', alt: '', loading: 'lazy' }}
                 {%- elsif fallback != blank -%}
-                  <img src="{{ fallback | asset_url }}" alt="" width="160" height="160" loading="lazy">
+                  <img src="{{ fallback | asset_url }}&width=160" alt="" width="160" height="160" loading="lazy">
                 {%- endif -%}
               </button>
             {%- endfor -%}
