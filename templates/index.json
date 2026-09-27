@@ -15,7 +15,7 @@
         "trust": "Zinco dosato in etichetta\nTrenta sere di prova\nNessun abbonamento",
         "kicker": "INCHIESTA",
         "hook": "Ti lavi i denti tre volte al giorno.",
-        "heading": "La causa del tuo alito sta <em>dieci centimetri più indietro.</em>",
+        "heading": "La causa del tuo alito sta dieci centimetri più indietro.",
         "dek": "Collutori, raschietti e mentine agiscono tutti su superfici esposte all’aria. Il punto dove si forma non lo è.",
         "by_file": "freos-lp2-01.webp",
         "by_name": "Davide M.",
@@ -24,7 +24,7 @@
         "image_alt": "La sera, davanti allo specchio, dopo i denti",
         "media_side": "right",
         "cta_label": "Scopri il gesto della sera",
-        "cta_url": "/pages/listicle",
+        "cta_url": "shopify://products/gel-notturno-micro-aderente-allo-zinco",
         "cta_note": "Sei motivi, nell’ordine in cui contano. Nessun acquisto."
       }
     },
@@ -38,13 +38,6 @@
     },
     "router": {
       "type": "freos-editorial",
-      "settings": {
-        "surface": "softer",
-        "width": "narrow",
-        "reading": false,
-        "padding_top": 40,
-        "padding_bottom": 40
-      },
       "blocks": {
         "00_section_header": {
           "type": "section_header",
@@ -64,17 +57,17 @@
       "block_order": [
         "00_section_header",
         "01_doors"
-      ]
-    },
-    "meccanismo": {
-      "type": "freos-editorial",
+      ],
       "settings": {
-        "surface": "white",
+        "surface": "softer",
         "width": "narrow",
         "reading": false,
         "padding_top": 40,
         "padding_bottom": 40
-      },
+      }
+    },
+    "meccanismo": {
+      "type": "freos-editorial",
       "blocks": {
         "00_kicker": {
           "type": "kicker",
@@ -100,15 +93,6 @@
             "rows": "Collutorio | 30 sec | 3\nCaramella | 4 min | 8\nGel denso | ore | 100"
           }
         },
-        "04_cta": {
-          "type": "cta",
-          "settings": {
-            "label": "Come funziona, per esteso",
-            "pill": "",
-            "url": "/pages/listicle",
-            "reassurance": ""
-          }
-        },
         "05_turno_h": {
           "type": "heading",
           "settings": {
@@ -126,6 +110,15 @@
           "settings": {
             "text": "Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova."
           }
+        },
+        "04_cta": {
+          "type": "cta",
+          "settings": {
+            "label": "Come funziona, per esteso",
+            "pill": "",
+            "url": "/pages/listicle",
+            "reassurance": ""
+          }
         }
       },
       "block_order": [
@@ -137,17 +130,17 @@
         "06_turno_tl",
         "07_turno_p",
         "04_cta"
-      ]
-    },
-    "recensioni": {
-      "type": "freos-editorial",
+      ],
       "settings": {
         "surface": "white",
         "width": "narrow",
         "reading": false,
         "padding_top": 40,
         "padding_bottom": 40
-      },
+      }
+    },
+    "recensioni": {
+      "type": "freos-editorial",
       "blocks": {
         "00_section_header": {
           "type": "section_header",
@@ -162,24 +155,24 @@
           "settings": {
             "score": "",
             "count": "",
-            "items": " |  | 0 | Mi controllo a metà frase | Tengo la mano davanti alla bocca quando parlo, e non ricordo quando ho cominciato.\n |  | 0 | Il cassetto è pieno | Collutori, spray, raschietti: comprati, aperti, mai finiti.\n |  | 0 | Il peggio è il risveglio | Prima ancora di mangiare, la domanda torna sempre uguale.\n |  | 0 | Non ho modo di saperlo | Vivo da solo: il problema non è averlo, è non poterlo verificare."
+            "items": "|  | 0 | Mi controllo a metà frase | Tengo la mano davanti alla bocca quando parlo, e non ricordo quando ho cominciato.\n |  | 0 | Il cassetto è pieno | Collutori, spray, raschietti: comprati, aperti, mai finiti.\n |  | 0 | Il peggio è il risveglio | Prima ancora di mangiare, la domanda torna sempre uguale.\n |  | 0 | Non ho modo di saperlo | Vivo da solo: il problema non è averlo, è non poterlo verificare."
           }
         }
       },
       "block_order": [
         "00_section_header",
         "01_reviews"
-      ]
-    },
-    "limiti": {
-      "type": "freos-editorial",
+      ],
       "settings": {
         "surface": "white",
         "width": "narrow",
         "reading": false,
         "padding_top": 40,
         "padding_bottom": 40
-      },
+      }
+    },
+    "limiti": {
+      "type": "freos-editorial",
       "blocks": {
         "00_kicker": {
           "type": "kicker",
@@ -204,17 +197,17 @@
         "00_kicker",
         "01_heading",
         "02_nolist"
-      ]
-    },
-    "garanzia": {
-      "type": "freos-editorial",
+      ],
       "settings": {
-        "surface": "ink",
+        "surface": "white",
         "width": "narrow",
         "reading": false,
         "padding_top": 40,
         "padding_bottom": 40
-      },
+      }
+    },
+    "garanzia": {
+      "type": "freos-editorial",
       "blocks": {
         "00_kicker": {
           "type": "kicker",
@@ -261,7 +254,14 @@
         "02_paragraph",
         "03_cta",
         "04_newsletter"
-      ]
+      ],
+      "settings": {
+        "surface": "ink",
+        "width": "narrow",
+        "reading": false,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     }
   },
   "order": [
