@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "fr_sticky_on": false,
     "section_vertical_spacing": "medium",
     "button_border_radius": 2,
     "input_border_radius": 2,
