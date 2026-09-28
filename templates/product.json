@@ -102,6 +102,7 @@
         },
         "price": {
           "type": "price",
+          "disabled": true,
           "settings": {
             "fallback": "29,90 €",
             "save_label": "",
