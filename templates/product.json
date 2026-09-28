@@ -19,6 +19,14 @@
             "alt": "FREOS — Gel Notturno Micro-Aderente allo Zinco"
           }
         },
+        "slide_mano": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/freos-mano-barattolo.webp",
+            "file": "",
+            "alt": "Una mano tiene il barattolo FREOS in bagno, con la luce accesa"
+          }
+        },
         "slide_02": {
           "type": "slide",
           "settings": {
@@ -86,12 +94,6 @@
             "text": "Sette estratti e uno ione, in un gel denso che resta dove lo metti."
           }
         },
-        "pills": {
-          "type": "pills",
-          "settings": {
-            "items": "Integratore alimentare | Zinco + 7 estratti | Nessun abbonamento"
-          }
-        },
         "benefits": {
           "type": "benefits",
           "settings": {
@@ -102,15 +104,8 @@
           "type": "price",
           "settings": {
             "fallback": "29,90 €",
+            "save_label": "",
             "note": "120 g · trenta sere · meno di un euro al giorno"
-          }
-        },
-        "recognition": {
-          "type": "recognition",
-          "settings": {
-            "question": "Quale di queste ti somiglia di più?",
-            "options": "Torna dopo venti minuti\nSoprattutto al risveglio\nNon riesco a saperlo da solo",
-            "answer": "In tutti e tre i casi il momento che conta è la sera: è lì che la bocca smette di difendersi, e nessuno fa niente."
           }
         },
         "buy_buttons": {
@@ -127,12 +122,6 @@
             "items": "Trenta sere di prova | o rimborso\nIl barattolo resta a te | anche aperto\nNessun abbonamento | un ordine, una volta"
           }
         },
-        "guarantee": {
-          "type": "guarantee",
-          "settings": {
-            "text": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>"
-          }
-        },
         "payments": {
           "type": "payments",
           "settings": {
@@ -140,12 +129,24 @@
             "marks": "visa, master, american_express, paypal, apple_pay, google_pay"
           }
         },
-        "slide_mano": {
-          "type": "slide",
+        "guarantee": {
+          "type": "guarantee",
           "settings": {
-            "image": "shopify://shop_images/freos-mano-barattolo.webp",
-            "file": "",
-            "alt": "Una mano tiene il barattolo FREOS in bagno, con la luce accesa"
+            "text": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>"
+          }
+        },
+        "pills": {
+          "type": "pills",
+          "settings": {
+            "items": "Integratore alimentare | Zinco + 7 estratti | Nessun abbonamento"
+          }
+        },
+        "recognition": {
+          "type": "recognition",
+          "settings": {
+            "question": "Quale di queste ti somiglia di più?",
+            "options": "Torna dopo venti minuti\nSoprattutto al risveglio\nNon riesco a saperlo da solo",
+            "answer": "In tutti e tre i casi il momento che conta è la sera: è lì che la bocca smette di difendersi, e nessuno fa niente."
           }
         }
       },
@@ -176,7 +177,62 @@
         "padding_top": 24,
         "padding_bottom": 40,
         "flag": "",
-        "thumbs_label": "Immagini del prodotto"
+        "thumbs_label": "Immagini del prodotto",
+        "atc_bg": "",
+        "atc_fg": ""
+      }
+    },
+    "benefici": {
+      "type": "freos-pdp-benefici",
+      "blocks": {
+        "ben_1": {
+          "type": "ben",
+          "settings": {
+            "icona": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z\"></path></svg>",
+            "text": "Agisce quando la bocca smette di difendersi",
+            "tag": "LA SERA"
+          }
+        },
+        "ben_2": {
+          "type": "ben",
+          "settings": {
+            "icona": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"8.5\"></circle><path d=\"M12 7.5V12l3 1.8\"></path></svg>",
+            "text": "Un gesto, trenta secondi",
+            "tag": "SENZA SFORZO"
+          }
+        },
+        "ben_3": {
+          "type": "ben",
+          "settings": {
+            "icona": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3.5s5.5 5.9 5.5 9.4a5.5 5.5 0 1 1-11 0C6.5 9.4 12 3.5 12 3.5z\"></path></svg>",
+            "text": "Resta dove lo metti",
+            "tag": "GEL DENSO"
+          }
+        },
+        "ben_4": {
+          "type": "ben",
+          "settings": {
+            "icona": "<svg viewbox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3.5\" y=\"5\" width=\"17\" height=\"15.5\" rx=\"2\"></rect><path d=\"M3.5 9.5h17M8 3.5v3M16 3.5v3\"></path></svg>",
+            "text": "Un barattolo copre un mese",
+            "tag": "TRENTA SERE"
+          }
+        }
+      },
+      "block_order": [
+        "ben_1",
+        "ben_2",
+        "ben_3",
+        "ben_4"
+      ],
+      "settings": {
+        "foot": "Integratore alimentare. Non cura l’alitosi.",
+        "kicker": "",
+        "heading": "Quattro cose, <em>e basta.</em>",
+        "dek": "",
+        "surface": "softer",
+        "width": "narrow",
+        "padding_top": 32,
+        "padding_bottom": 32
       }
     },
     "marquee": {
@@ -233,409 +289,6 @@
         "width": "narrow",
         "padding_top": 40,
         "padding_bottom": 40
-      }
-    },
-    "ingredienti": {
-      "type": "freos-pdp-ingredienti",
-      "blocks": {
-        "ing_zinco": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_zinco.jpg",
-            "name": "Zinco (citrato)",
-            "dose": "1,38 mg (14% VNR)",
-            "quote": "Lega, non copre.",
-            "role": "Il minerale della formula, dosato in etichetta. Lo zinco lega i composti solforati — quelli che si accumulano quando la bocca si ferma.",
-            "pill": "01 · IL LEGAME",
-            "benefit": "Il freno che tiene mentre dormi.",
-            "icon": "freno"
-          }
-        },
-        "ing_shilajit": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing-shilajit.webp",
-            "name": "Shilajit",
-            "dose": "100 mg",
-            "quote": "Il più dosato.",
-            "role": "Resina minerale himalayana, purificata. È l’ingrediente più dosato della formula.",
-            "pill": "02 · LA BASE",
-            "benefit": "La base su cui poggia tutto il resto.",
-            "icon": "base"
-          }
-        },
-        "ing_clorofilla": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_clorofilla.jpg",
-            "name": "Clorofilla",
-            "dose": "85 mg",
-            "quote": "Verde, da sempre.",
-            "role": "Il pigmento verde delle piante. Uso tradizionale legato agli odori.",
-            "pill": "03 · LA TRADIZIONE",
-            "benefit": "Il verde che accompagna, da sempre.",
-            "icon": "foglia"
-          }
-        },
-        "ing_te_verde": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_te_verde.jpg",
-            "name": "Tè verde",
-            "dose": "85 mg",
-            "quote": "Ricco di polifenoli.",
-            "role": "Foglia di Camellia sinensis. Contiene caffeina naturalmente presente.",
-            "pill": "04 · I POLIFENOLI",
-            "benefit": "La nota che pulisce il finale.",
-            "icon": "fresco"
-          }
-        },
-        "ing_prezzemolo": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_prezzemolo.jpg",
-            "name": "Prezzemolo",
-            "dose": "85 mg",
-            "quote": "Quello del dopo-pasto.",
-            "role": "Foglia di Petroselinum crispum. Quella che in Italia si mastica dopo i pasti, da molto prima che qualcuno la studiasse.",
-            "pill": "05 · IL DOPO-PASTO",
-            "benefit": "Quello che si masticava a fine pasto.",
-            "icon": "foglia"
-          }
-        },
-        "ing_melissa": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_melissa.jpg",
-            "name": "Melissa",
-            "dose": "85 mg",
-            "quote": "Chiude in dolcezza.",
-            "role": "Foglia dal profilo dolce. Chiude il gusto della formula.",
-            "pill": "06 · IL FONDO",
-            "benefit": "La chiusura dolce, quando tutto tace.",
-            "icon": "dolce"
-          }
-        },
-        "ing_chiodi": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_chiodi.jpg",
-            "name": "Chiodi di garofano",
-            "dose": "85 mg",
-            "quote": "Aroma che resta.",
-            "role": "Bocciolo essiccato, aroma intenso e persistente.",
-            "pill": "07 · L’AROMA",
-            "benefit": "L’aroma che resta quando spegni la luce.",
-            "icon": "tempo"
-          }
-        },
-        "ing_menta": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_menta.jpg",
-            "name": "Menta piperita",
-            "dose": "80 mg",
-            "quote": "Il fresco della sera.",
-            "role": "Il fresco che chiude il gesto. Se non sopporti la menta, FREOS non fa per te: meglio saperlo adesso.",
-            "pill": "08 · IL FRESCO",
-            "benefit": "La freschezza che senti nel momento.",
-            "icon": "fresco"
-          }
-        },
-        "ing_pueraria": {
-          "type": "ing",
-          "settings": {
-            "file": "freos-ing_pueraria.jpg",
-            "name": "Pueraria lobata",
-            "dose": "",
-            "quote": "Radice d’Oriente.",
-            "role": "Radice della tradizione asiatica, presente nella formula per il suo profilo vegetale.",
-            "pill": "09 · LA RADICE",
-            "benefit": "La radice che viene da lontano.",
-            "icon": "radice"
-          }
-        }
-      },
-      "block_order": [
-        "ing_zinco",
-        "ing_shilajit",
-        "ing_clorofilla",
-        "ing_te_verde",
-        "ing_prezzemolo",
-        "ing_melissa",
-        "ing_chiodi",
-        "ing_menta",
-        "ing_pueraria"
-      ],
-      "settings": {
-        "note": "<p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco (citrato) 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>",
-        "kicker": "",
-        "heading": "La formula <em>completa.</em>",
-        "dek": "Ogni ingrediente con la sua dose, e quello che cambia per te. Il decimo elemento non è un ingrediente: è l’ora in cui lo usi.",
-        "surface": "white",
-        "width": "wide",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "recensioni": {
-      "type": "freos-pdp-recensioni",
-      "blocks": {
-        "rv1": {
-          "type": "review",
-          "settings": {
-            "title": "La distanza",
-            "body": "<p>Calcolo la distanza quando parlo, senza averlo deciso. Me ne accorgo solo dopo, ripensandoci.</p>"
-          }
-        },
-        "rv2": {
-          "type": "review",
-          "settings": {
-            "title": "La mano davanti",
-            "body": "<p>Tengo la mano davanti alla bocca da anni, ormai è un gesto automatico. Non ricordo nemmeno quando ho cominciato.</p>"
-          }
-        },
-        "rv3": {
-          "type": "review",
-          "settings": {
-            "title": "Il cassetto pieno",
-            "body": "<p>Il cassetto del bagno è pieno di cose comprate e mai finite. Collutori, spray, raschietti, tutti aperti a metà.</p>"
-          }
-        },
-        "rv4": {
-          "type": "review",
-          "settings": {
-            "title": "Il risveglio",
-            "body": "<p>Il momento peggiore è il risveglio, prima ancora di mangiare. È lì che la domanda torna sempre uguale.</p>"
-          }
-        },
-        "rv5": {
-          "type": "review",
-          "settings": {
-            "title": "Non posso saperlo",
-            "body": "<p>Vivo da solo e lavoro da casa. Il problema non è averlo: è non avere modo di saperlo.</p>"
-          }
-        },
-        "rv6": {
-          "type": "review",
-          "settings": {
-            "title": "Avevo smesso di cercare",
-            "body": "<p>Ho smesso di comprare qualcosa per l’alito dopo dieci anni. Non perché fosse passato, ma perché avevo smesso di crederci.</p>"
-          }
-        }
-      },
-      "block_order": [
-        "rv1",
-        "rv2",
-        "rv3",
-        "rv4",
-        "rv5",
-        "rv6"
-      ],
-      "settings": {
-        "source": "Racconti anonimi raccolti durante la nostra inchiesta, riscritti in forma breve. Non sono recensioni verificate e non sono risultati tipici. FREOS è in vendita da poco: le recensioni verificate compariranno qui quando ci saranno.",
-        "kicker": "",
-        "heading": "Quello che ci siamo sentiti <em>ripetere.</em>",
-        "dek": "Racconti raccolti durante la nostra inchiesta, riscritti in forma breve.",
-        "surface": "softer",
-        "width": "wide",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "garanzia": {
-      "type": "freos-pdp-garanzia",
-      "blocks": {
-        "g1": {
-          "type": "badge",
-          "settings": {
-            "title": "30 Sere di prova",
-            "sub": "o rimborso"
-          }
-        },
-        "g2": {
-          "type": "badge",
-          "settings": {
-            "title": "✓ Il barattolo",
-            "sub": "resta a te"
-          }
-        },
-        "g3": {
-          "type": "badge",
-          "settings": {
-            "title": "⌀ Nessun",
-            "sub": "abbonamento"
-          }
-        }
-      },
-      "block_order": [
-        "g1",
-        "g2",
-        "g3"
-      ],
-      "settings": {
-        "shield": true,
-        "body": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>",
-        "cta_label": "Aggiungi al carrello",
-        "cta_pill": "",
-        "cta_url": "",
-        "legal": "Garanzia commerciale. Si aggiunge ai tuoi diritti di legge — recesso di 14 giorni e garanzia legale di conformità — che restano interi.",
-        "kicker": "",
-        "heading": "Un mese di prova. <em>Il rischio è nostro.</em>",
-        "dek": "",
-        "surface": "ink",
-        "width": "narrow",
-        "padding_top": 40,
-        "padding_bottom": 40
-      }
-    },
-    "faq": {
-      "type": "freos-pdp-faq",
-      "blocks": {
-        "q1": {
-          "type": "q",
-          "settings": {
-            "question": "Come si usa, esattamente?",
-            "answer": "<p>Due misurini (1,2 g) la sera, dopo i denti. Lascia sciogliere sulla lingua, poi deglutisci. Mai a stomaco vuoto.</p>",
-            "open": true
-          }
-        },
-        "q2": {
-          "type": "q",
-          "settings": {
-            "question": "Quanto dura un barattolo?",
-            "answer": "<p>120 g. Due misurini a sera, misurino incluso: un barattolo copre <strong>un mese pieno</strong>. Meno di un euro al giorno.</p>",
-            "open": false
-          }
-        },
-        "q3": {
-          "type": "q",
-          "settings": {
-            "question": "È un farmaco?",
-            "answer": "<p>No. È un integratore alimentare. <strong>Non cura l’alitosi</strong> e non ha un’indicazione terapeutica.</p>",
-            "open": false
-          }
-        },
-        "q4": {
-          "type": "q",
-          "settings": {
-            "question": "Serve per i tonsilloliti?",
-            "answer": "<p>No. Non tocca le tonsille e non scioglie i tonsilloliti. Se il problema è quello, la persona giusta è l’otorino.</p>",
-            "open": false
-          }
-        },
-        "q5": {
-          "type": "q",
-          "settings": {
-            "question": "E se il problema viene dallo stomaco?",
-            "answer": "<p>Raramente: le cause esterne alla bocca riguardano circa il 5-10% dei casi. <em>(Tangerman A &amp; Winkel EG · J Breath Res 2010 · PMID 21386205)</em> Con reflusso o sintomi digestivi, senti il medico.</p>",
-            "open": false
-          }
-        },
-        "q6": {
-          "type": "q",
-          "settings": {
-            "question": "Il mio dentista dice che è tutto a posto.",
-            "answer": "<p>Ha ragione su quello che esamina: denti e gengive. La parte posteriore della lingua non rientra nella visita di controllo.</p>",
-            "open": false
-          }
-        },
-        "q7": {
-          "type": "q",
-          "settings": {
-            "question": "Che sapore ha?",
-            "answer": "<p>Sapore di menta, con un fondo erbale di chiodi di garofano. Non è dolce.</p>",
-            "open": false
-          }
-        },
-        "q8": {
-          "type": "q",
-          "settings": {
-            "question": "Posso usarlo in gravidanza o durante l’allattamento?",
-            "answer": "<p>No.</p>",
-            "open": false
-          }
-        },
-        "q9": {
-          "type": "q",
-          "settings": {
-            "question": "Come funziona la garanzia?",
-            "answer": "<p>Trenta sere di prova. Se non ti dice niente, ti rimborsiamo e <strong>il barattolo resta a te</strong>. È una garanzia commerciale che offriamo noi e <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità — che restano interi.</p>",
-            "open": false
-          }
-        },
-        "q_limiti": {
-          "type": "q",
-          "settings": {
-            "question": "Quello che FREOS non fa.",
-            "answer": "<ul><li>Non tocca le tonsille</li><li>Non scioglie i tonsilloliti</li><li>Non sostituisce l’otorino, né il dentista, né lo spazzolino</li><li>Non cura l’alitosi: non è un farmaco e non ha un’indicazione terapeutica</li></ul><p>Dolore, febbre o difficoltà a deglutire? L’otorino viene prima di qualunque gel.</p>",
-            "open": false
-          }
-        },
-        "q_tempo": {
-          "type": "q",
-          "settings": {
-            "question": "In quanto tempo si sente qualcosa?",
-            "answer": "<p>Non c’è una risposta onesta valida per tutti. Chi ci scrive parla di una seconda o terza settimana, e quasi mai di un cambiamento improvviso: più spesso è una cosa che si smette di fare — controllare, coprire, contare le mentine. Le trenta sere di prova servono proprio a questo.</p>",
-            "open": false
-          }
-        },
-        "q_apparecchio": {
-          "type": "q",
-          "settings": {
-            "question": "Posso usarlo con apparecchio, bite o impianti?",
-            "answer": "<p>FREOS è un integratore alimentare: si scioglie in bocca e si deglutisce, non è un prodotto che si applica su denti o dispositivi. Se porti un bite notturno, il gesto va fatto prima di metterlo. Per qualsiasi dubbio legato al tuo apparecchio, la persona da sentire è il tuo dentista.</p>",
-            "open": false
-          }
-        },
-        "q_contro": {
-          "type": "q",
-          "settings": {
-            "question": "Ci sono controindicazioni?",
-            "answer": "<p>La formula contiene tè verde, che apporta caffeina naturalmente presente: se sei sensibile alla caffeina, tienine conto per un prodotto che si prende la sera. Non assumere in gravidanza o durante l’allattamento. Non superare la dose giornaliera consigliata. Tenere fuori dalla portata dei bambini sotto i tre anni. Gli integratori non sostituiscono una dieta variata e uno stile di vita sano.</p>",
-            "open": false
-          }
-        }
-      },
-      "block_order": [
-        "q_limiti",
-        "q1",
-        "q2",
-        "q3",
-        "q4",
-        "q5",
-        "q6",
-        "q7",
-        "q8",
-        "q_tempo",
-        "q_apparecchio",
-        "q_contro",
-        "q9"
-      ],
-      "settings": {
-        "src_title": "Fonti",
-        "src_items": "<ul><li>Takahashi et al., 2.873 pazienti consecutivi, 2014</li><li>Tangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205</li><li>Dawes C, Wong DTW. J Dent Res, 2019. PMID 30782091</li><li>Quirynen M et al. J Clin Periodontol, 2009. PMID 19811581</li></ul>",
-        "kicker": "",
-        "heading": "Prima <em>di decidere.</em>",
-        "dek": "",
-        "surface": "white",
-        "width": "narrow",
-        "padding_top": 40,
-        "padding_bottom": 40,
-        "guar_title": "",
-        "guar_text": "",
-        "guar_label": "",
-        "guar_url": ""
-      }
-    },
-    "sticky": {
-      "type": "freos-pdp-sticky",
-      "settings": {
-        "file": "freos-pdp-01-main.jpg",
-        "label": "Gel Notturno allo Zinco",
-        "cta": "Aggiungi al carrello",
-        "soldout": "Non disponibile",
-        "watch": ".fr-atc-wrap"
       }
     },
     "meccanismo": {
@@ -699,12 +352,155 @@
         "geste_st3"
       ],
       "settings": {
+        "foot": "<p>Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova.</p>",
         "kicker": "",
         "heading": "Il <em>Turno di Notte</em>.",
         "dek": "Durante il sonno il flusso salivare crolla del 90%. È la finestra in cui i composti si accumulano — ed è l’unica in cui qualcosa che resta al suo posto ha senso. (Dawes C, Wong DTW. J Dent Res, 2019)",
-        "foot": "<p>Non ti diciamo cosa fa mentre dormi. Ti diciamo dove si trova.</p>",
         "surface": "soft",
         "width": "narrow",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "ingredienti": {
+      "type": "freos-pdp-ingredienti",
+      "blocks": {
+        "ing_zinco": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_zinco.jpg",
+            "name": "Zinco (citrato)",
+            "benefit": "Il freno che tiene mentre dormi.",
+            "icon": "freno",
+            "dose": "1,38 mg (14% VNR)",
+            "quote": "Lega, non copre.",
+            "role": "Il minerale della formula, dosato in etichetta. Lo zinco lega i composti solforati — quelli che si accumulano quando la bocca si ferma.",
+            "pill": "01 · IL LEGAME"
+          }
+        },
+        "ing_shilajit": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing-shilajit.webp",
+            "name": "Shilajit",
+            "benefit": "La base su cui poggia tutto il resto.",
+            "icon": "base",
+            "dose": "100 mg",
+            "quote": "Il più dosato.",
+            "role": "Resina minerale himalayana, purificata. È l’ingrediente più dosato della formula.",
+            "pill": "02 · LA BASE"
+          }
+        },
+        "ing_clorofilla": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_clorofilla.jpg",
+            "name": "Clorofilla",
+            "benefit": "Il verde che accompagna, da sempre.",
+            "icon": "foglia",
+            "dose": "85 mg",
+            "quote": "Verde, da sempre.",
+            "role": "Il pigmento verde delle piante. Uso tradizionale legato agli odori.",
+            "pill": "03 · LA TRADIZIONE"
+          }
+        },
+        "ing_te_verde": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_te_verde.jpg",
+            "name": "Tè verde",
+            "benefit": "La nota che pulisce il finale.",
+            "icon": "fresco",
+            "dose": "85 mg",
+            "quote": "Ricco di polifenoli.",
+            "role": "Foglia di Camellia sinensis. Contiene caffeina naturalmente presente.",
+            "pill": "04 · I POLIFENOLI"
+          }
+        },
+        "ing_prezzemolo": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_prezzemolo.jpg",
+            "name": "Prezzemolo",
+            "benefit": "Quello che si masticava a fine pasto.",
+            "icon": "foglia",
+            "dose": "85 mg",
+            "quote": "Quello del dopo-pasto.",
+            "role": "Foglia di Petroselinum crispum. Quella che in Italia si mastica dopo i pasti, da molto prima che qualcuno la studiasse.",
+            "pill": "05 · IL DOPO-PASTO"
+          }
+        },
+        "ing_melissa": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_melissa.jpg",
+            "name": "Melissa",
+            "benefit": "La chiusura dolce, quando tutto tace.",
+            "icon": "dolce",
+            "dose": "85 mg",
+            "quote": "Chiude in dolcezza.",
+            "role": "Foglia dal profilo dolce. Chiude il gusto della formula.",
+            "pill": "06 · IL FONDO"
+          }
+        },
+        "ing_chiodi": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_chiodi.jpg",
+            "name": "Chiodi di garofano",
+            "benefit": "L’aroma che resta quando spegni la luce.",
+            "icon": "tempo",
+            "dose": "85 mg",
+            "quote": "Aroma che resta.",
+            "role": "Bocciolo essiccato, aroma intenso e persistente.",
+            "pill": "07 · L’AROMA"
+          }
+        },
+        "ing_menta": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_menta.jpg",
+            "name": "Menta piperita",
+            "benefit": "La freschezza che senti nel momento.",
+            "icon": "fresco",
+            "dose": "80 mg",
+            "quote": "Il fresco della sera.",
+            "role": "Il fresco che chiude il gesto. Se non sopporti la menta, FREOS non fa per te: meglio saperlo adesso.",
+            "pill": "08 · IL FRESCO"
+          }
+        },
+        "ing_pueraria": {
+          "type": "ing",
+          "settings": {
+            "file": "freos-ing_pueraria.jpg",
+            "name": "Pueraria lobata",
+            "benefit": "La radice che viene da lontano.",
+            "icon": "radice",
+            "dose": "",
+            "quote": "Radice d’Oriente.",
+            "role": "Radice della tradizione asiatica, presente nella formula per il suo profilo vegetale.",
+            "pill": "09 · LA RADICE"
+          }
+        }
+      },
+      "block_order": [
+        "ing_zinco",
+        "ing_shilajit",
+        "ing_clorofilla",
+        "ing_te_verde",
+        "ing_prezzemolo",
+        "ing_melissa",
+        "ing_chiodi",
+        "ing_menta",
+        "ing_pueraria"
+      ],
+      "settings": {
+        "note": "<p><strong>Composizione completa.</strong> Shilajit purificato (<em>Asphaltum</em>) 100 mg · Prezzemolo (<em>Petroselinum crispum</em>, foglia) 85 mg · Tè verde (<em>Camellia sinensis</em>, foglia) 85 mg · Melissa (<em>Melissa officinalis</em>, foglia) 85 mg · Clorofilla da erba medica 85 mg · Chiodi di garofano (<em>Syzygium aromaticum</em>, olio essenziale del bottone) 85 mg · Menta piperita (<em>Mentha piperita</em>, olio essenziale) 80 mg · <em>Pueraria lobata</em> · Zinco (citrato) 1,38 mg (14% VNR). Altri ingredienti: acqua depurata, gomma adragante, cera d’api bianca, glicerina vegetale, acido citrico anidro.</p><p><strong>Avvertenze.</strong> Contiene estratto di tè verde. Non assumere in gravidanza, durante l’allattamento e sotto i 18 anni. Non a stomaco vuoto. In caso di patologie epatiche o assunzione di farmaci, consultare il medico. · Non superare la dose giornaliera consigliata · Gli integratori non sostituiscono una dieta variata ed equilibrata e uno stile di vita sano · Tenere fuori dalla portata dei bambini al di sotto dei tre anni · Non indicato ai minori di 18 anni, in gravidanza e durante l’allattamento.</p>",
+        "kicker": "",
+        "heading": "La formula <em>completa.</em>",
+        "dek": "Ogni ingrediente con la sua dose, e quello che cambia per te. Il decimo elemento non è un ingrediente: è l’ora in cui lo usi.",
+        "surface": "white",
+        "width": "wide",
         "padding_top": 40,
         "padding_bottom": 40
       }
@@ -788,14 +584,6 @@
         "cr_6"
       ],
       "settings": {
-        "note": "<p>Non diciamo che le altre soluzioni non servano: fanno un’altra cosa, in un altro momento della giornata. I composti solforati sono quelli che si accumulano quando la bocca si ferma, di notte.</p>",
-        "kicker": "",
-        "heading": "Perché il resto <em>non è bastato.</em>",
-        "dek": "Sei domande che ti sei già fatto. Giudica tu.",
-        "surface": "soft",
-        "width": "wide",
-        "padding_top": 40,
-        "padding_bottom": 40,
         "h0": "FREOS",
         "i0": "freos-cmp-pot.webp",
         "h1": "Collutorio",
@@ -805,7 +593,80 @@
         "h3": "Gomme",
         "i3": "freos-cat-gomme.webp",
         "h4": "Spray",
-        "i4": "freos-cat-spray.webp"
+        "i4": "freos-cat-spray.webp",
+        "note": "<p>Non diciamo che le altre soluzioni non servano: fanno un’altra cosa, in un altro momento della giornata. I composti solforati sono quelli che si accumulano quando la bocca si ferma, di notte.</p>",
+        "kicker": "",
+        "heading": "Perché il resto <em>non è bastato.</em>",
+        "dek": "Sei domande che ti sei già fatto. Giudica tu.",
+        "surface": "soft",
+        "width": "wide",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "recensioni": {
+      "type": "freos-pdp-recensioni",
+      "blocks": {
+        "rv1": {
+          "type": "review",
+          "settings": {
+            "title": "La distanza",
+            "body": "<p>Calcolo la distanza quando parlo, senza averlo deciso. Me ne accorgo solo dopo, ripensandoci.</p>"
+          }
+        },
+        "rv2": {
+          "type": "review",
+          "settings": {
+            "title": "La mano davanti",
+            "body": "<p>Tengo la mano davanti alla bocca da anni, ormai è un gesto automatico. Non ricordo nemmeno quando ho cominciato.</p>"
+          }
+        },
+        "rv3": {
+          "type": "review",
+          "settings": {
+            "title": "Il cassetto pieno",
+            "body": "<p>Il cassetto del bagno è pieno di cose comprate e mai finite. Collutori, spray, raschietti, tutti aperti a metà.</p>"
+          }
+        },
+        "rv4": {
+          "type": "review",
+          "settings": {
+            "title": "Il risveglio",
+            "body": "<p>Il momento peggiore è il risveglio, prima ancora di mangiare. È lì che la domanda torna sempre uguale.</p>"
+          }
+        },
+        "rv5": {
+          "type": "review",
+          "settings": {
+            "title": "Non posso saperlo",
+            "body": "<p>Vivo da solo e lavoro da casa. Il problema non è averlo: è non avere modo di saperlo.</p>"
+          }
+        },
+        "rv6": {
+          "type": "review",
+          "settings": {
+            "title": "Avevo smesso di cercare",
+            "body": "<p>Ho smesso di comprare qualcosa per l’alito dopo dieci anni. Non perché fosse passato, ma perché avevo smesso di crederci.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "rv1",
+        "rv2",
+        "rv3",
+        "rv4",
+        "rv5",
+        "rv6"
+      ],
+      "settings": {
+        "source": "Racconti anonimi raccolti durante la nostra inchiesta, riscritti in forma breve. Non sono recensioni verificate e non sono risultati tipici. FREOS è in vendita da poco: le recensioni verificate compariranno qui quando ci saranno.",
+        "kicker": "",
+        "heading": "Quello che ci siamo sentiti <em>ripetere.</em>",
+        "dek": "Racconti raccolti durante la nostra inchiesta, riscritti in forma breve.",
+        "surface": "softer",
+        "width": "wide",
+        "padding_top": 40,
+        "padding_bottom": 40
       }
     },
     "rituale": {
@@ -844,10 +705,11 @@
         "step_02",
         "step_03"
       ],
+      "disabled": true,
       "settings": {
         "foot": "Sezione in preparazione: il modo d’uso definitivo arriva qui.",
         "kicker": "",
-        "heading": "Tre passaggi. <em>Trenta secondi.</em>",
+        "heading": "Tre passaggi. Trenta secondi.",
         "dek": "La sera, dopo lo spazzolino. Non al posto.",
         "surface": "white",
         "width": "wide",
@@ -855,57 +717,202 @@
         "padding_bottom": 40
       }
     },
-    "benefici": {
-      "type": "freos-pdp-benefici",
+    "garanzia": {
+      "type": "freos-pdp-garanzia",
       "blocks": {
-        "ben_1": {
-          "type": "ben",
+        "g1": {
+          "type": "badge",
           "settings": {
-            "icona": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7z\"/></svg>",
-            "text": "Agisce quando la bocca smette di difendersi",
-            "tag": "LA SERA"
+            "title": "30 Sere di prova",
+            "sub": "o rimborso"
           }
         },
-        "ben_2": {
-          "type": "ben",
+        "g2": {
+          "type": "badge",
           "settings": {
-            "icona": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"12\" r=\"8.5\"/><path d=\"M12 7.5V12l3 1.8\"/></svg>",
-            "text": "Un gesto, trenta secondi",
-            "tag": "SENZA SFORZO"
+            "title": "✓ Il barattolo",
+            "sub": "resta a te"
           }
         },
-        "ben_3": {
-          "type": "ben",
+        "g3": {
+          "type": "badge",
           "settings": {
-            "icona": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3.5s5.5 5.9 5.5 9.4a5.5 5.5 0 1 1-11 0C6.5 9.4 12 3.5 12 3.5z\"/></svg>",
-            "text": "Resta dove lo metti",
-            "tag": "GEL DENSO"
-          }
-        },
-        "ben_4": {
-          "type": "ben",
-          "settings": {
-            "icona": "<svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"3.5\" y=\"5\" width=\"17\" height=\"15.5\" rx=\"2\"/><path d=\"M3.5 9.5h17M8 3.5v3M16 3.5v3\"/></svg>",
-            "text": "Un barattolo copre un mese",
-            "tag": "TRENTA SERE"
+            "title": "⌀ Nessun",
+            "sub": "abbonamento"
           }
         }
       },
       "block_order": [
-        "ben_1",
-        "ben_2",
-        "ben_3",
-        "ben_4"
+        "g1",
+        "g2",
+        "g3"
+      ],
+      "disabled": true,
+      "settings": {
+        "shield": true,
+        "body": "<p>Se dopo trenta sere non ti dice niente, ti rimborsiamo l’intero importo. <strong>Il barattolo resta a te</strong>, anche se è aperto. Non devi spiegare perché.</p>",
+        "cta_label": "Aggiungi al carrello",
+        "cta_pill": "",
+        "cta_url": "",
+        "legal": "Garanzia commerciale. Si aggiunge ai tuoi diritti di legge — recesso di 14 giorni e garanzia legale di conformità — che restano interi.",
+        "kicker": "",
+        "heading": "Un mese di prova. Il rischio è nostro.",
+        "dek": "",
+        "surface": "ink",
+        "width": "narrow",
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "freos-pdp-faq",
+      "blocks": {
+        "q_limiti": {
+          "type": "q",
+          "settings": {
+            "question": "Quello che FREOS non fa.",
+            "answer": "<ul><li>Non tocca le tonsille</li><li>Non scioglie i tonsilloliti</li><li>Non sostituisce l’otorino, né il dentista, né lo spazzolino</li><li>Non cura l’alitosi: non è un farmaco e non ha un’indicazione terapeutica</li></ul><p>Dolore, febbre o difficoltà a deglutire? L’otorino viene prima di qualunque gel.</p>",
+            "open": false
+          }
+        },
+        "q1": {
+          "type": "q",
+          "settings": {
+            "question": "Come si usa, esattamente?",
+            "answer": "<p>Due misurini (1,2 g) la sera, dopo i denti. Lascia sciogliere sulla lingua, poi deglutisci. Mai a stomaco vuoto.</p>",
+            "open": true
+          }
+        },
+        "q2": {
+          "type": "q",
+          "settings": {
+            "question": "Quanto dura un barattolo?",
+            "answer": "<p>120 g. Due misurini a sera, misurino incluso: un barattolo copre <strong>un mese pieno</strong>. Meno di un euro al giorno.</p>",
+            "open": false
+          }
+        },
+        "q3": {
+          "type": "q",
+          "settings": {
+            "question": "È un farmaco?",
+            "answer": "<p>No. È un integratore alimentare. <strong>Non cura l’alitosi</strong> e non ha un’indicazione terapeutica.</p>",
+            "open": false
+          }
+        },
+        "q4": {
+          "type": "q",
+          "settings": {
+            "question": "Serve per i tonsilloliti?",
+            "answer": "<p>No. Non tocca le tonsille e non scioglie i tonsilloliti. Se il problema è quello, la persona giusta è l’otorino.</p>",
+            "open": false
+          }
+        },
+        "q5": {
+          "type": "q",
+          "settings": {
+            "question": "E se il problema viene dallo stomaco?",
+            "answer": "<p>Raramente: le cause esterne alla bocca riguardano circa il 5-10% dei casi. <em>(Tangerman A &amp; Winkel EG · J Breath Res 2010 · PMID 21386205)</em> Con reflusso o sintomi digestivi, senti il medico.</p>",
+            "open": false
+          }
+        },
+        "q6": {
+          "type": "q",
+          "settings": {
+            "question": "Il mio dentista dice che è tutto a posto.",
+            "answer": "<p>Ha ragione su quello che esamina: denti e gengive. La parte posteriore della lingua non rientra nella visita di controllo.</p>",
+            "open": false
+          }
+        },
+        "q7": {
+          "type": "q",
+          "settings": {
+            "question": "Che sapore ha?",
+            "answer": "<p>Sapore di menta, con un fondo erbale di chiodi di garofano. Non è dolce.</p>",
+            "open": false
+          }
+        },
+        "q8": {
+          "type": "q",
+          "settings": {
+            "question": "Posso usarlo in gravidanza o durante l’allattamento?",
+            "answer": "<p>No.</p>",
+            "open": false
+          }
+        },
+        "q_tempo": {
+          "type": "q",
+          "settings": {
+            "question": "In quanto tempo si sente qualcosa?",
+            "answer": "<p>Non c’è una risposta onesta valida per tutti. Chi ci scrive parla di una seconda o terza settimana, e quasi mai di un cambiamento improvviso: più spesso è una cosa che si smette di fare — controllare, coprire, contare le mentine. Le trenta sere di prova servono proprio a questo.</p>",
+            "open": false
+          }
+        },
+        "q_apparecchio": {
+          "type": "q",
+          "settings": {
+            "question": "Posso usarlo con apparecchio, bite o impianti?",
+            "answer": "<p>FREOS è un integratore alimentare: si scioglie in bocca e si deglutisce, non è un prodotto che si applica su denti o dispositivi. Se porti un bite notturno, il gesto va fatto prima di metterlo. Per qualsiasi dubbio legato al tuo apparecchio, la persona da sentire è il tuo dentista.</p>",
+            "open": false
+          }
+        },
+        "q_contro": {
+          "type": "q",
+          "settings": {
+            "question": "Ci sono controindicazioni?",
+            "answer": "<p>La formula contiene tè verde, che apporta caffeina naturalmente presente: se sei sensibile alla caffeina, tienine conto per un prodotto che si prende la sera. Non assumere in gravidanza o durante l’allattamento. Non superare la dose giornaliera consigliata. Tenere fuori dalla portata dei bambini sotto i tre anni. Gli integratori non sostituiscono una dieta variata e uno stile di vita sano.</p>",
+            "open": false
+          }
+        },
+        "q9": {
+          "type": "q",
+          "settings": {
+            "question": "Come funziona la garanzia?",
+            "answer": "<p>Trenta sere di prova. Se non ti dice niente, ti rimborsiamo e <strong>il barattolo resta a te</strong>. È una garanzia commerciale che offriamo noi e <strong>si aggiunge</strong> ai tuoi diritti di legge — il recesso di 14 giorni e la garanzia legale di conformità — che restano interi.</p>",
+            "open": false
+          }
+        }
+      },
+      "block_order": [
+        "q_limiti",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8",
+        "q_tempo",
+        "q_apparecchio",
+        "q_contro",
+        "q9"
       ],
       "settings": {
-        "foot": "Integratore alimentare. Non cura l’alitosi.",
+        "guar_title": "",
+        "guar_text": "",
+        "guar_label": "",
+        "guar_url": "",
+        "src_title": "Fonti",
+        "src_items": "<ul><li>Takahashi et al., 2.873 pazienti consecutivi, 2014</li><li>Tangerman A, Winkel EG. J Breath Res, 2010. PMID 21386205</li><li>Dawes C, Wong DTW. J Dent Res, 2019. PMID 30782091</li><li>Quirynen M et al. J Clin Periodontol, 2009. PMID 19811581</li></ul>",
         "kicker": "",
-        "heading": "Quattro cose, <em>e basta.</em>",
+        "heading": "Prima <em>di decidere.</em>",
         "dek": "",
-        "surface": "softer",
+        "surface": "white",
         "width": "narrow",
-        "padding_top": 32,
-        "padding_bottom": 32
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "sticky": {
+      "type": "freos-pdp-sticky",
+      "settings": {
+        "file": "freos-pdp-01-main.jpg",
+        "label": "Gel Notturno allo Zinco",
+        "cta": "Aggiungi al carrello",
+        "soldout": "Non disponibile",
+        "atc_bg": "",
+        "atc_fg": "",
+        "watch": ".fr-atc-wrap"
       }
     }
   },
