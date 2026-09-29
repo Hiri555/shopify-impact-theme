@@ -113,6 +113,17 @@
       <div class="fr-buy">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
+            {%- comment -%}
+              Ajoutes pour pouvoir glisser du Liquid n'importe ou dans la
+              colonne d'achat -- sous le prix, sous le bouton, entre deux
+              rassurances. L'ordre est celui des blocs dans l'editeur.
+            {%- endcomment -%}
+            {%- when 'custom_liquid' -%}
+              <div class="fr-custom-liquid" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
+
+            {%- when '@app' -%}
+              <div class="fr-app-block" {{ block.shopify_attributes }}>{% render block %}</div>
+
 
             {%- when 'eyebrow' -%}
               {%- comment -%}Le bloc existe avec un texte vide : sans cette condition la puce sortait quand meme, 24x12 px de fond vert au-dessus du titre -- une pastille qui ne dit rien.{%- endcomment -%}
@@ -333,6 +344,21 @@
     { "type": "color", "id": "atc_fg", "label": "Texte du bouton" }
   ],
   "blocks": [
+    {
+      "type": "custom_liquid",
+      "name": "Liquid personalizzato",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Codice Liquid / HTML",
+          "info": "Incolla qui Liquid, HTML o script personalizzato."
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    },
     { "type": "slide", "name": "Image de galerie",
       "settings": [
         { "type": "image_picker", "id": "image", "label": "Image" },

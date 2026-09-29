@@ -32,6 +32,18 @@
     <p class="fr-steps-hint" aria-hidden="true">Scorri &#8594;</p>
     <div class="fr-steps">
       {%- for block in section.blocks -%}
+      {%- comment -%}
+        Bloc « Liquid personalizzato » et blocs d'application. Places en tete de
+        boucle avec `continue` plutot qu'en enveloppe du corps : cette section a des
+        boucles imbriquees, et envelopper aurait demande de deviner le bon `endfor`.
+      {%- endcomment -%}
+      {%- if block.type == 'custom_liquid' -%}
+        <div class="fr-custom-liquid" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
+        {%- continue -%}
+      {%- elsif block.type == '@app' -%}
+        <div class="fr-app-block" {{ block.shopify_attributes }}>{% render block %}</div>
+        {%- continue -%}
+      {%- endif -%}
         <article class="fr-step" {{ block.shopify_attributes }}>
           <span class="fr-step-ph">
             {%- if block.settings.image != blank -%}
@@ -160,6 +172,21 @@
   ],
   "blocks": [
     {
+      "type": "custom_liquid",
+      "name": "Liquid personalizzato",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Codice Liquid / HTML",
+          "info": "Incolla qui Liquid, HTML o script personalizzato."
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    },
+    {
       "type": "step",
       "name": "Passaggio",
       "settings": [
@@ -192,6 +219,6 @@
       ]
     }
   ],
-  "max_blocks": 6
+  "max_blocks": 24
 }
 {% endschema %}

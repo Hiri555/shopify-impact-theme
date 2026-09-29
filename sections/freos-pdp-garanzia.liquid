@@ -57,6 +57,18 @@
     {%- if section.blocks.size > 0 -%}
       <div class="fr-badges">
         {%- for block in section.blocks -%}
+        {%- comment -%}
+          Bloc « Liquid personalizzato » et blocs d'application. Places en tete de
+          boucle avec `continue` plutot qu'en enveloppe du corps : cette section a des
+          boucles imbriquees, et envelopper aurait demande de deviner le bon `endfor`.
+        {%- endcomment -%}
+        {%- if block.type == 'custom_liquid' -%}
+          <div class="fr-custom-liquid" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
+          {%- continue -%}
+        {%- elsif block.type == '@app' -%}
+          <div class="fr-app-block" {{ block.shopify_attributes }}>{% render block %}</div>
+          {%- continue -%}
+        {%- endif -%}
           <div class="fr-badge" {{ block.shopify_attributes }}>
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.7"
                  stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8.3 6.4 12 13 4.5"/></svg>
@@ -218,6 +230,21 @@
     }
   ],
   "blocks": [
+    {
+      "type": "custom_liquid",
+      "name": "Liquid personalizzato",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Codice Liquid / HTML",
+          "info": "Incolla qui Liquid, HTML o script personalizzato."
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    },
     {
       "type": "badge",
       "name": "Reassurance",

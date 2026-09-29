@@ -35,6 +35,18 @@
 
     <ul class="fr-bens">
       {%- for block in section.blocks -%}
+      {%- comment -%}
+        Bloc « Liquid personalizzato » et blocs d'application. Places en tete de
+        boucle avec `continue` plutot qu'en enveloppe du corps : cette section a des
+        boucles imbriquees, et envelopper aurait demande de deviner le bon `endfor`.
+      {%- endcomment -%}
+      {%- if block.type == 'custom_liquid' -%}
+        <div class="fr-custom-liquid" {{ block.shopify_attributes }}>{{ block.settings.custom_liquid }}</div>
+        {%- continue -%}
+      {%- elsif block.type == '@app' -%}
+        <div class="fr-app-block" {{ block.shopify_attributes }}>{% render block %}</div>
+        {%- continue -%}
+      {%- endif -%}
         <li class="fr-ben" {{ block.shopify_attributes }}>
           <span class="fr-ben-i" aria-hidden="true">{{ block.settings.icona }}</span>
           <span class="fr-ben-t">{{ block.settings.text }}</span>
@@ -153,6 +165,21 @@
   ],
   "blocks": [
     {
+      "type": "custom_liquid",
+      "name": "Liquid personalizzato",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Codice Liquid / HTML",
+          "info": "Incolla qui Liquid, HTML o script personalizzato."
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    },
+    {
       "type": "ben",
       "name": "Beneficio",
       "settings": [
@@ -175,6 +202,6 @@
       ]
     }
   ],
-  "max_blocks": 6
+  "max_blocks": 24
 }
 {% endschema %}

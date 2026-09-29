@@ -72,6 +72,18 @@
         </thead>
         <tbody>
           {%- for block in section.blocks -%}
+          {%- comment -%}
+            Bloc « Liquid personalizzato » et blocs d'application. Places en tete de
+            boucle avec `continue` plutot qu'en enveloppe du corps : cette section a des
+            boucles imbriquees, et envelopper aurait demande de deviner le bon `endfor`.
+          {%- endcomment -%}
+          {%- if block.type == 'custom_liquid' -%}
+            <tr {{ block.shopify_attributes }}><td colspan="6" class="fr-custom-liquid">{{ block.settings.custom_liquid }}</td></tr>
+            {%- continue -%}
+          {%- elsif block.type == '@app' -%}
+            <tr {{ block.shopify_attributes }}><td colspan="6" class="fr-app-block">{% render block %}</td></tr>
+            {%- continue -%}
+          {%- endif -%}
             <tr {{ block.shopify_attributes }}>
               <th scope="row" class="fr-cmp-l">{{ block.settings.label }}</th>
               {%- for i in (1..5) -%}
@@ -268,6 +280,21 @@
     }
   ],
   "blocks": [
+    {
+      "type": "custom_liquid",
+      "name": "Liquid personalizzato",
+      "settings": [
+        {
+          "type": "liquid",
+          "id": "custom_liquid",
+          "label": "Codice Liquid / HTML",
+          "info": "Incolla qui Liquid, HTML o script personalizzato."
+        }
+      ]
+    },
+    {
+      "type": "@app"
+    },
     {
       "type": "row",
       "name": "Criterio",
