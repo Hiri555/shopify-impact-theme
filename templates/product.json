@@ -96,6 +96,7 @@
         },
         "benefits": {
           "type": "benefits",
+          "disabled": true,
           "settings": {
             "items": "Agisce la sera, quando la bocca si ferma\nResta dove lo metti, non è un liquido da sputare\nNiente da raschiare, nessun conato"
           }
