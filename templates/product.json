@@ -709,6 +709,19 @@
         "padding_bottom": 40
       }
     },
+    "custom_liquid_9Hh6Jn": {
+      "type": "custom-liquid",
+      "name": "Custom Liquid",
+      "settings": {
+        "full_width": true,
+        "remove_vertical_spacing": false,
+        "remove_horizontal_spacing": false,
+        "liquid": "<style>\n  .freos-usp{--ink:#0F6E56;--txt:#14332a;padding:22px 16px;}\n  .freos-usp__grid{max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(2,1fr);gap:26px 12px;}\n  @media(min-width:560px){.freos-usp__grid{grid-template-columns:repeat(4,1fr);}}\n  .freos-usp__item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:11px;padding:0 6px;}\n  .freos-usp__ico{width:34px;height:34px;color:var(--ink);}\n  .freos-usp__ico svg{width:100%;height:100%;display:block;}\n  .freos-usp__t{margin:0;font:600 14px/1.3 'Inter',system-ui,-apple-system,sans-serif;color:var(--txt);}\n  @media(min-width:560px){.freos-usp__t{font-size:15px;}}\n</style>\n\n<div class=\"freos-usp\">\n  <div class=\"freos-usp__grid\">\n    <div class=\"freos-usp__item\">\n      <span class=\"freos-usp__ico\"><svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M3 9.5h13.5v11H3z\"/><path d=\"M16.5 13h4.3l3.2 3.4v4.1h-7.5z\"/><circle cx=\"9\" cy=\"23.5\" r=\"2.3\"/><circle cx=\"21.5\" cy=\"23.5\" r=\"2.3\"/></svg></span>\n      <p class=\"freos-usp__t\">Spedizione veloce</p>\n    </div>\n    <div class=\"freos-usp__item\">\n      <span class=\"freos-usp__ico\"><svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><rect x=\"6.5\" y=\"14\" width=\"19\" height=\"12.5\" rx=\"2.5\"/><path d=\"M10 14v-3.2a6 6 0 0 1 12 0V14\"/><path d=\"M16 19v3\"/></svg></span>\n      <p class=\"freos-usp__t\">Pagamenti sicuri</p>\n    </div>\n    <div class=\"freos-usp__item\">\n      <span class=\"freos-usp__ico\"><svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M11 13h9a6 6 0 0 1 0 12h-5\"/><path d=\"M13.5 9l-4 4 4 4\"/></svg></span>\n      <p class=\"freos-usp__t\">Garanzia di rimborso di 30 giorni</p>\n    </div>\n    <div class=\"freos-usp__item\">\n      <span class=\"freos-usp__ico\"><svg viewBox=\"0 0 32 32\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"16\" cy=\"16\" r=\"11.5\"/><path d=\"M12.6 12.8a3.5 3.5 0 1 1 4.7 3.3c-1.1 .4-1.7 1.1-1.7 2.3v.4\"/><circle cx=\"15.6\" cy=\"21.8\" r=\"1.05\" fill=\"currentColor\" stroke=\"none\"/></svg></span>\n      <p class=\"freos-usp__t\">Assistenza 24/7</p>\n    </div>\n  </div>\n</div>",
+        "background": "",
+        "background_gradient": "",
+        "text_color": ""
+      }
+    },
     "rituale": {
       "type": "freos-pdp-rituale",
       "blocks": {
@@ -966,6 +979,7 @@
     "ingredienti",
     "confronto",
     "recensioni",
+    "custom_liquid_9Hh6Jn",
     "rituale",
     "garanzia",
     "faq",
