@@ -88,12 +88,6 @@
             "text": "FREOS — Gel Notturno • Alito Pulito al Risveglio"
           }
         },
-        "subtitle": {
-          "type": "subtitle",
-          "settings": {
-            "text": "Sette estratti e uno ione, in un gel denso che resta dove lo metti."
-          }
-        },
         "benefits": {
           "type": "benefits",
           "disabled": true,
@@ -185,7 +179,6 @@
         "slide_08",
         "eyebrow",
         "title",
-        "subtitle",
         "benefits",
         "price",
         "custom_liquid_kDBQLr",
