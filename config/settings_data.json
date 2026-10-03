@@ -76,14 +76,14 @@
         "disabled": false,
         "settings": {}
       },
-      "2200952712151285029": {
-        "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
-        "disabled": false,
-        "settings": {}
-      },
       "12264981854551093274": {
         "type": "shopify://apps/zigpoll-customer-surveys/blocks/zigpoll-embed/019a552e-a887-7983-9977-f95313668ab3",
         "disabled": false,
+        "settings": {}
+      },
+      "2200952712151285029": {
+        "type": "shopify://apps/microsoft-clarity/blocks/brandAgents_js/31c3d126-8116-4b4a-8ba1-baeda7c4aeea",
+        "disabled": true,
         "settings": {}
       }
     }
