@@ -140,7 +140,7 @@
         "payments": {
           "type": "payments",
           "settings": {
-            "label": "Pagamento sicuro",
+            "label": "",
             "marks": "visa, master, american_express, paypal, apple_pay, google_pay"
           }
         },
