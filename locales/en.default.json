@@ -427,7 +427,7 @@
   "shopify": {
     "checkout": {
       "alternative_payment_method_banner": {
-        "or": "⭐⭐⭐⭐⭐ 10.000+ clienti soddisfatti · 30 giorni di garanzia · Resi gratuiti · Pagamento sicuro 📦"
+        "express_checkout": "⭐⭐⭐⭐⭐ 10.000+ clienti soddisfatti · 30 giorni di garanzia · Resi gratuiti · Pagamento sicuro 📦"
       }
     }
   }
